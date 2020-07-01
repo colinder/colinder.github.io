@@ -3,7 +3,14 @@
         <title>Tags - Tag - </title>
         <link>http://example.org/tags/</link>
         <description>Tags - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 29 Jun 2020 15:49:37 &#43;0900</lastBuildDate><atom:link href="http://example.org/tags/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 01 Jul 2020 21:09:36 &#43;0900</lastBuildDate><atom:link href="http://example.org/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>algorithm</title>
+    <link>http://example.org/tags/algorithm/</link>
+    <pubDate>Wed, 01 Jul 2020 21:09:36 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/tags/algorithm/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
     <title>Hugo</title>
     <link>http://example.org/tags/hugo/</link>
     <pubDate>Mon, 29 Jun 2020 15:49:37 &#43;0900</pubDate>
@@ -16,13 +23,6 @@
     <pubDate>Thu, 25 Jun 2020 22:52:40 &#43;0900</pubDate>
     <author>Author</author>
     <guid>http://example.org/tags/django/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>algorithm</title>
-    <link>http://example.org/tags/algorithm/</link>
-    <pubDate>Thu, 25 Jun 2020 10:57:11 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>http://example.org/tags/algorithm/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>
