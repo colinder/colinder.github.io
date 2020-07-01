@@ -1,13 +1,13 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Django - Tag - </title>
+        <title>Django - tag - </title>
         <link>http://example.org/tags/django/</link>
-        <description>Django - Tag - </description>
+        <description>Django - tag - </description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 25 Jun 2020 22:52:40 &#43;0900</lastBuildDate><atom:link href="http://example.org/tags/django/" rel="self" type="application/rss+xml" /><item>
     <title>Django_02_CRUD</title>
     <link>http://example.org/posts/django/django_02/</link>
     <pubDate>Thu, 25 Jun 2020 22:52:40 &#43;0900</pubDate>
-    <author>Author</author>
+    <author></author>
     <guid>http://example.org/posts/django/django_02/</guid>
     <description><![CDATA[​
 Django 개발환경준비   편리함을 추구하기 위해 AWS Cloud9을 사용하여 진행
@@ -19,7 +19,7 @@ Git? : 버전 관리 시스템이며 Git은 소프트웨어를 개발하는 기�
     <title>Django_01_basic</title>
     <link>http://example.org/posts/django/django_01/</link>
     <pubDate>Tue, 23 Jun 2020 09:57:09 &#43;0900</pubDate>
-    <author>Author</author>
+    <author></author>
     <guid>http://example.org/posts/django/django_01/</guid>
     <description><![CDATA[​
 Web ?  월드 와이드 웹(World Wide Web)이란 인터넷에 연결된 사용자들이 서로의 정보를 공유할 수 있는 공간을 의미하며, 줄여서 WWW나 W3라고도 부르며, 간단히 웹(Web)이라고 가장 많이 불린다.

@@ -9,7 +9,7 @@
     <title>SW Expert Academy_D3 5431, 5356, 5293, 5215</title>
     <link>http://example.org/posts/algorithm/sw_20.07.01/</link>
     <pubDate>Wed, 01 Jul 2020 21:09:36 &#43;0900</pubDate>
-    <author>Author</author>
+    <author></author>
     <guid>http://example.org/posts/algorithm/sw_20.07.01/</guid>
     <description><![CDATA[​
 D3_5431_민석이의 과제 체크하기 1 2 3 4 5 6 7 8 9 10 11 12  for T in range(int(input())): N, K = map(int, input().split()) P = list(map(int, input().split())) result = [] for i in range(1,N+1): if i not in P: result.append(str(i)) print(&#39;#{} {}&#39;.format(T+1, &#39; &#39;.join(result))) # 제출한 수강생 리스트를 만들고(P) 이를 for로 돌리며 검증   ​
@@ -18,7 +18,7 @@ D3_5356_의석이의 세로로 말해요 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
     <title>Hugo_setting stroy (feat.LoveTt 제작자)</title>
     <link>http://example.org/posts/hugo/hugo_setting/</link>
     <pubDate>Mon, 29 Jun 2020 15:49:37 &#43;0900</pubDate>
-    <author>Author</author>
+    <author></author>
     <guid>http://example.org/posts/hugo/hugo_setting/</guid>
     <description><![CDATA[​
 블로그를 만들면서&hellip; 최초 기술블로그를 제작하면서 바닥부터 모든 것을 스스로 만들어 보기로 결심하고 제작을 시작하지만, 결코 쉽지 않았다. 개인적으로 꼭 원했던 기능이었던 tag기능과 categories를 구현하지 못하면서&hellip; 결국 기존에 있는 라이브러리들을 활용하기로 한다.
@@ -31,7 +31,7 @@ jekyll 서버 구동 방법 1 2 3 4 5  # 공식 홈페이지 설명 ~$ gem insta
     <title>Django_02_CRUD</title>
     <link>http://example.org/posts/django/django_02/</link>
     <pubDate>Thu, 25 Jun 2020 22:52:40 &#43;0900</pubDate>
-    <author>Author</author>
+    <author></author>
     <guid>http://example.org/posts/django/django_02/</guid>
     <description><![CDATA[​
 Django 개발환경준비   편리함을 추구하기 위해 AWS Cloud9을 사용하여 진행
@@ -43,7 +43,7 @@ Git? : 버전 관리 시스템이며 Git은 소프트웨어를 개발하는 기�
     <title>SW Expert Academy_D3 5948, 5789, 5688, 5549</title>
     <link>http://example.org/posts/algorithm/sw_20.06.25/</link>
     <pubDate>Thu, 25 Jun 2020 10:57:11 &#43;0900</pubDate>
-    <author>Author</author>
+    <author></author>
     <guid>http://example.org/posts/algorithm/sw_20.06.25/</guid>
     <description><![CDATA[​
 D3_5948_새샘이의 7-3-5 게임 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  for T in range(int(input())): N = list(map(int, input().split())) result = set() for i in range(5): for j in range(i+1, 6): for x in range(j+1, 7): result.add(N[i]+N[j]+N[x]) result = list(result) result.sort() print(&#39;#{} {}&#39;.format(T+1, result[-5])) # 3수의 합을 정리하는데 set으로 중복을 제거하는 방법으로 result set을 정리 # set은 순서가 없기 때문에 result를 다시 list로 정리하고 .]]></description>
@@ -51,7 +51,7 @@ D3_5948_새샘이의 7-3-5 게임 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  for T in 
     <title>Django_01_basic</title>
     <link>http://example.org/posts/django/django_01/</link>
     <pubDate>Tue, 23 Jun 2020 09:57:09 &#43;0900</pubDate>
-    <author>Author</author>
+    <author></author>
     <guid>http://example.org/posts/django/django_01/</guid>
     <description><![CDATA[​
 Web ?  월드 와이드 웹(World Wide Web)이란 인터넷에 연결된 사용자들이 서로의 정보를 공유할 수 있는 공간을 의미하며, 줄여서 WWW나 W3라고도 부르며, 간단히 웹(Web)이라고 가장 많이 불린다.
@@ -63,7 +63,7 @@ Web의 작동방식을 간단히 설명하자면, 요청과 응답.
     <title>SW Expert Academy_D3 6190, 6057, 6019, 5986</title>
     <link>http://example.org/posts/algorithm/sw_20.06.23/</link>
     <pubDate>Tue, 23 Jun 2020 09:05:05 &#43;0900</pubDate>
-    <author>Author</author>
+    <author></author>
     <guid>http://example.org/posts/algorithm/sw_20.06.23/</guid>
     <description><![CDATA[​
 D3_6190_정곤이의 단조 증가하는 수 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  for T in range(int(input())): N = int(input()) L = list(map(int, input().split())) result = -1 for i in range(N-1): for j in range(i+1, N): num = str(L[i]*L[j]) if len(num) &gt; 1 and &#39;0&#39; not in num and result &lt; int(num) and list(num) == sorted(num): result = int(num) print(f&#39;#{T+1} {result}&#39;) # 단조증가하는 지를 검증하는 방법으로 sorted를 썼는데 이를 활용하기 위해서는 str형태로 변경해야 검증이 가능하다.]]></description>
@@ -71,7 +71,7 @@ D3_6190_정곤이의 단조 증가하는 수 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
     <title>SW Expert Academy_D3 9700, 7675, 6692, 6485</title>
     <link>http://example.org/posts/algorithm/sw_20.06.20/</link>
     <pubDate>Sat, 20 Jun 2020 22:46:41 &#43;0900</pubDate>
-    <author>Author</author>
+    <author></author>
     <guid>http://example.org/posts/algorithm/sw_20.06.20/</guid>
     <description><![CDATA[​
 D3_9700_USB 꽂기의 미스터리 1 2 3 4 5 6 7 8 9 10 11  for T in range(int(input())): p, q = map(float, input().split()) s1 = (1-p)*q s2 = p*(1-q)*q if s1 &lt; s2: print(f&#39;#{T+1} YES&#39;) else: print(f&#39;#{T+1} NO&#39;) # 단순 수학을 통해 해결.   ​
@@ -80,7 +80,7 @@ D3_7675_통역사 성경이 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 2
     <title></title>
     <link>http://example.org/posts/yaml/</link>
     <pubDate>Fri, 19 Jun 2020 13:59:41 &#43;0900</pubDate>
-    <author>Author</author>
+    <author></author>
     <guid>http://example.org/posts/yaml/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
