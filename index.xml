@@ -28,7 +28,7 @@ jekyll 기초 설정  Jekyll : Jekyll은 Ruby Gem으로 제공되며 템플릿�
  ​
 jekyll 서버 구동 방법 1 2 3 4 5  # 공식 홈페이지 설명 ~$ gem install bundler jekyll	# jekyll 구동을 위한 프로그램 설치 ~$ jekyll new MYBLOG	# MYBLOG 라는 이름의 블로그 폴더 &amp; 기초틀 생성  ~$ cd MYBLOG	# MYBLOG 폴더로 이동 ~/MYBLOG $ bundle exec jekyll serve	# MYBLOG 서버 구동   1 2 3  # 이후 명령창에 Servuer address : http://127.]]></description>
 </item><item>
-    <title>Django_02_CRUD</title>
+    <title>Django_02_CRUD_01</title>
     <link>http://example.org/posts/django/django_02/</link>
     <pubDate>Thu, 25 Jun 2020 22:52:40 &#43;0900</pubDate>
     <author></author>
@@ -38,7 +38,7 @@ Django 개발환경준비   편리함을 추구하기 위해 AWS Cloud9을 사�
   https://ide.cs50.io/ 주소로 접속하면 진행이 가능하며, 진행을 위해선 Git 아이디가 있어야 한다.
 Git? : 버전 관리 시스템이며 Git은 소프트웨어를 개발하는 기업의 핵심 자산인 소스코드를 효과적으로 관리할 수 있게 해주는 무료, 공개소프트웨어. git에 대한 내용은 따로 정리해보도록 한다.
   로그인까지 마치면 이제 Django 개발 준비 끝.
-  ]]></description>
+  1. 프로젝트 시작하기 1 2 3 4 5 6 7  django-admin startproject blog	# blog라는 django프로젝트를 시작 cd blog	# blog 폴더로 이동 python manage.]]></description>
 </item><item>
     <title>SW Expert Academy_D3 5948, 5789, 5688, 5549</title>
     <link>http://example.org/posts/algorithm/sw_20.06.25/</link>

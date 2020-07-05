@@ -4,7 +4,7 @@
         <link>http://example.org/categories/django/</link>
         <description>Django - category - </description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 25 Jun 2020 22:52:40 &#43;0900</lastBuildDate><atom:link href="http://example.org/categories/django/" rel="self" type="application/rss+xml" /><item>
-    <title>Django_02_CRUD</title>
+    <title>Django_02_CRUD_01</title>
     <link>http://example.org/posts/django/django_02/</link>
     <pubDate>Thu, 25 Jun 2020 22:52:40 &#43;0900</pubDate>
     <author></author>
@@ -14,7 +14,7 @@ Django 개발환경준비   편리함을 추구하기 위해 AWS Cloud9을 사�
   https://ide.cs50.io/ 주소로 접속하면 진행이 가능하며, 진행을 위해선 Git 아이디가 있어야 한다.
 Git? : 버전 관리 시스템이며 Git은 소프트웨어를 개발하는 기업의 핵심 자산인 소스코드를 효과적으로 관리할 수 있게 해주는 무료, 공개소프트웨어. git에 대한 내용은 따로 정리해보도록 한다.
   로그인까지 마치면 이제 Django 개발 준비 끝.
-  ]]></description>
+  1. 프로젝트 시작하기 1 2 3 4 5 6 7  django-admin startproject blog	# blog라는 django프로젝트를 시작 cd blog	# blog 폴더로 이동 python manage.]]></description>
 </item><item>
     <title>Django_01_basic</title>
     <link>http://example.org/posts/django/django_01/</link>

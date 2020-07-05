@@ -5,13 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Django_02_CRUD - </title><meta name="Description" content="This is My New Hugo Site"><meta property="og:title" content="Django_02_CRUD" />
+        <title>Django_02_CRUD_01 - </title><meta name="Description" content="This is My New Hugo Site"><meta property="og:title" content="Django_02_CRUD_01" />
 <meta property="og:description" content="​
 Django 개발환경준비   편리함을 추구하기 위해 AWS Cloud9을 사용하여 진행
   https://ide.cs50.io/ 주소로 접속하면 진행이 가능하며, 진행을 위해선 Git 아이디가 있어야 한다.
 Git? : 버전 관리 시스템이며 Git은 소프트웨어를 개발하는 기업의 핵심 자산인 소스코드를 효과적으로 관리할 수 있게 해주는 무료, 공개소프트웨어. git에 대한 내용은 따로 정리해보도록 한다.
   로그인까지 마치면 이제 Django 개발 준비 끝.
-  " />
+  1. 프로젝트 시작하기 1 2 3 4 5 6 7  django-admin startproject blog	# blog라는 django프로젝트를 시작 cd blog	# blog 폴더로 이동 python manage." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://example.org/posts/django/django_02/" />
 <meta property="og:image" content="http://example.org/logo.png"/>
@@ -20,13 +20,13 @@ Git? : 버전 관리 시스템이며 Git은 소프트웨어를 개발하는 기�
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://example.org/logo.png"/>
 
-<meta name="twitter:title" content="Django_02_CRUD"/>
+<meta name="twitter:title" content="Django_02_CRUD_01"/>
 <meta name="twitter:description" content="​
 Django 개발환경준비   편리함을 추구하기 위해 AWS Cloud9을 사용하여 진행
   https://ide.cs50.io/ 주소로 접속하면 진행이 가능하며, 진행을 위해선 Git 아이디가 있어야 한다.
 Git? : 버전 관리 시스템이며 Git은 소프트웨어를 개발하는 기업의 핵심 자산인 소스코드를 효과적으로 관리할 수 있게 해주는 무료, 공개소프트웨어. git에 대한 내용은 따로 정리해보도록 한다.
   로그인까지 마치면 이제 Django 개발 준비 끝.
-  "/>
+  1. 프로젝트 시작하기 1 2 3 4 5 6 7  django-admin startproject blog	# blog라는 django프로젝트를 시작 cd blog	# blog 폴더로 이동 python manage."/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -34,12 +34,12 @@ Git? : 버전 관리 시스템이며 Git은 소프트웨어를 개발하는 기�
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Django_02_CRUD",
+        "headline": "Django_02_CRUD_01",
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/posts\/django\/django_02\/"
-        },"genre": "posts","keywords": "Django","wordcount":  53 ,
+        },"genre": "posts","keywords": "Django","wordcount":  213 ,
         "url": "http:\/\/example.org\/posts\/django\/django_02\/","datePublished": "2020-06-25T22:52:40+09:00","dateModified": "2020-06-25T22:52:40+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"description": ""
@@ -111,7 +111,7 @@ Git? : 버전 관리 시스템이며 Git은 소프트웨어를 개발하는 기�
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title"></h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Django_02_CRUD</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">Django_02_CRUD_01</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i></a></span>&nbsp;<span class="post-category"></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-06-25">2020-06-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;&nbsp;</div>
@@ -120,7 +120,15 @@ Git? : 버전 관리 시스템이며 Git은 소프트웨어를 개발하는 기�
                     <span></span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-프로젝트-시작하기">1. 프로젝트 시작하기</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
             </div><div class="content" id="content"><p>​</p>
 <h1 id="django-개발환경준비">Django 개발환경준비</h1>
 <ul>
@@ -134,6 +142,94 @@ Git? : 버전 관리 시스템이며 Git은 소프트웨어를 개발하는 기�
 <li>
 <p>로그인까지 마치면 이제 Django 개발 준비 끝.</p>
 </li>
+</ul>
+<h3 id="1-프로젝트-시작하기">1. 프로젝트 시작하기</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">django</span><span class="o">-</span><span class="n">admin</span> <span class="n">startproject</span> <span class="n">blog</span>		<span class="c1"># blog라는 django프로젝트를 시작</span>
+<span class="n">cd</span> <span class="n">blog</span>		<span class="c1"># blog 폴더로 이동</span>
+<span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">startapp</span> <span class="n">articles</span>		<span class="c1"># articles라는 앱(기능폴더)을 생성</span>
+
+<span class="c1"># Point🎈</span>
+<span class="c1"># 1. blog라는 이름은 내가 원하는 프로젝트 명으로 변경이 가능</span>
+<span class="c1"># 2. cd blog → django의 명령어는 모두 manage.py가 존재하는 폴더안에서 실행해야 함, 이를 위한 이동</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>구조를 만들었으니 구조들을 연결할 setting을 해주어야 한다.</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># settings.py</span>
+
+<span class="c1"># 웹 사용자를 특정하는 부분</span>
+<span class="n">ALLOWED_HOSTS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;*&#39;</span><span class="p">]</span>		<span class="c1"># &#39;*&#39; == 모든 사용자가 입장가능</span>
+
+<span class="c1"># 프로젝트에 사용되는 APP 및 기능들을 등록</span>
+<span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;django.contrib.admin&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.auth&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.contenttypes&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.sessions&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.messages&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.staticfiles&#39;</span><span class="p">,</span>
+    <span class="s2">&#34;articles&#34;</span><span class="p">,</span>		<span class="c1"># 등록</span>
+<span class="p">]</span>
+
+
+<span class="n">LANGUAGE_CODE</span> <span class="o">=</span> <span class="s1">&#39;ko-KR&#39;</span>
+
+<span class="n">TIME_ZONE</span> <span class="o">=</span> <span class="s1">&#39;Asia/Seoul&#39;</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>가장 기본이 되는 setting 완료</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 기본 설정이 잘 되었는지 확인할 서버구동</span>
+<span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">runserver</span> <span class="mi">8080</span>		<span class="c1"># 8080은 생략가능</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<p>![image-20200705233508493](C:\SSAFY\First semester\03_myBlog\content\posts\Django\image-20200705233508493.png)</p>
+<ul>
+<li>이와 같은 화면이 나오면 기본 설정은 정상적으로 완료</li>
 </ul>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
