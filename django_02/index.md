@@ -65,6 +65,8 @@ python manage.py runserver 8080		# 8080은 생략가능
 
 ​	
 
-![image-20200705233508493](C:\SSAFY\First semester\03_myBlog\content\posts\Django\image-20200705233508493.png)
+{{< image src="/images/django_main.png" >}}
 
 - 이와 같은 화면이 나오면 기본 설정은 정상적으로 완료
+
+
