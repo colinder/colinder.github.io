@@ -1,13 +1,13 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Hugo - tag - </title>
+        <title>Hugo - Tag - </title>
         <link>http://example.org/tags/hugo/</link>
-        <description>Hugo - tag - </description>
+        <description>Hugo - Tag - </description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 29 Jun 2020 15:49:37 &#43;0900</lastBuildDate><atom:link href="http://example.org/tags/hugo/" rel="self" type="application/rss+xml" /><item>
     <title>Hugo_setting stroy (feat.LoveTt 제작자)</title>
     <link>http://example.org/hugo_setting/</link>
     <pubDate>Mon, 29 Jun 2020 15:49:37 &#43;0900</pubDate>
-    <author></author>
+    <author>Author</author>
     <guid>http://example.org/hugo_setting/</guid>
     <description><![CDATA[​
 블로그를 만들면서&hellip; 최초 기술블로그를 제작하면서 바닥부터 모든 것을 스스로 만들어 보기로 결심하고 제작을 시작하지만, 결코 쉽지 않았다. 개인적으로 꼭 원했던 기능이었던 tag기능과 categories를 구현하지 못하면서&hellip; 결국 기존에 있는 라이브러리들을 활용하기로 한다.

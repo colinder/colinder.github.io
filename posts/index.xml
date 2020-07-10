@@ -1,13 +1,32 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title> - </title>
+        <title>All Posts - </title>
         <link>http://example.org/posts/</link>
-        <description> | </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 08 Jul 2020 15:07:10 &#43;0900</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+        <description>All Posts | </description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 10 Jul 2020 11:27:50 &#43;0900</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>SW Expert Academy_D3 4676, 4615, 4579, 4522</title>
+    <link>http://example.org/sw_20.07.10/</link>
+    <pubDate>Fri, 10 Jul 2020 11:27:50 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/sw_20.07.10/</guid>
+    <description><![CDATA[​
+D3_4676_늘어지는 소리 만들기 1 2 3 4 5 6 7 8 9 10 11 12  for T in range(int(input())): sent = list(input()) # wow H = int(input()) po = sorted(list(map(int, input().split()))) # 2 3 2 for i in range(H): a = po[i]+i sent.insert(a,&#39;-&#39;) print(&#39;#{} {}&#39;.format(T+1, &#39;&#39;.join(sent))) # 단순 산수로 해결   ​
+​
+D3_4615_재미있는 오셀로 게임 1    ​
+D3_4579_세상의 모든 팰린드롬 2 1    ​]]></description>
+</item><item>
+    <title>Django_02_CRUD(02)</title>
+    <link>http://example.org/django_02_crud_c/</link>
+    <pubDate>Fri, 10 Jul 2020 11:04:11 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/django_02_crud_c/</guid>
+    <description><![CDATA[CRUD?  CRUD는 대부분의 컴퓨터 소프트웨어가 가지는 기본적인 데이터 처리 기능인 Create(생성), Read(읽기), Update(갱신), Delete(삭제)를 묶어서 일컫는 말이다. 사용자 인터페이스가 갖추어야 할 기능(정보의 참조/검색/갱신)을 구현해보자
+ ]]></description>
+</item><item>
     <title>SW Expert Academy_D3 5162, 4789, 4751, 4698</title>
     <link>http://example.org/sw_20.07.08/</link>
     <pubDate>Wed, 08 Jul 2020 15:07:10 &#43;0900</pubDate>
-    <author></author>
+    <author>Author</author>
     <guid>http://example.org/sw_20.07.08/</guid>
     <description><![CDATA[​
 D3_5162_두가지 빵의 딜레마 1 2 3 4 5 6 7  for T in range(int(input())): A, B, C = map(int, input().split()) N = min(A, B) print(&#34;#{} {}&#34;.format(T+1, int(C/N))) # 단순 산수로 해결   ​
@@ -16,7 +35,7 @@ D3_4789_성공적인 공연 기획 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 
     <title>SW Expert Academy_D3 5431, 5356, 5293, 5215</title>
     <link>http://example.org/sw_20.07.01/</link>
     <pubDate>Wed, 01 Jul 2020 21:09:36 &#43;0900</pubDate>
-    <author></author>
+    <author>Author</author>
     <guid>http://example.org/sw_20.07.01/</guid>
     <description><![CDATA[​
 D3_5431_민석이의 과제 체크하기 1 2 3 4 5 6 7 8 9 10 11 12  for T in range(int(input())): N, K = map(int, input().split()) P = list(map(int, input().split())) result = [] for i in range(1,N+1): if i not in P: result.append(str(i)) print(&#39;#{} {}&#39;.format(T+1, &#39; &#39;.join(result))) # 제출한 수강생 리스트를 만들고(P) 이를 for로 돌리며 검증   ​
@@ -25,7 +44,7 @@ D3_5356_의석이의 세로로 말해요 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
     <title>Hugo_setting stroy (feat.LoveTt 제작자)</title>
     <link>http://example.org/hugo_setting/</link>
     <pubDate>Mon, 29 Jun 2020 15:49:37 &#43;0900</pubDate>
-    <author></author>
+    <author>Author</author>
     <guid>http://example.org/hugo_setting/</guid>
     <description><![CDATA[​
 블로그를 만들면서&hellip; 최초 기술블로그를 제작하면서 바닥부터 모든 것을 스스로 만들어 보기로 결심하고 제작을 시작하지만, 결코 쉽지 않았다. 개인적으로 꼭 원했던 기능이었던 tag기능과 categories를 구현하지 못하면서&hellip; 결국 기존에 있는 라이브러리들을 활용하기로 한다.
@@ -39,19 +58,19 @@ jekyll 서버 구동 방법 1 2 3 4 5  # 공식 홈페이지 설명 ~$ gem insta
     <title>Django_02_CRUD(01)</title>
     <link>http://example.org/django_02_crud_setting/</link>
     <pubDate>Thu, 25 Jun 2020 22:52:40 &#43;0900</pubDate>
-    <author></author>
+    <author>Author</author>
     <guid>http://example.org/django_02_crud_setting/</guid>
     <description><![CDATA[​
 Django 개발환경준비   편리함을 추구하기 위해 AWS Cloud9을 사용하여 진행
   https://ide.cs50.io/ 주소로 접속하면 진행이 가능하며, 진행을 위해선 Git 아이디가 있어야 한다.
 Git? : 버전 관리 시스템이며 Git은 소프트웨어를 개발하는 기업의 핵심 자산인 소스코드를 효과적으로 관리할 수 있게 해주는 무료, 공개소프트웨어. git에 대한 내용은 따로 정리해보도록 한다.
   로그인까지 마치면 이제 Django 개발 준비 끝.
-  1. 프로젝트 시작하기 1 2 3 4 5 6 7  django-admin startproject blog	# blog라는 django프로젝트를 시작 cd blog	# blog 폴더로 이동 python manage.]]></description>
+  C9 접속 화면(블랙테마 적용되어 있음)"C9 접속 화면(블랙테마 적용되어 있음) ​]]></description>
 </item><item>
     <title>SW Expert Academy_D3 5948, 5789, 5688, 5549</title>
     <link>http://example.org/sw_20.06.25/</link>
     <pubDate>Thu, 25 Jun 2020 10:57:11 &#43;0900</pubDate>
-    <author></author>
+    <author>Author</author>
     <guid>http://example.org/sw_20.06.25/</guid>
     <description><![CDATA[​
 D3_5948_새샘이의 7-3-5 게임 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  for T in range(int(input())): N = list(map(int, input().split())) result = set() for i in range(5): for j in range(i+1, 6): for x in range(j+1, 7): result.add(N[i]+N[j]+N[x]) result = list(result) result.sort() print(&#39;#{} {}&#39;.format(T+1, result[-5])) # 3수의 합을 정리하는데 set으로 중복을 제거하는 방법으로 result set을 정리 # set은 순서가 없기 때문에 result를 다시 list로 정리하고 .]]></description>
@@ -59,7 +78,7 @@ D3_5948_새샘이의 7-3-5 게임 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  for T in 
     <title>Django_01_basic</title>
     <link>http://example.org/django_01/</link>
     <pubDate>Tue, 23 Jun 2020 09:57:09 &#43;0900</pubDate>
-    <author></author>
+    <author>Author</author>
     <guid>http://example.org/django_01/</guid>
     <description><![CDATA[​
 Web ?  월드 와이드 웹(World Wide Web)이란 인터넷에 연결된 사용자들이 서로의 정보를 공유할 수 있는 공간을 의미하며, 줄여서 WWW나 W3라고도 부르며, 간단히 웹(Web)이라고 가장 많이 불린다.
@@ -71,7 +90,7 @@ Web의 작동방식을 간단히 설명하자면, 요청과 응답.
     <title>SW Expert Academy_D3 6190, 6057, 6019, 5986</title>
     <link>http://example.org/sw_20.06.23/</link>
     <pubDate>Tue, 23 Jun 2020 09:05:05 &#43;0900</pubDate>
-    <author></author>
+    <author>Author</author>
     <guid>http://example.org/sw_20.06.23/</guid>
     <description><![CDATA[​
 D3_6190_정곤이의 단조 증가하는 수 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  for T in range(int(input())): N = int(input()) L = list(map(int, input().split())) result = -1 for i in range(N-1): for j in range(i+1, N): num = str(L[i]*L[j]) if len(num) &gt; 1 and &#39;0&#39; not in num and result &lt; int(num) and list(num) == sorted(num): result = int(num) print(f&#39;#{T+1} {result}&#39;) # 단조증가하는 지를 검증하는 방법으로 sorted를 썼는데 이를 활용하기 위해서는 str형태로 변경해야 검증이 가능하다.]]></description>
@@ -79,7 +98,7 @@ D3_6190_정곤이의 단조 증가하는 수 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
     <title>SW Expert Academy_D3 9700, 7675, 6692, 6485</title>
     <link>http://example.org/sw_20.06.20/</link>
     <pubDate>Sat, 20 Jun 2020 22:46:41 &#43;0900</pubDate>
-    <author></author>
+    <author>Author</author>
     <guid>http://example.org/sw_20.06.20/</guid>
     <description><![CDATA[​
 D3_9700_USB 꽂기의 미스터리 1 2 3 4 5 6 7 8 9 10 11  for T in range(int(input())): p, q = map(float, input().split()) s1 = (1-p)*q s2 = p*(1-q)*q if s1 &lt; s2: print(f&#39;#{T+1} YES&#39;) else: print(f&#39;#{T+1} NO&#39;) # 단순 수학을 통해 해결.   ​

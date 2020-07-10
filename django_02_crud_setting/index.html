@@ -11,7 +11,7 @@ Django 개발환경준비   편리함을 추구하기 위해 AWS Cloud9을 사�
   https://ide.cs50.io/ 주소로 접속하면 진행이 가능하며, 진행을 위해선 Git 아이디가 있어야 한다.
 Git? : 버전 관리 시스템이며 Git은 소프트웨어를 개발하는 기업의 핵심 자산인 소스코드를 효과적으로 관리할 수 있게 해주는 무료, 공개소프트웨어. git에 대한 내용은 따로 정리해보도록 한다.
   로그인까지 마치면 이제 Django 개발 준비 끝.
-  1. 프로젝트 시작하기 1 2 3 4 5 6 7  django-admin startproject blog	# blog라는 django프로젝트를 시작 cd blog	# blog 폴더로 이동 python manage." />
+  C9 접속 화면(블랙테마 적용되어 있음)&#34;C9 접속 화면(블랙테마 적용되어 있음) ​" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://example.org/django_02_crud_setting/" />
 <meta property="og:image" content="http://example.org/logo.png"/>
@@ -26,7 +26,7 @@ Django 개발환경준비   편리함을 추구하기 위해 AWS Cloud9을 사�
   https://ide.cs50.io/ 주소로 접속하면 진행이 가능하며, 진행을 위해선 Git 아이디가 있어야 한다.
 Git? : 버전 관리 시스템이며 Git은 소프트웨어를 개발하는 기업의 핵심 자산인 소스코드를 효과적으로 관리할 수 있게 해주는 무료, 공개소프트웨어. git에 대한 내용은 따로 정리해보도록 한다.
   로그인까지 마치면 이제 Django 개발 준비 끝.
-  1. 프로젝트 시작하기 1 2 3 4 5 6 7  django-admin startproject blog	# blog라는 django프로젝트를 시작 cd blog	# blog 폴더로 이동 python manage."/>
+  C9 접속 화면(블랙테마 적용되어 있음)&#34;C9 접속 화면(블랙테마 적용되어 있음) ​"/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -39,7 +39,7 @@ Git? : 버전 관리 시스템이며 Git은 소프트웨어를 개발하는 기�
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/django_02_crud_setting\/"
-        },"genre": "posts","keywords": "Django","wordcount":  217 ,
+        },"genre": "posts","keywords": "Django","wordcount":  239 ,
         "url": "http:\/\/example.org\/django_02_crud_setting\/","datePublished": "2020-06-25T22:52:40+09:00","dateModified": "2020-06-25T22:52:40+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -58,16 +58,16 @@ Git? : 버전 관리 시스템이며 Git은 소프트웨어를 개발하는 기�
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
-                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
                             <i class="fas fa-search fa-fw"></i>
                         </a>
-                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="">
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
                             <i class="fas fa-times-circle fa-fw"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-desktop">
                             <i class="fas fa-spinner fa-fw fa-spin"></i>
                         </span>
-                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="">
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
                     <i class="fas fa-adjust fa-fw"></i>
                 </a>
             </div>
@@ -86,10 +86,10 @@ Git? : 버전 관리 시스템이며 Git은 소프트웨어를 개발하는 기�
         <div class="menu" id="menu-mobile"><div class="search-wrapper">
                     <div class="search mobile" id="search-mobile">
                         <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
-                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
                             <i class="fas fa-search fa-fw"></i>
                         </a>
-                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="">
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
                             <i class="fas fa-times-circle fa-fw"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-mobile">
@@ -97,9 +97,9 @@ Git? : 버전 관리 시스템이며 Git은 소프트웨어를 개발하는 기�
                         </span>
                     </div>
                     <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
-                        
+                        Cancel
                     </a>
-                </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="">
+                </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
                 <i class="fas fa-adjust fa-fw"></i>
             </a></div>
     </div>
@@ -112,15 +112,15 @@ Git? : 버전 관리 시스템이며 Git은 소프트웨어를 개발하는 기�
 </div>
 <main class="main">
                 <div class="container"><div class="toc" id="toc-auto">
-            <h2 class="toc-title"></h2>
+            <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Django_02_CRUD(01)</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category"></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-06-25">2020-06-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;&nbsp;</div>
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw"></i>Django</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-06-25">2020-06-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;239 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
-                    <span></span>
+                    <span>Contents</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
@@ -146,6 +146,17 @@ Git? : 버전 관리 시스템이며 Git은 소프트웨어를 개발하는 기�
 <p>로그인까지 마치면 이제 Django 개발 준비 끝.</p>
 </li>
 </ul>
+<figure><a class="lightgallery" href="/images/django_c9_main.png" title="/images/django_c9_main.png" data-thumbnail="/images/django_c9_main.png" data-sub-html="<h2>C9 접속 화면(블랙테마 적용되어 있음)</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/django_c9_main.png"
+            data-srcset="/images/django_c9_main.png, /images/django_c9_main.png 1.5x, /images/django_c9_main.png 2x"
+            data-sizes="auto"
+            alt="/images/django_c9_main.png" />
+    </a><figcaption class="image-caption">C9 접속 화면(<code>블랙테마 적용되어 있음</code>)</figcaption>
+    </figure>
+<p>​</p>
 <h3 id="1-프로젝트-시작하기">1. 프로젝트 시작하기</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -236,7 +247,7 @@ Git? : 버전 관리 시스템이며 Git은 소프트웨어를 개발하는 기�
 </code></pre></td></tr></table>
 </div>
 </div><p>​</p>
-<a class="lightgallery" href="/images/django_main.png" title="/images/django_main.png" data-thumbnail="/images/django_main.png">
+<figure><a class="lightgallery" href="/images/django_main.png" title="/images/django_main.png" data-thumbnail="/images/django_main.png" data-sub-html="<h2>여기까지 진행한 것을 보통(로켓을 띄운다.)고 한다.</h2>">
         <img
             class="lazyload"
             src="/svg/loading.min.svg"
@@ -244,21 +255,22 @@ Git? : 버전 관리 시스템이며 Git은 소프트웨어를 개발하는 기�
             data-srcset="/images/django_main.png, /images/django_main.png 1.5x, /images/django_main.png 2x"
             data-sizes="auto"
             alt="/images/django_main.png" />
-    </a>
+    </a><figcaption class="image-caption">여기까지 진행한 것을 보통(<code>로켓을 띄운다.</code>)고 한다.</figcaption>
+    </figure>
 <ul>
-<li>이와 같은 화면이 나오면 기본 설정은 정상적으로 완료</li>
+<li>이와 같은 화면이 나오면 Basic Setting 완료</li>
 </ul>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span></span>
+                <span>Updated on 2020-06-25</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/django_02_crud_setting/index.md" target="_blank"></a>
+                            <a class="link-to-markdown" href="/django_02_crud_setting/index.md" target="_blank">Read Markdown</a>
                         </span></div>
             <div class="post-info-share">
                 <span></span>
@@ -269,7 +281,7 @@ Git? : 버전 관리 시스템이며 Git은 소프트웨어를 개발하는 기�
     <div class="post-info-more">
         <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/django/">Django</a></section>
         <section>
-            <span><a href="javascript:void(0);" onclick="window.history.back();"></a></span>&nbsp;|&nbsp;<span><a href="/"></a></span>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
     </div>
 
@@ -278,15 +290,15 @@ Git? : 버전 관리 시스템이며 Git은 소프트웨어를 개발하는 기�
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.72.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 
-        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="">
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
                 <i class="fas fa-arrow-up fa-fw"></i>
-            </a><a href="#" id="view-comments" class="fixed-button" title="">
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
                 <i class="fas fa-comment fa-fw"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"","link":"","message":""},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

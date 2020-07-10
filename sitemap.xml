@@ -2,19 +2,21 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://example.org/</loc><lastmod>2020-07-08T15:07:10&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://example.org/tags/algorithm/</loc><lastmod>2020-07-08T15:07:10&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://example.org/categories/</loc><lastmod>2020-07-08T15:07:10&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://example.org/posts/</loc><lastmod>2020-07-08T15:07:10&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://example.org/categories/sw-expert-academy/</loc><lastmod>2020-07-08T15:07:10&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://example.org/</loc><lastmod>2020-07-10T11:27:50&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://example.org/tags/algorithm/</loc><lastmod>2020-07-10T11:27:50&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://example.org/categories/</loc><lastmod>2020-07-10T11:27:50&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://example.org/posts/</loc><lastmod>2020-07-10T11:27:50&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://example.org/categories/sw-expert-academy/</loc><lastmod>2020-07-10T11:27:50&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://example.org/sw_20.07.10/</loc><lastmod>2020-07-10T11:27:50&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://example.org/tags/</loc><lastmod>2020-07-10T11:27:50&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://example.org/tags/django/</loc><lastmod>2020-07-10T11:04:11&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://example.org/categories/django/</loc><lastmod>2020-07-10T11:04:11&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://example.org/django_02_crud_c/</loc><lastmod>2020-07-10T11:04:11&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://example.org/sw_20.07.08/</loc><lastmod>2020-07-08T15:07:10&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://example.org/tags/</loc><lastmod>2020-07-08T15:07:10&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://example.org/sw_20.07.01/</loc><lastmod>2020-07-01T21:09:36&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
             <loc>http://example.org/tags/hugo/</loc><lastmod>2020-06-29T15:49:37&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
             <loc>http://example.org/categories/hugo/</loc><lastmod>2020-06-29T15:49:37&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
             <loc>http://example.org/hugo_setting/</loc><lastmod>2020-06-29T15:49:37&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>http://example.org/tags/django/</loc><lastmod>2020-06-25T22:52:40&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>http://example.org/categories/django/</loc><lastmod>2020-06-25T22:52:40&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://example.org/django_02_crud_setting/</loc><lastmod>2020-06-25T22:52:40&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://example.org/sw_20.06.25/</loc><lastmod>2020-06-25T10:57:11&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://example.org/django_01/</loc><lastmod>2020-06-23T09:57:09&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
