@@ -4,11 +4,11 @@
         <link>http://example.org/tags/django/</link>
         <description>Django - tag - </description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 25 Jun 2020 22:52:40 &#43;0900</lastBuildDate><atom:link href="http://example.org/tags/django/" rel="self" type="application/rss+xml" /><item>
-    <title>Django_02_CRUD_01</title>
-    <link>http://example.org/django_02/</link>
+    <title>Django_02_CRUD(01)</title>
+    <link>http://example.org/django_02_crud_setting/</link>
     <pubDate>Thu, 25 Jun 2020 22:52:40 &#43;0900</pubDate>
     <author></author>
-    <guid>http://example.org/django_02/</guid>
+    <guid>http://example.org/django_02_crud_setting/</guid>
     <description><![CDATA[​
 Django 개발환경준비   편리함을 추구하기 위해 AWS Cloud9을 사용하여 진행
   https://ide.cs50.io/ 주소로 접속하면 진행이 가능하며, 진행을 위해선 Git 아이디가 있어야 한다.

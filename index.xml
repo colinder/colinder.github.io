@@ -38,11 +38,11 @@ jekyll 기초 설정  Jekyll : Jekyll은 Ruby Gem으로 제공되며 템플릿�
  ​
 jekyll 서버 구동 방법 1 2 3 4 5  # 공식 홈페이지 설명 ~$ gem install bundler jekyll	# jekyll 구동을 위한 프로그램 설치 ~$ jekyll new MYBLOG	# MYBLOG 라는 이름의 블로그 폴더 &amp; 기초틀 생성  ~$ cd MYBLOG	# MYBLOG 폴더로 이동 ~/MYBLOG $ bundle exec jekyll serve	# MYBLOG 서버 구동   1 2 3  # 이후 명령창에 Servuer address : http://127.]]></description>
 </item><item>
-    <title>Django_02_CRUD_01</title>
-    <link>http://example.org/django_02/</link>
+    <title>Django_02_CRUD(01)</title>
+    <link>http://example.org/django_02_crud_setting/</link>
     <pubDate>Thu, 25 Jun 2020 22:52:40 &#43;0900</pubDate>
     <author></author>
-    <guid>http://example.org/django_02/</guid>
+    <guid>http://example.org/django_02_crud_setting/</guid>
     <description><![CDATA[​
 Django 개발환경준비   편리함을 추구하기 위해 AWS Cloud9을 사용하여 진행
   https://ide.cs50.io/ 주소로 접속하면 진행이 가능하며, 진행을 위해선 Git 아이디가 있어야 한다.
