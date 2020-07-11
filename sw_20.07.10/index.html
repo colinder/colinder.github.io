@@ -10,7 +10,7 @@
 D3_4676_늘어지는 소리 만들기 1 2 3 4 5 6 7 8 9 10 11 12  for T in range(int(input())): sent = list(input()) # wow H = int(input()) po = sorted(list(map(int, input().split()))) # 2 3 2 for i in range(H): a = po[i]&#43;i sent.insert(a,&#39;-&#39;) print(&#39;#{} {}&#39;.format(T&#43;1, &#39;&#39;.join(sent))) # 단순 산수로 해결   ​
 ​
 D3_4615_재미있는 오셀로 게임 1    ​
-D3_4579_세상의 모든 팰린드롬 2 1    ​" />
+D3_4579_세상의 모든 팰린드롬 2 1 2 3 4 5 6 7 8 9 10 11 12 13 14  for T in range(int(input())): arr = input() result = &#39;Exist&#39; for i in range(len(arr) // 2): if arr[i] == &#39;*&#39; or arr[-1 - i] == &#39;*&#39;: result = &#39;Exist&#39; break if arr[i] !" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://example.org/sw_20.07.10/" />
 <meta property="og:image" content="http://example.org/logo.png"/>
@@ -24,7 +24,7 @@ D3_4579_세상의 모든 팰린드롬 2 1    ​" />
 D3_4676_늘어지는 소리 만들기 1 2 3 4 5 6 7 8 9 10 11 12  for T in range(int(input())): sent = list(input()) # wow H = int(input()) po = sorted(list(map(int, input().split()))) # 2 3 2 for i in range(H): a = po[i]&#43;i sent.insert(a,&#39;-&#39;) print(&#39;#{} {}&#39;.format(T&#43;1, &#39;&#39;.join(sent))) # 단순 산수로 해결   ​
 ​
 D3_4615_재미있는 오셀로 게임 1    ​
-D3_4579_세상의 모든 팰린드롬 2 1    ​"/>
+D3_4579_세상의 모든 팰린드롬 2 1 2 3 4 5 6 7 8 9 10 11 12 13 14  for T in range(int(input())): arr = input() result = &#39;Exist&#39; for i in range(len(arr) // 2): if arr[i] == &#39;*&#39; or arr[-1 - i] == &#39;*&#39;: result = &#39;Exist&#39; break if arr[i] !"/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -37,7 +37,7 @@ D3_4579_세상의 모든 팰린드롬 2 1    ​"/>
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/sw_20.07.10\/"
-        },"genre": "posts","keywords": "algorithm","wordcount":  69 ,
+        },"genre": "posts","keywords": "algorithm","wordcount":  206 ,
         "url": "http:\/\/example.org\/sw_20.07.10\/","datePublished": "2020-07-10T11:27:50+09:00","dateModified": "2020-07-10T11:27:50+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -114,7 +114,7 @@ D3_4579_세상의 모든 팰린드롬 2 1    ​"/>
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">SW Expert Academy_D3 4676, 4615, 4579, 4522</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/sw-expert-academy/"><i class="far fa-folder fa-fw"></i>SW Expert Academy</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-07-10">2020-07-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;69 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-07-10">2020-07-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;206 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;One minute&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -180,20 +180,70 @@ D3_4579_세상의 모든 팰린드롬 2 1    ​"/>
 <h3 id="d3_4579_세상의-모든-팰린드롬-2">D3_4579_세상의 모든 팰린드롬 2</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">for</span> <span class="n">T</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())):</span>
+    <span class="n">arr</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="s1">&#39;Exist&#39;</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;*&#39;</span> <span class="ow">or</span> <span class="n">arr</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span> <span class="o">-</span> <span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;*&#39;</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="s1">&#39;Exist&#39;</span>
+            <span class="k">break</span>
+        <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">arr</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span> <span class="o">-</span> <span class="n">i</span><span class="p">]:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="s1">&#39;Not exist&#39;</span>
+            <span class="k">break</span>
+
+    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;#{T+1} {result}&#39;</span><span class="p">)</span>
+    
+<span class="c1"># *이 등장하기 전까지 대칭을 이루고 있다면 무조건 &#39;Exist&#39;이고, 만약 *가 없다면, 대칭인지 판별하면 된다.</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>​</p>
 <h3 id="d3_4522_세상의-모든-팰린드롬">D3_4522_세상의 모든 팰린드롬</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">for</span> <span class="n">T</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())):</span>
+    <span class="n">arr</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">input</span><span class="p">()))</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="s1">&#39;Exist&#39;</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;?&#39;</span><span class="p">:</span>
+            <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="o">-</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">arr</span> <span class="o">!=</span> <span class="n">arr</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="s1">&#39;Not exist&#39;</span>
+
+
+    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;#{T+1} {result}&#39;</span><span class="p">)</span>
+    
+<span class="c1"># ?가 등장하면 무조건 해당 index의 반대쪽이 대칭을 이룬다고 생각할 수 있으니까, ?의 index 반대쪽을 동일하게 변경해주고 대칭인지 판별하면 된다.</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>​</p>

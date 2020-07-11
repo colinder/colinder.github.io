@@ -21,4 +21,4 @@
             <loc>http://example.org/sw_20.06.25/</loc><lastmod>2020-06-25T10:57:11&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://example.org/django_01/</loc><lastmod>2020-06-23T09:57:09&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://example.org/sw_20.06.23/</loc><lastmod>2020-06-23T09:05:05&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>http://example.org/sw_20.06.20/</loc><lastmod>2020-06-20T22:46:41&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url></urlset>
+            <loc>http://example.org/sw_20.06.20/</loc><lastmod>2020-06-20T22:46:41&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url></urlset>
