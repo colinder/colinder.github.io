@@ -22,8 +22,6 @@ for T in range(int(input())):
 
 ​	
 
-​	
-
 ### D3_4615_재미있는 오셀로 게임
 
 ```python
