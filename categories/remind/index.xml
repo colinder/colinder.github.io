@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>remind - Category - </title>
+        <link>http://example.org/categories/remind/</link>
+        <description>remind - Category - </description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 13 Jul 2020 22:56:13 &#43;0900</lastBuildDate><atom:link href="http://example.org/categories/remind/" rel="self" type="application/rss+xml" /><item>
+    <title>주어들은 명언</title>
+    <link>http://example.org/reminds_01/</link>
+    <pubDate>Mon, 13 Jul 2020 22:56:13 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/reminds_01/</guid>
+    <description><![CDATA[나한테 86400달러가 있는데 누가 10달러 훔쳐가면  도둑맞은 10달러 때문에 빡쳐서 86400달러를 다 버릴거냐 묻는다면 누구나 아니라고 할 것이다.
+하루 중 기분나쁜 10초로 인해 모든 하루를 망치지 말자.
+ ]]></description>
+</item></channel>
+</rss>

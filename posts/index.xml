@@ -3,7 +3,16 @@
         <title>All Posts - </title>
         <link>http://example.org/posts/</link>
         <description>All Posts | </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 10 Jul 2020 11:27:50 &#43;0900</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 13 Jul 2020 22:56:13 &#43;0900</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>주어들은 명언</title>
+    <link>http://example.org/reminds_01/</link>
+    <pubDate>Mon, 13 Jul 2020 22:56:13 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/reminds_01/</guid>
+    <description><![CDATA[나한테 86400달러가 있는데 누가 10달러 훔쳐가면  도둑맞은 10달러 때문에 빡쳐서 86400달러를 다 버릴거냐 묻는다면 누구나 아니라고 할 것이다.
+하루 중 기분나쁜 10초로 인해 모든 하루를 망치지 말자.
+ ]]></description>
+</item><item>
     <title>SW Expert Academy_D3 4676, 4615, 4579, 4522</title>
     <link>http://example.org/sw_20.07.10/</link>
     <pubDate>Fri, 10 Jul 2020 11:27:50 &#43;0900</pubDate>
@@ -93,14 +102,5 @@ Web의 작동방식을 간단히 설명하자면, 요청과 응답.
     <guid>http://example.org/sw_20.06.23/</guid>
     <description><![CDATA[​
 D3_6190_정곤이의 단조 증가하는 수 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  for T in range(int(input())): N = int(input()) L = list(map(int, input().split())) result = -1 for i in range(N-1): for j in range(i+1, N): num = str(L[i]*L[j]) if len(num) &gt; 1 and &#39;0&#39; not in num and result &lt; int(num) and list(num) == sorted(num): result = int(num) print(f&#39;#{T+1} {result}&#39;) # 단조증가하는 지를 검증하는 방법으로 sorted를 썼는데 이를 활용하기 위해서는 str형태로 변경해야 검증이 가능하다.]]></description>
-</item><item>
-    <title>SW Expert Academy_D3 9700, 7675, 6692, 6485</title>
-    <link>http://example.org/sw_20.06.20/</link>
-    <pubDate>Sat, 20 Jun 2020 22:46:41 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>http://example.org/sw_20.06.20/</guid>
-    <description><![CDATA[​
-D3_9700_USB 꽂기의 미스터리 1 2 3 4 5 6 7 8 9 10 11  for T in range(int(input())): p, q = map(float, input().split()) s1 = (1-p)*q s2 = p*(1-q)*q if s1 &lt; s2: print(f&#39;#{T+1} YES&#39;) else: print(f&#39;#{T+1} NO&#39;) # 단순 수학을 통해 해결.   ​
-D3_7675_통역사 성경이 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25  for T in range(int(input())): N = int(input()) sent = input() sent = sent.]]></description>
 </item></channel>
 </rss>
