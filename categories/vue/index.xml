@@ -1,0 +1,57 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Vue - Category - </title>
+        <link>http://example.org/categories/vue/</link>
+        <description>Vue - Category - </description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 17 Jul 2020 22:03:11 &#43;0900</lastBuildDate><atom:link href="http://example.org/categories/vue/" rel="self" type="application/rss+xml" /><item>
+    <title>Vue_basic_03</title>
+    <link>http://example.org/vue_basic_03/</link>
+    <pubDate>Fri, 17 Jul 2020 22:03:11 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/vue_basic_03/</guid>
+    <description><![CDATA[​
+1. VUE CLI 란? (공식문서) 간단히 vue-cli 는 기본 vue 개발 환경을 설정해주는 도구
+ 여기서 CLI 란 ?
+명령 줄 인터페이스(CLI, Command line interface) 또는 명령어 인터페이스는 텍스트 터미널을 통해 사용자와 컴퓨터가 상호 작용하는 방식. 즉, 작업 명령은 사용자가 컴퓨터 키보드 등을 통해 문자열의 형태로 입력하며, 컴퓨터로부터의 출력 역시 문자열의 형태로 주어진다. (위키백과)
+ ​
+2. vue router 프로젝트 생성 후 보통의 경우 편의를 위해 terminal에 vue add router를 입력해 router설치를 진행한다.]]></description>
+</item><item>
+    <title>Vue_basic_02</title>
+    <link>http://example.org/vue_basic_02/</link>
+    <pubDate>Fri, 17 Jul 2020 22:03:09 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/vue_basic_02/</guid>
+    <description><![CDATA[​
+Vue의 기본 문법 및 동작 방법을 계속 알아보자 08_methods
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38  ✨Point 1. method는 methods: {}의 문법으로 구성한다. &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt; &lt;title&gt;Methods&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;div id=&#39;app&#39;&gt; {{ message }} &lt;/div&gt; &lt;!]]></description>
+</item><item>
+    <title>Vue_basic_01</title>
+    <link>http://example.org/vue_basic_01/</link>
+    <pubDate>Fri, 17 Jul 2020 22:03:05 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/vue_basic_01/</guid>
+    <description><![CDATA[​
+Vue  Vue.js는 웹 애플리케이션의 사용자 인터페이스를 만들기 위해 사용하는 오픈 소스 프로그레시브 자바스크립트 프레임워크
+ ​
+Vue의 이론적 구성 및 설명을 알아보자 1. Vue는 MVVM 패턴을 따른다.
+ MVVM(Model-View-ViewModel) 패턴?
+모델과 뷰 사이에 뷰모델이 위치하는 구조
+ MVVM 패턴"MVVM 패턴 ​
+2. Vue는 SPA (Single-Page Application)
+ 서버로부터 완전한 새로운 페이지를 불러오지 않고 현재의 페이지를 동적으로 다시 작성함으로써 사용자와 소통하는 웹 애플리케이션을 말한다.
+내가 이해한 방식: 변경사항이 발생했을 때 새로고침을하며 매번 페이지를 새롭게 구서하는 것이 아니라, 서버를 돌릴 때 이미 모든 페이지가 제작되어 있고 이를 사용자의 선택에 따라 보여주는 것.]]></description>
+</item><item>
+    <title>Vue_setting</title>
+    <link>http://example.org/vue_setting/</link>
+    <pubDate>Fri, 17 Jul 2020 21:56:29 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/vue_setting/</guid>
+    <description><![CDATA[​
+Vue  Vue.js는 웹 애플리케이션의 사용자 인터페이스를 만들기 위해 사용하는 오픈 소스 프로그레시브 자바스크립트 프레임워크
+ 1. 시작하기  Vue VS Django
+어느 정도 공부를 하면서 체득한 가장 큰 구분점은 &ldquo;Django는 App별로 응답을 구분하고, Vue는 Component별로 응답을 구분한다.&ldquo;는 것이다.
+큰 차이가 없어보이고, 큰 의미가 없어보일 수 있으나 이는 내가 vue를 이해하는데 가장 많은 도움이 된 부분이다.
+    개발 환경 설정 &amp; 프로젝트 생성
+ vscode 설치 nodeJS 설치 vscode 실행 후 terminal에서 npm install 설치 vscode 실행 후 terminal에서 npm i -g @vue/cli 설치  설치가 잘 되었나 vue --version으로 확인 (버전이 보이면 ok)   (선택사항) vscode의 Extensions에서Vetur와 Vue VSCode Snippets 설치  Auto Rename Tag, Auto Close Tag    1 2 3 4  $ vue create myproject	# myproject 프로젝트 생성 $ cd myproject	# 생성한 myproject 폴더로 이동 $ vue add router	# (선택사항) myproject 히스토리를 관리해줄 router기능 설치 $ npm run serve	# myproject의 디폴트 서버 실행   1 2 3 4 5 6  App running at: - Local: http://localhost:8080/ - Network: http://192.]]></description>
+</item></channel>
+</rss>
