@@ -3,7 +3,16 @@
         <title>SW Expert Academy - Category - </title>
         <link>http://example.org/categories/sw-expert-academy/</link>
         <description>SW Expert Academy - Category - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 10 Jul 2020 11:27:50 &#43;0900</lastBuildDate><atom:link href="http://example.org/categories/sw-expert-academy/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 29 Jul 2020 22:59:28 &#43;0900</lastBuildDate><atom:link href="http://example.org/categories/sw-expert-academy/" rel="self" type="application/rss+xml" /><item>
+    <title>SW_20.07.29</title>
+    <link>http://example.org/sw_20.07.29/</link>
+    <pubDate>Wed, 29 Jul 2020 22:59:28 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/sw_20.07.29/</guid>
+    <description><![CDATA[​
+D3_4466_최대 성적표 만들기 1 2 3 4 5 6 7 8 9 10 11  for T in range(int(input())): N, K = map(int, input().split()) score = list(map(int, input().split())) score.sort(reverse=True) result = 0 for i in range(K): result += score[i] print(&#39;#{} {}&#39;.format(T+1, result))   ​
+D3_4406_모음이 보이지 않는 사람 1 2 3 4 5 6 7  for T in range(int(input())): sent = input() result = &#39;&#39; for i in sent: if i not in &#39;aeiou&#39;: result += i print(&#39;#{} {}&#39;.]]></description>
+</item><item>
     <title>SW Expert Academy_D3 4676, 4615, 4579, 4522</title>
     <link>http://example.org/sw_20.07.10/</link>
     <pubDate>Fri, 10 Jul 2020 11:27:50 &#43;0900</pubDate>
