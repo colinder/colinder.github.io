@@ -45,29 +45,33 @@
     또 같은 공유기를 사용하고 있는 기기에서 접속하여 서버 확인이 가능하다.
   ```
 
-  
+  ​	
 
 - 생성된 프로젝트의 기본사항 파악
 
-  1. vue create myproject 실행 후 Terminal 창에는
+  1. Terminal창에 vue create myproject 명령어 입력 후
 
-     ![image-20200713230725043](C:\SSAFY\First semester\03_myBlog\content\posts\Vue\image-20200713230725043.png)
+     {{< image src="/images/image-20200713230725043.png" caption=" " width="500px">}}
 
-     이와 같은 창이 뜨는데 `default`로 설정하고 프로젝트를 시작한다.
+     이와 같은 창이 뜨는데 `default`로 설정하고 enter하고, 프로젝트를 시작한다.
 
-     
+     ​	
 
   2. 프로젝트 생성이 완료되면 `(router 미설치)`
 
-     ![image-20200713232004608](C:\SSAFY\First semester\03_myBlog\content\posts\Vue\image-20200713232004608.png)
+     {{< image src="/images/image-20200713232004608.png" caption=" " width="200px">}}
 
-  
+     이와 같은 폴더 구조를 확인할 수 있다.
 
-  3. vue add router를 한다면. 두번의 질문을 하는데 전부 y 로 처리`(router 설치)`
+     ​	
 
-  ![image-20200713231411715](C:\SSAFY\First semester\03_myBlog\content\posts\Vue\image-20200713231411715.png)
+  3. vue add router를 설치한다면. 두번의 질문을 하는데 전부 y 로 처리`(router 설치)`
+
+     {{< image src="/images/image-20200713231411715.png" caption=" " width="200px">}}
 
 
+
+​	
 
 
 ### 여기서 잠깐✋ 

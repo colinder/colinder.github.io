@@ -94,7 +94,7 @@ Hugo로 블로그를 구축한다면 이를 git의 서버를 통해 배포한다
 hugo new site <프로젝트 이름>		# ex) hugo new site MyBlog → MyBlog라는 프로젝트 폴더를 생성.
 ```
 
-{{< image src="/images/Hugo_01.png" >}}
+{{< image src="/images/Hugo_01.png" caption="휴고 사이트 생성 명령어" width="600px" >}}
 
 이때 생성된 폴더는 프로젝트폴더, root폴더, default폴더 등으로 불리며,
 
