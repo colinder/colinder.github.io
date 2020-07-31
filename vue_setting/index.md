@@ -65,7 +65,7 @@
 
      ​	
 
-  3. vue add router를 설치한다면. 두번의 질문을 하는데 전부 y 로 처리`(router 설치)`
+  3. vue add router를 한다면. 두번의 묻는데 전부 y 로 처리`(router와 history mode 설정을 묻는 것)`
 
      {{< image src="/images/image-20200713231411715.png" caption=" " width="200px">}}
 
@@ -86,14 +86,30 @@
 >
 > **명령 줄 인터페이스(CLI, Command line interface) 또는 명령어 인터페이스**는 텍스트 터미널을 통해 사용자와 컴퓨터가 상호 작용하는 방식. 즉, 작업 명령은 사용자가 컴퓨터 키보드 등을 통해 문자열의 형태로 입력하며, 컴퓨터로부터의 출력 역시 문자열의 형태로 주어진다. (위키백과)
 
-
+​	
 
 ### 2.  vue add router 필요한가?
+
+{{< image src="/images/image-20200731224139667.png" caption=" " width="200px">}}
 
 라우팅은 URI에 따라 해당하는 정적파일을 내려주는 방식이다. 이를 브라우져에서 구현해야 하는것이 **SPA** 개발의 핵심
 
 >아이디어는 간단하다. 요청 URI에 따라 브라우져에서 돔을 변경하는 방식. 대부분의 경우 도움이 되는 기능이기 때문에 상당이 추천한다. (추가로 navbar? 도 생기니 더욱 추천)
 >
 >**terminal**에 **vue add router** 를 입력하면 history 모드를 사용하겠나고 묻는데  **y** 를 입력해주면 된다. 
+
+​	
+
+### 3.  vue add router 후 History Mode 설정은 왜 필요한가?
+
+{{< image src="/images/image-20200731224303419.png" caption=" " width="200px">}}
+
+> vue router를 설치하게 되면 해시백 모드와 히스토리 모드 중 디폴트로 해시백 모드가 적용된다.
+>
+> URL 해시를 사용하여 전체 URL을 시뮬레이트하므로 URL이 변경될 때 페이지가 다시 로드 되지 않습니다.
+>
+> 해시를 제거하기 위해 라우터의 **history 모드** 를 사용할 수 있습니다. `history.pushState` API를 활용하여 페이지를 다시 로드하지 않고도 URL 탐색을 할 수 있습니다. (공식문서 설명..)
+
+`난 다른건 모르겠고 URL이 깔끔해 보이게되어 좋다.`
 
 
