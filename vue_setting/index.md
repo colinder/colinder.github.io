@@ -90,7 +90,7 @@
 
 ### 2.  vue add router 필요한가?
 
-{{< image src="/images/image-20200731224139667.png" caption=" " width="200px">}}
+{{< image src="/images/image-20200731224139667.png" caption=" " width="800px">}}
 
 라우팅은 URI에 따라 해당하는 정적파일을 내려주는 방식이다. 이를 브라우져에서 구현해야 하는것이 **SPA** 개발의 핵심
 
@@ -102,7 +102,7 @@
 
 ### 3.  vue add router 후 History Mode 설정은 왜 필요한가?
 
-{{< image src="/images/image-20200731224303419.png" caption=" " width="200px">}}
+{{< image src="/images/image-20200731224303419.png" caption=" " width="800px">}}
 
 > vue router를 설치하게 되면 해시백 모드와 히스토리 모드 중 디폴트로 해시백 모드가 적용된다.
 >
