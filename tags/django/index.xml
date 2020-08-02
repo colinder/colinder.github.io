@@ -3,7 +3,18 @@
         <title>Django - Tag - </title>
         <link>http://example.org/tags/django/</link>
         <description>Django - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 10 Jul 2020 11:04:11 &#43;0900</lastBuildDate><atom:link href="http://example.org/tags/django/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 02 Aug 2020 22:24:45 &#43;0900</lastBuildDate><atom:link href="http://example.org/tags/django/" rel="self" type="application/rss+xml" /><item>
+    <title>Naming Convention</title>
+    <link>http://example.org/namingconvention/</link>
+    <pubDate>Sun, 02 Aug 2020 22:24:45 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/namingconvention/</guid>
+    <description><![CDATA[Naming Convention  정해진 규정은 없으나, 많은 개발자들이 암묵적으로 지키고 있는 이름짓는 방법.
+ Python   snake_case 🐍
+1 2 3  # _ == snake some_var = 5 my_awesome = 3     Javascript, Vue   camelCase 🐪
+1 2 3  # 낙타등이 중간에 솟아 있는 모습 someVar = 5 pyAwesome = 3     uppercamelCase 🐪🐪
+1 2 3  # 낙타얼굴과 등이 중간에 솟아 있는 모습 SomeVar = 5 PyAwesome = 3     ]]></description>
+</item><item>
     <title>Django_02_CRUD(02)</title>
     <link>http://example.org/django_02_crud_c/</link>
     <pubDate>Fri, 10 Jul 2020 11:04:11 &#43;0900</pubDate>

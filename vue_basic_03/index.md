@@ -1,9 +1,9 @@
-# Vue_basic_03
+# Vue_basic_03 (vue_cli & router & histoyMode)
 
 
 ​	
 
-# 1. [VUE CLI 란?](https://simplevue.gitbook.io/intro/01.-vue-cli) (공식문서)
+# 1. VUE CLI 란? [(공식문서)](https://simplevue.gitbook.io/intro/01.-vue-cli)
 
 간단히 vue-cli 는 `기본 vue 개발 환경을 설정해주는 도구`
 
@@ -25,44 +25,48 @@ router를 설치하고 나면 기존의 vue 프로젝트의 **tree구조**에서
 
 ​	
 
-## views 폴더 속 요소
+## views 폴더 속 .vue 파일의 특징
 
-### 1.  views 폴더안의 .vue 파일들은 App.vue에 직접 연결되며, component의 내용을 담는 것도 가능하다. 
+**1. views 폴더안의 .vue 파일들은 App.vue에 직접 연결되며, components들을 품을 수도 있다.**
 
-🤷‍♂️ 실습해보자
+**2. props(부모에서 자식에게 데이터 이동)와 emit(자식에서 부모에게 데이터 이동)이다.**
 
-- 부모 views에 자식 components를 담는 상황을 가정하고 코딩 (Step 1~3 으로 구성)
+더 많은 특징 및 활용방법이 있을 것이나 상기 내용은 가장 기초이자 핵심이다. 
+
+​	
+
+​	
+
+🤷‍♂️ 1번 내용부터 실습해보자
+
+- 부모(views)에 자식 (components)를 품는 상황을 가정하고 코딩 (Step 1~3 으로 구성)
 
   #### Step 1.
 
   ```vue
-  ## App.vue
+  // App.vue
   
   <template>
     <div id="app">
       <div id="nav">
-        <!-- Component에 등록한 name 사용법 (위 아래가 동일) -->
+        //Component에 등록한 name 사용법 (위 아래가 동일)
         <router-link :to="{ name: 'Parent' }">Parnet</router-link> |
-        <!-- 기존 사용법 -->
+        //디폴트 사용법
         <router-link to="/about">About</router-link>
       </div>
-      <!-- 연결된 router의 내용을 보여주는 곳 -->
+      // 연결된 router의 내용을 보여주는 곳
       <router-view/>  
     </div>
   </template>
-  
-  <style>...
-      
-  ## 현재 2개의 router-link가 걸려있으며. 아래 <router-view/> 부분이 링크 선택시 연결된 링크의 화면을 보여주는 부분
   ```
-
-  {{<image src="/images/image-20200716112330564.png" caption="`npm run serve`시 보여지는 화면" width="800px">}}
-
+  
+  
+  
   #### Step 2.
 
   ```vue
-  ## components/Child.vue (직접 생성)
-  
+  // components/Child.vue (직접 생성)
+    
   <template>
     <div class="child">
       <h2>자식 컴포넌트</h2>
@@ -83,63 +87,64 @@ router를 설치하고 나면 기존의 vue 프로젝트의 **tree구조**에서
       padding: 3px;
     }
   </style>
+  
   ```
-
-  ​	
-
+  
+  
+  
   #### Step 3.
-
+  
   ```vue
-  ## views/Parent.vue (직접 생성)
-  ## views에 components 등록
-  
-  ✨ Point! 
-  1. views에서 components를 등록(Parent가 Child를 품고 싶다면)하고 싶다면, 
-  	1) components의 <script></script>에 import 진행
-  	2) <script></script>안에 components: {Child}의 문법으로 등록
-  	3) <template></template>안에 components이름으로 탭을 만들면 해당 위치에 components 표현 가능
-  
-  <template>
-    <div class="parent">
-      <h1>부모 컴포넌트</h1>
-      <!-- step 3. 사용 (feat. 나중에 자식에게서도 데이터를 받음. this.$emit('hungry' 여기 값을 반영)) -->
-      <Child/>
-      <h2>최하단입니다.</h2>
-    </div>
-  </template>
-  
-  <script>
-  // step 1. import
-  import Child from '../components/Child.vue'
-  
-  export default {
-    name: 'Parent',
-    // step 2. 등록
-    },
-    components: {
-      // 'Child': Child, 키 벨류가 같으면 아래와 같이 사용가능
-      Child,
+    // views/Parent.vue (직접 생성)
+    // views에 components 등록
+    
+    ✨ Point! 
+    1. views에서 components를 등록(Parent가 Child를 품고 싶다면)하고 싶다면, 
+    	1) components의 <script></script>에 import 진행
+    	2) <script></script>안에 components: {Child}의 문법으로 등록
+    	3) <template></template>안에 components이름으로 탭을 만들면 해당 위치에 components 표현 가능
+    
+    <template>
+      <div class="parent">
+        <h1>부모 컴포넌트</h1>
+        <!-- step 3. 사용 (feat. 나중에 자식에게서도 데이터를 받음. this.$emit('hungry' 여기 값을 반영)) -->
+        <Child/>
+        <h2>최하단입니다.</h2>
+      </div>
+    </template>
+    
+    <script>
+    // step 1. import
+    import Child from '../components/Child.vue'
+    
+    export default {
+      name: 'Parent',
+      // step 2. 등록
+      },
+      components: {
+        // 'Child': Child, 키 벨류가 같으면 아래와 같이 사용가능
+        Child,
+      }
     }
-  }
-  </script>
-  
-  <!-- views에서 components를 담을 때 모습이 어떻게 담기는기 보기 위해 경계선을 구현 -->
-  <style>
-    .parent {
-      border: 3px solid red;
-      margin: 3px;
-      padding: 3px;
-    }
-  </style>
+    </script>
+    
+    <!-- views에서 components를 담을 때 모습이 어떻게 담기는기 보기 위해 경계선을 구현 -->
+    <style>
+      .parent {
+        border: 3px solid red;
+        margin: 3px;
+        padding: 3px;
+      }
+    </style>
   ```
+  
+  ​		
 
-  ​	
+**`※ Vue 프로젝트를 생성해 components를 등록하고, 화면을 구성하다보면 각각의 components에서 작성 또는 변경된 데이터를 이리저리 보낼 수 있다면 더 다양한 것을 할 수 있어진다. 이를 위한 것이 props(부모에서 자식에게 데이터 이동)와 emit(자식에서 부모에게 데이터 이동)이다.`** 
 
-**※ Vue 프로젝트를 생성해 components를 등록하고, 화면을 구성하다보면 각각의 components에서 상태 or 작성, 변경된 데이터를 이리저리 보낼 수 있다면 더 다양한 것을 할 수 있을 겠다는 생각이 들 수 있다. 이를 위한 것이** 
+​	
 
-### 2. props(부모에서 자식에게 데이터 이동) 와 emit(자식에서 부모에게 데이터 이동)이다. 
-
-🤷‍♀️ 실습해보자
+🤷‍♀️ 2번 내용도 실습해보자
 
 - 부모 views에서 자식 component간의 용돈을 주고 받는 상황을 가정하고 코딩해보자 (Step 1~4)
 

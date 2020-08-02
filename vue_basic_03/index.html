@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Vue_basic_03 - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="Vue_basic_03" />
+        <title>Vue_basic_03 (vue_cli &amp; router &amp; histoyMode) - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="Vue_basic_03 (vue_cli &amp; router &amp; histoyMode)" />
 <meta property="og:description" content="​
 1. VUE CLI 란? (공식문서) 간단히 vue-cli 는 기본 vue 개발 환경을 설정해주는 도구
  여기서 CLI 란 ?
@@ -20,7 +20,7 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://example.org/logo.png"/>
 
-<meta name="twitter:title" content="Vue_basic_03"/>
+<meta name="twitter:title" content="Vue_basic_03 (vue_cli &amp; router &amp; histoyMode)"/>
 <meta name="twitter:description" content="​
 1. VUE CLI 란? (공식문서) 간단히 vue-cli 는 기본 vue 개발 환경을 설정해주는 도구
  여기서 CLI 란 ?
@@ -34,12 +34,12 @@
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Vue_basic_03",
+        "headline": "Vue_basic_03 (vue_cli \u0026 router \u0026 histoyMode)",
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/vue_basic_03\/"
-        },"genre": "posts","keywords": "Vue","wordcount":  1079 ,
+        },"genre": "posts","keywords": "Vue","wordcount":  1064 ,
         "url": "http:\/\/example.org\/vue_basic_03\/","datePublished": "2020-07-17T22:03:11+09:00","dateModified": "2020-07-17T22:03:11+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -114,10 +114,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Vue_basic_03</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/vue/"><i class="far fa-folder fa-fw"></i>Vue</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-07-17">2020-07-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1079 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;6 minutes&nbsp;</div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Vue_basic_03 (vue_cli &amp; router &amp; histoyMode)</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/vue/"><i class="far fa-folder fa-fw"></i>vue</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-07-17">2020-07-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1064 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;5 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
@@ -125,17 +125,13 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#views-폴더-속-요소">views 폴더 속 요소</a>
+    <li><a href="#views-폴더-속-vue-파일의-특징">views 폴더 속 .vue 파일의 특징</a>
       <ul>
-        <li><a href="#1--views-폴더안의-vue-파일들은-appvue에-직접-연결되며-component의-내용을-담는-것도-가능하다">1.  views 폴더안의 .vue 파일들은 App.vue에 직접 연결되며, component의 내용을 담는 것도 가능하다.</a>
+        <li>
           <ul>
             <li><a href="#step-1">Step 1.</a></li>
             <li><a href="#step-2">Step 2.</a></li>
             <li><a href="#step-3">Step 3.</a></li>
-          </ul>
-        </li>
-        <li><a href="#2-props부모에서-자식에게-데이터-이동-와-emit자식에서-부모에게-데이터-이동이다">2. props(부모에서 자식에게 데이터 이동) 와 emit(자식에서 부모에게 데이터 이동)이다.</a>
-          <ul>
             <li><a href="#step-1-1">Step 1.</a></li>
             <li><a href="#step-2-1">Step 2.</a></li>
             <li><a href="#step-3-1">Step 3.</a></li>
@@ -147,7 +143,7 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><p>​</p>
-<h1 id="1-vue-cli-란httpssimplevuegitbookiointro01-vue-cli-공식문서">1. <a href="https://simplevue.gitbook.io/intro/01.-vue-cli" target="_blank" rel="noopener noreffer">VUE CLI 란?</a> (공식문서)</h1>
+<h1 id="1-vue-cli-란-공식문서httpssimplevuegitbookiointro01-vue-cli">1. VUE CLI 란? <a href="https://simplevue.gitbook.io/intro/01.-vue-cli" target="_blank" rel="noopener noreffer">(공식문서)</a></h1>
 <p>간단히 vue-cli 는 <code>기본 vue 개발 환경을 설정해주는 도구</code></p>
 <blockquote>
 <p><strong>여기서 CLI 란 ?</strong></p>
@@ -162,12 +158,16 @@
 <p>router 설치 후: App.vue - <strong>views</strong> - components</p>
 </blockquote>
 <p>​</p>
-<h2 id="views-폴더-속-요소">views 폴더 속 요소</h2>
-<h3 id="1--views-폴더안의-vue-파일들은-appvue에-직접-연결되며-component의-내용을-담는-것도-가능하다">1.  views 폴더안의 .vue 파일들은 App.vue에 직접 연결되며, component의 내용을 담는 것도 가능하다.</h3>
-<p>🤷‍♂️ 실습해보자</p>
+<h2 id="views-폴더-속-vue-파일의-특징">views 폴더 속 .vue 파일의 특징</h2>
+<p><strong>1. views 폴더안의 .vue 파일들은 App.vue에 직접 연결되며, components들을 품을 수도 있다.</strong></p>
+<p><strong>2. props(부모에서 자식에게 데이터 이동)와 emit(자식에서 부모에게 데이터 이동)이다.</strong></p>
+<p>더 많은 특징 및 활용방법이 있을 것이나 상기 내용은 가장 기초이자 핵심이다.</p>
+<p>​</p>
+<p>​</p>
+<p>🤷‍♂️ 1번 내용부터 실습해보자</p>
 <ul>
 <li>
-<p>부모 views에 자식 components를 담는 상황을 가정하고 코딩 (Step 1~3 으로 구성)</p>
+<p>부모(views)에 자식 (components)를 품는 상황을 가정하고 코딩 (Step 1~3 으로 구성)</p>
 <h4 id="step-1">Step 1.</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -185,43 +185,25 @@
 </span><span class="lnt">12
 </span><span class="lnt">13
 </span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-vue" data-lang="vue"><span class="err">##</span> <span class="nx">App</span><span class="p">.</span><span class="nx">vue</span>
-  
+<pre class="chroma"><code class="language-vue" data-lang="vue"><span class="c1">// App.vue
+</span><span class="c1"></span>  
 <span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;app&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;nav&#34;</span><span class="p">&gt;</span>
-      <span class="c">&lt;!--</span> <span class="nx">Component에</span> <span class="nx">등록한</span> <span class="nx">name</span> <span class="nx">사용법</span> <span class="p">(</span><span class="nx">위</span> <span class="nx">아래가</span> <span class="nx">동일</span><span class="p">)</span> <span class="o">--&gt;</span>
-      <span class="p">&lt;</span><span class="nt">router-link</span> <span class="o">:</span><span class="na">to</span><span class="o">=</span><span class="s">&#34;{ name: &#39;Parent&#39; }&#34;</span><span class="p">&gt;</span><span class="nx">Parnet</span><span class="o">&lt;</span><span class="err">/router-link&gt; |</span>
-      <span class="c">&lt;!--</span> <span class="nx">기존</span> <span class="nx">사용법</span> <span class="o">--&gt;</span>
-      <span class="p">&lt;</span><span class="nt">router-link</span> <span class="na">to</span><span class="o">=</span><span class="s">&#34;/about&#34;</span><span class="p">&gt;</span><span class="nx">About</span><span class="o">&lt;</span><span class="err">/router-link&gt;</span>
+      <span class="c1">//Component에 등록한 name 사용법 (위 아래가 동일)
+</span><span class="c1"></span>      <span class="p">&lt;</span><span class="nt">router-link</span> <span class="o">:</span><span class="na">to</span><span class="o">=</span><span class="s">&#34;{ name: &#39;Parent&#39; }&#34;</span><span class="p">&gt;</span><span class="nx">Parnet</span><span class="o">&lt;</span><span class="err">/router-link&gt; |</span>
+      <span class="c1">//디폴트 사용법
+</span><span class="c1"></span>      <span class="p">&lt;</span><span class="nt">router-link</span> <span class="na">to</span><span class="o">=</span><span class="s">&#34;/about&#34;</span><span class="p">&gt;</span><span class="nx">About</span><span class="o">&lt;</span><span class="err">/router-link&gt;</span>
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="c">&lt;!--</span> <span class="nx">연결된</span> <span class="nx">router의</span> <span class="nx">내용을</span> <span class="nx">보여주는</span> <span class="nx">곳</span> <span class="o">--&gt;</span>
-    <span class="p">&lt;</span><span class="nt">router-view</span><span class="p">/&gt;</span>  
+    <span class="c1">// 연결된 router의 내용을 보여주는 곳
+</span><span class="c1"></span>    <span class="p">&lt;</span><span class="nt">router-view</span><span class="p">/&gt;</span>  
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
-  
-<span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;...</span>
-      
-<span class="err">##</span> <span class="nx">현재</span> <span class="mi">2</span><span class="nx">개의</span> <span class="nx">router</span><span class="o">-</span><span class="nx">link가</span> <span class="nx">걸려있으며</span><span class="p">.</span> <span class="nx">아래</span> <span class="p">&lt;</span><span class="nt">router-view</span><span class="p">/&gt;</span> <span class="nx">부분이</span> <span class="nx">링크</span> <span class="nx">선택시</span> <span class="nx">연결된</span> <span class="nx">링크의</span> <span class="nx">화면을</span> <span class="nx">보여주는</span> <span class="nx">부분</span>
 </code></pre></td></tr></table>
 </div>
-</div><figure><a class="lightgallery" href="/images/image-20200716112330564.png" title="/images/image-20200716112330564.png" data-thumbnail="/images/image-20200716112330564.png" data-sub-html="<h2>npm run serve시 보여지는 화면</h2>">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="/images/image-20200716112330564.png"
-            data-srcset="/images/image-20200716112330564.png, /images/image-20200716112330564.png 1.5x, /images/image-20200716112330564.png 2x"
-            data-sizes="auto"
-            alt="/images/image-20200716112330564.png" width="800px" />
-    </a><figcaption class="image-caption"><code>npm run serve</code>시 보여지는 화면</figcaption>
-    </figure>
-<h4 id="step-2">Step 2.</h4>
+</div><h4 id="step-2">Step 2.</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -246,10 +228,11 @@
 </span><span class="lnt">20
 </span><span class="lnt">21
 </span><span class="lnt">22
+</span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-vue" data-lang="vue"><span class="err">##</span> <span class="nx">components</span><span class="o">/</span><span class="nx">Child</span><span class="p">.</span><span class="nx">vue</span> <span class="p">(</span><span class="nx">직접</span> <span class="nx">생성</span><span class="p">)</span>
-  
+<pre class="chroma"><code class="language-vue" data-lang="vue"><span class="c1">// components/Child.vue (직접 생성)
+</span><span class="c1"></span>    
 <span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;child&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span><span class="nx">자식</span> <span class="nx">컴포넌트</span><span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
@@ -270,10 +253,10 @@
     <span class="nx">padding</span><span class="o">:</span> <span class="mi">3</span><span class="nx">px</span><span class="p">;</span>
   <span class="p">}</span>
 <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+  
 </code></pre></td></tr></table>
 </div>
-</div><p>​</p>
-<h4 id="step-3">Step 3.</h4>
+</div><h4 id="step-3">Step 3.</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -319,55 +302,55 @@
 </span><span class="lnt">41
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-vue" data-lang="vue"><span class="err">##</span> <span class="nx">views</span><span class="o">/</span><span class="nx">Parent</span><span class="p">.</span><span class="nx">vue</span> <span class="p">(</span><span class="nx">직접</span> <span class="nx">생성</span><span class="p">)</span>
-<span class="err">##</span> <span class="nx">views에</span> <span class="nx">components</span> <span class="nx">등록</span>
-  
-<span class="err">✨</span> <span class="nx">Point</span><span class="o">!</span> 
-<span class="mf">1.</span> <span class="nx">views에서</span> <span class="nx">components를</span> <span class="nx">등록</span><span class="p">(</span><span class="nx">Parent가</span> <span class="nx">Child를</span> <span class="nx">품고</span> <span class="nx">싶다면</span><span class="p">)</span><span class="nx">하고</span> <span class="nx">싶다면</span><span class="p">,</span> 
-  <span class="mi">1</span><span class="p">)</span> <span class="nx">components의</span> <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span><span class="nx">에</span> <span class="kr">import</span> <span class="nx">진행</span>
-  <span class="mi">2</span><span class="p">)</span> <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span><span class="nx">안에</span> <span class="nx">components</span><span class="o">:</span> <span class="p">{</span><span class="nx">Child</span><span class="p">}</span><span class="nx">의</span> <span class="nx">문법으로</span> <span class="nx">등록</span>
-  <span class="mi">3</span><span class="p">)</span> <span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;&lt;/</span><span class="nt">template</span><span class="p">&gt;</span><span class="nx">안에</span> <span class="nx">components이름으로</span> <span class="nx">탭을</span> <span class="nx">만들면</span> <span class="nx">해당</span> <span class="nx">위치에</span> <span class="nx">components</span> <span class="nx">표현</span> <span class="nx">가능</span>
-  
-<span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;parent&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span><span class="nx">부모</span> <span class="nx">컴포넌트</span><span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-    <span class="c">&lt;!--</span> <span class="nx">step</span> <span class="mf">3.</span> <span class="nx">사용</span> <span class="p">(</span><span class="nx">feat</span><span class="p">.</span> <span class="nx">나중에</span> <span class="nx">자식에게서도</span> <span class="nx">데이터를</span> <span class="nx">받음</span><span class="p">.</span> <span class="k">this</span><span class="p">.</span><span class="nx">$emit</span><span class="p">(</span><span class="s1">&#39;hungry&#39;</span> <span class="nx">여기</span> <span class="nx">값을</span> <span class="nx">반영</span><span class="p">))</span> <span class="o">--&gt;</span>
-    <span class="p">&lt;</span><span class="nt">Child</span><span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span><span class="nx">최하단입니다</span><span class="p">.&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
-  
-<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="c1">// step 1. import
-</span><span class="c1"></span><span class="kr">import</span> <span class="nx">Child</span> <span class="nx">from</span> <span class="s1">&#39;../components/Child.vue&#39;</span>
-  
-<span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
-  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Parent&#39;</span><span class="p">,</span>
-  <span class="c1">// step 2. 등록
-</span><span class="c1"></span>  <span class="p">},</span>
-  <span class="nx">components</span><span class="o">:</span> <span class="p">{</span>
-    <span class="c1">// &#39;Child&#39;: Child, 키 벨류가 같으면 아래와 같이 사용가능
-</span><span class="c1"></span>    <span class="nx">Child</span><span class="p">,</span>
+<pre class="chroma"><code class="language-vue" data-lang="vue">  <span class="c1">// views/Parent.vue (직접 생성)
+</span><span class="c1"></span>  <span class="c1">// views에 components 등록
+</span><span class="c1"></span>    
+  <span class="err">✨</span> <span class="nx">Point</span><span class="o">!</span> 
+  <span class="mf">1.</span> <span class="nx">views에서</span> <span class="nx">components를</span> <span class="nx">등록</span><span class="p">(</span><span class="nx">Parent가</span> <span class="nx">Child를</span> <span class="nx">품고</span> <span class="nx">싶다면</span><span class="p">)</span><span class="nx">하고</span> <span class="nx">싶다면</span><span class="p">,</span> 
+      <span class="mi">1</span><span class="p">)</span> <span class="nx">components의</span> <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span><span class="nx">에</span> <span class="kr">import</span> <span class="nx">진행</span>
+      <span class="mi">2</span><span class="p">)</span> <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span><span class="nx">안에</span> <span class="nx">components</span><span class="o">:</span> <span class="p">{</span><span class="nx">Child</span><span class="p">}</span><span class="nx">의</span> <span class="nx">문법으로</span> <span class="nx">등록</span>
+      <span class="mi">3</span><span class="p">)</span> <span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;&lt;/</span><span class="nt">template</span><span class="p">&gt;</span><span class="nx">안에</span> <span class="nx">components이름으로</span> <span class="nx">탭을</span> <span class="nx">만들면</span> <span class="nx">해당</span> <span class="nx">위치에</span> <span class="nx">components</span> <span class="nx">표현</span> <span class="nx">가능</span>
+    
+  <span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;parent&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span><span class="nx">부모</span> <span class="nx">컴포넌트</span><span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+      <span class="c">&lt;!--</span> <span class="nx">step</span> <span class="mf">3.</span> <span class="nx">사용</span> <span class="p">(</span><span class="nx">feat</span><span class="p">.</span> <span class="nx">나중에</span> <span class="nx">자식에게서도</span> <span class="nx">데이터를</span> <span class="nx">받음</span><span class="p">.</span> <span class="k">this</span><span class="p">.</span><span class="nx">$emit</span><span class="p">(</span><span class="s1">&#39;hungry&#39;</span> <span class="nx">여기</span> <span class="nx">값을</span> <span class="nx">반영</span><span class="p">))</span> <span class="o">--&gt;</span>
+      <span class="p">&lt;</span><span class="nt">Child</span><span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span><span class="nx">최하단입니다</span><span class="p">.&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+    
+  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+  <span class="c1">// step 1. import
+</span><span class="c1"></span>  <span class="kr">import</span> <span class="nx">Child</span> <span class="nx">from</span> <span class="s1">&#39;../components/Child.vue&#39;</span>
+    
+  <span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Parent&#39;</span><span class="p">,</span>
+    <span class="c1">// step 2. 등록
+</span><span class="c1"></span>    <span class="p">},</span>
+    <span class="nx">components</span><span class="o">:</span> <span class="p">{</span>
+      <span class="c1">// &#39;Child&#39;: Child, 키 벨류가 같으면 아래와 같이 사용가능
+</span><span class="c1"></span>      <span class="nx">Child</span><span class="p">,</span>
+    <span class="p">}</span>
   <span class="p">}</span>
-<span class="p">}</span>
-<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-  
-<span class="c">&lt;!--</span> <span class="nx">views에서</span> <span class="nx">components를</span> <span class="nx">담을</span> <span class="nx">때</span> <span class="nx">모습이</span> <span class="nx">어떻게</span> <span class="nx">담기는기</span> <span class="nx">보기</span> <span class="nx">위해</span> <span class="nx">경계선을</span> <span class="nx">구현</span> <span class="o">--&gt;</span>
-<span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
-  <span class="p">.</span><span class="nx">parent</span> <span class="p">{</span>
-    <span class="nx">border</span><span class="o">:</span> <span class="mi">3</span><span class="nx">px</span> <span class="nx">solid</span> <span class="nx">red</span><span class="p">;</span>
-    <span class="nx">margin</span><span class="o">:</span> <span class="mi">3</span><span class="nx">px</span><span class="p">;</span>
-    <span class="nx">padding</span><span class="o">:</span> <span class="mi">3</span><span class="nx">px</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    
+  <span class="c">&lt;!--</span> <span class="nx">views에서</span> <span class="nx">components를</span> <span class="nx">담을</span> <span class="nx">때</span> <span class="nx">모습이</span> <span class="nx">어떻게</span> <span class="nx">담기는기</span> <span class="nx">보기</span> <span class="nx">위해</span> <span class="nx">경계선을</span> <span class="nx">구현</span> <span class="o">--&gt;</span>
+  <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+    <span class="p">.</span><span class="nx">parent</span> <span class="p">{</span>
+      <span class="nx">border</span><span class="o">:</span> <span class="mi">3</span><span class="nx">px</span> <span class="nx">solid</span> <span class="nx">red</span><span class="p">;</span>
+      <span class="nx">margin</span><span class="o">:</span> <span class="mi">3</span><span class="nx">px</span><span class="p">;</span>
+      <span class="nx">padding</span><span class="o">:</span> <span class="mi">3</span><span class="nx">px</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>​</p>
 </li>
 </ul>
-<p><strong>※ Vue 프로젝트를 생성해 components를 등록하고, 화면을 구성하다보면 각각의 components에서 상태 or 작성, 변경된 데이터를 이리저리 보낼 수 있다면 더 다양한 것을 할 수 있을 겠다는 생각이 들 수 있다. 이를 위한 것이</strong></p>
-<h3 id="2-props부모에서-자식에게-데이터-이동-와-emit자식에서-부모에게-데이터-이동이다">2. props(부모에서 자식에게 데이터 이동) 와 emit(자식에서 부모에게 데이터 이동)이다.</h3>
-<p>🤷‍♀️ 실습해보자</p>
+<p><strong><code>※ Vue 프로젝트를 생성해 components를 등록하고, 화면을 구성하다보면 각각의 components에서 작성 또는 변경된 데이터를 이리저리 보낼 수 있다면 더 다양한 것을 할 수 있어진다. 이를 위한 것이 props(부모에서 자식에게 데이터 이동)와 emit(자식에서 부모에게 데이터 이동)이다.</code></strong></p>
+<p>​</p>
+<p>🤷‍♀️ 2번 내용도 실습해보자</p>
 <ul>
 <li>
 <p>부모 views에서 자식 component간의 용돈을 주고 받는 상황을 가정하고 코딩해보자 (Step 1~4)</p>
@@ -700,13 +683,13 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/vue/">Vue</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/vue/">vue</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/vue_basic_02/" class="prev" rel="prev" title="Vue_basic_02"><i class="fas fa-angle-left fa-fw"></i>Vue_basic_02</a>
+    <div class="post-nav"><a href="/vue_basic_02/" class="prev" rel="prev" title="Vue_basic_02 (Vue 문법2)"><i class="fas fa-angle-left fa-fw"></i>Vue_basic_02 (Vue 문법2)</a>
             <a href="/sw_20.07.29/" class="next" rel="next" title="SW_20.07.29">SW_20.07.29<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 </article></div>

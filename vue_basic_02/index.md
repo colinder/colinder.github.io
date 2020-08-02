@@ -1,4 +1,4 @@
-# Vue_basic_02
+# Vue_basic_02 (Vue 문법2)
 
 
 ​	
