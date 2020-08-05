@@ -3,13 +3,30 @@
         <title>All Posts - </title>
         <link>http://example.org/posts/</link>
         <description>All Posts | </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 02 Aug 2020 22:24:45 &#43;0900</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 05 Aug 2020 22:11:35 &#43;0900</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>BEAKJOON 1149</title>
+    <link>http://example.org/bj_20.08.06/</link>
+    <pubDate>Wed, 05 Aug 2020 22:11:35 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/bj_20.08.06/</guid>
+    <description><![CDATA[​
+1149_RGB거리 1 2 3 4 5 6 7 8 9 10 11 12 13  N = int(input()) RGB = [list(map(int, input().split())) for _ in range(N)] for i in range(1, len(RGB)): RGB[i][0] = RGB[i][0] + min(RGB[i-1][1], RGB[i-1][2]) RGB[i][1] = RGB[i][1] + min(RGB[i-1][0], RGB[i-1][2]) RGB[i][2] = RGB[i][2] + min(RGB[i-1][0], RGB[i-1][1]) print(min(RGB[i][0], RGB[i][1], RGB[i][2])) # 2시간이 넘게 고민한 결과... # 문제 속 조건3 &#34;&#34;i(2 ≤ i ≤ N-1)번 집의 색은 i-1번, i+1번 집의 색과 같지 않아야 한다.]]></description>
+</item><item>
+    <title>BEAKJOON 1103, 1904, 2748, 9461</title>
+    <link>http://example.org/bj_20.08.04/</link>
+    <pubDate>Tue, 04 Aug 2020 22:12:11 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/bj_20.08.04/</guid>
+    <description><![CDATA[​
+1003_피보나치 함수 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20  def Fibonacci(N): if N &lt; 3: print(zero[N], one[N]) else: f = 1 s = 2 for i in range(N-2): zero.append(zero[f] + zero[s]) one.append(one[f] + one[s]) f += 1 s += 1 print(zero[N], one[N]) for T in range(int(input())): N = int(input()) zero = [1, 0, 1] one = [0, 1, 1] Fibonacci(N)   ​]]></description>
+</item><item>
     <title>Naming Convention</title>
     <link>http://example.org/namingconvention/</link>
     <pubDate>Sun, 02 Aug 2020 22:24:45 &#43;0900</pubDate>
     <author>Author</author>
     <guid>http://example.org/namingconvention/</guid>
-    <description><![CDATA[Naming Convention  정해진 규정은 없으나, 많은 개발자들이 암묵적으로 지키고 있는 이름짓는 방법.
+    <description><![CDATA[​
+Naming Convention  정해진 규정은 없으나, 많은 개발자들이 암묵적으로 지키고 있는 이름짓는 방법.
  Python   snake_case 🐍
 1 2 3  # _ == snake some_var = 5 my_awesome = 3     Javascript, Vue   camelCase 🐪
 1 2 3  # 낙타등이 중간에 솟아 있는 모습 someVar = 5 pyAwesome = 3     uppercamelCase 🐪🐪
@@ -94,22 +111,5 @@ Vue  Vue.js는 웹 애플리케이션의 사용자 인터페이스를 만들기 
 D3_4676_늘어지는 소리 만들기 1 2 3 4 5 6 7 8 9 10 11 12  for T in range(int(input())): sent = list(input()) # wow H = int(input()) po = sorted(list(map(int, input().split()))) # 2 3 2 for i in range(H): a = po[i]+i sent.insert(a,&#39;-&#39;) print(&#39;#{} {}&#39;.format(T+1, &#39;&#39;.join(sent))) # 단순 산수로 해결   ​
 D3_4615_재미있는 오셀로 게임 1    ​
 D3_4579_세상의 모든 팰린드롬 2 1 2 3 4 5 6 7 8 9 10 11 12 13 14  for T in range(int(input())): arr = input() result = &#39;Exist&#39; for i in range(len(arr) // 2): if arr[i] == &#39;*&#39; or arr[-1 - i] == &#39;*&#39;: result = &#39;Exist&#39; break if arr[i] !]]></description>
-</item><item>
-    <title>Django_02_CRUD(02)</title>
-    <link>http://example.org/django_02_crud_c/</link>
-    <pubDate>Fri, 10 Jul 2020 11:04:11 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>http://example.org/django_02_crud_c/</guid>
-    <description><![CDATA[CRUD?  CRUD는 대부분의 컴퓨터 소프트웨어가 가지는 기본적인 데이터 처리 기능인 Create(생성), Read(읽기), Update(갱신), Delete(삭제)를 묶어서 일컫는 말이다. 사용자 인터페이스가 갖추어야 할 기능(정보의 참조/검색/갱신)을 구현해보자
- ]]></description>
-</item><item>
-    <title>SW Expert Academy_D3 5162, 4789, 4751, 4698</title>
-    <link>http://example.org/sw_20.07.08/</link>
-    <pubDate>Wed, 08 Jul 2020 15:07:10 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>http://example.org/sw_20.07.08/</guid>
-    <description><![CDATA[​
-D3_5162_두가지 빵의 딜레마 1 2 3 4 5 6 7  for T in range(int(input())): A, B, C = map(int, input().split()) N = min(A, B) print(&#34;#{} {}&#34;.format(T+1, int(C/N))) # 단순 산수로 해결   ​
-D3_4789_성공적인 공연 기획 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19  for T in range(int(input())): P = list(map(int, map(str, input())))	need = P[0] count = 0 for i in range(1, len(P)): if need &gt;= i: need += P[i] else: count += i - need need = i + P[i] print(f&#39;#{T+1} {count}&#39;) # 문제를 이해하는 것이 Point였다.]]></description>
 </item></channel>
 </rss>
