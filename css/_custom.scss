@@ -3,18 +3,18 @@
 // 自定义样式
 // ==============================
 .single {
-    .content {
-        blockquote {
-            display: block;
-            border-left: .3rem solid #ededed;
-            background-color: #fafafa;
-            padding: .1rem .75rem;
-            margin: 1rem 0;
-      
-            [theme=dark] & {
-              border-left-color: $blockquote-color-dark;
-              background-color: rgba($blockquote-color-dark, .2);
-            }
-          }
+  .content {
+    blockquote {
+      display: block;
+      border-left: 0.4rem solid #e5e5e5;
+      background-color: rgb(250 250 250);
+      padding: .1rem .75rem;
+      margin: 1rem 0;
+
+      [theme=dark] & {
+        border-left-color: $blockquote-color-dark;
+        background-color: rgba($blockquote-color-dark, .2);
+      }
     }
+  }
 }
