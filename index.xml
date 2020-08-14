@@ -1,45 +1,56 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title></title>
-        <link>http://example.org/</link>
+        <link>https://colinder.github.io/</link>
         <description>Hello New World</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 05 Aug 2020 22:11:35 &#43;0900</lastBuildDate>
-            <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 14 Aug 2020 21:04:53 &#43;0900</lastBuildDate>
+            <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title>BEAKJOON 1149 1932 2579 1463</title>
-    <link>http://example.org/bj_20.08.06/</link>
+    <title>Vue_LifeCycle</title>
+    <link>https://colinder.github.io/vue_lifecycle/</link>
+    <pubDate>Fri, 14 Aug 2020 21:04:53 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/vue_lifecycle/</guid>
+    <description><![CDATA[​
+Vue_LifeCycle  솔직한 고백으로, 처음 라이프사이클이란 것을 배웠을 때는 이게 무슨 말인지?, 어떤 경우에 이 삶의 주기를 고려하게 되는지 전혀 납득, 이해하지 못했다. Vue 공식문서에는 나와 비슷한 사용자들에게 말하고 있다.
+지금 당장 모든 것을 완전히 이해할 필요는 없지만 다이어그램은 앞으로 도움이 될 것입니다.
+ ]]></description>
+</item><item>
+    <title>BEAKJOON 1149, 1932, 2579, 1463</title>
+    <link>https://colinder.github.io/bj_20.08.06/</link>
     <pubDate>Wed, 05 Aug 2020 22:11:35 &#43;0900</pubDate>
     <author>Author</author>
-    <guid>http://example.org/bj_20.08.06/</guid>
+    <guid>https://colinder.github.io/bj_20.08.06/</guid>
     <description><![CDATA[​
 1149_RGB거리 1 2 3 4 5 6 7 8 9 10 11 12 13  N = int(input()) RGB = [list(map(int, input().split())) for _ in range(N)] for i in range(1, len(RGB)): RGB[i][0] = RGB[i][0] + min(RGB[i-1][1], RGB[i-1][2]) RGB[i][1] = RGB[i][1] + min(RGB[i-1][0], RGB[i-1][2]) RGB[i][2] = RGB[i][2] + min(RGB[i-1][0], RGB[i-1][1]) print(min(RGB[i][0], RGB[i][1], RGB[i][2])) # 2시간이 넘게 고민한 결과... # 문제 속 조건3 &#34;&#34;i(2 ≤ i ≤ N-1)번 집의 색은 i-1번, i+1번 집의 색과 같지 않아야 한다.]]></description>
 </item><item>
     <title>BEAKJOON 1103, 1904, 2748, 9461</title>
-    <link>http://example.org/bj_20.08.04/</link>
+    <link>https://colinder.github.io/bj_20.08.04/</link>
     <pubDate>Tue, 04 Aug 2020 22:12:11 &#43;0900</pubDate>
     <author>Author</author>
-    <guid>http://example.org/bj_20.08.04/</guid>
+    <guid>https://colinder.github.io/bj_20.08.04/</guid>
     <description><![CDATA[​
 1003_피보나치 함수 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20  def Fibonacci(N): if N &lt; 3: print(zero[N], one[N]) else: f = 1 s = 2 for i in range(N-2): zero.append(zero[f] + zero[s]) one.append(one[f] + one[s]) f += 1 s += 1 print(zero[N], one[N]) for T in range(int(input())): N = int(input()) zero = [1, 0, 1] one = [0, 1, 1] Fibonacci(N)   ​]]></description>
 </item><item>
     <title>Naming Convention</title>
-    <link>http://example.org/namingconvention/</link>
+    <link>https://colinder.github.io/namingconvention/</link>
     <pubDate>Sun, 02 Aug 2020 22:24:45 &#43;0900</pubDate>
     <author>Author</author>
-    <guid>http://example.org/namingconvention/</guid>
+    <guid>https://colinder.github.io/namingconvention/</guid>
     <description><![CDATA[​
 Naming Convention  정해진 규정은 없으나, 많은 개발자들이 암묵적으로 지키고 있는 이름짓는 방법.
  ​
 Python   snake_case 🐍
-1 2 3  # _ == snake some_var = 5 my_awesome = 3     Javascript, Vue   camelCase 🐪
+1 2 3  # _ == snake some_var = 5 my_awesome = 3     ​
+Javascript, Vue   camelCase 🐪
 1 2 3  # 낙타등이 중간에 솟아 있는 모습 someVar = 5 pyAwesome = 3     uppercamelCase 🐪🐪
 1 2 3  # 낙타얼굴과 등이 중간에 솟아 있는 모습 SomeVar = 5 PyAwesome = 3     ]]></description>
 </item><item>
     <title>Vue_basic_04 (Vuex)</title>
-    <link>http://example.org/vue_basic_04/</link>
+    <link>https://colinder.github.io/vue_basic_04/</link>
     <pubDate>Sun, 02 Aug 2020 22:22:58 &#43;0900</pubDate>
     <author>Author</author>
-    <guid>http://example.org/vue_basic_04/</guid>
+    <guid>https://colinder.github.io/vue_basic_04/</guid>
     <description><![CDATA[​
 Vuex 란? (공식문서)  Vuex는 Vue.js 애플리케이션에 대한 상태 관리 패턴 + 라이브러리 입니다. 애플리케이션의 모든 컴포넌트에 대한 중앙 집중식 저장소 역할을 하며 예측 가능한 방식으로 상태를 변경할 수 있습니다. 또한 Vue의 공식 devtools 확장 프로그램과 통합되어 설정 시간이 필요 없는 디버깅 및 상태 스냅 샷 내보내기/가져오기와 같은 고급 기능을 제공합니다. (공식문서 설명)
  그렇다면? 상태관리패턴이란 무엇인가?
@@ -47,19 +58,19 @@ Vuex 란? (공식문서)  Vuex는 Vue.js 애플리케이션에 대한 상태 관
 🤔이를 알아보기 전에 간단히 지난 시간에 알아본 porps와 emit의 문제점을 생각해보자!]]></description>
 </item><item>
     <title>SW_20.07.29</title>
-    <link>http://example.org/sw_20.07.29/</link>
+    <link>https://colinder.github.io/sw_20.07.29/</link>
     <pubDate>Wed, 29 Jul 2020 22:59:28 &#43;0900</pubDate>
     <author>Author</author>
-    <guid>http://example.org/sw_20.07.29/</guid>
+    <guid>https://colinder.github.io/sw_20.07.29/</guid>
     <description><![CDATA[​
 D3_4466_최대 성적표 만들기 1 2 3 4 5 6 7 8 9 10 11  for T in range(int(input())): N, K = map(int, input().split()) score = list(map(int, input().split())) score.sort(reverse=True) result = 0 for i in range(K): result += score[i] print(&#39;#{} {}&#39;.format(T+1, result))   ​
 D3_4406_모음이 보이지 않는 사람 1 2 3 4 5 6 7  for T in range(int(input())): sent = input() result = &#39;&#39; for i in sent: if i not in &#39;aeiou&#39;: result += i print(&#39;#{} {}&#39;.]]></description>
 </item><item>
     <title>Vue_basic_03 (vue_cli &amp; router &amp; histoyMode)</title>
-    <link>http://example.org/vue_basic_03/</link>
+    <link>https://colinder.github.io/vue_basic_03/</link>
     <pubDate>Fri, 17 Jul 2020 22:03:11 &#43;0900</pubDate>
     <author>Author</author>
-    <guid>http://example.org/vue_basic_03/</guid>
+    <guid>https://colinder.github.io/vue_basic_03/</guid>
     <description><![CDATA[​
 1. VUE CLI 란? (공식문서) 간단히 vue-cli 는 기본 vue 개발 환경을 설정해주는 도구
  여기서 CLI 란 ?
@@ -68,19 +79,19 @@ D3_4406_모음이 보이지 않는 사람 1 2 3 4 5 6 7  for T in range(int(inpu
 2. vue router 프로젝트 생성 후 보통의 경우 편의를 위해 terminal에 vue add router를 입력해 router설치를 진행한다.]]></description>
 </item><item>
     <title>Vue_basic_02 (Vue 문법2)</title>
-    <link>http://example.org/vue_basic_02/</link>
+    <link>https://colinder.github.io/vue_basic_02/</link>
     <pubDate>Fri, 17 Jul 2020 22:03:09 &#43;0900</pubDate>
     <author>Author</author>
-    <guid>http://example.org/vue_basic_02/</guid>
+    <guid>https://colinder.github.io/vue_basic_02/</guid>
     <description><![CDATA[​
 Vue의 기본 문법 및 동작 방법을 계속 알아보자 08_methods
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38  ✨Point 1. method는 methods: {}의 문법으로 구성한다. &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt; &lt;title&gt;Methods&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;div id=&#39;app&#39;&gt; {{ message }} &lt;/div&gt; &lt;!]]></description>
 </item><item>
     <title>Vue_basic_01 (Vue란? &amp; Vue 문법1)</title>
-    <link>http://example.org/vue_basic_01/</link>
+    <link>https://colinder.github.io/vue_basic_01/</link>
     <pubDate>Fri, 17 Jul 2020 22:03:05 &#43;0900</pubDate>
     <author>Author</author>
-    <guid>http://example.org/vue_basic_01/</guid>
+    <guid>https://colinder.github.io/vue_basic_01/</guid>
     <description><![CDATA[​
 Vue  Vue.js는 웹 애플리케이션의 사용자 인터페이스를 만들기 위해 사용하는 오픈 소스 프로그레시브 자바스크립트 프레임워크
  ​
@@ -93,10 +104,10 @@ Vue의 이론적 구성 및 설명을 알아보자 1. Vue는 MVVM 패턴을 따�
 내가 이해한 방식: 변경사항이 발생했을 때 새로고침을하며 매번 페이지를 새롭게 구서하는 것이 아니라, 서버를 돌릴 때 이미 모든 페이지가 제작되어 있고 이를 사용자의 선택에 따라 보여주는 것.]]></description>
 </item><item>
     <title>Vue_setting</title>
-    <link>http://example.org/vue_setting/</link>
+    <link>https://colinder.github.io/vue_setting/</link>
     <pubDate>Fri, 17 Jul 2020 21:56:29 &#43;0900</pubDate>
     <author>Author</author>
-    <guid>http://example.org/vue_setting/</guid>
+    <guid>https://colinder.github.io/vue_setting/</guid>
     <description><![CDATA[​
 Vue  Vue.js는 웹 애플리케이션의 사용자 인터페이스를 만들기 위해 사용하는 오픈 소스 프로그레시브 자바스크립트 프레임워크
  1. 시작하기  Vue VS Django
@@ -104,15 +115,5 @@ Vue  Vue.js는 웹 애플리케이션의 사용자 인터페이스를 만들기 
 큰 차이가 없어보이고, 큰 의미가 없어보일 수 있으나 이는 내가 vue를 이해하는데 가장 많은 도움이 된 부분이다.
     개발 환경 설정 &amp; 프로젝트 생성
  vscode 설치 nodeJS 설치 vscode 실행 후 terminal에서 npm install 설치 vscode 실행 후 terminal에서 npm i -g @vue/cli 설치  설치가 잘 되었나 vue --version으로 확인 (버전이 보이면 ok)   (선택사항) vscode의 Extensions에서Vetur와 Vue VSCode Snippets 설치  Auto Rename Tag, Auto Close Tag    1 2 3 4  $ vue create myproject	# myproject 프로젝트 생성 $ cd myproject	# 생성한 myproject 폴더로 이동 $ vue add router	# (선택사항) myproject 히스토리를 관리해줄 router기능 설치 $ npm run serve	# myproject의 디폴트 서버 실행   1 2 3 4 5 6  App running at: - Local: http://localhost:8080/ - Network: http://192.]]></description>
-</item><item>
-    <title>SW Expert Academy_D3 4676, 4615, 4579, 4522</title>
-    <link>http://example.org/sw_20.07.10/</link>
-    <pubDate>Fri, 10 Jul 2020 11:27:50 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>http://example.org/sw_20.07.10/</guid>
-    <description><![CDATA[​
-D3_4676_늘어지는 소리 만들기 1 2 3 4 5 6 7 8 9 10 11 12  for T in range(int(input())): sent = list(input()) # wow H = int(input()) po = sorted(list(map(int, input().split()))) # 2 3 2 for i in range(H): a = po[i]+i sent.insert(a,&#39;-&#39;) print(&#39;#{} {}&#39;.format(T+1, &#39;&#39;.join(sent))) # 단순 산수로 해결   ​
-D3_4615_재미있는 오셀로 게임 1    ​
-D3_4579_세상의 모든 팰린드롬 2 1 2 3 4 5 6 7 8 9 10 11 12 13 14  for T in range(int(input())): arr = input() result = &#39;Exist&#39; for i in range(len(arr) // 2): if arr[i] == &#39;*&#39; or arr[-1 - i] == &#39;*&#39;: result = &#39;Exist&#39; break if arr[i] !]]></description>
 </item></channel>
 </rss>

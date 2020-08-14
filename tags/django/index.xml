@@ -1,35 +1,36 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Django - Tag - </title>
-        <link>http://example.org/tags/django/</link>
+        <link>https://colinder.github.io/tags/django/</link>
         <description>Django - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 02 Aug 2020 22:24:45 &#43;0900</lastBuildDate><atom:link href="http://example.org/tags/django/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 02 Aug 2020 22:24:45 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/django/" rel="self" type="application/rss+xml" /><item>
     <title>Naming Convention</title>
-    <link>http://example.org/namingconvention/</link>
+    <link>https://colinder.github.io/namingconvention/</link>
     <pubDate>Sun, 02 Aug 2020 22:24:45 &#43;0900</pubDate>
     <author>Author</author>
-    <guid>http://example.org/namingconvention/</guid>
+    <guid>https://colinder.github.io/namingconvention/</guid>
     <description><![CDATA[​
 Naming Convention  정해진 규정은 없으나, 많은 개발자들이 암묵적으로 지키고 있는 이름짓는 방법.
  ​
 Python   snake_case 🐍
-1 2 3  # _ == snake some_var = 5 my_awesome = 3     Javascript, Vue   camelCase 🐪
+1 2 3  # _ == snake some_var = 5 my_awesome = 3     ​
+Javascript, Vue   camelCase 🐪
 1 2 3  # 낙타등이 중간에 솟아 있는 모습 someVar = 5 pyAwesome = 3     uppercamelCase 🐪🐪
 1 2 3  # 낙타얼굴과 등이 중간에 솟아 있는 모습 SomeVar = 5 PyAwesome = 3     ]]></description>
 </item><item>
     <title>Django_02_CRUD(02)</title>
-    <link>http://example.org/django_02_crud_c/</link>
+    <link>https://colinder.github.io/django_02_crud_c/</link>
     <pubDate>Fri, 10 Jul 2020 11:04:11 &#43;0900</pubDate>
     <author>Author</author>
-    <guid>http://example.org/django_02_crud_c/</guid>
+    <guid>https://colinder.github.io/django_02_crud_c/</guid>
     <description><![CDATA[CRUD?  CRUD는 대부분의 컴퓨터 소프트웨어가 가지는 기본적인 데이터 처리 기능인 Create(생성), Read(읽기), Update(갱신), Delete(삭제)를 묶어서 일컫는 말이다. 사용자 인터페이스가 갖추어야 할 기능(정보의 참조/검색/갱신)을 구현해보자
  ]]></description>
 </item><item>
     <title>Django_02_CRUD(01)</title>
-    <link>http://example.org/django_02_crud_setting/</link>
+    <link>https://colinder.github.io/django_02_crud_setting/</link>
     <pubDate>Thu, 25 Jun 2020 22:52:40 &#43;0900</pubDate>
     <author>Author</author>
-    <guid>http://example.org/django_02_crud_setting/</guid>
+    <guid>https://colinder.github.io/django_02_crud_setting/</guid>
     <description><![CDATA[​
 Django 개발환경준비   편리함을 추구하기 위해 AWS Cloud9을 사용하여 진행
   https://ide.cs50.io/ 주소로 접속하면 진행이 가능하며, 진행을 위해선 Git 아이디가 있어야 한다.
@@ -38,10 +39,10 @@ Git? : 버전 관리 시스템이며 Git은 소프트웨어를 개발하는 기�
   C9 접속 화면(블랙테마 적용되어 있음)"C9 접속 화면(블랙테마 적용되어 있음) ​]]></description>
 </item><item>
     <title>Django_01_basic</title>
-    <link>http://example.org/django_01/</link>
+    <link>https://colinder.github.io/django_01/</link>
     <pubDate>Tue, 23 Jun 2020 09:57:09 &#43;0900</pubDate>
     <author>Author</author>
-    <guid>http://example.org/django_01/</guid>
+    <guid>https://colinder.github.io/django_01/</guid>
     <description><![CDATA[​
 Web ?  월드 와이드 웹(World Wide Web)이란 인터넷에 연결된 사용자들이 서로의 정보를 공유할 수 있는 공간을 의미하며, 줄여서 WWW나 W3라고도 부르며, 간단히 웹(Web)이라고 가장 많이 불린다.
 인터넷과 같은 의미로 많이 사용되고 있지만, 정확히 말해 웹은 인터넷상의 인기 있는 하나의 서비스일 뿐.

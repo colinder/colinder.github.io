@@ -116,8 +116,9 @@
 
 ```vue
 ✨Point
-1. 난, data값과 input값을 실시간으로 연동(양방향 바인딩)해주는 디렉티브
+1. data값과 input값을 실시간으로 연동(양방향 바인딩)해주는 디렉티브
 2. v-on(@)과 value를 동시에 걸어주면 양방향 바인딩이 가능함.
+3. v-model은 input, select, textarea에만 사용이 가능함.
 
 <!DOCTYPE html>
 <html lang="en">
@@ -129,7 +130,6 @@
 <body>
   <div id="app">
     <h1>{{ message }}</h1>
-    <!-- v-model은 input, select, textarea에만 사용이 가능-->
     <h4>단반향 binding (input => data)</h4>
     1way <input @keyup.enter="onInputChange" type="text">
     <hr>
@@ -140,7 +140,6 @@
     <h4>v-model 양방향 binding</h4>
     v-model/2way
     <input v-model="message" type="text">
-
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -152,7 +151,6 @@
       },
       methods: {
         onInputChange(event) {
-          // console.log("22")
           this.message = event.target.value
         }
       }
@@ -214,6 +212,7 @@
 ```vue
 ✨Point
 1. computed는 페이지 시작시 별다른 선언없이도 자동으로 실행된다.
+2. script태그 안에  computed: {} 와 같이 선언해 사용
 
 <!DOCTYPE html>
 <html lang="en">

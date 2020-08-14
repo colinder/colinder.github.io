@@ -71,7 +71,7 @@
 ```vue
 ✨Point
 1. 보간법: 두 점을 연결하는 방법
-2. 난, `data(변수)는 {{}} 2개의 중괄호 안에 변수명을 적어 사용한다.` 정도로 이해했다.
+2. 난, `data(변수)는 script태그에 함수 형태로 선언하며, {{}} 2개의 중괄호 안에 변수명을 적어 사용한다.` 정도로 이해했다.
 
 <!DOCTYPE html>
 <html lang="en">
@@ -232,7 +232,7 @@
 **06_v-for**
 
 ```vue
-✨Point
+✨Point (아주아주 중요)
 1. list안에 담으면 for사용 가능
 
 <!DOCTYPE html>
@@ -271,6 +271,8 @@
 </body>
 </html>
 ```
+
+v-for 연관된 key라는 것이 있는데 이는 나중에 반드시 고려해야하는 상황이 오며, [공식문서](https://kr.vuejs.org/v2/guide/list.html)를 참고하면 좋다.
 
 {{<image src="/images/image-20200717151452747.png" caption="실행화면" width="150px">}}
 
