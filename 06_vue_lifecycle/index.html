@@ -5,48 +5,38 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Naming Convention - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="Naming Convention" />
+        <title>06_Vue_LifeCycle - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="06_Vue_LifeCycle" />
 <meta property="og:description" content="​
-Naming Convention  정해진 규정은 없으나, 많은 개발자들이 암묵적으로 지키고 있는 이름짓는 방법.
- ​
-  snake_case 🐍
-1 2 3  # _ == snake some_var = 5 my_awesome = 3   ​
-  camelCase 🐪
-1 2 3  # 낙타등이 솟아 있는 모습 someVar = 5 pyAwesome = 3   ​
-  uppercamelCase 🐪🐪
-1 2 3  # 낙타얼굴과 등이 중간에 솟아 있는 모습 (파스칼식(Pascal case)이라고도 불린다." />
+Vue_LifeCycle  솔직한 고백으로, 처음 라이프사이클이란 것을 배웠을 때는 이게 무슨 말인지?, 어떤 경우에 이 삶의 주기를 고려하게 되는지 전혀 납득, 이해하지 못했다. Vue 공식문서에는 나와 비슷한 사용자들에게 말하고 있다.
+지금 당장 모든 것을 완전히 이해할 필요는 없지만 다이어그램은 앞으로 도움이 될 것입니다.
+ " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://colinder.github.io/namingconvention/" />
+<meta property="og:url" content="https://colinder.github.io/06_vue_lifecycle/" />
 <meta property="og:image" content="https://colinder.github.io/logo.png"/>
-<meta property="article:published_time" content="2020-08-02T22:24:45+09:00" />
-<meta property="article:modified_time" content="2020-08-02T22:24:45+09:00" />
+<meta property="article:published_time" content="2020-08-14T21:04:53+09:00" />
+<meta property="article:modified_time" content="2020-08-14T21:04:53+09:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
 
-<meta name="twitter:title" content="Naming Convention"/>
+<meta name="twitter:title" content="06_Vue_LifeCycle"/>
 <meta name="twitter:description" content="​
-Naming Convention  정해진 규정은 없으나, 많은 개발자들이 암묵적으로 지키고 있는 이름짓는 방법.
- ​
-  snake_case 🐍
-1 2 3  # _ == snake some_var = 5 my_awesome = 3   ​
-  camelCase 🐪
-1 2 3  # 낙타등이 솟아 있는 모습 someVar = 5 pyAwesome = 3   ​
-  uppercamelCase 🐪🐪
-1 2 3  # 낙타얼굴과 등이 중간에 솟아 있는 모습 (파스칼식(Pascal case)이라고도 불린다."/>
+Vue_LifeCycle  솔직한 고백으로, 처음 라이프사이클이란 것을 배웠을 때는 이게 무슨 말인지?, 어떤 경우에 이 삶의 주기를 고려하게 되는지 전혀 납득, 이해하지 못했다. Vue 공식문서에는 나와 비슷한 사용자들에게 말하고 있다.
+지금 당장 모든 것을 완전히 이해할 필요는 없지만 다이어그램은 앞으로 도움이 될 것입니다.
+ "/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/namingconvention/" /><link rel="prev" href="https://colinder.github.io/05_vuex_01/" /><link rel="next" href="https://colinder.github.io/bj_20.08.04/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/06_vue_lifecycle/" /><link rel="prev" href="https://colinder.github.io/bj_20.08.06/" /><link rel="next" href="https://colinder.github.io/04_vue_reactivity/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Naming Convention",
+        "headline": "06_Vue_LifeCycle",
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/colinder.github.io\/namingconvention\/"
-        },"genre": "posts","keywords": "django, vue","wordcount":  92 ,
-        "url": "https:\/\/colinder.github.io\/namingconvention\/","datePublished": "2020-08-02T22:24:45+09:00","dateModified": "2020-08-02T22:24:45+09:00","publisher": {
+            "@id": "https:\/\/colinder.github.io\/06_vue_lifecycle\/"
+        },"genre": "posts","keywords": "Vue","wordcount":  43 ,
+        "url": "https:\/\/colinder.github.io\/06_vue_lifecycle\/","datePublished": "2020-08-14T21:04:53+09:00","dateModified": "2020-08-14T21:04:53+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -120,9 +110,9 @@ Naming Convention  정해진 규정은 없으나, 많은 개발자들이 암묵�
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Naming Convention</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw"></i>Django</a>&nbsp;<a href="/categories/vue/"><i class="far fa-folder fa-fw"></i>vue</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-08-02">2020-08-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;92 words&nbsp;
+        </div><article class="page single"><h1 class="single-title animated flipInX">06_Vue_LifeCycle</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/comming-soon/"><i class="far fa-folder fa-fw"></i>Comming Soon</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-08-14">2020-08-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;43 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;One minute&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -131,88 +121,22 @@ Naming Convention  정해진 규정은 없으나, 많은 개발자들이 암묵�
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
             </div><div class="content" id="content"><p>​</p>
-<h1 id="naming-convention">Naming Convention</h1>
+<h1 id="vue_lifecycle">Vue_LifeCycle</h1>
 <blockquote>
-<p>정해진 규정은 없으나, 많은 개발자들이 암묵적으로 지키고 있는 이름짓는 방법.</p>
+<p>솔직한 고백으로, 처음 <strong>라이프사이클</strong>이란 것을 배웠을 때는 이게 무슨 말인지?, 어떤 경우에 이 <strong>삶의 주기</strong>를 고려하게 되는지 전혀 납득, 이해하지 못했다. <a href="https://kr.vuejs.org/v2/guide/instance.html#%EB%9D%BC%EC%9D%B4%ED%94%84%EC%82%AC%EC%9D%B4%ED%81%B4-%EB%8B%A4%EC%9D%B4%EC%96%B4%EA%B7%B8%EB%9E%A8]%28https://kr.vuejs.org/v2/guide/instance.html#%eb%9d%bc%ec%9d%b4%ed%94%84%ec%82%ac%ec%9d%b4%ed%81%b4-%eb%8b%a4%ec%9d%b4%ec%96%b4%ea%b7%b8%eb%9e%a8%29" target="_blank" rel="noopener noreffer">Vue 공식문서</a>에는 나와 비슷한 사용자들에게 말하고 있다.</p>
+<p><strong>지금 당장 모든 것을 완전히 이해할 필요는 없지만 다이어그램은 앞으로 도움이 될 것입니다.</strong></p>
 </blockquote>
-<p>​</p>
-<ul>
-<li>
-<p>snake_case 🐍</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># _ == snake</span>
-<span class="n">some_var</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">my_awesome</span> <span class="o">=</span> <span class="mi">3</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>​</p>
-</li>
-<li>
-<p>camelCase 🐪</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 낙타등이 솟아 있는 모습</span>
-<span class="nv">someVar</span> <span class="o">=</span> <span class="m">5</span>
-<span class="nv">pyAwesome</span> <span class="o">=</span> <span class="m">3</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>​</p>
-</li>
-<li>
-<p>uppercamelCase 🐪🐪</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 낙타얼굴과 등이 중간에 솟아 있는 모습 (파스칼식(Pascal case)이라고도 불린다.)</span>
-<span class="nv">SomeVar</span> <span class="o">=</span> <span class="m">5</span>
-<span class="nv">PyAwesome</span> <span class="o">=</span> <span class="m">3</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>​</p>
-</li>
-<li>
-<p>Kebab-Case 🥙</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 케밥이 꼬챙이에 꽂힌 모습에서 생긴 방법(이라는데 난 생김새는 잘 모르겠다.ㅎ)</span>
-main-login <span class="o">=</span> <span class="m">5</span>
-feed-content <span class="o">=</span> <span class="m">1</span>
-</code></pre></td></tr></table>
-</div>
-</div></li>
-</ul>
-<p>​</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2020-08-02</span>
+                <span>Updated on 2020-08-14</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/namingconvention/index.md" target="_blank">Read Markdown</a>
+                            <a class="link-to-markdown" href="/06_vue_lifecycle/index.md" target="_blank">Read Markdown</a>
                         </span></div>
             <div class="post-info-share">
                 <span></span>
@@ -221,14 +145,14 @@ feed-content <span class="o">=</span> <span class="m">1</span>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/django/">Django</a>,&nbsp;<a href="/tags/vue/">vue</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/vue/">vue</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/05_vuex_01/" class="prev" rel="prev" title="05_Vuex_01"><i class="fas fa-angle-left fa-fw"></i>05_Vuex_01</a>
-            <a href="/bj_20.08.04/" class="next" rel="next" title="BEAKJOON 1103, 1904, 2748, 9461">BEAKJOON 1103, 1904, 2748, 9461<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/bj_20.08.06/" class="prev" rel="prev" title="BEAKJOON 1149, 1932, 2579, 1463"><i class="fas fa-angle-left fa-fw"></i>BEAKJOON 1149, 1932, 2579, 1463</a>
+            <a href="/04_vue_reactivity/" class="next" rel="next" title="04_Vue_Reactivity">04_Vue_Reactivity<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
