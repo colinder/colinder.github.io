@@ -29,7 +29,7 @@
 
   ​	
 
-- uppercamelCase 🐪🐪
+- UpperCamelCase 🐪🐪
 
   ```bash
   # 낙타얼굴과 등이 중간에 솟아 있는 모습 (파스칼식(Pascal case)이라고도 불린다.)
