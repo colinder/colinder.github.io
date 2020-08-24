@@ -11,7 +11,10 @@
     <pubDate>Sun, 16 Aug 2020 19:39:10 &#43;0900</pubDate>
     <author>Author</author>
     <guid>https://colinder.github.io/07_vuex_02/</guid>
-    <description><![CDATA[​]]></description>
+    <description><![CDATA[​
+Vuex 핵심컨셉(getters, mutations, actions, modules)  1. Getters  만약? A.vue와 B.vue에서 각각 store의 state에 등록된 second의 2를 3으로 변형해 사용하고 싶다면 어떻게 해야 할까? 저장소에 등록되어 있는 상태(state)를 변경하고 싶다면?
+ 이런 모습으로"이런 모습으로 아마 귀찮겠지만, 각각의 파일에서
+1 2 3 4 5 6 7  // A.vue  computed: { change() { return this.$store.state.second + 1 } }   1 2 3 4 5 6 7  // B.]]></description>
 </item><item>
     <title>04_Vue_Reactivity</title>
     <link>https://colinder.github.io/04_vue_reactivity/</link>
