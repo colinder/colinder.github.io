@@ -80,6 +80,8 @@ export default new Vuex.Store({
 **Step. 2**
 
 ```vue
+//사용하는 component에서 
+
 <template>
   <div>
     <h1>state그냥 불러온 값: {{change1}}</h1>
@@ -125,6 +127,79 @@ export default {
 ```
 
 {{<image src="/images/VuexActions_01.png" caption="Actions 사용한 값: 2 아래 + 버튼을 누르면 1초 뒤에 state가 변하는 것을 알 수 있다." width="700px">}}
+
+​	
+
+**✋잠깐.** 
+
+Actions도 인자를 넘길 수 있는데!
+
+1. ```vue
+   <script>
+   export default {
+     name: 'B',
+     computed: {
+       change1() {
+         return this.$store.state.second
+       },
+       useGetters() {
+         return this.$store.getters.addOne
+       }
+     },
+     methods: {
+       //mutations을 이용할 떄는 commit을 사용
+       useMutations() {
+         return this.$store.commit("addOneMutations", {N: 2})
+       },
+       //actions를 이용할 떄는 dispatch를 사용
+       useActions() {
+         return this.$store.dispatch("delayFewMinutes", {by: 50, time: 2000})   👈 요기요기
+       }
+     }
+   }
+   </script>
+   ```
+
+2. ```vue
+   // store.js
+   
+   import Vue from "vue"
+   import Vuex from "vuex"
+   
+   Vue.use(Vuex)
+   
+   export default new Vuex.Store({
+   	state: {
+       first: '첫번째 데이터입니다.',
+       second: 2,
+       listData: [
+         {name: "john"},
+         {name: "poul"},
+         {name: "kim"}
+       ]
+     },
+     getters: {
+       addOne(state) {
+         return state.second + 1
+       }
+     },
+     mutations: {
+       addOneMutations(state) {
+         return state.second += 2
+       }
+     },
+     actions: {
+       //비동기 요청인 setTimeout을 실습
+       delayFewMinutes(context, payload) {                  👈
+         return setTimeout(() => {                          👈
+           context.commit('addOneMutations', payload.by)    👈 이런식으로 인자로 작동시간
+         }, payload.time)                                   👈 설정도 가능하고, mutations에
+       }                                                    👈 payload 받는 부분 만들어서 
+     }                                                      👈 거기까지도 전달 가능
+   })
+   ```
+
+
 
 ---
 

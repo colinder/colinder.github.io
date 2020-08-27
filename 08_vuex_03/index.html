@@ -35,7 +35,7 @@ A. mutations의 역할은 State를 관리하는 것이다. 그런데 만약 비�
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/08_vuex_03\/"
-        },"genre": "posts","keywords": "Vue","wordcount":  612 ,
+        },"genre": "posts","keywords": "Vue","wordcount":  825 ,
         "url": "https:\/\/colinder.github.io\/08_vuex_03\/","datePublished": "2020-08-27T21:48:19+09:00","dateModified": "2020-08-27T21:48:19+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -112,8 +112,8 @@ A. mutations의 역할은 State를 관리하는 것이다. 그런데 만약 비�
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">08_Vuex_03</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/vue/"><i class="far fa-folder fa-fw"></i>vue</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-08-27">2020-08-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;612 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-08-27">2020-08-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;825 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;4 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
@@ -284,9 +284,13 @@ A. mutations의 역할은 State를 관리하는 것이다. 그런데 만약 비�
 </span><span class="lnt">40
 </span><span class="lnt">41
 </span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-vue" data-lang="vue"><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+<pre class="chroma"><code class="language-vue" data-lang="vue"><span class="c1">//사용하는 component에서 
+</span><span class="c1"></span>
+<span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span><span class="nx">state그냥</span> <span class="nx">불러온</span> <span class="nx">값</span><span class="o">:</span> <span class="p">{{</span><span class="nx">change1</span><span class="p">}}&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
@@ -340,6 +344,145 @@ A. mutations의 역할은 State를 관리하는 것이다. 그런데 만약 비�
             alt="/images/VuexActions_01.png" width="700px" />
     </a><figcaption class="image-caption">Actions 사용한 값: 2 아래 + 버튼을 누르면 1초 뒤에 state가 변하는 것을 알 수 있다.</figcaption>
     </figure>
+<p>​</p>
+<p><strong>✋잠깐.</strong></p>
+<p>Actions도 인자를 넘길 수 있는데!</p>
+<ol>
+<li>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-vue" data-lang="vue"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span>
+  <span class="nx">computed</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">change1</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">second</span>
+    <span class="p">},</span>
+    <span class="nx">useGetters</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">getters</span><span class="p">.</span><span class="nx">addOne</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
+    <span class="c1">//mutations을 이용할 떄는 commit을 사용
+</span><span class="c1"></span>    <span class="nx">useMutations</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">commit</span><span class="p">(</span><span class="s2">&#34;addOneMutations&#34;</span><span class="p">,</span> <span class="p">{</span><span class="nx">N</span><span class="o">:</span> <span class="mi">2</span><span class="p">})</span>
+    <span class="p">},</span>
+    <span class="c1">//actions를 이용할 떄는 dispatch를 사용
+</span><span class="c1"></span>    <span class="nx">useActions</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">(</span><span class="s2">&#34;delayFewMinutes&#34;</span><span class="p">,</span> <span class="p">{</span><span class="nx">by</span><span class="o">:</span> <span class="mi">50</span><span class="p">,</span> <span class="nx">time</span><span class="o">:</span> <span class="mi">2000</span><span class="p">})</span>   <span class="err">👈</span> <span class="nx">요기요기</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-vue" data-lang="vue"><span class="c1">// store.js
+</span><span class="c1"></span>   
+<span class="kr">import</span> <span class="nx">Vue</span> <span class="nx">from</span> <span class="s2">&#34;vue&#34;</span>
+<span class="kr">import</span> <span class="nx">Vuex</span> <span class="nx">from</span> <span class="s2">&#34;vuex&#34;</span>
+   
+<span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">Vuex</span><span class="p">)</span>
+   
+<span class="kr">export</span> <span class="k">default</span> <span class="k">new</span> <span class="nx">Vuex</span><span class="p">.</span><span class="nx">Store</span><span class="p">({</span>
+ <span class="nx">state</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">first</span><span class="o">:</span> <span class="s1">&#39;첫번째 데이터입니다.&#39;</span><span class="p">,</span>
+    <span class="nx">second</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="nx">listData</span><span class="o">:</span> <span class="p">[</span>
+      <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;john&#34;</span><span class="p">},</span>
+      <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;poul&#34;</span><span class="p">},</span>
+      <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;kim&#34;</span><span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="nx">getters</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">addOne</span><span class="p">(</span><span class="nx">state</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nx">state</span><span class="p">.</span><span class="nx">second</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nx">mutations</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">addOneMutations</span><span class="p">(</span><span class="nx">state</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nx">state</span><span class="p">.</span><span class="nx">second</span> <span class="o">+=</span> <span class="mi">2</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nx">actions</span><span class="o">:</span> <span class="p">{</span>
+    <span class="c1">//비동기 요청인 setTimeout을 실습
+</span><span class="c1"></span>    <span class="nx">delayFewMinutes</span><span class="p">(</span><span class="nx">context</span><span class="p">,</span> <span class="nx">payload</span><span class="p">)</span> <span class="p">{</span>                  <span class="err">👈</span>
+      <span class="k">return</span> <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>                          <span class="err">👈</span>
+        <span class="nx">context</span><span class="p">.</span><span class="nx">commit</span><span class="p">(</span><span class="s1">&#39;addOneMutations&#39;</span><span class="p">,</span> <span class="nx">payload</span><span class="p">.</span><span class="nx">by</span><span class="p">)</span>    <span class="err">👈</span> <span class="nx">이런식으로</span> <span class="nx">인자로</span> <span class="nx">작동시간</span>
+      <span class="p">},</span> <span class="nx">payload</span><span class="p">.</span><span class="nx">time</span><span class="p">)</span>                                   <span class="err">👈</span> <span class="nx">설정도</span> <span class="nx">가능하고</span><span class="p">,</span> <span class="nx">mutations에</span>
+    <span class="p">}</span>                                                    <span class="err">👈</span> <span class="nx">payload</span> <span class="nx">받는</span> <span class="nx">부분</span> <span class="nx">만들어서</span> 
+  <span class="p">}</span>                                                      <span class="err">👈</span> <span class="nx">거기까지도</span> <span class="nx">전달</span> <span class="nx">가능</span>
+<span class="p">})</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
 <hr>
 <p>​</p>
 <h2 id="4-modules">4. Modules</h2>
