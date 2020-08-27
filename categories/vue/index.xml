@@ -3,7 +3,17 @@
         <title>vue - Category - </title>
         <link>https://colinder.github.io/categories/vue/</link>
         <description>vue - Category - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 16 Aug 2020 19:39:10 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/vue/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 27 Aug 2020 21:48:19 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/vue/" rel="self" type="application/rss+xml" /><item>
+    <title>08_Vuex_03</title>
+    <link>https://colinder.github.io/08_vuex_03/</link>
+    <pubDate>Thu, 27 Aug 2020 21:48:19 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/08_vuex_03/</guid>
+    <description><![CDATA[​
+Vuex 핵심컨셉(getters, mutations, actions, modules)  3. Actions  공식문서에 따르면 액션(Actions)은 변이(mutations)와 유사하나, 몇가지 다른 점이 있다고 한다.
+ 상태를 변이시키는 대신 액션으로 변이에 대한 커밋을 합니다. 작업에는 임의의 비동기 작업이 포함될 수 있습니다.    Q. 상태를 변이시키는 대신 액션으로 변이에 대한 커밋을 합니다.
+A. mutations의 역할은 State를 관리하는 것이다. 그런데 만약 비동기적 요청을 마구잡이로 보내게 된다면, State가 변질될 가능성이 높아진다. 결국 비동기 요청의 경우에도 mutations에 정의한 메소드의 형태로 보내어 상태가 변화하는 것을 추적한다.]]></description>
+</item><item>
     <title>07_Vuex_02</title>
     <link>https://colinder.github.io/07_vuex_02/</link>
     <pubDate>Sun, 16 Aug 2020 19:39:10 &#43;0900</pubDate>

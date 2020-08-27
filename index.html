@@ -11,7 +11,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://colinder.github.io/" />
 <meta property="og:image" content="https://colinder.github.io/logo.png"/>
-<meta property="og:updated_time" content="2020-08-16T19:39:10+09:00" />
+<meta property="og:updated_time" content="2020-08-27T21:48:19+09:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
 
@@ -103,6 +103,21 @@
         alt="/images/jg_02.jpg"
         title="/images/jg_02.jpg" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/colinder" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="mailto:kjonggwan@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/08_vuex_03/">08_Vuex_03</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-08-27">2020-08-27</time></span>&nbsp;<span class="post-category">included in <a href="/categories/vue/"><i class="far fa-folder fa-fw"></i>vue</a></span></div><div class="content">​
+Vuex 핵심컨셉(getters, mutations, actions, modules)  3. Actions  공식문서에 따르면 액션(Actions)은 변이(mutations)와 유사하나, 몇가지 다른 점이 있다고 한다.
+ 상태를 변이시키는 대신 액션으로 변이에 대한 커밋을 합니다. 작업에는 임의의 비동기 작업이 포함될 수 있습니다.    Q. 상태를 변이시키는 대신 액션으로 변이에 대한 커밋을 합니다.
+A. mutations의 역할은 State를 관리하는 것이다. 그런데 만약 비동기적 요청을 마구잡이로 보내게 된다면, State가 변질될 가능성이 높아진다. 결국 비동기 요청의 경우에도 mutations에 정의한 메소드의 형태로 보내어 상태가 변화하는 것을 추적한다.</div><div class="post-footer">
+        <a href="/08_vuex_03/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/vue/">vue</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/bj_20.08.25/">BJ_20.08 10844, 2156, </a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-08-25">2020-08-25</time></span>&nbsp;<span class="post-category">included in <a href="/categories/beakjoon/"><i class="far fa-folder fa-fw"></i>BEAKJOON</a>&nbsp;<a href="/categories/%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%951/"><i class="far fa-folder fa-fw"></i>동적계획법1</a></span></div><div class="content">​
+10844_쉬운 계단 수 1    ​
+2156_포도주 시식 1       포도주 6 10 13 8 8 1     넘버링 c1 c2 c3 c4 c5 c6    |경우의 수| c1| c1 + c2 | c1 + c2 | | | | | | | | c1 + C3 | | |</div><div class="post-footer">
+        <a href="/bj_20.08.25/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/algorithm/">algorithm</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/07_vuex_02/">07_Vuex_02</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-08-16">2020-08-16</time></span>&nbsp;<span class="post-category">included in <a href="/categories/vue/"><i class="far fa-folder fa-fw"></i>vue</a></span></div><div class="content">​
 Vuex 핵심컨셉(getters, mutations, actions, modules)  1. Getters  만약? A.vue와 B.vue에서 각각 store의 state에 등록된 second의 2를 3으로 변형해 사용하고 싶다면 어떻게 해야 할까? 저장소에 등록되어 있는 상태(state)를 변경하고 싶다면?
@@ -116,20 +131,6 @@ Vuex 핵심컨셉(getters, mutations, actions, modules)  1. Getters  만약? A.v
 Vue_반응형 </div><div class="post-footer">
         <a href="/04_vue_reactivity/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/vue/">vue</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/06_vue_lifecycle/">06_Vue_LifeCycle</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-08-14">2020-08-14</time></span>&nbsp;<span class="post-category">included in <a href="/categories/comming-soon/"><i class="far fa-folder fa-fw"></i>Comming Soon</a></span></div><div class="content">​
-Vue_LifeCycle  솔직한 고백으로, 처음 라이프사이클이란 것을 배웠을 때는 이게 무슨 말인지?, 어떤 경우에 이 삶의 주기를 고려하게 되는지 전혀 납득, 이해하지 못했다. Vue 공식문서에는 나와 비슷한 사용자들에게 말하고 있다.
-지금 당장 모든 것을 완전히 이해할 필요는 없지만 다이어그램은 앞으로 도움이 될 것입니다.
- </div><div class="post-footer">
-        <a href="/06_vue_lifecycle/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/vue/">vue</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/bj_20.08.06/">BEAKJOON 1149, 1932, 2579, 1463</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-08-05">2020-08-05</time></span>&nbsp;<span class="post-category">included in <a href="/categories/beakjoon/"><i class="far fa-folder fa-fw"></i>BEAKJOON</a>&nbsp;<a href="/categories/%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%951/"><i class="far fa-folder fa-fw"></i>동적계획법1</a></span></div><div class="content">​
-1149_RGB거리 1 2 3 4 5 6 7 8 9 10 11 12 13  N = int(input()) RGB = [list(map(int, input().split())) for _ in range(N)] for i in range(1, len(RGB)): RGB[i][0] = RGB[i][0] + min(RGB[i-1][1], RGB[i-1][2]) RGB[i][1] = RGB[i][1] + min(RGB[i-1][0], RGB[i-1][2]) RGB[i][2] = RGB[i][2] + min(RGB[i-1][0], RGB[i-1][1]) print(min(RGB[i][0], RGB[i][1], RGB[i][2])) # 2시간이 넘게 고민한 결과... # 문제 속 조건3 &#34;&#34;i(2 ≤ i ≤ N-1)번 집의 색은 i-1번, i+1번 집의 색과 같지 않아야 한다.</div><div class="post-footer">
-        <a href="/bj_20.08.06/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/algorithm/">algorithm</a></div></div>
 </article><ul class="pagination"><li class="page-item active">
                     <span class="page-link">
                         <a href="/">1</a>
