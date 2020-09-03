@@ -520,3 +520,13 @@ _`*blockNumber: null`로 accounts[0]에서 보낸 트랜잭션이 accounts[1]의
 {{<image src="/images/image-20200903175350537.png" width="1000px">}}
 
 
+
+---
+
+여기까지 진행하면서, 두 블로그를 매우 많이 참고했고, 도움이 되었어서 소개한다.
+
+[Mr.Latte](https://www.mrlatte.net/research/2018/02/27/ethereum-geth.html) - [Go Ethereum 사용 법]
+
+[Allg](https://allg.tistory.com/44) - [Geth 설치 및 테스트 네트워크에서 송금하기]
+
+---
