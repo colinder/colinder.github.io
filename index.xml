@@ -3,9 +3,20 @@
         <title></title>
         <link>https://colinder.github.io/</link>
         <description>Hello New World</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 27 Aug 2020 21:48:19 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 03 Sep 2020 22:06:15 &#43;0900</lastBuildDate>
             <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>BlockChain setting &amp; basic</title>
+    <link>https://colinder.github.io/blockchain/</link>
+    <pubDate>Thu, 03 Sep 2020 22:06:15 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/blockchain/</guid>
+    <description><![CDATA[​
+🎈가상환경에서 블록체인 채굴 및 기본 시스템 정리 ​
+1. geth(Go-ethereum) 설치  블록체인 기술은 중앙집중화된 데이터베이스에 반기를 들고 나온 개념이기 때문에 중앙 서버 이런게 없다. 즉 누구라도 해당 블록체인 네트워크에 참여하고 싶다면 언제라도 블록체인 데이터베이스를 싱크해주는 로컬 프로그램을 다운 받아 실행하면 데이터를 받을 수 있다.
+그렇다면 블록체인 네트워크에 참여하고 싶다면 어떻게 해야 할까? 앞서 말한 로컬 프로그램을 다운 받으면 참여가 가능하다.
+이 프로그램들 중 하나인 GO 로 짜여진 Go Ethereum(줄여서, geth)을 설치해본다.]]></description>
+</item><item>
     <title>08_Vuex_03</title>
     <link>https://colinder.github.io/08_vuex_03/</link>
     <pubDate>Thu, 27 Aug 2020 21:48:19 &#43;0900</pubDate>
@@ -93,14 +104,5 @@ Naming Convention  정해진 규정은 없으나, 많은 개발자들이 암묵�
 Vuex 란? (공식문서)  Vuex는 Vue.js 애플리케이션에 대한 상태 관리 패턴 + 라이브러리 입니다. 애플리케이션의 모든 컴포넌트에 대한 중앙 집중식 저장소 역할을 하며 예측 가능한 방식으로 상태를 변경할 수 있습니다. 또한 Vue의 공식 devtools 확장 프로그램과 통합되어 설정 시간이 필요 없는 디버깅 및 상태 스냅 샷 내보내기/가져오기와 같은 고급 기능을 제공합니다. (공식문서 설명)
  ​
 1 2 3 4 5  # 설치 명령어 npm i vuex or npm install vuex # 이후 src폴더안에 vuex폴더를 만들고 store.]]></description>
-</item><item>
-    <title>SW_20.07.29</title>
-    <link>https://colinder.github.io/sw_20.07.29/</link>
-    <pubDate>Wed, 29 Jul 2020 22:59:28 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/sw_20.07.29/</guid>
-    <description><![CDATA[​
-D3_4466_최대 성적표 만들기 1 2 3 4 5 6 7 8 9 10 11  for T in range(int(input())): N, K = map(int, input().split()) score = list(map(int, input().split())) score.sort(reverse=True) result = 0 for i in range(K): result += score[i] print(&#39;#{} {}&#39;.format(T+1, result))   ​
-D3_4406_모음이 보이지 않는 사람 1 2 3 4 5 6 7  for T in range(int(input())): sent = input() result = &#39;&#39; for i in sent: if i not in &#39;aeiou&#39;: result += i print(&#39;#{} {}&#39;.]]></description>
 </item></channel>
 </rss>
