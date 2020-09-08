@@ -1,4 +1,4 @@
-# SW Expert Academy_D3 2817, 1491, , 
+# SW Expert Academy_D3 2817, 1491, 1229, 5515
 
 
 ​	
@@ -44,6 +44,56 @@ for T in range(int(input())):
 # A X lR – Cl => 양수,   B X (N - R X C) => 양수 만 가능하다.
 # 또 직사각형 인테리어라고해서 R != C 라고 생각했으나,,
 # R = C인 경우도 넣어줘야 답이 나왔다.
+```
+
+​	
+
+### D3_1229_암호문2
+
+```python
+for T in range(10):
+    N = int(input())
+    passwords = list(map(int, input().split()))
+    order = int(input())
+    cmd = list(input().split())
+    for i in range(len(cmd)):
+        if cmd[i] == 'I':
+            for j in range(int(cmd[i+2])):
+                passwords.insert(int(cmd[i+1])+j, int(cmd[i+3+j]))
+        elif cmd[i] == 'D':
+            for j in range(int(cmd[i+2])):
+                passwords.pop(int(cmd[i+1]))
+
+    print('#{}'.format(T+1), end=' ')
+    print(*passwords[0:10])
+    
+# 조건 자체는 어렵지 않은데, 다뤄야하는 숫자들이 많아서 결과를 확인하기 어려웠다.
+```
+
+​	
+
+### D3_5515_2016년 요일 맞추기
+
+```python
+days= [31, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335, 366]
+
+day = 4
+
+for T in range(int(input())):
+    m, d = map(int, input().split())
+
+    if m != 1:
+        add_month = days[m-2]
+    elif m == 2:
+        add_month = days[1]
+    else:
+        add_month = 0
+
+    result = (day + add_month + (d-1)) % 7
+
+    print(f'#{T+1} {result}')
+    
+# 이건 그냥 했다. 
 ```
 
 
