@@ -22,9 +22,12 @@
 1. 다운 받고 실행하면 경고창이 뜨는데 `추가정보`누르고 `실행`누르고 진행한다.
 2. devolop 뭐시기는 선택하지 않았고, next를 누루고 진행한다.
 3. 설치가 깔끔히 마무리 되지 않고 경고창이 떴는데, 환경변수 설정해주었다. 
+   
    - 검색 → 시스템 환경 변수 편집 → 고급 → 환경 변수 → Path더블클릭 →  새로만들기 → C:\Program Files\Geth 추가
+   
+   {{<image src="/images/image-20200831153211813.png" width="800px">}}
 
-{{<image src="/images/image-20200831153211813.png" width="800px">}}
+
 
 4. cmd 창을 열어(관리자: 명령 프롬프트) geth를 입력해 실행되는지 확인한다.________끝_
 
@@ -106,7 +109,6 @@ __👍전체 설치는 [이 블로그](https://webnautes.tistory.com/448)의 설
 
    ```bash
    > vagrant init		# 블록체인 채굴을 위한 기초 세팅 시작
-   
    # 해당 명령어를 입력하면 작업하는 디렉토리에 Vagrantfile이 생긴다.
    ```
 
@@ -145,47 +147,47 @@ __👍전체 설치는 [이 블로그](https://webnautes.tistory.com/448)의 설
      end
    end
    
-   # 내가 이해?한 바로는 eth0과 eth1이라는 2개의 광구를 설정했다. 정도
+   # 내가 이해?한 바로는 eth0과 eth1이라는 2개의 노드(광구)를 설정했다. 정도
    ```
 
    ```bash
-   > vagrant up		# 방금 설정한 eth0과 eth1 광구를 오픈(실행)
+   > vagrant up		# 방금 설정한 eth0과 eth1 노드(광구)를 오픈(실행)
    ```
 
    ```bash
-   > vagrant status		# 설정되어 있는 두 광구의 상태를 확인 runing이면 오픈한 상태
+   > vagrant status		# 설정되어 있는 두 노드(광구)의 상태를 확인 runing이면 오픈한 상태
    ```
 
    ​	
 
-2. 여기 가지 작업을 했다면 vitualbox에 두개의 광구가 등록되어있는 것을 확인 할 수 있다. 
+2. 여기 가지 작업을 했다면 vitualbox에 두개의 노드(광구)가 등록되어있는 것을 확인 할 수 있다. 
 
    {{<image src="/images/image-20200901204708869.png" width="800px">}}
 
    ​	
 
-등록된 광구 중에서 eth0을 먼저 설정해보자
+등록된 노두(광구) 중에서 eth0을 먼저 설정해보자
 
-지금까지 진행한 폴더에서 Terminal을 열고 **vagrant** 명령어로 광구를 설정해준다.
+지금까지 진행한 폴더에서 Terminal을 열고 **vagrant** 명령어로 노드(광구)를 설정해준다.
 
 ___기본적은 vagrant 명령어___
 
-| 명령어                                  | 설명                   |
-| :-------------------------------------- | :--------------------- |
-| vagrant up (상태확인할가상머신이름)     | 가상머신 기동          |
-| vagrant status (상태확인할가상머신이름) | 가상머신 상태 확인     |
-| vagrant ssh (접속할가상머신이름)        | 가상머신에 접속        |
-| vagrant halt (멈출가상머신이름)         | 가상머신 정지          |
-| vagrant suspend                         | 가상머신 휴면          |
-| vagrant resume                          | 가상머신 휴면에서 복원 |
-| vagrant reload                          | 가상머신 재시동        |
-| vagrant destroy                         | 가상머신 제거          |
+| 명령어                                | 설명                   |
+| :------------------------------------ | :--------------------- |
+| vagrant up 상태확인할가상머신이름     | 가상머신 기동          |
+| vagrant status 상태확인할가상머신이름 | 가상머신 상태 확인     |
+| vagrant ssh 접속할가상머신이름        | 가상머신에 접속        |
+| vagrant halt 멈출가상머신이름         | 가상머신 정지          |
+| vagrant suspend                       | 가상머신 휴면          |
+| vagrant resume                        | 가상머신 휴면에서 복원 |
+| vagrant reload                        | 가상머신 재시동        |
+| vagrant destroy                       | 가상머신 제거          |
 
-_*모든 명령어가  vagrant up (상태확인할가상머신이름) 과 같이 사용 가능하다._
+*모든 명령어가  _vagrant up 상태확인할가상머신이름_ 과 같이 사용 가능하다.
 
 ​	
 
-3. 이제 광구를 열었으니 광구에 접속(vagrant ssh (접속할가상머신이름)) 하고
+3. 이제 노드(광구)를 열었으니 접속해보자 =>  _vagrant ssh 접속할가상머신이름_ 
 
    {{<image src="/images/image-20200902223519522.png" width="800px">}}
 
@@ -239,7 +241,7 @@ _*모든 명령어가  vagrant up (상태확인할가상머신이름) 과 같이
    ```bash
    # genesis.json 저장 후 
    > cd ..
-   다시 root폴더로 이동한다. 
+   다시 root폴더로 이동한다.
    ```
 
    ​	
@@ -250,7 +252,7 @@ _*모든 명령어가  vagrant up (상태확인할가상머신이름) 과 같이
    > geth init		#이 명령어로 등록(초기화)을 할 수 있는데...
    ```
 
-   {{<image src="/images/image-20200903104621097.png" width="800px" caption="--datadir관련 공식문서 설명">}}
+   {{<image src="/images/image-20200903104621097.png" width="100%" caption="--datadir관련 공식문서 설명">}}
 
    
 
@@ -265,7 +267,7 @@ _*모든 명령어가  vagrant up (상태확인할가상머신이름) 과 같이
 
    ​		
 
-6. __이제 광구를 관리해줄 🙋‍♂️사람도 등록해준다. 광구에서 부터는 ✨geth를 사용하여 진행한다.__
+6. __이제 노드(광구)를 관리해줄 🙋‍♂️사람도 등록해준다. => 이제부터 ✨geth를 사용하여 진행한다.__
 
    ```bash
    > geth account new
@@ -281,15 +283,15 @@ _*모든 명령어가  vagrant up (상태확인할가상머신이름) 과 같이
 
    ​		
 
-7. 이제 광구에 어떤 사람들이 들어올 수 있는지와 입장하는 명령어를 살펴보자.
+7. 이제 노드(광구)에 어떤 사람들이 들어올 수 있는지와 입장하는 명령어들을 살펴보자.
 
    - _어떤식으로 입력(설정)하는 지는 [여기](https://github.com/ethereum/go-ethereum/wiki/Command-Line-Options)를 참고하여 진행하였다._
 
    ```bash
-   # eth0의 광구 입장 명령어
+   # eth0의 노드(광구) 입장 명령어
    > geth console
    
-   # 다만 보통의 경우 아래와 같이 광구(eth0)에 다양한 주소 및 설정을 붙이고 진행한다. 
+   # 다만 보통의 경우 아래와 같이 노드(eth0)에 다양한 주소 및 설정을 붙이고 진행한다. 
    > geth --networkid 5245 --port 30303 --maxpeers 2 --datadir ~/dev/eth_localdata --rpcaddr 0.0.0.0 --nodiscover --nousb console >> ~/eth0.log
    
    # 일단 이걸로 채굴 성공
@@ -299,7 +301,7 @@ _*모든 명령어가  vagrant up (상태확인할가상머신이름) 과 같이
    ```
 
    ```bash
-   진행 도중 ERROR 모음
+   # 진행 도중 ERROR 모음
       
    Failed to enumerate USB devices  => --nousb 추가해주면 사라짐.
    #if you want USB wallet support disabled. By default it's enabled.
@@ -345,11 +347,11 @@ _*모든 명령어가  vagrant up (상태확인할가상머신이름) 과 같이
    miner.start(1)		=> #코인 1개 채굴할때까지 진행
    ```
 
-   | miner(채굴관련) 명령어 | 의미                                                         |
-   | ---------------------- | ------------------------------------------------------------ |
-   | miner.start()          | ()안에 숫자 만큼 채굴. 비워두면 계속 채굴. geth  입력하면 자동으로 시작됨. |
-   | miner.stop()           | 채굴 중단                                                    |
-   | miner.setEtherbase()   | 채굴 보상을 줄 계정을 등록                                   |
+   | miner(채굴관련) 명령어 | 의미                                       |
+   | ---------------------- | ------------------------------------------ |
+   | miner.start()          | ()안에 숫자 만큼 채굴. 비워두면 계속 채굴. |
+   | miner.stop()           | 채굴 중단                                  |
+   | miner.setEtherbase()   | 채굴 보상을 줄 계정을 등록                 |
 
    {{<image src="/images/image-20200903171250312.png" width="800px">}}
 
@@ -361,7 +363,7 @@ _*모든 명령어가  vagrant up (상태확인할가상머신이름) 과 같이
 
    | eth명령어                                                  | 의미                               |
    | ---------------------------------------------------------- | :--------------------------------- |
-   | eth.accounts      =>    personal.listAccounts와 동일       | 현재 생성된 총 계정 확인           |
+   | eth.accounts (personal.listAccounts와 동일)                | 현재 생성된 총 계정 확인           |
    | eth.blockNumber                                            | 현재 채굴된 블록의 번호            |
    | eth.hashrate                                               | 해시레이트(진행속도?를 알 수 있음) |
    | eth.coinbase                                               | 채굴이 진행되면 보상을 받을 계정.  |

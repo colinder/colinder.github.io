@@ -3,7 +3,24 @@
         <title>All Posts - </title>
         <link>https://colinder.github.io/posts/</link>
         <description>All Posts | </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 03 Sep 2020 22:06:15 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 05 Sep 2020 00:06:14 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>SW Expert Academy_D3 2817, 1491, , </title>
+    <link>https://colinder.github.io/sw_20.09.05/</link>
+    <pubDate>Sat, 05 Sep 2020 00:06:14 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/sw_20.09.05/</guid>
+    <description><![CDATA[​
+D3_2817_부분 수열의 합 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  import itertools for T in range(int(input())): N, K = map(int, input().split()) # N: 갯수, K: 목표 합 Nums = list(map(int, input().split())) count = 0 for i in range(1, N+1): boxs = itertools.combinations(Nums, i) for box in boxs: if sum(box) == K: count += 1 print(count) # 하... 라이브러리 쓰자..   ​]]></description>
+</item><item>
+    <title>SW Expert Academy_D3 10505, 10200, 3376, 5642</title>
+    <link>https://colinder.github.io/sw_20.09.04/</link>
+    <pubDate>Fri, 04 Sep 2020 00:00:59 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/sw_20.09.04/</guid>
+    <description><![CDATA[​
+D3_10505_소득 불균형 1 2 3 4 5 6 7 8 9  for T in range(int(input())): N = int(input()) dp = [0] * 100001 Max = 0 for i in list(map(int, input().split())): dp[i] += 1 Max += i print(f&#39;#{T+1} {sum(dp[:int(Max/N)+1])}&#39;)   ​
+D3_10200_구독자 전쟁 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  for T in range(int(input())): N, A, B = map(int, input().]]></description>
+</item><item>
     <title>BlockChain setting &amp; basic</title>
     <link>https://colinder.github.io/blockchain/</link>
     <pubDate>Thu, 03 Sep 2020 22:06:15 &#43;0900</pubDate>
@@ -77,30 +94,5 @@ Vue_LifeCycle  솔직한 고백으로, 처음 라이프사이클이란 것을 �
     <guid>https://colinder.github.io/bj_20.08.04/</guid>
     <description><![CDATA[​
 1003_피보나치 함수 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20  def Fibonacci(N): if N &lt; 3: print(zero[N], one[N]) else: f = 1 s = 2 for i in range(N-2): zero.append(zero[f] + zero[s]) one.append(one[f] + one[s]) f += 1 s += 1 print(zero[N], one[N]) for T in range(int(input())): N = int(input()) zero = [1, 0, 1] one = [0, 1, 1] Fibonacci(N)   ​]]></description>
-</item><item>
-    <title>Naming Convention</title>
-    <link>https://colinder.github.io/namingconvention/</link>
-    <pubDate>Sun, 02 Aug 2020 22:24:45 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/namingconvention/</guid>
-    <description><![CDATA[​
-Naming Convention  정해진 규정은 없으나, 많은 개발자들이 암묵적으로 지키고 있는 이름짓는 방법.
- ​
-  snake_case 🐍
-1 2 3  # _ == snake some_var = 5 my_awesome = 3   ​
-  camelCase 🐪
-1 2 3  # 낙타등이 솟아 있는 모습 someVar = 5 pyAwesome = 3   ​
-  UpperCamelCase 🐪🐪
-1 2 3  # 낙타얼굴과 등이 중간에 솟아 있는 모습 (파스칼식(Pascal case)이라고도 불린다.]]></description>
-</item><item>
-    <title>05_Vuex_01</title>
-    <link>https://colinder.github.io/05_vuex_01/</link>
-    <pubDate>Sun, 02 Aug 2020 22:22:58 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/05_vuex_01/</guid>
-    <description><![CDATA[​
-Vuex 란? (공식문서)  Vuex는 Vue.js 애플리케이션에 대한 상태 관리 패턴 + 라이브러리 입니다. 애플리케이션의 모든 컴포넌트에 대한 중앙 집중식 저장소 역할을 하며 예측 가능한 방식으로 상태를 변경할 수 있습니다. 또한 Vue의 공식 devtools 확장 프로그램과 통합되어 설정 시간이 필요 없는 디버깅 및 상태 스냅 샷 내보내기/가져오기와 같은 고급 기능을 제공합니다. (공식문서 설명)
- ​
-1 2 3 4 5  # 설치 명령어 npm i vuex or npm install vuex # 이후 src폴더안에 vuex폴더를 만들고 store.]]></description>
 </item></channel>
 </rss>

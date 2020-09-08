@@ -7,11 +7,11 @@
 
 >Vue.js는 웹 애플리케이션의 사용자 인터페이스를 만들기 위해 사용하는 오픈 소스 프로그레시브 **자바스크립트 프레임워크**
 
-
+​	
 
 ## 1. 시작하기
 
-> Vue VS Django
+> > 'Vue' VS 'Django'
 >
 > 어느 정도 공부를 하면서 체득한 가장 큰 구분점은 "`Django는 App별로 응답을 구분`하고, `Vue는 Component별로 응답을 구분`한다."는 것이다.
 >
@@ -23,11 +23,12 @@
 
   1. [vscode](https://code.visualstudio.com/) 설치
   2. [nodeJS](https://nodejs.org/ko/) 설치 
-  3. vscode 실행 후 terminal에서 `npm install` 설치
-  4. vscode 실행 후 terminal에서 `npm i -g @vue/cli` 설치
+  3. 프로젝트를 시작할 폴더에서 마우스 오른쪽 클릭 후 
+  4. vscode 실행 => terminal에서 `npm install` 설치 
+  5. 이후 Terminal에서 추가로 `npm i -g @vue/cli` 설치
      - 설치가 잘 되었나 `vue --version`으로 확인 (버전이 보이면 ok)
-  5. _(선택사항)_ vscode의 Extensions에서`Vetur`와 `Vue VSCode Snippets` 설치
-     - `Auto Rename Tag`, `Auto Close Tag`
+  6. _(선택사항)_ vscode의 Extensions에서`Vetur`와 `Vue VSCode Snippets` 설치
+     - 또 `Auto Rename Tag`, `Auto Close Tag` 도 추천합니다.
 
    ```bash
     $ vue create myproject		# myproject 프로젝트 생성
@@ -84,7 +85,7 @@
 
 > **여기서 CLI 란 ?**
 >
-> **명령 줄 인터페이스(CLI, Command line interface) 또는 명령어 인터페이스**는 텍스트 터미널을 통해 사용자와 컴퓨터가 상호 작용하는 방식. 즉, 작업 명령은 사용자가 컴퓨터 키보드 등을 통해 문자열의 형태로 입력하며, 컴퓨터로부터의 출력 역시 문자열의 형태로 주어진다. (위키백과)
+> **명령 줄 인터페이스(CLI, Command line interface) 또는 명령어 인터페이스**는 텍스트 터미널을 통해 사용자와 컴퓨터가 상호 작용하는 방식. 즉, 작업 명령은 사용자가 컴퓨터 키보드 등을 통해 문자열의 형태로 입력하며, 컴퓨터로부터의 출력 역시 문자열의 형태로 주어진다. (출처: 위키백과)
 
 ​	
 
@@ -92,9 +93,9 @@
 
 {{< image src="/images/image-20200731224139667.png" caption=" " width="800px">}}
 
-라우팅은 URI에 따라 해당하는 정적파일을 내려주는 방식이다. 이를 브라우져에서 구현해야 하는것이 **SPA** 개발의 핵심
+라우팅은 URI에 따라 해당하는 정적파일을 보여주는 방식. 이를 브라우저에서 구현 하는것이 **SPA** 개발의 핵심
 
->아이디어는 간단하다. 요청 URI에 따라 브라우져에서 돔을 변경하는 방식. 대부분의 경우 도움이 되는 기능이기 때문에 상당이 추천한다. (추가로 navbar? 도 생기니 더욱 추천)
+>아이디어는 간단하다. 요청 URI에 따라 브라우저에서 DOM을 변경하는 방식. 대부분의 경우 도움이 되는 기능이기 때문에 상당이 추천한다. (추가로 navbar? 도 생기니 더욱 추천)
 >
 >**terminal**에 **vue add router** 를 입력하면 history 모드를 사용하겠나고 묻는데  **y** 를 입력해주면 된다. 
 
@@ -104,12 +105,17 @@
 
 {{< image src="/images/image-20200731224303419.png" caption=" " width="800px">}}
 
-> vue router를 설치하게 되면 해시백 모드와 히스토리 모드 중 디폴트로 해시백 모드가 적용된다.
+> vue add router를 설치하게 되면 `해쉬백 모드`와 `히스토리 모드` 중 디폴트로 `해쉬백 모드가 적용`된다.
 >
-> URL 해시를 사용하여 전체 URL을 시뮬레이트하므로 URL이 변경될 때 페이지가 다시 로드 되지 않습니다.
+> 만약 위의 그림에서 히스토리 모드를 사용하지 않더라도 나중에 URL에 있는 해쉬를 제거하기 위해 라우터의 **히스토리 모드**로 변경할 수 있다. 
 >
-> 해시를 제거하기 위해 라우터의 **history 모드** 를 사용할 수 있습니다. `history.pushState` API를 활용하여 페이지를 다시 로드하지 않고도 URL 탐색을 할 수 있습니다. (공식문서 설명..)
-
-`난 다른건 모르겠고 URL이 깔끔해 보이게되어 좋다.`
+> ```bash
+> # src/router/index.js
+> 
+> const router = new VueRouter({
+>   mode: 'history',						👈요거를 등록하면 history 모드 실행
+>   routes: [...]
+> })
+> ```
 
 
