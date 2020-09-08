@@ -27,8 +27,6 @@ for T in range(int(input())):
 
 ​	
 
-​	
-
 ### D3_1493_수의 새로운 연산
 
 ```python
