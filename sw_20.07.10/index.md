@@ -25,7 +25,49 @@ for T in range(int(input())):
 ### D3_4615_재미있는 오셀로 게임
 
 ```python
+dx = [0, 1, 1, 1, 0, -1, -1, -1]
+dy = [1, 1, 0, -1, -1, -1, 0, 1]
 
+def dfs(x, y, i ,stone):
+    if board[x][y] == 0:
+        return 0
+    elif board[x][y] == stone:
+        return 1
+    else:
+        if dfs(x+dx[i], y+dy[i], i, stone):
+            board[x][y] = stone
+            return 1
+        else:
+            return 0
+
+
+for T in range(int(input())):
+    N, M = map(int, input().split())
+    command = [list(map(int, input().split())) for _ in range(M)]
+    board = [[0]*(N+2) for _ in range(N+2)]
+    board[N//2+1][N//2+1] = 2
+    board[N//2][N//2] = 2
+    board[N//2][N//2+1] = 1
+    board[N//2+1][N//2] = 1
+
+    for x, y, stone in command:
+        for i in range(8):
+            board[x][y] = stone
+            dfs(x+dx[i], y+dy[i], i, stone)
+
+    B = 0
+    W = 0
+    for i in range(N):
+        for j in range(N):
+            if board[i+1][j+1] == 1:
+                B += 1
+            elif board[i+1][j+1] == 2:
+                W += 1
+
+    print(f'#{T+1} {B} {W}')
+    
+# dfs를 연습해볼 수 있는 좋은 문제라고 생각한다. 
+# 추가적인 조건이 있어 dfs를 많이 사용해보지 못한 나는 해결하는데 오랜 시간이 걸렸다.
 ```
 
 ​	

@@ -12,7 +12,7 @@
     <author>Author</author>
     <guid>https://colinder.github.io/sw_20.09.09/</guid>
     <description><![CDATA[​
-D3_4698_테네스의 특별한 소수 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  for T in range(int(input())): D, A, B = map(int, input().split()) D = str(D) a = [0, 0] + [1] * (B - 1) rootB = int(B**0.5)	👈이 아이디어를 얻기까지 오랜시간이 걸렸다. for i in range(2, rootB+1):	👈 if a[i] == 1:	👈 for j in range(2*i, B+1, i):	👈 a[j] = 0	👈 result = [] for i in range(A, B+1): if a[i] == 1 and D in str(i): result.]]></description>
+D3_4698_테네스의 특별한 소수 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  for T in range(int(input())): D, A, B = map(int, input().split()) D = str(D) a = [0, 0] + [1] * (B - 1) rootB = int(B**0.5)	👈 이 아이디어를 얻기까지 오랜시간이 걸렸다. for i in range(2, rootB+1):	👈 if a[i] == 1:	👈 for j in range(2*i, B+1, i):	👈 에라토스테네스의 체 를 활용 a[j] = 0	👈 result = [] for i in range(A, B+1): if a[i] == 1 and D in str(i): result.]]></description>
 </item><item>
     <title>SW Expert Academy_D3 2817, 1491, 1229, 5515</title>
     <link>https://colinder.github.io/sw_20.09.05/</link>
