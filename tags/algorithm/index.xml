@@ -3,7 +3,28 @@
         <title>algorithm - Tag - </title>
         <link>https://colinder.github.io/tags/algorithm/</link>
         <description>algorithm - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 08 Sep 2020 23:13:31 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/algorithm/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 15 Sep 2020 22:52:51 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/algorithm/" rel="self" type="application/rss+xml" /><item>
+    <title>SW Expert Academy_D3 3131, 3233, , </title>
+    <link>https://colinder.github.io/sw_20.09.15/</link>
+    <pubDate>Tue, 15 Sep 2020 22:52:51 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/sw_20.09.15/</guid>
+    <description><![CDATA[​
+D3_3131_100만 이하의 모든 소수 1 2 3 4 5 6 7 8 9 10 11 12  a = [0, 0] + [1] * 1000000 for i in range(2, 1000000): if a[i] == 1: for j in range(2*i, 1000001, i): a[j] = 0 for i in range(2, 1000000): if a[i] == 1: print(i, end=&#34; &#34;) # 에라토스테네스의 체   ​
+D3_3233_정삼각형 분할 놀이 1 2 3 4 5 6 7 8 9 10  for T in range(int(input())): A, B = map(int, input().]]></description>
+</item><item>
+    <title>Python_Library</title>
+    <link>https://colinder.github.io/python_library/</link>
+    <pubDate>Fri, 11 Sep 2020 22:39:31 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/python_library/</guid>
+    <description><![CDATA[​
+자주 쓰는 Python Library  자주 사용하게되는 파이썬 라이브러리를 정리한다.
+ ​
+  정규표현식  일대일 매칭되는 문자
+ 정규표현식 안에서, 바로 다음 절에서 설명하는 메타문자를 제외한 모든 문자 하나는 일반 문자열 하나와 매칭된다. 예를 들어, a는 a와 매칭되고, 가는 ‘가’와 매칭되는 식이다. 당연히 a가 ‘b’ 또는 ‘가’와 매칭되지는 않는다.
+1 2 3 4 5 6 7 8 9 10 11 12  어떤 프로그래밍 언어의 정규표현식이든 메타문자(특수한 기능을 하는 문자)라는 것이 존재한다.]]></description>
+</item><item>
     <title>SW Expert Academy_D3 4698, 1493, 10570, 3032</title>
     <link>https://colinder.github.io/sw_20.09.09/</link>
     <pubDate>Tue, 08 Sep 2020 23:13:31 &#43;0900</pubDate>
@@ -71,23 +92,5 @@ D3_4406_모음이 보이지 않는 사람 1 2 3 4 5 6 7  for T in range(int(inpu
     <description><![CDATA[​
 D3_4676_늘어지는 소리 만들기 1 2 3 4 5 6 7 8 9 10 11 12  for T in range(int(input())): sent = list(input()) # wow H = int(input()) po = sorted(list(map(int, input().split()))) # 2 3 2 for i in range(H): a = po[i]+i sent.insert(a,&#39;-&#39;) print(&#39;#{} {}&#39;.format(T+1, &#39;&#39;.join(sent))) # 단순 산수로 해결   ​
 D3_4615_재미있는 오셀로 게임 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43  dx = [0, 1, 1, 1, 0, -1, -1, -1] dy = [1, 1, 0, -1, -1, -1, 0, 1] def dfs(x, y, i ,stone): if board[x][y] == 0: return 0 elif board[x][y] == stone: return 1 else: if dfs(x+dx[i], y+dy[i], i, stone): board[x][y] = stone return 1 else: return 0 for T in range(int(input())): N, M = map(int, input().]]></description>
-</item><item>
-    <title>SW Expert Academy_D3 5162, 4789, 4751, 4698</title>
-    <link>https://colinder.github.io/sw_20.07.08/</link>
-    <pubDate>Wed, 08 Jul 2020 15:07:10 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/sw_20.07.08/</guid>
-    <description><![CDATA[​
-D3_5162_두가지 빵의 딜레마 1 2 3 4 5 6 7  for T in range(int(input())): A, B, C = map(int, input().split()) N = min(A, B) print(&#34;#{} {}&#34;.format(T+1, int(C/N))) # 단순 산수로 해결   ​
-D3_4789_성공적인 공연 기획 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19  for T in range(int(input())): P = list(map(int, map(str, input())))	need = P[0] count = 0 for i in range(1, len(P)): if need &gt;= i: need += P[i] else: count += i - need need = i + P[i] print(f&#39;#{T+1} {count}&#39;) # 문제를 이해하는 것이 Point였다.]]></description>
-</item><item>
-    <title>SW Expert Academy_D3 5431, 5356, 5293, 5215</title>
-    <link>https://colinder.github.io/sw_20.07.01/</link>
-    <pubDate>Wed, 01 Jul 2020 21:09:36 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/sw_20.07.01/</guid>
-    <description><![CDATA[​
-D3_5431_민석이의 과제 체크하기 1 2 3 4 5 6 7 8 9 10 11 12  for T in range(int(input())): N, K = map(int, input().split()) P = list(map(int, input().split())) result = [] for i in range(1,N+1): if i not in P: result.append(str(i)) print(&#39;#{} {}&#39;.format(T+1, &#39; &#39;.join(result))) # 제출한 수강생 리스트를 만들고(P) 이를 for로 돌리며 검증   ​
-D3_5356_의석이의 세로로 말해요 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24  for T in range(int(input())): sent = [list(str(input())) for _ in range(5)] #입력받은 요소의 길이를 알아내야 한다.]]></description>
 </item></channel>
 </rss>

@@ -3,9 +3,30 @@
         <title></title>
         <link>https://colinder.github.io/</link>
         <description>Hello New World</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 08 Sep 2020 23:13:31 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 15 Sep 2020 22:52:51 &#43;0900</lastBuildDate>
             <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>SW Expert Academy_D3 3131, 3233, , </title>
+    <link>https://colinder.github.io/sw_20.09.15/</link>
+    <pubDate>Tue, 15 Sep 2020 22:52:51 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/sw_20.09.15/</guid>
+    <description><![CDATA[​
+D3_3131_100만 이하의 모든 소수 1 2 3 4 5 6 7 8 9 10 11 12  a = [0, 0] + [1] * 1000000 for i in range(2, 1000000): if a[i] == 1: for j in range(2*i, 1000001, i): a[j] = 0 for i in range(2, 1000000): if a[i] == 1: print(i, end=&#34; &#34;) # 에라토스테네스의 체   ​
+D3_3233_정삼각형 분할 놀이 1 2 3 4 5 6 7 8 9 10  for T in range(int(input())): A, B = map(int, input().]]></description>
+</item><item>
+    <title>Python_Library</title>
+    <link>https://colinder.github.io/python_library/</link>
+    <pubDate>Fri, 11 Sep 2020 22:39:31 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/python_library/</guid>
+    <description><![CDATA[​
+자주 쓰는 Python Library  자주 사용하게되는 파이썬 라이브러리를 정리한다.
+ ​
+  정규표현식  일대일 매칭되는 문자
+ 정규표현식 안에서, 바로 다음 절에서 설명하는 메타문자를 제외한 모든 문자 하나는 일반 문자열 하나와 매칭된다. 예를 들어, a는 a와 매칭되고, 가는 ‘가’와 매칭되는 식이다. 당연히 a가 ‘b’ 또는 ‘가’와 매칭되지는 않는다.
+1 2 3 4 5 6 7 8 9 10 11 12  어떤 프로그래밍 언어의 정규표현식이든 메타문자(특수한 기능을 하는 문자)라는 것이 존재한다.]]></description>
+</item><item>
     <title>SW Expert Academy_D3 4698, 1493, 10570, 3032</title>
     <link>https://colinder.github.io/sw_20.09.09/</link>
     <pubDate>Tue, 08 Sep 2020 23:13:31 &#43;0900</pubDate>
@@ -78,23 +99,5 @@ Vuex 핵심컨셉(getters, mutations, actions, modules)  1. Getters  만약? A.v
     <guid>https://colinder.github.io/04_vue_reactivity/</guid>
     <description><![CDATA[​
 Vue_반응형 ]]></description>
-</item><item>
-    <title>06_Vue_LifeCycle</title>
-    <link>https://colinder.github.io/06_vue_lifecycle/</link>
-    <pubDate>Fri, 14 Aug 2020 21:04:53 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/06_vue_lifecycle/</guid>
-    <description><![CDATA[​
-Vue_LifeCycle  솔직한 고백으로, 처음 라이프사이클이란 것을 배웠을 때는 이게 무슨 말인지?, 어떤 경우에 이 삶의 주기를 고려하게 되는지 전혀 납득, 이해하지 못했다. Vue 공식문서에는 나와 비슷한 사용자들에게 말하고 있다.
-지금 당장 모든 것을 완전히 이해할 필요는 없지만 다이어그램은 앞으로 도움이 될 것입니다.
- ]]></description>
-</item><item>
-    <title>BEAKJOON 1149, 1932, 2579, 1463</title>
-    <link>https://colinder.github.io/bj_20.08.06/</link>
-    <pubDate>Wed, 05 Aug 2020 22:11:35 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/bj_20.08.06/</guid>
-    <description><![CDATA[​
-1149_RGB거리 1 2 3 4 5 6 7 8 9 10 11 12 13  N = int(input()) RGB = [list(map(int, input().split())) for _ in range(N)] for i in range(1, len(RGB)): RGB[i][0] = RGB[i][0] + min(RGB[i-1][1], RGB[i-1][2]) RGB[i][1] = RGB[i][1] + min(RGB[i-1][0], RGB[i-1][2]) RGB[i][2] = RGB[i][2] + min(RGB[i-1][0], RGB[i-1][1]) print(min(RGB[i][0], RGB[i][1], RGB[i][2])) # 2시간이 넘게 고민한 결과... # 문제 속 조건3 &#34;&#34;i(2 ≤ i ≤ N-1)번 집의 색은 i-1번, i+1번 집의 색과 같지 않아야 한다.]]></description>
 </item></channel>
 </rss>
