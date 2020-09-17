@@ -3,7 +3,19 @@
         <title>block_chain - Category - </title>
         <link>https://colinder.github.io/categories/block_chain/</link>
         <description>block_chain - Category - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 03 Sep 2020 22:06:15 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/block_chain/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 17 Sep 2020 15:04:00 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/block_chain/" rel="self" type="application/rss+xml" /><item>
+    <title>block_chain private Vs public / blockchain Vs network</title>
+    <link>https://colinder.github.io/private-vs-public-blockchain-vs-network/</link>
+    <pubDate>Thu, 17 Sep 2020 15:04:00 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/private-vs-public-blockchain-vs-network/</guid>
+    <description><![CDATA[​
+🧔프라이빗 블록체인 VS 👨🏻‍🤝‍👨🏻퍼블릭 블록체인 VS 🔒프라이빗 네트워크 VS 🔐퍼블릭 네트워크   Why 이런 질문을?
+ 블록체인 관련 정보를 구글링하다보면, 프라이빗 네트워크, 퍼블릭 네트워크, 프라이빗 블록체인, 퍼블릭 블록체인. 이 4가지의 말을 혼용해서 사용하고 있는 것을 쉽게 볼 수 있다. 여기서
+프라이빗 네트워크와 프라이빗 블록체인과 같이 네트워크와 블록체인을 같은 의미로 많이 사용하는데. 과연 이 둘이 같은 것을 의미하는지 알아보았다.
+ ​
+결론 - 블록체인=&gt; 사용자의 접근조건을 기준으로 프라이빗과 퍼블릭을 나눔 - 네트워크=&gt; 서비스 운용형태를 기준으로 프라이빗과 퍼블릭을 나눔 ​]]></description>
+</item><item>
     <title>Block_Chain setting &amp; basic</title>
     <link>https://colinder.github.io/block_chain/</link>
     <pubDate>Thu, 03 Sep 2020 22:06:15 &#43;0900</pubDate>
