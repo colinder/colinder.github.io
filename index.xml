@@ -52,11 +52,11 @@ D3_2817_부분 수열의 합 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  import iter
 D3_10505_소득 불균형 1 2 3 4 5 6 7 8 9  for T in range(int(input())): N = int(input()) dp = [0] * 100001 Max = 0 for i in list(map(int, input().split())): dp[i] += 1 Max += i print(f&#39;#{T+1} {sum(dp[:int(Max/N)+1])}&#39;)   ​
 D3_10200_구독자 전쟁 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  for T in range(int(input())): N, A, B = map(int, input().]]></description>
 </item><item>
-    <title>BlockChain setting &amp; basic</title>
-    <link>https://colinder.github.io/blockchain/</link>
+    <title>Block_Chain setting &amp; basic</title>
+    <link>https://colinder.github.io/block_chain/</link>
     <pubDate>Thu, 03 Sep 2020 22:06:15 &#43;0900</pubDate>
     <author>Author</author>
-    <guid>https://colinder.github.io/blockchain/</guid>
+    <guid>https://colinder.github.io/block_chain/</guid>
     <description><![CDATA[​
 🎈가상환경에서 블록체인 채굴 및 기본 시스템 정리 ​
 1. geth(Go-ethereum) 설치  블록체인 기술은 중앙집중화된 데이터베이스에 반기를 들고 나온 개념이기 때문에 중앙 서버 이런게 없다. 즉 누구라도 해당 블록체인 네트워크에 참여하고 싶다면 언제라도 블록체인 데이터베이스를 싱크해주는 로컬 프로그램을 다운 받아 실행하면 데이터를 받을 수 있다.
