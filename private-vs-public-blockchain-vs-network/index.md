@@ -3,7 +3,9 @@
 
 ​	
 
-# 🧔프라이빗 <span style="color: blue">블록체인</span> VS 👨🏻‍🤝‍👨🏻퍼블릭 <span style="color: blue">블록체인</span> VS 🔒프라이빗 <span style="color: brown">네트워크</span> VS 🔐퍼블릭 <span style="color: brown">네트워크</span>
+# 🧔프라이빗 <span style="color: blue">블록체인</span> VS 👨🏻‍🤝‍👨🏻퍼블릭 <span style="color: blue">블록체인</span> VS
+
+# 		🔒프라이빗 <span style="color: brown">네트워크</span> VS 🔐퍼블릭 <span style="color: brown">네트워크</span>
 
 > > Why 이런 질문을?
 >
@@ -35,7 +37,7 @@
 
 3. 참여자가 제한되기 때문에 빠른 거래나 처리속도가 필요한 경우와 네트워크 내에서만 정보가 공개되어야 하는 경우에 적합한 형태
 
-   
+   ​	
 
 ## 👨🏻‍🤝‍👨🏻퍼블릭 <span style="color: blue">블록체인</span>
 
@@ -51,13 +53,13 @@
 
 3. 거래 처리 용량 제한으로 인한 확장성 부족이나 채굴에 들어가는 전력의 큰 비용 등 문제
 
-   
+   ​	
 
 ## 🔒프라이빗 <span style="color: brown">네트워크</span>
 
 > **운영자의 허가를 받은 인원만 거래 내용을 확인**할 수 있음.
 
-​	
+​		
 
 ## 🔐퍼블릭 <span style="color: brown">네트워크</span>
 
@@ -83,7 +85,7 @@ ex)
 
 ---
 
-
+​	
 
 #### 내용을 정리하면서 발생했던 의문들.
 
