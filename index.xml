@@ -3,9 +3,18 @@
         <title></title>
         <link>https://colinder.github.io/</link>
         <description>Hello New World</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 17 Sep 2020 15:04:00 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 19 Sep 2020 22:52:51 &#43;0900</lastBuildDate>
             <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>SW Expert Academy_D3 3131, 3233, 1860,</title>
+    <link>https://colinder.github.io/sw_20.09.15/</link>
+    <pubDate>Sat, 19 Sep 2020 22:52:51 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/sw_20.09.15/</guid>
+    <description><![CDATA[​
+D3_3131_100만 이하의 모든 소수 1 2 3 4 5 6 7 8 9 10 11 12  a = [0, 0] + [1] * 1000000 for i in range(2, 1000000): if a[i] == 1: for j in range(2*i, 1000001, i): a[j] = 0 for i in range(2, 1000000): if a[i] == 1: print(i, end=&#34; &#34;) # 에라토스테네스의 체   ​
+D3_3233_정삼각형 분할 놀이 1 2 3 4 5 6 7 8 9 10  for T in range(int(input())): A, B = map(int, input().]]></description>
+</item><item>
     <title>block_chain private Vs public / blockchain Vs network</title>
     <link>https://colinder.github.io/private-vs-public-blockchain-vs-network/</link>
     <pubDate>Thu, 17 Sep 2020 15:04:00 &#43;0900</pubDate>
@@ -17,15 +26,6 @@
 프라이빗 네트워크와 프라이빗 블록체인과 같이 네트워크와 블록체인을 같은 의미로 많이 사용하는데. 과연 이 둘이 같은 것을 의미하는지 알아보았다.
  ​
 결론 - 블록체인=&gt; 사용자의 접근조건을 기준으로 프라이빗과 퍼블릭을 나눔 - 네트워크=&gt; 서비스 운용형태를 기준으로 프라이빗과 퍼블릭을 나눔 ​]]></description>
-</item><item>
-    <title>SW Expert Academy_D3 3131, 3233, , </title>
-    <link>https://colinder.github.io/sw_20.09.15/</link>
-    <pubDate>Tue, 15 Sep 2020 22:52:51 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/sw_20.09.15/</guid>
-    <description><![CDATA[​
-D3_3131_100만 이하의 모든 소수 1 2 3 4 5 6 7 8 9 10 11 12  a = [0, 0] + [1] * 1000000 for i in range(2, 1000000): if a[i] == 1: for j in range(2*i, 1000001, i): a[j] = 0 for i in range(2, 1000000): if a[i] == 1: print(i, end=&#34; &#34;) # 에라토스테네스의 체   ​
-D3_3233_정삼각형 분할 놀이 1 2 3 4 5 6 7 8 9 10  for T in range(int(input())): A, B = map(int, input().]]></description>
 </item><item>
     <title>Python_Library</title>
     <link>https://colinder.github.io/python_library/</link>
