@@ -3,8 +3,16 @@
         <title>All Posts - </title>
         <link>https://colinder.github.io/posts/</link>
         <description>All Posts | </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 19 Sep 2020 22:52:51 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>SW Expert Academy_D3 3131, 3233, 1860,</title>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 21 Sep 2020 22:43:28 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>SW Expert Academy_D3 3307, 3304, ,</title>
+    <link>https://colinder.github.io/sw_20.09.21/</link>
+    <pubDate>Mon, 21 Sep 2020 22:43:28 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/sw_20.09.21/</guid>
+    <description><![CDATA[​
+D3_3307_최장 증가 부분 수열(LIS) 1 2 3 4 5 6 7 8 9 10 11 12 13 14  for T in range(int(input())): N = int(input()) arr = list(map(int, input().split())) dp= [1] * N for i in range(1, N): for j in range(i): if arr[j] &lt; arr[i]: dp[i]= max(dp[i], dp[j] + 1) print(f&#39;#{T+1} {max(dp)}&#39;) # dp는 쉬운듯 어렵고 어려운듯 쉽다... # LIS로 검색하면 도움이 되는 글이 많다.    ​]]></description>
+</item><item>
+    <title>SW Expert Academy_D3 3131, 3233, 1860, 4047</title>
     <link>https://colinder.github.io/sw_20.09.15/</link>
     <pubDate>Sat, 19 Sep 2020 22:52:51 &#43;0900</pubDate>
     <author>Author</author>
@@ -91,15 +99,5 @@ A. mutations의 역할은 State를 관리하는 것이다. 그런데 만약 비�
     <description><![CDATA[​
 10844_쉬운 계단 수 1    ​
 2156_포도주 시식 1       포도주 6 10 13 8 8 1     넘버링 c1 c2 c3 c4 c5 c6    |경우의 수| c1| c1 + c2 | c1 + c2 | | | | | | | | c1 + C3 | | |]]></description>
-</item><item>
-    <title>07_Vuex_02</title>
-    <link>https://colinder.github.io/07_vuex_02/</link>
-    <pubDate>Sun, 16 Aug 2020 19:39:10 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/07_vuex_02/</guid>
-    <description><![CDATA[​
-Vuex 핵심컨셉(getters, mutations, actions, modules)  1. Getters  만약? A.vue와 B.vue에서 각각 store의 state에 등록된 second의 2를 3으로 변형해 사용하고 싶다면 어떻게 해야 할까? 저장소에 등록되어 있는 상태(state)를 변경하고 싶다면?
- 이런 모습으로"이런 모습으로 아마 귀찮겠지만, 각각의 파일에서
-1 2 3 4 5 6 7  // A.vue  computed: { change() { return this.$store.state.second + 1 } }   1 2 3 4 5 6 7  // B.]]></description>
 </item></channel>
 </rss>

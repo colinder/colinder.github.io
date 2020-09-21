@@ -3,8 +3,16 @@
         <title>SW Expert Academy - Category - </title>
         <link>https://colinder.github.io/categories/sw-expert-academy/</link>
         <description>SW Expert Academy - Category - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 19 Sep 2020 22:52:51 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/sw-expert-academy/" rel="self" type="application/rss+xml" /><item>
-    <title>SW Expert Academy_D3 3131, 3233, 1860,</title>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 21 Sep 2020 22:43:28 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/sw-expert-academy/" rel="self" type="application/rss+xml" /><item>
+    <title>SW Expert Academy_D3 3307, 3304, ,</title>
+    <link>https://colinder.github.io/sw_20.09.21/</link>
+    <pubDate>Mon, 21 Sep 2020 22:43:28 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/sw_20.09.21/</guid>
+    <description><![CDATA[​
+D3_3307_최장 증가 부분 수열(LIS) 1 2 3 4 5 6 7 8 9 10 11 12 13 14  for T in range(int(input())): N = int(input()) arr = list(map(int, input().split())) dp= [1] * N for i in range(1, N): for j in range(i): if arr[j] &lt; arr[i]: dp[i]= max(dp[i], dp[j] + 1) print(f&#39;#{T+1} {max(dp)}&#39;) # dp는 쉬운듯 어렵고 어려운듯 쉽다... # LIS로 검색하면 도움이 되는 글이 많다.    ​]]></description>
+</item><item>
+    <title>SW Expert Academy_D3 3131, 3233, 1860, 4047</title>
     <link>https://colinder.github.io/sw_20.09.15/</link>
     <pubDate>Sat, 19 Sep 2020 22:52:51 &#43;0900</pubDate>
     <author>Author</author>
@@ -81,13 +89,5 @@ D3_5356_의석이의 세로로 말해요 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
     <guid>https://colinder.github.io/sw_20.06.25/</guid>
     <description><![CDATA[​
 D3_5948_새샘이의 7-3-5 게임 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  for T in range(int(input())): N = list(map(int, input().split())) result = set() for i in range(5): for j in range(i+1, 6): for x in range(j+1, 7): result.add(N[i]+N[j]+N[x]) result = list(result) result.sort() print(&#39;#{} {}&#39;.format(T+1, result[-5])) # 3수의 합을 정리하는데 set으로 중복을 제거하는 방법으로 result set을 정리 # set은 순서가 없기 때문에 result를 다시 list로 정리하고 .]]></description>
-</item><item>
-    <title>SW Expert Academy_D3 6190, 6057, 6019, 5986</title>
-    <link>https://colinder.github.io/sw_20.06.23/</link>
-    <pubDate>Tue, 23 Jun 2020 09:05:05 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/sw_20.06.23/</guid>
-    <description><![CDATA[​
-D3_6190_정곤이의 단조 증가하는 수 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  for T in range(int(input())): N = int(input()) L = list(map(int, input().split())) result = -1 for i in range(N-1): for j in range(i+1, N): num = str(L[i]*L[j]) if len(num) &gt; 1 and &#39;0&#39; not in num and result &lt; int(num) and list(num) == sorted(num): result = int(num) print(f&#39;#{T+1} {result}&#39;) # 단조증가하는 지를 검증하는 방법으로 sorted를 썼는데 이를 활용하기 위해서는 str형태로 변경해야 검증이 가능하다.]]></description>
 </item></channel>
 </rss>

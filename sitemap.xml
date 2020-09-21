@@ -2,13 +2,14 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://colinder.github.io/</loc><lastmod>2020-09-19T22:52:51&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/tags/algorithm/</loc><lastmod>2020-09-19T22:52:51&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/categories/</loc><lastmod>2020-09-19T22:52:51&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/posts/</loc><lastmod>2020-09-19T22:52:51&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/categories/sw-expert-academy/</loc><lastmod>2020-09-19T22:52:51&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://colinder.github.io/</loc><lastmod>2020-09-21T22:43:28&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://colinder.github.io/tags/algorithm/</loc><lastmod>2020-09-21T22:43:28&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://colinder.github.io/categories/</loc><lastmod>2020-09-21T22:43:28&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://colinder.github.io/posts/</loc><lastmod>2020-09-21T22:43:28&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://colinder.github.io/categories/sw-expert-academy/</loc><lastmod>2020-09-21T22:43:28&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://colinder.github.io/sw_20.09.21/</loc><lastmod>2020-09-21T22:43:28&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://colinder.github.io/tags/</loc><lastmod>2020-09-21T22:43:28&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://colinder.github.io/sw_20.09.15/</loc><lastmod>2020-09-19T22:52:51&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/tags/</loc><lastmod>2020-09-19T22:52:51&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://colinder.github.io/tags/block_chain/</loc><lastmod>2020-09-17T15:04:00&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://colinder.github.io/categories/block_chain/</loc><lastmod>2020-09-17T15:04:00&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://colinder.github.io/private-vs-public-blockchain-vs-network/</loc><lastmod>2020-09-17T15:04:00&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
@@ -25,8 +26,8 @@
             <loc>https://colinder.github.io/categories/beakjoon/</loc><lastmod>2020-08-25T23:01:50&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
             <loc>https://colinder.github.io/bj_20.08.25/</loc><lastmod>2020-08-25T23:01:50&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
             <loc>https://colinder.github.io/categories/%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%951/</loc><lastmod>2020-08-25T23:01:50&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
-            <loc>https://colinder.github.io/07_vuex_02/</loc><lastmod>2020-08-16T19:39:10&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
-            <loc>https://colinder.github.io/04_vue_reactivity/</loc><lastmod>2020-08-16T12:22:44&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
+            <loc>https://colinder.github.io/07_vuex_02/</loc><lastmod>2020-08-16T19:39:10&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/04_vue_reactivity/</loc><lastmod>2020-08-16T12:22:44&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/06_vue_lifecycle/</loc><lastmod>2020-08-14T21:04:53&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/categories/comming-soon/</loc><lastmod>2020-08-14T21:04:53&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/bj_20.08.06/</loc><lastmod>2020-08-05T22:11:35&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>

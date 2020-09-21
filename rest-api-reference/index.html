@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/rest-api-reference\/"
-        },"genre": "posts","wordcount":  1880 ,
+        },"genre": "posts","wordcount":  1572 ,
         "url": "https:\/\/colinder.github.io\/rest-api-reference\/","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -107,8 +107,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX"></h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="0001-01-01">0001-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1880 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;9 minutes&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="0001-01-01">0001-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1572 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;8 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
@@ -355,10 +355,23 @@
 </tr>
 </tbody>
 </table>
-<p>​	<code>Response (Fail)</code>
-| Field           | Type          | Description        |
-| &mdash;&mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash; |
-| result.data             | String        |fail |</p>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>fail</td>
+</tr>
+</tbody>
+</table>
 <h4 id="121-이메일-중복확인-get-accountsemailcheck">1.2.1 이메일 중복확인 GET /accounts/emailCheck</h4>
 <p>회원가입시 이메일 중복확인하는 API 입니다.
 ​	<code>Request parameters</code></p>
@@ -395,10 +408,23 @@
 </tr>
 </tbody>
 </table>
-<p>​	<code>Response (Fail)</code>
-| Field           | Type          | Description        |
-| &mdash;&mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash; |
-| result.data             | String        |아이디중복 |</p>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>아이디중복</td>
+</tr>
+</tbody>
+</table>
 <h4 id="122닉네임-중복확인-get-accountsnicknamecheck">1.2.2닉네임 중복확인 GET /accounts/nicknameCheck</h4>
 <p>회원가입시 닉네임중복확인하는 API 입니다.
 ​	<code>Request parameters</code></p>
@@ -435,10 +461,23 @@
 </tr>
 </tbody>
 </table>
-<p>​	<code>Response (Fail)</code>
-| Field           | Type          | Description        |
-| &mdash;&mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash; |
-| result.data             | String        |닉네임중복 |</p>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>닉네임중복</td>
+</tr>
+</tbody>
+</table>
 <h4 id="123이메일-인증-get-accountsemailauth">1.2.3이메일 인증 GET /accounts/emailAuth</h4>
 <p>이메일 중복 확인시 이메일을 인증메일을 보내는 API 입니다.
 ​	<code>Request parameters</code></p>
@@ -475,10 +514,23 @@
 </tr>
 </tbody>
 </table>
-<p>​	<code>Response (Fail)</code>
-| Field           | Type          | Description        |
-| &mdash;&mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash; |
-| data             |       |null |</p>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td></td>
+<td>null</td>
+</tr>
+</tbody>
+</table>
 <h3 id="13-회원-정보-수정-put-accountsupdate">1.3 회원 정보 수정 PUT /accounts/update</h3>
 <p>회원정보 수정 API 입니다.</p>
 <p>​	<code>Request parameters</code></p>
@@ -530,10 +582,23 @@
 </tr>
 </tbody>
 </table>
-<p>​	<code>Response (Fail)</code>
-| Field           | Type          | Description        |
-| &mdash;&mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash; |
-| result.data             | String        |fail |</p>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>fail</td>
+</tr>
+</tbody>
+</table>
 <h3 id="14-회원-정보-post-accountsuserdetail">1.4 회원 정보 POST /accounts/userDetail</h3>
 <p>회원정보를 조회하는 API 입니다.</p>
 <p>​	<code>Request parameters</code></p>
@@ -605,10 +670,23 @@
 </tr>
 </tbody>
 </table>
-<p>​	<code>Response (Fail)</code>
-| Field           | Type          | Description        |
-| &mdash;&mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash; |
-| result.data             | String        |fail |</p>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>fail</td>
+</tr>
+</tbody>
+</table>
 <h3 id="15-회원탈퇴-delete-accountsdropuser">1.5 회원탈퇴 DELETE /accounts/dropUser</h3>
 <p>회원 탈퇴 API 입니다.</p>
 <p>​	<code>Request parameters</code></p>
@@ -645,10 +723,23 @@
 </tr>
 </tbody>
 </table>
-<p>​	<code>Response (Fail)</code>
-| Field           | Type          | Description        |
-| &mdash;&mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash; |
-| result.data             | String        |fail |</p>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>fail</td>
+</tr>
+</tbody>
+</table>
 <h2 id="2게시물-api">2.게시물 API</h2>
 <table>
 <thead>
@@ -789,10 +880,23 @@
 </tr>
 </tbody>
 </table>
-<p>​	<code>Response (Fail)</code>
-| Field           | Type          | Description        |
-| &mdash;&mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash; |
-| result.data             | String        |글작성 실패 |</p>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>글작성 실패</td>
+</tr>
+</tbody>
+</table>
 <h3 id="22-글-상세-조회-get-articlesshowarticle">2.2 글 상세 조회 GET /articles/showArticle</h3>
 <p>글 상세조회하는 API입니다.</p>
 <p>​	<code>Request parameters</code></p>
@@ -899,10 +1003,23 @@
 </tr>
 </tbody>
 </table>
-<p>​	<code>Response (Fail)</code>
-| Field           | Type          | Description        |
-| &mdash;&mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash; |
-| result.data             | String        |조회 실패 |</p>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>조회 실패</td>
+</tr>
+</tbody>
+</table>
 <h3 id="23-글-수정-put-articlesmodify">2.3 글 수정 PUT /articles/modify</h3>
 <p>글 수정하는 API 입니다.</p>
 <p>​	<code>Request parameters</code></p>
@@ -1054,10 +1171,23 @@
 </tr>
 </tbody>
 </table>
-<p>​	<code>Response (Fail)</code>
-| Field           | Type          | Description        |
-| &mdash;&mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash; |
-| result.data             | String        |fail |</p>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>fail</td>
+</tr>
+</tbody>
+</table>
 <h3 id="24-글-삭제-delete-articlesdroparticle">2.4 글 삭제 DELETE /articles/dropArticle</h3>
 <p>글 삭제하는 API입니다.</p>
 <p>​	<code>Request parameters</code></p>
@@ -1094,10 +1224,23 @@
 </tr>
 </tbody>
 </table>
-<p>​	<code>Response (Fail)</code>
-| Field           | Type          | Description        |
-| &mdash;&mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash; |
-| result.data             | String        |삭제 실패 |</p>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>삭제 실패</td>
+</tr>
+</tbody>
+</table>
 <h3 id="25-글-좋아요-post-articleslike">2.5 글 좋아요 POST /articles/like</h3>
 <p>글 좋아요 올리거나 내리는 API 입니다.</p>
 <p>​	<code>Request parameters</code></p>
@@ -1139,10 +1282,23 @@
 </tr>
 </tbody>
 </table>
-<p>​	<code>Response (Fail)</code>
-| Field           | Type          | Description        |
-| &mdash;&mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash; |
-| result.data             | String        |fail |</p>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>fail</td>
+</tr>
+</tbody>
+</table>
 <h3 id="26-좋아요-게시물-리스트-post-articleslikedlist">2.6 좋아요 게시물 리스트 POST /articles/likedList</h3>
 <p>좋아요 누른 게시물을 리턴해주는 API입니다.</p>
 <p>​	<code>Request parameters</code></p>
@@ -1179,10 +1335,23 @@
 </tr>
 </tbody>
 </table>
-<p>​	<code>Response (Fail)</code>
-| Field           | Type          | Description        |
-| &mdash;&mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash; |
-| result.data             |         |null |</p>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td></td>
+<td>null</td>
+</tr>
+</tbody>
+</table>
 <h3 id="27-글-검색-get-articlessearcharticle">2.7 글 검색 GET /articles/searchArticle</h3>
 <p>글 검색 API 입니다.</p>
 <p>​	<code>Request parameters</code></p>
@@ -1219,10 +1388,23 @@
 </tr>
 </tbody>
 </table>
-<p>​	<code>Response (Fail)</code>
-| Field           | Type          | Description        |
-| &mdash;&mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash; |
-| result.data             |         |null |</p>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td></td>
+<td>null</td>
+</tr>
+</tbody>
+</table>
 <h3 id="28-음식점-추천-리스트-post-articlesgetrecommentlist">2.8 음식점 추천 리스트 POST /articles/getRecommentList</h3>
 <p>음식점 추천 API입니다.</p>
 <p>​	<code>Request parameters</code></p>
@@ -1354,10 +1536,23 @@
 </tr>
 </tbody>
 </table>
-<p>​	<code>Response (Fail)</code>
-| Field           | Type          | Description        |
-| &mdash;&mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash; |
-| result             |         |null |</p>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result</td>
+<td></td>
+<td>null</td>
+</tr>
+</tbody>
+</table>
 <h3 id="211좋아요순-글-리스트-get-articlespostedlistbylikes">2.11좋아요순 글 리스트 GET /articles/postedListByLikes</h3>
 <p>좋아요 순으로 글의 리스트를 리턴해주는 API 입니다.</p>
 <p>​	<code>Response(Success)</code></p>
@@ -1538,10 +1733,23 @@
 </tr>
 </tbody>
 </table>
-<p>​	<code>Response (Fail)</code>
-| Field           | Type          | Description        |
-| &mdash;&mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash; |
-| result.data             | String        |글작성 실패 |</p>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>글작성 실패</td>
+</tr>
+</tbody>
+</table>
 <h3 id="32-임시저장-글-상세-조회-get-subarticlesdetailpostid">3.2 임시저장 글 상세 조회 GET /subarticles/detail/{postid}</h3>
 <p>임시 글 상세조회  API입니다.</p>
 <p>​	<code>Request parameters</code></p>
@@ -1578,10 +1786,23 @@
 </tr>
 </tbody>
 </table>
-<p>​	<code>Response (Fail)</code>
-| Field           | Type          | Description        |
-| &mdash;&mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash; |
-| result.data             | String        |fail |</p>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>fail</td>
+</tr>
+</tbody>
+</table>
 <h3 id="33-유저별-임시-글-리스트-get-subarticleslistuserid">3.3 유저별 임시 글 리스트 GET /subarticles/list/{userid}</h3>
 <p>유저별 임시 글 리스트  API입니다.</p>
 <p>​	<code>Request parameters</code></p>
@@ -1618,10 +1839,23 @@
 </tr>
 </tbody>
 </table>
-<p>​	<code>Response (Fail)</code>
-| Field           | Type          | Description        |
-| &mdash;&mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash; |
-| result.data             | String        |fail |</p>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>fail</td>
+</tr>
+</tbody>
+</table>
 <h3 id="34-임시-글-삭제-delete-subarticlesdropsubarticle">3.4 임시 글 삭제 DELETE /subarticles/dropSubarticle</h3>
 <p>임시 글 삭제  API입니다.</p>
 <p>글 삭제하는 API입니다.</p>
@@ -1659,10 +1893,23 @@
 </tr>
 </tbody>
 </table>
-<p>​	<code>Response (Fail)</code>
-| Field           | Type          | Description        |
-| &mdash;&mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash; |
-| result.data             | String        |임시저장 글 삭제 실패 |</p>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>임시저장 글 삭제 실패</td>
+</tr>
+</tbody>
+</table>
 <h2 id="4댓글-api">4.댓글 API</h2>
 <table>
 <thead>
@@ -1777,10 +2024,23 @@
 </tr>
 </tbody>
 </table>
-<p>​	<code>Response (Fail)</code>
-| Field           | Type          | Description        |
-| &mdash;&mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash; |
-| result.data             | String        |fail |</p>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>fail</td>
+</tr>
+</tbody>
+</table>
 <h3 id="43-댓글-수정-put-commentsmodify">4.3 댓글 수정 PUT /comments/modify</h3>
 <p>댓글 수정하는 API 입니다.</p>
 <p>​	<code>Request parameters</code></p>
@@ -1832,10 +2092,23 @@
 </tr>
 </tbody>
 </table>
-<p>​	<code>Response (Fail)</code>
-| Field           | Type          | Description        |
-| &mdash;&mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash; |
-| result.data             | String        |fail |</p>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>fail</td>
+</tr>
+</tbody>
+</table>
 <h3 id="44-댓글-삭제-delete-commentsdropcomment">4.4 댓글 삭제 DELETE /comments/dropComment</h3>
 <p>댓글 삭제하는 API입니다.</p>
 <p>​	<code>Request parameters</code></p>
@@ -1872,10 +2145,23 @@
 </tr>
 </tbody>
 </table>
-<p>​	<code>Response (Fail)</code>
-| Field           | Type          | Description        |
-| &mdash;&mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash; |
-| result.data             | String        |fail |</p>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>fail</td>
+</tr>
+</tbody>
+</table>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -1908,7 +2194,7 @@
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.72.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.75.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

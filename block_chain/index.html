@@ -340,7 +340,7 @@
 </span><span class="lnt">35
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Vagrantfile	=&gt;  내용을 수정한다.</span> 
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Vagrantfile	=&gt;  내용을 수정한다. </span>
    
 <span class="c1"># -*- mode: ruby -*-</span>
 <span class="c1"># vi: set ft=ruby :</span>
@@ -415,42 +415,42 @@ end
 <table>
 <thead>
 <tr>
-<th align="left">명령어</th>
-<th align="left">설명</th>
+<th style="text-align:left">명령어</th>
+<th style="text-align:left">설명</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">vagrant up 상태확인할가상머신이름</td>
-<td align="left">가상머신 기동</td>
+<td style="text-align:left">vagrant up 상태확인할가상머신이름</td>
+<td style="text-align:left">가상머신 기동</td>
 </tr>
 <tr>
-<td align="left">vagrant status 상태확인할가상머신이름</td>
-<td align="left">가상머신 상태 확인</td>
+<td style="text-align:left">vagrant status 상태확인할가상머신이름</td>
+<td style="text-align:left">가상머신 상태 확인</td>
 </tr>
 <tr>
-<td align="left">vagrant ssh 접속할가상머신이름</td>
-<td align="left">가상머신에 접속</td>
+<td style="text-align:left">vagrant ssh 접속할가상머신이름</td>
+<td style="text-align:left">가상머신에 접속</td>
 </tr>
 <tr>
-<td align="left">vagrant halt 멈출가상머신이름</td>
-<td align="left">가상머신 정지</td>
+<td style="text-align:left">vagrant halt 멈출가상머신이름</td>
+<td style="text-align:left">가상머신 정지</td>
 </tr>
 <tr>
-<td align="left">vagrant suspend</td>
-<td align="left">가상머신 휴면</td>
+<td style="text-align:left">vagrant suspend</td>
+<td style="text-align:left">가상머신 휴면</td>
 </tr>
 <tr>
-<td align="left">vagrant resume</td>
-<td align="left">가상머신 휴면에서 복원</td>
+<td style="text-align:left">vagrant resume</td>
+<td style="text-align:left">가상머신 휴면에서 복원</td>
 </tr>
 <tr>
-<td align="left">vagrant reload</td>
-<td align="left">가상머신 재시동</td>
+<td style="text-align:left">vagrant reload</td>
+<td style="text-align:left">가상머신 재시동</td>
 </tr>
 <tr>
-<td align="left">vagrant destroy</td>
-<td align="left">가상머신 제거</td>
+<td style="text-align:left">vagrant destroy</td>
+<td style="text-align:left">가상머신 제거</td>
 </tr>
 </tbody>
 </table>
@@ -562,7 +562,7 @@ i → 입력 활성화 → 아래 내용입력 후 → esc → ZZ<span class="o"
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># genesis.json 저장 후</span> 
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># genesis.json 저장 후 </span>
 &gt; <span class="nb">cd</span> ..
 다시 root폴더로 이동한다.
 </code></pre></td></tr></table>
@@ -632,7 +632,7 @@ i → 입력 활성화 → 아래 내용입력 후 → esc → ZZ<span class="o"
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 계정이 잘 만들어 진 것인지 확인하기 위해서는</span> 
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 계정이 잘 만들어 진 것인지 확인하기 위해서는 </span>
 &gt; geth account list
 </code></pre></td></tr></table>
 </div>
@@ -669,7 +669,7 @@ i → 입력 활성화 → 아래 내용입력 후 → esc → ZZ<span class="o"
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># eth0의 노드(광구) 입장 명령어</span>
 &gt; geth console
    
-<span class="c1"># 다만 보통의 경우 아래와 같이 노드(eth0)에 다양한 주소 및 설정을 붙이고 진행한다.</span> 
+<span class="c1"># 다만 보통의 경우 아래와 같이 노드(eth0)에 다양한 주소 및 설정을 붙이고 진행한다. </span>
 &gt; geth --networkid <span class="m">5245</span> --port <span class="m">30303</span> --maxpeers <span class="m">2</span> --datadir ~/dev/eth_localdata --rpcaddr 0.0.0.0 --nodiscover --nousb console &gt;&gt; ~/eth0.log
    
 <span class="c1"># 일단 이걸로 채굴 성공</span>
@@ -730,17 +730,17 @@ Looking <span class="k">for</span> <span class="nv">peers</span>  <span class="o
 </div><table>
 <thead>
 <tr>
-<th align="left">personal명령어</th>
+<th style="text-align:left">personal명령어</th>
 <th>의미</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">personal.newAccount(&ldquo;eth&rdquo;)</td>
+<td style="text-align:left">personal.newAccount(&ldquo;eth&rdquo;)</td>
 <td>eth를 비밀번호로 하는 계정 생성 (keystore 추가)</td>
 </tr>
 <tr>
-<td align="left">personal.listAccounts</td>
+<td style="text-align:left">personal.listAccounts</td>
 <td>등록된 계정 리스트 확인</td>
 </tr>
 </tbody>
@@ -795,45 +795,45 @@ Looking <span class="k">for</span> <span class="nv">peers</span>  <span class="o
 <thead>
 <tr>
 <th>eth명령어</th>
-<th align="left">의미</th>
+<th style="text-align:left">의미</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>eth.accounts (personal.listAccounts와 동일)</td>
-<td align="left">현재 생성된 총 계정 확인</td>
+<td style="text-align:left">현재 생성된 총 계정 확인</td>
 </tr>
 <tr>
 <td>eth.blockNumber</td>
-<td align="left">현재 채굴된 블록의 번호</td>
+<td style="text-align:left">현재 채굴된 블록의 번호</td>
 </tr>
 <tr>
 <td>eth.hashrate</td>
-<td align="left">해시레이트(진행속도?를 알 수 있음)</td>
+<td style="text-align:left">해시레이트(진행속도?를 알 수 있음)</td>
 </tr>
 <tr>
 <td>eth.coinbase</td>
-<td align="left">채굴이 진행되면 보상을 받을 계정.</td>
+<td style="text-align:left">채굴이 진행되면 보상을 받을 계정.</td>
 </tr>
 <tr>
 <td>eth.mining</td>
-<td align="left">현재 채굴중인지 여부</td>
+<td style="text-align:left">현재 채굴중인지 여부</td>
 </tr>
 <tr>
 <td>eth.getBalance(account[0])</td>
-<td align="left">계좌 잔고 조회</td>
+<td style="text-align:left">계좌 잔고 조회</td>
 </tr>
 <tr>
 <td>eth.getTranaction()</td>
-<td align="left">()안에 숫자번호의 트랜잭션의 정보</td>
+<td style="text-align:left">()안에 숫자번호의 트랜잭션의 정보</td>
 </tr>
 <tr>
 <td>eth.sendTransaction({from:account, to:account, value:wei})</td>
-<td align="left">트랜잭션 보내기</td>
+<td style="text-align:left">트랜잭션 보내기</td>
 </tr>
 <tr>
 <td>eth.pendingTransactions</td>
-<td align="left">처리 대기 중인 트랜잭션</td>
+<td style="text-align:left">처리 대기 중인 트랜잭션</td>
 </tr>
 </tbody>
 </table>
@@ -1061,7 +1061,7 @@ personal.unlockAccount<span class="o">(</span>eth.accounts<span class="o">[</spa
 
 &gt; eth.getBalance<span class="o">(</span>eth.accounts<span class="o">[</span>1<span class="o">])</span>
 &gt; web3.fromWei<span class="o">(</span>eth.getBalance<span class="o">(</span>eth.accounts<span class="o">[</span>1<span class="o">])</span>, <span class="s2">&#34;ether&#34;</span><span class="o">)</span>
-<span class="c1">#둘다 확인 가능하며 송금이 잘 진행된 것을 볼 수 있다.</span> 
+<span class="c1">#둘다 확인 가능하며 송금이 잘 진행된 것을 볼 수 있다. </span>
 </code></pre></td></tr></table>
 </div>
 </div><a class="lightgallery" href="/images/image-20200903175325622.png" title="/images/image-20200903175325622.png" data-thumbnail="/images/image-20200903175325622.png">
@@ -1119,7 +1119,7 @@ personal.unlockAccount<span class="o">(</span>eth.accounts<span class="o">[</spa
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.72.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.75.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
