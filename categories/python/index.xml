@@ -5,10 +5,10 @@
         <description>Python - Category - </description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 11 Sep 2020 22:39:31 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/python/" rel="self" type="application/rss+xml" /><item>
     <title>Python_Library</title>
-    <link>https://colinder.github.io/post/algorithm/python_library/</link>
+    <link>https://colinder.github.io/python_library/</link>
     <pubDate>Fri, 11 Sep 2020 22:39:31 &#43;0900</pubDate>
     <author>Author</author>
-    <guid>https://colinder.github.io/post/algorithm/python_library/</guid>
+    <guid>https://colinder.github.io/python_library/</guid>
     <description><![CDATA[​
 자주 쓰는 Python Library  자주 사용하게되는 파이썬 라이브러리를 정리한다.
  ​

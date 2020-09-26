@@ -5,10 +5,10 @@
         <description>web - Category - </description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 24 Sep 2020 09:54:40 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/web/" rel="self" type="application/rss+xml" /><item>
     <title>REST</title>
-    <link>https://colinder.github.io/post/rest-api-reference/</link>
+    <link>https://colinder.github.io/rest-api-reference/</link>
     <pubDate>Thu, 24 Sep 2020 09:54:40 &#43;0900</pubDate>
     <author>Author</author>
-    <guid>https://colinder.github.io/post/rest-api-reference/</guid>
+    <guid>https://colinder.github.io/rest-api-reference/</guid>
     <description><![CDATA[​
 REST API Reference [TOC]
 1.사용자 API    Members Descriptions     POST /accounts/signup 회원가입   POST /accounts/login 회원 로그인   POST /accounts/userDetail 회원정보   PUT /accounts/update 회원정보 수정   DELETE /accounts/dropUser 회원탈퇴   GET /accounts/emailAuth 이메일 인증   GET /accounts/emailCheck 이메일 중복 확인   GET /accounts/nicknameCheck 닉네임 중복 확인    1.1 회원 로그인 POST /accounts/login ​	회원 로그인 API 입니다.]]></description>
