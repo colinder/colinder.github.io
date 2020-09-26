@@ -1,0 +1,32 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>동적계획법1 - Category - </title>
+        <link>https://colinder.github.io/categories/%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%951/</link>
+        <description>동적계획법1 - Category - </description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 25 Aug 2020 23:01:50 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%951/" rel="self" type="application/rss+xml" /><item>
+    <title>BEAKJOON 10844, 2156, </title>
+    <link>https://colinder.github.io/post/algorithm/bj_20.08.25/</link>
+    <pubDate>Tue, 25 Aug 2020 23:01:50 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/post/algorithm/bj_20.08.25/</guid>
+    <description><![CDATA[​
+10844_쉬운 계단 수 1    ​
+2156_포도주 시식 1       포도주 6 10 13 8 8 1     넘버링 c1 c2 c3 c4 c5 c6    |경우의 수| c1| c1 + c2 | c1 + c2 | | | | | | | | c1 + C3 | | |]]></description>
+</item><item>
+    <title>BEAKJOON 1149, 1932, 2579, 1463</title>
+    <link>https://colinder.github.io/post/algorithm/bj_20.08.06/</link>
+    <pubDate>Wed, 05 Aug 2020 22:11:35 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/post/algorithm/bj_20.08.06/</guid>
+    <description><![CDATA[​
+1149_RGB거리 1 2 3 4 5 6 7 8 9 10 11 12 13  N = int(input()) RGB = [list(map(int, input().split())) for _ in range(N)] for i in range(1, len(RGB)): RGB[i][0] = RGB[i][0] + min(RGB[i-1][1], RGB[i-1][2]) RGB[i][1] = RGB[i][1] + min(RGB[i-1][0], RGB[i-1][2]) RGB[i][2] = RGB[i][2] + min(RGB[i-1][0], RGB[i-1][1]) print(min(RGB[i][0], RGB[i][1], RGB[i][2])) # 2시간이 넘게 고민한 결과... # 문제 속 조건3 &#34;&#34;i(2 ≤ i ≤ N-1)번 집의 색은 i-1번, i+1번 집의 색과 같지 않아야 한다.]]></description>
+</item><item>
+    <title>BEAKJOON 1103, 1904, 2748, 9461</title>
+    <link>https://colinder.github.io/post/algorithm/bj_20.08.04/</link>
+    <pubDate>Tue, 04 Aug 2020 22:12:11 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/post/algorithm/bj_20.08.04/</guid>
+    <description><![CDATA[​
+1003_피보나치 함수 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20  def Fibonacci(N): if N &lt; 3: print(zero[N], one[N]) else: f = 1 s = 2 for i in range(N-2): zero.append(zero[f] + zero[s]) one.append(one[f] + one[s]) f += 1 s += 1 print(zero[N], one[N]) for T in range(int(input())): N = int(input()) zero = [1, 0, 1] one = [0, 1, 1] Fibonacci(N)   ​]]></description>
+</item></channel>
+</rss>

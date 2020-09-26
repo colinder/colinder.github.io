@@ -1,0 +1,21 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Hugo - Category - </title>
+        <link>https://colinder.github.io/categories/hugo/</link>
+        <description>Hugo - Category - </description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 29 Jun 2020 15:49:37 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/hugo/" rel="self" type="application/rss+xml" /><item>
+    <title>Hugo_setting stroy (feat.LoveTt 제작자)</title>
+    <link>https://colinder.github.io/post/hugo/hugo_setting/</link>
+    <pubDate>Mon, 29 Jun 2020 15:49:37 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/post/hugo/hugo_setting/</guid>
+    <description><![CDATA[​
+블로그를 만들면서&hellip; 최초 기술블로그를 제작하면서 바닥부터 모든 것을 스스로 만들어 보기로 결심하고 제작을 시작하지만, 결코 쉽지 않았다. 개인적으로 꼭 원했던 기능이었던 tag기능과 categories를 구현하지 못하면서&hellip; 결국 기존에 있는 라이브러리들을 활용하기로 한다.
+​
+**가장 많은 사용자가 존재하는 jekyll로 시작한다. **
+​
+jekyll 기초 설정  Jekyll : Jekyll은 Ruby Gem으로 제공되며 템플릿과 템플릿의 구성요소, 인라인 코드, 마크다운과 같은 동적인 구성요소를 정적인 웹페이지로 만들어주는 파싱 엔진
+ ​
+jekyll 서버 구동 방법 1 2 3 4 5  # 공식 홈페이지 설명 ~$ gem install bundler jekyll	# jekyll 구동을 위한 프로그램 설치 ~$ jekyll new MYBLOG	# MYBLOG 라는 이름의 블로그 폴더 &amp; 기초틀 생성  ~$ cd MYBLOG	# MYBLOG 폴더로 이동 ~/MYBLOG $ bundle exec jekyll serve	# MYBLOG 서버 구동   1 2 3  # 이후 명령창에 Servuer address : http://127.]]></description>
+</item></channel>
+</rss>

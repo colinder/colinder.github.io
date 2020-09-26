@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>05_Vuex_01 - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="05_Vuex_01" />
+<meta property="og:description" content="​
+Vuex 란? (공식문서)  Vuex는 Vue.js 애플리케이션에 대한 상태 관리 패턴 &#43; 라이브러리 입니다. 애플리케이션의 모든 컴포넌트에 대한 중앙 집중식 저장소 역할을 하며 예측 가능한 방식으로 상태를 변경할 수 있습니다. 또한 Vue의 공식 devtools 확장 프로그램과 통합되어 설정 시간이 필요 없는 디버깅 및 상태 스냅 샷 내보내기/가져오기와 같은 고급 기능을 제공합니다. (공식문서 설명)
+ ​
+1 2 3 4 5  # 설치 명령어 npm i vuex or npm install vuex # 이후 src폴더안에 vuex폴더를 만들고 store." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://colinder.github.io/post/vue/05_vuex_01/" />
+<meta property="og:image" content="https://colinder.github.io/logo.png"/>
+<meta property="article:published_time" content="2020-08-02T22:22:58+09:00" />
+<meta property="article:modified_time" content="2020-08-02T22:22:58+09:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
+
+<meta name="twitter:title" content="05_Vuex_01"/>
+<meta name="twitter:description" content="​
+Vuex 란? (공식문서)  Vuex는 Vue.js 애플리케이션에 대한 상태 관리 패턴 &#43; 라이브러리 입니다. 애플리케이션의 모든 컴포넌트에 대한 중앙 집중식 저장소 역할을 하며 예측 가능한 방식으로 상태를 변경할 수 있습니다. 또한 Vue의 공식 devtools 확장 프로그램과 통합되어 설정 시간이 필요 없는 디버깅 및 상태 스냅 샷 내보내기/가져오기와 같은 고급 기능을 제공합니다. (공식문서 설명)
+ ​
+1 2 3 4 5  # 설치 명령어 npm i vuex or npm install vuex # 이후 src폴더안에 vuex폴더를 만들고 store."/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/post/vue/05_vuex_01/" /><link rel="prev" href="https://colinder.github.io/post/algorithm/sw_20.07.29/" /><link rel="next" href="https://colinder.github.io/post/namingconvention/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "05_Vuex_01",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/colinder.github.io\/post\/vue\/05_vuex_01\/"
+        },"genre": "post","keywords": "Vue","wordcount":  586 ,
+        "url": "https:\/\/colinder.github.io\/post\/vue\/05_vuex_01\/","datePublished": "2020-08-02T22:22:58+09:00","dateModified": "2020-08-02T22:22:58+09:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "colinder"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="">Hello New World</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="">Hello New World</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="page single special"><h1 class="single-title animated pulse faster">05_Vuex_01</h1><div class="content" id="content"><p>​</p>
+<h1 id="vuex-란-공식문서httpsvuexvuejsorgkr">Vuex 란? <a href="https://vuex.vuejs.org/kr/" target="_blank" rel="noopener noreffer">(공식문서)</a></h1>
+<blockquote>
+<p>Vuex는 Vue.js 애플리케이션에 대한 <strong>상태 관리 패턴 + 라이브러리</strong> 입니다. 애플리케이션의 모든 컴포넌트에 대한 중앙 집중식 저장소 역할을 하며 예측 가능한 방식으로 상태를 변경할 수 있습니다. 또한 Vue의 공식 <a href="https://github.com/vuejs/vue-devtools" target="_blank" rel="noopener noreffer">devtools 확장 프로그램</a>과 통합되어 설정 시간이 필요 없는 디버깅 및 상태 스냅 샷 내보내기/가져오기와 같은 고급 기능을 제공합니다. (공식문서 설명)</p>
+</blockquote>
+<p>​</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-vue" data-lang="vue"><span class="err">#</span> <span class="nx">설치</span> <span class="nx">명령어</span>
+<span class="nx">npm</span> <span class="nx">i</span> <span class="nx">vuex</span>   <span class="nx">or</span>   <span class="nx">npm</span> <span class="nx">install</span> <span class="nx">vuex</span>
+
+<span class="err">#</span> <span class="nx">이후</span> 
+<span class="nx">src폴더안에</span> <span class="nx">vuex폴더를</span> <span class="nx">만들고</span> <span class="nx">store</span><span class="p">.</span><span class="nx">js라는</span> <span class="nx">파일을</span> <span class="nx">생성</span><span class="p">.</span> <span class="p">(</span><span class="nx">파일생성위치는</span> <span class="nx">자유롭게</span> <span class="nx">설정가능</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<p>그렇다면?  **<code>상태관리패턴</code>**이란 무엇인가?</p>
+<p>​</p>
+<p>🤔이를 알아보기 전에 간단히 지난 시간에 알아본 props와 emit의 문제점을 생각해보자!</p>
+<ol>
+<li>
+<p>많은 components를 통과해야 하는 prop의 경우 테이터 이동을 위한 코드가 장황해질 수 있다.</p>
+</li>
+<li>
+<p>형제 components는 부모를 거쳐 데이터를 이동해야 하는 불편함이 발생한다.</p>
+<figure><a class="lightgallery" href="/images/image-20200802223729072.png" title="/images/image-20200802223729072.png" data-thumbnail="/images/image-20200802223729072.png" data-sub-html="<h2>형제 components = 같은 가로층의 components</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/image-20200802223729072.png"
+            data-srcset="/images/image-20200802223729072.png, /images/image-20200802223729072.png 1.5x, /images/image-20200802223729072.png 2x"
+            data-sizes="auto"
+            alt="/images/image-20200802223729072.png" width="380px" />
+    </a><figcaption class="image-caption">형제 components = 같은 가로층의 components</figcaption>
+    </figure>
+<p>심지어 손자 components 끼리 데이터를 이동하려면 엄청나게 많은 props와 emit이 작성되어야 하는데, 이런 불편함을 해소하기 위해 데이터 저장소(<strong>STORE</strong>)를 생성하는 것을 고민해볼 수 있다.</p>
+</li>
+</ol>
+<p>​</p>
+<p>이 때문에 <strong>대규모 애플리케이션의 상태를 관리할 수 있는</strong> 상태 관리 패턴이 필요해진다. 예를 들면</p>
+<figure><a class="lightgallery" href="/images/image-20200802223314342.png" title="/images/image-20200802223314342.png" data-thumbnail="/images/image-20200802223314342.png" data-sub-html="<h2>이런 모습으로</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/image-20200802223314342.png"
+            data-srcset="/images/image-20200802223314342.png, /images/image-20200802223314342.png 1.5x, /images/image-20200802223314342.png 2x"
+            data-sizes="auto"
+            alt="/images/image-20200802223314342.png" width="380px" />
+    </a><figcaption class="image-caption">이런 모습으로</figcaption>
+    </figure>
+<p>이를 <strong>단일 상태 트리(single state tree)</strong> 로 데이터를 관리한다고 표현한다.</p>
+<p><a href="https://vuex.vuejs.org/kr/guide/state.html" target="_blank" rel="noopener noreffer">공식문서</a>에 이에 대한 설명이 있는데 내가 생각하는 핵심은 아래와 같다.</p>
+<blockquote>
+<ol>
+<li>각 애플리케이션마다 하나의 (데이터)저장소만 갖게 한다.</li>
+<li>데이터를 저장하고 이를 불러오기만하면 되니 간편한 코딩이 가능해진다.</li>
+<li><strong>ROW 데이터</strong>를 저장하는 곳을 지정해 관리하는 곳이 생긴다.</li>
+</ol>
+</blockquote>
+<p>이를 구현해보자.</p>
+<p>​</p>
+<hr>
+<p>아까 만든 store.js에 기본적인 세팅을 진행해보자. (해당 과정은 총 3 Step으로 구성)</p>
+<p>​</p>
+<p><strong>Step. 1</strong></p>
+<p>store.js에 데이터를 등록(저장)한다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-vue" data-lang="vue"><span class="err">##</span> <span class="nx">store</span><span class="p">.</span><span class="nx">js</span>
+
+<span class="kr">import</span> <span class="nx">Vue</span> <span class="nx">from</span> <span class="s2">&#34;vue&#34;</span>
+<span class="kr">import</span> <span class="nx">Vuex</span> <span class="nx">from</span> <span class="s2">&#34;vuex&#34;</span>
+
+<span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">Vuex</span><span class="p">)</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="k">new</span> <span class="nx">Vuex</span><span class="p">.</span><span class="nx">Store</span><span class="p">({</span>
+    <span class="c1">// 여기에 state(상태) 정보를 등록해서 사용.
+</span><span class="c1"></span>	<span class="c1">// ex) 여러형태의 데이터를 구현해보자.
+</span><span class="c1"></span>	<span class="nx">state</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">first</span><span class="o">:</span> <span class="s1">&#39;첫번째 데이터입니다.&#39;</span><span class="p">,</span>
+        <span class="nx">second</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="nx">listData</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;john&#34;</span><span class="p">},</span>
+            <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;poul&#34;</span><span class="p">},</span>
+            <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;kim&#34;</span><span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">})</span>
+
+<span class="err">##</span> <span class="err">✨</span><span class="nx">Point</span><span class="o">:</span> <span class="nx">store에</span> <span class="nx">state라는</span> <span class="nx">곳에</span> <span class="nx">데이터를</span> <span class="nx">저장했다는</span> <span class="nx">것을</span> <span class="nx">기억하고</span> <span class="nx">다음으로</span> <span class="nx">넘어가자</span><span class="p">.</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<p><strong>Step. 2</strong></p>
+<p>저장소(<strong>STORE</strong>)에 데이터가 입력되었으니 이를 최상위 .js 파일(main.js)에 등록해 모든 영역에서 사용가능**(전역으로 등록)**하게 하자.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-vue" data-lang="vue"><span class="err">##</span> <span class="nx">main</span><span class="p">.</span><span class="nx">js</span>
+
+<span class="kr">import</span> <span class="nx">Vue</span> <span class="nx">from</span> <span class="s1">&#39;vue&#39;</span>
+<span class="kr">import</span> <span class="nx">App</span> <span class="nx">from</span> <span class="s1">&#39;./App.vue&#39;</span>
+<span class="kr">import</span> <span class="nx">router</span> <span class="nx">from</span> <span class="s1">&#39;./router&#39;</span>		<span class="p">(</span><span class="nx">이전에</span> <span class="nx">설명한</span> <span class="nx">router도</span> <span class="nx">설치되었음을</span> <span class="nx">알</span> <span class="nx">수</span> <span class="nx">있다</span><span class="p">.)</span>
+<span class="kr">import</span> <span class="nx">store</span> <span class="nx">from</span> <span class="s1">&#39;../src/vuex/store.js&#39;</span>	<span class="err">👈</span><span class="p">(</span><span class="nx">추가</span><span class="p">)</span>
+
+<span class="nx">Vue</span><span class="p">.</span><span class="nx">config</span><span class="p">.</span><span class="nx">productionTip</span> <span class="o">=</span> <span class="kc">false</span>
+
+<span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+  <span class="nx">router</span><span class="p">,</span>		<span class="p">(</span><span class="nx">이전에</span> <span class="nx">설명한</span> <span class="nx">router도</span> <span class="nx">설치되었음을</span> <span class="nx">알</span> <span class="nx">수</span> <span class="nx">있다</span><span class="mf">.22</span><span class="p">)</span>
+  <span class="nx">store</span><span class="p">,</span>	<span class="err">👈</span><span class="p">(</span><span class="nx">추가</span><span class="p">)</span>
+  <span class="nx">render</span><span class="o">:</span> <span class="nx">h</span> <span class="p">=&gt;</span> <span class="nx">h</span><span class="p">(</span><span class="nx">App</span><span class="p">)</span>
+<span class="p">}).</span><span class="nx">$mount</span><span class="p">(</span><span class="s1">&#39;#app&#39;</span><span class="p">)</span>
+
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<p><strong>Step. 3</strong></p>
+<p>store에 저장된 데이터를 불러와 사용한다. (난 Vue_CLI를 사용해, 디폴트 파일인 About.vue에 출력한다.)</p>
+<blockquote>
+<h3 id="-여기서-잠깐">✋ 여기서 잠깐!</h3>
+<p><strong>Q. store에 저장된 데이터를 불러오는 방법은 무엇인가요?</strong></p>
+<p><strong>A. 여러방법이 있으나 가장 Basic한 방법으로 <code>1. computed</code>를 사용해 불러오는 방법과 <code>2. data</code>를 선언해 사용하는 방법을 알아보자.</strong>  (이 두 방법을 추천하는 이유는 LifeCycle에서 정리되어 있다.)</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-vue" data-lang="vue"><span class="err">##</span> <span class="nx">About</span><span class="p">.</span><span class="nx">vue</span>  <span class="nx">방법</span><span class="mf">.1</span> <span class="p">(</span><span class="nx">computed를</span> <span class="nx">사용하는</span> <span class="nx">방법</span><span class="p">)</span>
+
+<span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;{{</span><span class="nx">result</span><span class="p">}}&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;About&#39;</span><span class="p">,</span>
+  <span class="c1">//Step 1.
+</span><span class="c1"></span>  <span class="nx">computed</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">result</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">state</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-vue" data-lang="vue"><span class="err">##</span> <span class="nx">About</span><span class="p">.</span><span class="nx">vue</span>  <span class="nx">방법</span><span class="mf">.2</span> <span class="p">(</span><span class="nx">data</span> <span class="nx">선언</span> <span class="nx">후</span> <span class="nx">store를</span> <span class="nx">저장해</span> <span class="nx">사용하는</span> <span class="nx">방법</span><span class="p">)</span>
+
+<span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="c">&lt;!--</span> <span class="nx">Step</span><span class="p">.</span> <span class="mi">3</span> <span class="o">--&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;{{</span><span class="nx">result</span><span class="p">}}&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;About&#39;</span><span class="p">,</span>
+  <span class="c1">//Step. 1
+</span><span class="c1"></span>  <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span>
+      <span class="nx">result</span><span class="o">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="c1">//Step. 2
+</span><span class="c1"></span>  <span class="nx">created</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">result</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">state</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<figure><a class="lightgallery" href="/images/Vuex_00.png" title="/images/Vuex_00.png" data-thumbnail="/images/Vuex_00.png" data-sub-html="<h2>방법에 차이가 있을 뿐 노출되는 화면은 동일하다.</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/Vuex_00.png"
+            data-srcset="/images/Vuex_00.png, /images/Vuex_00.png 1.5x, /images/Vuex_00.png 2x"
+            data-sizes="auto"
+            alt="/images/Vuex_00.png" width="1000px" />
+    </a><figcaption class="image-caption">방법에 차이가 있을 뿐 노출되는 화면은 동일하다.</figcaption>
+    </figure>
+<hr>
+<hr>
+<figure><a class="lightgallery" href="/images/Vuex_02.png" title="/images/Vuex_02.png" data-thumbnail="/images/Vuex_02.png" data-sub-html="<h2>방법.1의 경우 폴더구조</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/Vuex_02.png"
+            data-srcset="/images/Vuex_02.png, /images/Vuex_02.png 1.5x, /images/Vuex_02.png 2x"
+            data-sizes="auto"
+            alt="/images/Vuex_02.png" width="1000px" />
+    </a><figcaption class="image-caption">방법.1의 경우 폴더구조</figcaption>
+    </figure>
+<figure><a class="lightgallery" href="/images/Vuex_03.png" title="/images/Vuex_03.png" data-thumbnail="/images/Vuex_03.png" data-sub-html="<h2>방법.2의 경우 폴더구조</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/Vuex_03.png"
+            data-srcset="/images/Vuex_03.png, /images/Vuex_03.png 1.5x, /images/Vuex_03.png 2x"
+            data-sizes="auto"
+            alt="/images/Vuex_03.png" width="1000px" />
+    </a><figcaption class="image-caption">방법.2의 경우 폴더구조</figcaption>
+    </figure>
+<p>Thanks to &lsquo;이서영'💑</p>
+</div><div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></div></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.75.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
