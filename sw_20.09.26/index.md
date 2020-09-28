@@ -26,7 +26,7 @@ for t in range(T+1):
 
 ​	
 
-### [D2_5176_이진탐색]()
+### [D2_5176_이진탐색](https://github.com/colinder/colinder.github.io/blob/master/images/binary_tree.png)
 
 ```python
 def makeTree(n):
