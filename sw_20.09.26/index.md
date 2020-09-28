@@ -1,4 +1,4 @@
-# SW Expert Academy_D3 3975, , , 
+# SW Expert Academy_D3 3975, 5176, , 
 
 
 ​	
@@ -25,3 +25,33 @@ for t in range(T+1):
 ```
 
 ​	
+
+### [D2_5176_이진탐색]()
+
+```python
+def makeTree(n):
+    global count
+    #Tree 범위 제한
+    if n <= N:
+        #1부터 시작한다고 가정했을 때 왼쪽노드는 현재 인덱스의 2배
+        makeTree(n*2)
+        #더이상 못가면 값넣기
+        tree[n] = count
+        #값 넣었으면 증가시키기
+        count += 1
+        #우측 노드는 인덱스 2배 + 1
+        makeTree(n*2 + 1)
+
+for T in range(int(input())):
+    N = int(input())
+    tree = [0 for i in range(N+1)]
+    count = 1
+    makeTree(1)
+    
+    print(f'#{T+1} {tree[1]} {tree[N//2]}')
+
+# 2020하반기 네이버 코테를 풀고 tree에 대하여 깊이있게 공부해봐야겠다고 생각하며
+# 다시 처음부터 공부하는데, 미쳤다.ㅎ
+```
+
+
