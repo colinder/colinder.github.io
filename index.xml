@@ -28,7 +28,7 @@ Git_mirroring  기존에 사용하고 있던 A_Repo에서 B_Repo로 커밋히스
     <description><![CDATA[​
 D3_3975_승률 비교하기 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  result = [] for T in range(int(input())): A, B, C, D = map(int, input().split()) if B/A &gt; D/C: result.append(&#34;BOB&#34;) elif B/A &lt; D/C: result.append(&#34;ALICE&#34;) else: result.append(&#34;DRAW&#34;) for t in range(T+1): print(f&#34;#{t+1} {result[t]}&#34;) # 아니 이게 D3라고? 완전 난이도 설정 실수네. 했다가 런타임 오류 보고 # 왜 그런건지 알았다. # python은 결과를 모았다가 출력하는 게 더 빠르다.]]></description>
 </item><item>
-    <title>REST</title>
+    <title>REST API Reference</title>
     <link>https://colinder.github.io/rest-api-reference/</link>
     <pubDate>Thu, 24 Sep 2020 09:54:40 &#43;0900</pubDate>
     <author>Author</author>
