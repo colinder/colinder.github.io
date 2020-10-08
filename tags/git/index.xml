@@ -1,0 +1,21 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>git - Tag - </title>
+        <link>https://colinder.github.io/tags/git/</link>
+        <description>git - Tag - </description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 08 Oct 2020 22:08:37 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/git/" rel="self" type="application/rss+xml" /><item>
+    <title>Git_mirroring</title>
+    <link>https://colinder.github.io/git_mirroring/</link>
+    <pubDate>Thu, 08 Oct 2020 22:08:37 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/git_mirroring/</guid>
+    <description><![CDATA[​
+Git_mirroring  기존에 사용하고 있던 A_Repo에서 B_Repo로 커밋히스토리 그대로 복사가 필요할 때가 있습니다.
+여기서 A_Repo를 그대로 가져온다는 의미는 단지 파일을 새롭게 만드는 것이 아니라 A_Repo에서 작업하던 commit 이력 모두를 그대로 이전하는 의미를 뜻합니다.
+ ​
+  터미널을 엽니다.
+  복사하고자 하는 저장소(A_Repo)의 bare clone을 생성합니다.
+1  git clone --bare https://github.com/user/old-repository.git     새로운 저장소(B_Repo)를 만들고 mirror-push를 진행합니다.
+1 2  cd old-repository.git	👈 위에서 클론(bare)한 폴더로 이동 git push --mirror https://github.]]></description>
+</item></channel>
+</rss>
