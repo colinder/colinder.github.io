@@ -3,7 +3,23 @@
         <title>vue - Tag - </title>
         <link>https://colinder.github.io/tags/vue/</link>
         <description>vue - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 27 Aug 2020 21:48:19 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/vue/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 11 Oct 2020 21:47:43 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/vue/" rel="self" type="application/rss+xml" /><item>
+    <title>동기 &amp; 비동기 &amp; CallBack함수</title>
+    <link>https://colinder.github.io/10_syncasynccallback/</link>
+    <pubDate>Sun, 11 Oct 2020 21:47:43 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/10_syncasynccallback/</guid>
+    <description><![CDATA[​
+동기(Synchronous)란? 어떤 작업을 실행했을 때, 그 작업이 끝나고 결과를 응답받은 뒤에 다음 함수를 실행하는 방식.
+만약 응답값이 없다면, 무한정 기다린다. 즉, 응답이 와야 다음 실행이 되는 방식
+ex) A실행 👉 A의 결과값 return 확인 👉 B실행
+ ​
+비동기(Asynchronous)란? 어떤 작업을 실행한 후 결과값을 기다리지 않고, 바로 다음 함수를 실행.
+ex) A실행 👉 B실행 👉 &hellip;
+ ​
+CallBack함수란? 비동기 처리결과로 반환되는 Callback함수
+Callback함수는 특정함수에 매개변수로 전달된 함수를 의미한다.]]></description>
+</item><item>
     <title>08_Vuex_03</title>
     <link>https://colinder.github.io/08_vuex_03/</link>
     <pubDate>Thu, 27 Aug 2020 21:48:19 &#43;0900</pubDate>
@@ -103,18 +119,5 @@ Vue의 이론적 구성 및 설명을 알아보자 1. Vue는 MVVM 패턴을 따�
 2. Vue는 SPA (Single-Page Application)
  서버로부터 완전한 새로운 페이지를 불러오지 않고 현재의 페이지를 동적으로 다시 작성함으로써 사용자와 소통하는 웹 애플리케이션을 말한다.
 내가 이해한 방식: 변경사항이 발생했을 때 새로고침을하며 매번 페이지를 새롭게 구서하는 것이 아니라, 서버를 돌릴 때 이미 모든 페이지가 제작되어 있고 이를 사용자의 선택에 따라 보여주는 것.]]></description>
-</item><item>
-    <title>00_Vue_setting</title>
-    <link>https://colinder.github.io/00_vue_setting/</link>
-    <pubDate>Fri, 17 Jul 2020 21:56:29 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/00_vue_setting/</guid>
-    <description><![CDATA[​
-Vue  Vue.js는 웹 애플리케이션의 사용자 인터페이스를 만들기 위해 사용하는 오픈 소스 프로그레시브 자바스크립트 프레임워크
- ​
-1. 시작하기   &lsquo;Vue&rsquo; VS &lsquo;Django&rsquo;
- 어느 정도 공부를 하면서 체득한 가장 큰 구분점은 &ldquo;Django는 App별로 응답을 구분하고, Vue는 Component별로 응답을 구분한다.&ldquo;는 것이다.
-큰 차이가 없어보이고, 큰 의미가 없어보일 수 있으나 이는 내가 vue를 이해하는데 가장 많은 도움이 된 부분이다.
-    개발 환경 설정 &amp; 프로젝트 생성]]></description>
 </item></channel>
 </rss>
