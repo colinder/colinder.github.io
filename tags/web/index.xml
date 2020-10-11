@@ -5,10 +5,10 @@
         <description>Web - Tag - </description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 11 Oct 2020 21:47:43 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/web/" rel="self" type="application/rss+xml" /><item>
     <title>동기 &amp; 비동기 &amp; CallBack함수</title>
-    <link>https://colinder.github.io/10_syncasynccallback/</link>
+    <link>https://colinder.github.io/syncasynccallback/</link>
     <pubDate>Sun, 11 Oct 2020 21:47:43 &#43;0900</pubDate>
     <author>Author</author>
-    <guid>https://colinder.github.io/10_syncasynccallback/</guid>
+    <guid>https://colinder.github.io/syncasynccallback/</guid>
     <description><![CDATA[​
 동기(Synchronous)란? 어떤 작업을 실행했을 때, 그 작업이 끝나고 결과를 응답받은 뒤에 다음 함수를 실행하는 방식.
 만약 응답값이 없다면, 무한정 기다린다. 즉, 응답이 와야 다음 실행이 되는 방식
@@ -20,14 +20,14 @@ ex) A실행 👉 B실행 👉 &hellip;
 CallBack함수란? 비동기 처리결과로 반환되는 Callback함수
 Callback함수는 특정함수에 매개변수로 전달된 함수를 의미한다.]]></description>
 </item><item>
-    <title>09_AJAX(axios) 처리</title>
-    <link>https://colinder.github.io/09_axios/</link>
+    <title>AJAX(axios) 요청</title>
+    <link>https://colinder.github.io/axios/</link>
     <pubDate>Sun, 11 Oct 2020 21:25:51 &#43;0900</pubDate>
     <author>Author</author>
-    <guid>https://colinder.github.io/09_axios/</guid>
+    <guid>https://colinder.github.io/axios/</guid>
     <description><![CDATA[​
 AJAX  세상에는 다양한 web서버가 있다.
-그리고 모든 web은 &ldquo;요청&rdquo;과 &ldquo;요청&rdquo;으로 통신한다. 예를 들어..
+그리고 모든 web은 &ldquo;요청&rdquo;과 &ldquo;응답&rdquo;으로 통신한다. 예를 들어..
  요청: &ldquo;이미지를 보여줘&rdquo;
 응답: &ldquo;오키&rdquo; or &ldquo;싫어&rdquo;
  그렇다면, 이 web서버들과 통신 하려면 어떻게 해야 할까?
