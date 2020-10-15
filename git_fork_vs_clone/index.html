@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Git_fork vs clone - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="Git_fork vs clone" />
+<meta property="og:description" content="​
+Fork fork는 다른 사람(프로젝트)의 github repository에서 내가 어떤 부분을 수정하거나, 기능을 추가 하고 싶을 때 해당 repository를 그대로 복제하는 기능이다.
+fork한 저장소는 원본 repository와 연결되어 있다. 여기서 연결되어 있다는 의미는, 원본 repository에 어떤 변화가 생기면 이는 forked된 나의 repository에도 반영될 수 있다. (단, fetch나 rebase의 과정이 필요하다.)
+*fetch: Git에서 어떤 브랜치의 코드를 받아오는 방법 중 하나. (또 다른 하나는 pull)
+*rebase: Git에서 한 브랜치에서 다른 브랜치로 합치는 방법 중 하나." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://colinder.github.io/git_fork_vs_clone/" />
+<meta property="og:image" content="https://colinder.github.io/logo.png"/>
+<meta property="article:published_time" content="2020-10-11T21:26:25+09:00" />
+<meta property="article:modified_time" content="2020-10-11T21:26:25+09:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
+
+<meta name="twitter:title" content="Git_fork vs clone"/>
+<meta name="twitter:description" content="​
+Fork fork는 다른 사람(프로젝트)의 github repository에서 내가 어떤 부분을 수정하거나, 기능을 추가 하고 싶을 때 해당 repository를 그대로 복제하는 기능이다.
+fork한 저장소는 원본 repository와 연결되어 있다. 여기서 연결되어 있다는 의미는, 원본 repository에 어떤 변화가 생기면 이는 forked된 나의 repository에도 반영될 수 있다. (단, fetch나 rebase의 과정이 필요하다.)
+*fetch: Git에서 어떤 브랜치의 코드를 받아오는 방법 중 하나. (또 다른 하나는 pull)
+*rebase: Git에서 한 브랜치에서 다른 브랜치로 합치는 방법 중 하나."/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/git_fork_vs_clone/" /><link rel="prev" href="https://colinder.github.io/what_is_ajaxaxios/" /><link rel="next" href="https://colinder.github.io/sync_async_callback/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Git_fork vs clone",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/colinder.github.io\/git_fork_vs_clone\/"
+        },"genre": "posts","keywords": "git, fork, clone","wordcount":  456 ,
+        "url": "https:\/\/colinder.github.io\/git_fork_vs_clone\/","datePublished": "2020-10-11T21:26:25+09:00","dateModified": "2020-10-11T21:26:25+09:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "colinder"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="">Hello New World</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="">Hello New World</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Git_fork vs clone</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/git/"><i class="far fa-folder fa-fw"></i>git</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-10-11">2020-10-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;456 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><p>​</p>
+<h1 id="forkhttpsgit-scmcombookkov2github-github-ed9484eba19ceca09ded8ab8ec9790-eab8b0ec97aced9598eab8b0"><a href="https://git-scm.com/book/ko/v2/GitHub-GitHub-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%97%90-%EA%B8%B0%EC%97%AC%ED%95%98%EA%B8%B0" target="_blank" rel="noopener noreffer">Fork</a></h1>
+<p>fork는 다른 사람(프로젝트)의 github repository에서 내가 어떤 부분을 수정하거나, 기능을 추가 하고 싶을 때 해당 repository를 그대로 복제하는 기능이다.</p>
+<p><em>fork한 저장소는 원본 repository와 연결되어 있다.</em> 여기서 연결되어 있다는 의미는, 원본 repository에 어떤 변화가 생기면 이는 forked된 나의 repository에도 반영될 수 있다. (단, <a href="https://git-scm.com/book/ko/v2/Git%EC%9D%98-%EA%B8%B0%EC%B4%88-%EB%A6%AC%EB%AA%A8%ED%8A%B8-%EC%A0%80%EC%9E%A5%EC%86%8C" target="_blank" rel="noopener noreffer">fetch</a>나 <a href="https://git-scm.com/book/ko/v2/Git-%EB%B8%8C%EB%9E%9C%EC%B9%98-Rebase-%ED%95%98%EA%B8%B0" target="_blank" rel="noopener noreffer">rebase</a>의 과정이 필요하다.)</p>
+<p><em>*fetch: Git에서 어떤 브랜치의 코드를 받아오는 방법 중 하나. (또 다른 하나는 pull)</em></p>
+<p><em>*rebase: Git에서 한 브랜치에서 다른 브랜치로 합치는 방법 중 하나. (또 다른 하나는 merge)</em></p>
+<p>​</p>
+<p>만약?</p>
+<p>내가 손본(개발한) 내용을 push 하면 나의 repository에만 변경사항이 저장되고 원본 repository에는 영향을 주지 못한다. 다만, 원본 repository에도 나의 변경사항을 반영하고 싶다면, 원본 repository에 <a href="https://wayhome25.github.io/git/2017/07/08/git-first-pull-request-story/" target="_blank" rel="noopener noreffer">pull request</a>를 보내고 원본 repository 관리자가 수락하면 원본 repository에도 반영이 된다. == 타인 코드에 기여한다.</p>
+<p>​</p>
+<h1 id="clonehttpsgit-scmcombookkov2gitec9d98-eab8b0ecb488-git-eca080ec9ea5ec868c-eba78ceb93a4eab8b0_git_cloning"><a href="https://git-scm.com/book/ko/v2/Git%EC%9D%98-%EA%B8%B0%EC%B4%88-Git-%EC%A0%80%EC%9E%A5%EC%86%8C-%EB%A7%8C%EB%93%A4%EA%B8%B0#_git_cloning" target="_blank" rel="noopener noreffer">Clone</a></h1>
+<p>clone은 특정 repository를 내 local machine(ex. 내 노트북)에 복사하여 새로운 저장소를 만드는 기능이다.</p>
+<p><em>clone하면</em> 서버에 있는 프로젝트 히스토리를 포함한 <code>거의 모든</code> 데이터를 복사한다. (<code>거의 모든</code>이라고 기록한 이유는 세부 명령어에 따라 clone되는 내용이 달라지기 때문이다.)</p>
+<p>또한 clone한 원본 repository의 remote가 origin으로 자동 설정된다. 만약 권한이 없다면 original repository의 로그를 보지 못하며, 해당 저장소로 push 하지 못한다.</p>
+<p>​</p>
+<p>하지만!</p>
+<p>로그까지도 모두 clone할 수 있는 등의 몇가지 명령어가 존재한다. 그중 bare와 mirror에 대하여 정리한다.</p>
+<ol>
+<li>
+<p><strong>&ndash;bare</strong></p>
+<blockquote>
+<p><a href="https://git-scm.com/docs/git-clone" target="_blank" rel="noopener noreffer">공식문서</a>의 설명은 아래와 같다.</p>
+<p>Make a <em>bare</em> Git repository. That is, instead of creating <code>&lt;directory&gt;</code> and placing the administrative files in <code>&lt;directory&gt;/.git</code>, make the <code>&lt;directory&gt;</code> itself the <code>$GIT_DIR</code>. This obviously implies the <code>--no-checkout</code> because there is nowhere to check out the working tree. Also the branch heads at the remote are copied directly to corresponding local branch heads, without mapping them to <code>refs/remotes/origin/</code>. When this option is used, neither remote-tracking branches nor the related configuration variables are created.</p>
+</blockquote>
+<p>간단히 bare옵션은 <strong>HEAD</strong>의 <strong>refs</strong> 정보가 clone된다.</p>
+<p><em>*<strong>HEAD</strong>: 현재 작업중인 브랜치</em></p>
+<p>_*<strong><a href="https://git-scm.com/book/ko/v2/Git%EC%9D%98-%EB%82%B4%EB%B6%80-Git-Refs" target="_blank" rel="noopener noreffer">refs</a></strong>: 알아보기 쉬운 이름으로 설정된 commit 이름_을 “References” 또는 “Refs” 라고 부른다.</p>
+<p>​</p>
+</li>
+<li>
+<p><strong>&ndash;mirror</strong></p>
+<blockquote>
+<p><a href="https://git-scm.com/docs/git-clone" target="_blank" rel="noopener noreffer">공식문서</a>의 설명은 아래와 같다.</p>
+<p>Set up a mirror of the source repository. This implies <code>--bare</code>. Compared to <code>--bare</code>, <code>--mirror</code> not only maps local branches of the source to local branches of the target, it maps all refs (including remote-tracking branches, notes etc.) and sets up a refspec configuration such that all these refs are overwritten by a <code>git remote update</code> in the target repository.</p>
+</blockquote>
+<p>간단히 mirror옵션은 <strong>모든 브랜치</strong>의 <strong>refs</strong> 정보가 clone된다.</p>
+<p>​</p>
+</li>
+</ol>
+<a class="lightgallery" href="/images/git_bare_mirror.png" title="/images/git_bare_mirror.png" data-thumbnail="/images/git_bare_mirror.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/git_bare_mirror.png"
+            data-srcset="/images/git_bare_mirror.png, /images/git_bare_mirror.png 1.5x, /images/git_bare_mirror.png 2x"
+            data-sizes="auto"
+            alt="/images/git_bare_mirror.png" width="1000px" />
+    </a>
+<p>​</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">✨Point
+
+<span class="c1"># fork와 clone의 차이</span>
+원본 저장소와 연결이 되어 있냐<span class="o">(</span>fork<span class="o">)</span> 아니냐<span class="o">(</span>clone<span class="o">)</span>?
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<h1 id="push">*Push</h1>
+<p>Option</p>
+<ol>
+<li>
+<p><strong>&ndash;mirror</strong></p>
+<blockquote>
+<p>Instead of naming each ref to push, specifies that all refs under <code>refs/</code> (which includes but is not limited to <code>refs/heads/</code>, <code>refs/remotes/</code>, and <code>refs/tags/</code>) be mirrored to the remote repository. Newly created local refs will be pushed to the remote end, locally updated refs will be force updated on the remote end, and deleted refs will be removed from the remote end. This is the default if the configuration option <code>remote.&lt;remote&gt;.mirror</code> is set.</p>
+</blockquote>
+</li>
+</ol>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2020-10-11</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/git_fork_vs_clone/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/git/">git</a>,&nbsp;<a href="/tags/fork/">fork</a>,&nbsp;<a href="/tags/clone/">clone</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/what_is_ajaxaxios/" class="prev" rel="prev" title="what is AJAX(axios)?"><i class="fas fa-angle-left fa-fw"></i>what is AJAX(axios)?</a>
+            <a href="/sync_async_callback/" class="next" rel="next" title="동기 &amp; 비동기 &amp; CallBack함수">동기 &amp; 비동기 &amp; CallBack함수<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.75.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

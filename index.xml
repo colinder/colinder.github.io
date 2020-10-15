@@ -3,14 +3,26 @@
         <title></title>
         <link>https://colinder.github.io/</link>
         <description>Hello New World</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 11 Oct 2020 21:47:43 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 13 Oct 2020 14:26:29 &#43;0900</lastBuildDate>
             <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>what is DOM?</title>
+    <link>https://colinder.github.io/what_is_dom/</link>
+    <pubDate>Tue, 13 Oct 2020 14:26:29 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/what_is_dom/</guid>
+    <description><![CDATA[​
+Web을 공부하다보면 반드시 듣게 되는 단어. &ldquo;DOM&rdquo;
+근데 이게 뭔지 감이 잘 안왔고 그래서 WIT블로그를 필사하며 공부해봤습니다.
+​
+DOM이란? DOM(Document Object Model)은 웹 페이지에 대한 인터페이스입니다. 기본적으로 페이지의 콘텐츠 및 구조, 그리고 스타일을 읽고 조작할 수 있도록 API를 제공합니다. 먼저 DOM을 이해하기 전에 웹 페이지가 어떻게 빌드 되는지 알아보면 이해하는데 도움이 됩니다. 하여 알아봅시다!
+*인터페이스(interface): 서로 다른 두 개의 시스템, 장치 사이에서 정보나 신호를 주고받는 경우의 접점이나 경계면이다. 즉, 사용자가 기기를 쉽게 동작시키는데 도움을 주는 시스템.]]></description>
+</item><item>
     <title>동기 &amp; 비동기 &amp; CallBack함수</title>
-    <link>https://colinder.github.io/syncasynccallback/</link>
+    <link>https://colinder.github.io/sync_async_callback/</link>
     <pubDate>Sun, 11 Oct 2020 21:47:43 &#43;0900</pubDate>
     <author>Author</author>
-    <guid>https://colinder.github.io/syncasynccallback/</guid>
+    <guid>https://colinder.github.io/sync_async_callback/</guid>
     <description><![CDATA[​
 동기(Synchronous)란? 어떤 작업을 실행했을 때, 그 작업이 끝나고 결과를 응답받은 뒤에 다음 함수를 실행하는 방식.
 만약 응답값이 없다면, 무한정 기다린다. 즉, 응답이 와야 다음 실행이 되는 방식
@@ -22,11 +34,22 @@ ex) A실행 👉 B실행 👉 &hellip;
 CallBack함수란? 비동기 처리결과로 반환되는 Callback함수
 Callback함수는 특정함수에 매개변수로 전달된 함수를 의미한다.]]></description>
 </item><item>
-    <title>AJAX(axios) 요청</title>
-    <link>https://colinder.github.io/axios/</link>
+    <title>Git_fork vs clone</title>
+    <link>https://colinder.github.io/git_fork_vs_clone/</link>
+    <pubDate>Sun, 11 Oct 2020 21:26:25 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/git_fork_vs_clone/</guid>
+    <description><![CDATA[​
+Fork fork는 다른 사람(프로젝트)의 github repository에서 내가 어떤 부분을 수정하거나, 기능을 추가 하고 싶을 때 해당 repository를 그대로 복제하는 기능이다.
+fork한 저장소는 원본 repository와 연결되어 있다. 여기서 연결되어 있다는 의미는, 원본 repository에 어떤 변화가 생기면 이는 forked된 나의 repository에도 반영될 수 있다. (단, fetch나 rebase의 과정이 필요하다.)
+*fetch: Git에서 어떤 브랜치의 코드를 받아오는 방법 중 하나. (또 다른 하나는 pull)
+*rebase: Git에서 한 브랜치에서 다른 브랜치로 합치는 방법 중 하나.]]></description>
+</item><item>
+    <title>what is AJAX(axios)?</title>
+    <link>https://colinder.github.io/what_is_ajaxaxios/</link>
     <pubDate>Sun, 11 Oct 2020 21:25:51 &#43;0900</pubDate>
     <author>Author</author>
-    <guid>https://colinder.github.io/axios/</guid>
+    <guid>https://colinder.github.io/what_is_ajaxaxios/</guid>
     <description><![CDATA[​
 AJAX  세상에는 다양한 web서버가 있다.
 그리고 모든 web은 &ldquo;요청&rdquo;과 &ldquo;응답&rdquo;으로 통신한다. 예를 들어..
@@ -36,13 +59,13 @@ AJAX  세상에는 다양한 web서버가 있다.
   대표적인 통신 방법을 AJAX라 한다. 이는 JavaScript의 라이브러리중 하나이며 Asynchronous Javascript And Xml(비동기식 자바스크립트와 xml)의 약자며, 자체가 하나의 특정한 기술을 말하는 것이 아니며, 함께 사용하는 기술의 묶음을 지칭하는 용어이다.
 브라우저가 가지고있는 XMLHttpRequest 객체를 이용해서 전체 페이지를 새로 고치지 않고도 페이지의 일부만을 위한 데이터를 로드하는 기법 이며 Ajax를 한마디로 정의하자면 JavaScript를 사용한 비동기 통신, 클라이언트와 서버간에 XML 데이터를 주고받는 기술이라고 할 수 있겠습니다.]]></description>
 </item><item>
-    <title>Git_mirroring</title>
+    <title>Git_Mirroring</title>
     <link>https://colinder.github.io/git_mirroring/</link>
     <pubDate>Thu, 08 Oct 2020 22:08:37 &#43;0900</pubDate>
     <author>Author</author>
     <guid>https://colinder.github.io/git_mirroring/</guid>
     <description><![CDATA[​
-Git_mirroring  기존에 사용하고 있던 A_Repo에서 B_Repo로 커밋히스토리 그대로 복사가 필요할 때가 있습니다.
+Git_Mirroring  기존에 사용하고 있던 A_Repo에서 B_Repo로 커밋히스토리 그대로 복사가 필요할 때가 있습니다.
 여기서 A_Repo를 그대로 가져온다는 의미는 단지 파일을 새롭게 만드는 것이 아니라 A_Repo에서 작업하던 commit 이력 모두를 그대로 이전하는 의미를 뜻합니다.
  ​
   터미널을 엽니다.
@@ -95,25 +118,5 @@ D3_3233_정삼각형 분할 놀이 1 2 3 4 5 6 7 8 9 10  for T in range(int(inpu
 프라이빗 네트워크와 프라이빗 블록체인과 같이 네트워크와 블록체인을 같은 의미로 많이 사용하는데. 과연 이 둘이 같은 것을 의미하는지 알아보았다.
  ​
 결론 - 블록체인=&gt; 사용자의 접근조건을 기준으로 프라이빗과 퍼블릭을 나눔 - 네트워크=&gt; 서비스 운용형태를 기준으로 프라이빗과 퍼블릭을 나눔 ​]]></description>
-</item><item>
-    <title>Python_Library</title>
-    <link>https://colinder.github.io/python_library/</link>
-    <pubDate>Fri, 11 Sep 2020 22:39:31 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/python_library/</guid>
-    <description><![CDATA[​
-자주 쓰는 Python Library  자주 사용하게되는 파이썬 라이브러리를 정리한다.
- ​
-  정규표현식  일대일 매칭되는 문자
- 정규표현식 안에서, 바로 다음 절에서 설명하는 메타문자를 제외한 모든 문자 하나는 일반 문자열 하나와 매칭된다. 예를 들어, a는 a와 매칭되고, 가는 ‘가’와 매칭되는 식이다. 당연히 a가 ‘b’ 또는 ‘가’와 매칭되지는 않는다.
-1 2 3 4 5 6 7 8 9 10 11 12 13  어떤 프로그래밍 언어의 정규표현식이든 메타문자(특수한 기능을 하는 문자)라는 것이 존재한다.]]></description>
-</item><item>
-    <title>SW Expert Academy_D3 4698, 1493, 10570, 3032</title>
-    <link>https://colinder.github.io/sw_20.09.09/</link>
-    <pubDate>Tue, 08 Sep 2020 23:13:31 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/sw_20.09.09/</guid>
-    <description><![CDATA[​
-D3_4698_테네스의 특별한 소수 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  for T in range(int(input())): D, A, B = map(int, input().split()) D = str(D) a = [0, 0] + [1] * (B - 1) rootB = int(B**0.5)	👈 이 아이디어를 얻기까지 오랜시간이 걸렸다. for i in range(2, rootB+1):	👈 if a[i] == 1:	👈 for j in range(2*i, B+1, i):	👈 에라토스테네스의 체 를 활용 a[j] = 0	👈 result = [] for i in range(A, B+1): if a[i] == 1 and D in str(i): result.]]></description>
 </item></channel>
 </rss>

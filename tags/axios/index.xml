@@ -1,0 +1,21 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>axios - Tag - </title>
+        <link>https://colinder.github.io/tags/axios/</link>
+        <description>axios - Tag - </description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 11 Oct 2020 21:25:51 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/axios/" rel="self" type="application/rss+xml" /><item>
+    <title>what is AJAX(axios)?</title>
+    <link>https://colinder.github.io/what_is_ajaxaxios/</link>
+    <pubDate>Sun, 11 Oct 2020 21:25:51 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/what_is_ajaxaxios/</guid>
+    <description><![CDATA[​
+AJAX  세상에는 다양한 web서버가 있다.
+그리고 모든 web은 &ldquo;요청&rdquo;과 &ldquo;응답&rdquo;으로 통신한다. 예를 들어..
+ 요청: &ldquo;이미지를 보여줘&rdquo;
+응답: &ldquo;오키&rdquo; or &ldquo;싫어&rdquo;
+ 그렇다면, 이 web서버들과 통신 하려면 어떻게 해야 할까?
+  대표적인 통신 방법을 AJAX라 한다. 이는 JavaScript의 라이브러리중 하나이며 Asynchronous Javascript And Xml(비동기식 자바스크립트와 xml)의 약자며, 자체가 하나의 특정한 기술을 말하는 것이 아니며, 함께 사용하는 기술의 묶음을 지칭하는 용어이다.
+브라우저가 가지고있는 XMLHttpRequest 객체를 이용해서 전체 페이지를 새로 고치지 않고도 페이지의 일부만을 위한 데이터를 로드하는 기법 이며 Ajax를 한마디로 정의하자면 JavaScript를 사용한 비동기 통신, 클라이언트와 서버간에 XML 데이터를 주고받는 기술이라고 할 수 있겠습니다.]]></description>
+</item></channel>
+</rss>

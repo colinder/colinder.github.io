@@ -1,9 +1,9 @@
-# Git_mirroring
+# Git_Mirroring
 
 
 ​	
 
-# Git_mirroring
+# Git_Mirroring
 
 >기존에 사용하고 있던 A_Repo에서 B_Repo로 커밋히스토리 그대로 복사가 필요할 때가 있습니다. 
 >
