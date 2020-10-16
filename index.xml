@@ -12,11 +12,11 @@
     <author>Author</author>
     <guid>https://colinder.github.io/06_vue_lifecycle/</guid>
     <description><![CDATA[​
-Vue_LifeCycle  솔직한 고백으로, 처음 라이프사이클이란 것을 배웠을 때는 이게 무슨 말인지? 삶의 주기를 왜 알아야 하는지 전혀 몰랐습니다. 이런 저에게 Vue 공식문서에는 말했습니다.
+Vue_LifeCycle  솔직히 처음 라이프사이클이란 것을 공부했을 때는 이게 무슨 말인지? 삶의 주기를 왜 알아야 하는지 전혀 몰랐습니다. 이런 저에게 Vue 공식문서에는 말했습니다.
 지금 당장 모든 것을 완전히 이해할 필요는 없지만 다이어그램은 앞으로 도움이 될 것입니다.
  그리고, LifeCycle을 공부 하기 전 DOM에 대한 개념이 부족하다면 what is DOM?을 꼭 보고 오길 추천합니다.
 ​
-Vue.js의 라이프 사이클은 크게 Creation, Mounting, Updating, Destruction으로 나눌 수 있습니다. 이는 __생성(create)__되고, DOM에 __부착(mount)__되고, __업데이트(update)__되며, 없어지는(destroy) 4가지 과정을 말합니다.]]></description>
+Vue.js의 라이프 사이클은 크게 Creation, Mounting, Updating, Destruction으로 나눌 수 있습니다. 이는 생성(create)되고, DOM에 부착(mount)되고, 업데이트(update)되며, 없어지는(destroy) 4가지 과정을 말합니다.]]></description>
 </item><item>
     <title>what is DOM?</title>
     <link>https://colinder.github.io/what_is_dom/</link>
