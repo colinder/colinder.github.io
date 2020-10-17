@@ -9,7 +9,7 @@
 
 ​	
 
-**가장 많은 사용자가 존재하는 jekyll로 시작한다. **
+**가장 많은 사용자가 존재하는 jekyll로 시작한다.**
 
 ​	
 
@@ -59,7 +59,7 @@ Servuer address : http://127.0.0.1:4000/
 
 
 
-Hugo로 블로그를 구축한다면 이를 git의 서버를 통해 배포한다. 
+Hugo로 블로그를 구축하고 / 이를 git의 서버를 통해 배포한다.
 
 ​	
 
@@ -67,24 +67,39 @@ Hugo로 블로그를 구축한다면 이를 git의 서버를 통해 배포한다
 
 ### 1. Git, Hugo 설치
 
-- Git 설치란?   {{< link "https://gitforwindows.org/" Git_bash >}}설치를 뜻한다. 링크를 타고 들어가 적절한 버전을 선택해 설치를 진행한다. 
+- **Git 설치란?**   {{< link "https://gitforwindows.org/" Git_bash >}}설치를 뜻한다. 링크를 타고 들어가 적절한 버전을 선택해 설치를 진행한다. 
 
   ​	*👉 bash를 실행시키고 `git --version`을 입력해서 version 정보가 확인되면 정상 설치가 된 것이다.*
 
   ​	
 
-- Hugo 설치 (공식홈페이지의 {{< link "https://gohugo.io/getting-started/quick-start/" Quick_Start >}} 참고)
+- **Hugo 설치** (공식홈페이지의 {{< link "https://gohugo.io/getting-started/quick-start/" Quick_Start >}} 참고)
 
   ​	*👉 난 {{< link "https://github.com/gohugoio/hugo/releases" Hugo_release>}}에서 최신버전을 다운받아 직접 설치했다.*
 
   1. `C:\Hugo\bin\`에 압축을 해제.
+
   2. `window + Q`로 검색창을 연 뒤 `변수`를 검색해서 `시스템 환경 변수 편집`에 들어간다.
+
   3. 아래의 `환경 변수(N)`를 클릭.
+
   4. 위쪽 박스에서 `Path`를 더블클릭한다.
+
   5. `새로 만들기`를 클릭 후, 아까 압축을 풀었던 곳인 `C:\Hugo\bin`를 등록.
+
   6. 닫고 배경화면에서 bash 실행 후 `hugo version`을 입력해서 version 정보가 나오면 잘 설치가 된 것.
-  
-  
+
+     ​	
+
+  어마어마한 특이사항 발견..(20.10.17)
+
+  + 난 커스텀이 되는 테마를 받아서 사용했으나, 아무리 시도해도 커스텀이 적용되지 않았었는데
+
+  + 만약 내가 사용할 테마가 Sass/SCSS를 사용한다면 반드시 extended version으로 설치하여야 한다!!
+
+  + extended version은 기본 버전에서 `Sass/SCSS` 프로세싱을 지원이 추가된 버전이다!
+
+    ​	
 
 ### 2. Hugo 블로그 구축하기
 
