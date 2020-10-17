@@ -45,7 +45,7 @@ _clone하면_ 서버에 있는 프로젝트 히스토리를 포함한 `거의 �
 
    _*__HEAD__: 현재 작업중인 브랜치_
 
-   _*__[refs](https://git-scm.com/book/ko/v2/Git%EC%9D%98-%EB%82%B4%EB%B6%80-Git-Refs)__: 알아보기 쉬운 이름으로 설정된 commit 이름_을 “References” 또는 “Refs” 라고 부른다.
+   _*__[refs](https://git-scm.com/book/ko/v2/Git%EC%9D%98-%EB%82%B4%EB%B6%80-Git-Refs)__: 알아보기 쉬운 이름으로 설정된 commit 이름을 “References” 또는 “Refs” 라고 부른다._
 
    ​		
 
