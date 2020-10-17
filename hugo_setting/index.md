@@ -26,16 +26,12 @@
 ~$ gem install bundler jekyll			# jekyll 구동을 위한 프로그램 설치
 ~$ jekyll new MYBLOG					# MYBLOG 라는 이름의 블로그 폴더 & 기초틀 생성 
 ~$ cd MYBLOG							# MYBLOG 폴더로 이동
-~/MYBLOG $ bundle exec jekyll serve		# MYBLOG 서버 구동
-```
+~MYBLOG $ bundle exec jekyll serve		# MYBLOG 서버 구동
 
-```ruby
 # 이후 명령창에
 Servuer address : http://127.0.0.1:4000/
-로 인터넷 접속하면 jekell의 디폴트 서버 모습이 보인다.
+#로 인터넷 접속하면 jekell의 디폴트 서버 모습이 보인다.
 ```
-
-이게 다다. 
 
 ​	
 
@@ -43,11 +39,11 @@ Servuer address : http://127.0.0.1:4000/
 
 ---
 
-​		
+​			
 
-## {{< link "https://gohugo.io/" Hugo >}}
 
-### Why Hugo?
+
+# Why {{< link "https://gohugo.io/" Hugo >}}?
 
 > #### #1. window를 공식 지원한다. ( Jekyll은 window를 공식적으로 지원하진 않는다. )
 >
@@ -108,6 +104,8 @@ Hugo로 블로그를 구축하고 / 이를 git의 서버를 통해 배포한다.
 ```bash
 hugo new site <프로젝트 이름>		# ex) hugo new site MyBlog → MyBlog라는 프로젝트 폴더를 생성.
 ```
+
+hugo에서 site, theme, content를 만들때는 항상 `new` command를 사용하여 생성한다.
 
 {{< image src="/images/Hugo_01.png" caption="휴고 사이트 생성 명령어" width="600px" >}}
 
