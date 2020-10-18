@@ -7,8 +7,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <title>Git_fork vs clone - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="Git_fork vs clone" />
 <meta property="og:description" content="​
-Fork fork는 다른 사람(프로젝트)의 github repository에서 내가 어떤 부분을 수정하거나, 기능을 추가 하고 싶을 때 해당 repository를 그대로 복제하는 기능이다.
-fork한 저장소는 원본 repository와 연결되어 있다. 여기서 연결되어 있다는 의미는, 원본 repository에 어떤 변화가 생기면 이는 forked된 나의 repository에도 반영될 수 있다. (단, fetch나 rebase의 과정이 필요하다.)
+Fork fork는 다른 사람(프로젝트)의 github repository에서 내가 어떤 부분을 수정하거나, 기능을 추가 하고 싶을 때 해당 repository를 그대로 복제하는 기능.
+fork한 저장소는 원본 repository와 연결되어 있다. 여기서 연결되어 있다는 의미는, 원본 repository에 어떤 변화가 생기면 이는 forked된 나의 repository에도 반영될 수 있다는 것입니다. (단, fetch나 rebase의 과정이 필요하다.)
 *fetch: Git에서 어떤 브랜치의 코드를 받아오는 방법 중 하나. (또 다른 하나는 pull)
 *rebase: Git에서 한 브랜치에서 다른 브랜치로 합치는 방법 중 하나." />
 <meta property="og:type" content="article" />
@@ -21,8 +21,8 @@ fork한 저장소는 원본 repository와 연결되어 있다. 여기서 연결�
 
 <meta name="twitter:title" content="Git_fork vs clone"/>
 <meta name="twitter:description" content="​
-Fork fork는 다른 사람(프로젝트)의 github repository에서 내가 어떤 부분을 수정하거나, 기능을 추가 하고 싶을 때 해당 repository를 그대로 복제하는 기능이다.
-fork한 저장소는 원본 repository와 연결되어 있다. 여기서 연결되어 있다는 의미는, 원본 repository에 어떤 변화가 생기면 이는 forked된 나의 repository에도 반영될 수 있다. (단, fetch나 rebase의 과정이 필요하다.)
+Fork fork는 다른 사람(프로젝트)의 github repository에서 내가 어떤 부분을 수정하거나, 기능을 추가 하고 싶을 때 해당 repository를 그대로 복제하는 기능.
+fork한 저장소는 원본 repository와 연결되어 있다. 여기서 연결되어 있다는 의미는, 원본 repository에 어떤 변화가 생기면 이는 forked된 나의 repository에도 반영될 수 있다는 것입니다. (단, fetch나 rebase의 과정이 필요하다.)
 *fetch: Git에서 어떤 브랜치의 코드를 받아오는 방법 중 하나. (또 다른 하나는 pull)
 *rebase: Git에서 한 브랜치에서 다른 브랜치로 합치는 방법 중 하나."/>
 <meta name="application-name" content="LoveIt">
@@ -37,7 +37,7 @@ fork한 저장소는 원본 repository와 연결되어 있다. 여기서 연결�
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/git_fork_vs_clone\/"
-        },"genre": "posts","keywords": "git, fork, clone","wordcount":  456 ,
+        },"genre": "posts","keywords": "git, fork, clone","wordcount":  458 ,
         "url": "https:\/\/colinder.github.io\/git_fork_vs_clone\/","datePublished": "2020-10-11T21:26:25+09:00","dateModified": "2020-10-11T21:26:25+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -114,7 +114,7 @@ fork한 저장소는 원본 repository와 연결되어 있다. 여기서 연결�
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Git_fork vs clone</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/git/"><i class="far fa-folder fa-fw"></i>git</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-10-11">2020-10-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;456 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-10-11">2020-10-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;458 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -124,29 +124,29 @@ fork한 저장소는 원본 repository와 연결되어 있다. 여기서 연결�
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
             </div><div class="content" id="content"><p>​</p>
 <h1 id="forkhttpsgit-scmcombookkov2github-github-ed9484eba19ceca09ded8ab8ec9790-eab8b0ec97aced9598eab8b0"><a href="https://git-scm.com/book/ko/v2/GitHub-GitHub-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%97%90-%EA%B8%B0%EC%97%AC%ED%95%98%EA%B8%B0" target="_blank" rel="noopener noreffer">Fork</a></h1>
-<p>fork는 다른 사람(프로젝트)의 github repository에서 내가 어떤 부분을 수정하거나, 기능을 추가 하고 싶을 때 해당 repository를 그대로 복제하는 기능이다.</p>
-<p><em>fork한 저장소는 원본 repository와 연결되어 있다.</em> 여기서 연결되어 있다는 의미는, 원본 repository에 어떤 변화가 생기면 이는 forked된 나의 repository에도 반영될 수 있다. (단, <a href="https://git-scm.com/book/ko/v2/Git%EC%9D%98-%EA%B8%B0%EC%B4%88-%EB%A6%AC%EB%AA%A8%ED%8A%B8-%EC%A0%80%EC%9E%A5%EC%86%8C" target="_blank" rel="noopener noreffer">fetch</a>나 <a href="https://git-scm.com/book/ko/v2/Git-%EB%B8%8C%EB%9E%9C%EC%B9%98-Rebase-%ED%95%98%EA%B8%B0" target="_blank" rel="noopener noreffer">rebase</a>의 과정이 필요하다.)</p>
+<p>fork는 다른 사람(프로젝트)의 github repository에서 내가 어떤 부분을 수정하거나, 기능을 추가 하고 싶을 때 해당 repository를 그대로 복제하는 기능.</p>
+<p><em>fork한 저장소는 원본 repository와 연결되어 있다.</em> 여기서 연결되어 있다는 의미는, 원본 repository에 어떤 변화가 생기면 이는 forked된 나의 repository에도 반영될 수 있다는 것입니다. (단, <a href="https://git-scm.com/book/ko/v2/Git%EC%9D%98-%EA%B8%B0%EC%B4%88-%EB%A6%AC%EB%AA%A8%ED%8A%B8-%EC%A0%80%EC%9E%A5%EC%86%8C" target="_blank" rel="noopener noreffer">fetch</a>나 <a href="https://git-scm.com/book/ko/v2/Git-%EB%B8%8C%EB%9E%9C%EC%B9%98-Rebase-%ED%95%98%EA%B8%B0" target="_blank" rel="noopener noreffer">rebase</a>의 과정이 필요하다.)</p>
 <p><em>*fetch: Git에서 어떤 브랜치의 코드를 받아오는 방법 중 하나. (또 다른 하나는 pull)</em></p>
 <p><em>*rebase: Git에서 한 브랜치에서 다른 브랜치로 합치는 방법 중 하나. (또 다른 하나는 merge)</em></p>
 <p>​</p>
 <p>만약?</p>
-<p>내가 손본(개발한) 내용을 push 하면 나의 repository에만 변경사항이 저장되고 원본 repository에는 영향을 주지 못한다. 다만, 원본 repository에도 나의 변경사항을 반영하고 싶다면, 원본 repository에 <a href="https://wayhome25.github.io/git/2017/07/08/git-first-pull-request-story/" target="_blank" rel="noopener noreffer">pull request</a>를 보내고 원본 repository 관리자가 수락하면 원본 repository에도 반영이 된다. == 타인 코드에 기여한다.</p>
+<p>내가 손본(개발한) 내용을 push 하면 나의 repository에만 변경사항이 저장되고 원본 repository에는 영향을 주지 못합니다. 다만, 원본 repository에도 나의 변경사항을 반영하고 싶다면, 원본 repository에 <a href="https://wayhome25.github.io/git/2017/07/08/git-first-pull-request-story/" target="_blank" rel="noopener noreffer">pull request</a>를 보내고 원본 repository 관리자가 수락하면 원본 repository에도 반영이 됩니다. == 타인 코드에 기여한다.</p>
 <p>​</p>
 <h1 id="clonehttpsgit-scmcombookkov2gitec9d98-eab8b0ecb488-git-eca080ec9ea5ec868c-eba78ceb93a4eab8b0_git_cloning"><a href="https://git-scm.com/book/ko/v2/Git%EC%9D%98-%EA%B8%B0%EC%B4%88-Git-%EC%A0%80%EC%9E%A5%EC%86%8C-%EB%A7%8C%EB%93%A4%EA%B8%B0#_git_cloning" target="_blank" rel="noopener noreffer">Clone</a></h1>
-<p>clone은 특정 repository를 내 local machine(ex. 내 노트북)에 복사하여 새로운 저장소를 만드는 기능이다.</p>
-<p><em>clone하면</em> 서버에 있는 프로젝트 히스토리를 포함한 <code>거의 모든</code> 데이터를 복사한다. (<code>거의 모든</code>이라고 기록한 이유는 세부 명령어에 따라 clone되는 내용이 달라지기 때문이다.)</p>
-<p>또한 clone한 원본 repository의 remote가 origin으로 자동 설정된다. 만약 권한이 없다면 original repository의 로그를 보지 못하며, 해당 저장소로 push 하지 못한다.</p>
+<p>clone은 특정 repository를 내 local machine(ex. 내 노트북)에 복사하여 새로운 저장소를 만드는 기능.</p>
+<p><em>clone하면</em> 서버에 있는 프로젝트 히스토리를 포함한 <code>거의 모든</code> 데이터를 복사합니다. (<code>거의 모든</code>이라고 기록한 이유는 세부 명령어에 따라 clone되는 내용이 달라지기 때문.)</p>
+<p>또한 clone한 원본 repository의 remote가 origin으로 자동 설정됩니다. 만약 권한이 없다면 original repository의 로그를 보지 못하며, 해당 저장소로 push 하지도 못해요.</p>
 <p>​</p>
 <p>하지만!</p>
-<p>로그까지도 모두 clone할 수 있는 등의 몇가지 명령어가 존재한다. 그중 bare와 mirror에 대하여 정리한다.</p>
+<p>로그까지도 모두 clone하는 등의 몇 가지 명령어가 존재합니다. 그중 많이 쓰이는 bare와 mirror에 대하여 정리해봤습니다.</p>
 <ol>
 <li>
 <p><strong>&ndash;bare</strong></p>
 <blockquote>
-<p><a href="https://git-scm.com/docs/git-clone" target="_blank" rel="noopener noreffer">공식문서</a>의 설명은 아래와 같다.</p>
+<p><a href="https://git-scm.com/docs/git-clone" target="_blank" rel="noopener noreffer">공식문서</a>의 설명은 아래와 같음.</p>
 <p>Make a <em>bare</em> Git repository. That is, instead of creating <code>&lt;directory&gt;</code> and placing the administrative files in <code>&lt;directory&gt;/.git</code>, make the <code>&lt;directory&gt;</code> itself the <code>$GIT_DIR</code>. This obviously implies the <code>--no-checkout</code> because there is nowhere to check out the working tree. Also the branch heads at the remote are copied directly to corresponding local branch heads, without mapping them to <code>refs/remotes/origin/</code>. When this option is used, neither remote-tracking branches nor the related configuration variables are created.</p>
 </blockquote>
-<p>간단히 bare옵션은 <strong>HEAD</strong>의 <strong>refs</strong> 정보가 clone된다.</p>
+<p>간단히 bare옵션은 <strong>HEAD</strong>의 <strong>refs</strong> 정보가 clone됩니다.</p>
 <p><em>*<strong>HEAD</strong>: 현재 작업중인 브랜치</em></p>
 <p><em>*<strong><a href="https://git-scm.com/book/ko/v2/Git%EC%9D%98-%EB%82%B4%EB%B6%80-Git-Refs" target="_blank" rel="noopener noreffer">refs</a></strong>: 알아보기 쉬운 이름으로 설정된 commit 이름을 “References” 또는 “Refs” 라고 부른다.</em></p>
 <p>​</p>
@@ -154,10 +154,10 @@ fork한 저장소는 원본 repository와 연결되어 있다. 여기서 연결�
 <li>
 <p><strong>&ndash;mirror</strong></p>
 <blockquote>
-<p><a href="https://git-scm.com/docs/git-clone" target="_blank" rel="noopener noreffer">공식문서</a>의 설명은 아래와 같다.</p>
+<p><a href="https://git-scm.com/docs/git-clone" target="_blank" rel="noopener noreffer">공식문서</a>의 설명은 아래와 같음.</p>
 <p>Set up a mirror of the source repository. This implies <code>--bare</code>. Compared to <code>--bare</code>, <code>--mirror</code> not only maps local branches of the source to local branches of the target, it maps all refs (including remote-tracking branches, notes etc.) and sets up a refspec configuration such that all these refs are overwritten by a <code>git remote update</code> in the target repository.</p>
 </blockquote>
-<p>간단히 mirror옵션은 <strong>모든 브랜치</strong>의 <strong>refs</strong> 정보가 clone된다.</p>
+<p>간단히 mirror옵션은 <strong>모든 브랜치</strong>의 <strong>refs</strong> 정보가 clone됩니다.</p>
 <p>​</p>
 </li>
 </ol>
