@@ -8,14 +8,14 @@
         <title>동기 &amp; 비동기 &amp; CallBack함수 - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="동기 &amp; 비동기 &amp; CallBack함수" />
 <meta property="og:description" content="​
 동기(Synchronous)란? 어떤 작업을 실행했을 때, 그 작업이 끝나고 결과를 응답받은 뒤에 다음 함수를 실행하는 방식.
-만약 응답값이 없다면, 무한정 기다린다. 즉, 응답이 와야 다음 실행이 되는 방식
+만약 응답값이 없다면, 무한정 기다려요. 즉, 응답을 받아야! 다음 실행이 되는 방식입니다.
 ex) A실행 👉 A의 결과값 return 확인 👉 B실행
  ​
-비동기(Asynchronous)란? 어떤 작업을 실행한 후 결과값을 기다리지 않고, 바로 다음 함수를 실행.
+비동기(Asynchronous)란? 어떤 작업을 실행한 후 결과값을 기다리지 않고, 바로 다음 함수를 실행합니다.
 ex) A실행 👉 B실행 👉 &hellip;
  ​
 CallBack함수란? 비동기 처리결과로 반환되는 Callback함수
-Callback함수는 특정함수에 매개변수로 전달된 함수를 의미한다." />
+Callback함수는 특정함수에 매개변수로 전달된 함수를 의미합니다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://colinder.github.io/sync_async_callback/" />
 <meta property="og:image" content="https://colinder.github.io/logo.png"/>
@@ -27,14 +27,14 @@ Callback함수는 특정함수에 매개변수로 전달된 함수를 의미한�
 <meta name="twitter:title" content="동기 &amp; 비동기 &amp; CallBack함수"/>
 <meta name="twitter:description" content="​
 동기(Synchronous)란? 어떤 작업을 실행했을 때, 그 작업이 끝나고 결과를 응답받은 뒤에 다음 함수를 실행하는 방식.
-만약 응답값이 없다면, 무한정 기다린다. 즉, 응답이 와야 다음 실행이 되는 방식
+만약 응답값이 없다면, 무한정 기다려요. 즉, 응답을 받아야! 다음 실행이 되는 방식입니다.
 ex) A실행 👉 A의 결과값 return 확인 👉 B실행
  ​
-비동기(Asynchronous)란? 어떤 작업을 실행한 후 결과값을 기다리지 않고, 바로 다음 함수를 실행.
+비동기(Asynchronous)란? 어떤 작업을 실행한 후 결과값을 기다리지 않고, 바로 다음 함수를 실행합니다.
 ex) A실행 👉 B실행 👉 &hellip;
  ​
 CallBack함수란? 비동기 처리결과로 반환되는 Callback함수
-Callback함수는 특정함수에 매개변수로 전달된 함수를 의미한다."/>
+Callback함수는 특정함수에 매개변수로 전달된 함수를 의미합니다."/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -47,7 +47,7 @@ Callback함수는 특정함수에 매개변수로 전달된 함수를 의미한�
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/sync_async_callback\/"
-        },"genre": "posts","keywords": "vue, web","wordcount":  139 ,
+        },"genre": "posts","keywords": "vue, web","wordcount":  141 ,
         "url": "https:\/\/colinder.github.io\/sync_async_callback\/","datePublished": "2020-10-11T21:47:43+09:00","dateModified": "2020-10-11T21:47:43+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -124,7 +124,7 @@ Callback함수는 특정함수에 매개변수로 전달된 함수를 의미한�
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">동기 &amp; 비동기 &amp; CallBack함수</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/web/"><i class="far fa-folder fa-fw"></i>web</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-10-11">2020-10-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;139 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-10-11">2020-10-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;141 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;One minute&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -135,27 +135,25 @@ Callback함수는 특정함수에 매개변수로 전달된 함수를 의미한�
             </div><div class="content" id="content"><p>​</p>
 <h1 id="동기synchronous란">동기(Synchronous)란?</h1>
 <p>어떤 작업을 실행했을 때, 그 작업이 끝나고 <code>결과를 응답받은 뒤</code>에 다음 함수를 실행하는 방식.</p>
-<p><strong>만약 응답값이 없다면, 무한정 기다린다.</strong> 즉, 응답이 와야 다음 실행이 되는 방식</p>
+<p><strong>만약 응답값이 없다면, 무한정 기다려요.</strong> 즉, 응답을 받아야! 다음 실행이 되는 방식입니다.</p>
 <p><em>ex) A실행 👉 A의 결과값 return 확인 👉 B실행</em></p>
 <hr>
 <p>​</p>
 <h1 id="비동기asynchronous란">비동기(Asynchronous)란?</h1>
-<p>어떤 작업을 실행한 후 <code>결과값을 기다리지 않고</code>, 바로 다음 함수를 실행.</p>
+<p>어떤 작업을 실행한 후 <code>결과값을 기다리지 않고</code>, 바로 다음 함수를 실행합니다.</p>
 <p><em>ex) A실행 👉  B실행 👉 &hellip;</em></p>
 <hr>
 <p>​</p>
 <h1 id="callback함수란">CallBack함수란?</h1>
 <p>비동기 처리결과로 반환되는 Callback함수</p>
-<p>Callback함수는 특정함수에 매개변수로 전달된 함수를 의미한다.</p>
+<p>Callback함수는 특정함수에 매개변수로 전달된 함수를 의미합니다.</p>
 <blockquote>
 <p><em>ex)</em></p>
 <p><em>DB에서 데이터를 가져오라는 요청 👉 데이터가 오는 중인데 👉 출력해버리면 결과값이 나오지 않는다.</em></p>
 <p>But, Callback 함수로 처리결과를 받은 후에 출력을 하게 로직을 짜면 문제없이 출력된다.</p>
 </blockquote>
-<p>​</p>
 <p>상황에 따라 어떤 작업이 끝났다는 것을 사용자에게 알려주거나,</p>
-<p>코드 내부에서 Callback함수를 받았을 경우에만 처리하는 로직등을 짜서 가시적인 개발에 도움.</p>
-<p>​</p>
+<p>코드 내부에서 Callback함수를 받았을 경우에만 처리하는 로직등을 짜서 가시적인 개발에 도움이 됩니다.</p>
 <p>​</p>
 <p>​</p>
 <div class="highlight"><div class="chroma">
@@ -165,9 +163,9 @@ Callback함수는 특정함수에 매개변수로 전달된 함수를 의미한�
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 개인적으로 동기는 &#39;순차&#39;라는 단어로 변환해 생각하면 이해하기 쉽다.</span>
-<span class="s1">&#39;순차&#39;</span>적  👉  지정된 순서대로 시작
-비<span class="s1">&#39;순차&#39;</span>적  👉  순서에 상관없이 시작
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 개인적으로 동기는 &#39;순차&#39;라는 단어로 변환해 생각하면서 이해했습니다.</span>
+동기적  👉  <span class="s1">&#39;순차&#39;</span>적  👉  지정된 순서대로 시작
+비동기적  👉  비<span class="s1">&#39;순차&#39;</span>적  👉  순서에 상관없이 시작
 </code></pre></td></tr></table>
 </div>
 </div></div><div class="post-footer" id="post-footer">
