@@ -3,7 +3,19 @@
         <title>All Posts - </title>
         <link>https://colinder.github.io/posts/</link>
         <description>All Posts | </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 15 Oct 2020 21:04:53 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 19 Oct 2020 14:59:01 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>what is Cookie?</title>
+    <link>https://colinder.github.io/cookiesvssession/</link>
+    <pubDate>Mon, 19 Oct 2020 14:59:01 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/cookiesvssession/</guid>
+    <description><![CDATA[​
+개발을 하다보면, 유저의 로그인 기능을 고민하는 경우가 많습니다. 근데. 로그인 기능을 개발하다보면 꼭 마주치는 두 가지&hellip;
+cookie와 session에 대하여 알아보겠습니다. 다만 그전에 cookie와 session이 생기게 된 배경에 대하여 같이 알아 보겠습니다.
+​
+HTTP 프로토콜의 특징 HTTP는 Connectionless(비연결성)하고, Stateless하다고 한다.
+Connectionless란, 클라이언트가 행위를 통해 서비스를 제공받기 위해 서버에 request(요청)를 하면 서버는 클라이언트의 요청값에 따라 클라이언트에게 response(응답)하게 됩니다. 이렇게 한번의 request — response의 결과로 클라이언트는 어플리케이션이 제공하는 서비스를 받게되면서, 서로의 접속을 끊게 된다는 특성입니다.]]></description>
+</item><item>
     <title>06_Vue_LifeCycle</title>
     <link>https://colinder.github.io/06_vue_lifecycle/</link>
     <pubDate>Thu, 15 Oct 2020 21:04:53 &#43;0900</pubDate>
@@ -107,14 +119,5 @@ REST API Reference [TOC]
     <guid>https://colinder.github.io/sw_20.09.21/</guid>
     <description><![CDATA[​
 D3_3307_최장 증가 부분 수열(LIS) 1 2 3 4 5 6 7 8 9 10 11 12 13 14  for T in range(int(input())): N = int(input()) arr = list(map(int, input().split())) dp= [1] * N for i in range(1, N): for j in range(i): if arr[j] &lt; arr[i]: dp[i]= max(dp[i], dp[j] + 1) print(f&#39;#{T+1} {max(dp)}&#39;) # dp는 쉬운듯 어렵고 어려운듯 쉽다... # LIS로 검색하면 도움이 되는 글이 많다.    ​]]></description>
-</item><item>
-    <title>SW Expert Academy_D3 3131, 3233, 1860, 4047</title>
-    <link>https://colinder.github.io/sw_20.09.15/</link>
-    <pubDate>Sat, 19 Sep 2020 22:52:51 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/sw_20.09.15/</guid>
-    <description><![CDATA[​
-D3_3131_100만 이하의 모든 소수 1 2 3 4 5 6 7 8 9 10 11 12  a = [0, 0] + [1] * 1000000 for i in range(2, 1000000): if a[i] == 1: for j in range(2*i, 1000001, i): a[j] = 0 for i in range(2, 1000000): if a[i] == 1: print(i, end=&#34; &#34;) # 에라토스테네스의 체   ​
-D3_3233_정삼각형 분할 놀이 1 2 3 4 5 6 7 8 9 10  for T in range(int(input())): A, B = map(int, input().]]></description>
 </item></channel>
 </rss>

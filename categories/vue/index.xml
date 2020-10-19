@@ -3,7 +3,19 @@
         <title>vue - Category - </title>
         <link>https://colinder.github.io/categories/vue/</link>
         <description>vue - Category - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 24 Sep 2020 09:54:40 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/vue/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 15 Oct 2020 21:04:53 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/vue/" rel="self" type="application/rss+xml" /><item>
+    <title>06_Vue_LifeCycle</title>
+    <link>https://colinder.github.io/06_vue_lifecycle/</link>
+    <pubDate>Thu, 15 Oct 2020 21:04:53 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/06_vue_lifecycle/</guid>
+    <description><![CDATA[​
+Vue_LifeCycle  솔직히 처음 라이프사이클이란 것을 공부했을 때는 이게 무슨 말인지? 삶의 주기를 왜 알아야 하는지 전혀 몰랐습니다. 이런 저에게 Vue 공식문서에는 말했습니다.
+지금 당장 모든 것을 완전히 이해할 필요는 없지만 다이어그램은 앞으로 도움이 될 것입니다.
+ 그리고, LifeCycle을 공부 하기 전 DOM에 대한 개념이 부족하다면 what is DOM?을 꼭 보고 오길 추천합니다.
+​
+Vue.js의 라이프 사이클은 크게 Creation, Mounting, Updating, Destruction으로 나눌 수 있습니다. 이는 생성(create)되고, DOM에 부착(mount)되고, 업데이트(update)되며, 없어지는(destroy) 4가지 과정을 말합니다.]]></description>
+</item><item>
     <title>REST API Reference</title>
     <link>https://colinder.github.io/rest-api-reference/</link>
     <pubDate>Thu, 24 Sep 2020 09:54:40 &#43;0900</pubDate>
@@ -102,18 +114,5 @@ Vue의 이론적 구성 및 설명을 알아보자 1. Vue는 MVVM 패턴을 따�
 2. Vue는 SPA (Single-Page Application)
  서버로부터 완전한 새로운 페이지를 불러오지 않고 현재의 페이지를 동적으로 다시 작성함으로써 사용자와 소통하는 웹 애플리케이션을 말한다.
 내가 이해한 방식: 변경사항이 발생했을 때 새로고침을하며 매번 페이지를 새롭게 구서하는 것이 아니라, 서버를 돌릴 때 이미 모든 페이지가 제작되어 있고 이를 사용자의 선택에 따라 보여주는 것.]]></description>
-</item><item>
-    <title>00_Vue_setting</title>
-    <link>https://colinder.github.io/00_vue_setting/</link>
-    <pubDate>Fri, 17 Jul 2020 21:56:29 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/00_vue_setting/</guid>
-    <description><![CDATA[​
-Vue  Vue.js는 웹 애플리케이션의 사용자 인터페이스를 만들기 위해 사용하는 오픈 소스 프로그레시브 자바스크립트 프레임워크
- ​
-1. 시작하기   &lsquo;Vue&rsquo; VS &lsquo;Django&rsquo;
- 어느 정도 공부를 하면서 체득한 가장 큰 구분점은 &ldquo;Django는 App별로 응답을 구분하고, Vue는 Component별로 응답을 구분한다.&ldquo;는 것이다.
-큰 차이가 없어보이고, 큰 의미가 없어보일 수 있으나 이는 내가 vue를 이해하는데 가장 많은 도움이 된 부분이다.
-    개발 환경 설정 &amp; 프로젝트 생성]]></description>
 </item></channel>
 </rss>

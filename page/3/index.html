@@ -11,7 +11,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://colinder.github.io/" />
 <meta property="og:image" content="https://colinder.github.io/logo.png"/>
-<meta property="og:updated_time" content="2020-10-15T21:04:53+09:00" />
+<meta property="og:updated_time" content="2020-10-19T14:59:01+09:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
 
@@ -103,6 +103,13 @@
         alt="/images/jg_02.jpg"
         title="/images/jg_02.jpg" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/colinder" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="mailto:kjonggwan@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/rest-api-reference/">REST API Reference</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-09-24">2020-09-24</time></span>&nbsp;<span class="post-category">included in <a href="/categories/web/"><i class="far fa-folder fa-fw"></i>web</a>&nbsp;<a href="/categories/django/"><i class="far fa-folder fa-fw"></i>Django</a>&nbsp;<a href="/categories/vue/"><i class="far fa-folder fa-fw"></i>vue</a></span></div><div class="content">​
+REST API Reference [TOC]
+1.사용자 API    Members Descriptions     POST /accounts/signup 회원가입   POST /accounts/login 회원 로그인   POST /accounts/userDetail 회원정보   PUT /accounts/update 회원정보 수정   DELETE /accounts/dropUser 회원탈퇴   GET /accounts/emailAuth 이메일 인증   GET /accounts/emailCheck 이메일 중복 확인   GET /accounts/nicknameCheck 닉네임 중복 확인    1.1 회원 로그인 POST /accounts/login ​	회원 로그인 API 입니다.</div><div class="post-footer">
+        <a href="/rest-api-reference/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/web/">Web</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/sw_20.09.21/">SW Expert Academy_D3 3307, 3304, 4371, 10726</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-09-21">2020-09-21</time></span>&nbsp;<span class="post-category">included in <a href="/categories/sw-expert-academy/"><i class="far fa-folder fa-fw"></i>SW Expert Academy</a></span></div><div class="content">​
 D3_3307_최장 증가 부분 수열(LIS) 1 2 3 4 5 6 7 8 9 10 11 12 13 14  for T in range(int(input())): N = int(input()) arr = list(map(int, input().split())) dp= [1] * N for i in range(1, N): for j in range(i): if arr[j] &lt; arr[i]: dp[i]= max(dp[i], dp[j] + 1) print(f&#39;#{T+1} {max(dp)}&#39;) # dp는 쉬운듯 어렵고 어려운듯 쉽다... # LIS로 검색하면 도움이 되는 글이 많다.    ​</div><div class="post-footer">
@@ -125,16 +132,6 @@ D3_3233_정삼각형 분할 놀이 1 2 3 4 5 6 7 8 9 10  for T in range(int(inpu
 결론 - 블록체인=&gt; 사용자의 접근조건을 기준으로 프라이빗과 퍼블릭을 나눔 - 네트워크=&gt; 서비스 운용형태를 기준으로 프라이빗과 퍼블릭을 나눔 ​</div><div class="post-footer">
         <a href="/private-vs-public-blockchain-vs-network/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/block_chain/">block_chain</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/python_library/">Python_Library</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-09-11">2020-09-11</time></span>&nbsp;<span class="post-category">included in <a href="/categories/python/"><i class="far fa-folder fa-fw"></i>Python</a></span></div><div class="content">​
-자주 쓰는 Python Library  자주 사용하게되는 파이썬 라이브러리를 정리한다.
- ​
-  정규표현식  일대일 매칭되는 문자
- 정규표현식 안에서, 바로 다음 절에서 설명하는 메타문자를 제외한 모든 문자 하나는 일반 문자열 하나와 매칭된다. 예를 들어, a는 a와 매칭되고, 가는 ‘가’와 매칭되는 식이다. 당연히 a가 ‘b’ 또는 ‘가’와 매칭되지는 않는다.
-1 2 3 4 5 6 7 8 9 10 11 12 13  어떤 프로그래밍 언어의 정규표현식이든 메타문자(특수한 기능을 하는 문자)라는 것이 존재한다.</div><div class="post-footer">
-        <a href="/python_library/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/algorithm/">algorithm</a>,&nbsp;<a href="/tags/python/">Python</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
