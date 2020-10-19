@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>what is Cookie? - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="what is Cookie?" />
+<meta property="og:description" content="​
+개발을 하다보면, 유저의 로그인 기능을 고민하는 경우가 많습니다. 근데. 로그인 기능을 개발하다보면 꼭 마주치는 두 가지&hellip;
+cookie와 session에 대하여 알아보겠습니다. 다만 그전에 cookie와 session이 생기게 된 배경에 대하여 같이 알아 보겠습니다.
+​
+HTTP 프로토콜의 특징 HTTP는 Connectionless(비연결성)하고, Stateless하다고 한다.
+Connectionless란, 클라이언트가 행위를 통해 서비스를 제공받기 위해 서버에 request(요청)를 하면 서버는 클라이언트의 요청값에 따라 클라이언트에게 response(응답)하게 됩니다. 이렇게 한번의 request — response의 결과로 클라이언트는 어플리케이션이 제공하는 서비스를 받게되면서, 서로의 접속을 끊게 된다는 특성입니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://colinder.github.io/what_is_cookie/" />
+<meta property="og:image" content="https://colinder.github.io/logo.png"/>
+<meta property="article:published_time" content="2020-10-19T14:59:01+09:00" />
+<meta property="article:modified_time" content="2020-10-19T14:59:01+09:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
+
+<meta name="twitter:title" content="what is Cookie?"/>
+<meta name="twitter:description" content="​
+개발을 하다보면, 유저의 로그인 기능을 고민하는 경우가 많습니다. 근데. 로그인 기능을 개발하다보면 꼭 마주치는 두 가지&hellip;
+cookie와 session에 대하여 알아보겠습니다. 다만 그전에 cookie와 session이 생기게 된 배경에 대하여 같이 알아 보겠습니다.
+​
+HTTP 프로토콜의 특징 HTTP는 Connectionless(비연결성)하고, Stateless하다고 한다.
+Connectionless란, 클라이언트가 행위를 통해 서비스를 제공받기 위해 서버에 request(요청)를 하면 서버는 클라이언트의 요청값에 따라 클라이언트에게 response(응답)하게 됩니다. 이렇게 한번의 request — response의 결과로 클라이언트는 어플리케이션이 제공하는 서비스를 받게되면서, 서로의 접속을 끊게 된다는 특성입니다."/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/what_is_cookie/" /><link rel="prev" href="https://colinder.github.io/06_vue_lifecycle/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "what is Cookie?",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/colinder.github.io\/what_is_cookie\/"
+        },"genre": "posts","keywords": "web, cookie","wordcount":  1517 ,
+        "url": "https:\/\/colinder.github.io\/what_is_cookie\/","datePublished": "2020-10-19T14:59:01+09:00","dateModified": "2020-10-19T14:59:01+09:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "colinder"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="">Hello New World</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="">Hello New World</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">what is Cookie?</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/web/"><i class="far fa-folder fa-fw"></i>web</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-10-19">2020-10-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1517 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;8 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#쿠키-문법">쿠키 문법</a></li>
+    <li><a href="#쿠키-읽기">쿠키 읽기</a></li>
+    <li><a href="#쿠키-구성요소">쿠키 구성요소</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#참고-했던-글">참고 했던 글</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>​</p>
+<p>개발을 하다보면, 유저의 로그인 기능을 고민하는 경우가 많습니다. 근데. 로그인 기능을 개발하다보면 꼭 마주치는 두 가지&hellip;</p>
+<p>cookie와 session에 대하여 알아보겠습니다. 다만 그전에 cookie와 session이 생기게 된 배경에 대하여 같이 알아 보겠습니다.</p>
+<p>​</p>
+<h1 id="http-프로토콜의-특징">HTTP 프로토콜의 특징</h1>
+<p>HTTP는 Connectionless(비연결성)하고, Stateless하다고 한다.</p>
+<p>Connectionless란, 클라이언트가 행위를 통해 서비스를 제공받기 위해 서버에 request(요청)를 하면 서버는 클라이언트의 요청값에 따라 클라이언트에게 response(응답)하게 됩니다.
+이렇게 한번의 request — response의 결과로 클라이언트는 어플리케이션이 제공하는 서비스를 받게되면서, 서로의 접속을 끊게 된다는 특성입니다.</p>
+<p>Stateless란, 접속을 끊는 순간 서버와 클라이언트간의 통신이 끊키고 상태정보를 유지하지 않는다는 특성이다.</p>
+<p>이 두가지 특성은 장점이자 단점이 되는데, 접속을 유지함에 따르는 리소스를 줄일 수 있는 장점과 통신을 할때마다 클라이언트 인증을 해야한다는 단점이 있다.</p>
+<p>이러한 단점을 보완하기 위해 쿠키, 세션이 생기게 되었습니다.</p>
+<p>​</p>
+<h1 id="쿠키cookie란">쿠키(cookie)란?</h1>
+<p>웹 서버가 브라우저에게 지시하여 사용자의 로컬 컴퓨터에 파일 또는 메모리에 <strong>사용자 식별 정보를 저장하는 작은 테이터 파일</strong>입니다. 어떤 말인지 모르겠죠? ㅎ..</p>
+<p>흐름을 보며 알아봅시다!</p>
+<a class="lightgallery" href="/images/cookie_00.png" title="/images/cookie_00.png" data-thumbnail="/images/cookie_00.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/cookie_00.png"
+            data-srcset="/images/cookie_00.png, /images/cookie_00.png 1.5x, /images/cookie_00.png 2x"
+            data-sizes="auto"
+            alt="/images/cookie_00.png" width="1000px" />
+    </a>
+<ol>
+<li>
+<p>클라이언트(사용자)가 브라우저(사용자PC)를 통해 방문한 적 없는 페이지에 접속하면, 서버는 “세션 식별자(session identifier)” 정보를 담아 쿠키를 설정하여 제공(응답)한다.</p>
+</li>
+<li>
+<p><strong>제공받은 cookie는 클라이언트의 사용자PC(로컬 하드)에 저장된다.</strong></p>
+<p><code>A FEW TIMES LATER....</code></p>
+</li>
+<li>
+<p>나중에 클라이언트가 재접속시 사용자PC(로컬 하드)에 있던 Set-cookie값을 서버측으로 전송한다.</p>
+</li>
+<li>
+<p>서버측에서는 사용자를 인식하고 서비스 로직에 따라 클라이언트의 cookie값을 update 하게 된다.</p>
+</li>
+</ol>
+<p><em>*새로운 페이지에 접근하기전에는 클라이언트에게 쿠키가 없습니다.</em></p>
+<p><em>*서버는 쿠키를 보낼때 이 쿠키를 사용할 Domain과 Path정보까지 함께 브라우저로 전송합니다. 즉, Domain과 Path는 쿠키를 어느 도메인의 어느 패스에서 전송할지를 브라우저에게 알려주고 브라우저는 Domain과 Path가 일치할 때만 쿠키를 서버로 전송해서 사용자를 인증 받습니다. 일단 그렇게 알고 봅시다ㅎ.</em></p>
+<p>​</p>
+<p>근데 쿠키에는 “세션 식별자(session identifier) 정보”가 담겨 있다고 했는데 쿠키는 어떻게 구성되어 있을까요? 또 어떻게 접근해서 정보를 보는 걸까요? 알아봅시다!</p>
+<h2 id="쿠키-문법">쿠키 문법</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// 쿠키는 &#34;이름-값&#34; 페어로 시작됩니다.
+</span><span class="c1"></span><span class="nx">Set</span><span class="o">-</span><span class="nx">Cookie</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">name</span><span class="o">&gt;=&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">value</span><span class="o">&gt;</span> 
+<span class="nx">Set</span><span class="o">-</span><span class="nx">Cookie</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">name</span><span class="o">&gt;=&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">value</span><span class="o">&gt;</span><span class="p">;</span> <span class="nx">Expires</span><span class="o">=&lt;</span><span class="nx">date</span><span class="o">&gt;</span>
+<span class="nx">Set</span><span class="o">-</span><span class="nx">Cookie</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">name</span><span class="o">&gt;=&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">value</span><span class="o">&gt;</span><span class="p">;</span> <span class="nx">Max</span><span class="o">-</span><span class="nx">Age</span><span class="o">=&lt;</span><span class="nx">non</span><span class="o">-</span><span class="nx">zero</span><span class="o">-</span><span class="nx">digit</span><span class="o">&gt;</span>
+<span class="nx">Set</span><span class="o">-</span><span class="nx">Cookie</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">name</span><span class="o">&gt;=&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">value</span><span class="o">&gt;</span><span class="p">;</span> <span class="nx">Domain</span><span class="o">=&lt;</span><span class="nx">domain</span><span class="o">-</span><span class="nx">value</span><span class="o">&gt;</span>
+<span class="nx">Set</span><span class="o">-</span><span class="nx">Cookie</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">name</span><span class="o">&gt;=&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">value</span><span class="o">&gt;</span><span class="p">;</span> <span class="nx">Path</span><span class="o">=&lt;</span><span class="nx">path</span><span class="o">-</span><span class="nx">value</span><span class="o">&gt;</span>
+<span class="nx">Set</span><span class="o">-</span><span class="nx">Cookie</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">name</span><span class="o">&gt;=&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">value</span><span class="o">&gt;</span><span class="p">;</span> <span class="nx">Secure</span>
+<span class="nx">Set</span><span class="o">-</span><span class="nx">Cookie</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">name</span><span class="o">&gt;=&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">value</span><span class="o">&gt;</span><span class="p">;</span> <span class="nx">HttpOnly</span>
+
+<span class="nx">Set</span><span class="o">-</span><span class="nx">Cookie</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">name</span><span class="o">&gt;=&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">value</span><span class="o">&gt;</span><span class="p">;</span> <span class="nx">SameSite</span><span class="o">=</span><span class="nx">Strict</span>
+<span class="nx">Set</span><span class="o">-</span><span class="nx">Cookie</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">name</span><span class="o">&gt;=&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">value</span><span class="o">&gt;</span><span class="p">;</span> <span class="nx">SameSite</span><span class="o">=</span><span class="nx">Lax</span>
+
+<span class="c1">// Multiple directives are also possible, for example:
+</span><span class="c1"></span><span class="nx">Set</span><span class="o">-</span><span class="nx">Cookie</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">name</span><span class="o">&gt;=&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">value</span><span class="o">&gt;</span><span class="p">;</span> <span class="nx">Domain</span><span class="o">=&lt;</span><span class="nx">domain</span><span class="o">-</span><span class="nx">value</span><span class="o">&gt;</span><span class="p">;</span> <span class="nx">Secure</span><span class="p">;</span> <span class="nx">HttpOnly</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<h2 id="쿠키-읽기">쿠키 읽기</h2>
+<p><code>document.cookie</code> 프로퍼티를 이용하면 브라우저에서도 쿠키에 접근할 수 있습니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// ex) 
+</span><span class="c1"></span><span class="nx">alert</span><span class="p">(</span> <span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="p">);</span> <span class="c1">// cookie1=value1; cookie2=value2;...	 // 모든 쿠키 확인
+</span><span class="c1"></span>
+<span class="c1">// 어디든 사이트에 들어가서 개발자 도구창을 열고 console.log(document.cookie) 를 입력해 보세요!
+</span></code></pre></td></tr></table>
+</div>
+</div><p><code>document.cookie</code>는 <code>name=value</code> 쌍으로 구성되어있고, 각 쌍은 <code>;</code>로 구분합니다. <em>(ex. document.cookie = &ldquo;cookiename=value; path=/; expires=0; domain=.tistory.com&rdquo;)</em> 이때, 쌍 하나는 하나의 독립된 쿠키를 나타냅니다.</p>
+<p>정규 표현식이나 배열 관련 함수를 함께 사용해 <code>;</code>을 기준으로 <code>document.cookie</code>의 값을 분리하면 원하는 쿠키를 찾을 수 있습니다.</p>
+<p>​</p>
+<h2 id="쿠키-구성요소">쿠키 구성요소</h2>
+<p>쿠키는 다음의 요소들로 구성됩니다.</p>
+<ol>
+<li>
+<p>name (쿠키의 이름) <code>필수</code></p>
+</li>
+<li>
+<p>value (쿠키에 저장된 값) <code>필수</code></p>
+</li>
+<li>
+<p>domain (쿠키를 발급해준 서버의 도메인(사이트) 주소)</p>
+<ul>
+<li>
+<p>ex) <code>domain=site.com</code></p>
+<p>쿠키에 접근 가능한 domain(도메인)을 지정합니다. 다만, 몇 가지 제약이 있어서 아무 도메인이나 지정할 수 없습니다.</p>
+<p><code>domain</code> 옵션에 아무 값도 넣지 않았다면, 쿠키를 발급받은 사이트(도메인)에서만 쿠키에 접근할 수 있습니다. <code>site.com</code>에서 설정한 쿠키는 <code>other.com</code>에서 확인할 수 없습니다.</p>
+<p>이 외에 까다로운 제약사항이 하나 더 있습니다. 서브 도메인(subdomain)인 <code>forum.site.com</code>에서도 쿠키 정보를 얻을 수 없다는 점입니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// ex) site.com에서 user가 colinder라는 쿠키를 설정함
+</span><span class="c1"></span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="o">=</span> <span class="s2">&#34;user=colinder&#34;</span>
+     
+<span class="c1">// site.com의 서브도메인인 forum.site.com에서 쿠키에 접근하려 함
+</span><span class="c1"></span><span class="nx">alert</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="p">);</span> <span class="c1">// 찾을 수 없음
+</span></code></pre></td></tr></table>
+</div>
+</div><p><strong>서브 도메인이나 다른 도메인에서 쿠키에 접속할 방법은 없습니다. <code>site.com</code>에서 생성한 쿠키를 <code>other.com</code>에선 절대 전송받을 수 없습니다.</strong></p>
+<p>이런 제약사항은 안정성을 높이기 위해 만들어졌습니다. 민감한 데이터가 저장된 쿠키는 관련 페이지에서만 볼 수 있도록 하기 위함입니다.</p>
+<p>하지만, <code>forum.site.com</code>과 같은 서브 도메인에서 <code>site.com</code>에서 생성한 쿠키 정보를 얻을 방법이 있습니다. <code>site.com</code>에서 쿠키를 설정할 때 <code>domain</code> 옵션에 루트 도메인인 <code>domain=site.com</code>을 명시적으로 설정해 주면 됩니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// site.com에서
+</span><span class="c1">// 서브 도메인(*.site.com) 어디서든 쿠키에 접속하게 설정할 수 있습니다.
+</span><span class="c1"></span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="o">=</span> <span class="s2">&#34;user=colinder; domain=site.com&#34;</span>
+     
+<span class="c1">// 이렇게 설정하면
+</span><span class="c1"></span>     
+<span class="c1">// forum.site.com와 같은 서브도메인에서도 쿠키 정보를 얻을 수 있습니다.
+</span><span class="c1"></span><span class="nx">alert</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="p">);</span> <span class="c1">// user=colinder 쿠키를 확인할 수 있습니다.
+</span></code></pre></td></tr></table>
+</div>
+</div><p>하위 호환성 유지를 위해 (<code>site.com</code> 앞에 점을 붙인) <code>domain=.site.com</code>도 <code>domain=site.com</code>과 동일하게 작동합니다. 오래된 표기법이긴 하지만 구식 브라우저를 지원하려면 이 표기법을 사용하는 것이 좋습니다.</p>
+<p>이렇게 <code>domain</code> 옵션값을 적절히 사용하면 서브 도메인에서도 쿠키에 접근할 수 있습니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>path (쿠키로 사용자를 인증받을 수 있는 경로 설정)</p>
+<ul>
+<li>
+<p>ex) <code>path=/</code></p>
+<p><a href="https://opentutorials.org/course/3387/21745" target="_blank" rel="noopener noreffer">서버 이름 뒤에 오는 경로</a>(ex. site.com<code>/login</code>, site.com<code>/mainpage</code> 등)에 따라 쿠키 사용여부가 결정됩니다. 위와 같이 슬래쉬( / )로 설정하면 모든 path에서 쿠키를 사용할 수 있습니다. (미 지정시) 기본값은 현재 경로입니다.</p>
+<p><code>path=/admin</code> 옵션을 사용하여 설정한 쿠키는 <code>/admin</code>과 <code>/admin/something</code>에선 볼 수 있지만, <code>/home</code> 이나 <code>/adminpage</code>에선 볼 수 없습니다.</p>
+<p>특별한 경우가 아니라면, <code>path</code> 옵션을 <code>path=/</code>같이 루트로 설정해 웹사이트의 모든 페이지에서 쿠키에 접근할 수 있도록 합시다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>expires (쿠키의 만료시간)</p>
+<ul>
+<li>
+<p>쿠키가 언제 삭제되는지 결정합니다.</p>
+</li>
+<li>
+<p>쿠키는 <code>지속 쿠키(Persistent Cookie)</code>와 <code>세션 쿠키(Session Cookie)</code>로 나눌 수 있습니다.</p>
+<ul>
+<li>
+<p><code>지속 쿠키(Persistent Cookie)</code></p>
+<ul>
+<li>
+<p>만료 날짜/시간(<code>expires</code> 나 <code>max-age</code> )을 지정하지 않은 쿠키</p>
+</li>
+<li>
+<p>__파일로 저장__되므로 <strong>브라우저가 종료되어도 쿠키는 남아있습니다.</strong></p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>세션 쿠키(Session Cookie)</code></p>
+<ul>
+<li>
+<p>만료 날짜/시간(<code>expires</code> 나 <code>max-age</code> )을 지정한 쿠키</p>
+</li>
+<li>
+<p><strong>브라우저 메모리에 저장</strong>되므로 <strong>브라우저가 종료되면 쿠키는 사라지게 됩니다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>👀 참고로 세션 쿠키의 값은 보안상 꽤나 안전한 브라우저(ex. 구글 크롬)의 메모리에 저장되기 때문에 보안에 유리하지만 파일로 저장되는 지속 쿠키의 경우 비교적으로 보안에 취약하다.</strong></p>
+<ul>
+<li>
+<p><code>expires</code>와 <code>max-age</code></p>
+<p>ex) <code>expires=Tue, 19 Jan 2038 03:14:07 GMT</code></p>
+<p>브라우저는 설정된 유효 일자까지 쿠키를 유지하다가, 해당 일자가 도달하면 쿠키를 자동으로 삭제합니다.</p>
+<p>쿠키의 유효 일자는 반드시 GMT(Greenwich Mean Time) 포맷으로 설정해야 합니다. <code>date.toUTCString</code>을 사용하면 해당 포맷으로 쉽게 변경할 수 있습니다. 아래는 유효 기간이 하루인 쿠키를 만드는 예시입니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// 지금으로부터 하루 후
+</span><span class="c1"></span><span class="kd">let</span> <span class="nx">date</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">()</span> <span class="o">+</span> <span class="mi">86400</span><span class="nx">e3</span><span class="p">);</span>
+<span class="nx">date</span> <span class="o">=</span> <span class="nx">date</span><span class="p">.</span><span class="nx">toUTCString</span><span class="p">();</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="o">=</span> <span class="s2">&#34;user=colinder; expires=&#34;</span> <span class="o">+</span> <span class="nx">date</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><code>expires</code> 옵션값을 과거로 지정하면 쿠키는 삭제됩니다.</p>
+<ul>
+<li><strong><code>max-age=3600</code></strong></li>
+</ul>
+<p><code>max-age</code>는 <code>expires</code> 옵션의 대안으로, 쿠키 만료 기간을 설정할 수 있게 해줍니다. 현재부터 설정하고자 하는 만료일시까지의 시간을 <strong>초</strong>로 환산한 값을 설정합니다.</p>
+<p>0이나 음수값을 설정하면 쿠키는 바로 삭제됩니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// 1시간 뒤에 쿠키가 삭제됩니다.
+</span><span class="c1"></span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="o">=</span> <span class="s2">&#34;user=colinder; max-age=3600&#34;</span><span class="p">;</span>
+       
+<span class="c1">// 만료 기간을 0으로 지정하여 쿠키를 바로 삭제함
+</span><span class="c1"></span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="o">=</span> <span class="s2">&#34;user=colinder; max-age=0&#34;</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><em>다른 브라우저들은 둘 다(<code>Expires</code> 와 <code>Max-Age)</code> 지정되었을 때 <code>Max-Age</code> 값을 더 우선시합니다.</em></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>secure (쿠키 보안 설정)</p>
+<ul>
+<li>
+<p>이 옵션을 설정하면 HTTPS로 통신하는 경우에만 쿠키가 전송됩니다.</p>
+<p><code>secure</code> 옵션이 설정된 경우, <code>https://site.com</code>에서 설정한 쿠키는 <code>http://site.com</code>에서 접근할 수 없습니다. 쿠키에 민감한 내용이 저장되어 있어 암호화되지 않은 HTTP 연결을 통해 전달되는 걸 원치 않는다면 이 옵션을 사용하면 됩니다.</p>
+<p><strong><code>secure</code> 옵션을 설정하지 않으면 <code>http://site.com</code>에서 설정(생성)한 쿠키를 <code>https://site.com</code>에서 읽을 수 있고, <code>https://site.com</code>에서 설정(생성)한 쿠키도 <code>http://site.com</code>에서 읽을 수 있습니다.</strong></p>
+<p>쿠키는 기본적으로 도메인만 확인하지 프로토콜을 따지진 않기 때문입니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// (https:// 로 통신하고 있다고 가정 중)
+</span><span class="c1">// 설정한 쿠키는 HTTPS 통신시에만 접근할 수 있음
+</span><span class="c1"></span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="o">=</span> <span class="s2">&#34;user=John; secure&#34;</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p>samesite (쿠키 보안 설정)</p>
+<ul>
+<li>
+<p>또 다른 보안 속성인 <code>samesite</code> 옵션은 <a href="https://ko.wikipedia.org/wiki/%EC%82%AC%EC%9D%B4%ED%8A%B8_%EA%B0%84_%EC%9A%94%EC%B2%AD_%EC%9C%84%EC%A1%B0" target="_blank" rel="noopener noreffer">크로스 사이트 요청 위조(cross-site request forgery, XSRF)공격</a>을 막기 위해 만들어진 옵션입니다. 이 옵션엔 두 가지 값을 설정할 수 있습니다.</p>
+<ul>
+<li>
+<p><strong><code>samesite=strict</code>(값을 설정하지 않고 그냥 <code>samesite</code> 옵션만 써줘도 동일하게 동작함)</strong></p>
+<p>사용자가 사이트 외부에서 요청을 보낼 때, <code>samesite=strict</code> 옵션이 있는 쿠키는 절대로 전송되지 않습니다.</p>
+<p>메일에 있는 링크를 따라 접속하거나 <code>evil.com</code>과 같은 사이트에서 폼을 전송하는 경우 등과 같이 제3의 도메인에서 요청이 이뤄질 땐 쿠키가 전송되지 않죠.</p>
+<p>인증 쿠키에 <code>samesite</code> 옵션이 있는 경우, XSRF 공격은 절대로 성공하지 못합니다. <code>evil.com</code>에서 전송하는 요청엔 쿠키가 없을 것이고, <code>bank.com</code>은 미인식 사용자에게 지급을 허용하지 않을 것이기 때문입니다.</p>
+<p>이 보호장치는 꽤 믿을 만합니다. <code>bank.com</code>에서 수행하는 모든 작업은 samesite 쿠키를 함께 전송하기 때문이죠.</p>
+<p>하지만 약간의 불편함도 감수해야 합니다.</p>
+<p>만약 사용자가 메모장 등에 <code>bank.com</code>에 요청을 보낼 수 있는 링크를 기록해 놓았다가 이 링크를 클릭해 접속하면 <code>bank.com</code>이 사용자를 인식하지 못하는 상황이 발생하기 때문입니다. 실제로 이런 경우 <code>samesite=strict</code> 옵션이 설정된 쿠키는 전송되지 않습니다.</p>
+<p>이런 문제는 쿠키 두 개를 함께 사용해 해결할 수 있습니다. &ldquo;Hello, John&quot;과 같은 환영 메시지를 출력해주는 &ldquo;일반 인증(general recognition)&ldquo;용 쿠키, 데이터 교환 시 사용하는 <code>samesite=strict</code> 옵션이 있는 쿠키를 따로 둬서 말이죠. 이렇게 하면 외부 사이트를 통해 접근한 사용자도 정상적으로 환영 메시지를 볼 수 있습니다. 지급은 무조건 은행의 사이트를 통해서만 수행되도록 만들면 됩니다.</p>
+</li>
+<li>
+<p><strong><code>samesite=lax</code></strong></p>
+<p><code>samesite=lax</code>는 사용자 경험을 해치지 않으면서 XSRF 공격을 막을 수 있는 느슨한 접근법입니다.</p>
+<p><code>strict</code>와 마찬가지로 <code>lax</code>도 사이트 외부에서 요청을 보낼 때 브라우저가 쿠키를 보내는 걸 막아줍니다. 하지만 예외사항이 존재합니다.</p>
+<p>아래 두 조건을 동시에 만족할 때는 <code>samesite=lax</code> 옵션을 설정한 쿠키가 전송됩니다.</p>
+<ol>
+<li>
+<p>“안전한” HTTP 메서드인 경우(예: GET 방식. POST 방식은 해당하지 않음).</p>
+<p>안전한 HTTP 메서드 목록은 <a href="https://tools.ietf.org/html/rfc7231" target="_blank" rel="noopener noreffer">RFC7231 명세</a>에서 확인할 수 있습니다. 안전한 메서드는 읽기 작업만 수행하고 쓰기나 데이터 교환 작업은 수행하지 않습니다. 참고로, 링크를 따라가는 행위는 항상 GET 방식이기 때문에 안전한 메서드만 쓰입니다.</p>
+</li>
+<li>
+<p>작업이 최상위 레벨 탐색에서 이루어질 때(브라우저 주소창에서 URL을 변경하는 경우).</p>
+<p>대다수의 작업은 이 조건을 충족합니다. 하지만 <code>&lt;iframe&gt;</code>안에서 탐색이 일어나는 경우는 최상위 레벨 탐색이 아니기 때문에 이 조건을 충족하지 못합니다. AJAX 요청 또한 탐색 행위가 아니므로 이 조건을 충족하지 못합니다.</p>
+</li>
+</ol>
+<p>브라우저를 이용해 자주 하는 작업인 &ldquo;특정 URL로 이동하기&quot;를 실행하는 경우, <code>samesite=lax</code> 옵션이 설정되어 있으면 쿠키가 서버로 전송됩니다. 노트에 저장된 링크를 여는 것도 특정 URL로 이동하는 행위이므로 위 조건들을 충족합니다.</p>
+<p>하지만 외부 사이트에서 AJAX 요청을 보내거나 폼을 전송하는 등의 복잡한 작업을 시도할 때는 쿠키가 전송되지 않습니다.</p>
+<p>이런 제약사항이 있어도 괜찮다면, <code>samesite=lax</code> 옵션은 사용자 경험을 해치지 않으면서 보안을 강화해주는 방법으로 활용할 수 있을 것입니다.</p>
+<p><code>samesite</code>는 좋은 옵션이긴 하지만, 한가지 문제점이 있습니다.</p>
+<ul>
+<li>오래된 브라우저(2017년 이전 버전)에선 <code>samesite</code> 옵션을 지원하지 않습니다.</li>
+</ul>
+<p><strong>따라서 <code>samesite</code> 옵션으로만 보안 처리를 하게 되면, 구식 브라우저에서 보안 문제가 발생할 수 있습니다.</strong></p>
+<p>구식 브라우저에 대응하지 못한다는 문제가 있긴 하지만, <code>samesite</code> 옵션을 XSRF 토큰 같은 다른 보안 기법과 함께 사용하면 보안을 강화할 수 있습니다. 구식 브라우저를 더는 사용하지 않는 때가 오면 XSRF 토큰 역시 필요하지 않겠죠.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>HttpOnly</p>
+<ul>
+<li>
+<p>HttpOnly 속성이 붙은 쿠키는 HTTP나 HTTPS 이외의 방법으로는 사용이 안됩니다. 예컨데 javascript의 document.cookie메서드를 이용해서 쿠키정보를 획득할 수가 없습니다. 그러므로 **<a href="https://4rgos.tistory.com/1" target="_blank" rel="noopener noreffer">cross-site scripting(XSS)</a>**공격을 방어할 수 있다.</p>
+<p>​</p>
+<p>​</p>
+<p><a hef=""><p style="text-align:right;">생각보다 분량이 많아져서 session은 다음 글로 정리해야겠습니다.</p></a></p>
+<p>​</p>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="요약">👀요약</h1>
+<blockquote>
+<p>쿠기 종류에 따라 인증 방식의 차이는 없으나 <strong>데이터 저장 방식의 차이</strong>라고 할 수 있습니다. <strong>Persistent Cookie = 클라이언트 ,Session Cookie = 서버</strong></p>
+</blockquote>
+<p>​</p>
+<p>​</p>
+<h2 id="참고-했던-글">참고 했던 글</h2>
+<ul>
+<li><a href="https://thoughtbot.com/blog/lucky-cookies">https://thoughtbot.com/blog/lucky-cookies</a></li>
+<li><a href="https://www.joinc.co.kr/w/man/12/cookie">https://www.joinc.co.kr/w/man/12/cookie</a></li>
+<li><a href="https://ko.javascript.info/cookie#ref-201">https://ko.javascript.info/cookie#ref-201</a></li>
+<li><a href="https://ko.javascript.info/cookie">https://ko.javascript.info/cookie</a></li>
+<li><a href="https://genesis8.tistory.com/220">https://genesis8.tistory.com/220</a></li>
+<li><a href="https://medium.com/@ddinggu/cookie%EB%9E%80-a650c6d2803e">https://medium.com/@ddinggu/cookie%EB%9E%80-a650c6d2803e</a></li>
+<li><a href="https://jeong-pro.tistory.com/80">https://jeong-pro.tistory.com/80</a></li>
+<li><a href="https://im-first-rate.tistory.com/33">https://im-first-rate.tistory.com/33</a></li>
+<li><a href="https://noritersand.github.io/javascript/javascript-document-cookie-%EC%BF%A0%ED%82%A4-%EC%BB%A8%ED%8A%B8%EB%A1%A4/">https://noritersand.github.io/javascript/javascript-document-cookie-%EC%BF%A0%ED%82%A4-%EC%BB%A8%ED%8A%B8%EB%A1%A4/</a></li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2020-10-19</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/what_is_cookie/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/web/">Web</a>,&nbsp;<a href="/tags/cookie/">cookie</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/06_vue_lifecycle/" class="prev" rel="prev" title="06_Vue_LifeCycle"><i class="fas fa-angle-left fa-fw"></i>06_Vue_LifeCycle</a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.76.5">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
