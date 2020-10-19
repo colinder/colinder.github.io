@@ -39,7 +39,7 @@ Connectionless란, 클라이언트가 행위를 통해 서비스를 제공받기
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/what_is_cookie\/"
-        },"genre": "posts","keywords": "web, cookie","wordcount":  1502 ,
+        },"genre": "posts","keywords": "web, cookie","wordcount":  1500 ,
         "url": "https:\/\/colinder.github.io\/what_is_cookie\/","datePublished": "2020-10-19T14:59:01+09:00","dateModified": "2020-10-19T14:59:01+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -116,7 +116,7 @@ Connectionless란, 클라이언트가 행위를 통해 서비스를 제공받기
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">what is Cookie?</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/web/"><i class="far fa-folder fa-fw"></i>web</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-10-19">2020-10-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1502 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-10-19">2020-10-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1500 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;8 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -270,36 +270,30 @@ Connectionless란, 클라이언트가 행위를 통해 서비스를 제공받기
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-javascript" data-lang="javascript">
-</code></pre></td></tr></table>
-</div>
-</div></li>
-</ul>
-<p>// site.com에서
-// 서브 도메인(*.site.com) 어디서든 쿠키에 접속하게 설정할 수 있습니다.
-document.cookie = &ldquo;user=colinder; domain=site.com&rdquo;</p>
-<p>// 이렇게 설정하면
-// forum.site.com와 같은 서브도메인에서도 쿠키 정보를 얻을 수 있습니다.</p>
-<p>alert(document.cookie); // user=colinder 쿠키를 확인할 수 있습니다.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">   
-하위 호환성 유지를 위해 (`site.com` 앞에 점을 붙인) `domain=.site.com`도 `domain=site.com`과 동일하게 작동합니다. 오래된 표기법이긴 하지만 구식 브라우저를 지원하려면 이 표기법을 사용하는 것이 좋습니다.
-
-이렇게 `domain` 옵션값을 적절히 사용하면 서브 도메인에서도 쿠키에 접근할 수 있습니다.
-
-</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// site.com에서
+</span><span class="c1">// 서브 도메인(*.site.com) 어디서든 쿠키에 접속하게 설정할 수 있습니다.
+</span><span class="c1"></span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="o">=</span> <span class="s2">&#34;user=colinder; domain=site.com&#34;</span>
+     
+<span class="c1">// 이렇게 설정하면
+</span><span class="c1">// forum.site.com와 같은 서브도메인에서도 쿠키 정보를 얻을 수 있습니다.
+</span><span class="c1"></span>     
+<span class="nx">alert</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="p">);</span> <span class="c1">// user=colinder 쿠키를 확인할 수 있습니다.
+</span></code></pre></td></tr></table>
 </div>
-</div></li>
+</div><p>하위 호환성 유지를 위해 (<code>site.com</code> 앞에 점을 붙인) <code>domain=.site.com</code>도 <code>domain=site.com</code>과 동일하게 작동합니다. 오래된 표기법이긴 하지만 구식 브라우저를 지원하려면 이 표기법을 사용하는 것이 좋습니다.</p>
+<p>이렇게 <code>domain</code> 옵션값을 적절히 사용하면 서브 도메인에서도 쿠키에 접근할 수 있습니다.</p>
+</li>
+</ul>
+</li>
 <li>
 <p>path (쿠키로 사용자를 인증받을 수 있는 경로 설정)</p>
 <ul>
@@ -320,91 +314,71 @@ document.cookie = &ldquo;user=colinder; domain=site.com&rdquo;</p>
 <li>
 <p>쿠키는 <code>지속 쿠키(Persistent Cookie)</code>와 <code>세션 쿠키(Session Cookie)</code>로 나눌 수 있습니다.</p>
 <ul>
-<li><code>지속 쿠키(Persistent Cookie)</code></li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<ul>
 <li>
-<p>만료 날짜/시간(<code>expires</code> 나 <code>max-age</code> )을 지정하지 않은 쿠키</p>
-</li>
-<li>
-<p><strong>파일로 저장</strong>되므로 <strong>브라우저가 종료되어도 쿠키는 남아있습니다.</strong></p>
-</li>
-</ul>
+<p><code>지속 쿠키(Persistent Cookie)</code></p>
 <ul>
+<li>만료 날짜/시간(<code>expires</code> 나 <code>max-age</code> )을 지정하지 않은 쿠키</li>
+<li><strong>파일로 저장</strong>되므로 <strong>브라우저가 종료되어도 쿠키는 남아있습니다.</strong></li>
+</ul>
+</li>
 <li>
 <p><code>세션 쿠키(Session Cookie)</code></p>
 <ul>
-<li>
-<p>만료 날짜/시간(<code>expires</code> 나 <code>max-age</code> )을 지정한 쿠키</p>
-</li>
-<li>
-<p><strong>브라우저 메모리에 저장</strong>되므로 <strong>브라우저가 종료되면 쿠키는 사라지게 됩니다.</strong></p>
-</li>
+<li>만료 날짜/시간(<code>expires</code> 나 <code>max-age</code> )을 지정한 쿠키</li>
+<li><strong>브라우저 메모리에 저장</strong>되므로 <strong>브라우저가 종료되면 쿠키는 사라지게 됩니다.</strong></li>
 </ul>
 </li>
-</ul>
-<p><strong>👀 참고로 세션 쿠키의 값은 보안상 꽤나 안전한 브라우저(ex. 구글 크롬)의 메모리에 저장되기 때문에 보안에 유리하지만 파일로 저장되는 지속 쿠키의 경우 비교적으로 보안에 취약합니다.</strong></p>
-<ul>
 <li>
 <p><code>expires</code>와 <code>max-age</code></p>
 <ul>
 <li>
 <p><strong><code>expires</code></strong></p>
 <p>ex) expires=Tue, 19 Jan 2038 03:14:07 GMT</p>
-<p>브라우저는 설정된 유효 일자까지 쿠키를 유지하다가, 해당 일자가 도달하면 쿠키를 자동으로 삭제합니다.</p>
+<p>브라우저는 설정된 유효 일자까지 쿠키를 유지하다가, 해당 일자가 도달하면 쿠키를 자동으로 삭제합니다. (옵션값을 과거로 지정하면 쿠키는 삭제됩니다.)</p>
 <p><em>쿠키의 유효 일자는 반드시 GMT(Greenwich Mean Time) 포맷으로 설정해야 합니다. <code>date.toUTCString</code>을 사용하면 해당 포맷으로 쉽게 변경할 수 있습니다. 아래는 유효 기간이 하루인 쿠키를 만드는 예시입니다.</em></p>
-<pre><code> ```javascript
- // 지금으로부터 하루 후
- let date = new Date(Date.now() + 86400e3);
- date = date.toUTCString();
-</code></pre>
-<p>document.cookie = &ldquo;user=colinder; expires=&rdquo; + date;</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
+</span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">     
-`expires` 옵션값을 과거로 지정하면 쿠키는 삭제됩니다.
-     
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"> <span class="c1">// 지금으로부터 하루 후
+</span><span class="c1"></span> <span class="kd">let</span> <span class="nx">date</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">()</span> <span class="o">+</span> <span class="mi">86400</span><span class="nx">e3</span><span class="p">);</span>
+ <span class="nx">date</span> <span class="o">=</span> <span class="nx">date</span><span class="p">.</span><span class="nx">toUTCString</span><span class="p">();</span>
+ <span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="o">=</span> <span class="s2">&#34;user=colinder; expires=&#34;</span> <span class="o">+</span> <span class="nx">date</span><span class="p">;</span>
 </code></pre></td></tr></table>
 </div>
 </div></li>
 <li>
 <p><strong><code>max-age</code></strong></p>
 <p>ex) max-age=3600</p>
-<p><code>max-age</code>는 <code>expires</code> 옵션의 대안으로, 쿠키 만료 기간을 설정할 수 있게 해줍니다. 현재부터 설정하고자 하는 만료일시까지의 시간을 <strong>초</strong>로 환산한 값을 설정합니다.</p>
-<pre><code> 0이나 음수값을 설정하면 쿠키는 바로 삭제됩니다.
-   
- ```javascript
- // 1시간 뒤에 쿠키가 삭제됩니다.
- document.cookie = &quot;user=colinder; max-age=3600&quot;;
-</code></pre>
-<p>// 만료 기간을 0으로 지정하여 쿠키를 바로 삭제함
-document.cookie = &ldquo;user=colinder; max-age=0&rdquo;;</p>
+<p><code>max-age</code>는 <code>expires</code> 옵션의 대안으로, 쿠키 만료 기간을 설정할 수 있게 해줍니다. 현재부터 설정하고자 하는 만료일시까지의 시간을 <strong>초</strong>로 환산한 값을 설정합니다. (0이나 음수값을 설정하면 쿠키는 바로 삭제됩니다.)</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">     
-   *다른 브라우저들은 둘 다(`Expires` 와 `Max-Age)` 지정되었을 때 `Max-Age` 값을 더 우선시합니다.*
- 
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// 1시간 뒤에 쿠키가 삭제됩니다.
+</span><span class="c1"></span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="o">=</span> <span class="s2">&#34;user=colinder; max-age=3600&#34;</span><span class="p">;</span>
+         
+<span class="c1">// 만료 기간을 0으로 지정하여 쿠키를 바로 삭제함
+</span><span class="c1"></span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="o">=</span> <span class="s2">&#34;user=colinder; max-age=0&#34;</span><span class="p">;</span>
 </code></pre></td></tr></table>
 </div>
-</div></li>
+</div><p><em>다른 브라우저들은 둘 다(<code>Expires</code> 와 <code>Max-Age)</code> 지정되었을 때 <code>Max-Age</code> 값을 더 우선시합니다.</em></p>
+</li>
 </ul>
 </li>
 </ul>
-<ol start="6">
+</li>
+</ul>
+</li>
 <li>
 <p>secure (쿠키 보안 설정)</p>
 <ul>
@@ -445,8 +419,7 @@ document.cookie = &ldquo;user=colinder; max-age=0&rdquo;;</p>
 <p>이런 문제는 쿠키 두 개를 함께 사용해 해결할 수 있습니다. &ldquo;Hello, John&quot;과 같은 환영 메시지를 출력해주는 &ldquo;일반 인증(general recognition)&ldquo;용 쿠키, 데이터 교환 시 사용하는 <code>samesite=strict</code> 옵션이 있는 쿠키를 따로 둬서 말이죠. 이렇게 하면 외부 사이트를 통해 접근한 사용자도 정상적으로 환영 메시지를 볼 수 있습니다. 지급은 무조건 은행의 사이트를 통해서만 수행되도록 만들면 됩니다.</p>
 </li>
 <li>
-<p><strong><code>samesite=lax</code></strong></p>
-<p><code>samesite=lax</code>는 사용자 경험을 해치지 않으면서 XSRF 공격을 막을 수 있는 느슨한 접근법입니다.</p>
+<p><strong><code>samesite=lax</code></strong>(사용자 경험을 해치지 않으면서 XSRF 공격을 막을 수 있는 느슨한 접근법)</p>
 <p><code>strict</code>와 마찬가지로 <code>lax</code>도 사이트 외부에서 요청을 보낼 때 브라우저가 쿠키를 보내는 걸 막아줍니다. 하지만 예외사항이 존재합니다.</p>
 <p>아래 두 조건을 동시에 만족할 때는 <code>samesite=lax</code> 옵션을 설정한 쿠키가 전송됩니다.</p>
 <ol>
@@ -489,6 +462,7 @@ document.cookie = &ldquo;user=colinder; max-age=0&rdquo;;</p>
 <h1 id="요약">👀요약</h1>
 <blockquote>
 <p>쿠기 종류에 따라 인증 방식의 차이는 없으나 <strong>데이터 저장 방식의 차이</strong>라고 할 수 있습니다. <strong>Persistent Cookie = 클라이언트 ,Session Cookie = 서버</strong></p>
+<p>세션 쿠키의 값은 보안상 꽤나 안전한 브라우저(ex. 구글 크롬)의 메모리에 저장되기 때문에 보안에 유리하지만 파일로 저장되는 지속 쿠키의 경우 비교적으로 보안에 취약합니다.</p>
 </blockquote>
 <p>​</p>
 <p>​</p>

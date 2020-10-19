@@ -117,8 +117,10 @@ alert( document.cookie ); // cookie1=value1; cookie2=value2;...	 // 모든 쿠�
 
      하지만, `forum.site.com`과 같은 서브 도메인에서 `site.com`에서 생성한 쿠키 정보를 얻을 방법이 있습니다. `site.com`에서 쿠키를 설정할 때 `domain` 옵션에 루트 도메인인 `domain=site.com`을 명시적으로 설정해 주면 됩니다.
 
+     
+
      ```javascript
-   // site.com에서
+     // site.com에서
      // 서브 도메인(*.site.com) 어디서든 쿠키에 접속하게 설정할 수 있습니다.
      document.cookie = "user=colinder; domain=site.com"
      
@@ -127,9 +129,9 @@ alert( document.cookie ); // cookie1=value1; cookie2=value2;...	 // 모든 쿠�
      
      alert(document.cookie); // user=colinder 쿠키를 확인할 수 있습니다.
      ```
-     
-     하위 호환성 유지를 위해 (`site.com` 앞에 점을 붙인) `domain=.site.com`도 `domain=site.com`과 동일하게 작동합니다. 오래된 표기법이긴 하지만 구식 브라우저를 지원하려면 이 표기법을 사용하는 것이 좋습니다.
 
+     하위 호환성 유지를 위해 (`site.com` 앞에 점을 붙인) `domain=.site.com`도 `domain=site.com`과 동일하게 작동합니다. 오래된 표기법이긴 하지만 구식 브라우저를 지원하려면 이 표기법을 사용하는 것이 좋습니다.
+     
      이렇게 `domain` 옵션값을 적절히 사용하면 서브 도메인에서도 쿠키에 접근할 수 있습니다.
 
 4. path (쿠키로 사용자를 인증받을 수 있는 경로 설정)
@@ -148,55 +150,45 @@ alert( document.cookie ); // cookie1=value1; cookie2=value2;...	 // 모든 쿠�
    - 쿠키는 `지속 쿠키(Persistent Cookie)`와 `세션 쿠키(Session Cookie)`로 나눌 수 있습니다.
 
      - `지속 쿠키(Persistent Cookie)`
-* 만료 날짜/시간(`expires` 나 `max-age` )을 지정하지 않은 쿠키
-       
-* **파일로 저장**되므로 __브라우저가 종료되어도 쿠키는 남아있습니다.__
-       
-- `세션 쿠키(Session Cookie)`
-     
-  * 만료 날짜/시간(`expires` 나 `max-age` )을 지정한 쿠키
-     
-  * **브라우저 메모리에 저장**되므로 **브라우저가 종료되면 쿠키는 사라지게 됩니다.**
-     
-**👀 참고로 세션 쿠키의 값은 보안상 꽤나 안전한 브라우저(ex. 구글 크롬)의 메모리에 저장되기 때문에 보안에 유리하지만 파일로 저장되는 지속 쿠키의 경우 비교적으로 보안에 취약합니다.**
-     
-- `expires`와 `max-age`
-     
-  - **`expires`**
-     
-    ex) expires=Tue, 19 Jan 2038 03:14:07 GMT
-     
-    브라우저는 설정된 유효 일자까지 쿠키를 유지하다가, 해당 일자가 도달하면 쿠키를 자동으로 삭제합니다.
-     
-    *쿠키의 유효 일자는 반드시 GMT(Greenwich Mean Time) 포맷으로 설정해야 합니다. `date.toUTCString`을 사용하면 해당 포맷으로 쉽게 변경할 수 있습니다. 아래는 유효 기간이 하루인 쿠키를 만드는 예시입니다.*
-       
+       - 만료 날짜/시간(`expires` 나 `max-age` )을 지정하지 않은 쿠키
+       - **파일로 저장**되므로 __브라우저가 종료되어도 쿠키는 남아있습니다.__
+     - `세션 쿠키(Session Cookie)`
+       * 만료 날짜/시간(`expires` 나 `max-age` )을 지정한 쿠키
+       * **브라우저 메모리에 저장**되므로 **브라우저가 종료되면 쿠키는 사라지게 됩니다.**
+
+     - `expires`와 `max-age`
+
+       - **`expires`**
+
+         ex) expires=Tue, 19 Jan 2038 03:14:07 GMT
+
+         브라우저는 설정된 유효 일자까지 쿠키를 유지하다가, 해당 일자가 도달하면 쿠키를 자동으로 삭제합니다. (옵션값을 과거로 지정하면 쿠키는 삭제됩니다.)
+
+         *쿠키의 유효 일자는 반드시 GMT(Greenwich Mean Time) 포맷으로 설정해야 합니다. `date.toUTCString`을 사용하면 해당 포맷으로 쉽게 변경할 수 있습니다. 아래는 유효 기간이 하루인 쿠키를 만드는 예시입니다.*
+
          ```javascript
-         // 지금으로부터 하루 후
-         let date = new Date(Date.now() + 86400e3);
-         date = date.toUTCString();
-       document.cookie = "user=colinder; expires=" + date;
-    ```
-     
-    `expires` 옵션값을 과거로 지정하면 쿠키는 삭제됩니다.
-     
-  - **`max-age`**
-     
-    ex) max-age=3600
-     
-    `max-age`는 `expires` 옵션의 대안으로, 쿠키 만료 기간을 설정할 수 있게 해줍니다. 현재부터 설정하고자 하는 만료일시까지의 시간을 **초**로 환산한 값을 설정합니다.
-       
-         0이나 음수값을 설정하면 쿠키는 바로 삭제됩니다.
-       
+          // 지금으로부터 하루 후
+          let date = new Date(Date.now() + 86400e3);
+          date = date.toUTCString();
+          document.cookie = "user=colinder; expires=" + date;
+         ```
+
+       - **`max-age`**
+
+         ex) max-age=3600
+
+         `max-age`는 `expires` 옵션의 대안으로, 쿠키 만료 기간을 설정할 수 있게 해줍니다. 현재부터 설정하고자 하는 만료일시까지의 시간을 **초**로 환산한 값을 설정합니다. (0이나 음수값을 설정하면 쿠키는 바로 삭제됩니다.)
+
          ```javascript
          // 1시간 뒤에 쿠키가 삭제됩니다.
          document.cookie = "user=colinder; max-age=3600";
-       
-    // 만료 기간을 0으로 지정하여 쿠키를 바로 삭제함
+         
+         // 만료 기간을 0으로 지정하여 쿠키를 바로 삭제함
          document.cookie = "user=colinder; max-age=0";
-      ```
-       
+         ```
+
          *다른 브라우저들은 둘 다(`Expires` 와 `Max-Age)` 지정되었을 때 `Max-Age` 값을 더 우선시합니다.*
-   
+
 6. secure (쿠키 보안 설정)
 
    - 이 옵션을 설정하면 HTTPS로 통신하는 경우에만 쿠키가 전송됩니다.
@@ -233,9 +225,7 @@ alert( document.cookie ); // cookie1=value1; cookie2=value2;...	 // 모든 쿠�
 
        이런 문제는 쿠키 두 개를 함께 사용해 해결할 수 있습니다. "Hello, John"과 같은 환영 메시지를 출력해주는 "일반 인증(general recognition)"용 쿠키, 데이터 교환 시 사용하는 `samesite=strict` 옵션이 있는 쿠키를 따로 둬서 말이죠. 이렇게 하면 외부 사이트를 통해 접근한 사용자도 정상적으로 환영 메시지를 볼 수 있습니다. 지급은 무조건 은행의 사이트를 통해서만 수행되도록 만들면 됩니다.
 
-     - **`samesite=lax`**
-
-       `samesite=lax`는 사용자 경험을 해치지 않으면서 XSRF 공격을 막을 수 있는 느슨한 접근법입니다.
+     - **`samesite=lax`**(사용자 경험을 해치지 않으면서 XSRF 공격을 막을 수 있는 느슨한 접근법)
 
        `strict`와 마찬가지로 `lax`도 사이트 외부에서 요청을 보낼 때 브라우저가 쿠키를 보내는 걸 막아줍니다. 하지만 예외사항이 존재합니다.
 
@@ -280,6 +270,8 @@ alert( document.cookie ); // cookie1=value1; cookie2=value2;...	 // 모든 쿠�
 # 👀요약
 
 > 쿠기 종류에 따라 인증 방식의 차이는 없으나 **데이터 저장 방식의 차이**라고 할 수 있습니다. **Persistent Cookie = 클라이언트 ,Session Cookie = 서버**
+>
+> 세션 쿠키의 값은 보안상 꽤나 안전한 브라우저(ex. 구글 크롬)의 메모리에 저장되기 때문에 보안에 유리하지만 파일로 저장되는 지속 쿠키의 경우 비교적으로 보안에 취약합니다.
 
 ​	
 
