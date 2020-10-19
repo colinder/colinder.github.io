@@ -40,11 +40,11 @@ Stateless란, 접속을 끊는 순간 서버와 클라이언트간의 통신이 
 
 3. 나중에 클라이언트가 재접속시 사용자PC(로컬 하드)에 있던 Set-cookie값을 서버측으로 전송한다.
 
-4. 서버측에서는 사용자를 인식하고 서비스 로직에 따라 클라이언트의 cookie값을 update 하게 된다.
+4. 서버측에서는 쿠키로 사용자를 인식하고 서비스 로직에 따라 클라이언트의 cookie값을 update 하게 된다.
 
 _*새로운 페이지에 접근하기전에는 클라이언트에게 쿠키가 없습니다._
 
-_*서버는 쿠키를 보낼때 이 쿠키를 사용할 Domain과 Path정보까지 함께 브라우저로 전송합니다. 즉, Domain과 Path는 쿠키를 어느 도메인의 어느 패스에서 전송할지를 브라우저에게 알려주고 브라우저는 Domain과 Path가 일치할 때만 쿠키를 서버로 전송해서 사용자를 인증 받습니다. 일단 그렇게 알고 봅시다ㅎ._
+_*서버는 쿠키를 보낼때 이 쿠키를 사용할 Domain과 Path정보까지 함께 브라우저로 전송합니다. 즉, Domain과 Path는 쿠키를 어느 도메인의 어느 패스에서 인증하는데 사용할지 브라우저에게 알려주고 브라우저는 Domain과 Path가 일치할 때만 쿠키를 서버로 전송해서 사용자를 인증 받습니다. 일단 그렇게 알고 봅시다ㅎ._
 
 ​		
 
@@ -53,7 +53,7 @@ _*서버는 쿠키를 보낼때 이 쿠키를 사용할 Domain과 Path정보까�
 ## 쿠키 문법
 
 ```javascript
-// 쿠키는 "이름-값" 페어로 시작됩니다.
+// 쿠키는 "이름=값" 페어로 시작됩니다.
 Set-Cookie: <cookie-name>=<cookie-value> 
 Set-Cookie: <cookie-name>=<cookie-value>; Expires=<date>
 Set-Cookie: <cookie-name>=<cookie-value>; Max-Age=<non-zero-digit>
@@ -73,7 +73,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
 ## 쿠키 읽기
 
-`document.cookie` 프로퍼티를 이용하면 브라우저에서도 쿠키에 접근할 수 있습니다.
+`document.cookie` 프로퍼티를 이용하면 브라우저에서도 쿠키를 확인할 수 있습니다.
 
 ```javascript
 // ex) 
@@ -82,7 +82,7 @@ alert( document.cookie ); // cookie1=value1; cookie2=value2;...	 // 모든 쿠�
 // 어디든 사이트에 들어가서 개발자 도구창을 열고 console.log(document.cookie) 를 입력해 보세요!
 ```
 
-`document.cookie`는 `name=value` 쌍으로 구성되어있고, 각 쌍은 `;`로 구분합니다. *(ex. document.cookie = "cookiename=value; path=/; expires=0; domain=.tistory.com")* 이때, 쌍 하나는 하나의 독립된 쿠키를 나타냅니다.
+`document.cookie`는 `name=value`쌍으로 구성되어있고, 각 쌍은 `;`로 구분합니다. *(ex. document.cookie = "cookiename=value; path=/; expires=0; domain=.tistory.com")* 이때, 쌍 하나는 하나의 독립된 쿠키를 나타냅니다.
 
 정규 표현식이나 배열 관련 함수를 함께 사용해 `;`을 기준으로 `document.cookie`의 값을 분리하면 원하는 쿠키를 찾을 수 있습니다.
 
@@ -97,13 +97,13 @@ alert( document.cookie ); // cookie1=value1; cookie2=value2;...	 // 모든 쿠�
 
 3. domain (쿠키를 발급해준 서버의 도메인(사이트) 주소)
 
-   - ex) `domain=site.com`
+   - `domain=site.com`
 
      쿠키에 접근 가능한 domain(도메인)을 지정합니다. 다만, 몇 가지 제약이 있어서 아무 도메인이나 지정할 수 없습니다.
 
-     `domain` 옵션에 아무 값도 넣지 않았다면, 쿠키를 발급받은 사이트(도메인)에서만 쿠키에 접근할 수 있습니다. `site.com`에서 설정한 쿠키는 `other.com`에서 확인할 수 없습니다.
+     `domain` 옵션에 아무 값도 넣지 않았다면, 쿠키를 발급받은 사이트(도메인)에서만 쿠키에 접근할 수 있습니다. **`site.com`에서 생성한 쿠키를 `other.com`에선 절대 전송받을 수 없습니다.**
 
-     이 외에 까다로운 제약사항이 하나 더 있습니다. 서브 도메인(subdomain)인 `forum.site.com`에서도 쿠키 정보를 얻을 수 없다는 점입니다.
+     이 외에 까다로운 제약사항이 하나 더 있습니다. **서브 도메인(subdomain)** (ex. `forum.site.com`)**에서도 쿠키 정보를 얻을 수 없다는 점입니다.**
 
      ```javascript
      // ex) site.com에서 user가 colinder라는 쿠키를 설정함
@@ -113,36 +113,34 @@ alert( document.cookie ); // cookie1=value1; cookie2=value2;...	 // 모든 쿠�
      alert(document.cookie); // 찾을 수 없음
      ```
 
-     **서브 도메인이나 다른 도메인에서 쿠키에 접속할 방법은 없습니다. `site.com`에서 생성한 쿠키를 `other.com`에선 절대 전송받을 수 없습니다.**
-
      이런 제약사항은 안정성을 높이기 위해 만들어졌습니다. 민감한 데이터가 저장된 쿠키는 관련 페이지에서만 볼 수 있도록 하기 위함입니다.
 
      하지만, `forum.site.com`과 같은 서브 도메인에서 `site.com`에서 생성한 쿠키 정보를 얻을 방법이 있습니다. `site.com`에서 쿠키를 설정할 때 `domain` 옵션에 루트 도메인인 `domain=site.com`을 명시적으로 설정해 주면 됩니다.
 
      ```javascript
-     // site.com에서
+   // site.com에서
      // 서브 도메인(*.site.com) 어디서든 쿠키에 접속하게 설정할 수 있습니다.
      document.cookie = "user=colinder; domain=site.com"
      
      // 이렇게 설정하면
-     
      // forum.site.com와 같은 서브도메인에서도 쿠키 정보를 얻을 수 있습니다.
+     
      alert(document.cookie); // user=colinder 쿠키를 확인할 수 있습니다.
      ```
-
+     
      하위 호환성 유지를 위해 (`site.com` 앞에 점을 붙인) `domain=.site.com`도 `domain=site.com`과 동일하게 작동합니다. 오래된 표기법이긴 하지만 구식 브라우저를 지원하려면 이 표기법을 사용하는 것이 좋습니다.
 
      이렇게 `domain` 옵션값을 적절히 사용하면 서브 도메인에서도 쿠키에 접근할 수 있습니다.
 
 4. path (쿠키로 사용자를 인증받을 수 있는 경로 설정)
 
-   - ex) `path=/`
+   - `path=/`
 
-     [서버 이름 뒤에 오는 경로](https://opentutorials.org/course/3387/21745)(ex. site.com`/login`, site.com`/mainpage` 등)에 따라 쿠키 사용여부가 결정됩니다. 위와 같이 슬래쉬( / )로 설정하면 모든 path에서 쿠키를 사용할 수 있습니다. (미 지정시) 기본값은 현재 경로입니다.
+     [서버 이름 뒤에 오는 경로](https://opentutorials.org/course/3387/21745)(ex. site.com**/login**, site.com**/main** 등)에 따라 쿠키 사용여부가 결정됩니다. 위와 같이 슬래쉬( / )로 설정하면 모든 path에서 쿠키를 사용할 수 있습니다. (미 지정시) 기본값은 현재 경로입니다.
 
      `path=/admin` 옵션을 사용하여 설정한 쿠키는 `/admin`과 `/admin/something`에선 볼 수 있지만, `/home` 이나 `/adminpage`에선 볼 수 없습니다.
 
-     특별한 경우가 아니라면, `path` 옵션을 `path=/`같이 루트로 설정해 웹사이트의 모든 페이지에서 쿠키에 접근할 수 있도록 합시다.
+     특별한 경우가 아니라면, `path` 옵션을 `path=/`같이 루트로 설정해 웹사이트의 모든 페이지에서 쿠키에 접근할 수 있도록 합니다.
 
 5. expires (쿠키의 만료시간)
    - 쿠키가 언제 삭제되는지 결정합니다.
@@ -150,59 +148,62 @@ alert( document.cookie ); // cookie1=value1; cookie2=value2;...	 // 모든 쿠�
    - 쿠키는 `지속 쿠키(Persistent Cookie)`와 `세션 쿠키(Session Cookie)`로 나눌 수 있습니다.
 
      - `지속 쿠키(Persistent Cookie)`
-
-       * 만료 날짜/시간(`expires` 나 `max-age` )을 지정하지 않은 쿠키
-
-       * __파일로 저장__되므로 __브라우저가 종료되어도 쿠키는 남아있습니다.__
-
-     - `세션 쿠키(Session Cookie)`
-
-       * 만료 날짜/시간(`expires` 나 `max-age` )을 지정한 쿠키
-
-       * **브라우저 메모리에 저장**되므로 **브라우저가 종료되면 쿠키는 사라지게 됩니다.**
-
-     **👀 참고로 세션 쿠키의 값은 보안상 꽤나 안전한 브라우저(ex. 구글 크롬)의 메모리에 저장되기 때문에 보안에 유리하지만 파일로 저장되는 지속 쿠키의 경우 비교적으로 보안에 취약하다.**
-
-     - `expires`와 `max-age`
-
-       ex) `expires=Tue, 19 Jan 2038 03:14:07 GMT`
-
-       브라우저는 설정된 유효 일자까지 쿠키를 유지하다가, 해당 일자가 도달하면 쿠키를 자동으로 삭제합니다.
-
-       쿠키의 유효 일자는 반드시 GMT(Greenwich Mean Time) 포맷으로 설정해야 합니다. `date.toUTCString`을 사용하면 해당 포맷으로 쉽게 변경할 수 있습니다. 아래는 유효 기간이 하루인 쿠키를 만드는 예시입니다.
-
-       ```javascript
-       // 지금으로부터 하루 후
-       let date = new Date(Date.now() + 86400e3);
-       date = date.toUTCString();
-       document.cookie = "user=colinder; expires=" + date;
-       ```
-
-       `expires` 옵션값을 과거로 지정하면 쿠키는 삭제됩니다.
-
-       - **`max-age=3600`**
-
-       `max-age`는 `expires` 옵션의 대안으로, 쿠키 만료 기간을 설정할 수 있게 해줍니다. 현재부터 설정하고자 하는 만료일시까지의 시간을 **초**로 환산한 값을 설정합니다.
-
-       0이나 음수값을 설정하면 쿠키는 바로 삭제됩니다.
-
-       ```javascript
-       // 1시간 뒤에 쿠키가 삭제됩니다.
-       document.cookie = "user=colinder; max-age=3600";
+* 만료 날짜/시간(`expires` 나 `max-age` )을 지정하지 않은 쿠키
        
-       // 만료 기간을 0으로 지정하여 쿠키를 바로 삭제함
-       document.cookie = "user=colinder; max-age=0";
-       ```
-
-       *다른 브라우저들은 둘 다(`Expires` 와 `Max-Age)` 지정되었을 때 `Max-Age` 값을 더 우선시합니다.*
-
+* **파일로 저장**되므로 __브라우저가 종료되어도 쿠키는 남아있습니다.__
+       
+- `세션 쿠키(Session Cookie)`
+     
+  * 만료 날짜/시간(`expires` 나 `max-age` )을 지정한 쿠키
+     
+  * **브라우저 메모리에 저장**되므로 **브라우저가 종료되면 쿠키는 사라지게 됩니다.**
+     
+**👀 참고로 세션 쿠키의 값은 보안상 꽤나 안전한 브라우저(ex. 구글 크롬)의 메모리에 저장되기 때문에 보안에 유리하지만 파일로 저장되는 지속 쿠키의 경우 비교적으로 보안에 취약합니다.**
+     
+- `expires`와 `max-age`
+     
+  - **`expires`**
+     
+    ex) expires=Tue, 19 Jan 2038 03:14:07 GMT
+     
+    브라우저는 설정된 유효 일자까지 쿠키를 유지하다가, 해당 일자가 도달하면 쿠키를 자동으로 삭제합니다.
+     
+    *쿠키의 유효 일자는 반드시 GMT(Greenwich Mean Time) 포맷으로 설정해야 합니다. `date.toUTCString`을 사용하면 해당 포맷으로 쉽게 변경할 수 있습니다. 아래는 유효 기간이 하루인 쿠키를 만드는 예시입니다.*
+       
+         ```javascript
+         // 지금으로부터 하루 후
+         let date = new Date(Date.now() + 86400e3);
+         date = date.toUTCString();
+       document.cookie = "user=colinder; expires=" + date;
+    ```
+     
+    `expires` 옵션값을 과거로 지정하면 쿠키는 삭제됩니다.
+     
+  - **`max-age`**
+     
+    ex) max-age=3600
+     
+    `max-age`는 `expires` 옵션의 대안으로, 쿠키 만료 기간을 설정할 수 있게 해줍니다. 현재부터 설정하고자 하는 만료일시까지의 시간을 **초**로 환산한 값을 설정합니다.
+       
+         0이나 음수값을 설정하면 쿠키는 바로 삭제됩니다.
+       
+         ```javascript
+         // 1시간 뒤에 쿠키가 삭제됩니다.
+         document.cookie = "user=colinder; max-age=3600";
+       
+    // 만료 기간을 0으로 지정하여 쿠키를 바로 삭제함
+         document.cookie = "user=colinder; max-age=0";
+      ```
+       
+         *다른 브라우저들은 둘 다(`Expires` 와 `Max-Age)` 지정되었을 때 `Max-Age` 값을 더 우선시합니다.*
+   
 6. secure (쿠키 보안 설정)
 
    - 이 옵션을 설정하면 HTTPS로 통신하는 경우에만 쿠키가 전송됩니다.
 
-     `secure` 옵션이 설정된 경우, `https://site.com`에서 설정한 쿠키는 `http://site.com`에서 접근할 수 없습니다. 쿠키에 민감한 내용이 저장되어 있어 암호화되지 않은 HTTP 연결을 통해 전달되는 걸 원치 않는다면 이 옵션을 사용하면 됩니다.
+     `secure` 옵션이 설정된 경우, `http`**`s`**`://site.com`에서 설정한 쿠키는 `http://site.com`에서 접근할 수 없습니다. 쿠키에 민감한 내용이 저장되어 있어 암호화되지 않은 HTTP 연결을 통해 전달되는 걸 원치 않는다면 이 옵션을 사용하면 됩니다.
 
-     **`secure` 옵션을 설정하지 않으면 `http://site.com`에서 설정(생성)한 쿠키를 `https://site.com`에서 읽을 수 있고, `https://site.com`에서 설정(생성)한 쿠키도 `http://site.com`에서 읽을 수 있습니다.**
+     **`secure` 옵션을 설정하지 않으면 **`http://site.com`**에서 설정(생성)한 쿠키를 **`http`**`s`**`://site.com`**에서 읽을 수 있고,** `http`**`s`**`://site.com`**에서 설정(생성)한 쿠키도 **`http://site.com`**에서 읽을 수 있습니다.**
 
      쿠키는 기본적으로 도메인만 확인하지 프로토콜을 따지진 않기 때문입니다.
 
@@ -264,7 +265,7 @@ alert( document.cookie ); // cookie1=value1; cookie2=value2;...	 // 모든 쿠�
 
 8. HttpOnly
 
-   - HttpOnly 속성이 붙은 쿠키는 HTTP나 HTTPS 이외의 방법으로는 사용이 안됩니다. 예컨데 javascript의 document.cookie메서드를 이용해서 쿠키정보를 획득할 수가 없습니다. 그러므로 **[cross-site scripting(XSS)](https://4rgos.tistory.com/1)**공격을 방어할 수 있다.
+   - HttpOnly 속성이 붙은 쿠키는 HTTP나 HTTPS 이외의 방법으로는 사용이 안됩니다. 예컨데 javascript의 document.cookie메서드를 이용해서 쿠키정보를 획득할 수가 없습니다. 그러므로 __[cross-site scripting(XSS)](https://4rgos.tistory.com/1)__공격을 방어할 수 있다.
 
      ​		
 
