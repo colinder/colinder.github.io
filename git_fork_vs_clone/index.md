@@ -7,7 +7,12 @@
 
 fork는 다른 사람(프로젝트)의 github repository에서 내가 어떤 부분을 수정하거나, 기능을 추가 하고 싶을 때 해당 repository를 그대로 복제하는 기능. 
 
-*fork한 저장소는 원본 repository와 연결되어 있다.* 여기서 연결되어 있다는 의미는, 원본 repository에 어떤 변화가 생기면 이는 forked된 나의 repository에도 반영될 수 있다는 것입니다. (단, [fetch](https://git-scm.com/book/ko/v2/Git%EC%9D%98-%EA%B8%B0%EC%B4%88-%EB%A6%AC%EB%AA%A8%ED%8A%B8-%EC%A0%80%EC%9E%A5%EC%86%8C)나 [rebase](https://git-scm.com/book/ko/v2/Git-%EB%B8%8C%EB%9E%9C%EC%B9%98-Rebase-%ED%95%98%EA%B8%B0)의 과정이 필요하다.)
+*fork한 저장소는 원본 repository와 연결되어 있다.* 여기서 연결되어 있다는 의미는, 원본 repository에 어떤 변화가 생기면 이는 forked된 나의 repository에도 반영될 수 있다는 것입니다. (단, [fetch](https://git-scm.com/book/ko/v2/Git%EC%9D%98-%EA%B8%B0%EC%B4%88-%EB%A6%AC%EB%AA%A8%ED%8A%B8-%EC%A0%80%EC%9E%A5%EC%86%8C)나 [rebase](https://git-scm.com/book/ko/v2/Git-%EB%B8%8C%EB%9E%9C%EC%B9%98-Rebase-%ED%95%98%EA%B8%B0)의 과정이 필요하다.) 
+
+그리고 fork는 보통 2가지 목적을 위해 사용합니다.
+
+1. 오픈소스 기여를 위해
+2. 기존 오픈 소스의 사본을 만들어서 새로운 버전을 만들어나가기 위해 (예를 들어 장고 오리지널이 망했는데 누군가 이 프로젝트를 fork해서 새로운 버전으로 이어나가는 거죠)
 
 _*fetch: Git에서 어떤 브랜치의 코드를 받아오는 방법 중 하나. (또 다른 하나는 pull)_
 
@@ -61,6 +66,8 @@ _clone하면_ 서버에 있는 프로젝트 히스토리를 포함한 `거의 �
 
 {{<image src="/images/git_bare_mirror.png" width="1000px">}}
 
+​		
+
 ​	
 
 ```bash
@@ -80,4 +87,8 @@ Option
 
    >Instead of naming each ref to push, specifies that all refs under `refs/` (which includes but is not limited to `refs/heads/`, `refs/remotes/`, and `refs/tags/`) be mirrored to the remote repository. Newly created local refs will be pushed to the remote end, locally updated refs will be force updated on the remote end, and deleted refs will be removed from the remote end. This is the default if the configuration option `remote.<remote>.mirror` is set.
 
+   ​	
    
+   ​	
+
+**Special Thanks to Eric✨.**
