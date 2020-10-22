@@ -7,7 +7,7 @@
 
 cookie와 session에 대하여 알아보겠습니다. 다만 그전에 cookie와 session이 생기게 된 배경에 대하여 같이 알아 보겠습니다.
 
-​	
+​		
 
 # HTTP 프로토콜의 특징
 
@@ -260,8 +260,6 @@ alert( document.cookie ); // cookie1=value1; cookie2=value2;...	 // 모든 쿠�
      ​		
 
      ​	
-
-     
 
      <a hef=""><p style="text-align:right;">생각보다 분량이 많아져서 session은 다음 글로 정리해야겠습니다.</p></a>
 
