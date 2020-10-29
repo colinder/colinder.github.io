@@ -5,9 +5,9 @@
             <loc>https://colinder.github.io/</loc><lastmod>2020-10-29T21:24:52&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://colinder.github.io/categories/</loc><lastmod>2020-10-29T21:24:52&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://colinder.github.io/posts/</loc><lastmod>2020-10-29T21:24:52&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/react-native_navigation/</loc><lastmod>2020-10-29T21:24:52&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://colinder.github.io/tags/react-native/</loc><lastmod>2020-10-29T21:24:52&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://colinder.github.io/categories/react-native/</loc><lastmod>2020-10-29T21:24:52&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://colinder.github.io/react-native_navigation/</loc><lastmod>2020-10-29T21:24:52&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://colinder.github.io/tags/</loc><lastmod>2020-10-29T21:24:52&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://colinder.github.io/tags/web/</loc><lastmod>2020-10-29T21:24:52&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://colinder.github.io/tags/ajax/</loc><lastmod>2020-10-25T23:14:37&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
@@ -31,8 +31,8 @@
             <loc>https://colinder.github.io/categories/git/</loc><lastmod>2020-10-11T21:26:25&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>https://colinder.github.io/git_fork_vs_clone/</loc><lastmod>2020-10-11T21:26:25&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>https://colinder.github.io/what_is_ajaxaxios_00/</loc><lastmod>2020-10-11T21:25:51&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://colinder.github.io/git_mirroring/</loc><lastmod>2020-10-08T22:08:37&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://colinder.github.io/tags/mirroring/</loc><lastmod>2020-10-08T22:08:37&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
+            <loc>https://colinder.github.io/git_mirroring/</loc><lastmod>2020-10-08T22:08:37&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
+            <loc>https://colinder.github.io/tags/mirroring/</loc><lastmod>2020-10-08T22:08:37&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
             <loc>https://colinder.github.io/sw_20.09.26/</loc><lastmod>2020-09-26T00:07:40&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
             <loc>https://colinder.github.io/categories/django/</loc><lastmod>2020-09-24T09:54:40&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/rest-api-reference/</loc><lastmod>2020-09-24T09:54:40&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -75,4 +75,5 @@
             <loc>https://colinder.github.io/sw_20.06.25/</loc><lastmod>2020-06-25T10:57:11&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/django_01/</loc><lastmod>2020-06-23T09:57:09&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/sw_20.06.23/</loc><lastmod>2020-06-23T09:05:05&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://colinder.github.io/sw_20.06.20/</loc><lastmod>2020-06-20T22:46:41&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>
+            <loc>https://colinder.github.io/sw_20.06.20/</loc><lastmod>2020-06-20T22:46:41&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/react-native_googlelogin/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>
