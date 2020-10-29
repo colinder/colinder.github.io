@@ -33,6 +33,8 @@
 
       ​		
 
+## React-Native navigation 개발환경세팅
+
 1. Getting started의 npm설치
 
    <image src="/images/RN_navigation_00.png" width="auto" style="display: block; margin: 10px auto;">
