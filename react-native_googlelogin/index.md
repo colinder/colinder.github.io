@@ -93,7 +93,7 @@ _*google login을 하기 위해 firebase(모바일 및 웹 애플리케이션 �
 
    1. 프로젝트 추가 (+)
 
-      <video width="725px" height="auto" src="/images/Firebase_Console_00.mp4" frameborder="0" gesture="media" allowfullscreen=""></video>
+      <video width="725px" height="auto" src="https://github.com/colinder/Blog/blob/master/content/images/Firebase_Console_00.mp4" frameborder="0" gesture="media" allowfullscreen=""></video>
 
    2. Android 패키지 이름 추출
 
