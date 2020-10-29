@@ -3,7 +3,22 @@
         <title>react-native - Tag - </title>
         <link>https://colinder.github.io/tags/react-native/</link>
         <description>react-native - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 29 Oct 2020 21:24:52 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/react-native/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 29 Oct 2020 23:13:25 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/react-native/" rel="self" type="application/rss+xml" /><item>
+    <title>React-Native google login</title>
+    <link>https://colinder.github.io/react-native_googlelogin/</link>
+    <pubDate>Thu, 29 Oct 2020 23:13:25 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/react-native_googlelogin/</guid>
+    <description><![CDATA[​
+React-Native google login  서비스를 개발하다보면 로그인 기능이 새삼 대단해보입니다. 신경쓸 것도 많고, 하지만 이런 수고를 sns로그인 기능으로 대신한다면 편의성이 많이 높아집니다. 하여 해보겠습니다.
+ *google login을 하기 위해 firebase(모바일 및 웹 애플리케이션 개발 플랫폼)을 사용합니다.
+  개발환경
+  npm으로 진행
+  react-native_cli (✨expo로 진행하지 않습니다.)
+  android 기준
+  함수형 컴포넌트로 진행 (✨ 클래스 컴포넌트로 진행하지 않습니다.)
+  RN 버전 0.60이상에서 진행]]></description>
+</item><item>
     <title>React-Native_navigation</title>
     <link>https://colinder.github.io/react-native_navigation/</link>
     <pubDate>Thu, 29 Oct 2020 21:24:52 &#43;0900</pubDate>
@@ -23,20 +38,5 @@ React-Native navigation  vue는 router를 사용해 화면을 이동합니다. �
   RN 버전 0.60이상에서 진행
   react-native-cli: 2.0.1
   react-native: 0.]]></description>
-</item><item>
-    <title>React-Native google login</title>
-    <link>https://colinder.github.io/react-native_googlelogin/</link>
-    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/react-native_googlelogin/</guid>
-    <description><![CDATA[​
-React-Native google login  서비스를 개발하다보면 로그인 기능이 새삼 대단해보입니다. 신경쓸 것도 많고, 하지만 이런 수고를 sns로그인 기능으로 대신한다면 편의성이 많이 높아집니다. 하여 해보겠습니다.
- *google login을 하기 위해 firebase(모바일 및 웹 애플리케이션 개발 플랫폼)을 사용합니다.
-  개발환경
-  npm으로 진행
-  react-native_cli (✨expo로 진행하지 않습니다.)
-  android 기준
-  함수형 컴포넌트로 진행 (✨ 클래스 컴포넌트로 진행하지 않습니다.)
-  RN 버전 0.60이상에서 진행]]></description>
 </item></channel>
 </rss>

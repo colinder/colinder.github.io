@@ -11,7 +11,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://colinder.github.io/" />
 <meta property="og:image" content="https://colinder.github.io/logo.png"/>
-<meta property="og:updated_time" content="2020-10-29T21:24:52+09:00" />
+<meta property="og:updated_time" content="2020-10-29T23:13:25+09:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
 
@@ -103,6 +103,16 @@
         alt="/images/jg_02.jpg"
         title="/images/jg_02.jpg" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/colinder" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="mailto:kjonggwan@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/what_is_cookie/">what is Cookie?</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-10-19">2020-10-19</time></span>&nbsp;<span class="post-category">included in <a href="/categories/web/"><i class="far fa-folder fa-fw"></i>web</a></span></div><div class="content">​
+개발을 하다보면, 유저의 로그인 기능을 고민하는 경우가 많습니다. 근데. 로그인 기능을 개발하다보면 꼭 마주치는 두 가지&hellip;
+cookie와 session에 대하여 알아보겠습니다. 다만 그전에 cookie와 session이 생기게 된 배경에 대하여 같이 알아 보겠습니다.
+​
+HTTP 프로토콜의 특징 HTTP는 Connectionless(비연결성)하고, Stateless하다고 한다.
+Connectionless란, 클라이언트가 행위를 통해 서비스를 제공받기 위해 서버에 request(요청)를 하면 서버는 클라이언트의 요청값에 따라 클라이언트에게 response(응답)하게 됩니다. 이렇게 한번의 request — response의 결과로 클라이언트는 어플리케이션이 제공하는 서비스를 받게되면서, 서로의 접속을 끊게 된다는 특성입니다.</div><div class="post-footer">
+        <a href="/what_is_cookie/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/web/">web</a>,&nbsp;<a href="/tags/cookie/">cookie</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/06_vue_lifecycle/">06_Vue_LifeCycle</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-10-15">2020-10-15</time></span>&nbsp;<span class="post-category">included in <a href="/categories/vue/"><i class="far fa-folder fa-fw"></i>vue</a></span></div><div class="content">​
 Vue_LifeCycle  솔직히 처음 라이프사이클이란 것을 공부했을 때는 이게 무슨 말인지? 삶의 주기를 왜 알아야 하는지 전혀 몰랐습니다. 이런 저에게 Vue 공식문서에는 말했습니다.
@@ -136,15 +146,6 @@ CallBack함수란? 비동기 처리결과로 반환되는 Callback함수
 Callback함수는 특정함수에 매개변수로 전달된 함수를 의미합니다.</div><div class="post-footer">
         <a href="/sync_async_callback/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/vue/">vue</a>,&nbsp;<a href="/tags/web/">web</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/git_fork_vs_clone/">Git_fork vs clone</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-10-11">2020-10-11</time></span>&nbsp;<span class="post-category">included in <a href="/categories/git/"><i class="far fa-folder fa-fw"></i>git</a></span></div><div class="content">​
-Fork fork는 다른 사람(프로젝트)의 github repository에서 내가 어떤 부분을 수정하거나, 기능을 추가 하고 싶을 때 해당 repository를 그대로 복제하는 기능.
-fork한 저장소는 원본 repository와 연결되어 있다. 여기서 연결되어 있다는 의미는, 원본 repository에 어떤 변화가 생기면 이는 forked된 나의 repository에도 반영될 수 있다는 것입니다. (단, fetch나 rebase의 과정이 필요하다.)
-그리고 fork는 보통 2가지 목적을 위해 사용합니다.
- 오픈소스 기여를 위해 기존 오픈 소스의 사본을 만들어서 새로운 버전을 만들어나가기 위해 (예를 들어 장고 오리지널이 망했는데 누군가 이 프로젝트를 fork해서 새로운 버전으로 이어나가는 거죠)  *fetch: Git에서 어떤 브랜치의 코드를 받아오는 방법 중 하나.</div><div class="post-footer">
-        <a href="/git_fork_vs_clone/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/git/">git</a>,&nbsp;<a href="/tags/fork/">fork</a>,&nbsp;<a href="/tags/clone/">clone</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>

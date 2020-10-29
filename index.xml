@@ -3,9 +3,24 @@
         <title></title>
         <link>https://colinder.github.io/</link>
         <description>Hello New World</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 29 Oct 2020 21:24:52 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 29 Oct 2020 23:13:25 &#43;0900</lastBuildDate>
             <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>React-Native google login</title>
+    <link>https://colinder.github.io/react-native_googlelogin/</link>
+    <pubDate>Thu, 29 Oct 2020 23:13:25 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/react-native_googlelogin/</guid>
+    <description><![CDATA[​
+React-Native google login  서비스를 개발하다보면 로그인 기능이 새삼 대단해보입니다. 신경쓸 것도 많고, 하지만 이런 수고를 sns로그인 기능으로 대신한다면 편의성이 많이 높아집니다. 하여 해보겠습니다.
+ *google login을 하기 위해 firebase(모바일 및 웹 애플리케이션 개발 플랫폼)을 사용합니다.
+  개발환경
+  npm으로 진행
+  react-native_cli (✨expo로 진행하지 않습니다.)
+  android 기준
+  함수형 컴포넌트로 진행 (✨ 클래스 컴포넌트로 진행하지 않습니다.)
+  RN 버전 0.60이상에서 진행]]></description>
+</item><item>
     <title>React-Native_navigation</title>
     <link>https://colinder.github.io/react-native_navigation/</link>
     <pubDate>Thu, 29 Oct 2020 21:24:52 &#43;0900</pubDate>
@@ -121,19 +136,5 @@ AJAX  세상에는 다양한 web서버가 있다.
  그렇다면, 이 web서버들과 통신 하려면 어떻게 해야 할까?
   대표적인 통신 방법을 AJAX라 한다. 이는 JavaScript의 라이브러리중 하나이며 Asynchronous Javascript And Xml(비동기식 자바스크립트와 xml)의 약자며, 자체가 하나의 특정한 기술을 말하는 것이 아니며, 함께 사용하는 기술의 묶음을 지칭하는 용어이다.
 브라우저가 가지고있는 XMLHttpRequest 객체를 이용해서 전체 페이지를 새로 고치지 않고도 페이지의 일부만을 위한 데이터를 로드하는 기법 이며 Ajax를 한마디로 정의하자면 JavaScript를 사용한 비동기 통신, 클라이언트와 서버간에 XML 데이터를 주고받는 기술이라고 할 수 있겠습니다.]]></description>
-</item><item>
-    <title>Git_Mirroring</title>
-    <link>https://colinder.github.io/git_mirroring/</link>
-    <pubDate>Thu, 08 Oct 2020 22:08:37 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/git_mirroring/</guid>
-    <description><![CDATA[​
-Git_Mirroring  기존에 사용하고 있던 A_Repo에서 B_Repo로 커밋히스토리 그대로 복사가 필요할 때가 있습니다.
-여기서 A_Repo를 그대로 가져온다는 의미는 단지 파일을 새롭게 만드는 것이 아니라 A_Repo에서 작업하던 commit 이력 모두를 그대로 이전하는 의미를 뜻합니다.
- ​
-  터미널을 엽니다.
-  복사하고자 하는 저장소(A_Repo)의 bare clone을 생성합니다.
-1  git clone --bare https://github.com/user/old-repository.git     새로운 저장소(B_Repo)를 만들고 mirror-push를 진행합니다.
-1 2  cd old-repository.git	👈 위에서 클론(bare)한 폴더로 이동 git push --mirror https://github.]]></description>
 </item></channel>
 </rss>
