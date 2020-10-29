@@ -3,9 +3,29 @@
         <title></title>
         <link>https://colinder.github.io/</link>
         <description>Hello New World</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 25 Oct 2020 23:14:37 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 29 Oct 2020 21:24:52 &#43;0900</lastBuildDate>
             <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>React Native_navigation</title>
+    <link>https://colinder.github.io/react-native_navigation/</link>
+    <pubDate>Thu, 29 Oct 2020 21:24:52 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/react-native_navigation/</guid>
+    <description><![CDATA[​
+React-Native navigation  vue는 router를 사용해 화면을 이동합니다. 그렇다면, react-native는 어떻게 화면을 이동할까요?
+바로 react-native navigation을 사용합니다. 어떻게 사용하는건지 기록합시다.
+ 공식홈페이지의 Getting started로 알아봅시다.
+​
+*새로운 프로젝트를 만들고 root폴더에서 진행.
+  개발환경
+  npm으로 진행
+  react-native_cli (✨expo로 진행하지 않습니다.)
+  android 기준
+  함수형 컴포넌트로 진행 (✨ 클래스 컴포넌트로 진행하지 않습니다.)
+  RN 버전 0.60이상에서 진행
+  react-native-cli: 2.0.1
+  react-native: 0.]]></description>
+</item><item>
     <title>what is AJAX(axios)?_01</title>
     <link>https://colinder.github.io/what_is_ajaxaxios_01/</link>
     <pubDate>Sun, 25 Oct 2020 23:14:37 &#43;0900</pubDate>
@@ -115,13 +135,5 @@ Git_Mirroring  기존에 사용하고 있던 A_Repo에서 B_Repo로 커밋히스
   복사하고자 하는 저장소(A_Repo)의 bare clone을 생성합니다.
 1  git clone --bare https://github.com/user/old-repository.git     새로운 저장소(B_Repo)를 만들고 mirror-push를 진행합니다.
 1 2  cd old-repository.git	👈 위에서 클론(bare)한 폴더로 이동 git push --mirror https://github.]]></description>
-</item><item>
-    <title>SW Expert Academy_D3 3975, 5176, , </title>
-    <link>https://colinder.github.io/sw_20.09.26/</link>
-    <pubDate>Sat, 26 Sep 2020 00:07:40 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/sw_20.09.26/</guid>
-    <description><![CDATA[​
-D3_3975_승률 비교하기 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  result = [] for T in range(int(input())): A, B, C, D = map(int, input().split()) if B/A &gt; D/C: result.append(&#34;BOB&#34;) elif B/A &lt; D/C: result.append(&#34;ALICE&#34;) else: result.append(&#34;DRAW&#34;) for t in range(T+1): print(f&#34;#{t+1} {result[t]}&#34;) # 아니 이게 D3라고? 완전 난이도 설정 실수네. 했다가 런타임 오류 보고 # 왜 그런건지 알았다. # python은 결과를 모았다가 출력하는 게 더 빠르다.]]></description>
 </item></channel>
 </rss>

@@ -1,0 +1,27 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>react-native - Category - </title>
+        <link>https://colinder.github.io/categories/react-native/</link>
+        <description>react-native - Category - </description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 29 Oct 2020 21:24:52 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/react-native/" rel="self" type="application/rss+xml" /><item>
+    <title>React Native_navigation</title>
+    <link>https://colinder.github.io/react-native_navigation/</link>
+    <pubDate>Thu, 29 Oct 2020 21:24:52 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/react-native_navigation/</guid>
+    <description><![CDATA[​
+React-Native navigation  vue는 router를 사용해 화면을 이동합니다. 그렇다면, react-native는 어떻게 화면을 이동할까요?
+바로 react-native navigation을 사용합니다. 어떻게 사용하는건지 기록합시다.
+ 공식홈페이지의 Getting started로 알아봅시다.
+​
+*새로운 프로젝트를 만들고 root폴더에서 진행.
+  개발환경
+  npm으로 진행
+  react-native_cli (✨expo로 진행하지 않습니다.)
+  android 기준
+  함수형 컴포넌트로 진행 (✨ 클래스 컴포넌트로 진행하지 않습니다.)
+  RN 버전 0.60이상에서 진행
+  react-native-cli: 2.0.1
+  react-native: 0.]]></description>
+</item></channel>
+</rss>
