@@ -1,4 +1,4 @@
-# React-Native google login
+# React-Native_google login
 
 
 ​	
@@ -118,7 +118,34 @@ _*google login을 하기 위해 firebase(모바일 및 웹 애플리케이션 �
 
    5. 앱 등록 진행 하다보면 `google-services.json`다운이 가능
 
-      _*혹시 에러 뜨면. react native change package name 검색 후 변경 진행_
+      _*혹시 에러 뜨면. [react native change package name](https://stackoverflow.com/questions/37389905/change-package-name-for-android-in-react-native) 검색 후 변경 진행_
+
+      ```bash
+      # In: android/app/src/main/java/MY/APP/NEW_ID/MainActivity.java:
+      package 새로운 패키지 이름 등록;
+      
+      # In: android/app/src/main/java/MY/APP/NEW_ID/MainApplication.java:
+      package 새로운 패키지 이름 등록;
+      
+      # In: android/app/src/main/AndroidManifest.xml:
+      package="새로운 패키지 이름 등록"
+      
+      # And in android/app/build.gradle:
+      applicationId "새로운 패키지 이름 등록"
+      
+      # In: android/app/BUCK:
+      android_build_config(
+        package="새로운 패키지 이름 등록"
+      )
+      android_resource(
+        package="새로운 패키지 이름 등록"
+      )
+      
+      # Gradle' cleaning in the end (in /android folder):
+      ./gradlew clean
+      ```
+
+      
 
    6. `google-services.json`다운 후 root/android/app안에 넣기
 

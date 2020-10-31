@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>React-Native google login - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="React-Native google login" />
+        <title>React-Native_google login - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="React-Native_google login" />
 <meta property="og:description" content="​
 React-Native google login  서비스를 개발하다보면 로그인 기능이 새삼 대단해보입니다. 신경쓸 것도 많고, 하지만 이런 수고를 sns로그인 기능으로 대신한다면 편의성이 많이 높아집니다. 하여 해보겠습니다.
  *google login을 하기 위해 firebase(모바일 및 웹 애플리케이션 개발 플랫폼)을 사용합니다.
@@ -23,7 +23,7 @@ React-Native google login  서비스를 개발하다보면 로그인 기능이 �
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
 
-<meta name="twitter:title" content="React-Native google login"/>
+<meta name="twitter:title" content="React-Native_google login"/>
 <meta name="twitter:description" content="​
 React-Native google login  서비스를 개발하다보면 로그인 기능이 새삼 대단해보입니다. 신경쓸 것도 많고, 하지만 이런 수고를 sns로그인 기능으로 대신한다면 편의성이 많이 높아집니다. 하여 해보겠습니다.
  *google login을 하기 위해 firebase(모바일 및 웹 애플리케이션 개발 플랫폼)을 사용합니다.
@@ -40,12 +40,12 @@ React-Native google login  서비스를 개발하다보면 로그인 기능이 �
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "React-Native google login",
+        "headline": "React-Native_google login",
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/react-native_googlelogin\/"
-        },"genre": "posts","keywords": "react-native, web","wordcount":  1182 ,
+        },"genre": "posts","keywords": "react-native, web","wordcount":  1262 ,
         "url": "https:\/\/colinder.github.io\/react-native_googlelogin\/","datePublished": "2020-10-29T23:13:25+09:00","dateModified": "2020-10-29T23:13:25+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -120,9 +120,9 @@ React-Native google login  서비스를 개발하다보면 로그인 기능이 �
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">React-Native google login</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">React-Native_google login</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/react-native/"><i class="far fa-folder fa-fw"></i>react-native</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-10-29">2020-10-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1182 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-10-29">2020-10-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1262 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;6 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -303,8 +303,58 @@ keytool -list -v -keystore debug.keystore -alias androiddebugkey -storepass andr
 </li>
 <li>
 <p>앱 등록 진행 하다보면 <code>google-services.json</code>다운이 가능</p>
-<p><em>*혹시 에러 뜨면. react native change package name 검색 후 변경 진행</em></p>
-</li>
+<p><em>*혹시 에러 뜨면. <a href="https://stackoverflow.com/questions/37389905/change-package-name-for-android-in-react-native" target="_blank" rel="noopener noreffer">react native change package name</a> 검색 후 변경 진행</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># In: android/app/src/main/java/MY/APP/NEW_ID/MainActivity.java:</span>
+package 새로운 패키지 이름 등록<span class="p">;</span>
+      
+<span class="c1"># In: android/app/src/main/java/MY/APP/NEW_ID/MainApplication.java:</span>
+package 새로운 패키지 이름 등록<span class="p">;</span>
+      
+<span class="c1"># In: android/app/src/main/AndroidManifest.xml:</span>
+<span class="nv">package</span><span class="o">=</span><span class="s2">&#34;새로운 패키지 이름 등록&#34;</span>
+      
+<span class="c1"># And in android/app/build.gradle:</span>
+applicationId <span class="s2">&#34;새로운 패키지 이름 등록&#34;</span>
+      
+<span class="c1"># In: android/app/BUCK:</span>
+android_build_config<span class="o">(</span>
+  <span class="nv">package</span><span class="o">=</span><span class="s2">&#34;새로운 패키지 이름 등록&#34;</span>
+<span class="o">)</span>
+android_resource<span class="o">(</span>
+  <span class="nv">package</span><span class="o">=</span><span class="s2">&#34;새로운 패키지 이름 등록&#34;</span>
+<span class="o">)</span>
+      
+<span class="c1"># Gradle&#39; cleaning in the end (in /android folder):</span>
+./gradlew clean
+</code></pre></td></tr></table>
+</div>
+</div></li>
 <li>
 <p><code>google-services.json</code>다운 후 root/android/app안에 넣기</p>
 <image src="/images/RN_googleLogin_06.png" width="auto" style="display: block; margin: 10px auto;">
