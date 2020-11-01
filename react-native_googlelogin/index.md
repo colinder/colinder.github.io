@@ -118,7 +118,7 @@ _*google login을 하기 위해 firebase(모바일 및 웹 애플리케이션 �
 
    5. 앱 등록 진행 하다보면 `google-services.json`다운이 가능
 
-      _*혹시 에러 뜨면. [react native change package name](https://stackoverflow.com/questions/37389905/change-package-name-for-android-in-react-native) 검색 후 변경 진행_
+      _*혹시 에러 뜨면 pakage name변경 진행_
 
       ```bash
       # In: android/app/src/main/java/MY/APP/NEW_ID/MainActivity.java:
@@ -347,6 +347,6 @@ _*google login을 하기 위해 firebase(모바일 및 웹 애플리케이션 �
 - https://www.youtube.com/watch?v=A1Ai4sKk0jM
 - https://medium.com/humanscape-tech/hooks-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-usestate-useeffect-811636d1035e
 
-
+- 패키지 이름 변경: https://stackoverflow.com/questions/37389905/change-package-name-for-android-in-react-native
 
 
