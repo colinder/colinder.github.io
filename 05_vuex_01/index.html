@@ -9,7 +9,7 @@
 <meta property="og:description" content="​
 Vuex 란? (공식문서)  Vuex는 Vue.js 애플리케이션에 대한 상태 관리 패턴 &#43; 라이브러리 입니다. 애플리케이션의 모든 컴포넌트에 대한 중앙 집중식 저장소 역할을 하며 예측 가능한 방식으로 상태를 변경할 수 있습니다. 또한 Vue의 공식 devtools 확장 프로그램과 통합되어 설정 시간이 필요 없는 디버깅 및 상태 스냅 샷 내보내기/가져오기와 같은 고급 기능을 제공합니다. (공식문서 설명)
  ​
-1 2 3 4 5  # 설치 명령어 npm i vuex or npm install vuex # 이후 src폴더안에 vuex폴더를 만들고 store." />
+1 2 3 4 5  # 설치 명령어 npm i vuex or npm install vuex # 이후  src폴더안에 vuex폴더를 만들고 store." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://colinder.github.io/05_vuex_01/" />
 <meta property="og:image" content="https://colinder.github.io/logo.png"/>
@@ -22,7 +22,7 @@ Vuex 란? (공식문서)  Vuex는 Vue.js 애플리케이션에 대한 상태 관
 <meta name="twitter:description" content="​
 Vuex 란? (공식문서)  Vuex는 Vue.js 애플리케이션에 대한 상태 관리 패턴 &#43; 라이브러리 입니다. 애플리케이션의 모든 컴포넌트에 대한 중앙 집중식 저장소 역할을 하며 예측 가능한 방식으로 상태를 변경할 수 있습니다. 또한 Vue의 공식 devtools 확장 프로그램과 통합되어 설정 시간이 필요 없는 디버깅 및 상태 스냅 샷 내보내기/가져오기와 같은 고급 기능을 제공합니다. (공식문서 설명)
  ​
-1 2 3 4 5  # 설치 명령어 npm i vuex or npm install vuex # 이후 src폴더안에 vuex폴더를 만들고 store."/>
+1 2 3 4 5  # 설치 명령어 npm i vuex or npm install vuex # 이후  src폴더안에 vuex폴더를 만들고 store."/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -143,15 +143,15 @@ Vuex 란? (공식문서)  Vuex는 Vue.js 애플리케이션에 대한 상태 관
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-vue" data-lang="vue"><span class="err">#</span> <span class="nx">설치</span> <span class="nx">명령어</span>
-<span class="nx">npm</span> <span class="nx">i</span> <span class="nx">vuex</span>   <span class="nx">or</span>   <span class="nx">npm</span> <span class="nx">install</span> <span class="nx">vuex</span>
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 설치 명령어</span>
+npm i vuex   or   npm install vuex
 
-<span class="err">#</span> <span class="nx">이후</span> 
-<span class="nx">src폴더안에</span> <span class="nx">vuex폴더를</span> <span class="nx">만들고</span> <span class="nx">store</span><span class="p">.</span><span class="nx">js라는</span> <span class="nx">파일을</span> <span class="nx">생성</span><span class="p">.</span> <span class="p">(</span><span class="nx">파일생성위치는</span> <span class="nx">자유롭게</span> <span class="nx">설정가능</span><span class="p">)</span>
+<span class="c1"># 이후 </span>
+src폴더안에 vuex폴더를 만들고 store.js라는 파일을 생성. <span class="o">(</span>파일생성위치는 자유롭게 설정가능<span class="o">)</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>​</p>
-<p>그렇다면? __<code>상태관리패턴</code>__이란 무엇인가?</p>
+<p>그렇다면? <code>상태관리패턴</code>이란 무엇인가?</p>
 <p>​</p>
 <p>🤔이를 알아보기 전에 간단히 지난 시간에 알아본 props와 emit의 문제점을 생각해보자!</p>
 <ol>
@@ -227,28 +227,28 @@ Vuex 란? (공식문서)  Vuex는 Vue.js 애플리케이션에 대한 상태 관
 </span><span class="lnt">22
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-vue" data-lang="vue"><span class="err">##</span> <span class="nx">store</span><span class="p">.</span><span class="nx">js</span>
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">## store.js</span>
 
-<span class="kr">import</span> <span class="nx">Vue</span> <span class="nx">from</span> <span class="s2">&#34;vue&#34;</span>
-<span class="kr">import</span> <span class="nx">Vuex</span> <span class="nx">from</span> <span class="s2">&#34;vuex&#34;</span>
+import Vue from <span class="s2">&#34;vue&#34;</span>
+import Vuex from <span class="s2">&#34;vuex&#34;</span>
 
-<span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">Vuex</span><span class="p">)</span>
+Vue.use<span class="o">(</span>Vuex<span class="o">)</span>
 
-<span class="kr">export</span> <span class="k">default</span> <span class="k">new</span> <span class="nx">Vuex</span><span class="p">.</span><span class="nx">Store</span><span class="p">({</span>
-    <span class="c1">// 여기에 state(상태) 정보를 등록해서 사용.
-</span><span class="c1"></span>	<span class="c1">// ex) 여러형태의 데이터를 구현해보자.
-</span><span class="c1"></span>	<span class="nx">state</span><span class="o">:</span> <span class="p">{</span>
-        <span class="nx">first</span><span class="o">:</span> <span class="s1">&#39;첫번째 데이터입니다.&#39;</span><span class="p">,</span>
-        <span class="nx">second</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-        <span class="nx">listData</span><span class="o">:</span> <span class="p">[</span>
-            <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;john&#34;</span><span class="p">},</span>
-            <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;poul&#34;</span><span class="p">},</span>
-            <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;kim&#34;</span><span class="p">}</span>
-        <span class="p">]</span>
-    <span class="p">}</span>
-<span class="p">})</span>
+<span class="nb">export</span> default new Vuex.Store<span class="o">({</span>
+    // 여기에 state<span class="o">(</span>상태<span class="o">)</span> 정보를 등록해서 사용.
+	// ex<span class="o">)</span> 여러형태의 데이터를 구현해보자.
+	state: <span class="o">{</span>
+        first: <span class="s1">&#39;첫번째 데이터입니다.&#39;</span>,
+        second: 2,
+        listData: <span class="o">[</span>
+            <span class="o">{</span>name: <span class="s2">&#34;john&#34;</span><span class="o">}</span>,
+            <span class="o">{</span>name: <span class="s2">&#34;poul&#34;</span><span class="o">}</span>,
+            <span class="o">{</span>name: <span class="s2">&#34;kim&#34;</span><span class="o">}</span>
+        <span class="o">]</span>
+    <span class="o">}</span>
+<span class="o">})</span>
 
-<span class="err">##</span> <span class="err">✨</span><span class="nx">Point</span><span class="o">:</span> <span class="nx">store에</span> <span class="nx">state라는</span> <span class="nx">곳에</span> <span class="nx">데이터를</span> <span class="nx">저장했다는</span> <span class="nx">것을</span> <span class="nx">기억하고</span> <span class="nx">다음으로</span> <span class="nx">넘어가자</span><span class="p">.</span>
+<span class="c1">## ✨Point: store에 state라는 곳에 데이터를 저장했다는 것을 기억하고 다음으로 넘어가자.</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>​</p>
@@ -273,20 +273,20 @@ Vuex 란? (공식문서)  Vuex는 Vue.js 애플리케이션에 대한 상태 관
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-vue" data-lang="vue"><span class="err">##</span> <span class="nx">main</span><span class="p">.</span><span class="nx">js</span>
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">## main.js</span>
 
-<span class="kr">import</span> <span class="nx">Vue</span> <span class="nx">from</span> <span class="s1">&#39;vue&#39;</span>
-<span class="kr">import</span> <span class="nx">App</span> <span class="nx">from</span> <span class="s1">&#39;./App.vue&#39;</span>
-<span class="kr">import</span> <span class="nx">router</span> <span class="nx">from</span> <span class="s1">&#39;./router&#39;</span>		<span class="p">(</span><span class="nx">이전에</span> <span class="nx">설명한</span> <span class="nx">router도</span> <span class="nx">설치되었음을</span> <span class="nx">알</span> <span class="nx">수</span> <span class="nx">있다</span><span class="p">.)</span>
-<span class="kr">import</span> <span class="nx">store</span> <span class="nx">from</span> <span class="s1">&#39;../src/vuex/store.js&#39;</span>	<span class="err">👈</span><span class="p">(</span><span class="nx">추가</span><span class="p">)</span>
+import Vue from <span class="s1">&#39;vue&#39;</span>
+import App from <span class="s1">&#39;./App.vue&#39;</span>
+import router from <span class="s1">&#39;./router&#39;</span>		<span class="o">(</span>이전에 설명한 router도 설치되었음을 알 수 있다.<span class="o">)</span>
+import store from <span class="s1">&#39;../src/vuex/store.js&#39;</span>	👈<span class="o">(</span>추가<span class="o">)</span>
 
-<span class="nx">Vue</span><span class="p">.</span><span class="nx">config</span><span class="p">.</span><span class="nx">productionTip</span> <span class="o">=</span> <span class="kc">false</span>
+Vue.config.productionTip <span class="o">=</span> <span class="nb">false</span>
 
-<span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
-  <span class="nx">router</span><span class="p">,</span>		<span class="p">(</span><span class="nx">이전에</span> <span class="nx">설명한</span> <span class="nx">router도</span> <span class="nx">설치되었음을</span> <span class="nx">알</span> <span class="nx">수</span> <span class="nx">있다</span><span class="mf">.22</span><span class="p">)</span>
-  <span class="nx">store</span><span class="p">,</span>	<span class="err">👈</span><span class="p">(</span><span class="nx">추가</span><span class="p">)</span>
-  <span class="nx">render</span><span class="o">:</span> <span class="nx">h</span> <span class="p">=&gt;</span> <span class="nx">h</span><span class="p">(</span><span class="nx">App</span><span class="p">)</span>
-<span class="p">}).</span><span class="nx">$mount</span><span class="p">(</span><span class="s1">&#39;#app&#39;</span><span class="p">)</span>
+new Vue<span class="o">({</span>
+  router,		<span class="o">(</span>이전에 설명한 router도 설치되었음을 알 수 있다.22<span class="o">)</span>
+  store,	👈<span class="o">(</span>추가<span class="o">)</span>
+  render: <span class="nv">h</span> <span class="o">=</span>&gt; h<span class="o">(</span>App<span class="o">)</span>
+<span class="o">})</span>.<span class="nv">$mount</span><span class="o">(</span><span class="s1">&#39;#app&#39;</span><span class="o">)</span>
 
 </code></pre></td></tr></table>
 </div>
@@ -321,25 +321,25 @@ Vuex 란? (공식문서)  Vuex는 Vue.js 애플리케이션에 대한 상태 관
 </span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-vue" data-lang="vue"><span class="err">##</span> <span class="nx">About</span><span class="p">.</span><span class="nx">vue</span>  <span class="nx">방법</span><span class="mf">.1</span> <span class="p">(</span><span class="nx">computed를</span> <span class="nx">사용하는</span> <span class="nx">방법</span><span class="p">)</span>
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">## About.vue  방법.1 (computed를 사용하는 방법)</span>
 
-<span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;{{</span><span class="nx">result</span><span class="p">}}&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;h1&gt;<span class="o">{{</span>result<span class="o">}}</span>&lt;/h1&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
 
-<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
-  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;About&#39;</span><span class="p">,</span>
-  <span class="c1">//Step 1.
-</span><span class="c1"></span>  <span class="nx">computed</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">result</span><span class="p">()</span> <span class="p">{</span>
-      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">state</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+&lt;script&gt;
+<span class="nb">export</span> default <span class="o">{</span>
+  name: <span class="s1">&#39;About&#39;</span>,
+  //Step 1.
+  computed: <span class="o">{</span>
+    result<span class="o">()</span> <span class="o">{</span>
+      <span class="k">return</span> this.<span class="nv">$store</span>.state
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+&lt;/script&gt;
 </code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
@@ -370,30 +370,30 @@ Vuex 란? (공식문서)  Vuex는 Vue.js 애플리케이션에 대한 상태 관
 </span><span class="lnt">24
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-vue" data-lang="vue"><span class="err">##</span> <span class="nx">About</span><span class="p">.</span><span class="nx">vue</span>  <span class="nx">방법</span><span class="mf">.2</span> <span class="p">(</span><span class="nx">data</span> <span class="nx">선언</span> <span class="nx">후</span> <span class="nx">store를</span> <span class="nx">저장해</span> <span class="nx">사용하는</span> <span class="nx">방법</span><span class="p">)</span>
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">## About.vue  방법.2 (data 선언 후 store를 저장해 사용하는 방법)</span>
 
-<span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="c">&lt;!--</span> <span class="nx">Step</span><span class="p">.</span> <span class="mi">3</span> <span class="o">--&gt;</span>
-    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;{{</span><span class="nx">result</span><span class="p">}}&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;!-- Step. <span class="m">3</span> --&gt;
+    &lt;h1&gt;<span class="o">{{</span>result<span class="o">}}</span>&lt;/h1&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
 
-<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
-  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;About&#39;</span><span class="p">,</span>
-  <span class="c1">//Step. 1
-</span><span class="c1"></span>  <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="p">{</span>
-      <span class="nx">result</span><span class="o">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
-    <span class="p">}</span>
-  <span class="p">},</span>
-  <span class="c1">//Step. 2
-</span><span class="c1"></span>  <span class="nx">created</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">result</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">state</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+&lt;script&gt;
+<span class="nb">export</span> default <span class="o">{</span>
+  name: <span class="s1">&#39;About&#39;</span>,
+  //Step. <span class="m">1</span>
+  data<span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="o">{</span>
+      result: <span class="s2">&#34;&#34;</span>,
+    <span class="o">}</span>
+  <span class="o">}</span>,
+  //Step. <span class="m">2</span>
+  created<span class="o">()</span> <span class="o">{</span>
+    this.result <span class="o">=</span> this.<span class="nv">$store</span>.state
+  <span class="o">}</span>
+<span class="o">}</span>
+&lt;/script&gt;
 </code></pre></td></tr></table>
 </div>
 </div><p>​</p>

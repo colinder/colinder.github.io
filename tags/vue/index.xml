@@ -120,6 +120,6 @@ Naming Convention  정해진 규정은 없으나, 많은 개발자들이 암묵�
     <description><![CDATA[​
 Vuex 란? (공식문서)  Vuex는 Vue.js 애플리케이션에 대한 상태 관리 패턴 + 라이브러리 입니다. 애플리케이션의 모든 컴포넌트에 대한 중앙 집중식 저장소 역할을 하며 예측 가능한 방식으로 상태를 변경할 수 있습니다. 또한 Vue의 공식 devtools 확장 프로그램과 통합되어 설정 시간이 필요 없는 디버깅 및 상태 스냅 샷 내보내기/가져오기와 같은 고급 기능을 제공합니다. (공식문서 설명)
  ​
-1 2 3 4 5  # 설치 명령어 npm i vuex or npm install vuex # 이후 src폴더안에 vuex폴더를 만들고 store.]]></description>
+1 2 3 4 5  # 설치 명령어 npm i vuex or npm install vuex # 이후  src폴더안에 vuex폴더를 만들고 store.]]></description>
 </item></channel>
 </rss>

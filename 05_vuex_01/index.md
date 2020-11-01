@@ -9,7 +9,7 @@
 
 ​	
 
-```vue
+```bash
 # 설치 명령어
 npm i vuex   or   npm install vuex
 
@@ -19,7 +19,7 @@ src폴더안에 vuex폴더를 만들고 store.js라는 파일을 생성. (파일
 
 ​	
 
-그렇다면? __`상태관리패턴`__이란 무엇인가?
+그렇다면? `상태관리패턴`이란 무엇인가?
 
 ​	
 
@@ -65,7 +65,7 @@ src폴더안에 vuex폴더를 만들고 store.js라는 파일을 생성. (파일
 
 store.js에 데이터를 등록(저장)한다. 
 
-```vue
+```bash
 ## store.js
 
 import Vue from "vue"
@@ -96,7 +96,7 @@ export default new Vuex.Store({
 
 저장소(**STORE**)에 데이터가 입력되었으니 이를 최상위 .js 파일(main.js)에 등록해 모든 영역에서 사용가능**(전역으로 등록)**하게 하자.
 
-```vue
+```bash
 ## main.js
 
 import Vue from 'vue'
@@ -126,7 +126,7 @@ store에 저장된 데이터를 불러와 사용한다. (난 Vue_CLI를 사용�
 >
 > **A. 여러방법이 있으나 가장 Basic한 방법으로 `1. computed`를 사용해 불러오는 방법과 `2. data`를 선언해 사용하는 방법을 알아보자.**  (이 두 방법을 추천하는 이유는 LifeCycle에서 정리되어 있다.)
 
-```vue
+```bash
 ## About.vue  방법.1 (computed를 사용하는 방법)
 
 <template>
@@ -150,7 +150,7 @@ export default {
 
 
 
-```vue
+```bash
 ## About.vue  방법.2 (data 선언 후 store를 저장해 사용하는 방법)
 
 <template>
