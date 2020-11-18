@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Compiler - Category - </title>
+        <link>https://colinder.github.io/categories/compiler/</link>
+        <description>Compiler - Category - </description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 18 Nov 2020 11:54:20 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/compiler/" rel="self" type="application/rss+xml" /><item>
+    <title>Interpreter VS Compiler_Language</title>
+    <link>https://colinder.github.io/interpretervscompiler_language/</link>
+    <pubDate>Wed, 18 Nov 2020 11:54:20 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/interpretervscompiler_language/</guid>
+    <description><![CDATA[​
+Interpreter VS Compiler_Language  web 개발을 하다보면 javascript를 공부하게 되고, javascript를 공부하다보면, 점점 궁금해지는 것이 많아집니다. 그 많은 호기심을 채우기 전 많이 듣게 되는 기초적인 지식?인 인터프리터 언어와 컴파일 언어의 특징과 차이에 대하여 알아봅시다!
+ ​
+뜬금없이 프로그래밍 언어란 무엇인지 우선 알아봅시다. 컴퓨터는 이진수만 이해할 수 있습니다. 즉 컴퓨터는 우리가 사용하는 언어가 아닌 &lsquo;0&rsquo;, &lsquo;1&rsquo;만 이해합니다.
+근데 이게 프로그래밍 언어랑 무슨 상관일까요? 상관이 아주 많습니다&hellip;ㅎ.. 프로그래밍 언어로 프로그램을 만들고 실행 할 때 우리는 &lsquo;0&rsquo;, &lsquo;1&rsquo; 같은 명령어로 코딩을 하지 않습니다.]]></description>
+</item></channel>
+</rss>
