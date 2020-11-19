@@ -1,0 +1,23 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Javascript - Category - </title>
+        <link>https://colinder.github.io/categories/javascript/</link>
+        <description>Javascript - Category - </description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 18 Nov 2020 13:59:06 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/javascript/" rel="self" type="application/rss+xml" /><item>
+    <title>Async To Sync in Javascript</title>
+    <link>https://colinder.github.io/asynctosyncinjavascript/</link>
+    <pubDate>Wed, 18 Nov 2020 13:59:06 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/asynctosyncinjavascript/</guid>
+    <description><![CDATA[​
+Async to Sync in Javascript  누구나 웹개발을 하다보면 HTTP 통신을 통해 데이터를 가져오고 가공하고 사용하게됩니다. 그리고 동기, 비동기 처리 때문에 골치가 아파집니다. (만약 골치가 아프지 않다면.. 부럽습니다..) 더 이상 골치아프기 싫어서 정리해봅시다.👍
+ *동기, 비동기 설명은 이전 포스팅으로 갈음합니다.
+​
+Async(비동기) to Sync(동기) 방법 자바스크립트에서의 비동기를 동기로 동작시키는 대표적인 3가지의 방법을 알아보겠습니다.
+  Callback
+  Promise
+  Async / Await
+  ​
+1. Callback   개발자들 마다 정의가 조금씩 다르겠지만, 어떤 이벤트가 발생한 후, 수행될 함수로 정의해보겠습니다.]]></description>
+</item></channel>
+</rss>
