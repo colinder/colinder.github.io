@@ -11,9 +11,9 @@ Web을 공부하다보면 반드시 듣게 되는 단어. "DOM"
 
 # DOM이란?
 
-DOM(Document Object Model)은 웹 페이지에 대한 인터페이스입니다. 기본적으로 페이지의 콘텐츠 및 구조, 그리고 스타일을 읽고 조작할 수 있도록 API를 제공합니다. 먼저 DOM을 이해하기 전에 웹 페이지가 어떻게 빌드 되는지 알아보면 이해하는데 도움이 됩니다. 하여 알아봅시다!
+> DOM(Document Object Model)은 웹 페이지에 대한 인터페이스입니다. 기본적으로 페이지의 콘텐츠 및 구조, 그리고 스타일을 읽고 조작할 수 있도록 API를 제공합니다. 먼저 DOM을 이해하기 전에 웹 페이지가 어떻게 빌드 되는지 알아보면 이해하는데 도움이 됩니다. 하여 알아봅시다!
 
-_*인터페이스(interface): 서로 다른 두 개의 시스템, 장치 사이에서 정보나 신호를 주고받는 경우의 접점이나 경계면이다. 즉, 사용자가 기기를 쉽게 동작시키는데 도움을 주는 시스템._
+<p style='text-align:right; font-style:italic; color:grey'>*인터페이스(interface): 서로 다른 두 개의 시스템, 장치 사이에서 정보나 신호를 주고받는 경우의 접점이나 경계면이다. 즉, 사용자가 기기를 쉽게 동작시키는데 도움을 주는 시스템.</p>
 
 ​	
 
@@ -27,9 +27,9 @@ _*인터페이스(interface): 서로 다른 두 개의 시스템, 장치 사이�
 
 {{<image src="/images/DOM_00.jpg" width="1000px">}}
 
-_*DOM(Document Object Model) – HTML 요소들의 구조화된 표현_
+<p style='text-align:right; font-style:italic; color:grey'>*DOM(Document Object Model) – HTML 요소들의 구조화된 표현</p>
 
-_*CSSOM(Cascading Style Sheets Object Model) – 요소들과 연관된 스타일 정보의 구조화된 표현_ 
+<p style='text-align:right; font-style:italic; color:grey'>*CSSOM(Cascading Style Sheets Object Model) – 요소들과 연관된 스타일 정보의 구조화된 표현</p>
 
 ​	
 
