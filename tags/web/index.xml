@@ -17,17 +17,6 @@ ex) 125.209.222.141, 172.217.175.238
 ​
 도메인(domain)이란? ip는 사람이 이해하고 기억하기 어렵기 때문에 쉽게 접근할 수 있게 각 ip에 고유한 이름을 부여할 수 있게 했는데, 이것을 도메인이라고 합니다.]]></description>
 </item><item>
-    <title>HTTP VS HTTPS</title>
-    <link>https://colinder.github.io/httpvshttps/</link>
-    <pubDate>Mon, 23 Nov 2020 11:28:42 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/httpvshttps/</guid>
-    <description><![CDATA[​
-HTTP vs HTTPS  웹개발 프로젝트를 하면서 인터넷 주소창(URL)을 자주 보게 되었습니다. 그러던 중 HTTP와 HTTPS의 차이를 발견하였고 단순히 HTTPS가 보안이 더 뛰어나서 적용하면 좋다. 정도의 개념만을 가지고 있다, &lsquo;한 번 차이를 깔끔히 정리하면 좋겠다.&rsquo; 싶어 정리해보겠습니다.
- ​
-뜬금없이 URL란 무엇인지 우선 알아봅시다. 우리가 &lsquo;인터넷 주소창&rsquo;이라고 흔히 말하는 URL은 Uniform Resource Locator, 자원 위치 규약? 정도로 이해하면 좋을 것 같습니다.
-우리가 사는 주소를 잠시 생각해봅시다. 먼저, 대한민국안에 서울특별시에 있는 강남구를 생각해보면 대한민국이라는 국가에서 서울특별시라는 위치로 그리고 그 안에 강남구로 범위를 좁히며 구체적인 위치를 생각할 수 있습니다.]]></description>
-</item><item>
     <title>Interpreter VS Compiler_Language</title>
     <link>https://colinder.github.io/interpretervscompiler_language/</link>
     <pubDate>Wed, 18 Nov 2020 11:54:20 &#43;0900</pubDate>
@@ -138,5 +127,14 @@ AJAX  세상에는 다양한 web서버가 있다.
  그렇다면, 이 web서버들과 통신 하려면 어떻게 해야 할까?
   대표적인 통신 방법을 AJAX라 한다. 이는 JavaScript의 라이브러리중 하나이며 Asynchronous Javascript And Xml(비동기식 자바스크립트와 xml)의 약자며, 자체가 하나의 특정한 기술을 말하는 것이 아니며, 함께 사용하는 기술의 묶음을 지칭하는 용어이다.
 브라우저가 가지고있는 XMLHttpRequest 객체를 이용해서 전체 페이지를 새로 고치지 않고도 페이지의 일부만을 위한 데이터를 로드하는 기법 이며 Ajax를 한마디로 정의하자면 JavaScript를 사용한 비동기 통신, 클라이언트와 서버간에 XML 데이터를 주고받는 기술이라고 할 수 있겠습니다.]]></description>
+</item><item>
+    <title>REST API Reference</title>
+    <link>https://colinder.github.io/rest-api-reference/</link>
+    <pubDate>Thu, 24 Sep 2020 09:54:40 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/rest-api-reference/</guid>
+    <description><![CDATA[​
+REST API Reference [TOC]
+1.사용자 API    Members Descriptions     POST /accounts/signup 회원가입   POST /accounts/login 회원 로그인   POST /accounts/userDetail 회원정보   PUT /accounts/update 회원정보 수정   DELETE /accounts/dropUser 회원탈퇴   GET /accounts/emailAuth 이메일 인증   GET /accounts/emailCheck 이메일 중복 확인   GET /accounts/nicknameCheck 닉네임 중복 확인    1.1 회원 로그인 POST /accounts/login ​	회원 로그인 API 입니다.]]></description>
 </item></channel>
 </rss>
