@@ -14,8 +14,8 @@ HTTP vs HTTPS  웹개발 프로젝트를 하면서 인터넷 주소창(URL)을 �
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://colinder.github.io/httpvshttps/" />
 <meta property="og:image" content="https://colinder.github.io/logo.png"/>
-<meta property="article:published_time" content="2020-11-23T11:28:42+09:00" />
-<meta property="article:modified_time" content="2020-11-23T11:28:42+09:00" />
+<meta property="article:published_time" content="2020-11-24T11:28:42+09:00" />
+<meta property="article:modified_time" content="2020-11-24T11:28:42+09:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
 
@@ -28,7 +28,7 @@ HTTP vs HTTPS  웹개발 프로젝트를 하면서 인터넷 주소창(URL)을 �
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/httpvshttps/" /><link rel="prev" href="https://colinder.github.io/asynctosyncinjavascript/" /><link rel="next" href="https://colinder.github.io/what_is_domain/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/httpvshttps/" /><link rel="prev" href="https://colinder.github.io/what_is_domain/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -37,8 +37,8 @@ HTTP vs HTTPS  웹개발 프로젝트를 하면서 인터넷 주소창(URL)을 �
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/httpvshttps\/"
-        },"genre": "posts","keywords": "http, web, https","wordcount":  302 ,
-        "url": "https:\/\/colinder.github.io\/httpvshttps\/","datePublished": "2020-11-23T11:28:42+09:00","dateModified": "2020-11-23T11:28:42+09:00","publisher": {
+        },"genre": "posts","keywords": "http, web, https","wordcount":  332 ,
+        "url": "https:\/\/colinder.github.io\/httpvshttps\/","datePublished": "2020-11-24T11:28:42+09:00","dateModified": "2020-11-24T11:28:42+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -114,7 +114,7 @@ HTTP vs HTTPS  웹개발 프로젝트를 하면서 인터넷 주소창(URL)을 �
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">HTTP VS HTTPS</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/web/"><i class="far fa-folder fa-fw"></i>web</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-11-23">2020-11-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;302 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-11-24">2020-11-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;332 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -125,7 +125,11 @@ HTTP vs HTTPS  웹개발 프로젝트를 하면서 인터넷 주소창(URL)을 �
   <ul>
     <li><a href="#뜬금없이-url란-무엇인지-우선-알아봅시다">뜬금없이 URL란 무엇인지 우선 알아봅시다.</a></li>
     <li><a href="#http-hypertext-transfer-protocol">HTTP (HyperText Transfer Protocol)</a></li>
-    <li><a href="#https-hypertext-transfer-protocol--secure-socket">HTTPS (HyperText Transfer Protocol + Secure Socket)</a></li>
+    <li><a href="#https-hypertext-transfer-protocol--secure-socket">HTTPS (HyperText Transfer Protocol + Secure Socket)</a>
+      <ul>
+        <li><a href="#secure-socket은-무엇일까요">🤔Secure Socket은 무엇일까요?</a></li>
+      </ul>
+    </li>
     <li><a href="#참고한-글">참고한 글</a></li>
   </ul>
 </nav></div>
@@ -157,18 +161,22 @@ HTTP vs HTTPS  웹개발 프로젝트를 하면서 인터넷 주소창(URL)을 �
 <h2 id="https-hypertext-transfer-protocol--secure-socket">HTTPS (HyperText Transfer Protocol + Secure Socket)</h2>
 <p>HTTP + S(Secure Socket) 즉 HTTP에서 Secure Socket이 추가된 것이 HTTPS입니다. 간단히 HTTPS을 사용하면 <strong>모든 Protocol이 암호화된다는 것입니다.</strong></p>
 <p>​</p>
-<p>​</p>
+<h3 id="secure-socket은-무엇일까요">🤔Secure Socket은 무엇일까요?</h3>
+<blockquote>
+<p>Secure Socket은 <strong>SSL(Secure Socket Layer) 프로토콜</strong>을 의미하는데, <strong>컴퓨터 네트워크에 통신 보안을 제공하기 위해 설계된 암호 규약</strong>입니다. SSL는 과거의 명칭이고, SSL이 표준화되면서 **TLS(Transport Layer Security)**로 바뀌어 사용되고 있습니다.</p>
+</blockquote>
 <p>​</p>
 <h2 id="참고한-글">참고한 글</h2>
 <ul>
 <li><a href="https://post.naver.com/viewer/postView.nhn?volumeNo=16561296&amp;memberNo=1834">https://post.naver.com/viewer/postView.nhn?volumeNo=16561296&amp;memberNo=1834</a></li>
 <li><a href="https://blog.globalhost.co.kr/19">https://blog.globalhost.co.kr/19</a></li>
+<li><a href="https://12bme.tistory.com/80https://constant.kr/blog/2018/08/10/ssl-%EC%9D%B4%EB%9E%80-%EA%B5%AC%EA%B8%80%EC%97%90%EC%84%9C-ssl%EC%9D%84-%EC%A4%91%EC%9A%94%ED%95%98%EA%B2%8C-%EC%97%AC%EA%B8%B0%EB%8A%94-%EC%9D%B4%EC%9C%A0/">https://12bme.tistory.com/80https://constant.kr/blog/2018/08/10/ssl-%EC%9D%B4%EB%9E%80-%EA%B5%AC%EA%B8%80%EC%97%90%EC%84%9C-ssl%EC%9D%84-%EC%A4%91%EC%9A%94%ED%95%98%EA%B2%8C-%EC%97%AC%EA%B8%B0%EB%8A%94-%EC%9D%B4%EC%9C%A0/</a></li>
 </ul>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2020-11-23</span>
+                <span>Updated on 2020-11-24</span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -189,8 +197,7 @@ HTTP vs HTTPS  웹개발 프로젝트를 하면서 인터넷 주소창(URL)을 �
         </section>
     </div>
 
-    <div class="post-nav"><a href="/asynctosyncinjavascript/" class="prev" rel="prev" title="Async To Sync in Javascript"><i class="fas fa-angle-left fa-fw"></i>Async To Sync in Javascript</a>
-            <a href="/what_is_domain/" class="next" rel="next" title="what is Domain">what is Domain<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/what_is_domain/" class="prev" rel="prev" title="what is Domain"><i class="fas fa-angle-left fa-fw"></i>what is Domain</a></div>
 </div>
 <div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.

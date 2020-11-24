@@ -53,7 +53,9 @@ HTTP + S(Secure Socket) 즉 HTTP에서 Secure Socket이 추가된 것이 HTTPS�
 
 ​	
 
-​	
+### 🤔Secure Socket은 무엇일까요?
+
+> Secure Socket은 **SSL(Secure Socket Layer) 프로토콜**을 의미하는데, **컴퓨터 네트워크에 통신 보안을 제공하기 위해 설계된 암호 규약**입니다. SSL는 과거의 명칭이고, SSL이 표준화되면서 **TLS(Transport Layer Security)**로 바뀌어 사용되고 있습니다. 
 
 ​	
 
@@ -69,3 +71,4 @@ HTTP + S(Secure Socket) 즉 HTTP에서 Secure Socket이 추가된 것이 HTTPS�
 
 - https://post.naver.com/viewer/postView.nhn?volumeNo=16561296&memberNo=1834
 - https://blog.globalhost.co.kr/19
+- https://12bme.tistory.com/80https://constant.kr/blog/2018/08/10/ssl-%EC%9D%B4%EB%9E%80-%EA%B5%AC%EA%B8%80%EC%97%90%EC%84%9C-ssl%EC%9D%84-%EC%A4%91%EC%9A%94%ED%95%98%EA%B2%8C-%EC%97%AC%EA%B8%B0%EB%8A%94-%EC%9D%B4%EC%9C%A0/
