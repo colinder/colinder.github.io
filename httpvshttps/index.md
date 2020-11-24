@@ -31,39 +31,61 @@ URL위에서 말한대로 일종의 규약인데 URL에 접속하는 경우에�
 
 ​	
 
+​	
+
 ## HTTP (HyperText Transfer Protocol)
 
 이제 HTTP입니다! 위에서 살짝 언급했듯이, HTTP는 인터넷에서 웹 서버와 사용자(우리) 컴퓨터에 설치된 웹 브라우저 사이에 문서([DOM](https://colinder.github.io/what_is_dom/))를 전송하기위한 통신규약입니다. 저는 HT의 뜻이, HTTP를 이해하는데 핵심이라고 생각합니다.
 
-HyperText: 참조([하이퍼링크](https://ko.wikipedia.org/wiki/하이퍼링크))를 통해 독자가 한 문서에서 다른 문서로 즉시 접근할 수 있는 텍스트.
+- HyperText: 참조([하이퍼링크](https://ko.wikipedia.org/wiki/하이퍼링크))를 통해 독자가 한 문서에서 다른 문서로 즉시 접근할 수 있는 텍스트.
 
 간단한 클릭을 통해 여러 문서를 이동하며 내용을 볼 수 있는 것입니다.
 
-__즉, http://colinder.github.io/ === colinder.github.io라는 주소([도메인](https://colinder.github.io/what_is_domain/))을 HyperText Transfer Protocol 형태로 받아와서 보여주세요! 정도로 해석할 수 있습니다.__
+---
+
+__즉, http://colinder.github.io/ 는__
+
+__colinder.github.io라는 주소([도메인](https://colinder.github.io/what_is_domain/))을 HyperText Transfer Protocol 형태로 받아와서 보여주세요! 정도로 해석할 수 있습니다.__
+
+---
+
+​	
 
 ​	
 
 그럼 HTTPS는 무엇일까요?
 
-​	
+## HTTPS (HyperText Transfer Protocol + <span style="color: red">Secure Socket</span>)
 
-## HTTPS (HyperText Transfer Protocol + Secure Socket)
+HTTP + S(Secure Socket) 즉, HTTP에서 Secure Socket이 추가된 것이 HTTPS입니다. 간단히 HTTPS을 사용하면 __암호화된 Protocol을 사용한다는 뜻입니다.__
 
-HTTP + S(Secure Socket) 즉 HTTP에서 Secure Socket이 추가된 것이 HTTPS입니다. 간단히 HTTPS을 사용하면 __모든 Protocol이 암호화된다는 것입니다.__
+<image src="/images//httpVShttps_01.png" width="1000px" style="display: block; margin: 10px auto;">
+
+---
 
 ​	
 
 ### 🤔Secure Socket은 무엇일까요?
 
-> Secure Socket은 **SSL(Secure Socket Layer) 프로토콜**을 의미하는데, **컴퓨터 네트워크에 통신 보안을 제공하기 위해 설계된 암호 규약**입니다. SSL는 과거의 명칭이고, SSL이 표준화되면서 **TLS(Transport Layer Security)**로 바뀌어 사용되고 있습니다. 
+> Secure Socket은 **SSL(Secure Socket Layer) 프로토콜**을 의미하는데, **컴퓨터 네트워크에 통신 보안을 제공하기 위해 설계된 암호 규약**입니다. SSL는 과거의 명칭이고, SSL이 표준화되면서 <b>TLS(Transport Layer Security)</b>로 바뀌어 사용되고 있습니다. 
+
+보안이 어떻게 진행되는지 알아보겠습니다. 
+
+<image src="/images//httpVShttps_00.png" width="1000px" style="display: block; margin: 10px auto;">
 
 ​	
 
+​	
 
+# 👀요약
 
+> http와 https의 가장 큰 차이는 보안기술이 적용되었는지 아닌지가 맞았습니다. 다만, 
+>
+> 어떤 보안 기술이 적용되고 있는지와 어떤식으로 보안 기술이 작동하는지 알 수 있었습니다.
 
+​	
 
-
+​	
 
 
 
