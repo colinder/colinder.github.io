@@ -39,11 +39,9 @@ URL위에서 말한대로 일종의 규약인데 URL에 접속하는 경우에�
 
 - HyperText: 참조([하이퍼링크](https://ko.wikipedia.org/wiki/하이퍼링크))를 통해 독자가 한 문서에서 다른 문서로 즉시 접근할 수 있는 텍스트.
 
-간단한 클릭을 통해 여러 문서를 이동하며 내용을 볼 수 있는 것입니다.
+간단히 클릭을 통해 여러 문서를 이동하며 내용을 볼 수 있는 것입니다.
 
----
-
-__즉, http://colinder.github.io/ 는__
+__즉, http://colinder.github.io는__
 
 __colinder.github.io라는 주소([도메인](https://colinder.github.io/what_is_domain/))을 HyperText Transfer Protocol 형태로 받아와서 보여주세요! 정도로 해석할 수 있습니다.__
 
@@ -55,17 +53,13 @@ __colinder.github.io라는 주소([도메인](https://colinder.github.io/what_is
 
 그럼 HTTPS는 무엇일까요?
 
-## HTTPS (HyperText Transfer Protocol + <span style="color: red">Secure Socket</span>)
+## HTTP<span style="color: red">S</span> (HyperText Transfer Protocol + <span style="color: red">Secure Socket</span>)
 
-HTTP + S(Secure Socket) 즉, HTTP에서 Secure Socket이 추가된 것이 HTTPS입니다. 간단히 HTTPS을 사용하면 __암호화된 Protocol을 사용한다는 뜻입니다.__
+HTTP + S(Secure Socket) 즉, HTTP에서 <span style="color: red">Secure Socket</span>이 추가된 것이 HTTPS입니다. 간단히 HTTPS을 사용하면 __암호화된 Protocol을 사용한다는 뜻입니다.__
 
-<image src="/images//httpVShttps_01.png" width="1000px" style="display: block; margin: 10px auto;">
+​		
 
----
-
-​	
-
-### 🤔Secure Socket은 무엇일까요?
+### 🤔<span style="color: red">Secure Socket</span>은 무엇일까요?
 
 > Secure Socket은 **SSL(Secure Socket Layer) 프로토콜**을 의미하는데, **컴퓨터 네트워크에 통신 보안을 제공하기 위해 설계된 암호 규약**입니다. SSL는 과거의 명칭이고, SSL이 표준화되면서 <b>TLS(Transport Layer Security)</b>로 바뀌어 사용되고 있습니다. 
 
@@ -73,7 +67,23 @@ HTTP + S(Secure Socket) 즉, HTTP에서 Secure Socket이 추가된 것이 HTTPS�
 
 <image src="/images//httpVShttps_00.png" width="1000px" style="display: block; margin: 10px auto;">
 
+공개키와 대칭키로 암호문을 주고 받는 과정을 보며, 보안의 강점이 있는 것을 알았습니다.
+
 ​	
+
+### 🙄 이점은 보안뿐일까요?
+
+하지만 HTTPS의 장점은 보안상 우위에만 있는 것이 아닙니다. **사실 HTTPS로 전환하게 되면 검색엔진 최적화(SEO)에 있어서도 큰 혜택을 볼 수 있습니다. 구글이 HTTPS 웹사이트에 가산점을 주어 검색시 노출에 혜택을 주겠다고 공표했습니다.** 사용자들이 결국에는 가장 안전하다고 생각하는 사이트를 더 많이 방문하기 때문이기도 합니다.
+
+<image src="/images//httpVShttps_02.png" style="display: block; margin: 10px auto;">
+
+**또한 가속화된 모바일 페이지(AMP, Accelerated Mobile Pages)를 만들고 싶을 때도 HTTPS 프로토콜을 사용해만 합니다.** 여기서 AMP란 모바일 기기에서 훨씬 빠르게 콘텐츠를 로딩 하기 위한 방법으로 구글이 만든 것입니다. AMP는 HTML에서 불필요한 부분을 없앤 것이라고 볼 수 있습니다. 구글의 SERP(검색 결과 페이지)를 보면 스마트폰과 태블릿의 사용자들이 모바일에서 사용하기 편하도록 AMP 콘텐츠들이 두드러져 보이는 것을 볼 수 있습니다
+
+모바일 친화적인 웹사이트를 만드는 것과 모바일 검색순위 및 지역에 SEO를 증가시키는 것이 점점 더 중요해지고 있는 요즘, HTTP를 HTTPS로 전환하는 것이 많은 강점이 있다는 것을 알 수 있습니다.
+
+ 	
+
+​		
 
 ​	
 
@@ -81,9 +91,25 @@ HTTP + S(Secure Socket) 즉, HTTP에서 Secure Socket이 추가된 것이 HTTPS�
 
 > http와 https의 가장 큰 차이는 보안기술이 적용되었는지 아닌지가 맞았습니다. 다만, 
 >
+> 보안이 우수한 사이트가 노출에 이점이 있다는 점.
+>
 > 어떤 보안 기술이 적용되고 있는지와 어떤식으로 보안 기술이 작동하는지 알 수 있었습니다.
 
-​	
+추가로 직접 정리한 SSL 진행 절차가 보기 어려울 수 있어서 단계별로 정리해보겠습니다. 
+
+1. 사이트 안전성 인증 받기
+
+<image src="/images//httpVShttps_03.png" width="1000px" style="display: block; margin: 10px auto;">
+
+2. 사용자와 사이트 간의 인증 내용 확인
+
+<image src="/images//httpVShttps_04.png" width="1000px" style="display: block; margin: 10px auto;">
+
+3. 사용자와 사이트 간의 통신
+
+<image src="/images//httpVShttps_05.png" width="1000px" style="display: block; margin: 10px auto;">
+
+
 
 ​	
 
@@ -94,3 +120,10 @@ HTTP + S(Secure Socket) 즉, HTTP에서 Secure Socket이 추가된 것이 HTTPS�
 - https://post.naver.com/viewer/postView.nhn?volumeNo=16561296&memberNo=1834
 - https://blog.globalhost.co.kr/19
 - https://12bme.tistory.com/80https://constant.kr/blog/2018/08/10/ssl-%EC%9D%B4%EB%9E%80-%EA%B5%AC%EA%B8%80%EC%97%90%EC%84%9C-ssl%EC%9D%84-%EC%A4%91%EC%9A%94%ED%95%98%EA%B2%8C-%EC%97%AC%EA%B8%B0%EB%8A%94-%EC%9D%B4%EC%9C%A0/
+- http://blog.wishket.com/http-vs-https-%EC%B0%A8%EC%9D%B4-%EC%95%8C%EB%A9%B4-%EC%82%AC%EC%9D%B4%ED%8A%B8%EC%9D%98-%EB%A0%88%EB%B2%A8%EC%9D%B4-%EB%B3%B4%EC%9D%B8%EB%8B%A4/
+
+
+
+​	
+
+​	
