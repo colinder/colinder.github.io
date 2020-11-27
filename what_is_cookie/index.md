@@ -84,7 +84,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
 ```javascript
 // ex) 
-alert( document.cookie ); // cookie1=value1; cookie2=value2;...	 // 모든 쿠키 확인
+alert( document.cookie ); // cookie1=value1; cookie2=value2;...	 // 모든 쿠키를 알림창으로 확인하겠다.는 명령어
 
 // 어디든 사이트에 들어가서 개발자 도구창을 열고 console.log(document.cookie) 를 입력해 보세요!
 ```
