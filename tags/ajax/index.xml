@@ -3,18 +3,7 @@
         <title>AJAX - Tag - </title>
         <link>https://colinder.github.io/tags/ajax/</link>
         <description>AJAX - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 25 Oct 2020 23:14:37 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/ajax/" rel="self" type="application/rss+xml" /><item>
-    <title>what is AJAX(axios)?_01</title>
-    <link>https://colinder.github.io/what_is_ajaxaxios_01/</link>
-    <pubDate>Sun, 25 Oct 2020 23:14:37 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/what_is_ajaxaxios_01/</guid>
-    <description><![CDATA[​
-비동기 요청인 axios를 동기적으로 처리 할 순 없을까?
-​
-일단 테스트 해보자. ​
-1. 첫 번째 방법(.then()안에 순서대로 코딩) 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29  &lt;template&gt; &lt;div&gt; &lt;h1&gt;axios 테스트&lt;/h1&gt; &lt;button @click=&#34;axiosTest()&#34;&gt;axios 테스트&lt;/button&gt; &lt;p v-for=&#34;(post, i) in posts&#34; :key=&#34;i&#34;&gt;{{post}}&lt;/p&gt; &lt;/div&gt; &lt;/template&gt; &lt;script&gt; export default { name : &#39;Accounts&#39;, data() { return { posts: &#39;data의 posts입니당.]]></description>
-</item><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 11 Oct 2020 21:25:51 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/ajax/" rel="self" type="application/rss+xml" /><item>
     <title>what is AJAX(axios)?</title>
     <link>https://colinder.github.io/what_is_ajaxaxios_00/</link>
     <pubDate>Sun, 11 Oct 2020 21:25:51 &#43;0900</pubDate>
