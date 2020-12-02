@@ -11,7 +11,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://colinder.github.io/" />
 <meta property="og:image" content="https://colinder.github.io/logo.png"/>
-<meta property="og:updated_time" content="2020-11-24T11:28:42+09:00" />
+<meta property="og:updated_time" content="2020-11-30T13:40:25+09:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
 
@@ -103,6 +103,16 @@
         alt="/images/jg_02.jpg"
         title="/images/jg_02.jpg" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/colinder" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="mailto:kjonggwan@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/python_library/">Python_Library</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-09-11">2020-09-11</time></span>&nbsp;<span class="post-category">included in <a href="/categories/python/"><i class="far fa-folder fa-fw"></i>Python</a></span></div><div class="content">​
+자주 쓰는 Python Library  자주 사용하게되는 파이썬 라이브러리를 정리한다.
+ ​
+  정규표현식  일대일 매칭되는 문자
+ 정규표현식 안에서, 바로 다음 절에서 설명하는 메타문자를 제외한 모든 문자 하나는 일반 문자열 하나와 매칭된다. 예를 들어, a는 a와 매칭되고, 가는 ‘가’와 매칭되는 식이다. 당연히 a가 ‘b’ 또는 ‘가’와 매칭되지는 않는다.
+1 2 3 4 5 6 7 8 9 10 11 12 13  어떤 프로그래밍 언어의 정규표현식이든 메타문자(특수한 기능을 하는 문자)라는 것이 존재한다.</div><div class="post-footer">
+        <a href="/python_library/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/algorithm/">algorithm</a>,&nbsp;<a href="/tags/python/">Python</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/sw_20.09.09/">SW Expert Academy_D3 4698, 1493, 10570, 3032</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-09-08">2020-09-08</time></span>&nbsp;<span class="post-category">included in <a href="/categories/sw-expert-academy/"><i class="far fa-folder fa-fw"></i>SW Expert Academy</a></span></div><div class="content">​
 D3_4698_테네스의 특별한 소수 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  for T in range(int(input())): D, A, B = map(int, input().split()) D = str(D) a = [0, 0] + [1] * (B - 1) rootB = int(B**0.5)	👈 이 아이디어를 얻기까지 오랜시간이 걸렸다. for i in range(2, rootB+1):	👈 if a[i] == 1:	👈 for j in range(2*i, B+1, i):	👈 에라토스테네스의 체 를 활용 a[j] = 0	👈 result = [] for i in range(A, B+1): if a[i] == 1 and D in str(i): result.</div><div class="post-footer">
@@ -121,15 +131,6 @@ D3_10505_소득 불균형 1 2 3 4 5 6 7 8 9  for T in range(int(input())): N = i
 D3_10200_구독자 전쟁 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  for T in range(int(input())): N, A, B = map(int, input().</div><div class="post-footer">
         <a href="/sw_20.09.04/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/algorithm/">algorithm</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/block_chain/">Block_Chain setting &amp; basic</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-09-03">2020-09-03</time></span>&nbsp;<span class="post-category">included in <a href="/categories/block_chain/"><i class="far fa-folder fa-fw"></i>block_chain</a></span></div><div class="content">​
-🎈가상환경에서 블록체인 채굴 및 기본 시스템 정리 ​
-1. geth(Go-ethereum) 설치  블록체인 기술은 중앙집중화된 데이터베이스에 반기를 들고 나온 개념이기 때문에 중앙 서버 이런게 없다. 즉 누구라도 해당 블록체인 네트워크에 참여하고 싶다면 언제라도 블록체인 데이터베이스를 싱크해주는 로컬 프로그램을 다운 받아 실행하면 데이터를 받을 수 있다.
-그렇다면 블록체인 네트워크에 참여하고 싶다면 어떻게 해야 할까? 앞서 말한 로컬 프로그램을 다운 받으면 참여가 가능하다.
-이 프로그램들 중 하나인 GO 로 짜여진 Go Ethereum(줄여서, geth)을 설치해본다.</div><div class="post-footer">
-        <a href="/block_chain/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/block_chain/">block_chain</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
