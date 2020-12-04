@@ -5,7 +5,7 @@
 
 # 1. Vue CLI 란? [(공식문서)](https://simplevue.gitbook.io/intro/01.-vue-cli)
 
-간단히 vue-cli 는 `기본 vue 개발 환경을 설정해주는 도구`
+간단히 vue-cli 는 `기본 vue 개발 환경을 설정해주는 도구`입니다.
 
 > **여기서 CLI 란 ?**
 >
@@ -15,9 +15,9 @@
 
 # 2. Vue router
 
-프로젝트 생성 후 보통의 경우 편의를 위해 terminal에 vue add router를 입력해 router설치를 진행한다. 
+프로젝트 생성 후 보통의 경우 편의를 위해 terminal에 vue add router를 입력해 router설치를 진행합니다. 
 
-router를 설치하고 나면 기존의 vue 프로젝트의 **tree구조**에서 약간의 변화가 생긴다. 
+router를 설치하고 나면 기존의 vue 프로젝트의 **tree구조**에서 약간의 변화가 생기게 됩니다. 
 
 > router 설치 전: App.vue - components
 >
@@ -31,7 +31,7 @@ router를 설치하고 나면 기존의 vue 프로젝트의 **tree구조**에서
 
 **2. props(부모 → 자식으로 데이터 이동)와 emit(자식 → 부모으로 데이터 이동)을 이용해 데이터를 활용한다.**
 
-더 많은 특징 및 활용방법이 있을 것이나 상기 내용은 가장 기초이자 핵심이다. 
+더 많은 특징 및 활용방법이 있을 것이나 상기 내용은 가장 기초이자 핵심입니다. 
 
 ​	
 

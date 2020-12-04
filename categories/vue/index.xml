@@ -84,11 +84,11 @@ Vuex 란? (공식문서)  Vuex는 Vue.js 애플리케이션에 대한 상태 관
     <author>Author</author>
     <guid>https://colinder.github.io/03_vue_cli/</guid>
     <description><![CDATA[​
-1. Vue CLI 란? (공식문서) 간단히 vue-cli 는 기본 vue 개발 환경을 설정해주는 도구
+1. Vue CLI 란? (공식문서) 간단히 vue-cli 는 기본 vue 개발 환경을 설정해주는 도구입니다.
  여기서 CLI 란 ?
 명령 줄 인터페이스(CLI, Command line interface) 또는 명령어 인터페이스는 텍스트 터미널을 통해 사용자와 컴퓨터가 상호 작용하는 방식. 즉, 작업 명령은 사용자가 컴퓨터 키보드 등을 통해 문자열의 형태로 입력하며, 컴퓨터로부터의 출력 역시 문자열의 형태로 주어진다. (위키백과)
  ​
-2. Vue router 프로젝트 생성 후 보통의 경우 편의를 위해 terminal에 vue add router를 입력해 router설치를 진행한다.]]></description>
+2. Vue router 프로젝트 생성 후 보통의 경우 편의를 위해 terminal에 vue add router를 입력해 router설치를 진행합니다.]]></description>
 </item><item>
     <title>02_Vue_basic (Vue 문법2)</title>
     <link>https://colinder.github.io/02_vue_basic/</link>
