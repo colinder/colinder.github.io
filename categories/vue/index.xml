@@ -45,14 +45,6 @@ Vuex 핵심컨셉(getters, mutations, actions, modules)  1. Getters  만약? A.v
  이런 모습으로"이런 모습으로 아마 귀찮겠지만, 각각의 파일에서
 1 2 3 4 5 6 7  // A.vue  computed: { change() { return this.$store.state.second + 1 } }   1 2 3 4 5 6 7  // B.]]></description>
 </item><item>
-    <title>04_Vue_Reactivity</title>
-    <link>https://colinder.github.io/04_vue_reactivity/</link>
-    <pubDate>Sun, 16 Aug 2020 12:22:44 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/04_vue_reactivity/</guid>
-    <description><![CDATA[​
-Vue_반응형 ]]></description>
-</item><item>
     <title>Naming Convention</title>
     <link>https://colinder.github.io/namingconvention/</link>
     <pubDate>Sun, 02 Aug 2020 22:24:45 &#43;0900</pubDate>
@@ -114,5 +106,19 @@ Vue의 이론적 구성 및 설명을 알아보자 1. Vue는 MVVM 패턴을 따�
  MVVM 패턴"MVVM 패턴 ​
 2. Vue는 SPA (Single-Page Application)
  서버로부터 완전한 새로운 페이지를 불러오지 않고 현재의 페이지를 동적으로 다시 작성함으로써 사용자와 소통하는 웹 애플리케이션을 말한다.]]></description>
+</item><item>
+    <title>00_Vue_setting</title>
+    <link>https://colinder.github.io/00_vue_setting/</link>
+    <pubDate>Fri, 17 Jul 2020 21:56:29 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/00_vue_setting/</guid>
+    <description><![CDATA[​
+Vue  Vue.js는 웹 애플리케이션의 사용자 인터페이스를 만들기 위해 사용하는 오픈 소스 프로그레시브 자바스크립트 프레임워크
+간단히, 온라인 홈페이지를 만드는 프로그램입니다.
+ ​
+1. 시작하기   &lsquo;Vue&rsquo; VS &lsquo;Django&rsquo;
+ 어느 정도 공부를 하면서 체득한 가장 큰 구분점은 &ldquo;Django는 App별로 응답을 구분하고, Vue는 Component별로 응답을 구분한다.&ldquo;는 것이다.
+큰 차이가 없어보이고, 큰 의미가 없어보일 수 있으나 이는 내가 vue를 이해하는데 가장 많은 도움이 된 부분이다.
+    개발 환경 설정 &amp; 프로젝트 생성]]></description>
 </item></channel>
 </rss>

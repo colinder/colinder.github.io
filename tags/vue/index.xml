@@ -78,14 +78,6 @@ Vuex 핵심컨셉(getters, mutations, actions, modules)  1. Getters  만약? A.v
  이런 모습으로"이런 모습으로 아마 귀찮겠지만, 각각의 파일에서
 1 2 3 4 5 6 7  // A.vue  computed: { change() { return this.$store.state.second + 1 } }   1 2 3 4 5 6 7  // B.]]></description>
 </item><item>
-    <title>04_Vue_Reactivity</title>
-    <link>https://colinder.github.io/04_vue_reactivity/</link>
-    <pubDate>Sun, 16 Aug 2020 12:22:44 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/04_vue_reactivity/</guid>
-    <description><![CDATA[​
-Vue_반응형 ]]></description>
-</item><item>
     <title>Naming Convention</title>
     <link>https://colinder.github.io/namingconvention/</link>
     <pubDate>Sun, 02 Aug 2020 22:24:45 &#43;0900</pubDate>
@@ -122,5 +114,14 @@ Vuex 란? (공식문서)  Vuex는 Vue.js 애플리케이션에 대한 상태 관
 명령 줄 인터페이스(CLI, Command line interface) 또는 명령어 인터페이스는 텍스트 터미널을 통해 사용자와 컴퓨터가 상호 작용하는 방식. 즉, 작업 명령은 사용자가 컴퓨터 키보드 등을 통해 문자열의 형태로 입력하며, 컴퓨터로부터의 출력 역시 문자열의 형태로 주어진다. (위키백과)
  ​
 2. Vue router 프로젝트 생성 후 보통의 경우 편의를 위해 terminal에 vue add router를 입력해 router설치를 진행합니다.]]></description>
+</item><item>
+    <title>02_Vue_basic (Vue 문법2)</title>
+    <link>https://colinder.github.io/02_vue_basic/</link>
+    <pubDate>Fri, 17 Jul 2020 22:03:09 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/02_vue_basic/</guid>
+    <description><![CDATA[​
+Vue의 기본 문법 및 동작 방법을 계속 알아보자 08_methods
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38  ✨Point 1. method는 methods: {}의 문법으로 구성한다. &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt; &lt;title&gt;Methods&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;div id=&#39;app&#39;&gt; {{ message }} &lt;/div&gt; &lt;!]]></description>
 </item></channel>
 </rss>
