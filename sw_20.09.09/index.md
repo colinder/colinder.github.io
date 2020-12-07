@@ -10,12 +10,12 @@ for T in range(int(input())):
     D, A, B = map(int, input().split())
     D = str(D)
     a = [0, 0] + [1] * (B - 1)
-    rootB = int(B**0.5)							👈 이 아이디어를 얻기까지 오랜시간이 걸렸다.
+    rootB = int(B**0.5)							//👈 이 아이디어를 얻기까지 오랜시간이 걸렸다.
 
-    for i in range(2, rootB+1):					👈
-        if a[i] == 1:							👈
-            for j in range(2*i, B+1, i):		👈 에라토스테네스의 체 를 활용
-                a[j] = 0						👈
+    for i in range(2, rootB+1):					//👈
+        if a[i] == 1:							//👈
+            for j in range(2*i, B+1, i):		//👈 에라토스테네스의 체 를 활용
+                a[j] = 0						//👈
 
     result = []
     for i in range(A, B+1):
