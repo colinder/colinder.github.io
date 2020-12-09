@@ -3,14 +3,24 @@
         <title>All Posts - </title>
         <link>https://colinder.github.io/posts/</link>
         <description>All Posts | </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 09 Dec 2020 10:23:18 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>Javascript Type and Operators</title>
-    <link>https://colinder.github.io/type_and_operators/</link>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 09 Dec 2020 22:04:20 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Javascript Operators</title>
+    <link>https://colinder.github.io/js_operators/</link>
+    <pubDate>Wed, 09 Dec 2020 22:04:20 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/js_operators/</guid>
+    <description><![CDATA[​
+Javascript Operators  Javascript의 연산자를 알아 봅시다. 종류가 많이 있어 많이 사용하는 것들 중심으로 먼저 알아보겠습니다.
+ ​
+1. 할당 연산자 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  // 할당 연산자 let numder = 0 numder += 10 console.log(numder) // 10  numder -= 8 console.log(numder) // 2  numder *= 10 console.log(numder) // 20  numder ++ // 1을 더한다.]]></description>
+</item><item>
+    <title>Javascript Type</title>
+    <link>https://colinder.github.io/js_type/</link>
     <pubDate>Wed, 09 Dec 2020 10:23:18 &#43;0900</pubDate>
     <author>Author</author>
-    <guid>https://colinder.github.io/type_and_operators/</guid>
+    <guid>https://colinder.github.io/js_type/</guid>
     <description><![CDATA[​
-Javascript Type  Javascript Type에 대하여 정리해보겠습니다.
+Javascript Type  Javascript Type에 대하여 알아보겠습니다.
  ​
 ​
 그 전에 먼저 변수를 선언하는 방법을 알아봅시다. 1 2 3 4 5 6 7 8  // 변수를 선언 하는 방법  // function scope var a = 10 // 일반적인 변수 선언 방법  // block scope {} 안에서만 존재하는 변수 let b = 20 // 재할당 가능 [최근에는 사용률이 낮아지고 있다.] const c = 30 // 재할당 불가능 [&#34;재할당 불가능&#34;이라는 설명은 !]]></description>
@@ -120,17 +130,5 @@ React-Native navigation  vue는 router를 사용해 화면을 이동합니다. �
     <guid>https://colinder.github.io/sw_20.10.23/</guid>
     <description><![CDATA[​
 D4_6959_이상한 나라의 덧셈게임 1 2 3 4 5 6 7 8 9 10  for T in range(int(input())): N = input() result = [&#34;A&#34;, &#34;B&#34;] turn = 1 while len(N) &gt; 1: N = str(int(N[0]) + int(N[1])) + N[2:] turn += 1 print(f&#39;#{T+1} {result[turn%2]}&#39;) # 단순 산수   ​]]></description>
-</item><item>
-    <title>what is Cookie?</title>
-    <link>https://colinder.github.io/what_is_cookie/</link>
-    <pubDate>Mon, 19 Oct 2020 14:59:01 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/what_is_cookie/</guid>
-    <description><![CDATA[​
-개발을 하다보면, 유저의 로그인 기능을 고민하는 경우가 많습니다. 근데. 로그인 기능을 개발하다보면 꼭 마주치는 두 가지&hellip;
-cookie와 session에 대하여 알아보겠습니다. 다만 그전에 cookie와 session이 생기게 된 배경에 대하여 같이 알아 보겠습니다.
-​
-HTTP 프로토콜의 특징 HTTP는 Connectionless(비연결성)하고, Stateless하다고 합니다.
-Connectionless란, 클라이언트가 행위를 통해 서비스를 제공받기 위해 서버에 request(요청)를 하면 서버는 클라이언트의 요청값에 따라 클라이언트에게 response(응답)하게 됩니다. 이렇게 한번의 request — response의 결과로 클라이언트는 어플리케이션이 제공하는 서비스를 받게되면서, 서로의 접속을 끊게 된다는 특성입니다.]]></description>
 </item></channel>
 </rss>
