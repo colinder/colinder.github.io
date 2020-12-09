@@ -3,7 +3,18 @@
         <title>All Posts - </title>
         <link>https://colinder.github.io/posts/</link>
         <description>All Posts | </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 01 Dec 2020 13:40:25 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 09 Dec 2020 10:23:18 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Javascript Type and Operators</title>
+    <link>https://colinder.github.io/type_and_operators/</link>
+    <pubDate>Wed, 09 Dec 2020 10:23:18 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/type_and_operators/</guid>
+    <description><![CDATA[​
+Javascript Type  Javascript Type에 대하여 정리해보겠습니다.
+ ​
+​
+그 전에 먼저 변수를 선언하는 방법을 알아봅시다. 1 2 3 4 5 6 7 8  // 변수를 선언 하는 방법  // function scope var a = 10 // 일반적인 변수 선언 방법  // block scope {} 안에서만 존재하는 변수 let b = 20 // 재할당 가능 [최근에는 사용률이 낮아지고 있다.] const c = 30 // 재할당 불가능 [&#34;재할당 불가능&#34;이라는 설명은 !]]></description>
+</item><item>
     <title>Process VS Thread</title>
     <link>https://colinder.github.io/processvsthread/</link>
     <pubDate>Tue, 01 Dec 2020 13:40:25 &#43;0900</pubDate>
@@ -121,17 +132,5 @@ cookie와 session에 대하여 알아보겠습니다. 다만 그전에 cookie와
 ​
 HTTP 프로토콜의 특징 HTTP는 Connectionless(비연결성)하고, Stateless하다고 합니다.
 Connectionless란, 클라이언트가 행위를 통해 서비스를 제공받기 위해 서버에 request(요청)를 하면 서버는 클라이언트의 요청값에 따라 클라이언트에게 response(응답)하게 됩니다. 이렇게 한번의 request — response의 결과로 클라이언트는 어플리케이션이 제공하는 서비스를 받게되면서, 서로의 접속을 끊게 된다는 특성입니다.]]></description>
-</item><item>
-    <title>06_Vue_LifeCycle</title>
-    <link>https://colinder.github.io/06_vue_lifecycle/</link>
-    <pubDate>Thu, 15 Oct 2020 21:04:53 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/06_vue_lifecycle/</guid>
-    <description><![CDATA[​
-Vue_LifeCycle  솔직히 처음 라이프사이클이란 것을 공부했을 때는 이게 무슨 말인지? 삶의 주기를 왜 알아야 하는지 전혀 몰랐습니다. 이런 저에게 Vue 공식문서에는 말했습니다.
-지금 당장 모든 것을 완전히 이해할 필요는 없지만 다이어그램은 앞으로 도움이 될 것입니다.
- 그리고, LifeCycle을 공부 하기 전 DOM에 대한 개념이 부족하다면 what is DOM?을 꼭 보고 오길 추천합니다.
-​
-Vue.js의 라이프 사이클은 크게 Creation, Mounting, Updating, Destruction으로 나눌 수 있습니다. 이는 생성(create)되고, DOM에 부착(mount)되고, 업데이트(update)되며, 없어지는(destroy) 4가지 과정을 말합니다.]]></description>
 </item></channel>
 </rss>
