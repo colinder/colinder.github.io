@@ -71,7 +71,7 @@ a === b //false
 
 ```javascript
 // 논리연산자
-// and
+// And 연산자: &&
 true && false // false
 true && true // true
 
@@ -79,7 +79,7 @@ true && true // true
 0 && 1 // 0
 4 && 7 // 7
 
-// or
+// Or 연산자: ||
 false || ture // true
 false || false // false
 
@@ -87,7 +87,7 @@ false || false // false
 0 || 1 // 1
 4 || 7 // 4
 
-// not
+// Not 연산자 !
 !true // false
 ```
 
@@ -97,8 +97,8 @@ false || false // false
 
 ```javascript
 // 삼항 연산자(Ternary Operator)
-true ? 1 : 2 // 1     if문과 비슷. true 면 1, false 면 2
-false ? 1 : 2 // 2
+true ? 1 : 2    // 1     if문과 비슷. true 면 1, false 면 2
+false ? 1 : 2    // 2
 
 const result = math.PI > 4 ? 'Yep' : 'Nope'
 console.log(result) // Nope

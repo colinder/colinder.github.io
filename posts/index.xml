@@ -3,7 +3,18 @@
         <title>All Posts - </title>
         <link>https://colinder.github.io/posts/</link>
         <description>All Posts | </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 09 Dec 2020 22:04:20 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 10 Dec 2020 17:03:25 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Javascript Scope</title>
+    <link>https://colinder.github.io/js_scope/</link>
+    <pubDate>Thu, 10 Dec 2020 17:03:25 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/js_scope/</guid>
+    <description><![CDATA[​
+Javascript Scope란?  Scope [ skoʊp ]1 (무엇을 하거나 이룰 수 있는) 기회[여지/능력] (=potential)2 (주제조직활동 등이 다루는) 범위3 샅샅이[자세히] 살피다.
+스코프는 &ldquo;유효 범위&quot;로써 번수에 매개변수가 어디까지 유효한지를 나타냅니다.
+자바스크립트에선 스코프는 2가지 타입이 있습니다. 바로 Global(전역)과 Local(지역)인데요. 함수 안에서 선언된 변수(Local 변수)는 함수 블록 안에서만 접근이 가능합니다.전역 변수는 어디서든 접근이 가능합니다.
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21  // global 변수 선언 var a = 10; console.]]></description>
+</item><item>
     <title>Javascript Operators</title>
     <link>https://colinder.github.io/js_operators/</link>
     <pubDate>Wed, 09 Dec 2020 22:04:20 &#43;0900</pubDate>
@@ -20,10 +31,10 @@ Javascript Operators  Javascript의 연산자를 알아 봅시다. 종류가 많
     <author>Author</author>
     <guid>https://colinder.github.io/js_type/</guid>
     <description><![CDATA[​
-Javascript Type  Javascript Type에 대하여 알아보겠습니다.
+Javascript Type은?  제 생각에 개발 언어를 공부하면서 가장 먼저 알아야 알 것은 그리고 가장 중요한 것은 형식입니다.
+때마침 Javascript를 공부하고 있는데, 가장 먼저 Type에 대해 정리해보겠습니다.
  ​
-​
-그 전에 먼저 변수를 선언하는 방법을 알아봅시다. 1 2 3 4 5 6 7 8  // 변수를 선언 하는 방법  // function scope var a = 10 // 일반적인 변수 선언 방법  // block scope {} 안에서만 존재하는 변수 let b = 20 // 재할당 가능 [최근에는 사용률이 낮아지고 있다.] const c = 30 // 재할당 불가능 [&#34;재할당 불가능&#34;이라는 설명은 !]]></description>
+그 전에 먼저 변수를 선언하는 방법을 알아봅시다. 1 2 3 4 5 6 7 8  // 변수를 선언 하는 방법  // function scope var a = 10 // 일반적인 변수 선언 방법  // block scope {} 안에서만 존재하는 변수 let b = 20 // 재할당 가능 [최근에는 사용률이 낮아지고 있다고 합니다.]]></description>
 </item><item>
     <title>Process VS Thread</title>
     <link>https://colinder.github.io/processvsthread/</link>
@@ -122,13 +133,5 @@ React-Native navigation  vue는 router를 사용해 화면을 이동합니다. �
   RN 버전 0.60이상에서 진행
   react-native-cli: 2.0.1
   react-native: 0.]]></description>
-</item><item>
-    <title>SW Expert Academy_D4 6959, , , </title>
-    <link>https://colinder.github.io/sw_20.10.23/</link>
-    <pubDate>Fri, 23 Oct 2020 21:19:33 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/sw_20.10.23/</guid>
-    <description><![CDATA[​
-D4_6959_이상한 나라의 덧셈게임 1 2 3 4 5 6 7 8 9 10  for T in range(int(input())): N = input() result = [&#34;A&#34;, &#34;B&#34;] turn = 1 while len(N) &gt; 1: N = str(int(N[0]) + int(N[1])) + N[2:] turn += 1 print(f&#39;#{T+1} {result[turn%2]}&#39;) # 단순 산수   ​]]></description>
 </item></channel>
 </rss>

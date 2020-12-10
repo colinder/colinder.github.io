@@ -26,7 +26,7 @@ Javascript Operators  Javascript의 연산자를 알아 봅시다. 종류가 많
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/js_operators/" /><link rel="prev" href="https://colinder.github.io/js_type/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/js_operators/" /><link rel="prev" href="https://colinder.github.io/js_type/" /><link rel="next" href="https://colinder.github.io/js_scope/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -35,7 +35,7 @@ Javascript Operators  Javascript의 연산자를 알아 봅시다. 종류가 많
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/js_operators\/"
-        },"genre": "posts","keywords": "Javascript, operators","wordcount":  391 ,
+        },"genre": "posts","keywords": "Javascript, operators","wordcount":  397 ,
         "url": "https:\/\/colinder.github.io\/js_operators\/","datePublished": "2020-12-09T22:04:20+09:00","dateModified": "2020-12-09T22:04:20+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -112,7 +112,7 @@ Javascript Operators  Javascript의 연산자를 알아 봅시다. 종류가 많
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Javascript Operators</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/javascript/"><i class="far fa-folder fa-fw"></i>Javascript</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-12-09">2020-12-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;391 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-12-09">2020-12-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;397 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -266,7 +266,7 @@ Javascript Operators  Javascript의 연산자를 알아 봅시다. 종류가 많
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// 논리연산자
-</span><span class="c1">// and
+</span><span class="c1">// And 연산자: &amp;&amp;
 </span><span class="c1"></span><span class="kc">true</span> <span class="o">&amp;&amp;</span> <span class="kc">false</span> <span class="c1">// false
 </span><span class="c1"></span><span class="kc">true</span> <span class="o">&amp;&amp;</span> <span class="kc">true</span> <span class="c1">// true
 </span><span class="c1"></span>
@@ -274,7 +274,7 @@ Javascript Operators  Javascript의 연산자를 알아 봅시다. 종류가 많
 </span><span class="c1"></span><span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="mi">1</span> <span class="c1">// 0
 </span><span class="c1"></span><span class="mi">4</span> <span class="o">&amp;&amp;</span> <span class="mi">7</span> <span class="c1">// 7
 </span><span class="c1"></span>
-<span class="c1">// or
+<span class="c1">// Or 연산자: ||
 </span><span class="c1"></span><span class="kc">false</span> <span class="o">||</span> <span class="nx">ture</span> <span class="c1">// true
 </span><span class="c1"></span><span class="kc">false</span> <span class="o">||</span> <span class="kc">false</span> <span class="c1">// false
 </span><span class="c1"></span>
@@ -282,7 +282,7 @@ Javascript Operators  Javascript의 연산자를 알아 봅시다. 종류가 많
 </span><span class="c1"></span><span class="mi">0</span> <span class="o">||</span> <span class="mi">1</span> <span class="c1">// 1
 </span><span class="c1"></span><span class="mi">4</span> <span class="o">||</span> <span class="mi">7</span> <span class="c1">// 4
 </span><span class="c1"></span>
-<span class="c1">// not
+<span class="c1">// Not 연산자 !
 </span><span class="c1"></span><span class="o">!</span><span class="kc">true</span> <span class="c1">// false
 </span></code></pre></td></tr></table>
 </div>
@@ -306,8 +306,8 @@ Javascript Operators  Javascript의 연산자를 알아 봅시다. 종류가 많
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// 삼항 연산자(Ternary Operator)
-</span><span class="c1"></span><span class="kc">true</span> <span class="o">?</span> <span class="mi">1</span> <span class="o">:</span> <span class="mi">2</span> <span class="c1">// 1     if문과 비슷. true 면 1, false 면 2
-</span><span class="c1"></span><span class="kc">false</span> <span class="o">?</span> <span class="mi">1</span> <span class="o">:</span> <span class="mi">2</span> <span class="c1">// 2
+</span><span class="c1"></span><span class="kc">true</span> <span class="o">?</span> <span class="mi">1</span> <span class="o">:</span> <span class="mi">2</span>    <span class="c1">// 1     if문과 비슷. true 면 1, false 면 2
+</span><span class="c1"></span><span class="kc">false</span> <span class="o">?</span> <span class="mi">1</span> <span class="o">:</span> <span class="mi">2</span>    <span class="c1">// 2
 </span><span class="c1"></span>
 <span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">math</span><span class="p">.</span><span class="nx">PI</span> <span class="o">&gt;</span> <span class="mi">4</span> <span class="o">?</span> <span class="s1">&#39;Yep&#39;</span> <span class="o">:</span> <span class="s1">&#39;Nope&#39;</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="c1">// Nope
@@ -350,7 +350,8 @@ Javascript Operators  Javascript의 연산자를 알아 봅시다. 종류가 많
         </section>
     </div>
 
-    <div class="post-nav"><a href="/js_type/" class="prev" rel="prev" title="Javascript Type"><i class="fas fa-angle-left fa-fw"></i>Javascript Type</a></div>
+    <div class="post-nav"><a href="/js_type/" class="prev" rel="prev" title="Javascript Type"><i class="fas fa-angle-left fa-fw"></i>Javascript Type</a>
+            <a href="/js_scope/" class="next" rel="next" title="Javascript Scope">Javascript Scope<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
