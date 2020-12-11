@@ -1,9 +1,9 @@
-# Javascript Operators
+# JavaScript Operators
 
 
 ​	
 
-# Javascript Operators
+# JavaScript Operators
 
 >Javascript의 연산자를 알아 봅시다. </br>종류가 많이 있어 많이 사용하는 것들 중심으로 먼저 알아보겠습니다.
 

@@ -1,9 +1,9 @@
-# Javascript Type
+# JavaScript Type
 
 
 ​	
 
-# Javascript Type은?
+# JavaScript Type은?
 
 > 제 생각에 개발 언어를 공부하면서 가장 먼저 알아야 알 것은 그리고 가장 중요한 것은 형식입니다.
 >

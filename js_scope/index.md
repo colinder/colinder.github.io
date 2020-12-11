@@ -1,9 +1,9 @@
-# Javascript Scope
+# JavaScript Scope
 
 
 ​	
 
-# Javascript Scope란?
+# JavaScript Scope란?
 
 > Scope [ skoʊp ]</br>**1** (무엇을 하거나 이룰 수 있는) 기회[여지/능력] (=potential)</br>**2 (주제조직활동 등이 다루는) 범위**</br>**3** 샅샅이[자세히] 살피다.
 >
