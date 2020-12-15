@@ -3,7 +3,16 @@
         <title>All Posts - </title>
         <link>https://colinder.github.io/posts/</link>
         <description>All Posts | </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 11 Dec 2020 11:16:09 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 15 Dec 2020 21:01:50 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>BEAKJOON 10809, 2941, 2908, 1316</title>
+    <link>https://colinder.github.io/bj_20.12.15/</link>
+    <pubDate>Tue, 15 Dec 2020 21:01:50 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/bj_20.12.15/</guid>
+    <description><![CDATA[​
+10809_알파벳찾기 1 2 3 4 5 6 7 8 9 10  import sys word = sys.stdin.readline().rstrip() alphabet = list(range(97,123)) for x in alphabet : print(word.find(chr(x)), end=&#34; &#34;) # find함수는 조건에 맞는 값의 index를 출력하고 # 찾지 못하는 경우 -1을 출력한다.    ​
+2941_크로아티아 알파벳 1 2 3 4 5 6 7 8 9 10  import sys cro = [&#34;c=&#34;, &#34;c-&#34;, &#34;dz=&#34;, &#34;d-&#34;, &#34;lj&#34;, &#34;nj&#34;, &#34;s=&#34;, &#34;z=&#34;] s = sys.]]></description>
+</item><item>
     <title>JavaScript Hoisting</title>
     <link>https://colinder.github.io/js_hoisting/</link>
     <pubDate>Fri, 11 Dec 2020 11:16:09 &#43;0900</pubDate>
@@ -110,20 +119,5 @@ Interpreter VS Compiler_Language  web 개발을 하다보면 javascript를 공�
  ​
 뜬금없이 프로그래밍 언어란 무엇인지 우선 알아봅시다. 컴퓨터는 이진수만 이해할 수 있습니다. 즉 컴퓨터는 우리가 사용하는 언어가 아닌 &lsquo;0&rsquo;, &lsquo;1&rsquo;만 이해합니다.
 근데 이게 프로그래밍 언어랑 무슨 상관일까요? 상관이 아주 많습니다&hellip;ㅎ.. 프로그래밍 언어로 프로그램을 만들고 실행 할 때 우리는 &lsquo;0&rsquo;, &lsquo;1&rsquo; 같은 명령어로 코딩을 하지 않습니다.]]></description>
-</item><item>
-    <title>React-Native_google login</title>
-    <link>https://colinder.github.io/react-native_googlelogin/</link>
-    <pubDate>Thu, 29 Oct 2020 23:13:25 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/react-native_googlelogin/</guid>
-    <description><![CDATA[​
-React-Native google login  서비스를 개발하다보면 로그인 기능이 새삼 대단해보입니다. 신경쓸 것도 많고, 하지만 이런 수고를 sns로그인 기능으로 대신한다면 편의성이 많이 높아집니다. 하여 해보겠습니다.
- *google login을 하기 위해 firebase(모바일 및 웹 애플리케이션 개발 플랫폼)을 사용합니다.
-  개발환경
-  npm으로 진행
-  react-native_cli (✨expo로 진행하지 않습니다.)
-  android 기준
-  함수형 컴포넌트로 진행 (✨ 클래스 컴포넌트로 진행하지 않습니다.)
-  RN 버전 0.60이상에서 진행]]></description>
 </item></channel>
 </rss>
