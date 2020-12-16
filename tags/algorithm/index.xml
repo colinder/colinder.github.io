@@ -3,7 +3,15 @@
         <title>algorithm - Tag - </title>
         <link>https://colinder.github.io/tags/algorithm/</link>
         <description>algorithm - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 15 Dec 2020 21:01:50 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/algorithm/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 16 Dec 2020 23:45:42 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/algorithm/" rel="self" type="application/rss+xml" /><item>
+    <title>BEAKJOON 10250, 2775, 2869, 1011</title>
+    <link>https://colinder.github.io/bj_20.12.16/</link>
+    <pubDate>Wed, 16 Dec 2020 23:45:42 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/bj_20.12.16/</guid>
+    <description><![CDATA[​
+10250_ACM호텔 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22  import sys for T in range(int(sys.stdin.readline().rstrip())): H, W, N = map(int, sys.stdin.readline().split()) quo = str((N // H) + 1) rem = str(N % H) if N % H == 0: quo = str(N//H) rem = str(H) print(rem+quo.zfill(2)) # zfill? # a = &#34;2&#34; # b = &#34;12&#34; # A = a.]]></description>
+</item><item>
     <title>BEAKJOON 10809, 2941, 2908, 1316</title>
     <link>https://colinder.github.io/bj_20.12.15/</link>
     <pubDate>Tue, 15 Dec 2020 21:01:50 &#43;0900</pubDate>
@@ -82,13 +90,5 @@ D3_2817_부분 수열의 합 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  import iter
     <description><![CDATA[​
 D3_10505_소득 불균형 1 2 3 4 5 6 7 8 9  for T in range(int(input())): N = int(input()) dp = [0] * 100001 Max = 0 for i in list(map(int, input().split())): dp[i] += 1 Max += i print(f&#39;#{T+1} {sum(dp[:int(Max/N)+1])}&#39;)   ​
 D3_10200_구독자 전쟁 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  for T in range(int(input())): N, A, B = map(int, input().]]></description>
-</item><item>
-    <title>BEAKJOON 1149, 1932, 2579, 1463</title>
-    <link>https://colinder.github.io/bj_20.08.06/</link>
-    <pubDate>Wed, 05 Aug 2020 22:11:35 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/bj_20.08.06/</guid>
-    <description><![CDATA[​
-1149_RGB거리 1 2 3 4 5 6 7 8 9 10 11 12 13  N = int(input()) RGB = [list(map(int, input().split())) for _ in range(N)] for i in range(1, len(RGB)): RGB[i][0] = RGB[i][0] + min(RGB[i-1][1], RGB[i-1][2]) RGB[i][1] = RGB[i][1] + min(RGB[i-1][0], RGB[i-1][2]) RGB[i][2] = RGB[i][2] + min(RGB[i-1][0], RGB[i-1][1]) print(min(RGB[i][0], RGB[i][1], RGB[i][2])) # 2시간이 넘게 고민한 결과... # 문제 속 조건3 &#34;&#34;i(2 ≤ i ≤ N-1)번 집의 색은 i-1번, i+1번 집의 색과 같지 않아야 한다.]]></description>
 </item></channel>
 </rss>
