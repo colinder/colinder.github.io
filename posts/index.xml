@@ -3,7 +3,15 @@
         <title>All Posts - </title>
         <link>https://colinder.github.io/posts/</link>
         <description>All Posts | </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 16 Dec 2020 23:45:42 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 17 Dec 2020 21:48:55 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>BEAKJOON 4948, 9020, 3053, 1002</title>
+    <link>https://colinder.github.io/bj_20.12.17/</link>
+    <pubDate>Thu, 17 Dec 2020 21:48:55 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/bj_20.12.17/</guid>
+    <description><![CDATA[​
+4948_베르트랑 공준 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20  import sys while True: N = int(sys.stdin.readline().rstrip()) if N == 0: break arr = [0,0] + [1] * ((2*N)-1) rootN = int((2*N)**0.5) for i in range(2, rootN+1): if arr[i] == 1: for j in range(2*i, 2*N+1, i): arr[j] = 0 print(sum(arr[N+1:(2*N)+1])) # 입출력에 제한이 있다가 0을 입력 받을 때 까지 # 출력을 해야 하는 조건을 달지 않는 것을 주의!]]></description>
+</item><item>
     <title>BEAKJOON 10250, 2775, 2869, 1011</title>
     <link>https://colinder.github.io/bj_20.12.16/</link>
     <pubDate>Wed, 16 Dec 2020 23:45:42 &#43;0900</pubDate>
@@ -100,21 +108,5 @@ HTTP vs HTTPS  웹개발 프로젝트를 하면서 인터넷 주소창(URL)을 �
 ex) 125.209.222.141, 172.217.175.238
 ​
 도메인(domain)이란? ip는 사람이 이해하고 기억하기 어렵기 때문에 쉽게 접근할 수 있게 각 ip에 고유한 이름을 부여할 수 있게 했는데, 이것을 도메인이라고 합니다.]]></description>
-</item><item>
-    <title>Async To Sync in Javascript</title>
-    <link>https://colinder.github.io/asynctosyncinjavascript/</link>
-    <pubDate>Fri, 20 Nov 2020 13:59:06 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/asynctosyncinjavascript/</guid>
-    <description><![CDATA[​
-Async to Sync in JavaScript  누구나 웹개발을 하다보면 HTTP 통신을 통해 데이터를 가져오고 가공하고 사용하게됩니다. 그리고 동기, 비동기 처리 때문에 골치가 아파집니다. (만약 골치가 아프지 않다면.. 부럽습니다..) 더 이상 골치아프기 싫어서 정리해봅시다.👍
- *동기, 비동기 설명은 이전 포스팅으로 갈음합니다.
-​
-Async(비동기) to Sync(동기) 방법 자바스크립트에서의 비동기를 동기로 동작시키는 대표적인 3가지의 방법을 알아보겠습니다.
-  Callback
-  Promise
-  Async / Await
-  ​
-1. Callback  개발자들 마다 정의가 조금씩 다르겠지만, 저는 어떤 이벤트가 발생한 후, 수행될 함수로 정의해보겠습니다.]]></description>
 </item></channel>
 </rss>

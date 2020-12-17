@@ -3,7 +3,15 @@
         <title>algorithm - Tag - </title>
         <link>https://colinder.github.io/tags/algorithm/</link>
         <description>algorithm - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 16 Dec 2020 23:45:42 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/algorithm/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 17 Dec 2020 21:48:55 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/algorithm/" rel="self" type="application/rss+xml" /><item>
+    <title>BEAKJOON 4948, 9020, 3053, 1002</title>
+    <link>https://colinder.github.io/bj_20.12.17/</link>
+    <pubDate>Thu, 17 Dec 2020 21:48:55 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/bj_20.12.17/</guid>
+    <description><![CDATA[​
+4948_베르트랑 공준 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20  import sys while True: N = int(sys.stdin.readline().rstrip()) if N == 0: break arr = [0,0] + [1] * ((2*N)-1) rootN = int((2*N)**0.5) for i in range(2, rootN+1): if arr[i] == 1: for j in range(2*i, 2*N+1, i): arr[j] = 0 print(sum(arr[N+1:(2*N)+1])) # 입출력에 제한이 있다가 0을 입력 받을 때 까지 # 출력을 해야 하는 조건을 달지 않는 것을 주의!]]></description>
+</item><item>
     <title>BEAKJOON 10250, 2775, 2869, 1011</title>
     <link>https://colinder.github.io/bj_20.12.16/</link>
     <pubDate>Wed, 16 Dec 2020 23:45:42 &#43;0900</pubDate>
@@ -81,14 +89,5 @@ D3_4698_테네스의 특별한 소수 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 
     <guid>https://colinder.github.io/sw_20.09.05/</guid>
     <description><![CDATA[​
 D3_2817_부분 수열의 합 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  import itertools for T in range(int(input())): N, K = map(int, input().split()) # N: 갯수, K: 목표 합 Nums = list(map(int, input().split())) count = 0 for i in range(1, N+1): boxs = itertools.combinations(Nums, i) for box in boxs: if sum(box) == K: count += 1 print(count) # 하... 라이브러리 쓰자..   ​]]></description>
-</item><item>
-    <title>SW Expert Academy_D3 10505, 10200, 3376, 5642</title>
-    <link>https://colinder.github.io/sw_20.09.04/</link>
-    <pubDate>Fri, 04 Sep 2020 00:00:59 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/sw_20.09.04/</guid>
-    <description><![CDATA[​
-D3_10505_소득 불균형 1 2 3 4 5 6 7 8 9  for T in range(int(input())): N = int(input()) dp = [0] * 100001 Max = 0 for i in list(map(int, input().split())): dp[i] += 1 Max += i print(f&#39;#{T+1} {sum(dp[:int(Max/N)+1])}&#39;)   ​
-D3_10200_구독자 전쟁 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  for T in range(int(input())): N, A, B = map(int, input().]]></description>
 </item></channel>
 </rss>
