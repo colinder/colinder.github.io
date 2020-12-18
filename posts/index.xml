@@ -3,7 +3,16 @@
         <title>All Posts - </title>
         <link>https://colinder.github.io/posts/</link>
         <description>All Posts | </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 17 Dec 2020 21:48:55 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 18 Dec 2020 21:16:23 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>BEAKJOON 10872, 10870, 2447, 11729</title>
+    <link>https://colinder.github.io/bj_20.12.18/</link>
+    <pubDate>Fri, 18 Dec 2020 21:16:23 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/bj_20.12.18/</guid>
+    <description><![CDATA[​
+10872_팩토리얼 1 2 3 4 5 6 7 8 9 10 11  import sys N = int(sys.stdin.readline().rstrip()) def fac(n): if n &gt; 1: return n * fac(n-1) else: return 1 print(fac(N))   ​
+10870_피보나치 수 5 1 2 3 4 5 6 7 8 9 10 11  import sys def fivo(n): if n &gt;= 2: return fivo(n-1) + fivo(n-2) else: return n N = int(sys.stdin.readline().rstrip()) print(fivo(N))   ​]]></description>
+</item><item>
     <title>BEAKJOON 4948, 9020, 3053, 1002</title>
     <link>https://colinder.github.io/bj_20.12.17/</link>
     <pubDate>Thu, 17 Dec 2020 21:48:55 &#43;0900</pubDate>
@@ -95,18 +104,5 @@ HTTP vs HTTPS  웹개발 프로젝트를 하면서 인터넷 주소창(URL)을 �
  ​
 뜬금없이 URL란 무엇인지 우선 알아봅시다. 우리가 &lsquo;인터넷 주소창&rsquo;이라고 흔히 말하는 URL은 Uniform Resource Locator, 자원 위치 규약? 정도로 이해하면 좋을 것 같습니다.
 우리가 사는 주소를 잠시 생각해봅시다. 먼저, 대한민국안에 서울특별시에 있는 강남구를 생각해보면 대한민국이라는 국가에서 서울특별시라는 위치로 그리고 그 안에 강남구로 범위를 좁히며 구체적인 위치를 생각할 수 있습니다.]]></description>
-</item><item>
-    <title>what is Domain</title>
-    <link>https://colinder.github.io/what_is_domain/</link>
-    <pubDate>Mon, 23 Nov 2020 12:47:53 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/what_is_domain/</guid>
-    <description><![CDATA[​
-도메인(domain)이란?  도메인의 뜻은 무엇일까요? 어찌저찌 설명할 순 있지만, 확신을 가지고 정확하게 답할 수 없었기에 정리해보겠습니다.
- ​
-이번에도 뜬금없이IP 란 무엇인지 우선 알아봅시다. IP는 Internet Protocol의 약자로 인터넷에 연결되어 있는 장치(컴퓨터, 스마트폰, 타블릿, 서버 등등)들은 각각의 장치를 식별할 수 있는 주소를 가지고 있는데 이를 ip라고 합니다. 간단히 각 장치(device)들의 주민등록번호라고 생각하면 이해하는데 도움이 됩니다.
-ex) 125.209.222.141, 172.217.175.238
-​
-도메인(domain)이란? ip는 사람이 이해하고 기억하기 어렵기 때문에 쉽게 접근할 수 있게 각 ip에 고유한 이름을 부여할 수 있게 했는데, 이것을 도메인이라고 합니다.]]></description>
 </item></channel>
 </rss>
