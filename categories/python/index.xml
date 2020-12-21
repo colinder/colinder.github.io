@@ -3,17 +3,14 @@
         <title>Python - Category - </title>
         <link>https://colinder.github.io/categories/python/</link>
         <description>Python - Category - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 11 Sep 2020 22:39:31 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/python/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 21 Dec 2020 22:39:31 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/python/" rel="self" type="application/rss+xml" /><item>
     <title>Python_Library</title>
     <link>https://colinder.github.io/python_library/</link>
-    <pubDate>Fri, 11 Sep 2020 22:39:31 &#43;0900</pubDate>
+    <pubDate>Mon, 21 Dec 2020 22:39:31 &#43;0900</pubDate>
     <author>Author</author>
     <guid>https://colinder.github.io/python_library/</guid>
     <description><![CDATA[​
-자주 쓰는 Python Library  자주 사용하게되는 파이썬 라이브러리를 정리한다.
- ​
-  정규표현식  일대일 매칭되는 문자
- 정규표현식 안에서, 바로 다음 절에서 설명하는 메타문자를 제외한 모든 문자 하나는 일반 문자열 하나와 매칭된다. 예를 들어, a는 a와 매칭되고, 가는 ‘가’와 매칭되는 식이다. 당연히 a가 ‘b’ 또는 ‘가’와 매칭되지는 않는다.
-1 2 3 4 5 6 7 8 9 10 11 12 13  어떤 프로그래밍 언어의 정규표현식이든 메타문자(특수한 기능을 하는 문자)라는 것이 존재한다.]]></description>
+Python Library ​
+  sorted() 1 2 3 4 5 6 7 8 9 10 11 12  sorted는 여러 그룹의 값이 주어진 경우 # 순차적으로 증감을 비교해 준다. # ex) # A = [(1,2,1), (1,2,2,3), (1,1,3), (1,1,2)] # A = sorted(A) # print(A) # [(1, 1, 2), (1, 1, 3), (1, 2, 1), (1, 2, 2, 3)] ## 만약 주어진 두번째 인자들을 기준으로 정렬하고 싶다면? ## A = [(0, 4), (1, 2), (1, -1), (2, 2), (3, 3)] ## B = sorted(A, key=lambda L: (L[1], L[0])) ## print(B) # [(1, -1), (1, 2), (2, 2), (3, 3), (0, 4)]   ​]]></description>
 </item></channel>
 </rss>
