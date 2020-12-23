@@ -1,70 +1,81 @@
-# Django_01_basic
+# Django_02_CRUD(01)
 
 
 ​	
 
-# Web ?
+# Django 개발환경준비
 
-> 월드 와이드 웹(World Wide Web)이란 인터넷에 연결된 사용자들이 서로의 정보를 공유할 수 있는 공간을 의미하며, 줄여서 WWW나 W3라고도 부르며, 간단히 `웹(Web)`이라고 가장 많이 불린다.
->
-> 인터넷과 같은 의미로 많이 사용되고 있지만, 정확히 말해 웹은 인터넷상의 인기 있는 `하나의 서비스`일 뿐.
->
-> Web의 작동방식을 간단히 설명하자면, `요청`과 `응답`.
->
-> 사용자는 서버에 어떠한 요구사항을 요청하고 서버는 이에 따라 처리결과를 응답한다.
->
-> 예를들어 `사용자가 Login 버튼을 누른 행위`는 `user가 서버에 로그인 하고 싶다고 요청`한 것이며, 서버는 `로그인 창을 띄움`으로서 `user가 로그인할 수 있게 응답`한 것입니다.
+- 편리함을 추구하기 위해 AWS Cloud9을 사용하여 진행
 
+- https://ide.cs50.io/ 주소로 접속하면 진행이 가능하며, 진행을 위해선 Git 아이디가 있어야 한다.
 
+  `Git`? : **버전 관리 시스템**이며 Git은 소프트웨어를 개발하는 기업의 핵심 자산인 소스코드를 효과적으로 관리할 수 있게 해주는 **무료**, **공개소프트웨어**. git에 대한 내용은 따로 정리해보도록 한다.
 
-## web Protocal
+- 로그인까지 마치면 이제 Django 개발 준비 끝.
 
-{{< mermaid >}}
-graph LR;
-    A(User) -->|요청 <url로 요청을 접수>| B{Server <Model>}
-    B --> C[View에서 요청을 처리]
-    C --> D[Template에서 응답페이지를 꾸며]
-    D --> |응답| A(User)
-{{< /mermaid >}}
-
-- 요청에 대한 응답을 처리할 서버를 만드는 것이 Django
-
----
+{{< image src="/images/django_c9_main.png" caption="C9 접속 화면(`블랙테마 적용되어 있음`)">}}
 
 ​	
 
-# Django ?
+### 1. 프로젝트 시작하기
 
-> python 기반의 web framework
+```python
+django-admin startproject blog		# blog라는 django프로젝트를 시작
+cd blog		# blog 폴더로 이동
+python manage.py startapp articles		# articles라는 앱(기능폴더)을 생성
 
-​	`framework`? :  web 개발시 어려움을 줄이는데 목적이 있는 기능을 통칭
+# Point🎈
+# 1. blog라는 이름은 내가 원하는 프로젝트 명으로 변경이 가능
+# 2. cd blog → django의 명령어는 모두 manage.py가 존재하는 폴더안에서 실행해야 함, 이를 위한 이동
+```
+
+- 구조를 만들었으니 구조들을 연결할 setting을 해주어야 한다. 
+
+
+
 
 ​	
 
-## Django의 개발 방식 (MTV)
+```python
+# settings.py
 
-> Django의 개발 방식은  MTV(Model, Template, View) 패턴을 따른다.
+# 웹 사용자를 특정하는 부분
+ALLOWED_HOSTS = ['*']		# '*' == 모든 사용자가 입장가능
 
-**M**odel: data를 구성
+# 프로젝트에 사용되는 APP 및 기능들을 등록
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    "articles",		# 등록
+]
 
-**T**emplate: 사용자(User)에서 보여주는 화면을 구성 (HTML로 구현)
+...
+...
 
-**V**iew: data 처리 및 전달
+LANGUAGE_CODE = 'ko-KR'
 
-​		
+TIME_ZONE = 'Asia/Seoul'
+```
 
-## Django_basic
+- 가장 기본이 되는 setting 완료
 
-1. 장고는 하나의 프로젝트 단위로 web을 개발한다. 
 
-2. 프로젝트 안에는 여러 app별로 기능을 나누어 구성한다.
-   
-   ​	*ex) 회원들 계정을 관리하는 app (accounts) / 게시판을 관리하는 app (articles) 등등*
-   
-3. 요청은 Url로 접수하고 (ex. 게시판으로 이동하고 싶어 게시판 버튼을 클릭)
 
-4. 접수된 내용을 View에서 처리 (ex. 게시판버튼을 클릭하면 게시판 화면을 사용자에게 보여주게 구성)
+​	
 
-5. 처리한 화면을 Template로 꾸며(구성해) 사용자에게 응답
+```python
+# 기본 설정이 잘 되었는지 확인할 서버구동
+python manage.py runserver 8080		# 8080은 생략가능
+```
+
+​	
+
+{{< image src="/images/django_main.png" caption="여기까지 진행한 것을 보통(`로켓을 띄운다.`)고 한다.">}}
+
+- 이와 같은 화면이 나오면 Basic Setting 완료
 
 
