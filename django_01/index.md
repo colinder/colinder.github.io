@@ -32,8 +32,6 @@ python manage.py startapp articles		# articles라는 앱(기능폴더)을 생성
 - 구조를 만들었으니 구조들을 연결할 setting을 해주어야 한다. 
 
 
-
-
 ​	
 
 ```python
@@ -63,8 +61,6 @@ TIME_ZONE = 'Asia/Seoul'
 
 - 가장 기본이 되는 setting 완료
 
-
-
 ​	
 
 ```python
@@ -76,6 +72,6 @@ python manage.py runserver 8080		# 8080은 생략가능
 
 {{< image src="/images/django_main.png" caption="여기까지 진행한 것을 보통(`로켓을 띄운다.`)고 한다.">}}
 
-- 이와 같은 화면이 나오면 Basic Setting 완료
+- 이와 같은 화면이 나오면 Basic Setting 완료입니다.
 
 
