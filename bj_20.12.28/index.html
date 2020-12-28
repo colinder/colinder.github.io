@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>BEAKJOON 1260, 2606, 2667,  - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="BEAKJOON 1260, 2606, 2667, " />
+        <title>BEAKJOON 1260, 2606, 2667, 1012 - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="BEAKJOON 1260, 2606, 2667, 1012" />
 <meta property="og:description" content="​
 1260_DFS와 BFS 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42  import sys from collections import deque def DFS(V): print(V, end=&#39; &#39;) DFSv[V] = 1 for i in range(1, N&#43;1): if DFSv[i] == 0 and tree[V][i] == 1: DFS(i) return def BFS(V): q = deque([V]) BFSv[V] = 1 while q: p = q." />
 <meta property="og:type" content="article" />
@@ -16,7 +16,7 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
 
-<meta name="twitter:title" content="BEAKJOON 1260, 2606, 2667, "/>
+<meta name="twitter:title" content="BEAKJOON 1260, 2606, 2667, 1012"/>
 <meta name="twitter:description" content="​
 1260_DFS와 BFS 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42  import sys from collections import deque def DFS(V): print(V, end=&#39; &#39;) DFSv[V] = 1 for i in range(1, N&#43;1): if DFSv[i] == 0 and tree[V][i] == 1: DFS(i) return def BFS(V): q = deque([V]) BFSv[V] = 1 while q: p = q."/>
 <meta name="application-name" content="LoveIt">
@@ -26,12 +26,12 @@
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "BEAKJOON 1260, 2606, 2667, ",
+        "headline": "BEAKJOON 1260, 2606, 2667, 1012",
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/bj_20.12.28\/"
-        },"genre": "posts","keywords": "algorithm, DFS와 BFS","wordcount":  470 ,
+        },"genre": "posts","keywords": "algorithm, DFS와 BFS","wordcount":  725 ,
         "url": "https:\/\/colinder.github.io\/bj_20.12.28\/","datePublished": "2020-12-28T23:01:27+09:00","dateModified": "2020-12-28T23:01:27+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -106,10 +106,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">BEAKJOON 1260, 2606, 2667, </h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">BEAKJOON 1260, 2606, 2667, 1012</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/beakjoon/"><i class="far fa-folder fa-fw"></i>BEAKJOON</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-12-28">2020-12-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;470 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-12-28">2020-12-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;725 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;4 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
@@ -122,6 +122,7 @@
         <li><a href="#1260_dfs와-bfs">1260_DFS와 BFS</a></li>
         <li><a href="#2606_바이러스">2606_바이러스</a></li>
         <li><a href="#2667_단지번호붙이기">2667_단지번호붙이기</a></li>
+        <li><a href="#1012_유기농-배추">1012_유기농 배추</a></li>
       </ul>
     </li>
   </ul>
@@ -380,7 +381,120 @@
 <span class="c1"># 2. isSafe를 만들어 범위를 확인한다.</span>
 </code></pre></td></tr></table>
 </div>
-</div></div><div class="post-footer" id="post-footer">
+</div><p>​</p>
+<h3 id="1012_유기농-배추">1012_유기농 배추</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="c1"># 최대 재귀 깊이를 늘리려면 sys 모듈의 setrecursionlimit 함수를 사용</span>
+<span class="c1"># (기본값이상으로 안해주면 런타임에러로 처리된다.) ※기본값:1000 </span>
+<span class="n">sys</span><span class="o">.</span><span class="n">setrecursionlimit</span><span class="p">(</span><span class="mi">50000</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">isSafe</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">N</span> <span class="ow">and</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">M</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">True</span>
+
+<span class="k">def</span> <span class="nf">DFS</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="n">visited</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+        <span class="n">cx</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">dx</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">cy</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">dy</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">isSafe</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">)</span> <span class="ow">and</span> <span class="n">visited</span><span class="p">[</span><span class="n">cx</span><span class="p">][</span><span class="n">cy</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">arr</span><span class="p">[</span><span class="n">cx</span><span class="p">][</span><span class="n">cy</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">DFS</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">)</span>
+
+<span class="n">dx</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">dy</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">T</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">rstrip</span><span class="p">())):</span>
+    <span class="n">M</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">K</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>    <span class="c1"># M 가로, N 세로, K 배추갯수</span>
+    
+    <span class="n">arr</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">M</span><span class="p">)]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">)]</span>
+    <span class="n">visited</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">M</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">)]</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">K</span><span class="p">):</span>
+        <span class="n">y</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+        <span class="n">arr</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">M</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">visited</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">arr</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">DFS</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+                <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">result</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+
+<span class="c1"># 초기 풀이는 런타임 에러가 발생했다.</span>
+<span class="c1"># 하여 결과값을 모았다가 출력하면 속도 증가가 가능하기에</span>
+<span class="c1"># result = []에 답을 모았다가 출력해보았지만,</span>
+<span class="c1"># 런타임 에러 발생..</span>
+<span class="c1"># 검색해보니 </span>
+<span class="c1"># sys.setrecursionlimit(50000) 이런 것이 있다는 것을 봤고</span>
+<span class="c1"># 추가해주니 통과 되었다.</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+</div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">

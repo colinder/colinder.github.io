@@ -1,4 +1,4 @@
-# BEAKJOON 1260, 2606, 2667, 
+# BEAKJOON 1260, 2606, 2667, 1012
 
 
 ​	
@@ -137,4 +137,63 @@ for i in result:
 # 2. isSafe를 만들어 범위를 확인한다.
 ```
 
+​	
 
+### 1012_유기농 배추
+
+```python
+import sys
+
+# 최대 재귀 깊이를 늘리려면 sys 모듈의 setrecursionlimit 함수를 사용
+# (기본값이상으로 안해주면 런타임에러로 처리된다.) ※기본값:1000 
+sys.setrecursionlimit(50000)
+
+def isSafe(x, y):
+    if 0 <= x < N and 0 <= y < M:
+        return True
+
+def DFS(x, y):
+    visited[x][y] = 1
+    for i in range(4):
+        cx = x + dx[i]
+        cy = y + dy[i]
+        if isSafe(cx, cy) and visited[cx][cy] == 0 and arr[cx][cy] == 1:
+            DFS(cx, cy)
+
+dx = [-1, 0, 1, 0]
+dy = [0, 1, 0, -1]
+
+result = []
+
+for T in range(int(sys.stdin.readline().rstrip())):
+    M, N, K = map(int, sys.stdin.readline().split())    # M 가로, N 세로, K 배추갯수
+    
+    arr = [[0 for _ in range(M)] for _ in range(N)]
+    visited = [[0]*(M) for _ in range(N)]
+
+    for i in range(K):
+        y, x = map(int, sys.stdin.readline().split())
+        arr[x][y] = 1
+
+    count = 0
+    for x in range(N):
+        for y in range(M):
+            if visited[x][y] == 0 and arr[x][y] == 1:
+                DFS(x, y)
+                count += 1
+    result.append(count)
+
+for i in result:
+    print(i)
+
+
+# 초기 풀이는 런타임 에러가 발생했다.
+# 하여 결과값을 모았다가 출력하면 속도 증가가 가능하기에
+# result = []에 답을 모았다가 출력해보았지만,
+# 런타임 에러 발생..
+# 검색해보니 
+# sys.setrecursionlimit(50000) 이런 것이 있다는 것을 봤고
+# 추가해주니 통과 되었다.
+```
+
+​	
