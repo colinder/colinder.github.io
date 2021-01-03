@@ -26,7 +26,9 @@
 
   ​	
 
-- ### from collections import <span style="color: red">Counter</span>
+- ### <span style="color: #7500ab">from</span> collections <span style="color:#7500ab">import</span> Counter
+
+  주어지는 컨테이너<span style="font-size:.8em">(ex 리스트 자료형)</span>에 동일한 값의 갯수를 파악
 
   ```python
   from collections import Counter
@@ -39,7 +41,9 @@
 
   ​	
 
-- ### 입력
+- ### <span style="color: #7500ab">import</span> sys
+
+  빠른 속도로 입력받기 위한 라이브러리
 
   ```python
   imput VS sys.stdin.readline()
@@ -116,7 +120,7 @@
 
   ​	
 
-- ## itertools (효율적인 반복을 위한 함수)
+- ## <span style="color:#7500ab">import</span> itertools (효율적인 반복을 위한 함수)
 
   - ### permutations(자료, 만들순열길이)
 
