@@ -28,7 +28,7 @@
 
 - ### <span style="color: #7500ab">from</span> collections <span style="color:#7500ab">import</span> Counter
 
-  주어지는 컨테이너<span style="font-size:.8em">(ex 리스트 자료형)</span>에 동일한 값의 갯수를 파악
+  주어지는 컨테이너<span style="font-size:.8em">(ex 리스트 자료형, string)</span>에 동일한 값의 갯수를 파악
 
   ```python
   from collections import Counter
