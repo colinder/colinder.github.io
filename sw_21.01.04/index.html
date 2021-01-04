@@ -31,7 +31,7 @@ D3_10761_신뢰 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 2
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/sw_21.01.04\/"
-        },"genre": "posts","keywords": "algorithm","wordcount":  499 ,
+        },"genre": "posts","keywords": "algorithm","wordcount":  504 ,
         "url": "https:\/\/colinder.github.io\/sw_21.01.04\/","datePublished": "2021-01-04T16:54:32+09:00","dateModified": "2021-01-04T16:54:32+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -108,7 +108,7 @@ D3_10761_신뢰 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 2
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">SW Expert Academy_D3 10761, 10804, 10912, 10965</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/sw-expert-academy/"><i class="far fa-folder fa-fw"></i>SW Expert Academy</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-04">2021-01-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;499 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-04">2021-01-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;504 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -377,7 +377,7 @@ D3_10761_신뢰 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 2
     <span class="n">result</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">N</span>
     <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">P</span><span class="p">:</span>
         <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">v</span> <span class="o">&gt;</span> <span class="n">N</span><span class="p">:</span>
             <span class="k">break</span>
         <span class="k">while</span> <span class="n">n</span> <span class="o">%</span> <span class="n">v</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="n">n</span> <span class="o">//=</span> <span class="n">v</span>
@@ -393,7 +393,7 @@ D3_10761_신뢰 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 2
 
 <span class="c1"># 에라토스테네스 체를 이용해 소수를 구했고</span>
 <span class="c1"># root(10000001**0.5) 보다 큰 소수의 경우 </span>
-<span class="c1"># 소인수분해를 하고 나서도 n != 1 수 있다.</span>
+<span class="c1"># 소인수 분해를 하고 나서도 n != 1 수 있다.</span>
 <span class="c1"># 하여 소인수분해를 마치고도 n &gt; 1면 </span>
 <span class="c1"># result에 곱해주었다.</span>
 

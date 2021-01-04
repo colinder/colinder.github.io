@@ -126,7 +126,7 @@ for T in range(int(input())):
     result, n = 1, N
     for v in P:
         count = 0
-        if n == 1:
+        if n == 1 or v > N:
             break
         while n % v == 0:
             n //= v
@@ -142,7 +142,7 @@ for i in ans:
 
 # 에라토스테네스 체를 이용해 소수를 구했고
 # root(10000001**0.5) 보다 큰 소수의 경우 
-# 소인수분해를 하고 나서도 n != 1 수 있다.
+# 소인수 분해를 하고 나서도 n != 1 수 있다.
 # 하여 소인수분해를 마치고도 n > 1면 
 # result에 곱해주었다.
 
