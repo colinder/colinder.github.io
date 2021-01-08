@@ -1,4 +1,4 @@
-# SW Expert Academy_D3 5678, 5672
+# SW Expert Academy_D3 5678, 5672, 7465, 7701
 
 
 ​	
@@ -72,3 +72,56 @@ for T in range(int(input())):
 
 ​	
 
+### D4_7465_창용 마을 무리의 개수
+
+```python
+def DFS(x):
+    visited[x] = 1
+    for i in range(1, N+1):
+        if arr[x][i] == 1 and visited[i] == 0:
+            DFS(i)
+
+for T in range(int(input())):
+    N, M = map(int, input().split())
+    arr = [[0 for _ in range(N+1)] for _ in range(N+1)]
+    visited = [0 for _ in range(N+1)]
+
+    for i in range(M):
+        x, y = map(int, input().split())
+        arr[x][y] = 1
+        arr[y][x] = 1
+
+    count = 0
+    for i in range(1, N+1):
+        if visited[i] == 0:
+            DFS(i)
+            count += 1
+
+    print(f'#{T+1} {count}')
+
+# 양방향입니다.
+```
+
+​	
+
+### D4_7701_염라대왕의 이름 정렬
+
+```python
+for T in range(int(input())):
+    N = int(input())
+    S = set()
+    for i in range(N):
+        s = input()
+        S.add(s)
+    
+    A = sorted(S, key=lambda x: (len(x), x))
+    
+    print(f'#{T+1}')
+    for j in A:
+        print(j)
+
+# set 자료형도 sorted를 진행하면
+# 자동으로 list type으로 변한다.
+```
+
+​	
