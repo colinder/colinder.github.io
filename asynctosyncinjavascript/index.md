@@ -25,7 +25,7 @@ _*동기, 비동기 설명은 [이전 포스팅](https://colinder.github.io/sync
 
 ## 1. Callback
 
->개발자들 마다 정의가 조금씩 다르겠지만, 저는 **어떤 이벤트가 발생한 후, 수행될 함수로 정의해보겠습니다.**
+>개발자들 마다 정의가 조금씩 다르겠지만, 저는 **어떤 이벤트가 발생한 후, 수행될 함수**로 정의해보겠습니다.
 
 - 예제를 보며 이해해 봅시다. 
 
@@ -38,7 +38,7 @@ _*동기, 비동기 설명은 [이전 포스팅](https://colinder.github.io/sync
       callback(data)           // callback이라는 함수에 data라는 변수를 넘겨줌.
   }
   
-  function b(value) {			// 함수 b는 console에 입력받은 값 value를 콘솔에 출력하는 함수.
+  function b(value) {			// 함수 b는 입력받은 값 value를 콘솔에 출력하는 함수.
       console.log('넘겨받은 값', value)
   }
   
@@ -53,7 +53,7 @@ _*동기, 비동기 설명은 [이전 포스팅](https://colinder.github.io/sync
 
   ​	
 
-  위의 예제 코드가 눈에 들어왔다면, 이제 <b>비동기적 코드</b>를 만들어 봅시다.
+  위의 예제 코드가 눈에 들어왔다면, 먼저 <b>비동기적 코드</b>를 만들어 봅시다.
 
   ```javascript
   // Callback 비동기적 코딩
@@ -133,8 +133,8 @@ _*동기, 비동기 설명은 [이전 포스팅](https://colinder.github.io/sync
 
   {{< mermaid >}}
   graph LR;
-      A[pending 대기상태] -->|성공| D[fulfilled 성공상태]
-      A[pending 대기상태] -->|실패| E[rejected 실패상태]
+      A [ pending 대기상태 ] -->|성공| D[fulfilled 성공상태]
+      A [ pending 대기상태 ] -->|실패| E[rejected 실패상태]
   {{< /mermaid >}}
 
 
@@ -145,8 +145,8 @@ _*동기, 비동기 설명은 [이전 포스팅](https://colinder.github.io/sync
 
   {{< mermaid >}}
   graph LR;
-      A[pending 대기상태] -->|성공| B[fulfilled 성공상태] --> |`이 흐름을 사용`| D[.then]
-      A[pending 대기상태] -->|실패| C[rejected 실패상태] --> |`이 흐름을 사용`| E[.catch]
+      A[pending 대기상태] -->|성공| B[fulfilled 성공상태] --> |`이 흐름을 사용`   | D[.then]
+      A[pending 대기상태] -->|실패| C[rejected 실패상태] --> |`이 흐름을 사용`   | E[.catch]
   {{< /mermaid >}}
 
   ```javascript
