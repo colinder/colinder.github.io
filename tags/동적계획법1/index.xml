@@ -3,7 +3,15 @@
         <title>동적계획법1 - Tag - </title>
         <link>https://colinder.github.io/tags/%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%951/</link>
         <description>동적계획법1 - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 14 Jan 2021 17:55:47 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%951/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 15 Jan 2021 17:11:07 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%951/" rel="self" type="application/rss+xml" /><item>
+    <title>BEAKJOON 2156, 2565, 10844, 9251</title>
+    <link>https://colinder.github.io/bj_21.01.15/</link>
+    <pubDate>Fri, 15 Jan 2021 17:11:07 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/bj_21.01.15/</guid>
+    <description><![CDATA[​
+2156_포도주 시식 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20  N = int(input()) wine = [0 for _ in range(N)] total = [0 for _ in range(N)] for i in range(N): wine[i] = int(input()) if N == 1: total[0] = wine[0] else: total[0] = wine[0] total[1] = wine[0] + wine[1] for i in range(2, N): total[i] = max(total[i-1], total[i-2] + wine[i], total[i-3] + wine[i] + wine[i-1]) print(total[N-1]) # N == 1인 경우를 생각하지 않았을 땐 런타임 오류에 걸렸었다.]]></description>
+</item><item>
     <title>BEAKJOON 1912, 9184, 11053, 11054</title>
     <link>https://colinder.github.io/bj_21.01.14/</link>
     <pubDate>Thu, 14 Jan 2021 17:55:47 &#43;0900</pubDate>

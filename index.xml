@@ -3,9 +3,17 @@
         <title></title>
         <link>https://colinder.github.io/</link>
         <description>Hello New World</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 14 Jan 2021 17:55:47 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 15 Jan 2021 17:11:07 &#43;0900</lastBuildDate>
             <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>BEAKJOON 2156, 2565, 10844, 9251</title>
+    <link>https://colinder.github.io/bj_21.01.15/</link>
+    <pubDate>Fri, 15 Jan 2021 17:11:07 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/bj_21.01.15/</guid>
+    <description><![CDATA[​
+2156_포도주 시식 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20  N = int(input()) wine = [0 for _ in range(N)] total = [0 for _ in range(N)] for i in range(N): wine[i] = int(input()) if N == 1: total[0] = wine[0] else: total[0] = wine[0] total[1] = wine[0] + wine[1] for i in range(2, N): total[i] = max(total[i-1], total[i-2] + wine[i], total[i-3] + wine[i] + wine[i-1]) print(total[N-1]) # N == 1인 경우를 생각하지 않았을 땐 런타임 오류에 걸렸었다.]]></description>
+</item><item>
     <title>BEAKJOON 1912, 9184, 11053, 11054</title>
     <link>https://colinder.github.io/bj_21.01.14/</link>
     <pubDate>Thu, 14 Jan 2021 17:55:47 &#43;0900</pubDate>
@@ -82,13 +90,5 @@ Python Library ​
     <description><![CDATA[​
 10872_팩토리얼 1 2 3 4 5 6 7 8 9 10 11  import sys N = int(sys.stdin.readline().rstrip()) def fac(n): if n &gt; 1: return n * fac(n-1) else: return 1 print(fac(N))   ​
 10870_피보나치 수 5 1 2 3 4 5 6 7 8 9 10 11  import sys def fivo(n): if n &gt;= 2: return fivo(n-1) + fivo(n-2) else: return n N = int(sys.stdin.readline().rstrip()) print(fivo(N))   ​]]></description>
-</item><item>
-    <title>BEAKJOON 4948, 9020, 3053, 1002</title>
-    <link>https://colinder.github.io/bj_20.12.17/</link>
-    <pubDate>Thu, 17 Dec 2020 21:48:55 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/bj_20.12.17/</guid>
-    <description><![CDATA[​
-4948_베르트랑 공준 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20  import sys while True: N = int(sys.stdin.readline().rstrip()) if N == 0: break arr = [0,0] + [1] * ((2*N)-1) rootN = int((2*N)**0.5) for i in range(2, rootN+1): if arr[i] == 1: for j in range(2*i, 2*N+1, i): arr[j] = 0 print(sum(arr[N+1:(2*N)+1])) # 입출력에 제한이 있다가 0을 입력 받을 때 까지 # 출력을 해야 하는 조건을 달지 않는 것을 주의!]]></description>
 </item></channel>
 </rss>

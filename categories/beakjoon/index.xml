@@ -3,7 +3,15 @@
         <title>BEAKJOON - Category - </title>
         <link>https://colinder.github.io/categories/beakjoon/</link>
         <description>BEAKJOON - Category - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 14 Jan 2021 17:55:47 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/beakjoon/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 15 Jan 2021 17:11:07 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/beakjoon/" rel="self" type="application/rss+xml" /><item>
+    <title>BEAKJOON 2156, 2565, 10844, 9251</title>
+    <link>https://colinder.github.io/bj_21.01.15/</link>
+    <pubDate>Fri, 15 Jan 2021 17:11:07 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/bj_21.01.15/</guid>
+    <description><![CDATA[​
+2156_포도주 시식 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20  N = int(input()) wine = [0 for _ in range(N)] total = [0 for _ in range(N)] for i in range(N): wine[i] = int(input()) if N == 1: total[0] = wine[0] else: total[0] = wine[0] total[1] = wine[0] + wine[1] for i in range(2, N): total[i] = max(total[i-1], total[i-2] + wine[i], total[i-3] + wine[i] + wine[i-1]) print(total[N-1]) # N == 1인 경우를 생각하지 않았을 땐 런타임 오류에 걸렸었다.]]></description>
+</item><item>
     <title>BEAKJOON 1912, 9184, 11053, 11054</title>
     <link>https://colinder.github.io/bj_21.01.14/</link>
     <pubDate>Thu, 14 Jan 2021 17:55:47 &#43;0900</pubDate>
@@ -79,13 +87,5 @@
     <description><![CDATA[​
 10809_알파벳찾기 1 2 3 4 5 6 7 8 9 10  import sys word = sys.stdin.readline().rstrip() alphabet = list(range(97,123)) for x in alphabet : print(word.find(chr(x)), end=&#34; &#34;) # find함수는 조건에 맞는 값의 index를 출력하고 # 찾지 못하는 경우 -1을 출력한다.    ​
 2941_크로아티아 알파벳 1 2 3 4 5 6 7 8 9 10  import sys cro = [&#34;c=&#34;, &#34;c-&#34;, &#34;dz=&#34;, &#34;d-&#34;, &#34;lj&#34;, &#34;nj&#34;, &#34;s=&#34;, &#34;z=&#34;] s = sys.]]></description>
-</item><item>
-    <title>BEAKJOON 1149, 1932, 2579, 1463</title>
-    <link>https://colinder.github.io/bj_20.08.06/</link>
-    <pubDate>Wed, 05 Aug 2020 22:11:35 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/bj_20.08.06/</guid>
-    <description><![CDATA[​
-1149_RGB거리 1 2 3 4 5 6 7 8 9 10 11 12 13  N = int(input()) RGB = [list(map(int, input().split())) for _ in range(N)] for i in range(1, len(RGB)): RGB[i][0] = RGB[i][0] + min(RGB[i-1][1], RGB[i-1][2]) RGB[i][1] = RGB[i][1] + min(RGB[i-1][0], RGB[i-1][2]) RGB[i][2] = RGB[i][2] + min(RGB[i-1][0], RGB[i-1][1]) print(min(RGB[i][0], RGB[i][1], RGB[i][2])) # 2시간이 넘게 고민한 결과... # 문제 속 조건3 &#34;&#34;i(2 ≤ i ≤ N-1)번 집의 색은 i-1번, i+1번 집의 색과 같지 않아야 한다.]]></description>
 </item></channel>
 </rss>
