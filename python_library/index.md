@@ -5,7 +5,15 @@
 
 # Python Library
 
-​	 
+- ### sys.setrecursionlimit(최대 재귀 깊이 설정)
+
+  ```python
+  # 최대 재귀 깊이를 늘리려면 sys 모듈의 setrecursionlimit 함수를 사용
+  # (기본값이상으로 안해주면 런타임에러로 처리된다.) ※기본값:1000 
+  sys.setrecursionlimit(50000)
+  ```
+
+  ​	
 
 - ### sorted()
 

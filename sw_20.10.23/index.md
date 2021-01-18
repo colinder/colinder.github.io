@@ -1,4 +1,4 @@
-# SW Expert Academy_D4 6959, 4613, , 
+# SW Expert Academy_D4 6959, 4613, 6109, 
 
 
 ​	
@@ -42,6 +42,69 @@ for T in range(int(input())):
                 result = count
 
     print(f'#{T+1} {result}')
+```
+
+​	
+
+### D4_6109_추억의 2048게임
+
+```python
+from collections import deque
+
+def turn():
+    tmp = [[0] * N for _ in range(N)]
+    for i in range(N):
+        for j in range(N):
+            tmp[i][j] = arr[N-1-j][i]
+    return tmp
+
+def push():
+    for y in range(N):
+        q = deque([])
+        for x in range(N):
+            if arr[x][y] != 0:
+                q.append(arr[x][y])
+                arr[x][y] = 0
+        i = 0
+        while q:
+            if len(q) >= 2:
+                a, b = q.popleft(), q.popleft()
+                if a == b:
+                    arr[i][y] = a+b
+                else:
+                    arr[i][y] = a
+                    q.appendleft(b)
+                i += 1        
+            else:
+                arr[i][y] = q.popleft()
+    
+direction = {'up': (0, 0), 'left': (1, 3), 'down': (2, 2), 'right': (3, 1)}
+
+for T in range(int(input())):
+    N, S = input().split()
+    N = int(N)
+    
+    arr = [list(map(int, input().split())) for _ in range(N)]
+    Front, Back = direction[S]
+
+    for i in range(Front):
+        arr = turn()
+
+    push()
+
+    for i in range(Back):
+        arr = turn()
+
+    print(f'#{T+1}')
+    for i in arr:
+        print(*i)
+
+# 하... 너무 오래 걸렸다.
+# 방향 전환이 싫어서 U, D, R, L를
+# 각각 구현해봤으나.. 실패하고.
+# 수정해야 할 것도 너무 많아지고..
+# 방향 전환 구현하니까.. 이리 저리 돌리는 숫자 
+# 생각하는데 또 오래 걸리고...ㅎ
 ```
 
 ​	
