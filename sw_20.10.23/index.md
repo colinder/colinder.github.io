@@ -1,4 +1,4 @@
-# SW Expert Academy_D4 6959, 4613, 6109, 
+# SW Expert Academy_D4 6959, 4613, 6109, 1211
 
 
 ​	
@@ -105,6 +105,49 @@ for T in range(int(input())):
 # 수정해야 할 것도 너무 많아지고..
 # 방향 전환 구현하니까.. 이리 저리 돌리는 숫자 
 # 생각하는데 또 오래 걸리고...ㅎ
+```
+
+​	
+
+### D4_1211_Ladder2
+
+```python
+dx = [0, 0, 1]
+dy = [1, -1, 0]
+
+def IsSafe(x, y):
+    if 0 <= x < 100 and 0 <= y < 100:
+        return True
+
+def DFS(x, y):
+    global distance
+    if x == 99:
+        return distance
+    
+    visited[x][y] = 1
+    for i in range(3):
+        nx = x + dx[i]
+        ny = y + dy[i]
+        if IsSafe(nx, ny) and arr[nx][ny] == 1 and visited[nx][ny] == 0:
+            distance += 1
+            DFS(nx, ny)
+            return distance  # 런타임 오류 방지로 재귀를 빠져나올 때 무조건 리턴.
+
+for _ in range(10):
+    T = int(input())
+    arr = [list(map(int, input().split())) for _ in range(100)]
+    
+    Min = 10000
+    Midx = 0
+    for y in range(100):
+        if arr[0][y] == 1:
+            visited = [[0]* 100 for _ in range(100)]
+            distance = 0
+            v = DFS(0, y)
+            if v <= Min:
+                Min = v
+                Midx = y
+    print(f'#{T} {Midx}')
 ```
 
 ​	
