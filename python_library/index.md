@@ -5,6 +5,14 @@
 
 # Python Library
 
+- ### isalpha(), isdigit()
+
+  ```python
+  # 알파벳이냐?, 숫자형이냐? 를 참, 거짓 형태로 반환
+  ```
+
+  ​	
+
 - ### sys.setrecursionlimit(최대 재귀 깊이 설정)
 
   ```python
@@ -97,9 +105,9 @@
   >>위의 문자들의 앞에 백슬래시 `\`를 붙여 주면 일반 문자처럼 한 글자에 매칭된다. 
   >
   >>예를 들어 `\(`는 문자 `‘(‘`와 매칭된다.
-  
+
     		
-  
+
 - ### find(찾을문자, 찾기시작할위치) - <span style="color:red">찾는 값의 인덱스를 반환</span>
 
   ```python
