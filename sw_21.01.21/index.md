@@ -1,4 +1,4 @@
-# SW Expert Academy_D4 1226, 1227, 1231, 
+# SW Expert Academy_D4 1226, 1227, 1231, 5643
 
 
 ​	
@@ -112,5 +112,58 @@ for T in range(10):
     DFS(1)
     print(f'#{T+1} {result}')
 ```
+
+​	
+
+### D4_5643_키 순서
+
+```python
+def DFSF(x, i):
+    for j in arrF[i]:
+        if arr[x][j] == 0:
+            arr[x][j] = 1
+            DFSF(x, j)
+
+def DFSB(x, i):
+    for j in arrB[i]:
+        if arr[x][j] == 0:
+            arr[x][j] = 1
+            DFSB(x, j)
+
+for T in range(int(input())):
+    N = int(input())
+    M = int(input())
+
+    arrF = [[] for _ in range(N+1)]
+    arrB = [[] for _ in range(N+1)] 
+    arr = [[0 for _ in range(N+1)] for _ in range(N+1)]
+    
+    for _ in range(M):
+        a, b = map(int, input().split())
+        arrF[a].append(b)
+        arrB[b].append(a)
+
+
+    for i in range(1, N+1):
+        x = i
+        DFSF(x, i)
+        DFSB(x, i)
+
+    count = 0
+    for i in arr:
+        if sum(i) == N-1:
+            count += 1
+
+    print(f'#{T+1} {count}')
+    
+# 화살표 방향대로의 F
+# 화살표 반대방향의 B
+# 앞으로 진행시(F방향) 알 수 있는 위치를 arr에 저장하고
+# 반대로 진행시(B방향) 알 수 있는 위치를 arr에 저장했을 때
+# 다른 노드의 위치를 모두 확인할 수 있는 노드만이 본인의 위치를 
+# 알 수 있게 된다.
+```
+
+​	
 
 
