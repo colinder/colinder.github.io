@@ -4,13 +4,12 @@
         <link>https://colinder.github.io/tags/%EA%B7%B8%EB%A6%AC%EB%94%94-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</link>
         <description>그리디 알고리즘 - Tag - </description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 25 Jan 2021 22:33:33 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/%EA%B7%B8%EB%A6%AC%EB%94%94-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/" rel="self" type="application/rss+xml" /><item>
-    <title>BEAKJOON 1918, , , </title>
+    <title>BEAKJOON 1931, 11399, 1541, 13305</title>
     <link>https://colinder.github.io/bj_21.01.25/</link>
     <pubDate>Mon, 25 Jan 2021 22:33:33 &#43;0900</pubDate>
     <author>Author</author>
     <guid>https://colinder.github.io/bj_21.01.25/</guid>
     <description><![CDATA[​
-11047_동전0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  N, K = map(int, input().split()) coins = [int(input()) for _ in range(N)] count = 0 i = 1 while K != 0: coin = coins[-i] if K &gt;= coin: n = K//coin K -= coin*n count += n i += 1 print(count)   ​
-1931_회의실 배정 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  import sys N = int(sys.]]></description>
+1931_회의실 배정 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  import sys N = int(sys.stdin.readline().rstrip()) arr = [list(map(int, sys.stdin.readline().split())) for _ in range(N)] schedule = sorted(arr, key=lambda x: (x[1], x[0])) count, end = 0, 0 for s, f in schedule: if s &gt;= end: count += 1 end = f print(count) # 왠지 정렬을 잘하면 계산이 쉬울 것 같아서.]]></description>
 </item></channel>
 </rss>

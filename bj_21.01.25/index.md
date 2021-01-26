@@ -1,27 +1,5 @@
-# BEAKJOON 1918, , , 
+# BEAKJOON 1931, 11399, 1541, 13305
 
-
-​	
-
-### 11047_동전0
-
-```python
-N, K = map(int, input().split())
-coins = [int(input()) for _ in range(N)]
-
-count = 0
-
-i = 1
-while K != 0:
-    coin = coins[-i]
-    if K >= coin:
-        n = K//coin
-        K -= coin*n
-        count += n
-    i += 1
-
-print(count)
-```
 
 ​	
 
@@ -96,6 +74,30 @@ print(result)
 # 55-(50+40)-(30+49) 가 정답이 된다. 
 # 즉 55 / 50+40 / 30+49 로 나누고
 # 첫 인자를 제외한 나머지의 합을 빼주면 된다. 
+```
+
+​	
+
+### 13305_주유소
+
+```python
+import sys
+
+N = int(sys.stdin.readline().rstrip())
+distance = list(map(int, sys.stdin.readline().split()))    #d  2  3  1
+price = list(map(int, sys.stdin.readline().split()))       #p 5  2  4  1
+
+total = 0
+Min = sys.maxsize
+    
+for i in range(N-1):
+    if i == 0:
+        total += price[0]*distance[0]
+        Min = min(Min, price[0])
+    else:
+        Min = min(Min, price[i])
+        total += Min*distance[i]
+print(total)
 ```
 
 ​	
