@@ -135,7 +135,30 @@ else:
 ### 17298_오큰수
 
 ```python
+import sys
+N = int(sys.stdin.readline().rstrip())
+arr = list(map(int, sys.stdin.readline().split()))
+NGE = [-1] * N
 
+stack = [0]
+i = 1
+
+while stack and i < N:
+    while stack and arr[stack[-1]] < arr[i]:
+        NGE[stack[-1]]= arr[i]
+        stack.pop()
+    stack.append(i)
+    i += 1
+
+print(*NGE)
+
+# stack에 arr의 인덱스를 저장(비교 기준 설정)
+# i로 비교할 인덱스를 지정해 비교
+# stack에 0 저장
+# i = 1 즉, arr[1] = 5를 stack에 저장되어있는
+# 인덱스값(arr[0])과 비교 NGE라면 arr[i]을 NGE에 저장 
+
+# 이게 왜 빠른건지 잘 모르겠다. 
 ```
 
 ​		
