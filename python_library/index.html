@@ -7,22 +7,22 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <title>Python_Library - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="Python_Library" />
 <meta property="og:description" content="​
-Python Library   q[len(q)-1] VS q[-1] 속도 비교 1 2 3 4 5 6 7 8 9  import time start = time.time() # 시작 시간 저장 ... ... print(&#34;time :&#34;, time.time() - start) # 현재시각 - 시작시간 = 실행 시간 # q[len(q)-1] VS q[-1] 속도 비교 # q[len(q)-1] 이 더 빠름. # 왜..?     isalpha(), isdigit() 1  # 알파벳이냐?, 숫자형이냐? 를 참, 거짓 형태로 반환   ​" />
+Python Library   deque 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  # deque는 기본적으로 리스트를 변형(ex. pop() ...)하며 코딩할 때 # 속도가 빠르기 때문에 사용한다.  # 주로 popleft()를 사용하지만, 유용한 기능이 더 있다.  ## 1. rotate from collections import deque q = deque([1,2,3,4,5,6]) q.rotate(3) print(q)	# deque([4, 5, 6, 1, 2, 3]) # 주로 리스트의 끝이 붙어 있는 원순열 문제를 해결하는데 편리하다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://colinder.github.io/python_library/" />
 <meta property="og:image" content="https://colinder.github.io/logo.png"/>
-<meta property="article:published_time" content="2020-12-21T22:39:31+09:00" />
-<meta property="article:modified_time" content="2020-12-21T22:39:31+09:00" />
+<meta property="article:published_time" content="2021-01-28T22:39:31+09:00" />
+<meta property="article:modified_time" content="2021-01-28T22:39:31+09:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
 
 <meta name="twitter:title" content="Python_Library"/>
 <meta name="twitter:description" content="​
-Python Library   q[len(q)-1] VS q[-1] 속도 비교 1 2 3 4 5 6 7 8 9  import time start = time.time() # 시작 시간 저장 ... ... print(&#34;time :&#34;, time.time() - start) # 현재시각 - 시작시간 = 실행 시간 # q[len(q)-1] VS q[-1] 속도 비교 # q[len(q)-1] 이 더 빠름. # 왜..?     isalpha(), isdigit() 1  # 알파벳이냐?, 숫자형이냐? 를 참, 거짓 형태로 반환   ​"/>
+Python Library   deque 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  # deque는 기본적으로 리스트를 변형(ex. pop() ...)하며 코딩할 때 # 속도가 빠르기 때문에 사용한다.  # 주로 popleft()를 사용하지만, 유용한 기능이 더 있다.  ## 1. rotate from collections import deque q = deque([1,2,3,4,5,6]) q.rotate(3) print(q)	# deque([4, 5, 6, 1, 2, 3]) # 주로 리스트의 끝이 붙어 있는 원순열 문제를 해결하는데 편리하다."/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/python_library/" /><link rel="prev" href="https://colinder.github.io/bj_20.12.21/" /><link rel="next" href="https://colinder.github.io/bj_20.12.28/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/python_library/" /><link rel="prev" href="https://colinder.github.io/bj_21.01.27/" /><link rel="next" href="https://colinder.github.io/bj_21.01.28/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -31,8 +31,8 @@ Python Library   q[len(q)-1] VS q[-1] 속도 비교 1 2 3 4 5 6 7 8 9  import ti
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/python_library\/"
-        },"genre": "posts","keywords": "algorithm, Python","wordcount":  669 ,
-        "url": "https:\/\/colinder.github.io\/python_library\/","datePublished": "2020-12-21T22:39:31+09:00","dateModified": "2020-12-21T22:39:31+09:00","publisher": {
+        },"genre": "posts","keywords": "algorithm, Python","wordcount":  800 ,
+        "url": "https:\/\/colinder.github.io\/python_library\/","datePublished": "2021-01-28T22:39:31+09:00","dateModified": "2021-01-28T22:39:31+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -108,7 +108,7 @@ Python Library   q[len(q)-1] VS q[-1] 속도 비교 1 2 3 4 5 6 7 8 9  import ti
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Python_Library</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/python/"><i class="far fa-folder fa-fw"></i>Python</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-12-21">2020-12-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;669 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-28">2021-01-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;800 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;4 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -119,6 +119,7 @@ Python Library   q[len(q)-1] VS q[-1] 속도 비교 1 2 3 4 5 6 7 8 9  import ti
   <ul>
     <li>
       <ul>
+        <li><a href="#deque">deque</a></li>
         <li><a href="#qlenq-1-vs-q-1-속도-비교">q[len(q)-1] VS q[-1] 속도 비교</a></li>
         <li><a href="#isalpha-isdigit">isalpha(), isdigit()</a></li>
         <li><a href="#syssetrecursionlimit최대-재귀-깊이-설정">sys.setrecursionlimit(최대 재귀 깊이 설정)</a></li>
@@ -141,6 +142,49 @@ Python Library   q[len(q)-1] VS q[-1] 속도 비교 1 2 3 4 5 6 7 8 9  import ti
             </div><div class="content" id="content"><p>​</p>
 <h1 id="python-library">Python Library</h1>
 <ul>
+<li>
+<h3 id="deque">deque</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># deque는 기본적으로 리스트를 변형(ex. pop() ...)하며 코딩할 때</span>
+<span class="c1"># 속도가 빠르기 때문에 사용한다. </span>
+<span class="c1"># 주로 popleft()를 사용하지만, 유용한 기능이 더 있다. </span>
+  
+<span class="c1">## 1. rotate</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">deque</span>
+  
+<span class="n">q</span> <span class="o">=</span> <span class="n">deque</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
+<span class="n">q</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>	<span class="c1"># deque([4, 5, 6, 1, 2, 3])</span>
+  
+<span class="c1"># 주로 리스트의 끝이 붙어 있는 원순열 문제를 해결하는데 편리하다. </span>
+<span class="c1"># 다만 속도가 어떤지는 잘 모르겠다. </span>
+  
+<span class="c1">## 2. deque는 슬라이싱이 되지 않는다.</span>
+<span class="c1"># 굳이 해야 한다면 아래를 참고</span>
+<span class="n">deque_slice</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">deque</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">islice</span><span class="p">(</span><span class="n">my_deque</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
 <li>
 <h3 id="qlenq-1-vs-q-1-속도-비교">q[len(q)-1] VS q[-1] 속도 비교</h3>
 <div class="highlight"><div class="chroma">
@@ -218,26 +262,36 @@ Python Library   q[len(q)-1] VS q[-1] 속도 비교 1 2 3 4 5 6 7 8 9  import ti
 </span><span class="lnt">16
 </span><span class="lnt">17
 </span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-python" data-lang="python"><span class="n">sorted는</span> <span class="err">여러</span> <span class="err">그룹의</span> <span class="err">값이</span> <span class="err">주어진</span> <span class="err">경우</span>
   
 <span class="c1">## 순차적으로 증감을 비교해 준다.</span>
 <span class="c1"># ex)</span>
-<span class="c1"># A = [(1,2,1), (1,2,2,3), (1,1,3), (1,1,2)]</span>
-<span class="c1"># A = sorted(A)</span>
-<span class="c1"># print(A)    # [(1, 1, 2), (1, 1, 3), (1, 2, 1), (1, 2, 2, 3)]</span>
+<span class="n">A</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)]</span>
+<span class="n">A</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>    <span class="c1"># [(1, 1, 2), (1, 1, 3), (1, 2, 1), (1, 2, 2, 3)]</span>
   
 <span class="c1">## 만약 주어진 두번째 인자들을 기준으로 정렬하고 싶다면?</span>
-<span class="c1"># A = [(0, 4), (1, 2), (1, -1), (2, 2), (3, 3)]</span>
-<span class="c1"># B = sorted(A, key=lambda L: (L[1], L[0]))</span>
-<span class="c1"># print(B)    # [(1, -1), (1, 2), (2, 2), (3, 3), (0, 4)]</span>
+<span class="n">A</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)]</span>
+<span class="n">B</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">L</span><span class="p">:</span> <span class="n">L</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>	<span class="c1"># [(1, -1), (2, 2), (1, 2), (3, 3), (0, 4)]</span>
+  
+<span class="c1">## 두번째 인자 우선 기준 후 첫번째 인자 기준 정렬하고 싶다면?</span>
+<span class="n">A</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)]</span>
+<span class="n">B</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">L</span><span class="p">:</span> <span class="p">(</span><span class="n">L</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">B</span><span class="p">)</span> 	<span class="c1"># [(1, -1), (1, 2), (2, 2), (3, 3), (0, 4)]</span>
   
 <span class="c1">## set자료형을 sorted 하면 자동으로 list type으로 변환된다.</span>
-<span class="c1"># a = {&#34;a&#34;,&#34;b&#34;,&#34;C&#34;}</span>
-<span class="c1">#print(&#34;a의 타입: &#34;,type(a))	 # a의 타입:  &lt;class &#39;set&#39;&gt;</span>
-<span class="c1">#b = sorted(a)</span>
-<span class="c1">#print(&#34;b의 타입: &#34;, type(b))	 # b의 타입:  &lt;class &#39;list&#39;&gt;</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;a&#34;</span><span class="p">,</span><span class="s2">&#34;b&#34;</span><span class="p">,</span><span class="s2">&#34;C&#34;</span><span class="p">}</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;a의 타입: &#34;</span><span class="p">,</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>	 <span class="c1"># a의 타입:  &lt;class &#39;set&#39;&gt;</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;b의 타입: &#34;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>	 <span class="c1"># b의 타입:  &lt;class &#39;list&#39;&gt;</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>​</p>
@@ -476,7 +530,7 @@ Python Library   q[len(q)-1] VS q[-1] 속도 비교 1 2 3 4 5 6 7 8 9  import ti
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2020-12-21</span>
+                <span>Updated on 2021-01-28</span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -497,8 +551,8 @@ Python Library   q[len(q)-1] VS q[-1] 속도 비교 1 2 3 4 5 6 7 8 9  import ti
         </section>
     </div>
 
-    <div class="post-nav"><a href="/bj_20.12.21/" class="prev" rel="prev" title="BEAKJOON 10989, 11650, 2108, 10814"><i class="fas fa-angle-left fa-fw"></i>BEAKJOON 10989, 11650, 2108, 10814</a>
-            <a href="/bj_20.12.28/" class="next" rel="next" title="BEAKJOON 1260, 2606, 2667, 1012">BEAKJOON 1260, 2606, 2667, 1012<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/bj_21.01.27/" class="prev" rel="prev" title="BEAKJOON 4949, 10828, 1874, 17298"><i class="fas fa-angle-left fa-fw"></i>BEAKJOON 4949, 10828, 1874, 17298</a>
+            <a href="/bj_21.01.28/" class="next" rel="next" title="BEAKJOON 18258, 2164, 11866, 1966">BEAKJOON 18258, 2164, 11866, 1966<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.

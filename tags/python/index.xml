@@ -3,13 +3,13 @@
         <title>Python - Tag - </title>
         <link>https://colinder.github.io/tags/python/</link>
         <description>Python - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 21 Dec 2020 22:39:31 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/python/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 28 Jan 2021 22:39:31 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/python/" rel="self" type="application/rss+xml" /><item>
     <title>Python_Library</title>
     <link>https://colinder.github.io/python_library/</link>
-    <pubDate>Mon, 21 Dec 2020 22:39:31 &#43;0900</pubDate>
+    <pubDate>Thu, 28 Jan 2021 22:39:31 &#43;0900</pubDate>
     <author>Author</author>
     <guid>https://colinder.github.io/python_library/</guid>
     <description><![CDATA[​
-Python Library   q[len(q)-1] VS q[-1] 속도 비교 1 2 3 4 5 6 7 8 9  import time start = time.time() # 시작 시간 저장 ... ... print(&#34;time :&#34;, time.time() - start) # 현재시각 - 시작시간 = 실행 시간 # q[len(q)-1] VS q[-1] 속도 비교 # q[len(q)-1] 이 더 빠름. # 왜..?     isalpha(), isdigit() 1  # 알파벳이냐?, 숫자형이냐? 를 참, 거짓 형태로 반환   ​]]></description>
+Python Library   deque 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  # deque는 기본적으로 리스트를 변형(ex. pop() ...)하며 코딩할 때 # 속도가 빠르기 때문에 사용한다.  # 주로 popleft()를 사용하지만, 유용한 기능이 더 있다.  ## 1. rotate from collections import deque q = deque([1,2,3,4,5,6]) q.rotate(3) print(q)	# deque([4, 5, 6, 1, 2, 3]) # 주로 리스트의 끝이 붙어 있는 원순열 문제를 해결하는데 편리하다.]]></description>
 </item></channel>
 </rss>

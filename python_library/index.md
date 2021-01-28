@@ -5,6 +5,30 @@
 
 # Python Library
 
+- ### deque
+
+  ```python
+  # deque는 기본적으로 리스트를 변형(ex. pop() ...)하며 코딩할 때
+  # 속도가 빠르기 때문에 사용한다. 
+  # 주로 popleft()를 사용하지만, 유용한 기능이 더 있다. 
+  
+  ## 1. rotate
+  from collections import deque
+  
+  q = deque([1,2,3,4,5,6])
+  q.rotate(3)
+  print(q)	# deque([4, 5, 6, 1, 2, 3])
+  
+  # 주로 리스트의 끝이 붙어 있는 원순열 문제를 해결하는데 편리하다. 
+  # 다만 속도가 어떤지는 잘 모르겠다. 
+  
+  ## 2. deque는 슬라이싱이 되지 않는다.
+  # 굳이 해야 한다면 아래를 참고
+  deque_slice = collections.deque(itertools.islice(my_deque, 10, 20))
+  ```
+
+  
+
 - ### q[len(q)-1] VS q[-1] 속도 비교
 
   ```python
@@ -46,20 +70,25 @@
   
   ## 순차적으로 증감을 비교해 준다.
   # ex)
-  # A = [(1,2,1), (1,2,2,3), (1,1,3), (1,1,2)]
-  # A = sorted(A)
-  # print(A)    # [(1, 1, 2), (1, 1, 3), (1, 2, 1), (1, 2, 2, 3)]
+  A = [(1,2,1), (1,2,2,3), (1,1,3), (1,1,2)]
+  A = sorted(A)
+  print(A)    # [(1, 1, 2), (1, 1, 3), (1, 2, 1), (1, 2, 2, 3)]
   
   ## 만약 주어진 두번째 인자들을 기준으로 정렬하고 싶다면?
-  # A = [(0, 4), (1, 2), (1, -1), (2, 2), (3, 3)]
-  # B = sorted(A, key=lambda L: (L[1], L[0]))
-  # print(B)    # [(1, -1), (1, 2), (2, 2), (3, 3), (0, 4)]
+  A = [(0, 4), (2, 2), (1, 2), (1, -1), (3, 3)]
+  B = sorted(A, key=lambda L: L[1])
+  print(B)	# [(1, -1), (2, 2), (1, 2), (3, 3), (0, 4)]
+  
+  ## 두번째 인자 우선 기준 후 첫번째 인자 기준 정렬하고 싶다면?
+  A = [(0, 4), (2, 2), (1, 2), (1, -1), (3, 3)]
+  B = sorted(A, key=lambda L: (L[1], L[0]))
+  print(B) 	# [(1, -1), (1, 2), (2, 2), (3, 3), (0, 4)]
   
   ## set자료형을 sorted 하면 자동으로 list type으로 변환된다.
-  # a = {"a","b","C"}
-  #print("a의 타입: ",type(a))	 # a의 타입:  <class 'set'>
-  #b = sorted(a)
-  #print("b의 타입: ", type(b))	 # b의 타입:  <class 'list'>
+  a = {"a","b","C"}
+  print("a의 타입: ",type(a))	 # a의 타입:  <class 'set'>
+  b = sorted(a)
+  print("b의 타입: ", type(b))	 # b의 타입:  <class 'list'>
   ```
 
   ​	
