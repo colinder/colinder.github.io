@@ -5,6 +5,22 @@
 
 # Python Library
 
+- ### q[len(q)-1] VS q[-1] 속도 비교
+
+  ```python
+  import time
+  start = time.time()  # 시작 시간 저장
+  ...
+  ...
+  print("time :", time.time() - start)  # 현재시각 - 시작시간 = 실행 시간
+  
+  # q[len(q)-1] VS q[-1] 속도 비교
+  # q[len(q)-1] 이 더 빠름.
+  # 왜..?
+  ```
+
+  
+
 - ### isalpha(), isdigit()
 
   ```python

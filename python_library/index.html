@@ -7,9 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <title>Python_Library - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="Python_Library" />
 <meta property="og:description" content="​
-Python Library   isalpha(), isdigit() 1  # 알파벳이냐?, 숫자형이냐? 를 참, 거짓 형태로 반환   ​
-  sys.setrecursionlimit(최대 재귀 깊이 설정) 1 2 3  # 최대 재귀 깊이를 늘리려면 sys 모듈의 setrecursionlimit 함수를 사용 # (기본값이상으로 안해주면 런타임에러로 처리된다.) ※기본값:1000  sys.setrecursionlimit(50000)   ​
-  sorted() 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  sorted는 여러 그룹의 값이 주어진 경우 ## 순차적으로 증감을 비교해 준다." />
+Python Library   q[len(q)-1] VS q[-1] 속도 비교 1 2 3 4 5 6 7 8 9  import time start = time.time() # 시작 시간 저장 ... ... print(&#34;time :&#34;, time.time() - start) # 현재시각 - 시작시간 = 실행 시간 # q[len(q)-1] VS q[-1] 속도 비교 # q[len(q)-1] 이 더 빠름. # 왜..?     isalpha(), isdigit() 1  # 알파벳이냐?, 숫자형이냐? 를 참, 거짓 형태로 반환   ​" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://colinder.github.io/python_library/" />
 <meta property="og:image" content="https://colinder.github.io/logo.png"/>
@@ -20,9 +18,7 @@ Python Library   isalpha(), isdigit() 1  # 알파벳이냐?, 숫자형이냐? �
 
 <meta name="twitter:title" content="Python_Library"/>
 <meta name="twitter:description" content="​
-Python Library   isalpha(), isdigit() 1  # 알파벳이냐?, 숫자형이냐? 를 참, 거짓 형태로 반환   ​
-  sys.setrecursionlimit(최대 재귀 깊이 설정) 1 2 3  # 최대 재귀 깊이를 늘리려면 sys 모듈의 setrecursionlimit 함수를 사용 # (기본값이상으로 안해주면 런타임에러로 처리된다.) ※기본값:1000  sys.setrecursionlimit(50000)   ​
-  sorted() 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  sorted는 여러 그룹의 값이 주어진 경우 ## 순차적으로 증감을 비교해 준다."/>
+Python Library   q[len(q)-1] VS q[-1] 속도 비교 1 2 3 4 5 6 7 8 9  import time start = time.time() # 시작 시간 저장 ... ... print(&#34;time :&#34;, time.time() - start) # 현재시각 - 시작시간 = 실행 시간 # q[len(q)-1] VS q[-1] 속도 비교 # q[len(q)-1] 이 더 빠름. # 왜..?     isalpha(), isdigit() 1  # 알파벳이냐?, 숫자형이냐? 를 참, 거짓 형태로 반환   ​"/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -35,7 +31,7 @@ Python Library   isalpha(), isdigit() 1  # 알파벳이냐?, 숫자형이냐? �
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/python_library\/"
-        },"genre": "posts","keywords": "algorithm, Python","wordcount":  619 ,
+        },"genre": "posts","keywords": "algorithm, Python","wordcount":  669 ,
         "url": "https:\/\/colinder.github.io\/python_library\/","datePublished": "2020-12-21T22:39:31+09:00","dateModified": "2020-12-21T22:39:31+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -112,8 +108,8 @@ Python Library   isalpha(), isdigit() 1  # 알파벳이냐?, 숫자형이냐? �
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Python_Library</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/python/"><i class="far fa-folder fa-fw"></i>Python</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-12-21">2020-12-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;619 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-12-21">2020-12-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;669 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;4 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
@@ -123,6 +119,7 @@ Python Library   isalpha(), isdigit() 1  # 알파벳이냐?, 숫자형이냐? �
   <ul>
     <li>
       <ul>
+        <li><a href="#qlenq-1-vs-q-1-속도-비교">q[len(q)-1] VS q[-1] 속도 비교</a></li>
         <li><a href="#isalpha-isdigit">isalpha(), isdigit()</a></li>
         <li><a href="#syssetrecursionlimit최대-재귀-깊이-설정">sys.setrecursionlimit(최대 재귀 깊이 설정)</a></li>
         <li><a href="#sorted">sorted()</a></li>
@@ -144,6 +141,33 @@ Python Library   isalpha(), isdigit() 1  # 알파벳이냐?, 숫자형이냐? �
             </div><div class="content" id="content"><p>​</p>
 <h1 id="python-library">Python Library</h1>
 <ul>
+<li>
+<h3 id="qlenq-1-vs-q-1-속도-비교">q[len(q)-1] VS q[-1] 속도 비교</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">time</span>
+<span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>  <span class="c1"># 시작 시간 저장</span>
+<span class="o">...</span>
+<span class="o">...</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;time :&#34;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span>  <span class="c1"># 현재시각 - 시작시간 = 실행 시간</span>
+  
+<span class="c1"># q[len(q)-1] VS q[-1] 속도 비교</span>
+<span class="c1"># q[len(q)-1] 이 더 빠름.</span>
+<span class="c1"># 왜..?</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
 <li>
 <h3 id="isalpha-isdigit">isalpha(), isdigit()</h3>
 <div class="highlight"><div class="chroma">
