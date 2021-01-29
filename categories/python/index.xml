@@ -10,6 +10,6 @@
     <author>Author</author>
     <guid>https://colinder.github.io/python_library/</guid>
     <description><![CDATA[​
-Python Library   deque 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  # deque는 기본적으로 리스트를 변형(ex. pop() ...)하며 코딩할 때 # 속도가 빠르기 때문에 사용한다.  # 주로 popleft()를 사용하지만, 유용한 기능이 더 있다.  ## 1. rotate from collections import deque q = deque([1,2,3,4,5,6]) q.rotate(3) print(q)	# deque([4, 5, 6, 1, 2, 3]) # 주로 리스트의 끝이 붙어 있는 원순열 문제를 해결하는데 편리하다.]]></description>
+Python Library   index() VS find() 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29  ## 공통점 # 두 함수 모두 찾으려 하는 값의 index를 반환 해준다. # ex) &gt;&gt;&gt; &#39;oxoxoxoxox&#39;.find(&#39;x&#39;)) # find 함수 1 &gt;&gt;&gt; &#39;oxoxoxoxox&#39;.index(&#39;x&#39;)) # index 함수 1 # 문자 &#39;o&#39;가 첫번째 위치한 자리를 출력 &gt;&gt;&gt; a = &#39;hello&#39; &gt;&gt;&gt; a.]]></description>
 </item></channel>
 </rss>

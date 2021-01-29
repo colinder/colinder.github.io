@@ -5,6 +5,42 @@
 
 # Python Library
 
+- ### index() VS find()
+
+  ```python
+  ## 공통점
+  # 두 함수 모두 찾으려 하는 값의 index를 반환 해준다.
+  # ex)
+  >>> 'oxoxoxoxox'.find('x'))  # find 함수
+  1 
+  >>> 'oxoxoxoxox'.index('x'))  # index 함수
+  1
+  
+  # 문자 'o'가 첫번째 위치한 자리를 출력
+  >>> a = 'hello'
+  >>> a.find('o'))  # find 함수
+  4
+  >>> a.index('o'))  # index 함수
+  4
+  
+  # 또 (value, start, end) 형태로 문자를 찾는 시작점과 종료점을 지정할 수 있다.
+  # 문자열중 2번째 위치부터 처음 'x'가 위치한 자리
+  >>> 'oxoxoxoxox'.index('x', 2)
+  3
+  
+  # a변수에서 1번째~3번째 사이에 문자 'o'가 위치한 자리
+  >>> a = 'hello'
+  >>> a.find('o', 1, 3)
+  -1	
+  # find함수는 찾는 값이 없을 때 -1을 출력한다. 이게 차이점.
+  
+  
+  ## 차이점
+  # 찾으려는 값이 없는 경우 find()는 '-1'을 반환 / index()는 'ValueError' 반환
+  ```
+
+  
+
 - ### deque
 
   ```python
