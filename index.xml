@@ -3,9 +3,17 @@
         <title></title>
         <link>https://colinder.github.io/</link>
         <description>Hello New World</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 28 Jan 2021 22:51:52 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 31 Jan 2021 20:41:31 &#43;0900</lastBuildDate>
             <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>BEAKJOON 1021, 5430, 10866</title>
+    <link>https://colinder.github.io/bj_21.01.31/</link>
+    <pubDate>Sun, 31 Jan 2021 20:41:31 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/bj_21.01.31/</guid>
+    <description><![CDATA[​
+1021_회전하는 큐 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26  import sys from collections import deque N, M = map(int, sys.stdin.readline().split()) arr = deque([i for i in range(1, N+1)]) poplist = deque(list(map(int, sys.stdin.readline().split()))) count = 0 while poplist: try: if arr[0] == poplist[0]: arr.popleft() poplist.popleft() L = len(arr) a = abs(arr.]]></description>
+</item><item>
     <title>BEAKJOON 18258, 2164, 11866, 1966</title>
     <link>https://colinder.github.io/bj_21.01.28/</link>
     <pubDate>Thu, 28 Jan 2021 22:51:52 &#43;0900</pubDate>
@@ -79,13 +87,5 @@ D4_1218_괄호 짝짓기 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 2
     <description><![CDATA[​
 D4_6959_이상한 나라의 덧셈게임 1 2 3 4 5 6 7 8 9 10  for T in range(int(input())): N = input() result = [&#34;A&#34;, &#34;B&#34;] turn = 1 while len(N) &gt; 1: N = str(int(N[0]) + int(N[1])) + N[2:] turn += 1 print(f&#39;#{T+1} {result[turn%2]}&#39;) # 단순 산수   ​
 D4_4613_러시아 국기 같은 깃발 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19  for T in range(int(input())): N, M = map(int, input().]]></description>
-</item><item>
-    <title>BEAKJOON 2156, 2565, 10844, 9251</title>
-    <link>https://colinder.github.io/bj_21.01.15/</link>
-    <pubDate>Fri, 15 Jan 2021 17:11:07 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/bj_21.01.15/</guid>
-    <description><![CDATA[​
-2156_포도주 시식 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20  N = int(input()) wine = [0 for _ in range(N)] total = [0 for _ in range(N)] for i in range(N): wine[i] = int(input()) if N == 1: total[0] = wine[0] else: total[0] = wine[0] total[1] = wine[0] + wine[1] for i in range(2, N): total[i] = max(total[i-1], total[i-2] + wine[i], total[i-3] + wine[i] + wine[i-1]) print(total[N-1]) # N == 1인 경우를 생각하지 않았을 땐 런타임 오류에 걸렸었다.]]></description>
 </item></channel>
 </rss>

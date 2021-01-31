@@ -61,6 +61,9 @@
   ## 2. deque는 슬라이싱이 되지 않는다.
   # 굳이 해야 한다면 아래를 참고
   deque_slice = collections.deque(itertools.islice(my_deque, 10, 20))
+  
+  # deque는 
+  # index()는 '사용가능'하고 find()는 '사용불가'하다. 
   ```
 
   
