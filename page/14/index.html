@@ -11,7 +11,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://colinder.github.io/" />
 <meta property="og:image" content="https://colinder.github.io/logo.png"/>
-<meta property="og:updated_time" content="2021-01-31T20:41:31+09:00" />
+<meta property="og:updated_time" content="2021-02-02T22:38:05+09:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
 
@@ -103,6 +103,12 @@
         alt="/images/jg_02.jpg"
         title="/images/jg_02.jpg" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/colinder" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="mailto:kjonggwan@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/bj_20.08.06/">BEAKJOON 1149, 1932, 2579, 1463</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-08-05">2020-08-05</time></span>&nbsp;<span class="post-category">included in <a href="/categories/beakjoon/"><i class="far fa-folder fa-fw"></i>BEAKJOON</a></span></div><div class="content">​
+1149_RGB거리 1 2 3 4 5 6 7 8 9 10 11 12 13  N = int(input()) RGB = [list(map(int, input().split())) for _ in range(N)] for i in range(1, len(RGB)): RGB[i][0] = RGB[i][0] + min(RGB[i-1][1], RGB[i-1][2]) RGB[i][1] = RGB[i][1] + min(RGB[i-1][0], RGB[i-1][2]) RGB[i][2] = RGB[i][2] + min(RGB[i-1][0], RGB[i-1][1]) print(min(RGB[i][0], RGB[i][1], RGB[i][2])) # 2시간이 넘게 고민한 결과... # 문제 속 조건3 &#34;&#34;i(2 ≤ i ≤ N-1)번 집의 색은 i-1번, i+1번 집의 색과 같지 않아야 한다.</div><div class="post-footer">
+        <a href="/bj_20.08.06/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/algorithm/">algorithm</a>,&nbsp;<a href="/tags/%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%951/">동적계획법1</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/bj_20.08.04/">BEAKJOON 1103, 1904, 2748, 9461</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-08-04">2020-08-04</time></span>&nbsp;<span class="post-category">included in <a href="/categories/beakjoon/"><i class="far fa-folder fa-fw"></i>BEAKJOON</a></span></div><div class="content">​
 1003_피보나치 함수 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20  def Fibonacci(N): if N &lt; 3: print(zero[N], one[N]) else: f = 1 s = 2 for i in range(N-2): zero.append(zero[f] + zero[s]) one.append(one[f] + one[s]) f += 1 s += 1 print(zero[N], one[N]) for T in range(int(input())): N = int(input()) zero = [1, 0, 1] one = [0, 1, 1] Fibonacci(N)   ​</div><div class="post-footer">
@@ -129,13 +135,6 @@ Vuex 란? (공식문서)  Vuex는 Vue.js 애플리케이션에 대한 상태 관
 1 2 3 4 5  # 설치 명령어 npm i vuex or npm install vuex # 이후  src폴더안에 vuex폴더를 만들고 store.</div><div class="post-footer">
         <a href="/05_vuex_01/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/vue/">vue</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/sw_20.07.29/">SW Expert Academy_D3 4466, 4406, 4371, 4299</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-07-29">2020-07-29</time></span>&nbsp;<span class="post-category">included in <a href="/categories/sw-expert-academy/"><i class="far fa-folder fa-fw"></i>SW Expert Academy</a></span></div><div class="content">​
-D3_4466_최대 성적표 만들기 1 2 3 4 5 6 7 8 9 10 11  for T in range(int(input())): N, K = map(int, input().split()) score = list(map(int, input().split())) score.sort(reverse=True) result = 0 for i in range(K): result += score[i] print(&#39;#{} {}&#39;.format(T+1, result))   ​
-D3_4406_모음이 보이지 않는 사람 1 2 3 4 5 6 7  for T in range(int(input())): sent = input() result = &#39;&#39; for i in sent: if i not in &#39;aeiou&#39;: result += i print(&#39;#{} {}&#39;.</div><div class="post-footer">
-        <a href="/sw_20.07.29/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/algorithm/">algorithm</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
