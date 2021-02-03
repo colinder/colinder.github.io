@@ -1,4 +1,4 @@
-# SW Expert Academy_D4 1258
+# SW Expert Academy_D4 1258, 1249
 
 
 ​	
@@ -41,4 +41,38 @@ for T in range(int(input())):
 
 ​	
 
-### 
+### D4_1249_보급로
+
+```python
+from collections import deque
+
+dx = [0,1,0,-1]
+dy = [1,0,-1,0]
+
+for T in range(int(input())):
+    N = int(input())
+    arr = [list(map(int, input())) for _ in range(N)]
+    
+    visited = [[float('inf') for _ in range(N)] for _ in range(N)]
+    visited[0][0] = arr[0][0]
+        
+    q = deque([[0, 0]])
+    while q:
+        x, y = q.popleft()
+        for i in range(4):
+            cx = x + dx[i]
+            cy = y + dy[i]
+            if 0 <= cx < N and 0 <= cy < N:
+                Sum = visited[x][y] + arr[cx][cy]
+                if visited[cx][cy] > Sum:
+                    visited[cx][cy] = Sum
+                    q.append([cx, cy])
+
+    print(f'#{T+1} {visited[N-1][N-1]}')
+    
+    
+# DFS로 구현해보려 했지만, 특정 위치에 왔을 때 종료를 
+# 구현하는데 어려움이 있어, BFS로 바꾸어 구현.
+```
+
+​	
