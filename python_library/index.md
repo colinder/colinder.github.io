@@ -5,11 +5,43 @@
 
 # Python Library
 
+- ### filter() VS find()
+
+  ```python
+  ## filter(function, iterable)
+  # 배열의 `모든 요소`에 접근하여 조건에 맞는 `값`을 찾는다.
+  
+  # ex)
+  def func(x):
+      if x > 0:
+        return x
+      else:
+        return None
+  
+  list(filter(func, range(-5,10)))
+  >>> [1, 2, 3, 4, 5, 6, 7, 8, 9]
+  
+  # ex)
+  [ i for i in range(-5,10) if i > 0 ]
+  >>> [1, 2, 3, 4, 5, 6, 7, 8, 9]
+  
+  
+  # find(sub[, start[, end]])
+  # 배열을 순회하면서 찾으려 하는 값의 `index`를 반환 해준다.
+  
+  # ex)
+  a = 'hello'
+  a.find('o'))  # find 함수
+  >>> 4
+  ```
+
+  ​	
+
 - ### index() VS find()
 
   ```python
   ## 공통점
-  # 두 함수 모두 찾으려 하는 값의 index를 반환 해준다.
+  # 두 함수 모두 찾으려 하는 값의 `index`를 반환 해준다.
   # ex)
   >>> 'oxoxoxoxox'.find('x'))  # find 함수
   1 
