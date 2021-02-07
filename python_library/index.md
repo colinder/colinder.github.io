@@ -5,6 +5,25 @@
 
 # Python Library
 
+- ### **raise** **예외('에러메시지')**
+
+  ```python
+  # python에서는 의도적으로 오류를 일으킬 수 있는데
+  # 이를 해주는 것이 raise 메서드.
+  
+  try:
+      x = 2
+      if x % 3 != 0:                               
+          raise Exception('3의 배수가 아닙니다.')  
+      print("입력된 값", x)
+  except Exception as e:                      
+      print('예외가 발생했습니다.', e)
+      
+  >>> 예외가 발생했습니다. 3의 배수가 아닙니다.
+  ```
+  
+  
+  
 - ### filter() VS find()
 
   ```python
