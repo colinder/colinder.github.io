@@ -1,4 +1,4 @@
-# SW Expert Academy_D4 1258, 1249
+# SW Expert Academy_D4 1258, 1249, 1238
 
 
 ​	
@@ -73,6 +73,41 @@ for T in range(int(input())):
     
 # DFS로 구현해보려 했지만, 특정 위치에 왔을 때 종료를 
 # 구현하는데 어려움이 있어, BFS로 바꾸어 구현.
+```
+
+​	
+
+### D4_1238_Contact
+
+```python
+from collections import deque
+
+for T in range(10):
+    N, S = map(int, input().split())
+    node = list(map(int, input().split()))
+
+    arr = [[] for _ in range(N)]
+    for i in range(0, N, 2):
+        arr[node[i]].append(node[i+1])
+        
+    visited = [0] * (N+1)
+    
+    visited[S] = 1
+    q = deque([S])
+
+    while q:
+        v = q.popleft()
+        step = visited[v]
+        for i in arr[v]:
+            if visited[i] == 0:
+                q.append(i)
+                visited[i] = step + 1
+    
+    for j in range(N+1):
+        if visited[j] == step:
+            result = j
+    
+    print(f'#{T+1} {result}')
 ```
 
 ​	
