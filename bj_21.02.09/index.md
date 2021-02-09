@@ -37,22 +37,22 @@ DFS(0)
 ```python
 import sys
 
-def DFS(i):
-    if i == M:
+def DFS(count):
+    if count == M:
         print(*arr)
         return
 
-    for j in range(N):
-        if visited[j] == True:
+    for i in range(N):
+        if visited[i] == True:
             continue
 
-        visited[j] = True
-        arr.append(num_list[j])
-        DFS(i+1)
+        visited[i] = True
+        arr.append(num_list[i])
+        DFS(count+1)
         arr.pop()
 
-        for x in range(j+1, N):
-            visited[x] = False
+        for j in range(i+1, N):
+            visited[j] = False
 
 N, M = map(int, sys.stdin.readline().split())
 
