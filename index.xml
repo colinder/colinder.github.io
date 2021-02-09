@@ -6,12 +6,13 @@
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 09 Feb 2021 17:59:18 &#43;0900</lastBuildDate>
             <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title>BEAKJOON 15649</title>
+    <title>BEAKJOON 15649, 15650</title>
     <link>https://colinder.github.io/bj_21.02.09/</link>
     <pubDate>Tue, 09 Feb 2021 17:59:18 &#43;0900</pubDate>
     <author>Author</author>
     <guid>https://colinder.github.io/bj_21.02.09/</guid>
-    <description><![CDATA[15649_N과 M(1) 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74  N, M = map(int, input().]]></description>
+    <description><![CDATA[​
+15649_N과 M (1) 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22  N, M = map(int, input().split()) def DFS(count): if count == M: print(*arr) return for i in range(N): if visited[i] == True: continue visited[i] = True arr.append(num_list[i]) DFS(count+1) arr.pop() visited[i] = False num_list = [i + 1 for i in range(N)] visited = [False] * N arr = [] DFS(0)   ​]]></description>
 </item><item>
     <title>SW Expert Academy_D4 1258, 1249, 1238</title>
     <link>https://colinder.github.io/sw_21.02.02/</link>
