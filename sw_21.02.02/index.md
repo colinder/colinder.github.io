@@ -1,4 +1,4 @@
-# SW Expert Academy_D4 1258, 1249, 1238
+# SW Expert Academy_D4 1258, 1249, 1238, 4261
 
 
 ​	
@@ -108,6 +108,38 @@ for T in range(10):
             result = j
     
     print(f'#{T+1} {result}')
+```
+
+​		
+
+### D4_4261_빠른 휴대전화 키패드
+
+```python
+anycall = {'2':"abc", '3': "def", '4':"ghi", '5':"jkl", '6':"mno", '7':"pqrs", '8':"tuv", '9':"wxyz"}
+
+for T in range(int(input())):
+    S, N = map(int, input().split())
+    words = list(input().split())
+
+    result = 0
+    for x in range(len(words)):
+        count = 0
+        for i, j in enumerate(str(S)):
+            a = words[x][i]
+            b = anycall[j]
+            if words[x][i] in anycall[j]:
+                count += 1
+            else:
+                break
+        if count == len(str(S)):
+            result += 1
+        else:
+            count = 0
+
+    print(f'#{T+1} {result}') 
+
+            
+# 비교적 쉬운 문제.
 ```
 
 ​	
