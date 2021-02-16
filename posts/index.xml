@@ -3,7 +3,15 @@
         <title>All Posts - </title>
         <link>https://colinder.github.io/posts/</link>
         <description>All Posts | </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 09 Feb 2021 17:59:18 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 16 Feb 2021 23:33:17 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>SW Expert Academy_D4 3143</title>
+    <link>https://colinder.github.io/sw_21.02.16/</link>
+    <pubDate>Tue, 16 Feb 2021 23:33:17 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/sw_21.02.16/</guid>
+    <description><![CDATA[​
+D4_3143_가장 빠른 문자열 타이핑 1 2 3 4 5 6 7  for T in range(int(input())): A, B = input().split() result = len(A) - (A.count(B)*(len(B)-1)) print(f&#39;#{T+1} {result}&#39;) # 왜 D4 인가.   ​]]></description>
+</item><item>
     <title>BEAKJOON 15649, 15650</title>
     <link>https://colinder.github.io/bj_21.02.09/</link>
     <pubDate>Tue, 09 Feb 2021 17:59:18 &#43;0900</pubDate>
@@ -77,13 +85,5 @@ Python Library   raise 예외(&lsquo;에러메시지&rsquo;) 1 2 3 4 5 6 7 8 9 1
     <guid>https://colinder.github.io/sw_21.01.21/</guid>
     <description><![CDATA[​
 D4_1226_미로1 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42  dx = [0,1, 0, -1] dy = [1,0, -1, 0 ] def IsSafe(x, y): if 0&lt;= x &lt; 16 and 0 &lt;= y &lt; 16: return True def DFS(x, y): global result visited[x][y] = 1 if arr[x][y] == 3: result = 1 for i in range(4): nx = x + dx[i] ny = y + dy[i] if IsSafe(nx, ny) and visited[nx][ny] == 0 and arr[nx][ny] !]]></description>
-</item><item>
-    <title>SW Expert Academy_D4 1218, 1219, 1222, 1223</title>
-    <link>https://colinder.github.io/sw_21.01.20/</link>
-    <pubDate>Wed, 20 Jan 2021 21:50:49 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/sw_21.01.20/</guid>
-    <description><![CDATA[​
-D4_1218_괄호 짝짓기 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24  def Pair_bracket(): for i in range(L): if q[i] in check: ni = i - 1 while True: if q[ni] == 0: ni -= 1 else: break a = q[ni] b = check[q[i]] if a == b: q[i] = 0 q[ni] = 0 else: return 0 return 1 check = {&#34;)&#34; :&#34;(&#34;, &#34;]&#34;:&#34;[&#34;, &#34;}&#34;:&#34;{&#34;, &#34;&gt;&#34;:&#34;&lt;&#34;} for T in range(10): L = int(input()) q = list(input()) print(f&#39;#{T+1} {Pair_bracket()}&#39;)   ​]]></description>
 </item></channel>
 </rss>

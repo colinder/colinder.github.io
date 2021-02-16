@@ -3,7 +3,15 @@
         <title>SW Expert Academy - Category - </title>
         <link>https://colinder.github.io/categories/sw-expert-academy/</link>
         <description>SW Expert Academy - Category - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 02 Feb 2021 22:38:05 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/sw-expert-academy/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 16 Feb 2021 23:33:17 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/sw-expert-academy/" rel="self" type="application/rss+xml" /><item>
+    <title>SW Expert Academy_D4 3143</title>
+    <link>https://colinder.github.io/sw_21.02.16/</link>
+    <pubDate>Tue, 16 Feb 2021 23:33:17 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/sw_21.02.16/</guid>
+    <description><![CDATA[​
+D4_3143_가장 빠른 문자열 타이핑 1 2 3 4 5 6 7  for T in range(int(input())): A, B = input().split() result = len(A) - (A.count(B)*(len(B)-1)) print(f&#39;#{T+1} {result}&#39;) # 왜 D4 인가.   ​]]></description>
+</item><item>
     <title>SW Expert Academy_D4 1258, 1249, 1238, 4261</title>
     <link>https://colinder.github.io/sw_21.02.02/</link>
     <pubDate>Tue, 02 Feb 2021 22:38:05 &#43;0900</pubDate>
@@ -78,13 +86,5 @@ D3_3307_최장 증가 부분 수열(LIS) 1 2 3 4 5 6 7 8 9 10 11 12 13 14  for T
     <description><![CDATA[​
 D3_3131_100만 이하의 모든 소수 1 2 3 4 5 6 7 8 9 10 11 12  a = [0, 0] + [1] * 1000000 for i in range(2, 1000000): if a[i] == 1: for j in range(2*i, 1000001, i): a[j] = 0 for i in range(2, 1000000): if a[i] == 1: print(i, end=&#34; &#34;) # 에라토스테네스의 체   ​
 D3_3233_정삼각형 분할 놀이 1 2 3 4 5 6 7 8 9 10  for T in range(int(input())): A, B = map(int, input().]]></description>
-</item><item>
-    <title>SW Expert Academy_D3 4698, 1493, 10570, 3032</title>
-    <link>https://colinder.github.io/sw_20.09.09/</link>
-    <pubDate>Tue, 08 Sep 2020 23:13:31 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/sw_20.09.09/</guid>
-    <description><![CDATA[​
-D3_4698_테네스의 특별한 소수 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19  for T in range(int(input())): D, A, B = map(int, input().split()) D = str(D) arr = [0, 0] + [1] * (B - 1) # 에라토스테네스의 체를 활용할껀데 어떤 수까지 검증하면 될까? # 검증해보니 모든 수는 자신의 int(root)까지만 확인하면 배수값인지 확인이 가능했다. rootB = int(B**0.5)	#👈 이 아이디어를 얻기까지 오랜시간이 걸렸다.]]></description>
 </item></channel>
 </rss>
