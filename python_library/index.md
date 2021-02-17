@@ -50,7 +50,7 @@
   
   # ex)
   a = 'hello'
-  a.find('o'))  # find 함수
+  a.find('o')  # find 함수
   >>> 4
   ```
 
@@ -62,16 +62,16 @@
   ## 공통점
   # 두 함수 모두 찾으려 하는 값의 `index`를 반환 해준다.
   # ex)
-  >>> 'oxoxoxoxox'.find('x'))  # find 함수
+  >>> 'oxoxoxoxox'.find('x')  # find 함수
   1 
-  >>> 'oxoxoxoxox'.index('x'))  # index 함수
+  >>> 'oxoxoxoxox'.index('x')  # index 함수
   1
   
   # 문자 'o'가 첫번째 위치한 자리를 출력
   >>> a = 'hello'
-  >>> a.find('o'))  # find 함수
+  >>> a.find('o')  # find 함수
   4
-  >>> a.index('o'))  # index 함수
+  >>> a.index('o')  # index 함수
   4
   
   # 또 (value, start, end) 형태로 문자를 찾는 시작점과 종료점을 지정할 수 있다.
