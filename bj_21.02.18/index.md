@@ -1,4 +1,4 @@
-# BEAKJOON 1991, 11725
+# BEAKJOON 1991, 11725, 1967
 
 
 ​	
@@ -90,6 +90,50 @@ for j in range(2, len(result)):
 # 부모 node가 된다.
 
 # 채점 속도가 느려서 런타임 오류 걸릴까봐 조마조마했다.
+```
+
+​	
+
+### 1967_트리의 지름
+
+```python
+import sys
+from collections import deque
+
+def BFS(value, step):
+    q = deque()
+    q.append(value)
+    visited = [-1 for _ in range(N+1)]
+    visited[value] = 0
+    while q:
+        x = q.popleft()
+        for c, w in tree[x]:
+            if visited[c] == -1:
+                visited[c] = visited[x] + w
+                q.append(c)
+    if step == 1:
+        return visited.index(max(visited))
+    else:
+        return max(visited)
+
+N = int(sys.stdin.readline().rstrip())
+    
+tree = [[] for _ in range(N+1)]
+
+for i in range(N-1):
+    P, C, V = map(int, input().split())
+    tree[P].append([C, V])
+    tree[C].append([P, V])
+
+print(BFS(BFS(1, 1), 2))
+
+
+# DFS로 지저분하게 구현했으나 말 그대로
+# 너무 지저분해서 검색의 도움을 받음.
+
+# root인 1에서 가장 멀리 있는 노드를 고르고
+# 그 노드에서 가장 멀리 있는 노드를 고르는 
+# 알고리즘으로 구현. 
 ```
 
 ​	
