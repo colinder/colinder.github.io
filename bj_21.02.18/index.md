@@ -1,4 +1,4 @@
-# BEAKJOON 1991, 11725, 1967
+# BEAKJOON 1991, 11725, 1967, 1167
 
 
 ​	
@@ -134,6 +134,45 @@ print(BFS(BFS(1, 1), 2))
 # root인 1에서 가장 멀리 있는 노드를 고르고
 # 그 노드에서 가장 멀리 있는 노드를 고르는 
 # 알고리즘으로 구현. 
+```
+
+​	
+
+### 1167_트리의 지름
+
+```python
+import sys
+from collections import deque
+
+sys.setrecursionlimit(10**9)
+
+def BFS(i, mode):
+    q = deque()
+    q.append(i)
+    visited = [-1 for _ in range(N+1)]
+    visited[i] = 0
+    while q:
+        x = q.popleft()
+        for C, W in tree[x]:
+            if visited[C] == -1:
+                visited[C] = visited[x] + W
+                q.append(C)
+    if mode == 1:
+        return visited.index(max(visited))
+    else:
+        return max(visited)
+
+
+N = int(sys.stdin.readline().rstrip())
+
+tree = [[] for _ in range(N+1)]
+
+for _ in range(N):
+    info = list(map(int, sys.stdin.readline().split()))
+    for i in range(1, len(info)-1, 2):
+        tree[info[0]].append([info[i], info[i+1]])
+    
+print(BFS(BFS(i, 1), 2))
 ```
 
 ​	
