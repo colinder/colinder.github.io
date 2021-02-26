@@ -1,4 +1,4 @@
-# BEAKJOON 5052
+# BEAKJOON 5052, 9372
 
 
 ​	
@@ -31,3 +31,40 @@ for T in range(int(sys.stdin.readline().rstrip())):
 ```
 
 ​	
+
+### 9372_상근이의 여행
+
+```python
+import sys
+from collections import deque
+
+def BFS(i):
+    q = deque([i])
+    visited = [True] + [False] * N
+    flight = -1
+    while q:
+        x = q.popleft()
+        if visited[x] == False:
+            visited[x] = True
+            flight += 1
+            for j in range(len(tree[x])):
+                if visited[tree[x][j]] == False:
+                    q.append(tree[x][j])
+    return flight
+            
+for T in range(int(sys.stdin.readline().rstrip())):
+    N, M = map(int, sys.stdin.readline().split())
+
+    tree = [[] for _ in range((N+1))]
+    for _ in range(M):
+        a, b = map(int, sys.stdin.readline().split())
+        tree[a].append(b)
+        tree[b].append(a)
+
+
+    print(BFS(1))
+```
+
+​	
+
+
