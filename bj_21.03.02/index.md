@@ -1,4 +1,4 @@
-# BEAKJOON 2630
+# BEAKJOON 2630, 1992
 
 
 ​	
@@ -40,6 +40,43 @@ print(B)
 
 # 분할한 구역에도 동일한 규칙을 적용할 수 있는 
 # 알고리즘을 만드는 것이 기본 같다.
+```
+
+​	
+
+### 1992_쿼드트리
+
+```python
+import sys
+
+def DFS(x, y, N):
+    global result
+
+    check = arr[x][y]
+    for i in range(x, x+N):
+        for j in range(y, y+N):
+            if check != arr[i][j]:
+                result += "("
+                DFS(x, y, N//2)
+                DFS(x, N//2+y, N//2)
+                DFS(N//2+x, y, N//2)
+                DFS(N//2+x, N//2+y, N//2)   
+                result += ")"
+                return
+    if check == 0:
+        result += "0"
+    else:
+        result += "1"
+
+N = int(sys.stdin.readline().rstrip())
+
+arr  = [list(map(int, sys.stdin.readline().rstrip())) for _ in range(N)]
+
+result = ""
+
+DFS(0, 0, N)
+
+print(result)
 ```
 
 ​	
