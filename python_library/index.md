@@ -5,6 +5,26 @@
 
 # Python Library 😀
 
+- ### Idea
+
+  ```python
+  # 모두 '거짓'이 들어있는 리스트는 '거짓'으로 볼 수 있지 않을까?
+  # 라고 생각해봤다. 
+  
+  a = [False, False, False]
+  
+  if a == False:
+      print("거짓")
+  else:
+      print("오류")
+      
+  # >>> 오류
+  
+  # 안된다. 생각을 말아라..ㅎㅎ
+  ```
+
+  ​	
+
 - ### **raise** **예외('에러메시지')**
 
   ```python
