@@ -3,7 +3,21 @@
         <title>All Posts - </title>
         <link>https://colinder.github.io/posts/</link>
         <description>All Posts | </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 08 Mar 2021 22:39:31 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 21 Mar 2021 23:06:59 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>01_SQL_basic</title>
+    <link>https://colinder.github.io/01_sql_basic/</link>
+    <pubDate>Sun, 21 Mar 2021 23:06:59 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/01_sql_basic/</guid>
+    <description><![CDATA[​
+SQLD를 준비하면서 공부한 내용을 정리.
+​
+# SQL ​
+제 1장 데이터모델링의 이해   모델링의 이해
+  모델링의 정의
+ 복잡한 &ldquo;현실세계&quot;를 단순화(추상화)시켜 표현 사물 또는 사건에 관한 양상(Aspect)이나 관점(Perspective)을 명확하게 하는 것    특징 3가지
+ 추상화 - 현실세계를 일정한 형식에 맞추어 표현하는 것 단순화 - 복잡한 현실세계를 약속된 규약에 의해 쉽게 이해할 수 있게 표현하는 것 명확화 - 누구나 이해할 수 있도록 명확하게 표기하는 것    모델링의 3가지 관점]]></description>
+</item><item>
     <title>Python_Library</title>
     <link>https://colinder.github.io/python_library/</link>
     <pubDate>Mon, 08 Mar 2021 22:39:31 &#43;0900</pubDate>
@@ -76,13 +90,5 @@ D4_1258_행렬찾기 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
     <guid>https://colinder.github.io/bj_21.01.28/</guid>
     <description><![CDATA[​
 18258_큐 2 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42  import sys from collections import deque # import time N = int(sys.stdin.readline().rstrip()) # start = time.time() # 시작 시간 저장 q = deque() for _ in range(N): command = sys.]]></description>
-</item><item>
-    <title>BEAKJOON 4949, 10828, 1874, 17298</title>
-    <link>https://colinder.github.io/bj_21.01.27/</link>
-    <pubDate>Wed, 27 Jan 2021 22:41:03 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/bj_21.01.27/</guid>
-    <description><![CDATA[​
-4949_균형잡힌 세상 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30  import sys while True: text = sys.stdin.readline().rstrip() if text == &#34;.&#34;: break stack =[] result = &#34;yes&#34; for i in text: if i.isalpha() or i == &#34; &#34;: continue elif i == &#34;(&#34; or i == &#34;[&#34;: stack.]]></description>
 </item></channel>
 </rss>
