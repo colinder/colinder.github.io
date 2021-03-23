@@ -4,15 +4,17 @@
         <link>https://colinder.github.io/categories/sql/</link>
         <description>SQL - Category - </description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 21 Mar 2021 23:06:59 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/sql/" rel="self" type="application/rss+xml" /><item>
-    <title>01_SQL_basic</title>
-    <link>https://colinder.github.io/01_sql_basic/</link>
+    <title>01_SQLD</title>
+    <link>https://colinder.github.io/01_sqld_basic/</link>
     <pubDate>Sun, 21 Mar 2021 23:06:59 &#43;0900</pubDate>
     <author>Author</author>
-    <guid>https://colinder.github.io/01_sql_basic/</guid>
+    <guid>https://colinder.github.io/01_sqld_basic/</guid>
     <description><![CDATA[​
 SQLD를 준비하면서 공부한 내용을 정리.
+제1 장 데이터 모델링의 이해
+제2 장 엔터티
 ​
-# SQL  제1 장 데이터 모델링의 이해   모델링의 이해
+# SQL 제1 장 데이터 모델링의 이해   모델링의 이해
   모델링의 정의
  복잡한 &ldquo;현실세계&quot;를 단순화(추상화)시켜 표현 사물 또는 사건에 관한 양상(Aspect)이나 관점(Perspective)을 명확하게 하는 것    특징 3가지
  추상화 - 현실세계를 일정한 형식에 맞추어 표현하는 것 단순화 - 복잡한 현실세계를 약속된 규약에 의해 쉽게 이해할 수 있게 표현하는 것 명확화 - 누구나 이해할 수 있도록 명확하게 표기하는 것    모델링의 3가지 관점]]></description>
