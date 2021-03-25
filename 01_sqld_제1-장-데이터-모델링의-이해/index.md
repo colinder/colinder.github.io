@@ -1,4 +1,4 @@
-# 01_SQLD_제1 장 데이터 모델링의 이해
+# 01_SQLD_제1 절 데이터 모델링의 이해
 
 
 ​	
@@ -157,6 +157,6 @@ SQLD를 준비하면서 공부한 내용을 정리.
 
      ​							
 
-## 제2 절 엔터티
+<p style='text-align:right; font-style:italic; color:grey'>*계속</p>
 
-​	
+

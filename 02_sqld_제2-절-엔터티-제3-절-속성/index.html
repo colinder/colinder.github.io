@@ -5,36 +5,50 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>SW Expert Academy_D3 11445, 11387 - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="SW Expert Academy_D3 11445, 11387" />
+        <title>02_SQLD_제2 절 엔터티 &amp; 제3 절 속성 - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="02_SQLD_제2 절 엔터티 &amp; 제3 절 속성" />
 <meta property="og:description" content="​
-D3_11445_무한 사전 1 2 3 4 5 6 7 8 9 10 11 12  for T in range(int(input())): P = input().rstrip() Q = input().rstrip() if P &#43; &#34;a&#34; != Q: result = &#34;Y&#34; else: result = &#34;N&#34; print(f&#39;#{T&#43;1} {result}&#39;) # 왜 D3 인가.   ​
-D3_11387_몬스터 사냥 1 2 3 4 5 6 7 8  for T in range(int(input())): D, L, N = map(int, input().split()) result = 0 for i in range(N): result &#43;= D * (1 &#43; L*i/100) print(f&#39;#{T&#43;1} {int(result)}&#39;)   ​" />
+# SQL  제1 장 데이터 모델링의 이해  제2 절 엔터티(Entity)   엔터티의 개념
+  실체, 객체 / 실무적으론는 앤터티라고 부른다. 즉 업무에 필요하고 유용한 정보를 저장하고 관리하기 위한 집합적인 것
+​
+    엔터티와 인스턴스에 대한 내용과 표기법
+​	
+  엔터티의 특징
+  반드시 해당 업무에서 필요하고 관리하고자 하는 정보여야 한다.
+  유일한 식별자에 의해 식별이 가능해야 한다.
+  영속적으로 존재하는 인스턴스의 집합이어야 한다." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://colinder.github.io/sw_21.03.24/" />
+<meta property="og:url" content="https://colinder.github.io/02_sqld_%EC%A0%9C2-%EC%A0%88-%EC%97%94%ED%84%B0%ED%8B%B0-%EC%A0%9C3-%EC%A0%88-%EC%86%8D%EC%84%B1/" />
 <meta property="og:image" content="https://colinder.github.io/logo.png"/>
-<meta property="article:published_time" content="2021-03-24T18:34:58+09:00" />
-<meta property="article:modified_time" content="2021-03-24T18:34:58+09:00" />
+<meta property="article:published_time" content="2021-03-25T19:25:43+09:00" />
+<meta property="article:modified_time" content="2021-03-25T19:25:43+09:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
 
-<meta name="twitter:title" content="SW Expert Academy_D3 11445, 11387"/>
+<meta name="twitter:title" content="02_SQLD_제2 절 엔터티 &amp; 제3 절 속성"/>
 <meta name="twitter:description" content="​
-D3_11445_무한 사전 1 2 3 4 5 6 7 8 9 10 11 12  for T in range(int(input())): P = input().rstrip() Q = input().rstrip() if P &#43; &#34;a&#34; != Q: result = &#34;Y&#34; else: result = &#34;N&#34; print(f&#39;#{T&#43;1} {result}&#39;) # 왜 D3 인가.   ​
-D3_11387_몬스터 사냥 1 2 3 4 5 6 7 8  for T in range(int(input())): D, L, N = map(int, input().split()) result = 0 for i in range(N): result &#43;= D * (1 &#43; L*i/100) print(f&#39;#{T&#43;1} {int(result)}&#39;)   ​"/>
+# SQL  제1 장 데이터 모델링의 이해  제2 절 엔터티(Entity)   엔터티의 개념
+  실체, 객체 / 실무적으론는 앤터티라고 부른다. 즉 업무에 필요하고 유용한 정보를 저장하고 관리하기 위한 집합적인 것
+​
+    엔터티와 인스턴스에 대한 내용과 표기법
+​	
+  엔터티의 특징
+  반드시 해당 업무에서 필요하고 관리하고자 하는 정보여야 한다.
+  유일한 식별자에 의해 식별이 가능해야 한다.
+  영속적으로 존재하는 인스턴스의 집합이어야 한다."/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/sw_21.03.24/" /><link rel="prev" href="https://colinder.github.io/01_sqld_%EC%A0%9C1-%EC%9E%A5-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%AA%A8%EB%8D%B8%EB%A7%81%EC%9D%98-%EC%9D%B4%ED%95%B4/" /><link rel="next" href="https://colinder.github.io/02_sqld_%EC%A0%9C2-%EC%A0%88-%EC%97%94%ED%84%B0%ED%8B%B0-%EC%A0%9C3-%EC%A0%88-%EC%86%8D%EC%84%B1/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/02_sqld_%EC%A0%9C2-%EC%A0%88-%EC%97%94%ED%84%B0%ED%8B%B0-%EC%A0%9C3-%EC%A0%88-%EC%86%8D%EC%84%B1/" /><link rel="prev" href="https://colinder.github.io/sw_21.03.24/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "SW Expert Academy_D3 11445, 11387",
+        "headline": "02_SQLD_제2 절 엔터티 \u0026 제3 절 속성",
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/colinder.github.io\/sw_21.03.24\/"
-        },"genre": "posts","keywords": "algorithm","wordcount":  82 ,
-        "url": "https:\/\/colinder.github.io\/sw_21.03.24\/","datePublished": "2021-03-24T18:34:58+09:00","dateModified": "2021-03-24T18:34:58+09:00","publisher": {
+            "@id": "https:\/\/colinder.github.io\/02_sqld_%EC%A0%9C2-%EC%A0%88-%EC%97%94%ED%84%B0%ED%8B%B0-%EC%A0%9C3-%EC%A0%88-%EC%86%8D%EC%84%B1\/"
+        },"genre": "posts","keywords": "SQLD","wordcount":  136 ,
+        "url": "https:\/\/colinder.github.io\/02_sqld_%EC%A0%9C2-%EC%A0%88-%EC%97%94%ED%84%B0%ED%8B%B0-%EC%A0%9C3-%EC%A0%88-%EC%86%8D%EC%84%B1\/","datePublished": "2021-03-25T19:25:43+09:00","dateModified": "2021-03-25T19:25:43+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -108,9 +122,9 @@ D3_11387_몬스터 사냥 1 2 3 4 5 6 7 8  for T in range(int(input())): D, L, N
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">SW Expert Academy_D3 11445, 11387</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/sw-expert-academy/"><i class="far fa-folder fa-fw"></i>SW Expert Academy</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-03-24">2021-03-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;82 words&nbsp;
+        </div><article class="page single"><h1 class="single-title animated flipInX">02_SQLD_제2 절 엔터티 &amp; 제3 절 속성</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/sqld/"><i class="far fa-folder fa-fw"></i>SQLD</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-03-25">2021-03-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;136 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;One minute&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -119,82 +133,101 @@ D3_11387_몬스터 사냥 1 2 3 4 5 6 7 8  for T in range(int(input())): D, L, N
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li>
-      <ul>
-        <li><a href="#d3_11445_무한-사전">D3_11445_무한 사전</a></li>
-        <li><a href="#d3_11387_몬스터-사냥">D3_11387_몬스터 사냥</a></li>
-      </ul>
-    </li>
+    <li><a href="#제2-절-엔터티entity">제2 절 엔터티(Entity)</a></li>
+    <li><a href="#제3-절-속성attribute">제3 절 속성(Attribute)</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><p>​</p>
-<h3 id="d3_11445_무한-사전">D3_11445_무한 사전</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">for</span> <span class="n">T</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())):</span> 
-    <span class="n">P</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
-    <span class="n">Q</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
-
-    <span class="k">if</span> <span class="n">P</span> <span class="o">+</span> <span class="s2">&#34;a&#34;</span> <span class="o">!=</span> <span class="n">Q</span><span class="p">:</span>
-        <span class="n">result</span> <span class="o">=</span> <span class="s2">&#34;Y&#34;</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">result</span> <span class="o">=</span> <span class="s2">&#34;N&#34;</span>
-
-    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;#{T+1} {result}&#39;</span><span class="p">)</span>
-    
-<span class="c1"># 왜 D3 인가.</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>​</p>
-<h3 id="d3_11387_몬스터-사냥">D3_11387_몬스터 사냥</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">for</span> <span class="n">T</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())):</span>
-    <span class="n">D</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">N</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
-    
-    <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-        <span class="n">result</span> <span class="o">+=</span> <span class="n">D</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">L</span><span class="o">*</span><span class="n">i</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span>
-    
-    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;#{T+1} {int(result)}&#39;</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>​</p>
+<h1 id="-sql"># SQL</h1>
+<hr>
+<h1 id="제1-장-데이터-모델링의-이해">제1 장 데이터 모델링의 이해</h1>
+<hr>
+<h2 id="제2-절-엔터티entity">제2 절 엔터티(Entity)</h2>
+<ol>
+<li>
+<p>엔터티의 개념</p>
+<ul>
+<li>
+<p>실체, 객체 / 실무적으론는 앤터티라고 부른다. 즉 업무에 필요하고 유용한 정보를 저장하고 관리하기 위한 집합적인 것</p>
+<p>​</p>
+</li>
+</ul>
+</li>
+<li>
+<p>엔터티와 인스턴스에 대한 내용과 표기법</p>
+<p>​	<a class="lightgallery" href="/images/SQLD_01.jpg" title="/images/SQLD_01.jpg" data-thumbnail="/images/SQLD_01.jpg">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/SQLD_01.jpg"
+            data-srcset="/images/SQLD_01.jpg, /images/SQLD_01.jpg 1.5x, /images/SQLD_01.jpg 2x"
+            data-sizes="auto"
+            alt="/images/SQLD_01.jpg" width="1000px" />
+    </a></p>
+</li>
+<li>
+<p>엔터티의 특징</p>
+<ul>
+<li>
+<p><strong>반드시 해당 업무에서 필요하고 관리하고자 하는 정보</strong>여야 한다.</p>
+</li>
+<li>
+<p><strong>유일한 식별자</strong>에 의해 식별이 가능해야 한다.</p>
+</li>
+<li>
+<p>영속적으로 존재하는 인스턴스의 집합이어야 한다. <strong>(반드시 &lsquo;두 개 이상&rsquo;)</strong></p>
+</li>
+<li>
+<p>엔터티는 업무에 이용되어야 한다.</p>
+</li>
+<li>
+<p>엔터티는 <strong>반드시 &lsquo;두 개 이상&rsquo;의 속성</strong>을 갖는다.</p>
+</li>
+<li>
+<p>엔터티는 <strong>다른 엔터티와 최소 한 개 이상의 관계가 있어야</strong> 한다.</p>
+<p>​</p>
+</li>
+</ul>
+</li>
+<li>
+<p>엔터티의 분류</p>
+<ol>
+<li>
+<p>우뮤형에 따른 분류 - 유형, 개념, 사건엔터티</p>
+</li>
+<li>
+<p>발생시점에 따른 분류 - 기본(키), 중심, 행위엔터</p>
+</li>
+<li>
+<p>스스로 생성할 수 있는지에 따라 - 독립, 의존 엔터티</p>
+<p>​</p>
+</li>
+</ol>
+</li>
+<li>
+<p>엔터티의 명명</p>
+<ul>
+<li>현업 업무에서 사용하는 용어를 사용</li>
+<li>약어를 가능하면 사용하지 않는다.</li>
+<li><strong>단수 명사</strong>를 사용</li>
+<li>모든 엔티티명은 유일해야 함</li>
+<li>엔티티 생성 의미대로 이름을 부여</li>
+</ul>
+</li>
+</ol>
+<p>​</p>
+<h2 id="제3-절-속성attribute">제3 절 속성(Attribute)</h2>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2021-03-24</span>
+                <span>Updated on 2021-03-25</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/sw_21.03.24/index.md" target="_blank">Read Markdown</a>
+                            <a class="link-to-markdown" href="/02_sqld_%EC%A0%9C2-%EC%A0%88-%EC%97%94%ED%84%B0%ED%8B%B0-%EC%A0%9C3-%EC%A0%88-%EC%86%8D%EC%84%B1/index.md" target="_blank">Read Markdown</a>
                         </span></div>
             <div class="post-info-share">
                 <span></span>
@@ -203,14 +236,13 @@ D3_11387_몬스터 사냥 1 2 3 4 5 6 7 8  for T in range(int(input())): D, L, N
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/algorithm/">algorithm</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/sqld/">SQLD</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/01_sqld_%EC%A0%9C1-%EC%9E%A5-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%AA%A8%EB%8D%B8%EB%A7%81%EC%9D%98-%EC%9D%B4%ED%95%B4/" class="prev" rel="prev" title="01_SQLD_제1 절 데이터 모델링의 이해"><i class="fas fa-angle-left fa-fw"></i>01_SQLD_제1 절 데이터 모델링의 이해</a>
-            <a href="/02_sqld_%EC%A0%9C2-%EC%A0%88-%EC%97%94%ED%84%B0%ED%8B%B0-%EC%A0%9C3-%EC%A0%88-%EC%86%8D%EC%84%B1/" class="next" rel="next" title="02_SQLD_제2 절 엔터티 &amp; 제3 절 속성">02_SQLD_제2 절 엔터티 &amp; 제3 절 속성<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/sw_21.03.24/" class="prev" rel="prev" title="SW Expert Academy_D3 11445, 11387"><i class="fas fa-angle-left fa-fw"></i>SW Expert Academy_D3 11445, 11387</a></div>
 </div>
 <div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
