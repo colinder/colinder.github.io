@@ -38,7 +38,7 @@
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/02_sqld_%EC%A0%9C2-%EC%A0%88-%EC%97%94%ED%84%B0%ED%8B%B0-%EC%A0%9C3-%EC%A0%88-%EC%86%8D%EC%84%B1/" /><link rel="prev" href="https://colinder.github.io/sw_21.03.24/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/02_sqld_%EC%A0%9C2-%EC%A0%88-%EC%97%94%ED%84%B0%ED%8B%B0-%EC%A0%9C3-%EC%A0%88-%EC%86%8D%EC%84%B1/" /><link rel="prev" href="https://colinder.github.io/sw_21.03.24/" /><link rel="next" href="https://colinder.github.io/git_lfslarge-file-storage/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -47,7 +47,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/02_sqld_%EC%A0%9C2-%EC%A0%88-%EC%97%94%ED%84%B0%ED%8B%B0-%EC%A0%9C3-%EC%A0%88-%EC%86%8D%EC%84%B1\/"
-        },"genre": "posts","keywords": "SQLD","wordcount":  136 ,
+        },"genre": "posts","keywords": "SQLD","wordcount":  434 ,
         "url": "https:\/\/colinder.github.io\/02_sqld_%EC%A0%9C2-%EC%A0%88-%EC%97%94%ED%84%B0%ED%8B%B0-%EC%A0%9C3-%EC%A0%88-%EC%86%8D%EC%84%B1\/","datePublished": "2021-03-25T19:25:43+09:00","dateModified": "2021-03-25T19:25:43+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -124,8 +124,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">02_SQLD_제2 절 엔터티 &amp; 제3 절 속성</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/sqld/"><i class="far fa-folder fa-fw"></i>SQLD</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-03-25">2021-03-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;136 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;One minute&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-03-25">2021-03-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;434 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
@@ -216,7 +216,148 @@
 </li>
 </ol>
 <p>​</p>
+<hr>
 <h2 id="제3-절-속성attribute">제3 절 속성(Attribute)</h2>
+<ol>
+<li>
+<p>속성의 개념</p>
+<ul>
+<li>
+<p><strong>업무에서 필요로 하는 인스턴스</strong>로 <strong>관리하고자 하는 의미상</strong> 더 이상 <strong>분리되지 않는 최소의 데이터</strong></p>
+<p>즉, 속성이란 의미상 더 이상 분리되지 않으며, 엔터티를 설명하는 요소이며, 인스턴스의 구성요소이다.</p>
+<figure><a class="lightgallery" href="/images/SQLD_01.jpg" title="/images/SQLD_01.jpg" data-thumbnail="/images/SQLD_01.jpg" data-sub-html="<h2>다시 한 번 보자</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/SQLD_01.jpg"
+            data-srcset="/images/SQLD_01.jpg, /images/SQLD_01.jpg 1.5x, /images/SQLD_01.jpg 2x"
+            data-sizes="auto"
+            alt="/images/SQLD_01.jpg" width="900px" />
+    </a><figcaption class="image-caption">다시 한 번 보자</figcaption>
+    </figure>
+</li>
+</ul>
+</li>
+<li>
+<p>엔터티, 인스턴스, 속성, 속성값</p>
+<ul>
+<li>
+<p><strong><span style="color: red">엔터티, 인스턴스, 속성, 속성값의 관계</span></strong></p>
+<ul>
+<li><strong>한 개의 엔터티</strong>는 <strong><span style="color:red">두 개 이상</span>의 인스턴스 집합</strong>이어야 한다.</li>
+<li><strong>한 개의 엔터티</strong>는 <strong><span style="color:red">두 개 이상</span>의 속성</strong>을 갖는다.</li>
+<li><strong>한 개의 속성</strong>은 <strong>한 개의 속성값</strong>을 갖는다.</li>
+</ul>
+</li>
+<li>
+<p>속성의 표기법</p>
+<ol>
+<li>
+<p>IE 표기법</p>
+</li>
+<li>
+<p>Barker 표기법</p>
+<p>​</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p>속성의 특징</p>
+<ol>
+<li>
+<p>반드시 해당 업무에서 필요하고 관리하고자 하는 정보여야 한다.</p>
+</li>
+<li>
+<p>정규화 이론에 근간하여 정해진 주식별자에 <strong>함수 종속성</strong>을 가져야 한다.</p>
+</li>
+<li>
+<p><strong>한 개의 속성</strong>은 <strong>한 개의 속성값</strong>을 갖는다. 만약 <strong>한 개의 속성</strong>에 <strong>여러 속성값</strong>을 갖는 다중 값일 경우 별도의 엔터티로 분리하여 관리한다.</p>
+<p>​</p>
+</li>
+</ol>
+</li>
+<li>
+<p>속성의 분류</p>
+<ul>
+<li>
+<p><strong>속성의 특성에 따른 분류</strong></p>
+<ol>
+<li>
+<p>기본속성</p>
+<ul>
+<li>업무로부터 추출한 모든 속성</li>
+</ul>
+</li>
+<li>
+<p>설계속성</p>
+<ul>
+<li>기본속성 외에 새롭게 만들거나 변형하여 정의한 속성</li>
+</ul>
+</li>
+<li>
+<p>파생속성</p>
+<ul>
+<li>타 속성에 의해 지속적으로 영향을 받아 값이 변하는 성질을 가지고 있는 속성
+<ul>
+<li><span style="font-size:.9em">파생속성은 그 속성이 가지고 있는 계산방법에 대해 반드시 어떤 엔터티에 어떤 속성에 의해 영향을 받는지 정의가 되어야 한다.</span></li>
+<li><span style="font-size:.9em">파생속성은 꼭 필요한 경우에만 정의하여 업무로직이 속성내부로 스며들지 못하도록 주의해야 한다.</span></li>
+<li><span style="font-size:.9em">파생속성을 정의한 경우라면 그 값의 정합성을 유지할 수 있도록 해야 한다.</span></li>
+<li><span style="font-size:.9em">주로 통계관련 엔터티, 배치작업 수행 관련에 사용된다.</span></li>
+</ul>
+</li>
+</ul>
+<p>​</p>
+</li>
+</ol>
+</li>
+<li>
+<p>엔터티 구성방식에 따른 분류</p>
+<ul>
+<li>
+<p>PK(Prime Key) == 엔터티를 식별할 수 있는 <strong>고유한</strong> 속성</p>
+</li>
+<li>
+<p>FK(Foreign Key) == 다른 엔터티와의 관계로, <strong>연결된</strong> 속성</p>
+</li>
+<li>
+<p>일반 속성 == 엔터티에 포함되어 있고, PK, FK가 아닌 속성</p>
+</li>
+<li>
+<p>추가로 의미를 쪼갤 수 있는지에 따라 단순형, 복합형으로 분류할 수 있다.</p>
+</li>
+<li>
+<p>한 속성에 한 개의 값 → 단일값(Single Value)</p>
+</li>
+<li>
+<p>한 속성에 여러 개의 값 → 다중값(Multi Value)</p>
+<p>​</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>도메인(Domain)</p>
+<ul>
+<li>
+<p>각 속성이 가질 수 있는 값의 범위 <span style="font-size:.9em">(일종의 테이터 타입, 크기, 제약사항등을 지정하는 것)</span></p>
+<p><span style="color:grey; font-size:.8em">ex) &lsquo;&lsquo;학점'&lsquo;이라는 &lsquo;&lsquo;도메인'&lsquo;은 0 &lt;= X &lt;= 4.5 </span></p>
+<p>​</p>
+</li>
+</ul>
+</li>
+<li>
+<p>속성의 명명(Naming)</p>
+<ol>
+<li>가급적 현업에서 사용하는 이름을 부여한다.</li>
+<li>서술식 속성명은 사용하지 않는다.</li>
+<li>약어사용은 자제한다.</li>
+<li>전체 데이터모델에서 유일성을 확보하는 것이 좋다.</li>
+</ol>
+</li>
+</ol>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -242,7 +383,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/sw_21.03.24/" class="prev" rel="prev" title="SW Expert Academy_D3 11445, 11387, 11285, 11315"><i class="fas fa-angle-left fa-fw"></i>SW Expert Academy_D3 11445, 11387, 11285, 11315</a></div>
+    <div class="post-nav"><a href="/sw_21.03.24/" class="prev" rel="prev" title="SW Expert Academy_D3 11445, 11387, 11285, 11315"><i class="fas fa-angle-left fa-fw"></i>SW Expert Academy_D3 11445, 11387, 11285, 11315</a>
+            <a href="/git_lfslarge-file-storage/" class="next" rel="next" title="Git_LFS">Git_LFS<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.

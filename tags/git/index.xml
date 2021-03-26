@@ -3,7 +3,17 @@
         <title>git - Tag - </title>
         <link>https://colinder.github.io/tags/git/</link>
         <description>git - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 11 Oct 2020 21:26:25 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/git/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 25 Mar 2021 22:28:20 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/git/" rel="self" type="application/rss+xml" /><item>
+    <title>Git_LFS</title>
+    <link>https://colinder.github.io/git_lfslarge-file-storage/</link>
+    <pubDate>Thu, 25 Mar 2021 22:28:20 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/git_lfslarge-file-storage/</guid>
+    <description><![CDATA[​
+Git LFS(Large File Storage) 사용법  Git은 개당 파일에 100MB의 용량 제한이 걸려 있다. (전체 용량 제한은 없다.) 다만, 프로젝트를 하다보면 대용량의 자료나 파일이 생기는 경우가 있다. 이때 용량 제한의 문제를 해소할 수 있는 방법이 LFS이다.
+LFS는 별도로 설치하여 사용하면 되며, 방법을 정리한다.
+  *주소: https://git-lfs.github.com/]]></description>
+</item><item>
     <title>Git_fork vs clone</title>
     <link>https://colinder.github.io/git_fork_vs_clone/</link>
     <pubDate>Sun, 11 Oct 2020 21:26:25 &#43;0900</pubDate>
