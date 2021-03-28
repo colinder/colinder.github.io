@@ -5,48 +5,48 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Git_LFS - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="Git_LFS" />
+        <title>03_SQLD_제4 절 관계 &amp; 제5 절 식별자 - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="03_SQLD_제4 절 관계 &amp; 제5 절 식별자" />
 <meta property="og:description" content="​
-Git LFS(Large File Storage) 사용법  Git은 개당 파일에 100MB의 용량 제한이 걸려 있다. (전체 용량 제한은 없다.) 다만, 프로젝트를 하다보면 대용량의 자료나 파일이 생기는 경우가 있다. 이때 용량 제한의 문제를 해소할 수 있는 방법이 LFS이다.
-LFS는 별도로 설치하여 사용하면 되며, 방법을 정리한다.
-  *주소: https://git-lfs.github.com
+# SQL  제1 장 데이터 모델링의 이해  제4 절 관계(Relationship)   관계의 개념
+  관계의 정의
+&ldquo;인스턴스 사이의 논리적인 연관성으로서 존재의 형태로서나 행위로서 서로에게 연관성이 부여된 상태&rdquo;
+  관계의 페어링
+&ldquo;관계는 **인스턴스가 개별적으로 관계를 가지는 것(페어링)**이고, 이것의 집합을 관계로 표현한다는 것&rdquo;
+&ldquo;따라서 개별 인스턴스가 각각 다른 종류의 관계를 가지고 있다면, 두 엔터티 사이에 두 개 이상의 관계가 형성될 수 도 있다.&rdquo;
 ​
-  git LFS을 다운을 받고 설치 합니다.
-​
-  git LFS를 적용할 폴더로 이동해 다음 명령어를 입력합니다.
-1  $ git lfs install    ​" />
+    관계의 분류" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://colinder.github.io/git_lfslarge-file-storage/" />
+<meta property="og:url" content="https://colinder.github.io/03_sqld_%EC%A0%9C4-%EC%A0%88-%EA%B4%80%EA%B3%84-%EC%A0%9C5-%EC%A0%88-%EC%8B%9D%EB%B3%84%EC%9E%90/" />
 <meta property="og:image" content="https://colinder.github.io/logo.png"/>
-<meta property="article:published_time" content="2021-03-25T22:28:20+09:00" />
-<meta property="article:modified_time" content="2021-03-25T22:28:20+09:00" />
+<meta property="article:published_time" content="2021-03-28T20:42:45+09:00" />
+<meta property="article:modified_time" content="2021-03-28T20:42:45+09:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
 
-<meta name="twitter:title" content="Git_LFS"/>
+<meta name="twitter:title" content="03_SQLD_제4 절 관계 &amp; 제5 절 식별자"/>
 <meta name="twitter:description" content="​
-Git LFS(Large File Storage) 사용법  Git은 개당 파일에 100MB의 용량 제한이 걸려 있다. (전체 용량 제한은 없다.) 다만, 프로젝트를 하다보면 대용량의 자료나 파일이 생기는 경우가 있다. 이때 용량 제한의 문제를 해소할 수 있는 방법이 LFS이다.
-LFS는 별도로 설치하여 사용하면 되며, 방법을 정리한다.
-  *주소: https://git-lfs.github.com
+# SQL  제1 장 데이터 모델링의 이해  제4 절 관계(Relationship)   관계의 개념
+  관계의 정의
+&ldquo;인스턴스 사이의 논리적인 연관성으로서 존재의 형태로서나 행위로서 서로에게 연관성이 부여된 상태&rdquo;
+  관계의 페어링
+&ldquo;관계는 **인스턴스가 개별적으로 관계를 가지는 것(페어링)**이고, 이것의 집합을 관계로 표현한다는 것&rdquo;
+&ldquo;따라서 개별 인스턴스가 각각 다른 종류의 관계를 가지고 있다면, 두 엔터티 사이에 두 개 이상의 관계가 형성될 수 도 있다.&rdquo;
 ​
-  git LFS을 다운을 받고 설치 합니다.
-​
-  git LFS를 적용할 폴더로 이동해 다음 명령어를 입력합니다.
-1  $ git lfs install    ​"/>
+    관계의 분류"/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/git_lfslarge-file-storage/" /><link rel="prev" href="https://colinder.github.io/02_sqld_%EC%A0%9C2-%EC%A0%88-%EC%97%94%ED%84%B0%ED%8B%B0-%EC%A0%9C3-%EC%A0%88-%EC%86%8D%EC%84%B1/" /><link rel="next" href="https://colinder.github.io/03_sqld_%EC%A0%9C4-%EC%A0%88-%EA%B4%80%EA%B3%84-%EC%A0%9C5-%EC%A0%88-%EC%8B%9D%EB%B3%84%EC%9E%90/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/03_sqld_%EC%A0%9C4-%EC%A0%88-%EA%B4%80%EA%B3%84-%EC%A0%9C5-%EC%A0%88-%EC%8B%9D%EB%B3%84%EC%9E%90/" /><link rel="prev" href="https://colinder.github.io/git_lfslarge-file-storage/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Git_LFS",
+        "headline": "03_SQLD_제4 절 관계 \u0026 제5 절 식별자",
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/colinder.github.io\/git_lfslarge-file-storage\/"
-        },"genre": "posts","keywords": "git, LFS","wordcount":  159 ,
-        "url": "https:\/\/colinder.github.io\/git_lfslarge-file-storage\/","datePublished": "2021-03-25T22:28:20+09:00","dateModified": "2021-03-25T22:28:20+09:00","publisher": {
+            "@id": "https:\/\/colinder.github.io\/03_sqld_%EC%A0%9C4-%EC%A0%88-%EA%B4%80%EA%B3%84-%EC%A0%9C5-%EC%A0%88-%EC%8B%9D%EB%B3%84%EC%9E%90\/"
+        },"genre": "posts","keywords": "SQLD","wordcount":  192 ,
+        "url": "https:\/\/colinder.github.io\/03_sqld_%EC%A0%9C4-%EC%A0%88-%EA%B4%80%EA%B3%84-%EC%A0%9C5-%EC%A0%88-%EC%8B%9D%EB%B3%84%EC%9E%90\/","datePublished": "2021-03-28T20:42:45+09:00","dateModified": "2021-03-28T20:42:45+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -120,9 +120,9 @@ LFS는 별도로 설치하여 사용하면 되며, 방법을 정리한다.
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Git_LFS</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/git/"><i class="far fa-folder fa-fw"></i>git</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-03-25">2021-03-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;159 words&nbsp;
+        </div><article class="page single"><h1 class="single-title animated flipInX">03_SQLD_제4 절 관계 &amp; 제5 절 식별자</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/sqld/"><i class="far fa-folder fa-fw"></i>SQLD</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-03-28">2021-03-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;192 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;One minute&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -131,144 +131,168 @@ LFS는 별도로 설치하여 사용하면 되며, 방법을 정리한다.
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#부록">🙂부록</a></li>
+    <li><a href="#제4-절-관계relationship">제4 절 관계(Relationship)</a></li>
+    <li><a href="#제5-절-식별자">제5 절 식별자</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><p>​</p>
-<h1 id="git-lfslarge-file-storage-사용법">Git LFS(Large File Storage) 사용법</h1>
-<blockquote>
-<p>Git은 <strong>개당 파일에 100MB</strong>의 용량 제한이 걸려 있다. (<strong>전체 용량 제한은 없다.</strong>) 다만, 프로젝트를 하다보면 대용량의 자료나 파일이 생기는 경우가 있다. 이때 용량 제한의 문제를 해소할 수 있는 방법이 LFS이다.</p>
-<p>LFS는 별도로 설치하여 사용하면 되며, 방법을 정리한다.</p>
-</blockquote>
-<a class="lightgallery" href="/images/git_LFS_00.png" title="/images/git_LFS_00.png" data-thumbnail="/images/git_LFS_00.png">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="/images/git_LFS_00.png"
-            data-srcset="/images/git_LFS_00.png, /images/git_LFS_00.png 1.5x, /images/git_LFS_00.png 2x"
-            data-sizes="auto"
-            alt="/images/git_LFS_00.png" width="1000px" />
-    </a>
-<p style='text-align:right; font-style:italic; color:grey'>*주소: https://git-lfs.github.com</p>
-<p>​</p>
+<h1 id="-sql"># SQL</h1>
+<hr>
+<h1 id="제1-장-데이터-모델링의-이해">제1 장 데이터 모델링의 이해</h1>
+<hr>
+<h2 id="제4-절-관계relationship">제4 절 관계(Relationship)</h2>
 <ol>
 <li>
-<p><a href="https://git-lfs.github.com" target="_blank" rel="noopener noreffer">git LFS</a>을 다운을 받고 설치 합니다.</p>
-<p>​</p>
+<p>관계의 개념</p>
+<ul>
+<li>
+<p>관계의 정의</p>
+<p>&ldquo;<strong>인스턴스 사이의 논리적인 연관성</strong>으로서 <strong>존재의 형태로서나 행위로서 서로에게 연관성이 부여된 상태</strong>&rdquo;</p>
 </li>
 <li>
-<p>git LFS를 적용할 폴더로 이동해 다음 명령어를 입력합니다.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="p">$</span> <span class="n">git</span> <span class="n">lfs</span> <span class="n">install</span>
-</code></pre></td></tr></table>
-</div>
-</div><a class="lightgallery" href="/images/git_LFS_01.png" title="/images/git_LFS_01.png" data-thumbnail="/images/git_LFS_01.png">
+<p>관계의 페어링</p>
+<p>&ldquo;<strong>관계</strong>는 **인스턴스가 개별적으로 관계를 가지는 것(페어링)**이고, 이것의 집합을 관계로 표현한다는 것&rdquo;</p>
+<p>&ldquo;따라서 개별 인스턴스가 각각 다른 종류의 관계를 가지고 있다면, 두 엔터티 사이에 두 개 이상의 관계가 형성될 수 도 있다.&rdquo;</p>
+<p>​</p>
+</li>
+</ul>
+</li>
+<li>
+<p>관계의 분류</p>
+<ul>
+<li>
+<p>ERD : 존재의 의한 관계 / 행위에 의한 관계</p>
+</li>
+<li>
+<p>UML(Unified Modeling Language) : 연관 관계 / 의존 관계</p>
+<p>​</p>
+</li>
+</ul>
+</li>
+<li>
+<p>관계의 표기법</p>
+<ul>
+<li>
+<p>관계명(Membership) :  관계의 이름을 기록</p>
+<a class="lightgallery" href="/images/SQLD_05.jpg" title="/images/SQLD_05.jpg" data-thumbnail="/images/SQLD_05.jpg">
         <img
             class="lazyload"
             src="/svg/loading.min.svg"
-            data-src="/images/git_LFS_01.png"
-            data-srcset="/images/git_LFS_01.png, /images/git_LFS_01.png 1.5x, /images/git_LFS_01.png 2x"
+            data-src="/images/SQLD_05.jpg"
+            data-srcset="/images/SQLD_05.jpg, /images/SQLD_05.jpg 1.5x, /images/SQLD_05.jpg 2x"
             data-sizes="auto"
-            alt="/images/git_LFS_01.png" width="1000px" />
+            alt="/images/SQLD_05.jpg" width="1000px" />
     </a>
-<p>​</p>
 </li>
 <li>
-<p>git LFS로 관리할 파일을 지정해줍니다.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="p">//</span> <span class="n">mp4</span> <span class="n">확장자</span> <span class="n">모두를</span> <span class="n">lfs로</span> <span class="n">관리</span>
-<span class="p">$</span> <span class="n">git</span> <span class="n">lfs</span> <span class="n">track</span> <span class="s2">&#34;*.mp4&#34;</span>
-           
-<span class="p">//</span> <span class="n">특정</span> <span class="n">파일만</span> <span class="n">lfs로</span> <span class="n">관리</span> <span class="p">(</span><span class="n">예시</span><span class="p">)</span>
-<span class="p">$</span> <span class="n">git</span> <span class="n">lfs</span> <span class="n">track</span> <span class="s2">&#34;video/hahaha.mp4&#34;</span>
-</code></pre></td></tr></table>
-</div>
-</div><a class="lightgallery" href="/images/git_LFS_02.png" title="/images/git_LFS_02.png" data-thumbnail="/images/git_LFS_02.png">
+<p><strong>관계차수</strong> : 엔터티간의 관계에서 참여자의 수를 표현</p>
+<ol>
+<li>
+<p>1:1</p>
+<a class="lightgallery" href="/images/SQLD_06.jpg" title="/images/SQLD_06.jpg" data-thumbnail="/images/SQLD_06.jpg">
         <img
             class="lazyload"
             src="/svg/loading.min.svg"
-            data-src="/images/git_LFS_02.png"
-            data-srcset="/images/git_LFS_02.png, /images/git_LFS_02.png 1.5x, /images/git_LFS_02.png 2x"
+            data-src="/images/SQLD_06.jpg"
+            data-srcset="/images/SQLD_06.jpg, /images/SQLD_06.jpg 1.5x, /images/SQLD_06.jpg 2x"
             data-sizes="auto"
-            alt="/images/git_LFS_02.png" width="1000px" />
+            alt="/images/SQLD_06.jpg" width="1000px" />
     </a>
-<p>​</p>
 </li>
 <li>
-<p>해당 경로의 설정을 저장할 .gitattributes 파일을 추가 합니다.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="p">$</span> <span class="n">git</span> <span class="n">add</span> <span class="p">.</span><span class="n">gitattributes</span>
-</code></pre></td></tr></table>
-</div>
-</div><a class="lightgallery" href="/images/git_LFS_03.png" title="/images/git_LFS_03.png" data-thumbnail="/images/git_LFS_03.png">
+<p>1:M</p>
+<a class="lightgallery" href="/images/SQLD_07.jpg" title="/images/SQLD_07.jpg" data-thumbnail="/images/SQLD_07.jpg">
         <img
             class="lazyload"
             src="/svg/loading.min.svg"
-            data-src="/images/git_LFS_03.png"
-            data-srcset="/images/git_LFS_03.png, /images/git_LFS_03.png 1.5x, /images/git_LFS_03.png 2x"
+            data-src="/images/SQLD_07.jpg"
+            data-srcset="/images/SQLD_07.jpg, /images/SQLD_07.jpg 1.5x, /images/SQLD_07.jpg 2x"
             data-sizes="auto"
-            alt="/images/git_LFS_03.png" width="1000px" />
+            alt="/images/SQLD_07.jpg" width="1000px" />
     </a>
-<p>​</p>
 </li>
 <li>
-<p>이후로는 평소 git을 사용하는 것처럼 commit / push하면 됩니다.</p>
-<p>​</p>
-<p style="text-align:right; font-style:italic; font-size:1.4em"><b>끝</b></p>
-<p>​</p>
-<hr>
-<h2 id="부록">🙂부록</h2>
-<p>*혹시 LFS를 풀고 싶다면 LFS설정한 폴더로 가서 아래 명령어를 입력하면 됩니다.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="p">$</span> <span class="n">git</span> <span class="n">lfs</span> <span class="n">uninstall</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>​</p>
-<p>*또 LFS없이 대용량 파일을 올리려고 하면 오류가 발생하는데, 잘 보면 LFS를 소개 해줍니다.</p>
-<a class="lightgallery" href="/images/git_LFS_04.png" title="/images/git_LFS_04.png" data-thumbnail="/images/git_LFS_04.png">
+<p>M:M</p>
+<a class="lightgallery" href="/images/SQLD_08.jpg" title="/images/SQLD_08.jpg" data-thumbnail="/images/SQLD_08.jpg">
         <img
             class="lazyload"
             src="/svg/loading.min.svg"
-            data-src="/images/git_LFS_04.png"
-            data-srcset="/images/git_LFS_04.png, /images/git_LFS_04.png 1.5x, /images/git_LFS_04.png 2x"
+            data-src="/images/SQLD_08.jpg"
+            data-srcset="/images/SQLD_08.jpg, /images/SQLD_08.jpg 1.5x, /images/SQLD_08.jpg 2x"
             data-sizes="auto"
-            alt="/images/git_LFS_04.png" width="1000px" />
+            alt="/images/SQLD_08.jpg" width="1000px" />
     </a>
+</li>
+</ol>
+</li>
+<li>
+<p>관계선택사양</p>
+<ul>
+<li>
+<p>필수 관계(Mandatory)</p>
+<p><span style="color:grey">ex) 지하철은 반드시 <strong>문</strong>이 닫혀야, <strong>출발</strong>할 수 있다. 에서 &ldquo;문 닫힘&rdquo; &amp; &ldquo;출발&rdquo; 은 필수참여관계(Mandatory)이다.</span></p>
+</li>
+<li>
+<p>선택 관계(Optional)</p>
+<p><span style="color:grey">ex) 지하철의 <strong>출발</strong>을 알리는 <strong>안내음성</strong>이 나온다. 에서 &ldquo;안내음성&quot;은 나오면 좋지만 &ldquo;출발&quot;과 필수적인 관계는 아닌 선택적인(Optional) 관계이다.</span></p>
+</li>
+</ul>
 <p>​</p>
+</li>
+</ul>
+</li>
+<li>
+<p>관계의 정의 및 읽는 방법</p>
+<ul>
+<li>
+<p>관계 체크사항</p>
+<ol>
+<li>두 개의 엔터티 사이에 관심있는 연관규칙이 존재하는가?</li>
+<li>두 개의 엔터티 사이에 정보의 조합이 발생하는가?</li>
+<li>업무기술서, 장표에 관계연결에 대한 규칙이 서술되어 있는가?</li>
+<li>업무기술서, 장표에 관계연결을 가능하게 하는 동사(Verb)가 있는가?</li>
+</ol>
+</li>
+<li>
+<p>관계 읽기</p>
+<ol>
+<li>
+<p>기준(Source) 엔터티를 한 개(One) 또는 각(Each)으로 읽는다.</p>
+</li>
+<li>
+<p>대상(Target) 엔터티의 관계참여도 단수, 복수로 읽는다.</p>
+</li>
+<li>
+<p>관계선택사항과 관계명을 읽는다.</p>
+<a class="lightgallery" href="/images/SQLD_09.jpg" title="/images/SQLD_09.jpg" data-thumbnail="/images/SQLD_09.jpg">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/SQLD_09.jpg"
+            data-srcset="/images/SQLD_09.jpg, /images/SQLD_09.jpg 1.5x, /images/SQLD_09.jpg 2x"
+            data-sizes="auto"
+            alt="/images/SQLD_09.jpg" width="1000px" />
+    </a>
 <p>​</p>
 </li>
 </ol>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="제5-절-식별자">제5 절 식별자</h2>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2021-03-25</span>
+                <span>Updated on 2021-03-28</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/git_lfslarge-file-storage/index.md" target="_blank">Read Markdown</a>
+                            <a class="link-to-markdown" href="/03_sqld_%EC%A0%9C4-%EC%A0%88-%EA%B4%80%EA%B3%84-%EC%A0%9C5-%EC%A0%88-%EC%8B%9D%EB%B3%84%EC%9E%90/index.md" target="_blank">Read Markdown</a>
                         </span></div>
             <div class="post-info-share">
                 <span></span>
@@ -277,14 +301,13 @@ LFS는 별도로 설치하여 사용하면 되며, 방법을 정리한다.
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/git/">git</a>,&nbsp;<a href="/tags/lfs/">LFS</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/sqld/">SQLD</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/02_sqld_%EC%A0%9C2-%EC%A0%88-%EC%97%94%ED%84%B0%ED%8B%B0-%EC%A0%9C3-%EC%A0%88-%EC%86%8D%EC%84%B1/" class="prev" rel="prev" title="02_SQLD_제2 절 엔터티 &amp; 제3 절 속성"><i class="fas fa-angle-left fa-fw"></i>02_SQLD_제2 절 엔터티 &amp; 제3 절 속성</a>
-            <a href="/03_sqld_%EC%A0%9C4-%EC%A0%88-%EA%B4%80%EA%B3%84-%EC%A0%9C5-%EC%A0%88-%EC%8B%9D%EB%B3%84%EC%9E%90/" class="next" rel="next" title="03_SQLD_제4 절 관계 &amp; 제5 절 식별자">03_SQLD_제4 절 관계 &amp; 제5 절 식별자<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/git_lfslarge-file-storage/" class="prev" rel="prev" title="Git_LFS"><i class="fas fa-angle-left fa-fw"></i>Git_LFS</a></div>
 </div>
 <div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.

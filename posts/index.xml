@@ -3,7 +3,22 @@
         <title>All Posts - </title>
         <link>https://colinder.github.io/posts/</link>
         <description>All Posts | </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 25 Mar 2021 22:28:20 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 28 Mar 2021 20:42:45 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>03_SQLD_제4 절 관계 &amp; 제5 절 식별자</title>
+    <link>https://colinder.github.io/03_sqld_%EC%A0%9C4-%EC%A0%88-%EA%B4%80%EA%B3%84-%EC%A0%9C5-%EC%A0%88-%EC%8B%9D%EB%B3%84%EC%9E%90/</link>
+    <pubDate>Sun, 28 Mar 2021 20:42:45 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/03_sqld_%EC%A0%9C4-%EC%A0%88-%EA%B4%80%EA%B3%84-%EC%A0%9C5-%EC%A0%88-%EC%8B%9D%EB%B3%84%EC%9E%90/</guid>
+    <description><![CDATA[​
+# SQL  제1 장 데이터 모델링의 이해  제4 절 관계(Relationship)   관계의 개념
+  관계의 정의
+&ldquo;인스턴스 사이의 논리적인 연관성으로서 존재의 형태로서나 행위로서 서로에게 연관성이 부여된 상태&rdquo;
+  관계의 페어링
+&ldquo;관계는 **인스턴스가 개별적으로 관계를 가지는 것(페어링)**이고, 이것의 집합을 관계로 표현한다는 것&rdquo;
+&ldquo;따라서 개별 인스턴스가 각각 다른 종류의 관계를 가지고 있다면, 두 엔터티 사이에 두 개 이상의 관계가 형성될 수 도 있다.&rdquo;
+​
+    관계의 분류]]></description>
+</item><item>
     <title>Git_LFS</title>
     <link>https://colinder.github.io/git_lfslarge-file-storage/</link>
     <pubDate>Thu, 25 Mar 2021 22:28:20 &#43;0900</pubDate>
@@ -98,13 +113,5 @@ Python Library 😀   Idea 1 2 3 4 5 6 7 8 9 10 11 12 13  # 모두 &#39;거짓&#
     <description><![CDATA[​
 D4_3143_가장 빠른 문자열 타이핑 1 2 3 4 5 6 7  for T in range(int(input())): A, B = input().split() result = len(A) - (A.count(B)*(len(B)-1)) print(f&#39;#{T+1} {result}&#39;) # 왜 D4 인가.   ​
 D4_10966_물놀이를 가자 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31  from collections import deque dx = [0, 1, 0, -1] dy = [1, 0, -1, 0] for T in range(int(input())): N, M = map(int, input().]]></description>
-</item><item>
-    <title>BEAKJOON 15649, 15650</title>
-    <link>https://colinder.github.io/bj_21.02.09/</link>
-    <pubDate>Tue, 09 Feb 2021 17:59:18 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/bj_21.02.09/</guid>
-    <description><![CDATA[​
-15649_N과 M (1) 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22  N, M = map(int, input().split()) def DFS(count): if count == M: print(*arr) return for i in range(N): if visited[i] == True: continue visited[i] = True arr.append(num_list[i]) DFS(count+1) arr.pop() visited[i] = False num_list = [i + 1 for i in range(N)] visited = [False] * N arr = [] DFS(0)   ​]]></description>
 </item></channel>
 </rss>
