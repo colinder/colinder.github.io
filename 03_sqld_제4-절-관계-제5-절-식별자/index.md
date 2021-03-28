@@ -39,21 +39,21 @@
 
    - 관계명(Membership) :  관계의 이름을 기록
 
-     {{<image src="/images/SQLD_05.jpg" width="1000px">}}
+     {{<image src="/images/SQLD_02.png" width="1000px">}}
 
    - **관계차수** : 엔터티간의 관계에서 참여자의 수를 표현
 
      1. 1:1
 
-        {{<image src="/images/SQLD_06.jpg" width="1000px">}}
+        {{<image src="/images/SQLD_03.png" width="1000px">}}
 
      2. 1:M 
 
-        {{<image src="/images/SQLD_07.jpg" width="1000px">}}
+        {{<image src="/images/SQLD_04.png" width="1000px">}}
 
      3. M:M
 
-        {{<image src="/images/SQLD_08.jpg" width="1000px">}}
+        {{<image src="/images/SQLD_05.jpg" width="1000px">}}
 
    - 관계선택사양 
 
@@ -84,7 +84,7 @@
 
      3. 관계선택사항과 관계명을 읽는다.
 
-        {{<image src="/images/SQLD_09.jpg" width="1000px">}}
+        {{<image src="/images/SQLD_06.jpg" width="1000px">}}
 
         ​						
 
