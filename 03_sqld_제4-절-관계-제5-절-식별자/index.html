@@ -45,7 +45,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/03_sqld_%EC%A0%9C4-%EC%A0%88-%EA%B4%80%EA%B3%84-%EC%A0%9C5-%EC%A0%88-%EC%8B%9D%EB%B3%84%EC%9E%90\/"
-        },"genre": "posts","keywords": "SQLD","wordcount":  542 ,
+        },"genre": "posts","keywords": "SQLD","wordcount":  551 ,
         "url": "https:\/\/colinder.github.io\/03_sqld_%EC%A0%9C4-%EC%A0%88-%EA%B4%80%EA%B3%84-%EC%A0%9C5-%EC%A0%88-%EC%8B%9D%EB%B3%84%EC%9E%90\/","datePublished": "2021-03-28T20:42:45+09:00","dateModified": "2021-03-28T20:42:45+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -122,7 +122,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">03_SQLD_제4 절 관계 &amp; 제5 절 식별자</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/sqld/"><i class="far fa-folder fa-fw"></i>SQLD</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-03-28">2021-03-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;542 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-03-28">2021-03-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;551 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -366,7 +366,7 @@
             data-src="/images/SQLD_07.png"
             data-srcset="/images/SQLD_07.png, /images/SQLD_07.png 1.5x, /images/SQLD_07.png 2x"
             data-sizes="auto"
-            alt="/images/SQLD_07.png" width="1000px" />
+            alt="/images/SQLD_07.png" width="800px" />
     </a>
 <p>​</p>
 </li>
@@ -379,7 +379,8 @@
 <p>해당 업무에서 자주 이용되는 속성을 주식별자로 지정한다.</p>
 </li>
 <li>
-<p><strong>명칭, 내역 등과 같이 이름으로 기술되는 것들은 가능하면, 주식별자로 지정하지 않는다.</strong> (차라리 새로 생성!)</p>
+<p><strong>명칭, 내역 등과 같이 이름으로 기술되는 것들은 가능하면, 주식별자로 지정하지 않는다.</strong></p>
+<p>(차라리 새로 생성!)</p>
 </li>
 <li>
 <p>복합으로 주식별자로 구성할 경우 너무 많은 속성이 포함되지 않도록 한다.</p>
@@ -391,10 +392,10 @@
 <p>식별자관계와 비식별자관계에 따른 식별자 구분</p>
 <ol>
 <li>
-<p>식별자관계와 비식별자관계의 결정</p>
+<p>식별자관계 or 비식별자관계의 결정방법</p>
 <ul>
 <li>부모엔터티 쪽의 주식별자를 자식엔터티의 속성으로 내려 보낸다.</li>
-<li>이때 자식엔터티는 부모엔터티로부터 받은 외부식별자를 자신의 주식별자로 써도 되며 단순히 부모와 연결되는 속성으로만 이용할 것인지 결정해야 한다.  == <strong>외부식별자는 Foreign Key 역할을 한다.</strong></li>
+<li>이때 자식엔터티는 부모엔터티로부터 받은 외부식별자를 자신의 주식별자로 써도 되며 <strong>( == 식별자 관계)</strong>, 단순히 부모와 연결되는 속성으로만 이용 <b>( == 비식별자 관계)</b> 할 것인지 결정한다. 이때 <strong>외부식별자는 Foreign Key 역할을 한다.</strong></li>
 </ul>
 </li>
 <li>
