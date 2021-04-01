@@ -1,4 +1,4 @@
-# SW Expert Academy_D4 3143, 10966
+# SW Expert Academy_D4 3143, 10966, 11592
 
 
 ​	
@@ -51,6 +51,26 @@ for T in range(int(input())):
     print(f'#{T+1} {total}')
 
 # 오랜만에 다중 시작점 BFS
+```
+
+​	
+
+### D4_11592_크루즈 컨트롤
+
+```python
+for T in range(int(input())):
+    D, N = map(int, input().split())    # D: 총 거리 
+    S = []
+
+    for _ in range(N):
+        k, s = map(int, input().split())    # k : 위치 / s : 속도
+        S.append((D-k) / s)
+    
+    a = max(S)
+    
+    print(f'#{T+1} {D/a}')
+    
+# D2 난이도...
 ```
 
 ​	

@@ -105,7 +105,7 @@ Python Library 😀   Idea 1 2 3 4 5 6 7 8 9 10 11 12 13  # 모두 &#39;거짓&#
     <description><![CDATA[​
 1991_트리 순회 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44  class Node: def __init__(self, data, L, R): self.data = data self.left = L self.right = R def preorder(node): # 전위 순회 print(node.data, end=&#34;&#34;) if node.]]></description>
 </item><item>
-    <title>SW Expert Academy_D4 3143, 10966</title>
+    <title>SW Expert Academy_D4 3143, 10966, 11592</title>
     <link>https://colinder.github.io/sw_21.02.16/</link>
     <pubDate>Tue, 16 Feb 2021 23:33:17 &#43;0900</pubDate>
     <author>Author</author>
