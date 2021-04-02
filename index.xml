@@ -3,9 +3,20 @@
         <title></title>
         <link>https://colinder.github.io/</link>
         <description>Hello New World</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 28 Mar 2021 20:42:45 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 02 Apr 2021 21:30:34 &#43;0900</lastBuildDate>
             <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>04_SQLD_제1 절 성능데이터모델링의 개요 &amp; 제2 절 정규화와 성능</title>
+    <link>https://colinder.github.io/04_sqld_%EC%A0%9C2-%EC%9E%A5-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%AA%A8%EB%8D%B8%EA%B3%BC-%EC%84%B1%EB%8A%A5/</link>
+    <pubDate>Fri, 02 Apr 2021 21:30:34 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/04_sqld_%EC%A0%9C2-%EC%9E%A5-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%AA%A8%EB%8D%B8%EA%B3%BC-%EC%84%B1%EB%8A%A5/</guid>
+    <description><![CDATA[​
+# SQL  제2 장 데이터 모델과 성능  제1 절 성능데이터모델링의 개요   성능데이터모델링의 정의
+  데이터 용량이 커질수록 처리 속도 증가가 필요해진다.
+  성능 저하의 대표적인 원인 3가지
+ 데이터 모델 구조에 의해 성능 저하 데이터가 대용량이 됨으로 인해 성능 저하 인덱스 특성을 고려하지 않고 생성해 성능 저하    즉, 어떤 작업 유형에 따라 성능향상을 도모해야 하는지 목표를 분명하게 해야 정확한 성능향상 모델링을 할 수 있다.]]></description>
+</item><item>
     <title>03_SQLD_제4 절 관계 &amp; 제5 절 식별자</title>
     <link>https://colinder.github.io/03_sqld_%EC%A0%9C4-%EC%A0%88-%EA%B4%80%EA%B3%84-%EC%A0%9C5-%EC%A0%88-%EC%8B%9D%EB%B3%84%EC%9E%90/</link>
     <pubDate>Sun, 28 Mar 2021 20:42:45 &#43;0900</pubDate>
@@ -106,14 +117,5 @@ Python Library 😀   Idea 1 2 3 4 5 6 7 8 9 10 11 12 13  # 모두 &#39;거짓&#
     <guid>https://colinder.github.io/bj_21.02.18/</guid>
     <description><![CDATA[​
 1991_트리 순회 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44  class Node: def __init__(self, data, L, R): self.data = data self.left = L self.right = R def preorder(node): # 전위 순회 print(node.data, end=&#34;&#34;) if node.]]></description>
-</item><item>
-    <title>SW Expert Academy_D4 3143, 10966, 11592</title>
-    <link>https://colinder.github.io/sw_21.02.16/</link>
-    <pubDate>Tue, 16 Feb 2021 23:33:17 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/sw_21.02.16/</guid>
-    <description><![CDATA[​
-D4_3143_가장 빠른 문자열 타이핑 1 2 3 4 5 6 7  for T in range(int(input())): A, B = input().split() result = len(A) - (A.count(B)*(len(B)-1)) print(f&#39;#{T+1} {result}&#39;) # 왜 D4 인가.   ​
-D4_10966_물놀이를 가자 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31  from collections import deque dx = [0, 1, 0, -1] dy = [1, 0, -1, 0] for T in range(int(input())): N, M = map(int, input().]]></description>
 </item></channel>
 </rss>
