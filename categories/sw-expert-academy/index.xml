@@ -13,7 +13,7 @@
 D3_11445_무한 사전 1 2 3 4 5 6 7 8 9 10 11 12  for T in range(int(input())): P = input().rstrip() Q = input().rstrip() if P + &#34;a&#34; != Q: result = &#34;Y&#34; else: result = &#34;N&#34; print(f&#39;#{T+1} {result}&#39;) # 왜 D3 인가.   ​
 D3_11387_몬스터 사냥 1 2 3 4 5 6 7 8  for T in range(int(input())): D, L, N = map(int, input().split()) result = 0 for i in range(N): result += D * (1 + L*i/100) print(f&#39;#{T+1} {int(result)}&#39;)   ​]]></description>
 </item><item>
-    <title>SW Expert Academy_D4 3143, 10966, 11592</title>
+    <title>SW Expert Academy_D4 3143, 10966, 11592, 11545</title>
     <link>https://colinder.github.io/sw_21.02.16/</link>
     <pubDate>Tue, 16 Feb 2021 23:33:17 &#43;0900</pubDate>
     <author>Author</author>
