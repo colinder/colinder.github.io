@@ -37,7 +37,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/04_sqld_%EC%A0%9C2-%EC%9E%A5-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%AA%A8%EB%8D%B8%EA%B3%BC-%EC%84%B1%EB%8A%A5\/"
-        },"genre": "posts","keywords": "SQLD","wordcount":  350 ,
+        },"genre": "posts","keywords": "SQLD","wordcount":  351 ,
         "url": "https:\/\/colinder.github.io\/04_sqld_%EC%A0%9C2-%EC%9E%A5-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%AA%A8%EB%8D%B8%EA%B3%BC-%EC%84%B1%EB%8A%A5\/","datePublished": "2021-04-02T21:30:34+09:00","dateModified": "2021-04-02T21:30:34+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -114,7 +114,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">04_SQLD_제1 절 성능데이터모델링의 개요 &amp; 제2 절 정규화와 성능</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/sqld/"><i class="far fa-folder fa-fw"></i>SQLD</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-04-02">2021-04-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;350 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-04-02">2021-04-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;351 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -287,8 +287,8 @@
 <li>
 <p><strong>2차 정규화</strong> : 테이블의 <strong>부분함수적 종속</strong> 제거 <span style="font-size:.9em; color: grey">== 테이블 값이 <strong>완전 함수적 종속</strong>인지 확인해야 한다.</span></p>
 <p style="font-size:0.9em; text-align:right; font-style:italic;">*완전 함수적 종속 : 기본키가 아닌 컬럼중에 특정 기본키에만 종속하는 <b>부분적 종속</b>이 없는 상태. </p>
-<p>1차 정규화가 된 table에서 기본키는 (student, subject) 입니다. 그 이유는 학생과 과목을 알아야 레코드를 구분할 수 있기 때문입니다.</p>
-<p>그렇다면 기본키가 아닌  age속성은 student와 subject 두개의 속성 모두에 종속인지 확인해보면 됩니다. age는 <strong>student에만 종속</strong>되어있기 때문에 <strong>2차 정규화의 조건</strong>인 <strong>완전함수적 종속</strong>에 위배됩니다.  <span style="font-size:.9em; color: grey">즉, age 속성은 student 의 이름만 알아도 찾을수 있는 속성</span></p>
+<p>1차 정규화가 된 table에서 기본키는 (student, subject). 그 이유는 학생과 과목을 알아야 레코드를 구분할 수 있기 때문이다.</p>
+<p>그렇다면 기본키가 아닌  age속성은 student와 subject 두 개의 속성 모두에 종속인지 확인해보면 된다. age속성는 <strong>student에만 종속</strong>되어있기 때문에 <strong>2차 정규화의 조건</strong>인 <strong>완전함수적 종속</strong>에 위배된다.  <span style="font-size:.9em; color: grey">즉, age 속성은 student 의 이름만 알아도 찾을 수 있는 속성</span></p>
 <p>​</p>
 <center><span style="color:grey; font-size:.8em">2차 정규화 전</span></center>
 <table>

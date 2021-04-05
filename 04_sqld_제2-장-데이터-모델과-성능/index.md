@@ -94,9 +94,9 @@
 
      <p style="font-size:0.9em; text-align:right; font-style:italic;">*완전 함수적 종속 : 기본키가 아닌 컬럼중에 특정 기본키에만 종속하는 <b>부분적 종속</b>이 없는 상태. </p>
 
-     1차 정규화가 된 table에서 기본키는 (student, subject) 입니다. 그 이유는 학생과 과목을 알아야 레코드를 구분할 수 있기 때문입니다.
+     1차 정규화가 된 table에서 기본키는 (student, subject). 그 이유는 학생과 과목을 알아야 레코드를 구분할 수 있기 때문이다.
 
-     그렇다면 기본키가 아닌  age속성은 student와 subject 두개의 속성 모두에 종속인지 확인해보면 됩니다. age는 **student에만 종속**되어있기 때문에 **2차 정규화의 조건**인 **완전함수적 종속**에 위배됩니다.  <span style="font-size:.9em; color: grey">즉, age 속성은 student 의 이름만 알아도 찾을수 있는 속성</span> 
+     그렇다면 기본키가 아닌  age속성은 student와 subject 두 개의 속성 모두에 종속인지 확인해보면 된다. age속성는 **student에만 종속**되어있기 때문에 **2차 정규화의 조건**인 **완전함수적 종속**에 위배된다.  <span style="font-size:.9em; color: grey">즉, age 속성은 student 의 이름만 알아도 찾을 수 있는 속성</span> 
 
      ​	
 
