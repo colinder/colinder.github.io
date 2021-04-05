@@ -55,40 +55,99 @@
 
    - **정규화**는 기본적으로 데이터에 대한 중복성을 제거하고, 데이터가 관심사별로 처리되는 경우가 많아 **대부분 성능을 향상**시키는 특징이 있다.
 
-   - 1차 정규화 : table의 cell 값은 **원자 값**을 가져야한다. 중복된 값을 제거 or 분할. (row, column 모두 고려된다.)
+   - 다만, 성능을 판단할 때 <b>(조회)</b>와  **(입력,수정,삭제)** 두 부류로 구분되어 고려한다.
+
+     - "엔터티가 많은 경우" 다량의 JOIN이 발생하고 그런 경우 보통 <b>(조회)</b> 성능은 **하락**하고 / <b>(입력,수정,삭제)</b> 성능은 **향상**된다. 
+
+     ---
+
+   - **1차 정규화** : table의 cell값은 **원자 값**을 가져야한다. <span style="font-size:.9em; color: grey">== 중복된 값을 제거 or 분할. (row, column 모두)</span>
 
      - 행(row) 정규화
 
-       <center><span style="color:grey; font-size:.8em">정규화 전</span></center>
+       <center><span style="color:grey; font-size:.8em">1차 정규화 전</span></center>
 
-       | 학생 | 나이 | 과목       |
-       | ---- | ---- | ---------- |
-       | 보리 | 1    | 수학, 과학 |
-       | 쌀   | 2    | 수학       |
-       | 수수 | 3    | 수학       |
+       | student | age  | subject                                    |
+       | ------- | ---- | ------------------------------------------ |
+       | 보리    | 1    | 수학, <span style='color: red'>과학</span> |
+       | 쌀      | 2    | 수학                                       |
+       | 수수    | 3    | 수학                                       |
 
-       <center><span style="color:grey; font-size:.8em">정규화 <span style="color:red">후</span></span></center>
+       <center><span style="color:grey; font-size:.8em">1차 정규화 <span style="color:red">후</span></span></center>
 
-       | 학생 | 나이 | 과목 |
-       | ---- | ---- | ---- |
-       | 보리 | 1    | 수학 |
-       | 보리 | 1    | 과학 |
-       | 쌀   | 2    | 수학 |
-       | 수수 | 3    | 수학 |
+       | student                              | age                               | subject                                      |
+       | ------------------------------------ | --------------------------------- | -------------------------------------------- |
+       | 보리                                 | 1                                 | 수학<span style='color: white'>, 과학</span> |
+       | <span style='color: red'>보리</span> | <span style='color: red'>1</span> | <span style='color: red'>과학</span>         |
+       | 쌀                                   | 2                                 | 수학                                         |
+       | 수수                                 | 3                                 | 수학                                         |
 
        ​			
 
      - 열(column) 정규화
 
-       <center><span style="color:grey; font-size:.8em">정규화 전</span></center>
+       {{<image src="/images/SQLD_10.png" width="1000px">}}
 
-       |학생|
+       
 
-   ​	
+   - **2차 정규화** : 테이블의 **부분함수적 종속** 제거 <span style="font-size:.9em; color: grey">== 테이블 값이 **완전 함수적 종속**인지 확인해야 한다.</span>
 
-   
+     <p style="font-size:0.9em; text-align:right; font-style:italic;">*완전 함수적 종속 : 기본키가 아닌 컬럼중에 특정 기본키에만 종속하는 <b>부분적 종속</b>이 없는 상태. </p>
 
-   - 2차 정규화 : 
-   - 다만, 성능을 판단할 때 **(조회)**와  **(입력,수정,삭제)** 두 부류로 구분되어 고려한다.
-   - "엔터티가 많은 경우" 다량의 JOIN이 발생하고 그런 경우 보통 **(조회)**성능**↓** / **(입력,수정,삭제)**성능 **↑** 한다. 
-   - 
+     1차 정규화가 된 table에서 기본키는 (student, subject) 입니다. 그 이유는 학생과 과목을 알아야 레코드를 구분할 수 있기 때문입니다.
+
+     그렇다면 기본키가 아닌  age속성은 student와 subject 두개의 속성 모두에 종속인지 확인해보면 됩니다. age는 **student에만 종속**되어있기 때문에 **2차 정규화의 조건**인 **완전함수적 종속**에 위배됩니다.  <span style="font-size:.9em; color: grey">즉, age 속성은 student 의 이름만 알아도 찾을수 있는 속성</span> 
+
+     ​	
+
+     <center><span style="color:grey; font-size:.8em">2차 정규화 전</span></center>
+
+     | student                              | age                               | subject                                      |
+     | ------------------------------------ | --------------------------------- | -------------------------------------------- |
+     | 보리                                 | 1                                 | 수학<span style='color: white'>, 과학</span> |
+     | <span style='color: red'>보리</span> | <span style='color: red'>1</span> | <span style='color: red'>과학</span>         |
+     | 쌀                                   | 2                                 | 수학                                         |
+     | 수수                                 | 3                                 | 수학                                         |
+
+     ​	
+
+     <center><span style="color:grey; font-size:.8em">2차 정규화 <span style="color:red">후</span></span></center>
+
+     *학생 테이블
+
+     | student | age  |
+     | ------- | ---- |
+     | 보리    | 1    |
+     | 쌀      | 2    |
+     | 수수    | 3    |
+
+     *과목 테이블
+
+     | student | subject                              |
+     | ------- | ------------------------------------ |
+     | 보리    | 수학                                 |
+     | 보리    | <span style='color: red'>과학</span> |
+     | 쌀      | 수학                                 |
+     | 수수    | 수학                                 |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

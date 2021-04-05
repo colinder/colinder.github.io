@@ -37,7 +37,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/04_sqld_%EC%A0%9C2-%EC%9E%A5-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%AA%A8%EB%8D%B8%EA%B3%BC-%EC%84%B1%EB%8A%A5\/"
-        },"genre": "posts","keywords": "SQLD","wordcount":  228 ,
+        },"genre": "posts","keywords": "SQLD","wordcount":  350 ,
         "url": "https:\/\/colinder.github.io\/04_sqld_%EC%A0%9C2-%EC%9E%A5-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%AA%A8%EB%8D%B8%EA%B3%BC-%EC%84%B1%EB%8A%A5\/","datePublished": "2021-04-02T21:30:34+09:00","dateModified": "2021-04-02T21:30:34+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -114,7 +114,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">04_SQLD_제1 절 성능데이터모델링의 개요 &amp; 제2 절 정규화와 성능</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/sqld/"><i class="far fa-folder fa-fw"></i>SQLD</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-04-02">2021-04-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;228 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-04-02">2021-04-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;350 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -198,24 +198,31 @@
 <p><strong>정규화</strong>는 기본적으로 데이터에 대한 중복성을 제거하고, 데이터가 관심사별로 처리되는 경우가 많아 <strong>대부분 성능을 향상</strong>시키는 특징이 있다.</p>
 </li>
 <li>
-<p>1차 정규화 : table의 cell 값은 <strong>원자 값</strong>을 가져야한다. 중복된 값을 제거 or 분할. (row, column 모두 고려된다.)</p>
+<p>다만, 성능을 판단할 때 <b>(조회)</b>와  <strong>(입력,수정,삭제)</strong> 두 부류로 구분되어 고려한다.</p>
+<ul>
+<li>&ldquo;엔터티가 많은 경우&rdquo; 다량의 JOIN이 발생하고 그런 경우 보통 <b>(조회)</b> 성능은 <strong>하락</strong>하고 / <b>(입력,수정,삭제)</b> 성능은 <strong>향상</strong>된다.</li>
+</ul>
+<hr>
+</li>
+<li>
+<p><strong>1차 정규화</strong> : table의 cell값은 <strong>원자 값</strong>을 가져야한다. <span style="font-size:.9em; color: grey">== 중복된 값을 제거 or 분할. (row, column 모두)</span></p>
 <ul>
 <li>
 <p>행(row) 정규화</p>
-<center><span style="color:grey; font-size:.8em">정규화 전</span></center>
+<center><span style="color:grey; font-size:.8em">1차 정규화 전</span></center>
 <table>
 <thead>
 <tr>
-<th>학생</th>
-<th>나이</th>
-<th>과목</th>
+<th>student</th>
+<th>age</th>
+<th>subject</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>보리</td>
 <td>1</td>
-<td>수학, 과학</td>
+<td>수학, <span style='color: red'>과학</span></td>
 </tr>
 <tr>
 <td>쌀</td>
@@ -229,25 +236,25 @@
 </tr>
 </tbody>
 </table>
-<center><span style="color:grey; font-size:.8em">정규화 <span style="color:red">후</span></span></center>
+<center><span style="color:grey; font-size:.8em">1차 정규화 <span style="color:red">후</span></span></center>
 <table>
 <thead>
 <tr>
-<th>학생</th>
-<th>나이</th>
-<th>과목</th>
+<th>student</th>
+<th>age</th>
+<th>subject</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>보리</td>
 <td>1</td>
-<td>수학</td>
+<td>수학<span style='color: white'>, 과학</span></td>
 </tr>
 <tr>
-<td>보리</td>
-<td>1</td>
-<td>과학</td>
+<td><span style='color: red'>보리</span></td>
+<td><span style='color: red'>1</span></td>
+<td><span style='color: red'>과학</span></td>
 </tr>
 <tr>
 <td>쌀</td>
@@ -265,18 +272,109 @@
 </li>
 <li>
 <p>열(column) 정규화</p>
-<center><span style="color:grey; font-size:.8em">정규화 전</span></center>
-<p>|학생|</p>
+<a class="lightgallery" href="/images/SQLD_10.png" title="/images/SQLD_10.png" data-thumbnail="/images/SQLD_10.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/SQLD_10.png"
+            data-srcset="/images/SQLD_10.png, /images/SQLD_10.png 1.5x, /images/SQLD_10.png 2x"
+            data-sizes="auto"
+            alt="/images/SQLD_10.png" width="1000px" />
+    </a>
 </li>
 </ul>
 </li>
-</ul>
+<li>
+<p><strong>2차 정규화</strong> : 테이블의 <strong>부분함수적 종속</strong> 제거 <span style="font-size:.9em; color: grey">== 테이블 값이 <strong>완전 함수적 종속</strong>인지 확인해야 한다.</span></p>
+<p style="font-size:0.9em; text-align:right; font-style:italic;">*완전 함수적 종속 : 기본키가 아닌 컬럼중에 특정 기본키에만 종속하는 <b>부분적 종속</b>이 없는 상태. </p>
+<p>1차 정규화가 된 table에서 기본키는 (student, subject) 입니다. 그 이유는 학생과 과목을 알아야 레코드를 구분할 수 있기 때문입니다.</p>
+<p>그렇다면 기본키가 아닌  age속성은 student와 subject 두개의 속성 모두에 종속인지 확인해보면 됩니다. age는 <strong>student에만 종속</strong>되어있기 때문에 <strong>2차 정규화의 조건</strong>인 <strong>완전함수적 종속</strong>에 위배됩니다.  <span style="font-size:.9em; color: grey">즉, age 속성은 student 의 이름만 알아도 찾을수 있는 속성</span></p>
 <p>​</p>
-<ul>
-<li>2차 정규화 :</li>
-<li>다만, 성능을 판단할 때 **(조회)**와  <strong>(입력,수정,삭제)</strong> 두 부류로 구분되어 고려한다.</li>
-<li>&ldquo;엔터티가 많은 경우&rdquo; 다량의 JOIN이 발생하고 그런 경우 보통 <strong>(조회)<strong>성능</strong>↓</strong> / **(입력,수정,삭제)**성능 <strong>↑</strong> 한다.</li>
-<li></li>
+<center><span style="color:grey; font-size:.8em">2차 정규화 전</span></center>
+<table>
+<thead>
+<tr>
+<th>student</th>
+<th>age</th>
+<th>subject</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>보리</td>
+<td>1</td>
+<td>수학<span style='color: white'>, 과학</span></td>
+</tr>
+<tr>
+<td><span style='color: red'>보리</span></td>
+<td><span style='color: red'>1</span></td>
+<td><span style='color: red'>과학</span></td>
+</tr>
+<tr>
+<td>쌀</td>
+<td>2</td>
+<td>수학</td>
+</tr>
+<tr>
+<td>수수</td>
+<td>3</td>
+<td>수학</td>
+</tr>
+</tbody>
+</table>
+<p>​</p>
+<center><span style="color:grey; font-size:.8em">2차 정규화 <span style="color:red">후</span></span></center>
+<p>*학생 테이블</p>
+<table>
+<thead>
+<tr>
+<th>student</th>
+<th>age</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>보리</td>
+<td>1</td>
+</tr>
+<tr>
+<td>쌀</td>
+<td>2</td>
+</tr>
+<tr>
+<td>수수</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>*과목 테이블</p>
+<table>
+<thead>
+<tr>
+<th>student</th>
+<th>subject</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>보리</td>
+<td>수학</td>
+</tr>
+<tr>
+<td>보리</td>
+<td><span style='color: red'>과학</span></td>
+</tr>
+<tr>
+<td>쌀</td>
+<td>수학</td>
+</tr>
+<tr>
+<td>수수</td>
+<td>수학</td>
+</tr>
+</tbody>
+</table>
+</li>
 </ul>
 </li>
 </ol>
