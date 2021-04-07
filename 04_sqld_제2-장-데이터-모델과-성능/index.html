@@ -37,7 +37,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/04_sqld_%EC%A0%9C2-%EC%9E%A5-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%AA%A8%EB%8D%B8%EA%B3%BC-%EC%84%B1%EB%8A%A5\/"
-        },"genre": "posts","keywords": "SQLD","wordcount":  351 ,
+        },"genre": "posts","keywords": "SQLD","wordcount":  422 ,
         "url": "https:\/\/colinder.github.io\/04_sqld_%EC%A0%9C2-%EC%9E%A5-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%AA%A8%EB%8D%B8%EA%B3%BC-%EC%84%B1%EB%8A%A5\/","datePublished": "2021-04-02T21:30:34+09:00","dateModified": "2021-04-02T21:30:34+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -114,7 +114,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">04_SQLD_제1 절 성능데이터모델링의 개요 &amp; 제2 절 정규화와 성능</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/sqld/"><i class="far fa-folder fa-fw"></i>SQLD</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-04-02">2021-04-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;351 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-04-02">2021-04-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;422 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -324,7 +324,7 @@
 </table>
 <p>​</p>
 <center><span style="color:grey; font-size:.8em">2차 정규화 <span style="color:red">후</span></span></center>
-<p>*학생 테이블</p>
+<p><em>*학생 테이블</em></p>
 <table>
 <thead>
 <tr>
@@ -347,7 +347,7 @@
 </tr>
 </tbody>
 </table>
-<p>*과목 테이블</p>
+<p><em>*과목 테이블</em></p>
 <table>
 <thead>
 <tr>
@@ -374,6 +374,77 @@
 </tr>
 </tbody>
 </table>
+<p>​</p>
+</li>
+<li>
+<p><strong>3차 정규화</strong> : 기본키를 제외한 속성들 간의 <strong>이행적 함수 종속</strong>이 없는 경우</p>
+<p style="font-size:0.9em; text-align:right; font-style:italic;">*이행적 함수 종속 : 기본키를 제외한 다른 속성이 특정 속성을 결정지으면 안된다는 것</p>
+<center><span style="color:grey; font-size:.8em">3차 정규화 전</span></center>
+<table>
+<thead>
+<tr>
+<th>학생id</th>
+<th>학생이름</th>
+<th>생년월일</th>
+<th><span style='color: red'>주소</span></th>
+<th>시</th>
+<th>동</th>
+<th>구</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>와 같이 컬럼이 있을 때 &ldquo;<span style='color: red'>주소</span>&ldquo;만 알면 &ldquo;시&rdquo;, &ldquo;동&rdquo;, &ldquo;구&quot;도 알 수 있다.</p>
+<center><span style="color:grey; font-size:.8em">3차 정규화 <span style="color:red">후</span></span></center>
+<p><em>*학생 테이블</em></p>
+<table>
+<thead>
+<tr>
+<th>학생id</th>
+<th>학생이름</th>
+<th>생년월일</th>
+<th><span style='color: red'>주소</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>*주소 테이블</em></p>
+<table>
+<thead>
+<tr>
+<th><span style='color: red'>주소</span></th>
+<th>시</th>
+<th>동</th>
+<th>구</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>위 테이블 처럼 주소속성으로 구분지어 정규화 한다.</p>
 </li>
 </ul>
 </li>

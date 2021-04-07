@@ -113,7 +113,7 @@
 
      <center><span style="color:grey; font-size:.8em">2차 정규화 <span style="color:red">후</span></span></center>
 
-     *학생 테이블
+     _*학생 테이블_
 
      | student | age  |
      | ------- | ---- |
@@ -121,7 +121,7 @@
      | 쌀      | 2    |
      | 수수    | 3    |
 
-     *과목 테이블
+     _*과목 테이블_
 
      | student | subject                              |
      | ------- | ------------------------------------ |
@@ -129,16 +129,36 @@
      | 보리    | <span style='color: red'>과학</span> |
      | 쌀      | 수학                                 |
      | 수수    | 수학                                 |
+     
+     ​			
+     
+   - **3차 정규화** : 기본키를 제외한 속성들 간의 **이행적 함수 종속**이 없는 경우
 
+     <p style="font-size:0.9em; text-align:right; font-style:italic;">*이행적 함수 종속 : 기본키를 제외한 다른 속성이 특정 속성을 결정지으면 안된다는 것</p>
 
+     <center><span style="color:grey; font-size:.8em">3차 정규화 전</span></center>
 
+     | 학생id | 학생이름 | 생년월일 | <span style='color: red'>주소</span> | 시   | 동   | 구   |
+     | ------ | -------- | -------- | ------------------------------------ | ---- | ---- | ---- |
+     |        |          |          |                                      |      |      |      |
 
+     와 같이 컬럼이 있을 때 "<span style='color: red'>주소</span>"만 알면 "시", "동", "구"도 알 수 있다. 
 
+     <center><span style="color:grey; font-size:.8em">3차 정규화 <span style="color:red">후</span></span></center>
 
+     _*학생 테이블_
 
+     | 학생id | 학생이름 | 생년월일 | <span style='color: red'>주소</span> |
+     | ------ | -------- | -------- | ------------------------------------ |
+     |        |          |          |                                      |
 
+     _*주소 테이블_
 
+     | <span style='color: red'>주소</span> | 시   | 동   | 구   |
+     | ------------------------------------ | ---- | ---- | ---- |
+     |                                      |      |      |      |
 
+     위 테이블 처럼 주소속성으로 구분지어 정규화 한다.
 
 
 
