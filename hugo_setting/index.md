@@ -69,7 +69,7 @@ Hugo로 블로그를 구축하고 / 이를 git의 서버를 통해 배포한다.
 
   ​	
 
-- **Hugo 설치** (공식홈페이지의 {{< link "https://gohugo.io/getting-started/quick-start/" Quick_Start >}} 참고)
+- **Hugo 설치** (공식홈페이지의 {{< link "https://gohugo.io/getting-started/quick-start/" Quick_Start >}} 참고) - youtube로 설치 동영상이 안내되어 있다.
 
   ​	*👉 난 {{< link "https://github.com/gohugoio/hugo/releases" Hugo_release>}}에서 최신버전을 다운받아 직접 설치했다.*
 
