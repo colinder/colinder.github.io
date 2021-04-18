@@ -64,17 +64,11 @@ INSTALLED_APPS = [
 
 잠시 django의 개발 패턴을 보면
 
-{{< mermaid >}}
-graph LR;
-    A(User) -->|<span style="color:red">요청 <url로 요청을 접수></span>| B{Server <Model>}
-    B --> C[View에서 요청을 처리]
-    C --> D[Template에서 응답페이지를 꾸며]
-    D --> |응답| A(User)
-{{< /mermaid >}}
-
-​	
+<image src="/images/django_02_03.png" width="1000px">
 
 url로 요청을 접수한다는 것을 알 수 있습니다. urls.py로 들어오는 요청을 접수해봅시다.
+
+​	
 
 ### 3. urls.py 등록
 
@@ -129,6 +123,12 @@ urlpatterns = [
 
 ​	
 
+​	
+
+이제는 views를 설정합니다.
+
+<image src="/images/django_02_05.png" width="1000px">
+
 ### 3. articles/views.py 세팅
 
 ```python
@@ -146,6 +146,12 @@ def main(request):
 ```
 
 ​	
+
+​	
+
+이제 마지막 templates를 설정합니다.
+
+<image src="/images/django_02_06.png" width="1000px">
 
 ### 4. articles/templates/articles/main.html 생성
 
@@ -186,15 +192,9 @@ def main(request):
 
 # 👀요약
 
-|                         폴더구조                         |                             흐름                             |
-| :------------------------------------------------------: | :----------------------------------------------------------: |
-| {{<image src="/images/django_02_01.png" width="250px">}} | {{< mermaid >}}<br/>stateDiagram<br/>    [User] --> blog/urls.py<br/>    blog/urls.py --> articles/urls.py<br/>{{< /mermaid >}} |
-
-{{< mermaid >}}<br/>stateDiagram<br/>    [User] --> blog/urls.py<br/>    blog/urls.py --> articles/urls.py<br/>{{< /mermaid >}}
-
-​	
-
-
+|                         폴더구조                         | 흐름 |
+| :------------------------------------------------------: | :--: |
+| {{<image src="/images/django_02_01.png" width="250px">}} |      |
 
 ​	
 
@@ -210,7 +210,7 @@ def main(request):
 
 2️⃣ *왜 templates를 만드는데 articles폴더를 안에 하나 더 만들까요?*
 
- ∴ 이는 1. templates 상속시 오류를 없게 하기 위함과 2. 대규모 프로젝트의 경우 하나의 app안에 다양한 templates 구성이 있는 경우 관리의 편리성 때문이다. 
+ ∴ 이는 **1. templates 상속시 오류를 없게 하기 위함**과 __2. 대규모 프로젝트의 경우 하나의 app안에 다양한 templates 구성이 있는 경우 관리의 편리성__ 때문입니다. 
 
 ​		
 

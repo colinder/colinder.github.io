@@ -41,7 +41,7 @@ Django  이번에는 생성된 프로젝트에서 1. app을 추가해 등록해�
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/django_02_addapp\/"
-        },"genre": "posts","keywords": "Django","wordcount":  584 ,
+        },"genre": "posts","keywords": "Django","wordcount":  592 ,
         "url": "https:\/\/colinder.github.io\/django_02_addapp\/","datePublished": "2021-04-18T22:04:11+09:00","dateModified": "2021-04-18T22:04:11+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -118,7 +118,7 @@ Django  이번에는 생성된 프로젝트에서 1. app을 추가해 등록해�
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Django_02_app</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw"></i>Django</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-04-18">2021-04-18</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;584 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-04-18">2021-04-18</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;592 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -228,9 +228,9 @@ Django  이번에는 생성된 프로젝트에서 1. app을 추가해 등록해�
 </code></pre></td></tr></table>
 </div>
 </div><p>잠시 django의 개발 패턴을 보면</p>
-<div class="mermaid" id="id-1"></div>
-<p>​</p>
+<image src="/images/django_02_03.png" width="1000px">
 <p>url로 요청을 접수한다는 것을 알 수 있습니다. urls.py로 들어오는 요청을 접수해봅시다.</p>
+<p>​</p>
 <h3 id="3-urlspy-등록">3. urls.py 등록</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -328,6 +328,9 @@ Django  이번에는 생성된 프로젝트에서 1. app을 추가해 등록해�
 </code></pre></td></tr></table>
 </div>
 </div><p>​</p>
+<p>​</p>
+<p>이제는 views를 설정합니다.</p>
+<image src="/images/django_02_05.png" width="1000px">
 <h3 id="3-articlesviewspy-세팅">3. articles/views.py 세팅</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -358,6 +361,9 @@ Django  이번에는 생성된 프로젝트에서 1. app을 추가해 등록해�
 </code></pre></td></tr></table>
 </div>
 </div><p>​</p>
+<p>​</p>
+<p>이제 마지막 templates를 설정합니다.</p>
+<image src="/images/django_02_06.png" width="1000px">
 <h3 id="4-articlestemplatesarticlesmainhtml-생성">4. articles/templates/articles/main.html 생성</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -424,12 +430,10 @@ Django  이번에는 생성된 프로젝트에서 1. app을 추가해 등록해�
             data-sizes="auto"
             alt="/images/django_02_01.png" width="250px" />
     </a></td>
-<td style="text-align:center"><div class="mermaid" id="id-2"></div></td>
+<td style="text-align:center"></td>
 </tr>
 </tbody>
 </table>
-<div class="mermaid" id="id-3"></div>
-<p>​</p>
 <p>​</p>
 <p>​</p>
 <h2 id="더-알아보기">더 알아보기</h2>
@@ -445,7 +449,7 @@ Django  이번에는 생성된 프로젝트에서 1. app을 추가해 등록해�
     </a>
 <p>​</p>
 <p>2️⃣ <em>왜 templates를 만드는데 articles폴더를 안에 하나 더 만들까요?</em></p>
-<p>∴ 이는 1. templates 상속시 오류를 없게 하기 위함과 2. 대규모 프로젝트의 경우 하나의 app안에 다양한 templates 구성이 있는 경우 관리의 편리성 때문이다.</p>
+<p>∴ 이는 <strong>1. templates 상속시 오류를 없게 하기 위함</strong>과 <strong>2. 대규모 프로젝트의 경우 하나의 app안에 다양한 templates 구성이 있는 경우 관리의 편리성</strong> 때문입니다.</p>
 <p>​</p>
 <p>​</p>
 <p>​</p>
@@ -494,5 +498,5 @@ Django  이번에는 생성된 프로젝트에서 1. app을 추가해 등록해�
             </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
                 <i class="fas fa-comment fa-fw"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/mermaid/mermaid.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/mermaid/mermaid.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"id-1":"\r\ngraph LR;\r\n    A(User) --\u003e|\u003cspan style=\"color:red\"\u003e요청 \u003curl로 요청을 접수\u003e\u003c/span\u003e| B{Server \u003cModel\u003e}\r\n    B --\u003e C[View에서 요청을 처리]\r\n    C --\u003e D[Template에서 응답페이지를 꾸며]\r\n    D --\u003e |응답| A(User)\r","id-2":"\u003cbr/\u003estateDiagram\u003cbr/\u003e    [User] --\u003e blog/urls.py\u003cbr/\u003e    blog/urls.py --\u003e articles/urls.py\u003cbr/\u003e","id-3":"\u003cbr/\u003estateDiagram\u003cbr/\u003e    [User] --\u003e blog/urls.py\u003cbr/\u003e    blog/urls.py --\u003e articles/urls.py\u003cbr/\u003e"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>
