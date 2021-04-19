@@ -3,9 +3,21 @@
         <title></title>
         <link>https://colinder.github.io/</link>
         <description>Hello New World</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 18 Apr 2021 22:04:11 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 19 Apr 2021 09:29:11 &#43;0900</lastBuildDate>
             <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Django_03_templates overriding</title>
+    <link>https://colinder.github.io/django_03_overriding/</link>
+    <pubDate>Mon, 19 Apr 2021 09:29:11 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/django_03_overriding/</guid>
+    <description><![CDATA[​
+Django Overriding Templates  웹개발을 하다보면 재활용되어야 하는 부분. 즉, 변경되지 않아야 하는 부분과, 변해야 하는 부분이 있습니다. (대표적으로 navbar) 그리고 이런 개발의 편의성을 위해 Django는 Overriding 이라는 기술을 제공합니다.
+ ​
+지난 &ldquo;app&quot;에 이어 진행
+변경되지 않아야 하는 부분은 **그림의 &lsquo;배경&rsquo;**이고, 변해야 하는 부분은 **그림의 &lsquo;디테일 요소&rsquo;**라고 생각하면 이해가 쉽습니다. / 그럼 변경되지 않아야 하는 부분을 먼저 제작해봅시다.
+1. 변경 하지 않을 부분 == 배경 제작 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  &lt;!]]></description>
+</item><item>
     <title>Django_02_app</title>
     <link>https://colinder.github.io/django_02_addapp/</link>
     <pubDate>Sun, 18 Apr 2021 22:04:11 &#43;0900</pubDate>
@@ -117,14 +129,5 @@ SQLD를 준비하면서 공부한 내용을 정리.
   모델링의 정의
  복잡한 &ldquo;현실세계&quot;를 단순화(추상화)시켜 표현 사물 또는 사건에 관한 양상(Aspect)이나 관점(Perspective)을 명확하게 하는 것    특징 3가지
  추상화 - 현실세계를 일정한 형식에 맞추어 표현하는 것 단순화 - 복잡한 현실세계를 약속된 규약에 의해 쉽게 이해할 수 있게 표현하는 것 명확화 - 누구나 이해할 수 있도록 명확하게 표기하는 것    모델링의 3가지 관점]]></description>
-</item><item>
-    <title>Python_Library</title>
-    <link>https://colinder.github.io/python_library/</link>
-    <pubDate>Mon, 08 Mar 2021 22:39:31 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/python_library/</guid>
-    <description><![CDATA[​
-Python Library 😀   Idea 1 2 3 4 5 6 7 8 9 10 11 12 13  # 모두 &#39;거짓&#39;이 들어있는 리스트는 &#39;거짓&#39;으로 볼 수 있지 않을까? # 라고 생각해봤다.  a = [False, False, False] if a == False: print(&#34;거짓&#34;) else: print(&#34;오류&#34;) # &gt;&gt;&gt; 오류 # 안된다. 생각을 말아라..ㅎㅎ   ​
-  raise 예외(&lsquo;에러메시지&rsquo;) 1 2 3 4 5 6 7 8 9 10 11 12  # python에서는 의도적으로 오류를 일으킬 수 있는데 # 이를 해주는 것이 raise 메서드.]]></description>
 </item></channel>
 </rss>
