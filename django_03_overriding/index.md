@@ -1,4 +1,4 @@
-# Django_03_templates overriding
+# Django_03_overriding templates
 
 
 ​	
