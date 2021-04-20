@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>React-Native_navigation - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="React-Native_navigation" />
+<meta property="og:description" content="​
+React-Native navigation  vue는 router를 사용해 화면을 이동합니다. 그렇다면, react-native는 어떻게 화면을 이동할까요?
+바로 react-native navigation을 사용합니다. 어떻게 사용하는건지 기록합시다.
+ 공식홈페이지의 Getting started로 알아봅시다.
+​
+*새로운 프로젝트를 만들고 root폴더에서 진행.
+  개발환경
+  npm으로 진행
+  react-native_cli (✨expo로 진행하지 않습니다.)
+  android 기준
+  함수형 컴포넌트로 진행 (✨ 클래스 컴포넌트로 진행하지 않습니다.)
+  RN 버전 0.60이상에서 진행
+  react-native-cli: 2.0.1
+  react-native: 0." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://colinder.github.io/react-native_navigation/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-10-29T21:24:52&#43;09:00" />
+<meta property="article:modified_time" content="2020-10-29T21:24:52&#43;09:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
+
+<meta name="twitter:title" content="React-Native_navigation"/>
+<meta name="twitter:description" content="​
+React-Native navigation  vue는 router를 사용해 화면을 이동합니다. 그렇다면, react-native는 어떻게 화면을 이동할까요?
+바로 react-native navigation을 사용합니다. 어떻게 사용하는건지 기록합시다.
+ 공식홈페이지의 Getting started로 알아봅시다.
+​
+*새로운 프로젝트를 만들고 root폴더에서 진행.
+  개발환경
+  npm으로 진행
+  react-native_cli (✨expo로 진행하지 않습니다.)
+  android 기준
+  함수형 컴포넌트로 진행 (✨ 클래스 컴포넌트로 진행하지 않습니다.)
+  RN 버전 0.60이상에서 진행
+  react-native-cli: 2.0.1
+  react-native: 0."/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/react-native_navigation/" /><link rel="prev" href="https://colinder.github.io/what_is_cookie/" /><link rel="next" href="https://colinder.github.io/react-native_googlelogin/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "React-Native_navigation",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/colinder.github.io\/react-native_navigation\/"
+        },"genre": "posts","keywords": "react-native, web","wordcount":  770 ,
+        "url": "https:\/\/colinder.github.io\/react-native_navigation\/","datePublished": "2020-10-29T21:24:52+09:00","dateModified": "2020-10-29T21:24:52+09:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "colinder"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="">Hello New World</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="">Hello New World</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">React-Native_navigation</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/react-native/"><i class="far fa-folder fa-fw"></i>react-native</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-10-29">2020-10-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;770 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#react-native-navigation-개발환경세팅">React-Native navigation 개발환경세팅</a></li>
+    <li><a href="#react-native-navigation-사용해보자">React-Native navigation 사용해보자</a>
+      <ul>
+        <li><a href="#페이지-이동rn-navigation">페이지 이동(RN navigation)</a></li>
+        <li><a href="#페이지-이동-with-params">페이지 이동 with params</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>​</p>
+<h1 id="react-native-navigation">React-Native navigation</h1>
+<blockquote>
+<p>vue는 router를 사용해 화면을 이동합니다. 그렇다면, react-native는 어떻게 화면을 이동할까요?</p>
+<p>바로 <code>react-native navigation</code>을 사용합니다. 어떻게 사용하는건지 기록합시다.</p>
+</blockquote>
+<p><em>공식홈페이지의 <a href="https://reactnavigation.org/docs/getting-started" target="_blank" rel="noopener noreffer">Getting started</a>로 알아봅시다.</em></p>
+<p>​</p>
+<p>*새로운 프로젝트를 만들고 root폴더에서 진행.</p>
+<ul>
+<li>
+<p>개발환경</p>
+<ul>
+<li>
+<p>npm으로 진행</p>
+</li>
+<li>
+<p>react-native_cli (✨expo로 진행하지 않습니다.)</p>
+</li>
+<li>
+<p>android 기준</p>
+</li>
+<li>
+<p>함수형 컴포넌트로 진행 (✨ 클래스 컴포넌트로 진행하지 않습니다.)</p>
+</li>
+<li>
+<p>RN 버전 0.60이상에서 진행</p>
+<ul>
+<li>
+<p>react-native-cli: 2.0.1</p>
+</li>
+<li>
+<p>react-native: 0.63.3</p>
+<p>​</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="react-native-navigation-개발환경세팅">React-Native navigation 개발환경세팅</h2>
+<ol>
+<li>
+<p>Getting started의 npm설치</p>
+<image src="/images/RN_navigation_00.png" width="auto" style="display: block; margin: 10px auto;">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">npm install @react-navigation/native
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+</li>
+<li>
+<p>화면을 조금 내려서 dependency도 설치</p>
+<image src="/images/RN_navigation_01.png" width="auto" style="display: block; margin: 10px auto;">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">npm install react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+</li>
+<li>
+<p>entry file파일에 import 등록</p>
+<image src="/images/RN_navigation_02.png" width="auto" style="display: block; margin: 10px auto;">
+<p>제가 개발하는 당시 기준 index.js를 보면</p>
+<image src="/images/RN_navigation_03.png" width="auto" style="display: block; margin: 10px auto;">
+<p>9번 줄에 App에서 시작이 된다고 명시되어 있음으로</p>
+<image src="/images/RN_navigation_04.png" width="auto" style="display: block; margin: 10px auto;">
+<p>App.js (a.k.a entry file) 최상단에 import를 등록합니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">import <span class="s1">&#39;react-native-gesture-handler&#39;</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>*기본적인 사용환경 설정은 완료되었습니다. 다만, <code>stack</code>이라는 기술을 사용할 예정이라 추가로 진행할 것이 있습니다.</p>
+<p>​</p>
+</li>
+<li>
+<p>공식문서의 <a href="https://reactnavigation.org/docs/hello-react-navigation" target="_blank" rel="noopener noreffer">stack navigator library</a>로 이동 후 설치</p>
+<image src="/images/RN_navigation_05.png" width="auto" style="display: block; margin: 10px auto;">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">npm install @react-navigation/stack
+</code></pre></td></tr></table>
+</div>
+</div><p>*이제 정말 개발 환경 설정이 완료되었습니다.</p>
+<p>​</p>
+</li>
+</ol>
+<h2 id="react-native-navigation-사용해보자">React-Native navigation 사용해보자</h2>
+<blockquote>
+<p>페이지를 이동하는 것과 페이지를 이동할 때 params(인자)를 같이 넘겨주는 방법을 기록합니다.</p>
+</blockquote>
+<p>먼저, root폴더에 src라는 폴더를 만들고 / home.js와 user.js 파일을 만듭니다. (함수형으로 개발하니 rnfe + tab을 입력해 양식을 빠르게 불러올 수 있습니다.) 틀을 잡고 시작합니다.</p>
+<image src="/images/RN_navigation_06.png" width="auto" style="display: block; margin: 10px auto;">
+<p>​</p>
+<h3 id="페이지-이동rn-navigation">페이지 이동(RN navigation)</h3>
+<blockquote>
+<p>import → entry file 코딩→ components 코딩 순서로 진행합니다.</p>
+</blockquote>
+<ol>
+<li>
+<p>설치한 navigation과 stack을 import 해줍니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># App.js</span>
+   
+import <span class="s1">&#39;react-native-gesture-handler&#39;</span><span class="p">;</span>
+import React from <span class="s1">&#39;react&#39;</span>
+import <span class="o">{</span> NavigationContainer<span class="o">}</span> from <span class="s1">&#39;@react-navigation/native&#39;</span>		//👈
+import <span class="o">{</span> createStackNavigator<span class="o">}</span> from <span class="s1">&#39;@react-navigation/stack&#39;</span>		//👈
+...
+   
+const <span class="nv">Stack</span> <span class="o">=</span> createStackNavigator<span class="o">()</span><span class="p">;</span>  //👈 추가로 stack을 사용하기 위해 변수 선언
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+</li>
+<li>
+<p>Usage</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># App.js</span>
+   
+import <span class="s1">&#39;react-native-gesture-handler&#39;</span><span class="p">;</span>
+import React from <span class="s1">&#39;react&#39;</span>
+import <span class="o">{</span> NavigationContainer<span class="o">}</span> from <span class="s1">&#39;@react-navigation/native&#39;</span>
+import <span class="o">{</span> createStackNavigator<span class="o">}</span> from <span class="s1">&#39;@react-navigation/stack&#39;</span>
+import HomeScreen from <span class="s1">&#39;./src/home&#39;</span>
+import UserScreen from <span class="s1">&#39;./src/user&#39;</span>
+   
+const <span class="nv">Stack</span> <span class="o">=</span> createStackNavigator<span class="o">()</span><span class="p">;</span>
+   
+const <span class="nv">App</span> <span class="o">=</span> <span class="o">()</span> <span class="o">=</span>&gt; <span class="o">{</span>
+  <span class="k">return</span> <span class="o">(</span>
+    &lt;NavigationContainer&gt;
+      &lt;Stack.Navigator <span class="nv">initialRouteName</span><span class="o">=</span><span class="s1">&#39;Home&#39;</span>&gt;
+        &lt;Stack.Screen <span class="nv">name</span><span class="o">=</span><span class="s1">&#39;Home&#39;</span> <span class="nv">component</span><span class="o">={</span>HomeScreen<span class="o">}</span>/&gt;
+        &lt;Stack.Screen <span class="nv">name</span><span class="o">=</span><span class="s1">&#39;User&#39;</span> <span class="nv">component</span><span class="o">={</span>UserScreen<span class="o">}</span>/&gt;
+      &lt;/Stack.Navigator&gt;
+    &lt;/NavigationContainer&gt;
+  <span class="o">)</span>
+<span class="o">}</span>
+<span class="nb">export</span> default App
+   
+<span class="c1"># NavigationContainer (Fragments같은 겁니다.)</span>
+<span class="c1"># initialRouteName: 초기 화면을 Home으로 설정했습니다.</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+</li>
+<li>
+<p>home.js와 user.js도 코딩합니다</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># home.js</span>
+   
+import <span class="s1">&#39;react-native-gesture-handler&#39;</span><span class="p">;</span>
+import React from <span class="s1">&#39;react&#39;</span>
+import <span class="o">{</span> Text, View, Button <span class="o">}</span> from <span class="s1">&#39;react-native&#39;</span>
+   
+const <span class="nv">HomeScreen</span> <span class="o">=</span> <span class="o">({</span> navigation <span class="o">})</span> <span class="o">=</span>&gt; <span class="o">{</span> 		//👈 navigation을 등록
+  <span class="k">return</span> <span class="o">(</span>
+    &lt;View&gt;
+      &lt;Text&gt;Home Screen&lt;/Text&gt;
+      &lt;Button
+        <span class="nv">title</span><span class="o">=</span><span class="s2">&#34;To User Screen&#34;</span>
+        <span class="nv">onPress</span><span class="o">={()=</span>&gt;<span class="o">{</span>							//👈 onPress: 버튼이 눌리면 실행
+          navigation.navigate<span class="o">(</span><span class="s1">&#39;User&#39;</span><span class="o">)</span>			//👈 이런 문법으로 사용
+        <span class="o">}}</span>
+      /&gt;
+    &lt;/View&gt;
+  <span class="o">)</span>
+<span class="o">}</span>
+   
+<span class="nb">export</span> default HomeScreen
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># user.js</span>
+   
+import <span class="s1">&#39;react-native-gesture-handler&#39;</span><span class="p">;</span>
+import React from <span class="s1">&#39;react&#39;</span>
+import <span class="o">{</span> Text, View, Button <span class="o">}</span> from <span class="s1">&#39;react-native&#39;</span>
+   
+const <span class="nv">HomeScreen</span> <span class="o">=</span> <span class="o">({</span> navigation <span class="o">})</span> <span class="o">=</span>&gt; <span class="o">{</span> 		// navigation을 등록
+  <span class="k">return</span> <span class="o">(</span>
+    &lt;View&gt;
+      &lt;Text&gt;Home Screen&lt;/Text&gt;
+      &lt;Button
+        <span class="nv">title</span><span class="o">=</span><span class="s2">&#34;To User Screen&#34;</span>
+        <span class="nv">onPress</span><span class="o">={()=</span>&gt;<span class="o">{</span>
+          navigation.navigate<span class="o">(</span><span class="s1">&#39;Home&#39;</span><span class="o">)</span>			// 이런 문법으로 사용
+        <span class="o">}}</span>
+      /&gt;
+    &lt;/View&gt;
+  <span class="o">)</span>
+<span class="o">}</span>
+   
+<span class="nb">export</span> default UserScreen
+</code></pre></td></tr></table>
+</div>
+</div><p>이 상태에서 시뮬레이터를 돌려보면 화면 전환이 되는 것을 볼 수 있습니다. But 할 것이 남았습니다. 이제 params도 전달 해봅시다.</p>
+<p>​</p>
+</li>
+</ol>
+<h3 id="페이지-이동-with-params">페이지 이동 with params</h3>
+<blockquote>
+<p>navigation.navigate(A, B)는 두개의 인자를 받습니다. A는 이동할 컴포넌트의 &lsquo;이름&rsquo;, B가 &lsquo;<code>params</code>&lsquo;입니다. (아래는 home.js → user.js로 params를 보내는 예제입니다.)</p>
+</blockquote>
+<p>​</p>
+<ol>
+<li>
+<p>home.js에서 전달할 params를 구성합니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># home.js</span>
+   
+import <span class="s1">&#39;react-native-gesture-handler&#39;</span><span class="p">;</span>
+import React from <span class="s1">&#39;react&#39;</span>
+import <span class="o">{</span> Text, View, Button <span class="o">}</span> from <span class="s1">&#39;react-native&#39;</span>
+   
+const <span class="nv">HomeScreen</span> <span class="o">=</span> <span class="o">({</span> navigation <span class="o">})</span> <span class="o">=</span>&gt; <span class="o">{</span> 
+  <span class="k">return</span> <span class="o">(</span>
+    &lt;View <span class="nv">style</span><span class="o">={{</span>        // 화면에 보기 좋게 간단한 스타일 설정
+      flex: 1, 
+      alignItems: <span class="s1">&#39;center&#39;</span>, 
+      justifyContent: <span class="s1">&#39;center&#39;</span>
+      <span class="o">}}</span>&gt;
+      &lt;Text&gt;Home Screen&lt;/Text&gt;
+      &lt;Button
+        <span class="nv">title</span><span class="o">=</span><span class="s2">&#34;To User Screen&#34;</span>
+        <span class="nv">onPress</span><span class="o">={()=</span>&gt;<span class="o">{</span>
+          navigation.navigate<span class="o">(</span><span class="s1">&#39;User&#39;</span>, <span class="o">{</span>       // 두번째 인자 입력
+            userIdx: 100,
+            userName: <span class="s1">&#39;jong&#39;</span>,
+            userLastName: null,
+          <span class="o">})</span>
+        <span class="o">}}</span>
+      /&gt;
+    &lt;/View&gt;
+  <span class="o">)</span>
+<span class="o">}</span>
+<span class="nb">export</span> default HomeScreen
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+</li>
+<li>
+<p>user.js에서 parmas를 받습니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># user.js</span>
+   
+import <span class="s1">&#39;react-native-gesture-handler&#39;</span><span class="p">;</span>
+import React from <span class="s1">&#39;react&#39;</span>
+import <span class="o">{</span> Text, View, Button <span class="o">}</span> from <span class="s1">&#39;react-native&#39;</span>
+   
+const <span class="nv">UserScreen</span> <span class="o">=</span> <span class="o">({</span> route, navigation <span class="o">})</span> <span class="o">=</span>&gt; <span class="o">{</span>				// route를 인자로 받음.
+  const <span class="o">{</span> userIdx, userName, userLastName <span class="o">}</span> <span class="o">=</span> route.params<span class="p">;</span>  // 전달받은 값<span class="o">(</span>route<span class="o">)</span>
+   
+  <span class="k">return</span> <span class="o">(</span>
+    &lt;View&gt;
+      &lt;Text&gt;User Screen&lt;/Text&gt;
+      &lt;Button
+        <span class="nv">title</span><span class="o">=</span><span class="s2">&#34;To Home Screen&#34;</span>
+        <span class="nv">onPress</span><span class="o">={()</span> <span class="o">=</span>&gt; <span class="o">{</span>
+          navigation.navigate<span class="o">(</span><span class="s1">&#39;Home&#39;</span><span class="o">)</span>
+        <span class="o">}}</span>
+      /&gt;
+      &lt;Text&gt;User Idx: <span class="o">{</span>JSON.stringify<span class="o">(</span>userIdx<span class="o">)}</span>&lt;/Text&gt;		  <span class="o">{</span>/* JSON의 string으로 받습니다. */<span class="o">}</span>
+      &lt;Text&gt;User Name: <span class="o">{</span>JSON.stringify<span class="o">(</span>userName<span class="o">)}</span>&lt;/Text&gt;
+      <span class="o">{</span> route.params.userLastName <span class="o">&amp;&amp;</span> &lt;Text&gt;User LastName: <span class="o">{</span>JSON.stringify<span class="o">(</span>userLastName<span class="o">)}</span>&lt;/Text&gt;<span class="o">}</span>			<span class="o">{</span>/* 조건을 줘봤습니다. <span class="o">{</span>인자가 있을 때만 &lt;Text&gt;로 값을 표시<span class="o">}</span> */<span class="o">}</span>
+    &lt;/View&gt;
+  <span class="o">)</span>
+<span class="o">}</span>
+<span class="nb">export</span> default UserScreen
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+</li>
+</ol>
+<p>*결과 화면</p>
+<table>
+<thead>
+<tr>
+<th>home.js</th>
+<th>user.js</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><image src="/images/RN_navigation_07.png" width="auto" style="display: block; margin: 10px auto;"></td>
+<td><image src="/images/RN_navigation_08.png" width="auto" style="display: block; margin: 10px auto;"></td>
+</tr>
+</tbody>
+</table>
+<p>​</p>
+<p>​</p>
+<h1 id="요약">👀요약</h1>
+<blockquote>
+<p>지금까지 components간의 이동과 params, 간단한 스타일의 적용을 알아봤습니다. 해보면 어렵지 않으나, 모르면 다른 세상 이야기같습니다.</p>
+<p>다음은 react-native에 google login을 심어보겠습니다.</p>
+</blockquote>
+<p>​</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2020-10-29</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/react-native_navigation/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/react-native/">react-native</a>,&nbsp;<a href="/tags/web/">web</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/what_is_cookie/" class="prev" rel="prev" title="what is Cookie?"><i class="fas fa-angle-left fa-fw"></i>what is Cookie?</a>
+            <a href="/react-native_googlelogin/" class="next" rel="next" title="React-Native_google login">React-Native_google login<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.82.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

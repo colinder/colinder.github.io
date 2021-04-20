@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Async To Sync in Javascript - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="Async To Sync in Javascript" />
+<meta property="og:description" content="​
+Async to Sync in JavaScript  누구나 웹개발을 하다보면 HTTP 통신을 통해 데이터를 가져오고 가공하고 사용하게됩니다. 그리고 동기, 비동기 처리 때문에 골치가 아파집니다. (만약 골치가 아프지 않다면.. 부럽습니다..) 더 이상 골치아프기 싫어서 정리해봅시다.👍
+ *동기, 비동기 설명은 이전 포스팅으로 갈음합니다.
+​
+Async(비동기) to Sync(동기) 방법 자바스크립트에서의 비동기를 동기로 동작시키는 대표적인 3가지의 방법을 알아보겠습니다.
+  Callback
+  Promise
+  Async / Await
+  ​
+1. Callback  개발자들 마다 정의가 조금씩 다르겠지만, 저는 어떤 이벤트가 발생한 후, 수행될 함수로 정의해보겠습니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://colinder.github.io/asynctosyncinjavascript/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-11-20T13:59:06&#43;09:00" />
+<meta property="article:modified_time" content="2020-11-20T13:59:06&#43;09:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
+
+<meta name="twitter:title" content="Async To Sync in Javascript"/>
+<meta name="twitter:description" content="​
+Async to Sync in JavaScript  누구나 웹개발을 하다보면 HTTP 통신을 통해 데이터를 가져오고 가공하고 사용하게됩니다. 그리고 동기, 비동기 처리 때문에 골치가 아파집니다. (만약 골치가 아프지 않다면.. 부럽습니다..) 더 이상 골치아프기 싫어서 정리해봅시다.👍
+ *동기, 비동기 설명은 이전 포스팅으로 갈음합니다.
+​
+Async(비동기) to Sync(동기) 방법 자바스크립트에서의 비동기를 동기로 동작시키는 대표적인 3가지의 방법을 알아보겠습니다.
+  Callback
+  Promise
+  Async / Await
+  ​
+1. Callback  개발자들 마다 정의가 조금씩 다르겠지만, 저는 어떤 이벤트가 발생한 후, 수행될 함수로 정의해보겠습니다."/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/asynctosyncinjavascript/" /><link rel="prev" href="https://colinder.github.io/interpretervscompiler_language/" /><link rel="next" href="https://colinder.github.io/what_is_domain/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Async To Sync in Javascript",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/colinder.github.io\/asynctosyncinjavascript\/"
+        },"genre": "posts","keywords": "Async, Sync, Javascript","wordcount":  1440 ,
+        "url": "https:\/\/colinder.github.io\/asynctosyncinjavascript\/","datePublished": "2020-11-20T13:59:06+09:00","dateModified": "2020-11-20T13:59:06+09:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "colinder"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="">Hello New World</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="">Hello New World</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Async To Sync in Javascript</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/javascript/"><i class="far fa-folder fa-fw"></i>Javascript</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-11-20">2020-11-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1440 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;7 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#async비동기-to-sync동기-방법">Async(비동기) to Sync(동기) 방법</a></li>
+    <li><a href="#1-callback">1. Callback</a></li>
+    <li><a href="#2-promise">2. Promise</a></li>
+    <li><a href="#3-async--await">3. Async / Await</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#참고-했던-글">참고 했던 글</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>​</p>
+<h1 id="async-to-sync-in-javascript">Async to Sync in JavaScript</h1>
+<blockquote>
+<p>누구나 웹개발을 하다보면 HTTP 통신을 통해 데이터를 가져오고 가공하고 사용하게됩니다. 그리고 동기, 비동기 처리 때문에 골치가 아파집니다. (만약 골치가 아프지 않다면.. 부럽습니다..) 더 이상 골치아프기 싫어서 정리해봅시다.👍</p>
+</blockquote>
+<p><em>*동기, 비동기 설명은 <a href="https://colinder.github.io/sync_async_callback/" target="_blank" rel="noopener noreffer">이전 포스팅</a>으로 갈음합니다.</em></p>
+<p>​</p>
+<h2 id="async비동기-to-sync동기-방법">Async(비동기) to Sync(동기) 방법</h2>
+<p>자바스크립트에서의 비동기를 동기로 동작시키는 대표적인 3가지의 방법을 알아보겠습니다.</p>
+<ol>
+<li>
+<p>Callback</p>
+</li>
+<li>
+<p>Promise</p>
+</li>
+<li>
+<p>Async / Await</p>
+</li>
+</ol>
+<p>​</p>
+<h2 id="1-callback">1. Callback</h2>
+<blockquote>
+<p>개발자들 마다 정의가 조금씩 다르겠지만, 저는 <strong>어떤 이벤트가 발생한 후, 수행될 함수</strong>로 정의해보겠습니다.</p>
+</blockquote>
+<ul>
+<li>
+<p>예제를 보며 이해해 봅시다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// Callback 사용 예제
+</span><span class="c1">// a와 b라는 함수를 선언
+</span><span class="c1"></span>  
+<span class="kd">function</span> <span class="nx">a</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>       <span class="c1">// 함수 a는 callback이라는 함수를 받는다.
+</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="s1">&#39;i am data&#39;</span> <span class="c1">// i am data라는 값을 담은 변수 data를 생성
+</span><span class="c1"></span>    <span class="nx">callback</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>           <span class="c1">// callback이라는 함수에 data라는 변수를 넘겨줌.
+</span><span class="c1"></span><span class="p">}</span>
+  
+<span class="kd">function</span> <span class="nx">b</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>			<span class="c1">// 함수 b는 입력받은 값 value를 콘솔에 출력하는 함수.
+</span><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;넘겨받은 값&#39;</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span>
+<span class="p">}</span>
+  
+<span class="c1">// 사용해 봅시다.
+</span><span class="c1"></span><span class="nx">a</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>                    <span class="c1">// 함수 a에 function을 받는데 값으로 value를 받는다. 
+</span><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;넘겨받은 값&#39;</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span>   <span class="c1">// 함수 a가 실행되면 자동으로 const data를 만드는데 data에는 &#39;i am data&#39;라는 값이 할당. 되고 value가 된다.
+</span><span class="c1"></span><span class="p">})</span>
+  
+<span class="c1">// 위를 간소화한 코드.
+</span><span class="c1"></span><span class="nx">a</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<p>위의 예제 코드가 눈에 들어왔다면, 먼저 <b>비동기적 코드</b>를 만들어 봅시다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// Callback 비동기적 코딩
+</span><span class="c1">// a가 동작하고 b가 동작하길 원하며 코딩
+</span><span class="c1"></span>  
+<span class="c1">// a와 b라는 함수를 선언
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">a</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>       <span class="c1">// 함수 a는 2초 후에 동작
+</span><span class="c1"></span>    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;running a....&#39;</span><span class="p">)</span>
+    <span class="p">},</span> <span class="mi">2000</span><span class="p">)</span>
+<span class="p">}</span>
+  
+<span class="kd">function</span> <span class="nx">b</span><span class="p">()</span> <span class="p">{</span>       <span class="c1">// 함수 b는 1초 후에 동작
+</span><span class="c1"></span>    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;running b....&#39;</span><span class="p">)</span>
+    <span class="p">},</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="p">}</span>
+  
+<span class="c1">// 실행해봅시다.
+</span><span class="c1"></span><span class="nx">a</span><span class="p">()</span>
+<span class="nx">b</span><span class="p">()</span>
+</code></pre></td></tr></table>
+</div>
+</div><a class="lightgallery" href="/images/Async_to_Sync_in_Javascript_00.png" title="/images/Async_to_Sync_in_Javascript_00.png" data-thumbnail="/images/Async_to_Sync_in_Javascript_00.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/Async_to_Sync_in_Javascript_00.png"
+            data-srcset="/images/Async_to_Sync_in_Javascript_00.png, /images/Async_to_Sync_in_Javascript_00.png 1.5x, /images/Async_to_Sync_in_Javascript_00.png 2x"
+            data-sizes="auto"
+            alt="/images/Async_to_Sync_in_Javascript_00.png" width="1000px" />
+    </a>
+<p>setTimeout이라는 javascript의 가장 대표적인 동작 지연 함수를 사용해 코딩해보았고</p>
+<p>결과로 a → b의 순서가 아닌 함수 동작 시간에 따른 딜레이를 확인해보았습니다.</p>
+<p>​</p>
+<p>어떻게 해야 내가 코딩한 순서대로 (a → b) <strong>동기적</strong>으로 작동하게 만들 수 있을까요?</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// Callback 동기적 코딩
+</span><span class="c1">// a가 동작하고 b가 동작하길 원하며 코딩
+</span><span class="c1"></span>  
+<span class="c1">// a와 b라는 함수를 선언
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">a</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>       <span class="c1">// 함수 a는 2초 후에 동작
+</span><span class="c1"></span>    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;running a....&#39;</span><span class="p">)</span>
+        <span class="nx">callback</span><span class="p">()</span>			 <span class="c1">// 👈 callback함수를 추가
+</span><span class="c1"></span>    <span class="p">},</span> <span class="mi">2000</span><span class="p">)</span>
+<span class="p">}</span>
+  
+<span class="kd">function</span> <span class="nx">b</span><span class="p">()</span> <span class="p">{</span>       <span class="c1">// 함수 b는 1초 후에 동작
+</span><span class="c1"></span>    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;running b....&#39;</span><span class="p">)</span>
+    <span class="p">},</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="p">}</span>
+  
+<span class="c1">// 실행해봅시다.
+</span><span class="c1"></span><span class="nx">a</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><a class="lightgallery" href="/images/Async_to_Sync_in_Javascript_01.png" title="/images/Async_to_Sync_in_Javascript_01.png" data-thumbnail="/images/Async_to_Sync_in_Javascript_01.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/Async_to_Sync_in_Javascript_01.png"
+            data-srcset="/images/Async_to_Sync_in_Javascript_01.png, /images/Async_to_Sync_in_Javascript_01.png 1.5x, /images/Async_to_Sync_in_Javascript_01.png 2x"
+            data-sizes="auto"
+            alt="/images/Async_to_Sync_in_Javascript_01.png" width="1000px" />
+    </a>
+<p>원하는 동작 console.log(&lsquo;runing a&hellip;.')뒤에 callback함수를 넣어 console.log(&lsquo;runing b&hellip;.')를 동작했습니다.</p>
+<p><strong>간단해보이지만 강력하고, 막상 적용하려면 어려울 수 있습니다. 연습을 추천합니다.😊</strong></p>
+<p>근데 callback 함수는 대부분의 개발자들이 간단한 코딩에만 사용합니다. 단순히 1, 2개 정도의 요청이라면, callback 함수로 처리할 수 있지만, 만약 그 수가 많아진다면, 소위 callback HELL이 되기 때문입니다.</p>
+<p>그래서 다른 방법도 알아봅시다!</p>
+<p>​</p>
+</li>
+</ul>
+<h2 id="2-promise">2. Promise</h2>
+<blockquote>
+<p><strong><code>Promise</code></strong> 객체는 비동기 작업이 맞이할 미래의 완료 또는 실패와 그 결과 값을 나타냅니다. 간단히 비동기 작업에 사용되는 객체입니다.</p>
+</blockquote>
+<ul>
+<li>
+<p>Promise는 <span style='background-color: black; font-weight: bold; border-radius: 10px; padding-bottom: .2rem'> <span style="color: grey">ex)</span> <span style= 'color: #569cd6'>new</span> <span style="color: #1cb50b;">Promise <span style="color: white">(</span></span><span style= 'color: #569cd6'> function <span style="color: white">(</span> <span style="color: #dcdcaa;">resolve, reject</span> <span style="color: white">)</span></span><span style="color: white;">)</span> </span>의 형태로 사용됩니다.</p>
+<p>특징으로 Promise의 인자는 반드시 <span style="color: #569cd6;">function</span>을 받아야 합니다. <em>(동작 성공시 실행될 resolve라는 함수와 실패시 동작할 reject / 2개의 인자를 받습니다.)</em></p>
+</li>
+<li>
+<p>Promise 는 3가지 상태가 존재합니다.</p>
+<div class="mermaid" id="id-1"></div>
+</li>
+<li>
+<p>만약 인자를 받지 않거나 함수 이외의 값을 전달하면, Uncaught TypeError가 발생하고, 인자로 전달된 resolve 와 reject 중 하나라도 호출하지 않는다면, 영원히 pending 상태로 대기하게 됩니다.</p>
+<p><strong>또 Promise 객체들은 <code>.then()</code> 을 통해 이어질 수 있고 <code>.catch()</code> 를 통해 에러 캐치를 할 수 있습니다. <code>이 부분을 활용해 동기 처리를 합니다.</code></strong></p>
+<div class="mermaid" id="id-2"></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// Promise 사용 예제
+</span><span class="c1"></span>  
+<span class="kd">function</span> <span class="nx">test</span><span class="p">()</span> <span class="p">{</span>                                    <span class="c1">// test라는 동작(함수)을 만드는데
+</span><span class="c1"></span>    <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span>   <span class="c1">// Promise로 만들고 Promise는 인자로 resolve, reject를 받는다.
+</span><span class="c1"></span>        <span class="k">try</span> <span class="p">{</span>                                        <span class="c1">// 정상처리되면(조건은 다양하게 구성)
+</span><span class="c1"></span>            <span class="nx">resolve</span><span class="p">(</span>                                 <span class="c1">// resolve를 동작하는데
+</span><span class="c1"></span>                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Promise resolve&#39;</span><span class="p">)</span>       <span class="c1">// Promise resolve를 출력하고
+</span><span class="c1"></span>            <span class="p">)</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>                                    <span class="c1">// error가 발생하면
+</span><span class="c1"></span>            <span class="nx">reject</span><span class="p">(</span>                                  <span class="c1">// reject를 동작하는데
+</span><span class="c1"></span>                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Promise reject&#39;</span><span class="p">)</span>        <span class="c1">// Promise reject를 출력한다.
+</span><span class="c1"></span>            <span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">})</span>
+<span class="p">}</span>
+  
+<span class="nx">test</span><span class="p">()</span>                              <span class="c1">// test를 동작(함수실행)하는데
+</span><span class="c1"></span><span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span>                      <span class="c1">// 에러가 없다면
+</span><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;정상 처리 완료&#39;</span><span class="p">)</span>    <span class="c1">// &#39;정상 처리 완료&#39;를 출력하고
+</span><span class="c1"></span><span class="p">)</span>
+<span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="p">=&gt;</span>                     <span class="c1">// 에러가 발생했다면
+</span><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;에러 발생&#39;</span><span class="p">)</span>        <span class="c1">// &#39;에러 발생&#39;을 출력한다.
+</span><span class="c1"></span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<p>위의 예제 코드가 눈에 들어왔다면, 이제 <b>동기적 코드</b>를 보며 이해해봅시다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// Promise 동기적 코딩
+</span><span class="c1">// 1,2,3 순서대로 출력되길 원하며 코딩
+</span><span class="c1"></span>  
+<span class="kd">function</span> <span class="nx">test</span><span class="p">()</span> <span class="p">{</span>                                    <span class="c1">// test라는 동작(함수)을 만드는데
+</span><span class="c1"></span>    <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span>   <span class="c1">// Promise로 만들고 Promise는 인자로 reselve, reject를 받는다.
+</span><span class="c1"></span>        <span class="k">try</span> <span class="p">{</span>
+            <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>					<span class="c1">// AJAX등의 처리를 기다리는 &#39;지연 시간&#39;을 setTimeout으로 설정
+</span><span class="c1"></span>                <span class="nx">resolve</span><span class="p">(</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">)</span> <span class="p">)</span>			<span class="c1">// resolve처리를 하는데 3초의 딜레이를 주고
+</span><span class="c1"></span>            <span class="p">},</span><span class="mi">3000</span><span class="p">)</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">)</span>                    	<span class="c1">// resolve 
+</span><span class="c1"></span>        <span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
+            <span class="nx">reject</span><span class="p">(</span>
+                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;reject running&#39;</span><span class="p">)</span>
+            <span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">})</span>
+<span class="p">}</span>
+<span class="kd">function</span> <span class="nx">b</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;3&#39;</span><span class="p">)</span>
+    <span class="p">},</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="p">}</span>
+  
+<span class="c1">// 실행해봅시다.
+</span><span class="c1"></span><span class="nx">test</span><span class="p">()</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span>
+<span class="c1">// .then(function() {b()})
+</span><span class="c1"></span>  
+<span class="c1">//////////////////////////////////////////////////////////////////////////////////////
+</span><span class="c1">// .then(b) === .then(function() {b()}) === .then(() =&gt; {b()}) !== .then(b())
+</span><span class="c1">// .then(b) / .then(function() {b()}) / .then(() =&gt; {b()})는 
+</span><span class="c1">// &#34;test함수에 오류가 없다면 b함수를 return 하라&#34; 라는 의미기 때문에 동기적인 처리가 가능!
+</span><span class="c1">// 반면 .then(b())는 &#34;test함수에 오류가 없으면 b라는 함수를 실행하라&#34; 라는 의미기 때문에
+</span><span class="c1">// 순서에 상관없이 오류가 없다면 b를 즉시 실행한다.
+</span><span class="c1">// 비슷하게...
+</span><span class="c1">// .then(console.log(&#39;hi&#39;))는 &#34;요청들어오면 hi를 출력하라&#34; 라는 의미고
+</span><span class="c1">// .then(function() {console.log(&#39;hi&#39;)}) or .then(() =&gt; {console.log(&#39;hi&#39;)})는 
+</span><span class="c1">// &#34;어떤 요청의 결과로 hi를 return하라&#34; 하는 의미기 때문에 동기적으로 동작한다.
+</span></code></pre></td></tr></table>
+</div>
+</div><a class="lightgallery" href="/images/Async_to_Sync_in_Javascript_02.png" title="/images/Async_to_Sync_in_Javascript_02.png" data-thumbnail="/images/Async_to_Sync_in_Javascript_02.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/Async_to_Sync_in_Javascript_02.png"
+            data-srcset="/images/Async_to_Sync_in_Javascript_02.png, /images/Async_to_Sync_in_Javascript_02.png 1.5x, /images/Async_to_Sync_in_Javascript_02.png 2x"
+            data-sizes="auto"
+            alt="/images/Async_to_Sync_in_Javascript_02.png" width="1000px" />
+    </a>
+<p>위 설명에는 <b>1,2,3 순서대로 출력되길 원하며 코딩</b>이라고 적어놨지만, 결과 화면은 다른 것을 알 수 있습니다. 실은 <b>2,1,3 순서대로 출력되는 것을 의도</b>한 코딩입니다.</p>
+<p><strong>2</strong>의 경우 resolve에 포함되어 있지 않기 때문에 *<em>인터프리터 언어</em>  특징에 따라 진행되기 때문입니다.</p>
+<p style='text-align:right; font-style:italic; color:grey'>*인터프리터 언어의 특징은 <a src="https://colinder.github.io/interpretervscompiler_language/">다른 포스팅</a>에 정리되어 있습니다.</p>
+<p>​</p>
+<p>하지만 Promise 또한 단계?가 많아진다면 가독성 매우 떨어질 수 있습니다. 사실 callback과 Promise를 사용하는데 가독성에 문제가 있다면, 본인의 코드를 의심해봐야 될 수 있습니다.👀ㅎ.</p>
+<p>​</p>
+</li>
+</ul>
+<h2 id="3-async--await">3. Async / Await</h2>
+<blockquote>
+<p>Async(비동기) / Await(기다려!)는 비동기 처리를 하는 방법 중 하나입니다. Promise 나 Callback 보다 가독성이 좋은 코드를 짤 수 있다고 생각합니다.</p>
+</blockquote>
+<ul>
+<li>
+<p>위에 Promise를 살펴본 이유가 있습니다. Async/await의 기반이 Promise이기 때문입니다. 우리가 쓰는 모든 async 함수는 Promise를 리턴하고, 모든 await 함수는 일반적으로 Promise가 됩니다.</p>
+</li>
+<li>
+<p>Async/await는 <span style='background-color: black; font-weight: bold; border-radius: 10px; padding-bottom: .2rem'> <span style="color: grey">ex)</span> <span style= 'color: #569cd6'>async function</span> <span style="color: #dcdcaa;;">functionName<span style="color: white">(</span><span style="color: white">)</span></span><span style= 'color: #569cd6'>  <span style="color: white">{ <span style="color: #c586c0">await </span> <span style="color: #dcdcaa">promiseFunction </span></span><span style="color: white">}</span></span> </span>의 형태로 사용됩니다.</p>
+</li>
+<li>
+<p>sync function은 내부에 await 문법을 사용하기 위해 선언합니다.</p>
+</li>
+<li>
+<p>async function은 AsyncFunction 객체를 반환하며 &lsquo;async function&rsquo; 표현식으로만 생성됩니다.</p>
+</li>
+<li>
+<p>async function은 인자를 받을 수 있으며, 실행 후 반환 값은 Promise 입니다.</p>
+</li>
+<li>
+<p><code>await 연산자는 async function 내부에서만 사용할 수 있습니다.</code> (외부에서 사용하면 SyntaxError가 발생.)</p>
+</li>
+<li>
+<p>await는 반환된 Promise의 resolve의 상태까지 대기하며, await의 값은 Promise의 resolve값이 반환됩니다.</p>
+</li>
+<li>
+<p>만약 중간에 reject를 만나면 해당 async function스코프의 작업을 중단되며, 이후 스코프 작업이 진행됩니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// Async/Await 사용 예제
+</span><span class="c1"></span>  
+<span class="kd">function</span> <span class="nx">promise</span><span class="p">()</span> <span class="p">{</span>		
+    <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">resolve</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+    <span class="p">})</span>
+<span class="p">}</span>
+  
+<span class="kr">async</span> <span class="kd">function</span> <span class="nx">foo</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">num</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">promise</span><span class="p">()</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="c1">// 돌려봅시다!
+</span><span class="c1"></span><span class="nx">foo</span><span class="p">()</span>		<span class="c1">// 10
+</span></code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<p>위의 코드가 이해 되셨다면 <b>동기적 사용</b>에 대한 코드를 보며 이해해 봅시다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// Async/Await 동기적 코딩
+</span><span class="c1"></span>  
+<span class="kd">function</span> <span class="nx">promise</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;AsyncAwait running...&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">resolve</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+        <span class="p">},</span> <span class="mi">5000</span><span class="p">)</span>
+    <span class="p">})</span>
+<span class="p">}</span>
+  
+<span class="kr">async</span> <span class="kd">function</span> <span class="nx">foo</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;foo running...&#39;</span><span class="p">)</span>
+    <span class="kr">const</span> <span class="nx">num</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">promise</span><span class="p">()</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;num:&#39;</span><span class="p">,</span> <span class="nx">num</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="c1">// 돌려봅시다!
+</span><span class="c1"></span><span class="nx">foo</span><span class="p">()</span>
+</code></pre></td></tr></table>
+</div>
+</div><a class="lightgallery" href="/images/Async_to_Sync_in_Javascript_03.png" title="/images/Async_to_Sync_in_Javascript_03.png" data-thumbnail="/images/Async_to_Sync_in_Javascript_03.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/Async_to_Sync_in_Javascript_03.png"
+            data-srcset="/images/Async_to_Sync_in_Javascript_03.png, /images/Async_to_Sync_in_Javascript_03.png 1.5x, /images/Async_to_Sync_in_Javascript_03.png 2x"
+            data-sizes="auto"
+            alt="/images/Async_to_Sync_in_Javascript_03.png" width="1000px" />
+    </a>
+<p>가독성이 훨씬 뛰어나다고 생각합니다.</p>
+<p>Promise를 선언하고 이를 await 걸어, 순서를 정리하는 방법으로 코딩을 하다보니 가독성은 좋지만, Promise의 사용법도 익혀야 한다는 단점이 있습니다.</p>
+<hr>
+<p>​</p>
+</li>
+</ul>
+<h1 id="요약">👀요약</h1>
+<blockquote>
+<p>공부한 3가지 방법 모두 유용하고 강력한 기능이라는 생각입니다. 모두를 익히면 좋고 선택적으로 익혀야 한다면 본인에게 잘 맞는 방법으로 익혀 사용하면 좋을 것 같습니다.</p>
+</blockquote>
+<p>​</p>
+<p>​</p>
+<h1 id="삽질">🤷‍♂️삽질</h1>
+<ul>
+<li>
+<p>Async/Await 관련해서 혼자 이런 저런 테스트를 해보니 위에 설명한 것과 같이 new Promise()로 선언한 것들만 동기적으로 작동했고 일반 function으로 선언한 것들은 원하는 대로 동작하지 않았습니다.</p>
+<p>또 주의할 점에</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// 여러 test 중 하나. 
+</span><span class="c1"></span>  
+<span class="kd">function</span> <span class="nx">promise</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;AsyncAwait running...&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">resolve</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+        <span class="p">},</span> <span class="mi">5000</span><span class="p">)</span>
+    <span class="p">})</span>
+<span class="p">}</span>
+  
+<span class="kd">function</span> <span class="nx">test2Promise</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;test2Promise 시작&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">setTimeout</span><span class="p">(()=&gt;</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;test2Promise running...&#39;</span><span class="p">)</span>
+                                  <span class="c1">// 👈 Promise의 resolve가 없습니다.
+</span><span class="c1"></span>        <span class="p">},</span><span class="mi">3000</span><span class="p">)</span>
+    <span class="p">})</span> 
+<span class="p">}</span>
+  
+<span class="kr">async</span> <span class="kd">function</span> <span class="nx">foo</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;foo running...&#39;</span><span class="p">)</span>
+    <span class="kr">const</span> <span class="nx">num</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">promise</span><span class="p">()</span>
+    <span class="c1">// await test1()
+</span><span class="c1"></span>    <span class="kr">await</span> <span class="nx">test2Promise</span><span class="p">()</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;num:&#39;</span><span class="p">,</span> <span class="nx">num</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="c1">// 돌려봅시다!
+</span><span class="c1"></span><span class="nx">foo</span><span class="p">()</span>
+</code></pre></td></tr></table>
+</div>
+</div><a class="lightgallery" href="/images/Async_to_Sync_in_Javascript_04.png" title="/images/Async_to_Sync_in_Javascript_04.png" data-thumbnail="/images/Async_to_Sync_in_Javascript_04.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/Async_to_Sync_in_Javascript_04.png"
+            data-srcset="/images/Async_to_Sync_in_Javascript_04.png, /images/Async_to_Sync_in_Javascript_04.png 1.5x, /images/Async_to_Sync_in_Javascript_04.png 2x"
+            data-sizes="auto"
+            alt="/images/Async_to_Sync_in_Javascript_04.png" width="1000px" />
+    </a>
+<p>test2Promise의 resolve를 등록하지 않으면 이전 Promise()인 promise()도 resolve가 정상적으로 진행되 않는 것을 볼 수 있습니다.</p>
+<p>위에서 설명한</p>
+<blockquote>
+<p>만약 인자를 받지 않거나 함수 이외의 값을 전달하면, Uncaught TypeError가 발생하고, 인자로 전달된 resolve 와 reject 중 하나라도 호출하지 않는다면, 영원히 pending 상태로 대기하게 됩니다.</p>
+</blockquote>
+<p>가 발생한 것입니다.</p>
+<p>​</p>
+</li>
+<li>
+<p>공부를 하던 중 <code>.then()</code>에 대한 흥미로운 내용을 확인했습니다.</p>
+<blockquote>
+<p><code>.then()</code>은 요청의 결과가 성공했을 때 사용하는 것으로만 생각했는데 인자를 2개 받는 다는 것을 알았습니다. 확인해보니 <code>.then()</code> 에 넘겨지는 인자는 선택적(optional)이었습니다. 그리고</p>
+<p><code>catch(failureCallback)</code> 는 <code>then(null, failureCallback)</code> 의 축약었습니다.</p>
+</blockquote>
+<p>​</p>
+<p>​</p>
+</li>
+</ul>
+<h2 id="참고-했던-글">참고 했던 글</h2>
+<ul>
+<li>
+<p><a href="https://medium.com/@olaf.go/javascript-async-to-sync-157c57208598">https://medium.com/@olaf.go/javascript-async-to-sync-157c57208598</a></p>
+</li>
+<li>
+<p><a href="https://victorydntmd.tistory.com/48">https://victorydntmd.tistory.com/48</a></p>
+</li>
+<li>
+<p><a href="https://medium.com/@pks2974/javascript-%EC%99%80-promise-a6db8ca424ed">https://medium.com/@pks2974/javascript-%EC%99%80-promise-a6db8ca424ed</a></p>
+</li>
+<li>
+<p><a href="https://joshua1988.github.io/web-development/javascript/js-async-await/">https://joshua1988.github.io/web-development/javascript/js-async-await/</a></p>
+</li>
+<li>
+<p><a href="https://medium.com/@pks2974/javascript-%EC%99%80-async-await-111fdad3c20d">https://medium.com/@pks2974/javascript-%EC%99%80-async-await-111fdad3c20d</a></p>
+</li>
+<li>
+<p><a href="https://mber.tistory.com/8">https://mber.tistory.com/8</a></p>
+</li>
+<li>
+<p><a href="https://medium.com/@kiwanjung/%EB%B2%88%EC%97%AD-async-await-%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-%EC%A0%84%EC%97%90-promise%EB%A5%BC-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-955dbac2c4a4">https://medium.com/@kiwanjung/%EB%B2%88%EC%97%AD-async-await-%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-%EC%A0%84%EC%97%90-promise%EB%A5%BC-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-955dbac2c4a4</a></p>
+</li>
+<li>
+<p><a href="https://joshua1988.github.io/web-development/javascript/promise-for-beginners/#promise%EA%B0%80-%EB%AD%94%EA%B0%80%EC%9A%94">https://joshua1988.github.io/web-development/javascript/promise-for-beginners/#promise%EA%B0%80-%EB%AD%94%EA%B0%80%EC%9A%94</a></p>
+</li>
+<li>
+<p><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise">https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise</a></p>
+<p>​</p>
+<p>​</p>
+</li>
+</ul>
+<p><strong>Special Thanks to kmpak.sfy✨.</strong></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2020-11-20</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/asynctosyncinjavascript/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/async/">Async</a>,&nbsp;<a href="/tags/sync/">Sync</a>,&nbsp;<a href="/tags/javascript/">Javascript</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/interpretervscompiler_language/" class="prev" rel="prev" title="Interpreter VS Compiler_Language"><i class="fas fa-angle-left fa-fw"></i>Interpreter VS Compiler_Language</a>
+            <a href="/what_is_domain/" class="next" rel="next" title="what is Domain">what is Domain<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.82.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/mermaid/mermaid.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/mermaid/mermaid.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"id-1":"  graph LR;\n      A [ pending 대기상태 ] --\u003e|성공| D[fulfilled 성공상태]\n      A [ pending 대기상태 ] --\u003e|실패| E[rejected 실패상태]\n  ","id-2":"  graph LR;\n      A[pending 대기상태] --\u003e|성공| B[fulfilled 성공상태] --\u003e |`이 흐름을 사용`   | D[.then]\n      A[pending 대기상태] --\u003e|실패| C[rejected 실패상태] --\u003e |`이 흐름을 사용`   | E[.catch]\n  "},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
