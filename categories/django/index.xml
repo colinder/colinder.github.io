@@ -1,0 +1,91 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Django - Category - </title>
+        <link>https://colinder.github.io/categories/django/</link>
+        <description>Django - Category - </description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 20 Apr 2021 09:04:47 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/django/" rel="self" type="application/rss+xml" /><item>
+    <title>Django_04_form</title>
+    <link>https://colinder.github.io/django_04_form/</link>
+    <pubDate>Tue, 20 Apr 2021 09:04:47 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/django_04_form/</guid>
+    <description><![CDATA[​
+Django_form  이제 여러 html파일을 만들어 여러 화면을 돌아다닐 수 있게 되었습니다. 그렇다면 A화면에서 입력한 정보를 B화면으로 가져가고 싶다면 어떻게 해야 할까요? __form__테그를 사용하면 됩니다.
+ ​
+👨‍💻 개발해봅시다. 기존에 만들었던 main.html을 활용해 만들어 보겠습니다.
+1. form 태그 생성 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19  &lt;!-- articles/templates/articles/main.html --&gt; &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;IE=edge&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.]]></description>
+</item><item>
+    <title>Django_03_overriding templates</title>
+    <link>https://colinder.github.io/django_03_overriding/</link>
+    <pubDate>Mon, 19 Apr 2021 23:27:30 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/django_03_overriding/</guid>
+    <description><![CDATA[​
+Django Overriding Templates  웹개발을 하다보면 재활용되어야 하는 부분. 즉, 변경되지 않아야 하는 부분과, 변해야 하는 부분이 있습니다. (대표적으로 navbar) 그리고 이런 개발의 편의성을 위해 Django는 Overriding 이라는 기술을 제공합니다.
+ ​
+지난 &ldquo;app&quot;에 이어 진행
+변경되지 않아야 하는 부분은 **그림의 &lsquo;배경&rsquo;**이고, 변해야 하는 부분은 **그림의 &lsquo;디테일 요소&rsquo;**라고 생각하면 이해가 쉽습니다. / 그럼 변경되지 않아야 하는 부분을 먼저 제작해봅시다.
+1. 변경 하지 않을 부분 == 배경 제작 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  &lt;!]]></description>
+</item><item>
+    <title>Django_02_app</title>
+    <link>https://colinder.github.io/django_02_addapp/</link>
+    <pubDate>Sun, 18 Apr 2021 22:04:11 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/django_02_addapp/</guid>
+    <description><![CDATA[​
+Django_app  이번에는 생성된 프로젝트에서 1. app을 추가해 등록해보고 2. 서버 접속시 첫 메인 페이지를 등록해봅시다.
+ ​
+뜬금없이 CRUD를 알아보고 갑시다.  CRUD는 대부분의 컴퓨터 소프트웨어가 가지는 기본적인 데이터 처리 기능인 Create(생성), Read(읽기), Update(갱신), Delete(삭제)를 묶어서 일컫는 말입니다. 사용자 인터페이스가 갖추어야 할 기능(정보의 참조/검색/갱신 등) 중 가장 기본이라고 생각되는 기술들입니다.
+ ​
+이제 이어서 개발해봅시다. ​
+1. App 생성 지난번에는 프로젝트를 생성하고 setting.py에서 기본 설정만 변경해주었습니다. 이제 app을 생성해봅시다.]]></description>
+</item><item>
+    <title>Django_01_start</title>
+    <link>https://colinder.github.io/django_01_startproject/</link>
+    <pubDate>Sun, 18 Apr 2021 19:52:40 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/django_01_startproject/</guid>
+    <description><![CDATA[​
+Django 개발환경준비   편리함을 추구하기 위해 AWS Cloud9을 사용하여 진행
+  https://ide.cs50.io/ 주소로 접속하면 진행이 가능하며, 진행을 위해선 Git 아이디가 있어야 한다.
+Git? : 버전 관리 시스템이며 Git은 소프트웨어를 개발하는 기업의 핵심 자산인 소스코드를 효과적으로 관리할 수 있게 해주는 무료, 공개소프트웨어. git에 대한 내용은 따로 정리해보도록 한다.
+  로그인까지 마치면 이제 Django 개발 준비 끝.
+C9 접속 화면(블랙테마 적용되어 있음)"C9 접속 화면(블랙테마 적용되어 있음) ​]]></description>
+</item><item>
+    <title>REST API Reference</title>
+    <link>https://colinder.github.io/rest-api-reference/</link>
+    <pubDate>Thu, 24 Sep 2020 09:54:40 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/rest-api-reference/</guid>
+    <description><![CDATA[​
+REST API Reference [TOC]
+1.사용자 API    Members Descriptions     POST /accounts/signup 회원가입   POST /accounts/login 회원 로그인   POST /accounts/userDetail 회원정보   PUT /accounts/update 회원정보 수정   DELETE /accounts/dropUser 회원탈퇴   GET /accounts/emailAuth 이메일 인증   GET /accounts/emailCheck 이메일 중복 확인   GET /accounts/nicknameCheck 닉네임 중복 확인    1.1 회원 로그인 POST /accounts/login ​	회원 로그인 API 입니다.]]></description>
+</item><item>
+    <title>Naming Convention</title>
+    <link>https://colinder.github.io/namingconvention/</link>
+    <pubDate>Sun, 02 Aug 2020 22:24:45 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/namingconvention/</guid>
+    <description><![CDATA[​
+Naming Convention  정해진 규정은 없으나, 많은 개발자들이 암묵적으로 지키고 있는 이름짓는 방법.
+ ​
+  snake_case 🐍
+1 2 3  # _ == snake some_var = 5 my_awesome = 3   ​
+  camelCase 🐪
+1 2 3  # 낙타등이 솟아 있는 모습 someVar = 5 pyAwesome = 3   ​
+  UpperCamelCase 🐪🐪
+1 2 3  # 낙타얼굴과 등이 중간에 솟아 있는 모습 (파스칼식(Pascal case)이라고도 불린다.]]></description>
+</item><item>
+    <title>Django_00_basic</title>
+    <link>https://colinder.github.io/django_00_whatisdjango/</link>
+    <pubDate>Tue, 23 Jun 2020 09:57:09 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/django_00_whatisdjango/</guid>
+    <description><![CDATA[​
+Web ?  월드 와이드 웹(World Wide Web)이란 인터넷에 연결된 사용자들이 서로의 정보를 공유할 수 있는 공간을 의미하며, 줄여서 WWW나 W3라고도 부르며, 간단히 웹(Web)이라고 가장 많이 불린다.
+인터넷과 같은 의미로 많이 사용되고 있지만, 정확히 말해 웹은 인터넷상의 인기 있는 하나의 서비스일 뿐.
+Web의 작동방식을 간단히 설명하자면, 요청과 응답.
+사용자는 서버에 어떠한 요구사항을 요청하고 서버는 이에 따라 처리결과를 응답한다.
+예를들어 사용자가 Login 버튼을 누른 행위는 user가 서버에 로그인 하고 싶다고 요청한 것이며, 서버는 로그인 창을 띄움으로서 user가 로그인할 수 있게 응답한 것입니다.]]></description>
+</item></channel>
+</rss>
