@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>정수론 및 조합론 - Tag - </title>
+        <link>https://colinder.github.io/tags/%EC%A0%95%EC%88%98%EB%A1%A0-%EB%B0%8F-%EC%A1%B0%ED%95%A9%EB%A1%A0/</link>
+        <description>정수론 및 조합론 - Tag - </description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 26 Jan 2021 18:11:31 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/%EC%A0%95%EC%88%98%EB%A1%A0-%EB%B0%8F-%EC%A1%B0%ED%95%A9%EB%A1%A0/" rel="self" type="application/rss+xml" /><item>
+    <title>BEAKJOON 1037, 1934, 2609, 5086</title>
+    <link>https://colinder.github.io/bj_21.01.26/</link>
+    <pubDate>Tue, 26 Jan 2021 18:11:31 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/bj_21.01.26/</guid>
+    <description><![CDATA[​
+1037_약수 1 2 3 4 5 6 7 8  import sys N = int(sys.stdin.readline().rstrip()) arr = list(map(int, sys.stdin.readline().split())) Max = max(arr) Min = min(arr) print(Max*Min)   ​
+1934_최소공배수 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  import sys def GCD(a, b): while b != 0: m = a % b a = b b = m return a for T in range(int(sys.]]></description>
+</item></channel>
+</rss>

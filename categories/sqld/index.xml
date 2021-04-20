@@ -1,0 +1,62 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>SQLD - Category - </title>
+        <link>https://colinder.github.io/categories/sqld/</link>
+        <description>SQLD - Category - </description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 02 Apr 2021 21:30:34 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/sqld/" rel="self" type="application/rss+xml" /><item>
+    <title>04_SQLD_제1 절 성능데이터모델링의 개요 &amp; 제2 절 정규화와 성능</title>
+    <link>https://colinder.github.io/04_sqld_%EC%A0%9C2-%EC%9E%A5-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%AA%A8%EB%8D%B8%EA%B3%BC-%EC%84%B1%EB%8A%A5/</link>
+    <pubDate>Fri, 02 Apr 2021 21:30:34 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/04_sqld_%EC%A0%9C2-%EC%9E%A5-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%AA%A8%EB%8D%B8%EA%B3%BC-%EC%84%B1%EB%8A%A5/</guid>
+    <description><![CDATA[​
+# SQLD  제2 장 데이터 모델과 성능  제1 절 성능데이터모델링의 개요   성능데이터모델링의 정의
+  데이터 용량이 커질수록 처리 속도 증가가 필요해진다.
+  성능 저하의 대표적인 원인 3가지
+ 데이터 모델 구조에 의해 성능 저하 데이터가 대용량이 됨으로 인해 성능 저하 인덱스 특성을 고려하지 않고 생성해 성능 저하    즉, 어떤 작업 유형에 따라 성능향상을 도모해야 하는지 목표를 분명하게 해야 정확한 성능향상 모델링을 할 수 있다.]]></description>
+</item><item>
+    <title>03_SQLD_제4 절 관계 &amp; 제5 절 식별자</title>
+    <link>https://colinder.github.io/03_sqld_%EC%A0%9C4-%EC%A0%88-%EA%B4%80%EA%B3%84-%EC%A0%9C5-%EC%A0%88-%EC%8B%9D%EB%B3%84%EC%9E%90/</link>
+    <pubDate>Sun, 28 Mar 2021 20:42:45 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/03_sqld_%EC%A0%9C4-%EC%A0%88-%EA%B4%80%EA%B3%84-%EC%A0%9C5-%EC%A0%88-%EC%8B%9D%EB%B3%84%EC%9E%90/</guid>
+    <description><![CDATA[​
+# SQL  제1 장 데이터 모델링의 이해  제4 절 관계(Relationship)   관계의 개념
+  관계의 정의
+&ldquo;인스턴스 사이의 논리적인 연관성으로서 존재의 형태 or 행위로서 서로에게 연관성이 부여된 상태&rdquo;
+  관계의 페어링
+&ldquo;관계는 인스턴스가 개별적으로 관계를 가지는 것(페어링)이고, 이것의 집합을 관계로 표현하는 것&rdquo;
+&ldquo;따라서 개별 인스턴스가 각각 다른 종류의 관계를 가지고 있다면, 두 엔터티 사이에 두 개 이상의 관계가 형성될 수 도 있다.&rdquo;
+​
+    관계의 분류]]></description>
+</item><item>
+    <title>02_SQLD_제2 절 엔터티 &amp; 제3 절 속성</title>
+    <link>https://colinder.github.io/02_sqld_%EC%A0%9C2-%EC%A0%88-%EC%97%94%ED%84%B0%ED%8B%B0-%EC%A0%9C3-%EC%A0%88-%EC%86%8D%EC%84%B1/</link>
+    <pubDate>Thu, 25 Mar 2021 19:25:43 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/02_sqld_%EC%A0%9C2-%EC%A0%88-%EC%97%94%ED%84%B0%ED%8B%B0-%EC%A0%9C3-%EC%A0%88-%EC%86%8D%EC%84%B1/</guid>
+    <description><![CDATA[​
+# SQL  제1 장 데이터 모델링의 이해  제2 절 엔터티(Entity)   엔터티의 개념
+  실체, 객체 / 실무적으론는 앤터티라고 부른다. 즉 업무에 필요하고 유용한 정보를 저장하고 관리하기 위한 집합적인 것
+​
+    엔터티와 인스턴스에 대한 내용과 표기법
+​	
+  엔터티의 특징
+  반드시 해당 업무에서 필요하고 관리하고자 하는 정보여야 한다.
+  유일한 식별자에 의해 식별이 가능해야 한다.
+  영속적으로 존재하는 인스턴스의 집합이어야 한다.]]></description>
+</item><item>
+    <title>01_SQLD_제1 절 데이터 모델링의 이해</title>
+    <link>https://colinder.github.io/01_sqld_%EC%A0%9C1-%EC%9E%A5-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%AA%A8%EB%8D%B8%EB%A7%81%EC%9D%98-%EC%9D%B4%ED%95%B4/</link>
+    <pubDate>Sun, 21 Mar 2021 23:06:59 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/01_sqld_%EC%A0%9C1-%EC%9E%A5-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%AA%A8%EB%8D%B8%EB%A7%81%EC%9D%98-%EC%9D%B4%ED%95%B4/</guid>
+    <description><![CDATA[​
+SQLD를 준비하면서 공부한 내용을 정리.
+​
+# SQL  제1 장 데이터 모델링의 이해  제1 절 데이터 모델링의 이해   모델링의 이해
+  모델링의 정의
+ 복잡한 &ldquo;현실세계&quot;를 단순화(추상화)시켜 표현 사물 또는 사건에 관한 양상(Aspect)이나 관점(Perspective)을 명확하게 하는 것    특징 3가지
+ 추상화 - 현실세계를 일정한 형식에 맞추어 표현하는 것 단순화 - 복잡한 현실세계를 약속된 규약에 의해 쉽게 이해할 수 있게 표현하는 것 명확화 - 누구나 이해할 수 있도록 명확하게 표기하는 것    모델링의 3가지 관점]]></description>
+</item></channel>
+</rss>
