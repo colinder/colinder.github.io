@@ -24,7 +24,7 @@ Django Overriding Templates  웹개발을 하다보면 재활용되어야 하는
     <author>Author</author>
     <guid>https://colinder.github.io/django_02_addapp/</guid>
     <description><![CDATA[​
-Django  이번에는 생성된 프로젝트에서 1. app을 추가해 등록해보고 2. 서버 접속시 첫 메인 페이지를 등록해봅시다.
+Django_app  이번에는 생성된 프로젝트에서 1. app을 추가해 등록해보고 2. 서버 접속시 첫 메인 페이지를 등록해봅시다.
  ​
 뜬금없이 CRUD를 알아보고 갑시다.  CRUD는 대부분의 컴퓨터 소프트웨어가 가지는 기본적인 데이터 처리 기능인 Create(생성), Read(읽기), Update(갱신), Delete(삭제)를 묶어서 일컫는 말입니다. 사용자 인터페이스가 갖추어야 할 기능(정보의 참조/검색/갱신 등) 중 가장 기본이라고 생각되는 기술들입니다.
  ​
