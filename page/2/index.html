@@ -102,50 +102,23 @@
         alt="/images/jg_02.jpg"
         title="/images/jg_02.jpg" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/colinder" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="mailto:kjonggwan@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/git_lfslarge-file-storage/">Git_LFS</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-03-25">2021-03-25</time></span>&nbsp;<span class="post-category">included in <a href="/categories/git/"><i class="far fa-folder fa-fw"></i>git</a></span></div><div class="content">​
-Git LFS(Large File Storage) 사용법  Git은 개당 파일에 100MB의 용량 제한이 걸려 있다. (전체 용량 제한은 없다.) 다만, 프로젝트를 하다보면 대용량의 자료나 파일이 생기는 경우가 있다. 이때 용량 제한의 문제를 해소할 수 있는 방법이 LFS이다.
-LFS는 별도로 설치하여 사용하면 되며, 방법을 정리한다.
-  *주소: https://git-lfs.github.com
-​
-  git LFS을 다운을 받고 설치 합니다.
-​
-  git LFS를 적용할 폴더로 이동해 다음 명령어를 입력합니다.
-1  $ git lfs install    ​</div><div class="post-footer">
-        <a href="/git_lfslarge-file-storage/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/git/">git</a>,&nbsp;<a href="/tags/lfs/">LFS</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/git_fork_vs_clone/">Git_fork vs clone</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-10-11">2020-10-11</time></span>&nbsp;<span class="post-category">included in <a href="/categories/git/"><i class="far fa-folder fa-fw"></i>git</a></span></div><div class="content">​
-Fork  fork는 다른 사람(프로젝트)의 github repository에서 내가 어떤 부분을 수정하거나, 기능을 추가 하고 싶을 때 해당 repository를 그대로 복제하는 기능.
- fork한 저장소는 원본 repository와 연결되어 있습니다. 여기서 연결되어 있다는 의미는, 원본 repository에 어떤 변화가 생기면 이는 forked된 나의 repository에도 반영될 수 있다는 것입니다. (단, fetch나 rebase의 과정이 필요합니다. fetch나 rebase를 하지 않았다면, 단순히 원본 repository를 복사해서 가져온 상태라고 할 수 있습니다.)
-      fork는 보통 2가지 목적을 위해 사용합니다.</div><div class="post-footer">
-        <a href="/git_fork_vs_clone/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/git/">git</a>,&nbsp;<a href="/tags/fork/">fork</a>,&nbsp;<a href="/tags/clone/">clone</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/git_mirroring/">Git_Mirroring</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-10-08">2020-10-08</time></span>&nbsp;<span class="post-category">included in <a href="/categories/git/"><i class="far fa-folder fa-fw"></i>git</a></span></div><div class="content">​
-Git_Mirroring  기존에 사용하고 있던 A_Repo에서 B_Repo로 커밋히스토리 그대로 복사가 필요할 때가 있습니다.
-여기서 A_Repo를 그대로 가져온다는 의미는 단지 파일을 새롭게 만드는 것이 아니라 A_Repo에서 작업하던 commit 이력 모두를 그대로 이전하는 의미를 뜻합니다.
+        <a href="/namingconvention/">Naming Convention</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-08-02">2020-08-02</time></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw"></i>django</a>&nbsp;<a href="/categories/vue/"><i class="far fa-folder fa-fw"></i>vue</a></span></div><div class="content">​
+Naming Convention  정해진 규정은 없으나, 많은 개발자들이 암묵적으로 지키고 있는 이름짓는 방법.
  ​
-  터미널을 엽니다.
-  복사하고자 하는 저장소(A_Repo)의 bare clone을 생성합니다.
-1  git clone --bare https://github.com/user/old-repository.git     새로운 저장소(B_Repo)를 만들고 mirror-push를 진행합니다.
-1 2  cd old-repository.git	👈 위에서 클론(bare)한 폴더로 이동 git push --mirror https://github.</div><div class="post-footer">
-        <a href="/git_mirroring/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/git/">git</a>,&nbsp;<a href="/tags/mirroring/">Mirroring</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/rest-api-reference/">REST API Reference</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-09-24">2020-09-24</time></span>&nbsp;<span class="post-category">included in <a href="/categories/web/"><i class="far fa-folder fa-fw"></i>web</a>&nbsp;<a href="/categories/django/"><i class="far fa-folder fa-fw"></i>django</a>&nbsp;<a href="/categories/vue/"><i class="far fa-folder fa-fw"></i>vue</a></span></div><div class="content">​
-REST API Reference [TOC]
-1.사용자 API    Members Descriptions     POST /accounts/signup 회원가입   POST /accounts/login 회원 로그인   POST /accounts/userDetail 회원정보   PUT /accounts/update 회원정보 수정   DELETE /accounts/dropUser 회원탈퇴   GET /accounts/emailAuth 이메일 인증   GET /accounts/emailCheck 이메일 중복 확인   GET /accounts/nicknameCheck 닉네임 중복 확인    1.1 회원 로그인 POST /accounts/login ​	회원 로그인 API 입니다.</div><div class="post-footer">
-        <a href="/rest-api-reference/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/web/">Web</a></div></div>
-</article><ul class="pagination"><li class="page-item active">
+  snake_case 🐍
+1 2 3  # _ == snake some_var = 5 my_awesome = 3   ​
+  camelCase 🐪
+1 2 3  # 낙타등이 솟아 있는 모습 someVar = 5 pyAwesome = 3   ​
+  UpperCamelCase 🐪🐪
+1 2 3  # 낙타얼굴과 등이 중간에 솟아 있는 모습 (파스칼식(Pascal case)이라고도 불린다.</div><div class="post-footer">
+        <a href="/namingconvention/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/django/">django</a>,&nbsp;<a href="/tags/vue/">vue</a></div></div>
+</article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
                     </span>
-                </li><li class="page-item ">
+                </li><li class="page-item active">
                     <span class="page-link">
                         <a href="/page/2/">2</a>
                     </span>
