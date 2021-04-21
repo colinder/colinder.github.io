@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>All Posts - </title>
+        <link>https://colinder.github.io/posts/</link>
+        <description>All Posts | </description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 21 Apr 2021 22:28:10 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>F</title>
+    <link>https://colinder.github.io/f/</link>
+    <pubDate>Wed, 21 Apr 2021 22:28:10 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/f/</guid>
+    <description><![CDATA[​
+되라되라 ]]></description>
+</item></channel>
+</rss>
