@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>JavaScript Type - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="JavaScript Type" />
+<meta property="og:description" content="​
+JavaScript Type은?  제 생각에 개발 언어를 공부하면서 가장 먼저 알아야 알 것은 그리고 가장 중요한 것은 형식입니다.
+때마침 Javascript를 공부하고 있는데, 가장 먼저 Type에 대해 정리해보겠습니다.
+ ​
+그 전에 먼저 변수를 선언하는 방법을 알아봅시다. 1 2 3 4 5 6 7 8  // 변수를 선언 하는 방법  // function scope var a = 10 // 일반적인 변수 선언 방법  // block scope {} 안에서만 존재하는 변수 let b = 20 // 재할당 가능 [최근에는 사용률이 낮아지고 있다고 합니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://colinder.github.io/js_type/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-12-09T10:23:18&#43;09:00" />
+<meta property="article:modified_time" content="2020-12-09T10:23:18&#43;09:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
+
+<meta name="twitter:title" content="JavaScript Type"/>
+<meta name="twitter:description" content="​
+JavaScript Type은?  제 생각에 개발 언어를 공부하면서 가장 먼저 알아야 알 것은 그리고 가장 중요한 것은 형식입니다.
+때마침 Javascript를 공부하고 있는데, 가장 먼저 Type에 대해 정리해보겠습니다.
+ ​
+그 전에 먼저 변수를 선언하는 방법을 알아봅시다. 1 2 3 4 5 6 7 8  // 변수를 선언 하는 방법  // function scope var a = 10 // 일반적인 변수 선언 방법  // block scope {} 안에서만 존재하는 변수 let b = 20 // 재할당 가능 [최근에는 사용률이 낮아지고 있다고 합니다."/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/js_type/" /><link rel="prev" href="https://colinder.github.io/processvsthread/" /><link rel="next" href="https://colinder.github.io/js_operators/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "JavaScript Type",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/colinder.github.io\/js_type\/"
+        },"genre": "posts","keywords": "Javascript, tpye","wordcount":  1494 ,
+        "url": "https:\/\/colinder.github.io\/js_type\/","datePublished": "2020-12-09T10:23:18+09:00","dateModified": "2020-12-09T10:23:18+09:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "colinder"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="">Hello New World</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="">Hello New World</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">JavaScript Type</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/javascript/"><i class="far fa-folder fa-fw"></i>Javascript</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-12-09">2020-12-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1494 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;8 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#그-전에-먼저-변수를-선언하는-방법을-알아봅시다">그 전에 먼저 변수를 선언하는 방법을 알아봅시다.</a></li>
+    <li><a href="#javascript는-크게-두-가지-타입으로-구분합니다">Javascript는 크게 두 가지 타입으로 구분합니다.</a>
+      <ul>
+        <li><a href="#1-원시-타입primitive-data-type">1. 원시 타입(Primitive Data Type)</a></li>
+        <li><a href="#2-참조-타입reference-data-type">2. 참조 타입(Reference Data Type)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>​</p>
+<h1 id="javascript-type은">JavaScript Type은?</h1>
+<blockquote>
+<p>제 생각에 개발 언어를 공부하면서 가장 먼저 알아야 알 것은 그리고 가장 중요한 것은 형식입니다.</p>
+<p>때마침 Javascript를 공부하고 있는데, 가장 먼저 Type에 대해 정리해보겠습니다.</p>
+</blockquote>
+<p>​</p>
+<h2 id="그-전에-먼저-변수를-선언하는-방법을-알아봅시다">그 전에 먼저 변수를 선언하는 방법을 알아봅시다.</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// 변수를 선언 하는 방법
+</span><span class="c1"></span>
+<span class="c1">// function scope
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">10</span>      <span class="c1">// 일반적인 변수 선언 방법
+</span><span class="c1"></span>
+<span class="c1">// block scope    {} 안에서만 존재하는 변수
+</span><span class="c1"></span><span class="kd">let</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">20</span>      <span class="c1">// 재할당 가능  [최근에는 사용률이 낮아지고 있다고 합니다.]
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">c</span> <span class="o">=</span> <span class="mi">30</span>     <span class="c1">// 재할당 불가능 [&#34;재할당 불가능&#34;이라는 설명은 !== 값이 바뀌지 않는다.]
+</span></code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<p>​</p>
+<h2 id="javascript는-크게-두-가지-타입으로-구분합니다">Javascript는 크게 두 가지 타입으로 구분합니다.</h2>
+<blockquote>
+<p><strong>원시타입</strong> VS <strong>참조타입</strong></br>원시 타입은 숫자(Number), 불린(Boolean), null, undefined, 문자열(String), 심볼 총 6가지가 존재하고</br>참조 타입은 객체(Object), 배열(Array), 함수(function)가 있습니다.</p>
+</blockquote>
+<p>​</p>
+<h3 id="1-원시-타입primitive-data-type">1. 원시 타입(Primitive Data Type)</h3>
+<blockquote>
+<p>원시 타입의 데이터는 변수에 할당이 될 때 메모리 상에 고정된 크기로 저장이 되고 </br>해당 변수가 원시 <strong>데이터 값을 보관합니다.</strong> 원시 타입 자료형은 모두 변수 선언, 초기화, 할당 시 </br><strong>값이 저장된 메모리 영역에 직접적으로 접근합니다.</strong> </br>즉, 변수에 새로운 값이 할당이 될 경우, <strong>변수에 할당된 메모리 블럭에 저장된 값이 바로 변경됩니다.</strong></p>
+</blockquote>
+<ul>
+<li>
+<p>숫자형(Number)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// Number
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">13</span>
+<span class="kr">const</span> <span class="nx">b</span> <span class="o">=</span> <span class="o">-</span><span class="mi">5</span>
+<span class="kr">const</span> <span class="nx">c</span> <span class="o">=</span> <span class="mf">3.14</span> <span class="c1">// float
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">d</span> <span class="o">=</span> <span class="mf">2.00e8</span> <span class="c1">// 2.99 * 10**8
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">e</span> <span class="o">=</span> <span class="kc">Infinity</span>
+<span class="kr">const</span> <span class="nx">f</span> <span class="o">=</span> <span class="o">-</span><span class="kc">Infinity</span>
+<span class="kr">const</span> <span class="nx">g</span> <span class="o">=</span> <span class="kc">NaN</span> <span class="c1">// Not a Number  하지만 타입은 넘버...
+</span><span class="c1"></span>  
+<span class="c1">// 변수의 타입을 알고 싶을 때
+</span><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="nx">g</span><span class="p">))</span>
+<span class="k">typeof</span><span class="p">(</span><span class="nx">g</span><span class="p">)</span> <span class="c1">// 개발자 도구 창에서는 typeof(g) 만 입력해도 보임.
+</span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>불린형(참, 거짓)(Boolean)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// Boolean (소문자로 작성)
+</span><span class="c1"></span><span class="kc">true</span>
+<span class="kc">false</span>
+  
+<span class="c1">// false 값을 초기값으로 변수 선언
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">bNoParam</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Boolean</span><span class="p">();</span>
+<span class="kd">var</span> <span class="nx">bZero</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Boolean</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">bNull</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Boolean</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">bEmptyString</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Boolean</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">bfalse</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Boolean</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+  
+<span class="c1">// true 값을 초기값으로 변수 선언
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">btrue</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Boolean</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">btrueString</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Boolean</span><span class="p">(</span><span class="s1">&#39;true&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">bfalseString</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Boolean</span><span class="p">(</span><span class="s1">&#39;false&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">bSuLin</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Boolean</span><span class="p">(</span><span class="s1">&#39;Su Lin&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">bArrayProto</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Boolean</span><span class="p">([]);</span>
+<span class="kd">var</span> <span class="nx">bObjProto</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Boolean</span><span class="p">({});</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>문자형(String)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// String
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">sentence1</span> <span class="o">=</span> <span class="s1">&#39;Ask and go to the blue&#39;</span>
+<span class="kr">const</span> <span class="nx">sentence2</span> <span class="o">=</span> <span class="s1">&#39;Ask and go to the red&#39;</span>
+  
+<span class="kr">const</span> <span class="nx">firstName</span> <span class="o">=</span> <span class="s1">&#39;Tony&#39;</span>
+<span class="kr">const</span> <span class="nx">lastName</span> <span class="o">=</span> <span class="s1">&#39;Stark&#39;</span>
+<span class="kr">const</span> <span class="nx">fullname</span> <span class="o">=</span> <span class="nx">firstName</span> <span class="o">+</span> <span class="nx">lastName</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fullname</span><span class="p">)</span>  <span class="c1">// expected output: TonyStark
+</span><span class="c1"></span>  
+<span class="c1">// 줄바꿈
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">word</span> <span class="o">=</span> <span class="s1">&#39;안녕 \n하세요&#39;</span>		<span class="c1">//  \ =&gt; 달러표시
+</span><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">word</span><span class="p">)</span>
+  
+<span class="c1">// ✨String = Temlates Literal✨
+</span><span class="c1">// `을 활용해 여러 줄에 걸처 문자를 정의 할 수도 있고
+</span><span class="c1">// JS의 변수를 문자열 안에 바로 연결할 수 있는 이점이 생긴다.
+</span><span class="c1"></span>  
+<span class="kr">const</span> <span class="nx">ssafy</span> <span class="o">=</span> <span class="s1">&#39;5반&#39;</span>
+<span class="kr">const</span> <span class="nx">word3</span> <span class="o">=</span> <span class="sb">`</span><span class="si">${</span><span class="nx">ssafy</span><span class="si">}</span><span class="sb"> 안녕들 하신가`</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>Null &amp; undefined (Empty Value) 타입</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// Empty Value (null &amp; undefiened)
+</span><span class="c1">// 값이 존재하지 않음을 표현하는 값으로  null과 undefiend가 있다.
+</span><span class="c1">// 두 개가 존재하는 이유는 단순한 설계 실수로 인함 때문이다.
+</span><span class="c1"></span>  
+<span class="kd">let</span> <span class="nx">firstName</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">firstName</span><span class="p">)</span>  <span class="c1">// 변수 값을 지정하지 않으면, undefined 출력됨.
+</span><span class="c1"></span>  
+<span class="kd">let</span> <span class="nx">lastName</span> <span class="o">=</span> <span class="kc">null</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">lastName</span><span class="p">)</span>  <span class="c1">// null
+</span><span class="c1"></span>  
+<span class="c1">// null과 undefined의 차이
+</span><span class="c1">// null 또는 undefined를 검사할 때, 동등 연산자(==)와 일치 연산자(===)의 차이를 주의하세요. 
+</span><span class="c1">// 동등 연산자는 자료형 변환을 수행합니다.
+</span><span class="c1"></span>  
+<span class="k">typeof</span> <span class="kc">null</span>          <span class="c1">// &#34;object&#34; (하위호환 유지를 위해 &#34;null&#34;이 아님)
+</span><span class="c1"></span><span class="k">typeof</span> <span class="kc">undefined</span>     <span class="c1">// &#34;undefined&#34;
+</span><span class="c1"></span><span class="kc">null</span> <span class="o">===</span> <span class="kc">undefined</span>   <span class="c1">// false
+</span><span class="c1"></span><span class="kc">null</span> <span class="o">==</span> <span class="kc">undefined</span>   <span class="c1">// true
+</span><span class="c1"></span><span class="kc">null</span> <span class="o">===</span> <span class="kc">null</span>        <span class="c1">// true
+</span><span class="c1"></span><span class="kc">null</span> <span class="o">==</span> <span class="kc">null</span>         <span class="c1">// true
+</span><span class="c1"></span><span class="o">!</span><span class="kc">null</span>                <span class="c1">// true
+</span><span class="c1"></span><span class="nb">isNaN</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="kc">null</span><span class="p">)</span>      <span class="c1">// false
+</span><span class="c1"></span><span class="nb">isNaN</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="kc">undefined</span><span class="p">)</span> <span class="c1">// true
+</span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>심볼형(Symbol)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// 심볼 자료형은 ES6부터 추가된 원시 자료형입니다. 
+</span><span class="c1">// 다른 원시형과 다르게(유일하게) 변경 불가능한 자료형으로, 
+</span><span class="c1">// 참조형의 키(key)로도 사용이 가능합니다.
+</span><span class="c1"></span>  
+
+<span class="c1">// Symbol 선언 방법
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">symbol</span> <span class="o">=</span> <span class="nx">Symbol</span><span class="p">();</span>
+<span class="kr">const</span> <span class="nx">hello</span> <span class="o">=</span> <span class="nx">Symbol</span><span class="p">(</span><span class="s1">&#39;Hi&#39;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">hello</span><span class="p">)</span>  <span class="c1">//Symbol(Hi)
+</span><span class="c1"></span>  
+<span class="c1">// new 연산자를 이용한 문법은 TypeError가 발생됩니다.
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">sym</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Symbol</span><span class="p">();</span> <span class="c1">// TypeError
+</span><span class="c1"></span>  
+<span class="c1">// 특성
+</span><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">===</span> <span class="nb">Number</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>    <span class="c1">// true
+</span><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;심볼 비교1&#34;</span><span class="p">,</span> <span class="nx">Symbol</span><span class="p">()</span> <span class="o">===</span> <span class="nx">Symbol</span><span class="p">())</span> <span class="c1">// false 👈왜?
+</span><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;심볼 비교2&#34;</span><span class="p">,</span> <span class="nx">Symbol</span><span class="p">(</span><span class="s1">&#39;Hi&#39;</span><span class="p">)</span> <span class="o">===</span> <span class="nx">Symbol</span><span class="p">(</span><span class="s1">&#39;Hi&#39;</span><span class="p">))</span> <span class="c1">// false 👈왜??
+</span><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="nx">Symbol</span><span class="p">()))</span>   <span class="c1">// symbol
+</span><span class="c1"></span>  
+<span class="c1">// 👉 심볼 비교1, 2가 왜 false일까?
+</span><span class="c1">// Symbol을 함수로 호출하는 경우에 값을 전달할 수 있는데 ex) Symbol(&#39;Hi&#39;)
+</span><span class="c1">// 이 값은 디버깅 오로지 용도이고, (인자로 전달한 Hi에 따른) 고유한 symbol값은 생성되지 않습니다.
+</span><span class="c1">// 즉, Symbol()는 항상 고유한 값을 반환합니다. 
+</span><span class="c1"></span>    <span class="c1">// =&gt;  const A = Symbol(&#39;Hi&#39;), const B = Symbol(&#39;Hi&#39;) 같이
+</span><span class="c1"></span>    <span class="c1">// 동일한 Symbol(&#39;Hi&#39;) 명령어로 A와 B를 생성했어도 
+</span><span class="c1"></span>    <span class="c1">// 각각 고유한 값을 가집니다.
+</span><span class="c1"></span>  
+<span class="c1">// 추가 실습
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">nationality</span> <span class="o">=</span> <span class="nx">Symbol</span><span class="p">(</span><span class="s1">&#39;nationality&#39;</span><span class="p">)</span>
+<span class="kr">const</span> <span class="nx">user</span> <span class="o">=</span> <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;kim&#39;</span><span class="p">}</span>
+<span class="nx">user</span><span class="p">[</span><span class="nx">nationality</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&#34;korean&#34;</span>
+  
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">user</span><span class="p">)</span>  <span class="c1">// user: { name: &#39;kim&#39;, [Symbol(nationality)]: &#39;korean&#39; }
+</span><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">user</span><span class="p">[</span><span class="nx">nationality</span><span class="p">])</span>  <span class="c1">// korean
+</span></code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+</li>
+</ul>
+<h3 id="2-참조-타입reference-data-type">2. 참조 타입(Reference Data Type)</h3>
+<blockquote>
+<p>참조 타입의 데이터는 크기가 정해져 있지 않고 변수에 할당이 될 때</br><strong>값이 직접 해당 변수에 저장될 수 없으며 변수에는 데이터에 대한 참조만 저장됩니다.</strong></p>
+<p>데이터에 대한 참조만 저장 ===  변수의 값이 저장된 힙 <strong>메모리의 주소값을 저장한다.</strong> === <strong>변수가 가지고 있는 메모리 주소를 이용해서 변수의 값에 접근</strong>한다.</p>
+</blockquote>
+<ul>
+<li>
+<p>객체</p>
+<ul>
+<li>
+<p>Object</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// Object 객체 생성(선언)
+</span><span class="c1"></span><span class="k">new</span> <span class="nb">Object</span><span class="p">()</span>
+    
+<span class="c1">// 생성(생성자 함수 사용)
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">ob</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Object</span><span class="p">()</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">ob</span><span class="p">)</span>  <span class="c1">//  ▪{} =&gt; __proto__: Object
+</span><span class="c1"></span>    
+<span class="c1">// 프로퍼티 추가
+</span><span class="c1"></span><span class="nx">ob</span><span class="p">.</span><span class="nx">id</span> <span class="o">=</span> <span class="s1">&#39;qqq&#39;</span>
+<span class="nx">ob</span><span class="p">.</span><span class="nx">pass</span> <span class="o">=</span> <span class="mi">1234</span>
+<span class="nx">ob</span><span class="p">.</span><span class="nx">gender</span> <span class="o">=</span> <span class="s2">&#34;m&#34;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">ob</span><span class="p">)</span>  <span class="c1">// {id: &#39;qqq&#39;, pass: 1234, gender: &#34;m&#34;}
+</span><span class="c1"></span>    
+<span class="c1">// 추가 생성법 및 프로퍼티 추가
+</span><span class="c1"></span>    <span class="c1">// 방법.1
+</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">object1</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">a</span><span class="o">:</span> <span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="nx">b</span><span class="o">:</span> <span class="mi">42</span><span class="p">,</span> <span class="nx">c</span><span class="o">:</span> <span class="p">{}</span> <span class="p">};</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">object1</span><span class="p">.</span><span class="nx">a</span><span class="p">);</span>  <span class="c1">// &#34;foo&#34;
+</span><span class="c1"></span>    
+    <span class="c1">// 방법.2
+</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="s1">&#39;foo&#39;</span><span class="p">;</span>
+    <span class="kr">const</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
+    <span class="kr">const</span> <span class="nx">c</span> <span class="o">=</span> <span class="p">{};</span>
+    <span class="kr">const</span> <span class="nx">object2</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">A</span><span class="o">:</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">B</span><span class="o">:</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">C</span><span class="o">:</span> <span class="nx">c</span> <span class="p">};</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">object2</span><span class="p">.</span><span class="nx">B</span><span class="p">);</span>  <span class="c1">// 42
+</span><span class="c1"></span>    
+    <span class="c1">// 방법.3 (방법.2에 이어서)
+</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">object3</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span> <span class="p">};</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">object3</span><span class="p">.</span><span class="nx">a</span><span class="p">);</span>  <span class="c1">// &#34;foo&#34;
+</span><span class="c1"></span>    
+    <span class="c1">// 방법.4 (객체 리터럴 방식으로 생성)
+</span><span class="c1"></span>	<span class="kd">var</span> <span class="nx">me</span> <span class="o">=</span> <span class="p">{</span><span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;JG1&#39;</span><span class="p">,</span> <span class="nx">pass</span><span class="o">:</span> <span class="mi">1234</span><span class="p">,</span> <span class="nx">gender</span><span class="o">:</span><span class="s1">&#39;m&#39;</span><span class="p">}</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">me</span><span class="p">.</span><span class="nx">id</span><span class="p">)</span>  <span class="c1">// &#34;JG1&#34;
+</span><span class="c1"></span>    
+<span class="c1">//////////////////////////////////////////////////////////////////////////////
+</span><span class="c1"></span>    
+<span class="c1">// 2. Object (python의 dict와 비슷한듯.)
+</span><span class="c1">// key는 문자열 타입이고, value는 모든 타입이 될 수 있다.
+</span><span class="c1"></span>    
+<span class="kr">const</span> <span class="nx">me</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span><span class="s1">&#39;홍길동&#39;</span><span class="p">,</span>  <span class="c1">// key가 한 단어 일때
+</span><span class="c1"></span>    <span class="s1">&#39;phone number&#39;</span><span class="o">:</span><span class="s1">&#39;01012345678&#39;</span><span class="p">,</span>  <span class="c1">// key가 여러 단어 일때
+</span><span class="c1"></span>    <span class="nx">samsungProducts</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">galaxyWatch</span><span class="o">:</span> <span class="s1">&#39;2019GalaxyWatch&#39;</span><span class="p">,</span>
+        <span class="nx">galaxyPhone</span><span class="o">:</span> <span class="s1">&#39;galaxy S9&#39;</span><span class="p">,</span>
+        <span class="nx">galaxyBuds</span><span class="o">:</span> <span class="s1">&#39;Buds V1&#39;</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">}</span>
+    
+<span class="c1">// 두가지 방법으로 접근이 가능
+</span><span class="c1">// (1) dot notation
+</span><span class="c1"></span><span class="nx">me</span><span class="p">.</span><span class="nx">name</span> <span class="c1">// 홍길동
+</span><span class="c1"></span><span class="nx">me</span><span class="p">.</span><span class="nx">samsungProducts</span><span class="p">.</span><span class="nx">galaxyBuds</span> <span class="c1">// &#34;Buds V1&#34;
+</span><span class="c1"></span>    
+<span class="c1">// (2) []로 호출
+</span><span class="c1"></span><span class="nx">me</span><span class="p">[</span><span class="s1">&#39;phone number&#39;</span><span class="p">]</span> <span class="c1">// &#39;01012345678&#39;
+</span><span class="c1"></span>    
+    
+<span class="c1">// Object.keys() - O 대문자
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">fruits</span> <span class="o">=</span> <span class="p">{</span><span class="nx">a</span><span class="o">:</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="nx">b</span><span class="o">:</span><span class="s1">&#39;banana&#39;</span><span class="p">}</span>
+<span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">fruits</span><span class="p">)</span> <span class="c1">// [&#34;a&#34;, &#34;b&#34;]
+</span><span class="c1"></span>    
+<span class="c1">// Object.values()
+</span><span class="c1"></span><span class="nb">Object</span><span class="p">.</span><span class="nx">values</span><span class="p">(</span><span class="nx">fruits</span><span class="p">)</span> <span class="c1">// [&#34;apple&#34;, &#34;banana&#34;]
+</span><span class="c1"></span>    
+<span class="c1">//Object.entries()
+</span><span class="c1"></span><span class="nb">Object</span><span class="p">.</span><span class="nx">entries</span><span class="p">(</span><span class="nx">fruits</span><span class="p">)</span> <span class="c1">// [ [&#34;a&#34;, &#34;apple&#34;], [&#34;b&#34;, &#34;banana&#34;] ]
+</span><span class="c1"></span>    
+<span class="c1">// Object Literal (ER6+)
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">books</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Learning JS&#39;</span><span class="p">,</span> <span class="s1">&#39;Eloquent JS&#39;</span><span class="p">]</span>
+<span class="kr">const</span> <span class="nx">comics</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">DC</span> <span class="o">:</span> <span class="p">[</span><span class="s1">&#39;Aquaman&#39;</span><span class="p">,</span> <span class="s1">&#39;SHAZAM&#39;</span><span class="p">],</span>
+    <span class="nx">Marvel</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;Captain Marvel&#39;</span><span class="p">,</span> <span class="s1">&#39;Avengers&#39;</span><span class="p">]</span>
+<span class="p">}</span>
+<span class="kr">const</span> <span class="nx">megazines</span> <span class="o">=</span> <span class="kc">null</span>
+<span class="kr">const</span> <span class="nx">bookStore</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">books</span><span class="o">:</span> <span class="nx">books</span><span class="p">,</span>
+    <span class="nx">comics</span><span class="o">:</span> <span class="nx">comics</span><span class="p">,</span>
+    <span class="nx">megazines</span><span class="o">:</span> <span class="nx">megazines</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="nx">bookStore</span><span class="p">.</span><span class="nx">books</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1">// &#39;Learning JS&#39;
+</span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>배열(Array)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// 1. Array
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="nx">numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1">// 1
+</span><span class="c1"></span><span class="nx">numbers</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c1">// undefined / 정확한 양의 정수만 사용 가능
+</span><span class="c1"></span><span class="nx">numbers</span><span class="p">.</span><span class="nx">length</span> <span class="c1">// 4
+</span><span class="c1"></span>    
+<span class="c1">//reverse - 원본 배열의 요소들의 순서를 반대로 정렬한다. 
+</span><span class="c1"></span><span class="nx">numbers</span><span class="p">.</span><span class="nx">reverse</span> <span class="c1">// [4,3,2,1]
+</span><span class="c1"></span><span class="nx">numbers</span><span class="p">.</span><span class="nx">reverse</span> <span class="c1">// [1,2,3,4]
+</span><span class="c1"></span>    
+<span class="kr">const</span> <span class="nx">strings</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">]</span>
+<span class="nx">strings</span><span class="p">.</span><span class="nx">reverse</span>  <span class="c1">// [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;]
+</span><span class="c1"></span>    
+<span class="c1">// push &amp; pop - 요소를 배열의 가장 뒤에 추가하거나 삭제한다.
+</span><span class="c1"></span><span class="nx">numbers</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="c1">// [1, 2, 3, 4, &#34;a&#34;]
+</span><span class="c1"></span><span class="nx">numbers</span><span class="p">.</span><span class="nx">pop</span><span class="p">()</span> <span class="c1">// &#39;a&#39;
+</span><span class="c1"></span>    
+<span class="c1">// unshift &amp; shift - 요소를 배열의 가장 앞에 추가하거나, 제거한다.
+</span><span class="c1"></span><span class="nx">numbers</span><span class="p">.</span><span class="nx">unshift</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="c1">// [&#34;a&#34;, 1, 2, 3, 4]
+</span><span class="c1"></span><span class="nx">numbers</span><span class="p">.</span><span class="nx">shift</span><span class="p">()</span> <span class="c1">// &#39;a&#39;
+</span><span class="c1"></span>    
+<span class="c1">// includes - 배열의 특정 요소가 있는지 여부를 boolean 값으로 반환해준다.
+</span><span class="c1"></span><span class="nx">numbers</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1">// true
+</span><span class="c1"></span><span class="nx">numbers</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="c1">// false
+</span><span class="c1"></span>    
+<span class="c1">// indexOf
+</span><span class="c1">// 배열의 특정 요소가 있는지 여부를 확인 후, 
+</span><span class="c1">// 가장 첫번째로 찾은 아이템의 index값을 반환한다.
+</span><span class="c1">// 요소가 없으면 -1을 반환
+</span><span class="c1"></span><span class="nx">numbers</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+<span class="nx">numbers</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="c1">// 4
+</span><span class="c1"></span><span class="nx">numbers</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">)</span> <span class="c1">// -1
+</span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>함수(function)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// 함수 선언은 크게 두 가지로 나누어서 생각해볼 수 있다. 
+</span><span class="c1"></span>    
+<span class="c1">// 1. Function Scope - var를 사용할 때
+</span><span class="c1">// python의 global 선언한 def 속 변수 느낌..
+</span><span class="c1"></span>    
+<span class="kd">function</span> <span class="nx">number</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">acc</span> <span class="o">=</span> <span class="nx">num</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="nx">acc</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">acc</span><span class="p">)</span> <span class="c1">// num이 정의 되지 않아서 error
+</span><span class="c1"></span>    
+<span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;용우와 영수&#39;</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="c1">// &#39;용우와 영수&#39;
+</span><span class="c1"></span>    
+    
+<span class="c1">// 2. Block Scope - const, let을 사용할 때
+</span><span class="c1">// {} 안에서만 존재하는 변수
+</span><span class="c1">// python의 global 선언 안한 def 속 변수 느낌..
+</span><span class="c1"></span>    
+<span class="kd">let</span> <span class="nx">age</span> <span class="o">=</span> <span class="s1">&#39;30&#39;</span>
+<span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">age</span> <span class="o">=</span> <span class="s1">&#39;100&#39;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">age</span><span class="p">)</span> <span class="c1">// 100
+</span><span class="c1"></span><span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">age</span><span class="p">)</span> <span class="c1">// 30
+</span><span class="c1"></span>    
+<span class="kd">function</span> <span class="nx">numberTwo</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">accTwo</span> <span class="o">=</span> <span class="nx">num</span> <span class="o">+</span><span class="mi">1</span>
+    <span class="k">return</span> <span class="nx">accTwo</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numberTwo</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span> <span class="c1">// 3
+</span></code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<p>​</p>
+<p>​</p>
+</li>
+</ul>
+</li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2020-12-09</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/js_type/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/javascript/">Javascript</a>,&nbsp;<a href="/tags/tpye/">tpye</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/processvsthread/" class="prev" rel="prev" title="Process VS Thread"><i class="fas fa-angle-left fa-fw"></i>Process VS Thread</a>
+            <a href="/js_operators/" class="next" rel="next" title="JavaScript Operators">JavaScript Operators<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.82.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

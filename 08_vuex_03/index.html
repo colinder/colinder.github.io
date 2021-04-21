@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>08_Vuex_03 - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="08_Vuex_03" />
+<meta property="og:description" content="​
+Vuex 핵심컨셉(getters, mutations, actions, modules)  3. Actions  공식문서에 따르면 액션(Actions)은 변이(mutations)와 유사하나, 몇가지 다른 점이 있다고 한다.
+ 상태를 변이시키는 대신 액션으로 변이에 대한 커밋을 합니다. 작업에는 임의의 비동기 작업이 포함될 수 있습니다.    Q. 상태를 변이시키는 대신 액션으로 변이에 대한 커밋을 합니다.
+A. mutations의 역할은 State를 관리하는 것이다. 그런데 만약 비동기적 요청을 마구잡이로 보내게 된다면, State가 변질될 가능성이 높아진다. 결국 비동기 요청의 경우에도 mutations에 정의한 메소드의 형태로 보내어 상태가 변화하는 것을 추적한다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://colinder.github.io/08_vuex_03/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-08-27T21:48:19&#43;09:00" />
+<meta property="article:modified_time" content="2020-08-27T21:48:19&#43;09:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
+
+<meta name="twitter:title" content="08_Vuex_03"/>
+<meta name="twitter:description" content="​
+Vuex 핵심컨셉(getters, mutations, actions, modules)  3. Actions  공식문서에 따르면 액션(Actions)은 변이(mutations)와 유사하나, 몇가지 다른 점이 있다고 한다.
+ 상태를 변이시키는 대신 액션으로 변이에 대한 커밋을 합니다. 작업에는 임의의 비동기 작업이 포함될 수 있습니다.    Q. 상태를 변이시키는 대신 액션으로 변이에 대한 커밋을 합니다.
+A. mutations의 역할은 State를 관리하는 것이다. 그런데 만약 비동기적 요청을 마구잡이로 보내게 된다면, State가 변질될 가능성이 높아진다. 결국 비동기 요청의 경우에도 mutations에 정의한 메소드의 형태로 보내어 상태가 변화하는 것을 추적한다."/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/08_vuex_03/" /><link rel="prev" href="https://colinder.github.io/07_vuex_02/" /><link rel="next" href="https://colinder.github.io/block_chain/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "08_Vuex_03",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/colinder.github.io\/08_vuex_03\/"
+        },"genre": "posts","keywords": "Vue","wordcount":  825 ,
+        "url": "https:\/\/colinder.github.io\/08_vuex_03\/","datePublished": "2020-08-27T21:48:19+09:00","dateModified": "2020-08-27T21:48:19+09:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "colinder"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="">Hello New World</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="">Hello New World</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">08_Vuex_03</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/vue/"><i class="far fa-folder fa-fw"></i>vue</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-08-27">2020-08-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;825 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#3-actions">3. Actions</a></li>
+    <li><a href="#4-modules">4. Modules</a>
+      <ul>
+        <li><a href="#실습해보면서-알게된-포인트를-정리하며-마친다">✨실습해보면서 알게된 포인트를 정리하며 마친다.</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>​</p>
+<h1 id="vuex-핵심컨셉getters-mutations-actions-modules">Vuex 핵심컨셉(getters, mutations, actions, modules)</h1>
+<hr>
+<h2 id="3-actions">3. Actions</h2>
+<blockquote>
+<p><a href="https://vuex.vuejs.org/kr/guide/actions.html" target="_blank" rel="noopener noreffer">공식문서</a>에 따르면 <code>액션(Actions)</code>은 <code>변이(mutations)</code>와 유사하나, 몇가지 다른 점이 있다고 한다.</p>
+<ol>
+<li>상태를 변이시키는 대신 액션으로 변이에 대한 커밋을 합니다.</li>
+<li>작업에는 임의의 비동기 작업이 포함될 수 있습니다.</li>
+</ol>
+</blockquote>
+<hr>
+<p><strong>Q.</strong> <em>상태를 변이시키는 대신 액션으로 변이에 대한 커밋을 합니다.</em></p>
+<p><strong>A.</strong> mutations의 역할은 State를 관리하는 것이다. 그런데 만약 비동기적 요청을 마구잡이로 보내게 된다면, State가 변질될 가능성이 높아진다. 결국 비동기 요청의 경우에도 mutations에 정의한 메소드의 형태로 보내어 상태가 변화하는 것을 추적한다.</p>
+<p>​</p>
+<p><strong>Q.</strong> <em>작업에는 임의의 비동기 작업이 포함될 수 있습니다.</em></p>
+<p><strong>A.</strong> 예를 들어 axios요청을 보내놓고 store에 등록된 자료를 가져오거나 수정해 사용하고 싶은 경우 사용하겠다.</p>
+<p>​	-	이론적인 개념을 조금 더 생각해보자면, mutations의 경우 디버깅을 위해 동기(순차)적으로 작동이 되었으나 actions의 경우 비동기(비순차)적인 역할을 수행하는데 도움이 된다. 예를 들면, axios요청을 보낸다 던가. setTimeout()을 설정해 작동 시간을 조정한다던가.</p>
+<figure><a class="lightgallery" href="/images/VuexActions.png" title="/images/VuexActions.png" data-thumbnail="/images/VuexActions.png" data-sub-html="<h2>이런 흐름으로 작동한다.</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/VuexActions.png"
+            data-srcset="/images/VuexActions.png, /images/VuexActions.png 1.5x, /images/VuexActions.png 2x"
+            data-sizes="auto"
+            alt="/images/VuexActions.png" width="700px" />
+    </a><figcaption class="image-caption">이런 흐름으로 작동한다.</figcaption>
+    </figure>
+<p>​</p>
+<p>🙋‍♂️간단히 Actions을 실습해 봅시다. (Step. 1, 2로 구성)</p>
+<p><strong>Step. 1</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-vue" data-lang="vue"><span class="c1">// store.js
+</span><span class="c1"></span>
+<span class="kr">import</span> <span class="nx">Vue</span> <span class="nx">from</span> <span class="s2">&#34;vue&#34;</span>
+<span class="kr">import</span> <span class="nx">Vuex</span> <span class="nx">from</span> <span class="s2">&#34;vuex&#34;</span>
+
+<span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">Vuex</span><span class="p">)</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="k">new</span> <span class="nx">Vuex</span><span class="p">.</span><span class="nx">Store</span><span class="p">({</span>
+	<span class="nx">state</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">first</span><span class="o">:</span> <span class="s1">&#39;첫번째 데이터입니다.&#39;</span><span class="p">,</span>
+    <span class="nx">second</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="nx">listData</span><span class="o">:</span> <span class="p">[</span>
+      <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;john&#34;</span><span class="p">},</span>
+      <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;poul&#34;</span><span class="p">},</span>
+      <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;kim&#34;</span><span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="nx">getters</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">addOne</span><span class="p">(</span><span class="nx">state</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nx">state</span><span class="p">.</span><span class="nx">second</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nx">mutations</span><span class="o">:</span> <span class="p">{</span>                         
+    <span class="nx">addOneMutations</span><span class="p">(</span><span class="nx">state</span><span class="p">)</span> <span class="p">{</span>           
+      <span class="k">return</span> <span class="nx">state</span><span class="p">.</span><span class="nx">second</span><span class="o">++</span>            
+    <span class="p">}</span>                                  
+  <span class="p">},</span>
+  <span class="nx">actions</span><span class="o">:</span> <span class="p">{</span>                                     <span class="err">👈</span>
+    <span class="c1">//비동기 요청인 setTimeout을 실습             👈
+</span><span class="c1"></span>    <span class="nx">delayFewMinutes</span><span class="p">(</span><span class="nx">context</span><span class="p">)</span> <span class="p">{</span>                   <span class="err">👈</span> <span class="nx">context는</span> <span class="nx">그냥</span> <span class="nx">선언적인</span> <span class="nx">겁니다</span><span class="p">.</span>
+      <span class="k">return</span> <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>                  <span class="err">👈</span> 
+        <span class="nx">context</span><span class="p">.</span><span class="nx">commit</span><span class="p">(</span><span class="s1">&#39;addOneMutations&#39;</span><span class="p">);</span>       <span class="err">👈</span> <span class="nx">actions도</span> <span class="nx">결국</span> <span class="nx">commit</span> <span class="nx">으로</span> 
+      <span class="p">},</span> <span class="mi">1000</span><span class="p">)</span>                                   <span class="err">👈</span> <span class="nx">mutations를</span> <span class="nx">불러오는</span> <span class="nx">겁니다</span><span class="p">.</span>
+    <span class="p">}</span>                                            <span class="err">👈</span> <span class="s1">&#39;addOneMutations&#39;</span><span class="nx">는</span> <span class="nx">위에</span> <span class="nx">mutations에</span>
+  <span class="p">}</span>                                              <span class="err">👈</span> <span class="nx">선언한</span> <span class="nx">것을</span> <span class="nx">불러온</span> <span class="nx">것이고</span> <span class="o">/</span> <span class="mi">1000</span><span class="nx">은</span> <span class="mi">1</span><span class="nx">초를</span> <span class="nx">의미</span>
+<span class="p">})</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<p><strong>Step. 2</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-vue" data-lang="vue"><span class="c1">//사용하는 component에서 
+</span><span class="c1"></span>
+<span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span><span class="nx">state그냥</span> <span class="nx">불러온</span> <span class="nx">값</span><span class="o">:</span> <span class="p">{{</span><span class="nx">change1</span><span class="p">}}&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span><span class="nx">Getters</span> <span class="nx">사용한</span> <span class="nx">값</span><span class="o">:</span> <span class="p">{{</span><span class="nx">useGetters</span><span class="p">}}&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span><span class="nx">Mutations</span> <span class="nx">사용한</span> <span class="nx">값</span><span class="o">:</span> <span class="p">{{</span><span class="nx">$store</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">second</span><span class="p">}}&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="nt">@click</span><span class="s">=&#34;useMutations&#34;</span><span class="p">&gt;</span><span class="err">+</span><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">hr</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span><span class="nx">Actions</span> <span class="nx">사용한</span> <span class="nx">값</span><span class="o">:</span> <span class="p">{{</span><span class="nx">$store</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">second</span><span class="p">}}&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>    <span class="err">👈</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="nt">@click</span><span class="s">=&#34;useActions&#34;</span><span class="p">&gt;</span><span class="err">+</span><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>                <span class="err">👈</span>
+    <span class="p">&lt;</span><span class="nt">hr</span><span class="p">&gt;</span>                                                  <span class="err">👈</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span>
+  <span class="nx">computed</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">change1</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">second</span>
+    <span class="p">},</span>
+    <span class="nx">useGetters</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">getters</span><span class="p">.</span><span class="nx">addOne</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
+    <span class="c1">//mutations을 이용할 떄는 commit을 사용
+</span><span class="c1"></span>    <span class="nx">useMutations</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">commit</span><span class="p">(</span><span class="s2">&#34;addOneMutations&#34;</span><span class="p">,</span> <span class="p">{</span><span class="nx">N</span><span class="o">:</span> <span class="mi">2</span><span class="p">})</span>
+    <span class="p">},</span>
+    <span class="c1">//actions를 이용할 떄는 dispatch를 사용                 👈
+</span><span class="c1"></span>    <span class="nx">useActions</span><span class="p">()</span> <span class="p">{</span>                                         <span class="err">👈</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">(</span><span class="s2">&#34;delayFewMinutes&#34;</span><span class="p">)</span>       <span class="err">👈</span> <span class="nx">actions은</span> <span class="nx">store에서</span> 
+    <span class="p">}</span>                                                      <span class="err">👈</span> <span class="s1">&#39;dispatch&#39;</span><span class="nx">로</span> <span class="nx">불러옵니다</span><span class="p">.</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><figure><a class="lightgallery" href="/images/VuexActions_01.png" title="/images/VuexActions_01.png" data-thumbnail="/images/VuexActions_01.png" data-sub-html="<h2>Actions 사용한 값: 2 아래 &#43; 버튼을 누르면 1초 뒤에 state가 변하는 것을 알 수 있다.</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/VuexActions_01.png"
+            data-srcset="/images/VuexActions_01.png, /images/VuexActions_01.png 1.5x, /images/VuexActions_01.png 2x"
+            data-sizes="auto"
+            alt="/images/VuexActions_01.png" width="700px" />
+    </a><figcaption class="image-caption">Actions 사용한 값: 2 아래 + 버튼을 누르면 1초 뒤에 state가 변하는 것을 알 수 있다.</figcaption>
+    </figure>
+<p>​</p>
+<p><strong>✋잠깐.</strong></p>
+<p>Actions도 인자를 넘길 수 있는데!</p>
+<ol>
+<li>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-vue" data-lang="vue"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span>
+  <span class="nx">computed</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">change1</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">second</span>
+    <span class="p">},</span>
+    <span class="nx">useGetters</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">getters</span><span class="p">.</span><span class="nx">addOne</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
+    <span class="c1">//mutations을 이용할 떄는 commit을 사용
+</span><span class="c1"></span>    <span class="nx">useMutations</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">commit</span><span class="p">(</span><span class="s2">&#34;addOneMutations&#34;</span><span class="p">,</span> <span class="p">{</span><span class="nx">N</span><span class="o">:</span> <span class="mi">2</span><span class="p">})</span>
+    <span class="p">},</span>
+    <span class="c1">//actions를 이용할 떄는 dispatch를 사용
+</span><span class="c1"></span>    <span class="nx">useActions</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">(</span><span class="s2">&#34;delayFewMinutes&#34;</span><span class="p">,</span> <span class="p">{</span><span class="nx">by</span><span class="o">:</span> <span class="mi">50</span><span class="p">,</span> <span class="nx">time</span><span class="o">:</span> <span class="mi">2000</span><span class="p">})</span>   <span class="err">👈</span> <span class="nx">요기요기</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-vue" data-lang="vue"><span class="c1">// store.js
+</span><span class="c1"></span>   
+<span class="kr">import</span> <span class="nx">Vue</span> <span class="nx">from</span> <span class="s2">&#34;vue&#34;</span>
+<span class="kr">import</span> <span class="nx">Vuex</span> <span class="nx">from</span> <span class="s2">&#34;vuex&#34;</span>
+   
+<span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">Vuex</span><span class="p">)</span>
+   
+<span class="kr">export</span> <span class="k">default</span> <span class="k">new</span> <span class="nx">Vuex</span><span class="p">.</span><span class="nx">Store</span><span class="p">({</span>
+	<span class="nx">state</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">first</span><span class="o">:</span> <span class="s1">&#39;첫번째 데이터입니다.&#39;</span><span class="p">,</span>
+    <span class="nx">second</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="nx">listData</span><span class="o">:</span> <span class="p">[</span>
+      <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;john&#34;</span><span class="p">},</span>
+      <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;poul&#34;</span><span class="p">},</span>
+      <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;kim&#34;</span><span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="nx">getters</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">addOne</span><span class="p">(</span><span class="nx">state</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nx">state</span><span class="p">.</span><span class="nx">second</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nx">mutations</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">addOneMutations</span><span class="p">(</span><span class="nx">state</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nx">state</span><span class="p">.</span><span class="nx">second</span> <span class="o">+=</span> <span class="mi">2</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nx">actions</span><span class="o">:</span> <span class="p">{</span>
+    <span class="c1">//비동기 요청인 setTimeout을 실습
+</span><span class="c1"></span>    <span class="nx">delayFewMinutes</span><span class="p">(</span><span class="nx">context</span><span class="p">,</span> <span class="nx">payload</span><span class="p">)</span> <span class="p">{</span>                  <span class="err">👈</span>
+      <span class="k">return</span> <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>                          <span class="err">👈</span>
+        <span class="nx">context</span><span class="p">.</span><span class="nx">commit</span><span class="p">(</span><span class="s1">&#39;addOneMutations&#39;</span><span class="p">,</span> <span class="nx">payload</span><span class="p">.</span><span class="nx">by</span><span class="p">)</span>    <span class="err">👈</span> <span class="nx">이런식으로</span> <span class="nx">인자로</span> <span class="nx">작동시간</span>
+      <span class="p">},</span> <span class="nx">payload</span><span class="p">.</span><span class="nx">time</span><span class="p">)</span>                                   <span class="err">👈</span> <span class="nx">설정도</span> <span class="nx">가능하고</span><span class="p">,</span> <span class="nx">mutations에</span>
+    <span class="p">}</span>                                                    <span class="err">👈</span> <span class="nx">payload</span> <span class="nx">받는</span> <span class="nx">부분</span> <span class="nx">만들어서</span> 
+  <span class="p">}</span>                                                      <span class="err">👈</span> <span class="nx">거기까지도</span> <span class="nx">전달</span> <span class="nx">가능</span>
+<span class="p">})</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<hr>
+<p>​</p>
+<h2 id="4-modules">4. Modules</h2>
+<blockquote>
+<p>모듈은 간단하게 store에 여러개의 저장소(모듈s)를 만들어 관리한다는 것이다. <a href="https://vuex.vuejs.org/kr/guide/modules.html" target="_blank" rel="noopener noreffer">공식문서</a>에 따르면 <em>Vuex는 저장소를 <strong>모듈</strong> 로 나눌 수 있습니다.</em> 고 설명하고 있다.</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-vue" data-lang="vue"><span class="c1">//예를 들자면 이런 모습으로.(출처: 공식문서)
+</span><span class="c1"></span>
+<span class="kr">const</span> <span class="nx">moduleA</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">state</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">({</span> <span class="p">...</span> <span class="p">}),</span>
+  <span class="nx">mutations</span><span class="o">:</span> <span class="p">{</span> <span class="p">...</span> <span class="p">},</span>
+  <span class="nx">actions</span><span class="o">:</span> <span class="p">{</span> <span class="p">...</span> <span class="p">},</span>
+  <span class="nx">getters</span><span class="o">:</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kr">const</span> <span class="nx">moduleB</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">state</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">({</span> <span class="p">...</span> <span class="p">}),</span>
+  <span class="nx">mutations</span><span class="o">:</span> <span class="p">{</span> <span class="p">...</span> <span class="p">},</span>
+  <span class="nx">actions</span><span class="o">:</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kr">const</span> <span class="nx">store</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vuex</span><span class="p">.</span><span class="nx">Store</span><span class="p">({</span>
+  <span class="nx">modules</span><span class="o">:</span> <span class="p">{</span>                         <span class="err">👈</span> <span class="nx">여기서</span> <span class="nx">모듈을</span> <span class="nx">선언해주고</span>
+    <span class="nx">a</span><span class="o">:</span> <span class="nx">moduleA</span><span class="p">,</span>                      <span class="err">👈</span> <span class="nx">각각의</span> <span class="nx">모듈을</span> <span class="nx">등록해주고</span> <span class="nx">있는</span> 
+    <span class="nx">b</span><span class="o">:</span> <span class="nx">moduleB</span>                       <span class="err">👈</span> <span class="nx">모습을</span> <span class="nx">볼</span> <span class="nx">수</span> <span class="nx">있다</span><span class="p">.</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<h3 id="실습해보면서-알게된-포인트를-정리하며-마친다">✨실습해보면서 알게된 포인트를 정리하며 마친다.</h3>
+<hr>
+<p>1️⃣ Mutations은 동기(순차)적인 경우에 <strong>Actions은 비동기(비순차)적인 경우에 사용한다.</strong></p>
+<ul>
+<li>(하지만 Actions도 결국엔 Mutations를 불러와 사용한다.)</li>
+</ul>
+<p>2️⃣ <strong>각각의 Components에서 Actions는 dispatch로 호출해 사용한다.</strong></p>
+<ul>
+<li>Mutations는 commit으로 불러와서 사용</li>
+</ul>
+<p>3️⃣ <strong>Modules는 store의 저장소를 분할해 등록하고 싶을 때 사용한다.</strong></p>
+<ul>
+<li>Vue는 단일 트리 컴포넌트 형식이니 자주 사용되진 않을 것 같다.</li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2020-08-27</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/08_vuex_03/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/vue/">vue</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/07_vuex_02/" class="prev" rel="prev" title="07_Vuex_02"><i class="fas fa-angle-left fa-fw"></i>07_Vuex_02</a>
+            <a href="/block_chain/" class="next" rel="next" title="Block_Chain setting &amp; basic">Block_Chain setting &amp; basic<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.82.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
