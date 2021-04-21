@@ -1,0 +1,2211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>REST API Reference - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="REST API Reference" />
+<meta property="og:description" content="​
+REST API Reference [TOC]
+1.사용자 API    Members Descriptions     POST /accounts/signup 회원가입   POST /accounts/login 회원 로그인   POST /accounts/userDetail 회원정보   PUT /accounts/update 회원정보 수정   DELETE /accounts/dropUser 회원탈퇴   GET /accounts/emailAuth 이메일 인증   GET /accounts/emailCheck 이메일 중복 확인   GET /accounts/nicknameCheck 닉네임 중복 확인    1.1 회원 로그인 POST /accounts/login ​	회원 로그인 API 입니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://colinder.github.io/rest-api-reference/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-09-24T09:54:40&#43;09:00" />
+<meta property="article:modified_time" content="2020-09-24T09:54:40&#43;09:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
+
+<meta name="twitter:title" content="REST API Reference"/>
+<meta name="twitter:description" content="​
+REST API Reference [TOC]
+1.사용자 API    Members Descriptions     POST /accounts/signup 회원가입   POST /accounts/login 회원 로그인   POST /accounts/userDetail 회원정보   PUT /accounts/update 회원정보 수정   DELETE /accounts/dropUser 회원탈퇴   GET /accounts/emailAuth 이메일 인증   GET /accounts/emailCheck 이메일 중복 확인   GET /accounts/nicknameCheck 닉네임 중복 확인    1.1 회원 로그인 POST /accounts/login ​	회원 로그인 API 입니다."/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/rest-api-reference/" /><link rel="prev" href="https://colinder.github.io/namingconvention/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "REST API Reference",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/colinder.github.io\/rest-api-reference\/"
+        },"genre": "posts","keywords": "Web","wordcount":  1573 ,
+        "url": "https:\/\/colinder.github.io\/rest-api-reference\/","datePublished": "2020-09-24T09:54:40+09:00","dateModified": "2020-09-24T09:54:40+09:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "colinder"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="">Hello New World</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="">Hello New World</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">REST API Reference</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/web/"><i class="far fa-folder fa-fw"></i>web</a>&nbsp;<a href="/categories/django/"><i class="far fa-folder fa-fw"></i>django</a>&nbsp;<a href="/categories/vue/"><i class="far fa-folder fa-fw"></i>vue</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-09-24">2020-09-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1573 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;8 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1사용자-api">1.사용자 API</a>
+      <ul>
+        <li><a href="#11-회원-로그인-post-accountslogin">1.1 회원 로그인 POST /accounts/login</a></li>
+        <li><a href="#12-회원가입-post-accountssignup">1.2 회원가입 POST /accounts/signup</a>
+          <ul>
+            <li><a href="#121-이메일-중복확인-get-accountsemailcheck">1.2.1 이메일 중복확인 GET /accounts/emailCheck</a></li>
+            <li><a href="#122닉네임-중복확인-get-accountsnicknamecheck">1.2.2닉네임 중복확인 GET /accounts/nicknameCheck</a></li>
+            <li><a href="#123이메일-인증-get-accountsemailauth">1.2.3이메일 인증 GET /accounts/emailAuth</a></li>
+          </ul>
+        </li>
+        <li><a href="#13-회원-정보-수정-put-accountsupdate">1.3 회원 정보 수정 PUT /accounts/update</a></li>
+        <li><a href="#14-회원-정보-post-accountsuserdetail">1.4 회원 정보 POST /accounts/userDetail</a></li>
+        <li><a href="#15-회원탈퇴-delete-accountsdropuser">1.5 회원탈퇴 DELETE /accounts/dropUser</a></li>
+      </ul>
+    </li>
+    <li><a href="#2게시물-api">2.게시물 API</a>
+      <ul>
+        <li><a href="#21-글-작성-post-articlesregiste">2.1 글 작성 POST /articles/registe</a></li>
+        <li><a href="#22-글-상세-조회-get-articlesshowarticle">2.2 글 상세 조회 GET /articles/showArticle</a></li>
+        <li><a href="#23-글-수정-put-articlesmodify">2.3 글 수정 PUT /articles/modify</a></li>
+        <li><a href="#24-글-삭제-delete-articlesdroparticle">2.4 글 삭제 DELETE /articles/dropArticle</a></li>
+        <li><a href="#25-글-좋아요-post-articleslike">2.5 글 좋아요 POST /articles/like</a></li>
+        <li><a href="#26-좋아요-게시물-리스트-post-articleslikedlist">2.6 좋아요 게시물 리스트 POST /articles/likedList</a></li>
+        <li><a href="#27-글-검색-get-articlessearcharticle">2.7 글 검색 GET /articles/searchArticle</a></li>
+        <li><a href="#28-음식점-추천-리스트-post-articlesgetrecommentlist">2.8 음식점 추천 리스트 POST /articles/getRecommentList</a></li>
+        <li><a href="#29-전체-글-리스트-get-articleslist">2.9 전체 글 리스트 GET /articles/list</a></li>
+        <li><a href="#210-사용자가-작성한-글-리스트-post-articlespostedlist">2.10 사용자가 작성한 글 리스트 POST /articles/postedList</a></li>
+        <li><a href="#211좋아요순-글-리스트-get-articlespostedlistbylikes">2.11좋아요순 글 리스트 GET /articles/postedListByLikes</a></li>
+        <li><a href="#212-조회순-글-리스트-get-articlespostedlistbyhits">2.12 조회순 글 리스트 GET /articles/postedListByHits</a></li>
+        <li><a href="#213-좋아요순-글-리스트-get-articlespostedlistbystarpoint">2.13 좋아요순 글 리스트 GET /articles/postedListByStarpoint</a></li>
+      </ul>
+    </li>
+    <li><a href="#3글-임시저장--api">3.글 임시저장  API</a>
+      <ul>
+        <li><a href="#31-임시-글-작성-post-subarticlesregister">3.1 임시 글 작성 POST /subarticles/register</a></li>
+        <li><a href="#32-임시저장-글-상세-조회-get-subarticlesdetailpostid">3.2 임시저장 글 상세 조회 GET /subarticles/detail/{postid}</a></li>
+        <li><a href="#33-유저별-임시-글-리스트-get-subarticleslistuserid">3.3 유저별 임시 글 리스트 GET /subarticles/list/{userid}</a></li>
+        <li><a href="#34-임시-글-삭제-delete-subarticlesdropsubarticle">3.4 임시 글 삭제 DELETE /subarticles/dropSubarticle</a></li>
+      </ul>
+    </li>
+    <li><a href="#4댓글-api">4.댓글 API</a>
+      <ul>
+        <li><a href="#41-해당-글의-전체-댓글-get-commentslistpostid">4.1 해당 글의 전체 댓글 GET /comments/list/{postid}</a></li>
+        <li><a href="#42-댓글-작성-post-commentsregister">4.2 댓글 작성 POST /comments/register</a></li>
+        <li><a href="#43-댓글-수정-put-commentsmodify">4.3 댓글 수정 PUT /comments/modify</a></li>
+        <li><a href="#44-댓글-삭제-delete-commentsdropcomment">4.4 댓글 삭제 DELETE /comments/dropComment</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>​</p>
+<h1 id="rest-api-reference">REST API Reference</h1>
+<p>[TOC]</p>
+<h2 id="1사용자-api">1.사용자 API</h2>
+<table>
+<thead>
+<tr>
+<th>Members</th>
+<th>Descriptions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST /accounts/signup</td>
+<td>회원가입</td>
+</tr>
+<tr>
+<td>POST /accounts/login</td>
+<td>회원 로그인</td>
+</tr>
+<tr>
+<td>POST /accounts/userDetail</td>
+<td>회원정보</td>
+</tr>
+<tr>
+<td>PUT /accounts/update</td>
+<td>회원정보 수정</td>
+</tr>
+<tr>
+<td>DELETE /accounts/dropUser</td>
+<td>회원탈퇴</td>
+</tr>
+<tr>
+<td>GET /accounts/emailAuth</td>
+<td>이메일 인증</td>
+</tr>
+<tr>
+<td>GET /accounts/emailCheck</td>
+<td>이메일 중복 확인</td>
+</tr>
+<tr>
+<td>GET /accounts/nicknameCheck</td>
+<td>닉네임 중복 확인</td>
+</tr>
+</tbody>
+</table>
+<h3 id="11-회원-로그인-post-accountslogin">1.1 회원 로그인 POST /accounts/login</h3>
+<p>​	회원 로그인 API 입니다.</p>
+<p>​	<code>Request parameters</code></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>email</td>
+<td>String</td>
+<td>이메일</td>
+</tr>
+<tr>
+<td>password</td>
+<td>String</td>
+<td>비밀번호</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response (Success)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uid</td>
+<td>String</td>
+<td>DB에서 관리하는 id</td>
+</tr>
+<tr>
+<td>password</td>
+<td>String</td>
+<td>회원 비밀번호</td>
+</tr>
+<tr>
+<td>passwordConfirm</td>
+<td>String</td>
+<td>회원 비밀번호 확인</td>
+</tr>
+<tr>
+<td>email</td>
+<td>String</td>
+<td>이메일</td>
+</tr>
+<tr>
+<td>nickname</td>
+<td>String</td>
+<td>닉네임</td>
+</tr>
+<tr>
+<td>content</td>
+<td>String</td>
+<td>자기소개</td>
+</tr>
+<tr>
+<td>createDate</td>
+<td>LocalDateTime</td>
+<td>회원가입일</td>
+</tr>
+<tr>
+<td>likedpost</td>
+<td>String</td>
+<td>좋아요한 글 목록</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td></td>
+<td>null</td>
+</tr>
+</tbody>
+</table>
+<h3 id="12-회원가입-post-accountssignup">1.2 회원가입 POST /accounts/signup</h3>
+<p>​	회원가입 API 입니다.</p>
+<p>​	<code>Request parameters</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>password</td>
+<td>String</td>
+<td>회원 비밀번호</td>
+</tr>
+<tr>
+<td>passwordConfirm</td>
+<td>String</td>
+<td>회원 비밀번호 확인</td>
+</tr>
+<tr>
+<td>email</td>
+<td>String</td>
+<td>이메일</td>
+</tr>
+<tr>
+<td>nickname</td>
+<td>String</td>
+<td>닉네임</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response(Success)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>success</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>fail</td>
+</tr>
+</tbody>
+</table>
+<h4 id="121-이메일-중복확인-get-accountsemailcheck">1.2.1 이메일 중복확인 GET /accounts/emailCheck</h4>
+<p>회원가입시 이메일 중복확인하는 API 입니다.
+​	<code>Request parameters</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>email</td>
+<td>String</td>
+<td>이메일</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response(Success)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>아이디사용가능</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>아이디중복</td>
+</tr>
+</tbody>
+</table>
+<h4 id="122닉네임-중복확인-get-accountsnicknamecheck">1.2.2닉네임 중복확인 GET /accounts/nicknameCheck</h4>
+<p>회원가입시 닉네임중복확인하는 API 입니다.
+​	<code>Request parameters</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nickname</td>
+<td>String</td>
+<td>닉네임</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response(Success)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>닉네임사용가능</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>닉네임중복</td>
+</tr>
+</tbody>
+</table>
+<h4 id="123이메일-인증-get-accountsemailauth">1.2.3이메일 인증 GET /accounts/emailAuth</h4>
+<p>이메일 중복 확인시 이메일을 인증메일을 보내는 API 입니다.
+​	<code>Request parameters</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>email</td>
+<td>String</td>
+<td>이메일</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response(Success)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dice</td>
+<td>int</td>
+<td>이메일 인증 코드</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td></td>
+<td>null</td>
+</tr>
+</tbody>
+</table>
+<h3 id="13-회원-정보-수정-put-accountsupdate">1.3 회원 정보 수정 PUT /accounts/update</h3>
+<p>회원정보 수정 API 입니다.</p>
+<p>​	<code>Request parameters</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uid</td>
+<td>String</td>
+<td>DB에서 관리하는 id</td>
+</tr>
+<tr>
+<td>password</td>
+<td>String</td>
+<td>회원 비밀번호</td>
+</tr>
+<tr>
+<td>nickname</td>
+<td>String</td>
+<td>닉네임</td>
+</tr>
+<tr>
+<td>content</td>
+<td>String</td>
+<td>자기소개</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response(Success)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>success</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>fail</td>
+</tr>
+</tbody>
+</table>
+<h3 id="14-회원-정보-post-accountsuserdetail">1.4 회원 정보 POST /accounts/userDetail</h3>
+<p>회원정보를 조회하는 API 입니다.</p>
+<p>​	<code>Request parameters</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uid</td>
+<td>String</td>
+<td>DB에서 관리하는 id</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response (Success)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uid</td>
+<td>String</td>
+<td>DB에서 관리하는 id</td>
+</tr>
+<tr>
+<td>password</td>
+<td>String</td>
+<td>회원 비밀번호</td>
+</tr>
+<tr>
+<td>passwordConfirm</td>
+<td>String</td>
+<td>회원 비밀번호 확인</td>
+</tr>
+<tr>
+<td>email</td>
+<td>String</td>
+<td>이메일</td>
+</tr>
+<tr>
+<td>nickname</td>
+<td>String</td>
+<td>닉네임</td>
+</tr>
+<tr>
+<td>content</td>
+<td>String</td>
+<td>자기소개</td>
+</tr>
+<tr>
+<td>createDate</td>
+<td>LocalDateTime</td>
+<td>회원가입일</td>
+</tr>
+<tr>
+<td>likedpost</td>
+<td>String</td>
+<td>좋아요한 글 목록</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>fail</td>
+</tr>
+</tbody>
+</table>
+<h3 id="15-회원탈퇴-delete-accountsdropuser">1.5 회원탈퇴 DELETE /accounts/dropUser</h3>
+<p>회원 탈퇴 API 입니다.</p>
+<p>​	<code>Request parameters</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uid</td>
+<td>String</td>
+<td>DB에서 관리하는 id</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response(Success)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>success</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>fail</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2게시물-api">2.게시물 API</h2>
+<table>
+<thead>
+<tr>
+<th>Members</th>
+<th>Descriptions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST /articles/register</td>
+<td>글 작성</td>
+</tr>
+<tr>
+<td>GET /articles/showArticle</td>
+<td>글 상세 조회</td>
+</tr>
+<tr>
+<td>PUT /articles/modify</td>
+<td>글 수정</td>
+</tr>
+<tr>
+<td>DELETE /articles/dropArticle</td>
+<td>글 삭제</td>
+</tr>
+<tr>
+<td>POST /articles/like</td>
+<td>글 좋아요</td>
+</tr>
+<tr>
+<td>POST /articles/likedList</td>
+<td>좋아요 게시물 리스트</td>
+</tr>
+<tr>
+<td>GET /articles/searchArticle</td>
+<td>글 검색</td>
+</tr>
+<tr>
+<td>POST /articles/getRecommentList</td>
+<td>음식점 추천 리스트</td>
+</tr>
+<tr>
+<td>GET/articles/list</td>
+<td>전체 글 리스트</td>
+</tr>
+<tr>
+<td>POST /articles/postedList</td>
+<td>사용자가 작성한 글 리스트</td>
+</tr>
+<tr>
+<td>GET/articles/postedListByLikes</td>
+<td>좋아요순 글 리스트</td>
+</tr>
+<tr>
+<td>GET/articles/postedListByHits</td>
+<td>조회순  글 리스트</td>
+</tr>
+</tbody>
+</table>
+<h3 id="21-글-작성-post-articlesregiste">2.1 글 작성 POST /articles/registe</h3>
+<p>글 작성 API 입니다.</p>
+<p>​	<code>Request parameters</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userid</td>
+<td>int</td>
+<td>글 작성자의 id</td>
+</tr>
+<tr>
+<td>nickname</td>
+<td>String</td>
+<td>글 작성자의 닉네임</td>
+</tr>
+<tr>
+<td>title</td>
+<td>String</td>
+<td>글 제목</td>
+</tr>
+<tr>
+<td>content</td>
+<td>String</td>
+<td>글 내용</td>
+</tr>
+<tr>
+<td>hashtag</td>
+<td>String</td>
+<td>글 해시태그</td>
+</tr>
+<tr>
+<td>address</td>
+<td>String</td>
+<td>주소</td>
+</tr>
+<tr>
+<td>placename</td>
+<td>String</td>
+<td>장소 이름</td>
+</tr>
+<tr>
+<td>url</td>
+<td>String</td>
+<td>상세보기 daum url</td>
+</tr>
+<tr>
+<td>lat</td>
+<td>String</td>
+<td>위도</td>
+</tr>
+<tr>
+<td>lon</td>
+<td>String</td>
+<td>경도</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response(Success)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>글작성 성공</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>글작성 실패</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-글-상세-조회-get-articlesshowarticle">2.2 글 상세 조회 GET /articles/showArticle</h3>
+<p>글 상세조회하는 API입니다.</p>
+<p>​	<code>Request parameters</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>postId</td>
+<td>int</td>
+<td>DB에서 관리하는 post id</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response(Success)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>postId</td>
+<td>int</td>
+<td>DB에서 관리하는 post id</td>
+</tr>
+<tr>
+<td>userid</td>
+<td>int</td>
+<td>글 작성자의 id</td>
+</tr>
+<tr>
+<td>title</td>
+<td>String</td>
+<td>글 제목</td>
+</tr>
+<tr>
+<td>lat</td>
+<td>String</td>
+<td>위도</td>
+</tr>
+<tr>
+<td>lon</td>
+<td>String</td>
+<td>경도</td>
+</tr>
+<tr>
+<td>content</td>
+<td>String</td>
+<td>글 내용</td>
+</tr>
+<tr>
+<td>hashtag</td>
+<td>String</td>
+<td>글 해시태그</td>
+</tr>
+<tr>
+<td>address</td>
+<td>String</td>
+<td>주소</td>
+</tr>
+<tr>
+<td>likes</td>
+<td>int</td>
+<td>글 좋아요수</td>
+</tr>
+<tr>
+<td>createDate</td>
+<td>String</td>
+<td>글 작성일</td>
+</tr>
+<tr>
+<td>nickname</td>
+<td>String</td>
+<td>글 작성자의 닉네임</td>
+</tr>
+<tr>
+<td>hits</td>
+<td>int</td>
+<td>조회수</td>
+</tr>
+<tr>
+<td>url</td>
+<td>String</td>
+<td>상세보기 url</td>
+</tr>
+<tr>
+<td>starpoint</td>
+<td>String</td>
+<td>크롤링 별점</td>
+</tr>
+<tr>
+<td>placename</td>
+<td>String</td>
+<td>장소 이름</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>조회 실패</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-글-수정-put-articlesmodify">2.3 글 수정 PUT /articles/modify</h3>
+<p>글 수정하는 API 입니다.</p>
+<p>​	<code>Request parameters</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userid</td>
+<td>int</td>
+<td>글 작성자의 id</td>
+</tr>
+<tr>
+<td>nickname</td>
+<td>String</td>
+<td>글 작성자의 닉네임</td>
+</tr>
+<tr>
+<td>title</td>
+<td>String</td>
+<td>글 제목</td>
+</tr>
+<tr>
+<td>content</td>
+<td>String</td>
+<td>글 내용</td>
+</tr>
+<tr>
+<td>hashtag</td>
+<td>String</td>
+<td>글 해시태그</td>
+</tr>
+<tr>
+<td>address</td>
+<td>String</td>
+<td>주소</td>
+</tr>
+<tr>
+<td>placename</td>
+<td>String</td>
+<td>장소 이름</td>
+</tr>
+<tr>
+<td>url</td>
+<td>String</td>
+<td>상세보기 daum url</td>
+</tr>
+<tr>
+<td>lat</td>
+<td>String</td>
+<td>위도</td>
+</tr>
+<tr>
+<td>lon</td>
+<td>String</td>
+<td>경도</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response(Success)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>postId</td>
+<td>int</td>
+<td>DB에서 관리하는 post id</td>
+</tr>
+<tr>
+<td>userid</td>
+<td>int</td>
+<td>글 작성자의 id</td>
+</tr>
+<tr>
+<td>title</td>
+<td>String</td>
+<td>글 제목</td>
+</tr>
+<tr>
+<td>lat</td>
+<td>String</td>
+<td>위도</td>
+</tr>
+<tr>
+<td>lon</td>
+<td>String</td>
+<td>경도</td>
+</tr>
+<tr>
+<td>content</td>
+<td>String</td>
+<td>글 내용</td>
+</tr>
+<tr>
+<td>hashtag</td>
+<td>String</td>
+<td>글 해시태그</td>
+</tr>
+<tr>
+<td>address</td>
+<td>String</td>
+<td>주소</td>
+</tr>
+<tr>
+<td>likes</td>
+<td>int</td>
+<td>글 좋아요수</td>
+</tr>
+<tr>
+<td>createDate</td>
+<td>String</td>
+<td>글 작성일</td>
+</tr>
+<tr>
+<td>nickname</td>
+<td>String</td>
+<td>글 작성자의 닉네임</td>
+</tr>
+<tr>
+<td>hits</td>
+<td>int</td>
+<td>조회수</td>
+</tr>
+<tr>
+<td>url</td>
+<td>String</td>
+<td>상세보기 url</td>
+</tr>
+<tr>
+<td>starpoint</td>
+<td>String</td>
+<td>크롤링 별점</td>
+</tr>
+<tr>
+<td>placename</td>
+<td>String</td>
+<td>장소 이름</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>fail</td>
+</tr>
+</tbody>
+</table>
+<h3 id="24-글-삭제-delete-articlesdroparticle">2.4 글 삭제 DELETE /articles/dropArticle</h3>
+<p>글 삭제하는 API입니다.</p>
+<p>​	<code>Request parameters</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>postId</td>
+<td>int</td>
+<td>DB에서 관리하는 post id</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response(Success)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>삭제 성공</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>삭제 실패</td>
+</tr>
+</tbody>
+</table>
+<h3 id="25-글-좋아요-post-articleslike">2.5 글 좋아요 POST /articles/like</h3>
+<p>글 좋아요 올리거나 내리는 API 입니다.</p>
+<p>​	<code>Request parameters</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>postId</td>
+<td>int</td>
+<td>DB에서 관리하는 post id</td>
+</tr>
+<tr>
+<td>userid</td>
+<td>int</td>
+<td>글 작성자의 id</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response(Success)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>success</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>fail</td>
+</tr>
+</tbody>
+</table>
+<h3 id="26-좋아요-게시물-리스트-post-articleslikedlist">2.6 좋아요 게시물 리스트 POST /articles/likedList</h3>
+<p>좋아요 누른 게시물을 리턴해주는 API입니다.</p>
+<p>​	<code>Request parameters</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userid</td>
+<td>int</td>
+<td>글 작성자의 id</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response(Success)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>List<Post></td>
+<td>Post객체의 리스트</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td></td>
+<td>null</td>
+</tr>
+</tbody>
+</table>
+<h3 id="27-글-검색-get-articlessearcharticle">2.7 글 검색 GET /articles/searchArticle</h3>
+<p>글 검색 API 입니다.</p>
+<p>​	<code>Request parameters</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>keyword(path)</td>
+<td>String</td>
+<td>검색어</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response(Success)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>HashMap<Post></td>
+<td>해쉬맵으로 검색결과를 리턴</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td></td>
+<td>null</td>
+</tr>
+</tbody>
+</table>
+<h3 id="28-음식점-추천-리스트-post-articlesgetrecommentlist">2.8 음식점 추천 리스트 POST /articles/getRecommentList</h3>
+<p>음식점 추천 API입니다.</p>
+<p>​	<code>Request parameters</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>food</td>
+<td>String</td>
+<td>관련 태그를 ,로 연결하여 보내기</td>
+</tr>
+<tr>
+<td>isCafe</td>
+<td>String</td>
+<td>카페도 추천하면 추가</td>
+</tr>
+<tr>
+<td>isDrink</td>
+<td>String</td>
+<td>술집도 추천하면 추가</td>
+</tr>
+<tr>
+<td>like</td>
+<td>String</td>
+<td>피드백에서 좋아요수가 부족할때</td>
+</tr>
+<tr>
+<td>watch</td>
+<td>String</td>
+<td>피드백에서 조회수가 부족할때</td>
+</tr>
+<tr>
+<td>star</td>
+<td>String</td>
+<td>피드백에서 별점이 부족할때</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response(Success)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>음식</td>
+<td>Post</td>
+<td>추천하는 음식점</td>
+</tr>
+<tr>
+<td>카페</td>
+<td>Post</td>
+<td>추천하는 카페</td>
+</tr>
+<tr>
+<td>술집</td>
+<td>Post</td>
+<td>추천하느 술집</td>
+</tr>
+</tbody>
+</table>
+<h3 id="29-전체-글-리스트-get-articleslist">2.9 전체 글 리스트 GET /articles/list</h3>
+<p>전체 글을 받는 API입니다.</p>
+<p>​	<code>Response(Success)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.comment</td>
+<td>List<Integer></td>
+<td>댓글수의 리스트</td>
+</tr>
+<tr>
+<td>result.list</td>
+<td>List<Post></td>
+<td>전체 글의 리스트</td>
+</tr>
+</tbody>
+</table>
+<h3 id="210-사용자가-작성한-글-리스트-post-articlespostedlist">2.10 사용자가 작성한 글 리스트 POST /articles/postedList</h3>
+<p>사용자가 작성한 글의 리스트를 리턴해주는 API 입니다.</p>
+<p>​	<code>Request parameters</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userid</td>
+<td>int</td>
+<td>글 작성자의 id</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response(Success)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result</td>
+<td>List<Post></td>
+<td>전체 글의 리스트</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result</td>
+<td></td>
+<td>null</td>
+</tr>
+</tbody>
+</table>
+<h3 id="211좋아요순-글-리스트-get-articlespostedlistbylikes">2.11좋아요순 글 리스트 GET /articles/postedListByLikes</h3>
+<p>좋아요 순으로 글의 리스트를 리턴해주는 API 입니다.</p>
+<p>​	<code>Response(Success)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.comment</td>
+<td>List<Integer></td>
+<td>댓글수의 리스트</td>
+</tr>
+<tr>
+<td>result.list</td>
+<td>List<Post></td>
+<td>전체 글의 리스트</td>
+</tr>
+</tbody>
+</table>
+<h3 id="212-조회순-글-리스트-get-articlespostedlistbyhits">2.12 조회순 글 리스트 GET /articles/postedListByHits</h3>
+<p>조회 순으로 글의 리스트를 리턴해주는 API 입니다.</p>
+<p>​	<code>Response(Success)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.comment</td>
+<td>List<Integer></td>
+<td>댓글수의 리스트</td>
+</tr>
+<tr>
+<td>result.list</td>
+<td>List<Post></td>
+<td>전체 글의 리스트</td>
+</tr>
+</tbody>
+</table>
+<h3 id="213-좋아요순-글-리스트-get-articlespostedlistbystarpoint">2.13 좋아요순 글 리스트 GET /articles/postedListByStarpoint</h3>
+<p>별점순으로 글의 리스트를 리턴해주는 API 입니다.</p>
+<p>​	<code>Response(Success)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.comment</td>
+<td>List<Integer></td>
+<td>댓글수의 리스트</td>
+</tr>
+<tr>
+<td>result.list</td>
+<td>List<Post></td>
+<td>전체 글의 리스트</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3글-임시저장--api">3.글 임시저장  API</h2>
+<table>
+<thead>
+<tr>
+<th>Members</th>
+<th>Descriptions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST /subarticles/register</td>
+<td>임시 글 작성</td>
+</tr>
+<tr>
+<td>GET /subarticles/detail/{postid}</td>
+<td>임시저장 글 상세 조회</td>
+</tr>
+<tr>
+<td>GET /subarticles/list/{userid}</td>
+<td>유저별 임시 글 리스트</td>
+</tr>
+<tr>
+<td>DELETE /subarticles/dropSubarticle</td>
+<td>임시 글 삭제</td>
+</tr>
+</tbody>
+</table>
+<h3 id="31-임시-글-작성-post-subarticlesregister">3.1 임시 글 작성 POST /subarticles/register</h3>
+<p>임시 글 작성 API입니다.</p>
+<p>​	<code>Request parameters</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userid</td>
+<td>int</td>
+<td>글 작성자의 id</td>
+</tr>
+<tr>
+<td>nickname</td>
+<td>String</td>
+<td>글 작성자의 닉네임</td>
+</tr>
+<tr>
+<td>title</td>
+<td>String</td>
+<td>글 제목</td>
+</tr>
+<tr>
+<td>content</td>
+<td>String</td>
+<td>글 내용</td>
+</tr>
+<tr>
+<td>hashtag</td>
+<td>String</td>
+<td>글 해시태그</td>
+</tr>
+<tr>
+<td>address</td>
+<td>String</td>
+<td>주소</td>
+</tr>
+<tr>
+<td>placename</td>
+<td>String</td>
+<td>장소 이름</td>
+</tr>
+<tr>
+<td>url</td>
+<td>String</td>
+<td>상세보기 daum url</td>
+</tr>
+<tr>
+<td>lat</td>
+<td>String</td>
+<td>위도</td>
+</tr>
+<tr>
+<td>lon</td>
+<td>String</td>
+<td>경도</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response(Success)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>글작성 성공</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>글작성 실패</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-임시저장-글-상세-조회-get-subarticlesdetailpostid">3.2 임시저장 글 상세 조회 GET /subarticles/detail/{postid}</h3>
+<p>임시 글 상세조회  API입니다.</p>
+<p>​	<code>Request parameters</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>postid</td>
+<td>int</td>
+<td>DB에서 관리하는 post id</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response(Success)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result</td>
+<td>Post</td>
+<td>유저별 임시저장  글</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>fail</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-유저별-임시-글-리스트-get-subarticleslistuserid">3.3 유저별 임시 글 리스트 GET /subarticles/list/{userid}</h3>
+<p>유저별 임시 글 리스트  API입니다.</p>
+<p>​	<code>Request parameters</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userid</td>
+<td>int</td>
+<td>DB에서 관리하는 user id</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response(Success)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result</td>
+<td>List<Post></td>
+<td>유저별 임시저장  글의 리스트</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>fail</td>
+</tr>
+</tbody>
+</table>
+<h3 id="34-임시-글-삭제-delete-subarticlesdropsubarticle">3.4 임시 글 삭제 DELETE /subarticles/dropSubarticle</h3>
+<p>임시 글 삭제  API입니다.</p>
+<p>글 삭제하는 API입니다.</p>
+<p>​	<code>Request parameters</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>postId</td>
+<td>int</td>
+<td>DB에서 관리하는 post id</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response(Success)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>임시저장 글 삭제 성공</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>임시저장 글 삭제 실패</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4댓글-api">4.댓글 API</h2>
+<table>
+<thead>
+<tr>
+<th>Members</th>
+<th>Descriptions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET /comments/list/{postid}</td>
+<td>해당글의 댓글 전체 리스트</td>
+</tr>
+<tr>
+<td>POST /comments/register</td>
+<td>댓글 작성</td>
+</tr>
+<tr>
+<td>PUT /comments/modify</td>
+<td>댓글 수정</td>
+</tr>
+<tr>
+<td>DELETE /comments/dropComment</td>
+<td>댓글 삭제</td>
+</tr>
+</tbody>
+</table>
+<h3 id="41-해당-글의-전체-댓글-get-commentslistpostid">4.1 해당 글의 전체 댓글 GET /comments/list/{postid}</h3>
+<p>해당 글의 전체 댓글을 받아오는 API입니다.</p>
+<p>​	<code>Request parameters</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>postid(path)</td>
+<td>int</td>
+<td>해당 글 id</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response(Success)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>List<Comment></td>
+<td>Comment객체의 리스트</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-댓글-작성-post-commentsregister">4.2 댓글 작성 POST /comments/register</h3>
+<p>댓글 작성하는 API 입니다.
+​	<code>Request parameters</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>postid</td>
+<td>int</td>
+<td>댓글을 쓰는 글의 id</td>
+</tr>
+<tr>
+<td>content</td>
+<td>String</td>
+<td>댓글 내용</td>
+</tr>
+<tr>
+<td>userid</td>
+<td>int</td>
+<td>글 작성하 사용자의 DB userid</td>
+</tr>
+<tr>
+<td>nickname</td>
+<td>String</td>
+<td>글 작성하는 사용자의 닉네임</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response(Success)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>success</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>fail</td>
+</tr>
+</tbody>
+</table>
+<h3 id="43-댓글-수정-put-commentsmodify">4.3 댓글 수정 PUT /comments/modify</h3>
+<p>댓글 수정하는 API 입니다.</p>
+<p>​	<code>Request parameters</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>postid</td>
+<td>int</td>
+<td>댓글을 쓰는 글의 id</td>
+</tr>
+<tr>
+<td>content</td>
+<td>String</td>
+<td>댓글 내용</td>
+</tr>
+<tr>
+<td>userid</td>
+<td>int</td>
+<td>글 작성하 사용자의 DB userid</td>
+</tr>
+<tr>
+<td>nickname</td>
+<td>String</td>
+<td>글 작성하는 사용자의 닉네임</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response(Success)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>success</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>fail</td>
+</tr>
+</tbody>
+</table>
+<h3 id="44-댓글-삭제-delete-commentsdropcomment">4.4 댓글 삭제 DELETE /comments/dropComment</h3>
+<p>댓글 삭제하는 API입니다.</p>
+<p>​	<code>Request parameters</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>commentId</td>
+<td>int</td>
+<td>댓글의 id</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response(Success)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>success</td>
+</tr>
+</tbody>
+</table>
+<p>​	<code>Response (Fail)</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result.data</td>
+<td>String</td>
+<td>fail</td>
+</tr>
+</tbody>
+</table>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2020-09-24</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/rest-api-reference/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/web/">Web</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/namingconvention/" class="prev" rel="prev" title="Naming Convention"><i class="fas fa-angle-left fa-fw"></i>Naming Convention</a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.82.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
