@@ -1,0 +1,46 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>git - Tag - </title>
+        <link>https://colinder.github.io/tags/git/</link>
+        <description>git - Tag - </description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 25 Mar 2021 22:28:20 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/git/" rel="self" type="application/rss+xml" /><item>
+    <title>Git_LFS</title>
+    <link>https://colinder.github.io/git_lfslarge-file-storage/</link>
+    <pubDate>Thu, 25 Mar 2021 22:28:20 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/git_lfslarge-file-storage/</guid>
+    <description><![CDATA[​
+Git LFS(Large File Storage) 사용법  Git은 개당 파일에 100MB의 용량 제한이 걸려 있다. (전체 용량 제한은 없다.) 다만, 프로젝트를 하다보면 대용량의 자료나 파일이 생기는 경우가 있다. 이때 용량 제한의 문제를 해소할 수 있는 방법이 LFS이다.
+LFS는 별도로 설치하여 사용하면 되며, 방법을 정리한다.
+  *주소: https://git-lfs.github.com
+​
+  git LFS을 다운을 받고 설치 합니다.
+​
+  git LFS를 적용할 폴더로 이동해 다음 명령어를 입력합니다.
+1  $ git lfs install    ​]]></description>
+</item><item>
+    <title>Git_fork vs clone</title>
+    <link>https://colinder.github.io/git_fork_vs_clone/</link>
+    <pubDate>Sun, 11 Oct 2020 21:26:25 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/git_fork_vs_clone/</guid>
+    <description><![CDATA[​
+Fork  fork는 다른 사람(프로젝트)의 github repository에서 내가 어떤 부분을 수정하거나, 기능을 추가 하고 싶을 때 해당 repository를 그대로 복제하는 기능.
+ fork한 저장소는 원본 repository와 연결되어 있습니다. 여기서 연결되어 있다는 의미는, 원본 repository에 어떤 변화가 생기면 이는 forked된 나의 repository에도 반영될 수 있다는 것입니다. (단, fetch나 rebase의 과정이 필요합니다. fetch나 rebase를 하지 않았다면, 단순히 원본 repository를 복사해서 가져온 상태라고 할 수 있습니다.)
+      fork는 보통 2가지 목적을 위해 사용합니다.]]></description>
+</item><item>
+    <title>Git_Mirroring</title>
+    <link>https://colinder.github.io/git_mirroring/</link>
+    <pubDate>Thu, 08 Oct 2020 22:08:37 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/git_mirroring/</guid>
+    <description><![CDATA[​
+Git_Mirroring  기존에 사용하고 있던 A_Repo에서 B_Repo로 커밋히스토리 그대로 복사가 필요할 때가 있습니다.
+여기서 A_Repo를 그대로 가져온다는 의미는 단지 파일을 새롭게 만드는 것이 아니라 A_Repo에서 작업하던 commit 이력 모두를 그대로 이전하는 의미를 뜻합니다.
+ ​
+  터미널을 엽니다.
+  복사하고자 하는 저장소(A_Repo)의 bare clone을 생성합니다.
+1  git clone --bare https://github.com/user/old-repository.git     새로운 저장소(B_Repo)를 만들고 mirror-push를 진행합니다.
+1 2  cd old-repository.git	👈 위에서 클론(bare)한 폴더로 이동 git push --mirror https://github.]]></description>
+</item></channel>
+</rss>

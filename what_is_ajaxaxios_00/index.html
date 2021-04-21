@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>what is AJAX(axios)? - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="what is AJAX(axios)?" />
+<meta property="og:description" content="​
+AJAX  세상에는 다양한 web서버가 있다.
+그리고 모든 web은 &ldquo;요청&rdquo;과 &ldquo;응답&rdquo;으로 통신한다. 예를 들어..
+ 요청: &ldquo;이미지를 보여줘&rdquo;
+응답: &ldquo;오키&rdquo; or &ldquo;싫어&rdquo;
+ 그렇다면, 이 web서버들과 통신 하려면 어떻게 해야 할까?
+  대표적인 통신 방법을 AJAX라 한다. 이는 JavaScript의 라이브러리중 하나이며 Asynchronous Javascript And Xml(비동기식 자바스크립트와 xml)의 약자며, 자체가 하나의 특정한 기술을 말하는 것이 아니며, 함께 사용하는 기술의 묶음을 지칭하는 용어이다.
+브라우저가 가지고있는 XMLHttpRequest 객체를 이용해서 전체 페이지를 새로 고치지 않고도 페이지의 일부만을 위한 데이터를 로드하는 기법 이며 Ajax를 한마디로 정의하자면 JavaScript를 사용한 비동기 통신, 클라이언트와 서버간에 XML 데이터를 주고받는 기술이라고 할 수 있겠습니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://colinder.github.io/what_is_ajaxaxios_00/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-10-11T21:25:51&#43;09:00" />
+<meta property="article:modified_time" content="2020-10-11T21:25:51&#43;09:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
+
+<meta name="twitter:title" content="what is AJAX(axios)?"/>
+<meta name="twitter:description" content="​
+AJAX  세상에는 다양한 web서버가 있다.
+그리고 모든 web은 &ldquo;요청&rdquo;과 &ldquo;응답&rdquo;으로 통신한다. 예를 들어..
+ 요청: &ldquo;이미지를 보여줘&rdquo;
+응답: &ldquo;오키&rdquo; or &ldquo;싫어&rdquo;
+ 그렇다면, 이 web서버들과 통신 하려면 어떻게 해야 할까?
+  대표적인 통신 방법을 AJAX라 한다. 이는 JavaScript의 라이브러리중 하나이며 Asynchronous Javascript And Xml(비동기식 자바스크립트와 xml)의 약자며, 자체가 하나의 특정한 기술을 말하는 것이 아니며, 함께 사용하는 기술의 묶음을 지칭하는 용어이다.
+브라우저가 가지고있는 XMLHttpRequest 객체를 이용해서 전체 페이지를 새로 고치지 않고도 페이지의 일부만을 위한 데이터를 로드하는 기법 이며 Ajax를 한마디로 정의하자면 JavaScript를 사용한 비동기 통신, 클라이언트와 서버간에 XML 데이터를 주고받는 기술이라고 할 수 있겠습니다."/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/what_is_ajaxaxios_00/" /><link rel="prev" href="https://colinder.github.io/git_mirroring/" /><link rel="next" href="https://colinder.github.io/git_fork_vs_clone/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "what is AJAX(axios)?",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/colinder.github.io\/what_is_ajaxaxios_00\/"
+        },"genre": "posts","keywords": "Vue, Web, AJAX, axios","wordcount":  482 ,
+        "url": "https:\/\/colinder.github.io\/what_is_ajaxaxios_00\/","datePublished": "2020-10-11T21:25:51+09:00","dateModified": "2020-10-11T21:25:51+09:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "colinder"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="">Hello New World</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="">Hello New World</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">what is AJAX(axios)?</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/web/"><i class="far fa-folder fa-fw"></i>web</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-10-11">2020-10-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;482 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#사용법-vue기준">🙋‍♂️사용법 (vue기준)</a></li>
+    <li><a href="#example">Example</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>​</p>
+<h1 id="ajax">AJAX</h1>
+<blockquote>
+<p>세상에는 다양한 web서버가 있다.</p>
+<p>그리고 모든 web은 <strong>&ldquo;요청&rdquo;</strong>과 <strong>&ldquo;응답&rdquo;</strong>으로 통신한다. 예를 들어..</p>
+<blockquote>
+<p><strong>요청</strong>: &ldquo;이미지를 보여줘&rdquo;</p>
+<p><strong>응답</strong>: &ldquo;오키&rdquo; or &ldquo;싫어&rdquo;</p>
+</blockquote>
+<p>그렇다면, 이 web서버들과 통신 하려면 어떻게 해야 할까?</p>
+</blockquote>
+<blockquote>
+<p>대표적인 통신 방법을 AJAX라 한다. 이는 JavaScript의 라이브러리중 하나이며 <strong>A</strong>synchronous <strong>J</strong>avascript <strong>A</strong>nd <strong>X</strong>ml(비동기식 자바스크립트와 xml)의 약자며, 자체가 하나의 특정한 기술을 말하는 것이 아니며, 함께 사용하는 기술의 묶음을 지칭하는 용어이다.</p>
+<p>브라우저가 가지고있는 XMLHttpRequest 객체를 이용해서 전체 페이지를 <strong>새로 고치지 않고</strong>도 페이지의 일부만을 위한 데이터를 로드하는 기법 이며 Ajax를 한마디로 정의하자면 JavaScript를 사용한 <a href="https://colinder.github.io/10_syncasynccallback/" target="_blank" rel="noopener noreffer">비동기</a> 통신, 클라이언트와 서버간에 XML 데이터를 주고받는 기술이라고 할 수 있겠습니다.</p>
+</blockquote>
+<a class="lightgallery" href="/images/Ajax.png" title="/images/Ajax.png" data-thumbnail="/images/Ajax.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/Ajax.png"
+            data-srcset="/images/Ajax.png, /images/Ajax.png 1.5x, /images/Ajax.png 2x"
+            data-sizes="auto"
+            alt="/images/Ajax.png" width="1000px" />
+    </a>
+<p>​</p>
+<p>​</p>
+<p><em><strong>Ajax 중 하나인 axios에 대하여 정리한다.</strong></em></p>
+<h1 id="axios">axios</h1>
+<ul>
+<li>
+<p>구형 브라우저를 지원한다.</p>
+</li>
+<li>
+<p>응답 시간 초과를 설정하는 방법이 있다.</p>
+</li>
+<li>
+<p>JSON 데이터 자동변환이 가능하다.</p>
+</li>
+<li>
+<p>node.js에서의 사용이 가능하다.</p>
+</li>
+<li>
+<p>request aborting(요청 취소)가 가능하다.</p>
+</li>
+<li>
+<p>catch에 걸렸을 때, .then을 실행하지 않고, console창에 해당 에러 로그를 보여준다.</p>
+</li>
+<li>
+<p>return값은 Promise 객체 형태이다.</p>
+<p>​</p>
+</li>
+</ul>
+<h2 id="사용법-vue기준">🙋‍♂️사용법 (vue기준)</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Terminal에</span>
+npm install axios		👈 axios 설치
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># main.js</span>
+import Vue from <span class="s1">&#39;vue&#39;</span>
+import App from <span class="s1">&#39;./App.vue&#39;</span>
+import axios from <span class="s2">&#34;axios&#34;</span>				👈 추가
+
+Vue.config.productionTip <span class="o">=</span> <span class="nb">false</span>
+Vue.prototype.<span class="nv">$axios</span> <span class="o">=</span> axios			👈 추가
+
+new Vue<span class="o">({</span>
+  render: <span class="nv">h</span> <span class="o">=</span>&gt; h<span class="o">(</span>App<span class="o">)</span>,
+<span class="o">})</span>.<span class="nv">$mount</span><span class="o">(</span><span class="s1">&#39;#app&#39;</span><span class="o">)</span>
+
+<span class="c1"># axios를 모든 components에서 사용가능하게 등록한 것 == &#39;전역으로 설정&#39;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<h2 id="example">Example</h2>
+<ul>
+<li><a href="https://jsonplaceholder.typicode.com/" target="_blank" rel="noopener noreffer">jsonplaceholder</a>라는 json형태의 가상테이터 요청 사이트를 이용해 테스트를 진행</li>
+<li>솔직히 여기 site의 Guide만보고 따라해도 AJAX를 맛볼 수 있다. (혹시 몰라 설명하자면, Guide의 &ldquo;fetch&quot;를 &ldquo;axios&quot;로 바꾸어 사용해보면 된다. )</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-vue" data-lang="vue"><span class="c1">// 새로 프로젝트를 만들고 npm install axios 설치하고, main.js에서 전역설정해준 뒤 진행.
+</span><span class="c1">// test해볼 conponents인 HelloWorld.vue의 내용을 수정해서 진행.
+</span><span class="c1"></span>
+<span class="c1">// HelloWorld.vue
+</span><span class="c1"></span>
+<span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span><span class="nx">axios</span> <span class="nx">테스트</span><span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>										    <span class="err">👈</span> 
+      <span class="p">&lt;</span><span class="nt">button</span> <span class="nt">@click</span><span class="s">=&#34;axiosTest()&#34;</span><span class="p">&gt;</span><span class="na">axios</span> <span class="na">테스트</span><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>			<span class="err">👈</span>
+      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;{{</span><span class="k">this</span><span class="p">.</span><span class="nx">posts</span><span class="p">}}&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>										  	<span class="err">👈</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+    <span class="nx">name</span> <span class="o">:</span> <span class="s1">&#39;HelloWorld&#39;</span><span class="p">,</span>
+    <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>														<span class="err">👈</span>
+      <span class="k">return</span> <span class="p">{</span>														<span class="err">👈</span>
+        <span class="nx">posts</span><span class="o">:</span> <span class="s1">&#39;&#39;</span>													<span class="err">👈</span>
+      <span class="p">}</span>																<span class="err">👈</span>
+    <span class="p">},</span>																<span class="err">👈</span>
+    <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>														<span class="err">👈</span>
+      <span class="nx">axiosTest</span><span class="p">()</span> <span class="p">{</span>													<span class="err">👈</span>
+        <span class="kr">const</span> <span class="nx">baseURI</span> <span class="o">=</span> <span class="s1">&#39;https://jsonplaceholder.typicode.com&#39;</span>		<span class="err">👈</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">$axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">baseURI</span><span class="si">}</span><span class="sb">/posts`</span><span class="p">)</span>							<span class="err">👈</span>
+        <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>											<span class="err">👈</span>
+          <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;1차 요청 완료&#39;</span><span class="p">)</span>										<span class="err">👈</span>
+          <span class="k">this</span><span class="p">.</span><span class="nx">posts</span> <span class="o">=</span> <span class="nx">res</span><span class="p">.</span><span class="nx">data</span>										<span class="err">👈</span>
+        <span class="p">})</span>															<span class="err">👈</span>
+      <span class="p">}</span>																<span class="err">👈</span>
+    <span class="p">},</span>																<span class="err">👈</span>
+<span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+<span class="c1">// 살짝 JSONPlaceholder의 공식 Guide를 따르진 않는다.
+</span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p><a href="https://github.com/colinder/colinder.github.io/blob/master/images/axios_01.png" target="_blank" rel="noopener noreffer">서버실행화면</a> =&gt; 버튼클릭 후 <a href="https://github.com/colinder/colinder.github.io/blob/master/images/axios_00.png" target="_blank" rel="noopener noreffer">결과화면</a> (요청이 잘 받아진 화면을 확인할 수 있다.)</p>
+<p>​</p>
+</li>
+</ul>
+<p><strong>보기 좋게 <a href="https://www.google.com/search?q=parsing&#43;%EB%9C%BB&amp;rlz=1C1CHBD_koKR904KR904&amp;oq=parsing&amp;aqs=chrome.2.69i57j0l7.3257j0j15&amp;sourceid=chrome&amp;ie=UTF-8" target="_blank" rel="noopener noreffer">parsing</a>해보자.</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-vue" data-lang="vue"><span class="c1">// HelloWorld.vue
+</span><span class="c1"></span>
+<span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span><span class="nx">axios</span> <span class="nx">테스트</span><span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">button</span> <span class="nt">@click</span><span class="s">=&#34;axiosTest()&#34;</span><span class="p">&gt;</span><span class="na">axios</span> <span class="na">테스트</span><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">p</span> <span class="nt">v-for</span><span class="s">=&#34;(post, i) in posts&#34; </span><span class="nt">:key</span><span class="s">=&#34;i&#34;</span><span class="p">&gt;{{</span><span class="na">post</span><span class="p">}}&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>			<span class="err">👈</span> <span class="na">수정</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+    <span class="nx">name</span> <span class="o">:</span> <span class="s1">&#39;HelloWorld&#39;</span><span class="p">,</span>
+    <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="p">{</span>
+        <span class="nx">posts</span><span class="o">:</span> <span class="s1">&#39;&#39;</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">axiosTest</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kr">const</span> <span class="nx">baseURI</span> <span class="o">=</span> <span class="s1">&#39;https://jsonplaceholder.typicode.com&#39;</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">$axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">baseURI</span><span class="si">}</span><span class="sb">/posts`</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+          <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;1차 요청 완료&#39;</span><span class="p">)</span>
+          <span class="k">this</span><span class="p">.</span><span class="nx">posts</span> <span class="o">=</span> <span class="nx">res</span><span class="p">.</span><span class="nx">data</span>
+        <span class="p">})</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+<span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p><a href="https://github.com/colinder/colinder.github.io/blob/master/images/axios_01.png" target="_blank" rel="noopener noreffer">서버실행화면</a> =&gt; 버튼클릭 후 <a href="https://github.com/colinder/colinder.github.io/blob/master/images/axios_02.png" target="_blank" rel="noopener noreffer">결과화면</a></p>
+<p>​</p>
+<p>​</p>
+</li>
+</ul>
+<p><code>하지만, 여기서 의문이 생긴다. 비동기 요청인 axios를 동기적으로 처리 할 순 없을까?</code></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2020-10-11</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/what_is_ajaxaxios_00/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/vue/">vue</a>,&nbsp;<a href="/tags/web/">web</a>,&nbsp;<a href="/tags/ajax/">AJAX</a>,&nbsp;<a href="/tags/axios/">axios</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/git_mirroring/" class="prev" rel="prev" title="Git_Mirroring"><i class="fas fa-angle-left fa-fw"></i>Git_Mirroring</a>
+            <a href="/git_fork_vs_clone/" class="next" rel="next" title="Git_fork vs clone">Git_fork vs clone<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.82.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

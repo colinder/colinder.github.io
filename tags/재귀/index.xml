@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>재귀 - Tag - </title>
+        <link>https://colinder.github.io/tags/%EC%9E%AC%EA%B7%80/</link>
+        <description>재귀 - Tag - </description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 18 Dec 2020 21:16:23 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/%EC%9E%AC%EA%B7%80/" rel="self" type="application/rss+xml" /><item>
+    <title>BEAKJOON 10872, 10870, 2447, 11729</title>
+    <link>https://colinder.github.io/bj_20.12.18/</link>
+    <pubDate>Fri, 18 Dec 2020 21:16:23 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/bj_20.12.18/</guid>
+    <description><![CDATA[​
+10872_팩토리얼 1 2 3 4 5 6 7 8 9 10 11  import sys N = int(sys.stdin.readline().rstrip()) def fac(n): if n &gt; 1: return n * fac(n-1) else: return 1 print(fac(N))   ​
+10870_피보나치 수 5 1 2 3 4 5 6 7 8 9 10 11  import sys def fivo(n): if n &gt;= 2: return fivo(n-1) + fivo(n-2) else: return n N = int(sys.stdin.readline().rstrip()) print(fivo(N))   ​]]></description>
+</item></channel>
+</rss>

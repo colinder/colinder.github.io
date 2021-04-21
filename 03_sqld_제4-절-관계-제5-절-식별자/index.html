@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>03_SQLD_제4 절 관계 &amp; 제5 절 식별자 - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="03_SQLD_제4 절 관계 &amp; 제5 절 식별자" />
+<meta property="og:description" content="​
+# SQL  제1 장 데이터 모델링의 이해  제4 절 관계(Relationship)   관계의 개념
+  관계의 정의
+&ldquo;인스턴스 사이의 논리적인 연관성으로서 존재의 형태 or 행위로서 서로에게 연관성이 부여된 상태&rdquo;
+  관계의 페어링
+&ldquo;관계는 인스턴스가 개별적으로 관계를 가지는 것(페어링)이고, 이것의 집합을 관계로 표현하는 것&rdquo;
+&ldquo;따라서 개별 인스턴스가 각각 다른 종류의 관계를 가지고 있다면, 두 엔터티 사이에 두 개 이상의 관계가 형성될 수 도 있다.&rdquo;
+​
+    관계의 분류" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://colinder.github.io/03_sqld_%EC%A0%9C4-%EC%A0%88-%EA%B4%80%EA%B3%84-%EC%A0%9C5-%EC%A0%88-%EC%8B%9D%EB%B3%84%EC%9E%90/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-03-28T20:42:45&#43;09:00" />
+<meta property="article:modified_time" content="2021-03-28T20:42:45&#43;09:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
+
+<meta name="twitter:title" content="03_SQLD_제4 절 관계 &amp; 제5 절 식별자"/>
+<meta name="twitter:description" content="​
+# SQL  제1 장 데이터 모델링의 이해  제4 절 관계(Relationship)   관계의 개념
+  관계의 정의
+&ldquo;인스턴스 사이의 논리적인 연관성으로서 존재의 형태 or 행위로서 서로에게 연관성이 부여된 상태&rdquo;
+  관계의 페어링
+&ldquo;관계는 인스턴스가 개별적으로 관계를 가지는 것(페어링)이고, 이것의 집합을 관계로 표현하는 것&rdquo;
+&ldquo;따라서 개별 인스턴스가 각각 다른 종류의 관계를 가지고 있다면, 두 엔터티 사이에 두 개 이상의 관계가 형성될 수 도 있다.&rdquo;
+​
+    관계의 분류"/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/03_sqld_%EC%A0%9C4-%EC%A0%88-%EA%B4%80%EA%B3%84-%EC%A0%9C5-%EC%A0%88-%EC%8B%9D%EB%B3%84%EC%9E%90/" /><link rel="prev" href="https://colinder.github.io/git_lfslarge-file-storage/" /><link rel="next" href="https://colinder.github.io/04_sqld_%EC%A0%9C2-%EC%9E%A5-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%AA%A8%EB%8D%B8%EA%B3%BC-%EC%84%B1%EB%8A%A5/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "03_SQLD_제4 절 관계 \u0026 제5 절 식별자",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/colinder.github.io\/03_sqld_%EC%A0%9C4-%EC%A0%88-%EA%B4%80%EA%B3%84-%EC%A0%9C5-%EC%A0%88-%EC%8B%9D%EB%B3%84%EC%9E%90\/"
+        },"genre": "posts","keywords": "SQLD","wordcount":  551 ,
+        "url": "https:\/\/colinder.github.io\/03_sqld_%EC%A0%9C4-%EC%A0%88-%EA%B4%80%EA%B3%84-%EC%A0%9C5-%EC%A0%88-%EC%8B%9D%EB%B3%84%EC%9E%90\/","datePublished": "2021-03-28T20:42:45+09:00","dateModified": "2021-03-28T20:42:45+09:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "colinder"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="">Hello New World</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="">Hello New World</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">03_SQLD_제4 절 관계 &amp; 제5 절 식별자</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/sqld/"><i class="far fa-folder fa-fw"></i>SQLD</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-03-28">2021-03-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;551 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#제4-절-관계relationship">제4 절 관계(Relationship)</a></li>
+    <li><a href="#제5-절-식별자identifiers">제5 절 식별자(Identifiers)</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>​</p>
+<h1 id="-sql"># SQL</h1>
+<hr>
+<h1 id="제1-장-데이터-모델링의-이해">제1 장 데이터 모델링의 이해</h1>
+<hr>
+<h2 id="제4-절-관계relationship">제4 절 관계(Relationship)</h2>
+<ol>
+<li>
+<p>관계의 개념</p>
+<ul>
+<li>
+<p>관계의 정의</p>
+<p>&ldquo;<strong>인스턴스 사이의 논리적인 연관성</strong>으로서 <strong>존재의 형태 or 행위로서 서로에게 연관성이 부여된 상태</strong>&rdquo;</p>
+</li>
+<li>
+<p>관계의 페어링</p>
+<p>&ldquo;<strong>관계</strong>는 <b>인스턴스가 개별적으로 관계를 가지는 것(페어링)</b>이고, 이것의 집합을 관계로 표현하는 것&rdquo;</p>
+<p>&ldquo;따라서 개별 인스턴스가 각각 다른 종류의 관계를 가지고 있다면, 두 엔터티 사이에 두 개 이상의 관계가 형성될 수 도 있다.&rdquo;</p>
+<p>​</p>
+</li>
+</ul>
+</li>
+<li>
+<p>관계의 분류</p>
+<ul>
+<li>
+<p>ERD : 존재의 의한 관계 / 행위에 의한 관계</p>
+</li>
+<li>
+<p>UML(Unified Modeling Language) : 연관 관계 / 의존 관계</p>
+<p>​</p>
+</li>
+</ul>
+</li>
+<li>
+<p>관계의 표기법</p>
+<ul>
+<li>
+<p>관계명(Membership) :  관계의 이름을 기록</p>
+<a class="lightgallery" href="/images/SQLD_02.png" title="/images/SQLD_02.png" data-thumbnail="/images/SQLD_02.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/SQLD_02.png"
+            data-srcset="/images/SQLD_02.png, /images/SQLD_02.png 1.5x, /images/SQLD_02.png 2x"
+            data-sizes="auto"
+            alt="/images/SQLD_02.png" width="1000px" />
+    </a>
+</li>
+<li>
+<p><strong>관계차수</strong> : 엔터티간의 관계에서 참여자의 수를 표현</p>
+<ol>
+<li>
+<p>1:1</p>
+<a class="lightgallery" href="/images/SQLD_03.png" title="/images/SQLD_03.png" data-thumbnail="/images/SQLD_03.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/SQLD_03.png"
+            data-srcset="/images/SQLD_03.png, /images/SQLD_03.png 1.5x, /images/SQLD_03.png 2x"
+            data-sizes="auto"
+            alt="/images/SQLD_03.png" width="1000px" />
+    </a>
+</li>
+<li>
+<p>1:M</p>
+<a class="lightgallery" href="/images/SQLD_04.png" title="/images/SQLD_04.png" data-thumbnail="/images/SQLD_04.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/SQLD_04.png"
+            data-srcset="/images/SQLD_04.png, /images/SQLD_04.png 1.5x, /images/SQLD_04.png 2x"
+            data-sizes="auto"
+            alt="/images/SQLD_04.png" width="1000px" />
+    </a>
+</li>
+<li>
+<p>M:M</p>
+<a class="lightgallery" href="/images/SQLD_05.png" title="/images/SQLD_05.png" data-thumbnail="/images/SQLD_05.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/SQLD_05.png"
+            data-srcset="/images/SQLD_05.png, /images/SQLD_05.png 1.5x, /images/SQLD_05.png 2x"
+            data-sizes="auto"
+            alt="/images/SQLD_05.png" width="1000px" />
+    </a>
+</li>
+</ol>
+</li>
+<li>
+<p>관계선택사양</p>
+<ul>
+<li>
+<p>필수 관계(Mandatory)</p>
+<p><span style="color:grey">ex) 지하철은 반드시 <strong>문</strong>이 닫혀야, <strong>출발</strong>할 수 있다. 에서 &ldquo;문 닫힘&rdquo; &amp; &ldquo;출발&rdquo; 은 필수참여관계(Mandatory)이다.</span></p>
+</li>
+<li>
+<p>선택 관계(Optional)</p>
+<p><span style="color:grey">ex) 지하철의 <strong>출발</strong>을 알리는 <strong>안내음성</strong>이 나온다. 에서 &ldquo;안내음성&quot;은 나오면 좋지만 &ldquo;출발&quot;과 필수적인 관계는 아닌 선택적인(Optional) 관계이다.</span></p>
+</li>
+</ul>
+<p>​</p>
+</li>
+</ul>
+</li>
+<li>
+<p>관계의 정의 및 읽는 방법</p>
+<ul>
+<li>
+<p>관계 체크사항</p>
+<ol>
+<li>두 개의 엔터티 사이에 관심있는 연관규칙이 존재하는가?</li>
+<li>두 개의 엔터티 사이에 정보의 조합이 발생하는가?</li>
+<li>업무기술서, 장표에 관계연결에 대한 규칙이 서술되어 있는가?</li>
+<li>업무기술서, 장표에 관계연결을 가능하게 하는 동사(Verb)가 있는가?</li>
+</ol>
+</li>
+<li>
+<p>관계 읽기</p>
+<ol>
+<li>
+<p>기준(Source) 엔터티를 한 개(One) 또는 각(Each)으로 읽는다.</p>
+</li>
+<li>
+<p>대상(Target) 엔터티의 관계참여도 단수, 복수로 읽는다.</p>
+</li>
+<li>
+<p>관계선택사항과 관계명을 읽는다.</p>
+<a class="lightgallery" href="/images/SQLD_06.png" title="/images/SQLD_06.png" data-thumbnail="/images/SQLD_06.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/SQLD_06.png"
+            data-srcset="/images/SQLD_06.png, /images/SQLD_06.png 1.5x, /images/SQLD_06.png 2x"
+            data-sizes="auto"
+            alt="/images/SQLD_06.png" width="1000px" />
+    </a>
+<p>​</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="제5-절-식별자identifiers">제5 절 식별자(Identifiers)</h2>
+<ol>
+<li>
+<p>식별자(Identifiers) 개념</p>
+<ul>
+<li>
+<p>엔터티를 대표할 수 있는 속성</p>
+</li>
+<li>
+<p>하나의 엔터티는 반드시 하나의 유일한 식별자가 존재해야 한다.</p>
+</li>
+<li>
+<p>식별자는 엔터티내에서 인스턴스들을 구분할 수 있는 구분자다.</p>
+<p>​</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>식별자의 특징</strong></p>
+<ul>
+<li>
+<p>주식별자</p>
+<ul>
+<li>유일성 : 주식별자에 의해 엔터티내에 모든 인스턴스들이 유일하게 구분되어야 한다.</li>
+<li>최소성 : 주식별자를 구성하는 속성의 수는 유일성을 만족하는 최소의 수가 되어야 한다.</li>
+<li>불변성 : 지정된 주식별자의 값은 자주 변하지 않는 것이어야 한다.</li>
+<li>존재성 : 주식별자로 지정되면 반드시 값이 들어와야 한다.</li>
+</ul>
+</li>
+<li>
+<p>외부식별자</p>
+<ul>
+<li>
+<p>참조무결성 제약조건(Referential Integrity)에 따른 특징을 가진다.</p>
+<p>​</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>식별자의 분류 및 표기법</strong></p>
+<ul>
+<li>
+<p>식별자 분류</p>
+<hr>
+<ul>
+<li>
+<p>주식별자 : 엔터티 내에서 대표성을 가지는 식별자 (대표성이 있어 참조 연결 가능)</p>
+</li>
+<li>
+<p>보조식별자 : 엔터티 내에서 대표성을 가지지 않는 식별자 (대표성이 있어 참조 연결 불가능)</p>
+<hr>
+</li>
+<li>
+<p>내부식별자 : 엔터티 내에서 스스로 생성된 식별자</p>
+</li>
+<li>
+<p>외부식별자 : 타 엔터티와의 관계를 통해 받아오는 식별자</p>
+<hr>
+</li>
+<li>
+<p>단일식별자 : 하나의 속성으로 구성된 식별자</p>
+</li>
+<li>
+<p>복합식별자 : 둘 이상의 속성으로 구성된 식별자</p>
+<hr>
+</li>
+<li>
+<p>본질식별자 : 원래 있던 식별자 (업무에 의해 만들어지는 식별자)</p>
+</li>
+<li>
+<p>인조식별자 : 새롭게 만든 식별자 (인위적으로 만든 식별자)</p>
+<hr>
+</li>
+</ul>
+</li>
+<li>
+<p>식별자 표기법</p>
+<a class="lightgallery" href="/images/SQLD_07.png" title="/images/SQLD_07.png" data-thumbnail="/images/SQLD_07.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/SQLD_07.png"
+            data-srcset="/images/SQLD_07.png, /images/SQLD_07.png 1.5x, /images/SQLD_07.png 2x"
+            data-sizes="auto"
+            alt="/images/SQLD_07.png" width="800px" />
+    </a>
+<p>​</p>
+</li>
+</ul>
+</li>
+<li>
+<p>주식별자 도출 기준</p>
+<ol>
+<li>
+<p>해당 업무에서 자주 이용되는 속성을 주식별자로 지정한다.</p>
+</li>
+<li>
+<p><strong>명칭, 내역 등과 같이 이름으로 기술되는 것들은 가능하면, 주식별자로 지정하지 않는다.</strong></p>
+<p>(차라리 새로 생성!)</p>
+</li>
+<li>
+<p>복합으로 주식별자로 구성할 경우 너무 많은 속성이 포함되지 않도록 한다.</p>
+<p>​</p>
+</li>
+</ol>
+</li>
+<li>
+<p>식별자관계와 비식별자관계에 따른 식별자 구분</p>
+<ol>
+<li>
+<p>식별자관계 or 비식별자관계의 결정방법</p>
+<ul>
+<li>부모엔터티 쪽의 주식별자를 자식엔터티의 속성으로 내려 보낸다.</li>
+<li>이때 자식엔터티는 부모엔터티로부터 받은 외부식별자를 자신의 주식별자로 써도 되며 <strong>( == 식별자 관계)</strong>, 단순히 부모와 연결되는 속성으로만 이용 <b>( == 비식별자 관계)</b> 할 것인지 결정한다. 이때 <strong>외부식별자는 Foreign Key 역할을 한다.</strong></li>
+</ul>
+</li>
+<li>
+<p>식별자 관계</p>
+<p><em>→ 부모엔터티로 부터 속성을 받고, 이를 자식엔터티에서 주식별자로 사용 하는 경우 - <strong>식별자 관계</strong></em></p>
+<ul>
+<li>
+<p>부모로 부터 받은 속성을 자식이 주식별자로 사용하면 / <strong>부모와 자식의 관계는 1:1</strong></p>
+<div class="mermaid" id="id-1"></div>
+</li>
+<li>
+<p>A부모 엔터티로부터 받은 <em>속성a</em>와 B부모 엔터티로부터 받은 <em>속성b</em>를 포함하거나 / 스스로 가지고 있는 속성과 함께 주식별자를 구성하면 / <strong>부모와 자식의 관계는 1:M</strong></p>
+<div class="mermaid" id="id-2"></div>
+</li>
+</ul>
+</li>
+<li>
+<p>비식별자 관계</p>
+<p><em>→ 부모엔터티로 부터 속성을 받았지만, 자식엔터티에서 주식별자가 아닌 일반 속성으로 사용하는 경우 - <strong>비식별자 관계</strong></em></p>
+</li>
+<li>
+<p>식별자 관계로만 설정할 경우 문제점</p>
+<ul>
+<li>주식별자의 속성이 지속적으로 증가하는 경우 - 복잡성↑ 하고 오류가능성 유발</li>
+</ul>
+</li>
+<li>
+<p>비식별자 관계로만 설정할 경우 문제점</p>
+<ul>
+<li>상속의 개념이 없어, 쓸데없이 부모엔터티까지 찾아가서 데이터를 관리해야 하는 경우 발생</li>
+</ul>
+</li>
+<li>
+<p>식별자관계 &amp; 비식별자관계 모델링</p>
+<ol>
+<li>
+<p>비식별자관계 선택 프로세스</p>
+<p><em>→ 선택적으로 식별자, 비식별자를 구성 (난이도가 높다.)</em></p>
+</li>
+<li>
+<p>식별자와 비식별자관계 비교</p>
+<a class="lightgallery" href="/images/SQLD_08.png" title="/images/SQLD_08.png" data-thumbnail="/images/SQLD_08.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/SQLD_08.png"
+            data-srcset="/images/SQLD_08.png, /images/SQLD_08.png 1.5x, /images/SQLD_08.png 2x"
+            data-sizes="auto"
+            alt="/images/SQLD_08.png" width="1000px" />
+    </a>
+</li>
+<li>
+<p>식별자와 비식별자를 적용한 데이터 모델 (예시)</p>
+<a class="lightgallery" href="/images/SQLD_09.png" title="/images/SQLD_09.png" data-thumbnail="/images/SQLD_09.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/SQLD_09.png"
+            data-srcset="/images/SQLD_09.png, /images/SQLD_09.png 1.5x, /images/SQLD_09.png 2x"
+            data-sizes="auto"
+            alt="/images/SQLD_09.png" width="1000px" />
+    </a>
+<p>​</p>
+<p>​</p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2021-03-28</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/03_sqld_%EC%A0%9C4-%EC%A0%88-%EA%B4%80%EA%B3%84-%EC%A0%9C5-%EC%A0%88-%EC%8B%9D%EB%B3%84%EC%9E%90/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/sqld/">SQLD</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/git_lfslarge-file-storage/" class="prev" rel="prev" title="Git_LFS"><i class="fas fa-angle-left fa-fw"></i>Git_LFS</a>
+            <a href="/04_sqld_%EC%A0%9C2-%EC%9E%A5-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%AA%A8%EB%8D%B8%EA%B3%BC-%EC%84%B1%EB%8A%A5/" class="next" rel="next" title="04_SQLD_제1 절 성능데이터모델링의 개요 &amp; 제2 절 정규화와 성능">04_SQLD_제1 절 성능데이터모델링의 개요 &amp; 제2 절 정규화와 성능<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.82.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/mermaid/mermaid.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/mermaid/mermaid.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"id-1":"        graph LR;\n            A[부모 엔터티] --\u003e|속성| B[자식 엔터티]\n\n        ","id-2":"        graph LR;\n            A[부모A 엔터티] --\u003e|속성a| B[자식 엔터티]\n            C[부모B 엔터티] --\u003e |속성b|B[자식 엔터티]\n        "},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
