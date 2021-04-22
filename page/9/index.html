@@ -102,30 +102,40 @@
         alt="/images/jg_02.jpg"
         title="/images/jg_02.jpg" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/colinder" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="mailto:kjonggwan@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/processvsthread/">Process VS Thread</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-12-01">2020-12-01</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computer-science/"><i class="far fa-folder fa-fw"></i>Computer Science</a></span></div><div class="content">​
+Process VS Thread  면접 질문에서 가장 많이 들어본 이야기라고 친구들이 이야기 해줬습니다. 근데 전 아직 자신있게 설명할 정도로 알지 못하기에 알아봅시다!
+ ​
+​
+프로그램(Program)란 무엇인지 우선 알아봅시다. 소프트웨어의 한가지로, 어떤 문제를 해결하기 위하여 그 처리 방법과 순서(a.k.a ALGORITHM)를 기술하여 컴퓨터에 주어지는 일련의 명령문 집합체를 뜻합니다. 쉽게 말해, “어떤 작업을 위해 실행할 수 있는 파일”을 뜻합니다. 그리고 그 프로그램을 실행 시키는 주체를 인스턴스라고도 표현합니다.
+예들 들어, Excel.exe, kakaotalk.exe 등과 같이 어떤 작업을 위해 실행할 수 있는 (설치 등)파일을 생각해 볼 수 있습니다.</div><div class="post-footer">
+        <a href="/processvsthread/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/cs/">CS</a>,&nbsp;<a href="/tags/process/">Process</a>,&nbsp;<a href="/tags/thread/">Thread</a>,&nbsp;<a href="/tags/computer-science/">computer science</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/git_fork_vs_clone/">Git_fork vs clone</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-10-11">2020-10-11</time></span>&nbsp;<span class="post-category">included in <a href="/categories/git/"><i class="far fa-folder fa-fw"></i>git</a></span></div><div class="content">​
+Fork  fork는 다른 사람(프로젝트)의 github repository에서 내가 어떤 부분을 수정하거나, 기능을 추가 하고 싶을 때 해당 repository를 그대로 복제하는 기능.
+ fork한 저장소는 원본 repository와 연결되어 있습니다. 여기서 연결되어 있다는 의미는, 원본 repository에 어떤 변화가 생기면 이는 forked된 나의 repository에도 반영될 수 있다는 것입니다. (단, fetch나 rebase의 과정이 필요합니다. fetch나 rebase를 하지 않았다면, 단순히 원본 repository를 복사해서 가져온 상태라고 할 수 있습니다.)
+&lt; mermaid &gt; graph LR; A[원본 repository_Ver.</div><div class="post-footer">
+        <a href="/git_fork_vs_clone/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/git/">git</a>,&nbsp;<a href="/tags/fork/">fork</a>,&nbsp;<a href="/tags/clone/">clone</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/git_mirroring/">Git_Mirroring</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-10-08">2020-10-08</time></span>&nbsp;<span class="post-category">included in <a href="/categories/git/"><i class="far fa-folder fa-fw"></i>git</a></span></div><div class="content">​
+Git_Mirroring  기존에 사용하고 있던 A_Repo에서 B_Repo로 커밋히스토리 그대로 복사가 필요할 때가 있습니다.
+여기서 A_Repo를 그대로 가져온다는 의미는 단지 파일을 새롭게 만드는 것이 아니라 A_Repo에서 작업하던 commit 이력 모두를 그대로 이전하는 의미를 뜻합니다.
+ ​
+  터미널을 엽니다.
+  복사하고자 하는 저장소(A_Repo)의 bare clone을 생성합니다.
+1  git clone --bare https://github.com/user/old-repository.git     새로운 저장소(B_Repo)를 만들고 mirror-push를 진행합니다.
+1 2  cd old-repository.git	👈 위에서 클론(bare)한 폴더로 이동 git push --mirror https://github.</div><div class="post-footer">
+        <a href="/git_mirroring/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/git/">git</a>,&nbsp;<a href="/tags/mirroring/">Mirroring</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/sw_20.09.26/">SW Expert Academy_D3 3975, 5176, , </a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-09-26">2020-09-26</time></span>&nbsp;<span class="post-category">included in <a href="/categories/sw-expert-academy/"><i class="far fa-folder fa-fw"></i>SW Expert Academy</a></span></div><div class="content">​
 D3_3975_승률 비교하기 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  result = [] for T in range(int(input())): A, B, C, D = map(int, input().split()) if B/A &gt; D/C: result.append(&#34;BOB&#34;) elif B/A &lt; D/C: result.append(&#34;ALICE&#34;) else: result.append(&#34;DRAW&#34;) for t in range(T+1): print(f&#34;#{t+1} {result[t]}&#34;) # 아니 이게 D3라고? 완전 난이도 설정 실수네. 했다가 런타임 오류 보고 # 왜 그런건지 알았다. # python은 결과를 모았다가 출력하는 게 더 빠르다.</div><div class="post-footer">
         <a href="/sw_20.09.26/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/algorithm/">algorithm</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/rest-api-reference/">REST API Reference</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-09-24">2020-09-24</time></span>&nbsp;<span class="post-category">included in <a href="/categories/web/"><i class="far fa-folder fa-fw"></i>web</a>&nbsp;<a href="/categories/django/"><i class="far fa-folder fa-fw"></i>django</a>&nbsp;<a href="/categories/vue/"><i class="far fa-folder fa-fw"></i>vue</a></span></div><div class="content">​
-REST API Reference [TOC]
-1.사용자 API    Members Descriptions     POST /accounts/signup 회원가입   POST /accounts/login 회원 로그인   POST /accounts/userDetail 회원정보   PUT /accounts/update 회원정보 수정   DELETE /accounts/dropUser 회원탈퇴   GET /accounts/emailAuth 이메일 인증   GET /accounts/emailCheck 이메일 중복 확인   GET /accounts/nicknameCheck 닉네임 중복 확인    1.1 회원 로그인 POST /accounts/login ​	회원 로그인 API 입니다.</div><div class="post-footer">
-        <a href="/rest-api-reference/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/web/">Web</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/sw_20.09.21/">SW Expert Academy_D3 3307, 3304, 4371, 10726</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-09-21">2020-09-21</time></span>&nbsp;<span class="post-category">included in <a href="/categories/sw-expert-academy/"><i class="far fa-folder fa-fw"></i>SW Expert Academy</a></span></div><div class="content">​
-D3_3307_최장 증가 부분 수열(LIS) 1 2 3 4 5 6 7 8 9 10 11 12 13 14  for T in range(int(input())): N = int(input()) arr = list(map(int, input().split())) dp= [1] * N for i in range(1, N): for j in range(i): if arr[j] &lt; arr[i]: dp[i]= max(dp[i], dp[j] + 1) print(f&#39;#{T+1} {max(dp)}&#39;) # dp는 쉬운듯 어렵고 어려운듯 쉽다... # LIS로 검색하면 도움이 되는 글이 많다.    ​</div><div class="post-footer">
-        <a href="/sw_20.09.21/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/algorithm/">algorithm</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/sw_20.09.15/">SW Expert Academy_D3 3131, 3233, 1860, 4047</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-09-19">2020-09-19</time></span>&nbsp;<span class="post-category">included in <a href="/categories/sw-expert-academy/"><i class="far fa-folder fa-fw"></i>SW Expert Academy</a></span></div><div class="content">​
-D3_3131_100만 이하의 모든 소수 1 2 3 4 5 6 7 8 9 10 11 12  a = [0, 0] + [1] * 1000000 for i in range(2, 1000000): if a[i] == 1: for j in range(2*i, 1000001, i): a[j] = 0 for i in range(2, 1000000): if a[i] == 1: print(i, end=&#34; &#34;) # 에라토스테네스의 체   ​
-D3_3233_정삼각형 분할 놀이 1 2 3 4 5 6 7 8 9 10  for T in range(int(input())): A, B = map(int, input().</div><div class="post-footer">
-        <a href="/sw_20.09.15/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/algorithm/">algorithm</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
@@ -157,7 +167,7 @@ D3_3233_정삼각형 분할 놀이 1 2 3 4 5 6 7 8 9 10  for T in range(int(inpu
                     <span class="page-link" aria-hidden="true">&hellip;</span>
                 </li><li class="page-item ">
                     <span class="page-link">
-                        <a href="/page/13/">13</a>
+                        <a href="/page/14/">14</a>
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">
