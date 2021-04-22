@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>00_Vue_setting - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="00_Vue_setting" />
+<meta property="og:description" content="​
+Vue  Vue.js는 웹 애플리케이션의 사용자 인터페이스를 만들기 위해 사용하는 오픈 소스 프로그레시브 자바스크립트 프레임워크
+간단히, 온라인 홈페이지를 만드는 프로그램입니다.
+ ​
+1. 시작하기   &lsquo;Vue&rsquo; VS &lsquo;Django&rsquo;
+ 어느 정도 공부를 하면서 체득한 가장 큰 구분점은 &ldquo;Django는 App별로 응답을 구분하고, Vue는 Component별로 응답을 구분한다.&ldquo;는 것입니다.
+큰 차이가 없어보이고, 큰 의미가 없어보일 수 있으나 알아두면 좋습니다!
+ ​
+  💻 개발 환경 설정   vscode 설치" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://colinder.github.io/00_vue_setting/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-07-17T21:56:29&#43;09:00" />
+<meta property="article:modified_time" content="2020-07-17T21:56:29&#43;09:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
+
+<meta name="twitter:title" content="00_Vue_setting"/>
+<meta name="twitter:description" content="​
+Vue  Vue.js는 웹 애플리케이션의 사용자 인터페이스를 만들기 위해 사용하는 오픈 소스 프로그레시브 자바스크립트 프레임워크
+간단히, 온라인 홈페이지를 만드는 프로그램입니다.
+ ​
+1. 시작하기   &lsquo;Vue&rsquo; VS &lsquo;Django&rsquo;
+ 어느 정도 공부를 하면서 체득한 가장 큰 구분점은 &ldquo;Django는 App별로 응답을 구분하고, Vue는 Component별로 응답을 구분한다.&ldquo;는 것입니다.
+큰 차이가 없어보이고, 큰 의미가 없어보일 수 있으나 알아두면 좋습니다!
+ ​
+  💻 개발 환경 설정   vscode 설치"/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/00_vue_setting/" /><link rel="prev" href="https://colinder.github.io/sw_20.07.10/" /><link rel="next" href="https://colinder.github.io/01_vue_basic/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "00_Vue_setting",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/colinder.github.io\/00_vue_setting\/"
+        },"genre": "posts","keywords": "Vue","wordcount":  456 ,
+        "url": "https:\/\/colinder.github.io\/00_vue_setting\/","datePublished": "2020-07-17T21:56:29+09:00","dateModified": "2020-07-17T21:56:29+09:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "colinder"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="">Hello New World</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="">Hello New World</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">00_Vue_setting</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/vue/"><i class="far fa-folder fa-fw"></i>Vue</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-07-17">2020-07-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;456 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-시작하기">1. 시작하기</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#-개발-환경-설정">💻 개발 환경 설정</a></li>
+            <li><a href="#-프로젝트-생성">🎉 프로젝트 생성</a></li>
+          </ul>
+        </li>
+        <li><a href="#여기서-잠깐">여기서 잠깐✋</a></li>
+        <li><a href="#1-vue-cli-란httpssimplevuegitbookiointro01-vue-cli-공식문서">1. <a href="https://simplevue.gitbook.io/intro/01.-vue-cli">VUE CLI 란?</a> (공식문서)</a></li>
+        <li><a href="#2--vue-add-router-필요한가">2.  vue add router 필요한가?</a></li>
+        <li><a href="#3--vue-add-router-후-history-mode-설정은-왜-필요한가">3.  vue add router 후 History Mode 설정은 왜 필요한가?</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>​</p>
+<h1 id="vue">Vue</h1>
+<blockquote>
+<p>Vue.js는 웹 애플리케이션의 사용자 인터페이스를 만들기 위해 사용하는 오픈 소스 프로그레시브 
+<strong>자바스크립트 프레임워크</strong></p>
+<p>간단히, <code>온라인 홈페이지를 만드는 프로그램</code>입니다.</p>
+</blockquote>
+<p>​</p>
+<h2 id="1-시작하기">1. 시작하기</h2>
+<blockquote>
+<blockquote>
+<p>&lsquo;Vue&rsquo; VS &lsquo;Django&rsquo;</p>
+</blockquote>
+<p>어느 정도 공부를 하면서 체득한 가장 큰 구분점은 &ldquo;<code>Django는 App별로 응답을 구분</code>하고, <code>Vue는 Component별로 응답을 구분</code>한다.&ldquo;는 것입니다.</p>
+<p>큰 차이가 없어보이고, 큰 의미가 없어보일 수 있으나 알아두면 좋습니다!</p>
+</blockquote>
+<p>​</p>
+<ul>
+<li>
+<h4 id="-개발-환경-설정">💻 개발 환경 설정</h4>
+<ol>
+<li>
+<p><a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreffer">vscode</a> 설치</p>
+</li>
+<li>
+<p><a href="https://nodejs.org/ko/" target="_blank" rel="noopener noreffer">nodeJS</a> 설치</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 🤔 안정적인 버전 vs 최신 버전 </span>
+<span class="c1"># 상관없으나 개인적으로 안정적인 버전을 추천합니다.</span>
+     
+<span class="c1"># 😀 설치가 잘 되었나 확인 방법!</span>
+<span class="c1"># terminal창(cmd) -&gt; node -v (명령어 입력)</span>
+<span class="c1"># 버전 넘버가 보이면 정상 설치 된 것입니다.</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>프로젝트를 시작할 폴더에서 마우스 오른쪽 클릭 후</p>
+</li>
+<li>
+<p>vscode 실행 =&gt; terminal에서 <code>npm install</code> 설치</p>
+</li>
+<li>
+<p>이후 Terminal에서 추가로 <code>npm i -g @vue/cli</code> 설치</p>
+<ul>
+<li>설치가 잘 되었나 <code>vue --version</code>으로 확인 (버전이 보이면 ok)</li>
+</ul>
+</li>
+<li>
+<p><em>(선택사항)</em> vscode의 추천 Extensions</p>
+<ul>
+<li>
+<p><code>Vetur</code></p>
+</li>
+<li>
+<p><code>Vue VSCode Snippets</code></p>
+</li>
+<li>
+<p><code>Auto Rename Tag</code></p>
+</li>
+<li>
+<p><code>Auto Close Tag</code></p>
+</li>
+</ul>
+<p>​</p>
+</li>
+</ol>
+</li>
+<li>
+<h4 id="-프로젝트-생성">🎉 프로젝트 생성</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"> $ vue create myproject		<span class="c1"># myproject 프로젝트 생성</span>
+ $ <span class="nb">cd</span> myproject				<span class="c1"># 생성한 myproject 폴더로 이동</span>
+ $ vue add router				<span class="c1"># (선택사항) myproject 히스토리를 관리해줄 router기능 설치</span>
+ $ npm run serve				<span class="c1"># myproject의 디폴트 서버 실행</span>
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">  App running at:
+    - Local:   http://localhost:8080/
+    - Network: http://192.168.219.164:8080/
+    
+  이후 Local로 접속하면 생성된 서버 페이지 확인이 가능하다.
+  또 같은 공유기를 사용하고 있는 기기에서 접속하여 서버 확인이 가능하다.
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+</li>
+<li>
+<p>생성된 프로젝트의 기본사항 파악</p>
+<ol>
+<li>
+<p>Terminal창에 vue create myproject 명령어 입력 후</p>
+<image src="/images/image-20200713230725043.png" caption=" " width="500px">
+<p>이와 같은 창이 뜨는데 <code>default</code>로 설정하고 enter하고, 프로젝트를 시작한다.</p>
+<p>​</p>
+</li>
+<li>
+<p>프로젝트 생성이 완료되면 <code>(router 미설치)</code></p>
+<image src="/images/image-20200713232004608.png" caption=" " width="200px">
+<p>이와 같은 폴더 구조를 확인할 수 있다.</p>
+<p>​</p>
+</li>
+<li>
+<p>vue add router를 한다면. 두번의 묻는데 전부 y 로 처리<code>(router와 history mode 설정을 묻는 것)</code></p>
+<image src="/images/image-20200713231411715.png" caption=" " width="200px">
+</li>
+</ol>
+</li>
+</ul>
+<p>​</p>
+<h3 id="여기서-잠깐">여기서 잠깐✋</h3>
+<hr>
+<h3 id="1-vue-cli-란httpssimplevuegitbookiointro01-vue-cli-공식문서">1. <a href="https://simplevue.gitbook.io/intro/01.-vue-cli" target="_blank" rel="noopener noreffer">VUE CLI 란?</a> (공식문서)</h3>
+<p>간단히 vue-cli 는 기본 vue 개발 환경을 설정해주는 도구</p>
+<blockquote>
+<p><strong>여기서 CLI 란 ?</strong></p>
+<p><strong>명령 줄 인터페이스(CLI, Command line interface) 또는 명령어 인터페이스</strong>는 텍스트 터미널을 통해 사용자와 컴퓨터가 상호 작용하는 방식. 즉, 작업 명령은 사용자가 컴퓨터 키보드 등을 통해 문자열의 형태로 입력하며, 컴퓨터로부터의 출력 역시 문자열의 형태로 주어진다. (출처: 위키백과)</p>
+</blockquote>
+<p>​</p>
+<h3 id="2--vue-add-router-필요한가">2.  vue add router 필요한가?</h3>
+<image src="/images/image-20200731224139667.png" caption=" " width="800px">
+<p>라우팅은 URI에 따라 해당하는 정적파일을 보여주는 방식. 이를 브라우저에서 구현 하는것이 <strong>SPA</strong> 개발의 핵심</p>
+<blockquote>
+<p>아이디어는 간단하다. 요청 URI에 따라 브라우저에서 DOM을 변경하는 방식. 대부분의 경우 도움이 되는 기능이기 때문에 상당이 추천한다. (추가로 navbar? 도 생기니 더욱 추천)</p>
+<p><strong>terminal</strong>에 <strong>vue add router</strong> 를 입력하면 history 모드를 사용하겠나고 묻는데  <strong>y</strong> 를 입력해주면 된다.</p>
+</blockquote>
+<p>​</p>
+<h3 id="3--vue-add-router-후-history-mode-설정은-왜-필요한가">3.  vue add router 후 History Mode 설정은 왜 필요한가?</h3>
+<image src="/images/image-20200731224303419.png" caption=" " width="800px">
+<blockquote>
+<p>vue add router를 설치하게 되면 <code>해쉬백 모드</code>와 <code>히스토리 모드</code> 중 디폴트로 <code>해쉬백 모드가 적용</code>된다.</p>
+<p>만약 위의 그림에서 히스토리 모드를 사용하지 않더라도 나중에 URL에 있는 해쉬를 제거하기 위해 라우터의 <strong>히스토리 모드</strong>로 변경할 수 있다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># src/router/index.js</span>
+
+const <span class="nv">router</span> <span class="o">=</span> new VueRouter<span class="o">({</span>
+  mode: <span class="s1">&#39;history&#39;</span>,						👈요거를 등록하면 <span class="nb">history</span> 모드 실행
+  routes: <span class="o">[</span>...<span class="o">]</span>
+<span class="o">})</span>
+</code></pre></td></tr></table>
+</div>
+</div></blockquote>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2020-07-17</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/00_vue_setting/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/vue/">Vue</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/sw_20.07.10/" class="prev" rel="prev" title="SW Expert Academy_D3 4676, 4615, 4579, 4522"><i class="fas fa-angle-left fa-fw"></i>SW Expert Academy_D3 4676, 4615, 4579, 4522</a>
+            <a href="/01_vue_basic/" class="next" rel="next" title="01_Vue_basic (Vue란? &amp; Vue 문법1)">01_Vue_basic (Vue란? &amp; Vue 문법1)<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.82.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

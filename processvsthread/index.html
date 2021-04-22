@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Process VS Thread - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="Process VS Thread" />
+<meta property="og:description" content="​
+Process VS Thread  면접 질문에서 가장 많이 들어본 이야기라고 친구들이 이야기 해줬습니다. 근데 전 아직 자신있게 설명할 정도로 알지 못하기에 알아봅시다!
+ ​
+​
+프로그램(Program)란 무엇인지 우선 알아봅시다. 소프트웨어의 한가지로, 어떤 문제를 해결하기 위하여 그 처리 방법과 순서(a.k.a ALGORITHM)를 기술하여 컴퓨터에 주어지는 일련의 명령문 집합체를 뜻합니다. 쉽게 말해, “어떤 작업을 위해 실행할 수 있는 파일”을 뜻합니다. 그리고 그 프로그램을 실행 시키는 주체를 인스턴스라고도 표현합니다.
+예들 들어, Excel.exe, kakaotalk.exe 등과 같이 어떤 작업을 위해 실행할 수 있는 (설치 등)파일을 생각해 볼 수 있습니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://colinder.github.io/processvsthread/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-12-01T13:40:25&#43;09:00" />
+<meta property="article:modified_time" content="2020-12-01T13:40:25&#43;09:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
+
+<meta name="twitter:title" content="Process VS Thread"/>
+<meta name="twitter:description" content="​
+Process VS Thread  면접 질문에서 가장 많이 들어본 이야기라고 친구들이 이야기 해줬습니다. 근데 전 아직 자신있게 설명할 정도로 알지 못하기에 알아봅시다!
+ ​
+​
+프로그램(Program)란 무엇인지 우선 알아봅시다. 소프트웨어의 한가지로, 어떤 문제를 해결하기 위하여 그 처리 방법과 순서(a.k.a ALGORITHM)를 기술하여 컴퓨터에 주어지는 일련의 명령문 집합체를 뜻합니다. 쉽게 말해, “어떤 작업을 위해 실행할 수 있는 파일”을 뜻합니다. 그리고 그 프로그램을 실행 시키는 주체를 인스턴스라고도 표현합니다.
+예들 들어, Excel.exe, kakaotalk.exe 등과 같이 어떤 작업을 위해 실행할 수 있는 (설치 등)파일을 생각해 볼 수 있습니다."/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/processvsthread/" /><link rel="prev" href="https://colinder.github.io/httpvshttps/" /><link rel="next" href="https://colinder.github.io/bj_20.12.15/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Process VS Thread",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/colinder.github.io\/processvsthread\/"
+        },"genre": "posts","keywords": "CS, Process, Thread, computer science","wordcount":  883 ,
+        "url": "https:\/\/colinder.github.io\/processvsthread\/","datePublished": "2020-12-01T13:40:25+09:00","dateModified": "2020-12-01T13:40:25+09:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "colinder"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="">Hello New World</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="">Hello New World</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Process VS Thread</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/computer-science/"><i class="far fa-folder fa-fw"></i>Computer Science</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-12-01">2020-12-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;883 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;5 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#프로그램program란-무엇인지-우선-알아봅시다">프로그램(Program)란 무엇인지 우선 알아봅시다.</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#thread-safety">Thread-Safety</a>
+      <ul>
+        <li><a href="#부록">부록</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>​</p>
+<h1 id="span-stylecolor-358691processspan-vs-span-stylecolor-dabc9athreadspan"><span style="color: #358691">Process</span> VS <span style="color: #dabc9a">Thread</span></h1>
+<blockquote>
+<p>면접 질문에서 가장 많이 들어본 이야기라고 친구들이 이야기 해줬습니다. 근데 전 아직 자신있게 설명할 정도로 알지 못하기에 알아봅시다!</p>
+</blockquote>
+<p>​</p>
+<p>​</p>
+<h2 id="프로그램program란-무엇인지-우선-알아봅시다">프로그램(Program)란 무엇인지 우선 알아봅시다.</h2>
+<p>소프트웨어의 한가지로, 어떤 문제를 해결하기 위하여 그 처리 방법과 순서(a.k.a  ALGORITHM)를 기술하여 컴퓨터에 주어지는 일련의 명령문 집합체를 뜻합니다. 쉽게 말해,  “어떤 작업을 위해 실행할 수 있는 파일”을 뜻합니다. 그리고 그 프로그램을 실행 시키는 주체를 <b>인스턴스</b>라고도 표현합니다.</p>
+<p>예들 들어, Excel.exe, kakaotalk.exe 등과 같이 어떤 작업을 위해 실행할 수 있는 (설치 등)파일을 생각해 볼 수 있습니다.</p>
+<p>​</p>
+<p>​</p>
+<h1 id="span-stylecolor-358691processspan"><span style="color: #358691">Process</span></h1>
+<p>Process는 <code>프로그램의 인스턴스(독립적인 개체)가 실행되어 메모리에 적재된 것</code>을 말합니다. 조금 다르게 <code>운영체제로부터 시스템 자원을 할당받는 자원의 크기</code>라고도 말할 수 있습니다. 조금 간단하게는 &ldquo;실행된 프로그램을 의미&quot;합니다.</p>
+<p>앞서 운영체제로부터 할당을 받는다고 설명했는데 <b>CPU의 시간</b>  /  <strong>운영되기 위해 필요한 주소 공간</strong>  /  <strong>Code, Data, Stack, Heap의 구조로 되어 있는 독립된 메모리 영역</strong>등이 대상입니다.</p>
+<image src="../images/ProcessVSThread_00.png" width="700px" style="display: block; margin-left: auto; margin-right: auto; margin-top: 20px">
+<p>​</p>
+<p>즉, <strong>프로그램을 실행하게 되면 CPU의 일정 용량?을 차지하면서 수행하는 주체가 Process입니다.</strong></p>
+<p>하여, 프로그램은 하나인데 Process는 여러 개가 동작할 수 있습니다. (==인스턴스가 여러 개)</p>
+<p>예를 들어 엑셀을 사용하고 있는데, 새로 만들기로 엑셀창을 하나 더 열 수도 있겠죠? 여기서 엑셀 실행파일이 Program, 엑셀창이 Process입니다. <b>간단히 1개의 Program으로 2개의 Process를 동작시킨 것입니다.</b></p>
+<p>​</p>
+<p>🙋‍♂️ 이제 프로세스(Process)의 특징에 대하여 좀 더 알아봅시다.</p>
+<ol>
+<li>
+<p>프로세스는 각각 독립된 메모리 영역(Code, Data, Stack, Heap의 구조)을 할당받습니다.</p>
+</li>
+<li>
+<p>기본적으로 프로세스당 최소 1개의 스레드(메인 스레드)를 가지고 있습니다.</p>
+</li>
+<li>
+<p>각 프로세스는 별도의 주소 공간에서 실행되며, <b>한 프로세스는 다른 프로세스의 변수나 자료구조에 접근할 수 없습니다</b>.</p>
+</li>
+<li>
+<p><b>BUT</b> 한 프로세스가 다른 프로세스의 자원에 접근하려면 프로세스 간의 통신(IPC, inter-process communication)을 사용하면 가능해집니다. Ex) 파이프, 파일, 소켓통신, mapped file 등을 이용한 통신 방법 이용</p>
+<p><em>ex) 실제로 엑셀의 경우 A엑셀파일, B엑셀파일이 있을 때, B의 특정 셀값을 A에서 불러와 사용할 수 있습니다. 즉, 프로세스간에 통신이 가능합니다.</em></p>
+<p>​</p>
+<p>​</p>
+</li>
+</ol>
+<h1 id="span-stylecolor-dabc9athreadspan"><span style="color: #dabc9a">Thread</span></h1>
+<p><code>프로세스(Process) 내에서 실행되는 흐름의 단위</code>으로
+프로세스 하나에 자원을 공유하면서 일련의 과정, 여러 개를 동시에 실행시킬 수 있는 것을 말합니다.</p>
+<p>기본적으로 하나의 프로세스가 생성되면 하나의 Thread가 같이 생성됩니다. 이를 <code>Main Thread</code>라고 부르며, thread를 추가로 생성하지 않는 한, 모든 프로그램 코드는 Main Thread에서 실행됩니다.</p>
+<image src="../images/ProcessVSThread_01.png" caption="single Thread의 경우" width="550px" style="display: block; margin-left: auto; margin-right: auto; margin-top: 20px">
+<p>​</p>
+<image src="../images/ProcessVSThread_03.png" caption="Multi Thread의 경우" width="550px" style="display: block; margin-left: auto; margin-right: auto; margin-top: 20px">
+<p>Multi Thread 그림을 보면</p>
+<ul>
+<li>
+<p>한 프로세서 내의 주소 공간이나 자원들을 대부분 공유하고 <em>( Stack만 스레드 별로 가지게 됩니다. )</em></p>
+</li>
+<li>
+<p>하나의 프로세스는 여러 개의 스레드를 가질 수 있는데, 이를 <code>Multi Thread</code>라고 합니다.</p>
+</li>
+<li>
+<p>한 스레드가 프로세스 자원을 변경하면, 다른 이웃 스레드(sibling thread)도 그 변경 결과를 즉시 볼 수 있습니다.</p>
+<p>​</p>
+</li>
+</ul>
+<p>🙋‍♂️ 다른 자원들은 공유하지만 굳이 스택만 분리해서 사용하는 이유는?</p>
+<blockquote>
+<p>LIFO(Last In First Out) / 후입 선출이라는 스택의 특성과도 연관이 있습니다.
+왜냐하면?  Code와 Data, Heap 영역을 공유하는 것에는 큰 문제가 없지만,
+스택 영역은 스택이 쌓이면 위에서부터 프로세스가 섞인 채로 순서대로 나오게 되므로
+더 복잡해지기 때문에 원활한 실행 흐름을 위해 스택은 따로 독립적으로 존재하게 됩니다.</p>
+</blockquote>
+<p>​</p>
+<p>​</p>
+<h1 id="multi-span-stylecolor-358691processspan">Multi <span style="color: #358691">Process</span></h1>
+<blockquote>
+<p>하나의 응용프로그램을 여러 개의 프로세스로 구성하여 각 프로세스가 하나의 작업(태스크)을 처리하도록 하는 것.</p>
+</blockquote>
+<image src="../images/ProcessVSThread_04.png" caption="하나의 운영프로그램을 여러개의 Process가 처리" width="550px" style="display: block; margin-left: auto; margin-right: auto; margin-top: 20px">
+<p>😆 장점</p>
+<ul>
+<li>안정성이 좋음 - <span style="color: grey; font-size: .9rem">여러 개의 자식 프로세스 중 하나에 문제가 발생하면 그 자식 프로세스만 죽는 것 이상으로 다른 영향이 확산되지 않습니다.</span></li>
+</ul>
+<p>😔 단점</p>
+<ul>
+<li>
+<p>Context Switching<span style="color: grey; font-size: .7rem">(여러 프로세스를 왔다 갔다 하는 것)</span>에서의 <strong>오버헤드</strong></p>
+<ul>
+<li>Context Switching 과정에서 캐쉬 메모리 초기화 등 무거운 작업이 진행되고 많은 시간이 소모되는 등의 오버헤드가 발생하게 됩니다.</li>
+<li>프로세스는 각각의 독립된 메모리 영역을 할당받았기 때문에 프로세스 사이에서 공유하는 메모리가 없어, Context Switching가 발생하면 캐쉬에 있는 모든 데이터를 모두 리셋하고 다시 캐쉬 정보를 불러와야 합니다.</li>
+</ul>
+</li>
+<li>
+<p>프로세스 사이의 어렵고 복잡한 통신 기법(IPC)</p>
+<p>​</p>
+</li>
+</ul>
+<p style='text-align:right; font-style:italic; color:grey; font-size:.9rem'>*오버헤드(overhead)는 어떤 처리를 하기 위해 들어가는 간접적인 처리 시간 · 메모리 등을 말한다.</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p><strong>이런 단점들을 보완하기 위해 Multi <span style="color: #dabc9a">Thread</span>가 등장하였습니다.</strong></p>
+<h1 id="multi-span-stylecolor-dabc9athreadspan">Multi <span style="color: #dabc9a">Thread</span></h1>
+<blockquote>
+<p>하나의 프로세스 내에서 여러 개의 thread가 동작하는 것을 말합니다.</p>
+</blockquote>
+<image src="../images/ProcessVSThread_05.png" caption="하나의 운영프로그램을 여러개의 Process가 처리" width="550px" style="display: block; margin-left: auto; margin-right: auto; margin-top: 20px">
+<p>😆 장점</p>
+<ul>
+<li>
+<p>시스템 효율성이 향상됩니다.</p>
+<ul>
+<li>프로세스에서 자원을 할당하는 콜이 줄어들어 자원을 효율적으로 관리할 수 있습니다.</li>
+<li>즉, 시스템의 자원 소모를 줄일 수 있습니다.</li>
+</ul>
+</li>
+<li>
+<p>시스템 처리량이 증가 됩니다.</p>
+<ul>
+<li>스레드 사이에 작업량이 작아 Context Switching이 빠릅니다.</li>
+</ul>
+</li>
+<li>
+<p>결과적으로 프로그램 응답 시간이 단축됩니다.</p>
+</li>
+<li>
+<p>프로세스 간 통신 방법에 비해 thread간의 통신 방법이 간단합니다.<br> <em>✔ 스레드는 Stack 영역을 제외한 모든 메모리를 공유하기 때문</em></p>
+</li>
+<li>
+<p>프로세스 간의 전환 속도보다 스레드 간의 전환 속도가 빠르다.
+<br><em>✔ Context Switching시 스레드는 Stack 영역만 처리하기 때문</em></p>
+</li>
+</ul>
+<p>😔 단점</p>
+<ul>
+<li>
+<p>여러 개의 스레드를 이용하는 경우, 미묘한 시간차나 잘못된 변수를 공유함으로써 오류가 발생할 가능성이 있습니다.  하여 <strong>Thread-Safety</strong>하게 구현해야 합니다. <span style="color: grey; font-size: .9rem">ex) 스레드1이 공유 자원 내의 A데이터를 조작하다가, 스레드2에 제어권을 넘겨준 이후 스레드2가 A데이터를 변경한다면 스레드1이 다시 제어권을 받아 남은 작업을 계속할 때 원치 않는 결과가 나올 수 있다.</span></p>
+</li>
+<li>
+<p>프로그램 디버깅이 어렵습니다.</p>
+</li>
+<li>
+<p>단일 프로세스 시스템에서는 효과를 기대하기 어렵습니다.</p>
+<p>​</p>
+<p>​</p>
+</li>
+</ul>
+<h2 id="thread-safety">Thread-Safety</h2>
+<blockquote>
+<p>스레드 안전(thread 安全, 영어: thread safety)은 멀티 스레드 프로그래밍에서 일반적으로 어떤 함수나 변수, 혹은 객체가 여러 스레드로부터 동시에 접근이 이루어져도 프로그램의 실행에 문제가 없음을 뜻한다. 보다 엄밀하게는 하나의 함수가 한 스레드로부터 호출되어 실행 중일 때, 다른 스레드가 그 함수를 호출하여 동시에 함께 실행되더라도 각 스레드에서의 함수의 수행 결과가 올바로 나오는 것으로 정의한다.</p>
+</blockquote>
+<ol>
+<li>
+<p><strong>Re-entrancy(재진입성)</strong></p>
+<ul>
+<li>어떤 함수가 한 스레드에 의해 호출되어 실행 중일 때, 다른 스레드가 그 함수를 호출하더라도 그 결과가 각각에게 올바로 주어져야 한다. <span style="color: grey; font-size: .8rem">(동기화 잘 하라.)</span></li>
+</ul>
+</li>
+<li>
+<p><strong>Mutual exclusion(상호 배제)</strong></p>
+<ul>
+<li><a href="https://ko.wikipedia.org/wiki/%ea%b3%b5%ec%9c%a0_%ec%9e%90%ec%9b%90" target="_blank" rel="noopener noreffer">공유 자원</a>을 꼭 사용해야 할 경우 해당 자원의 접근을 <a href="https://ko.wikipedia.org/wiki/%ec%84%b8%eb%a7%88%ed%8f%ac%ec%96%b4" target="_blank" rel="noopener noreffer">세마포어</a> 등의 <a href="https://ko.wikipedia.org/w/index.php?title=%eb%9d%bd_%28%ec%bb%b4%ed%93%a8%ed%84%b0%ea%b3%bc%ed%95%99%29&amp;action=edit&amp;redlink=1" target="_blank" rel="noopener noreffer">락</a>으로 통제한다. <span style="color: grey; font-size: .8rem">(역시 동기화 잘 하라.ㅎ.)</span></li>
+</ul>
+</li>
+<li>
+<p><strong>Thread-local storage(스레드 지역 저장소)</strong></p>
+<ul>
+<li>공유 자원의 사용을 최대한 줄여 각각의 스레드에서만 접근 가능한 저장소들을 사용함으로써 동시 접근을 막는다. <span style="color: grey; font-size: .8rem">(글로벌 변수 등의 사용을 남발하지 말라.)</span></li>
+</ul>
+</li>
+<li>
+<p><strong>Atomic operations(원자 연산)</strong></p>
+<ul>
+<li>
+<p>공유 자원에 접근할 때 원자 연산을 이용하거나 &lsquo;원자적&rsquo;으로 정의된 접근 방법을 사용함으로써 상호 배제를 구현할 수 있다. <span style="color: grey; font-size: .8rem">(역시 동기화 잘 하라는 건데, python 연산자를 예로 &ldquo;+=&ldquo;는 한줄의 코드 임에도 &ldquo;+&ldquo;를 한 후에 &ldquo;=&rdquo; 연산을 하기 때문에 원자적이라고 할 수 없다고 봅니다.)</span></p>
+<p>​</p>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="부록">부록</h3>
+<ul>
+<li>자바에서 동기화 방법
+<ol>
+<li>Synchronized</li>
+<li>Volatile</li>
+<li>Atomic Class</li>
+</ol>
+</li>
+</ul>
+<hr>
+<p>​</p>
+<p>​</p>
+<h1 id="요약">👀요약</h1>
+<blockquote>
+<p>운영체제는 Process 단위로 <strong>메모리를 할당</strong>해주고, 같은 프로세스 소속의 <strong>Thread는 메모리를 공유</strong>합니다. <span style="color: grey; font-size: .9rem">(스레드도 각자의 스택영역을 보유하므로 완전히 공유한다고 보기는 어렵습니다.)</span></p>
+</blockquote>
+<p>​</p>
+<p>​</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2020-12-01</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/processvsthread/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/cs/">CS</a>,&nbsp;<a href="/tags/process/">Process</a>,&nbsp;<a href="/tags/thread/">Thread</a>,&nbsp;<a href="/tags/computer-science/">computer science</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/httpvshttps/" class="prev" rel="prev" title="HTTP VS HTTPS"><i class="fas fa-angle-left fa-fw"></i>HTTP VS HTTPS</a>
+            <a href="/bj_20.12.15/" class="next" rel="next" title="BEAKJOON 10809, 2941, 2908, 1316">BEAKJOON 10809, 2941, 2908, 1316<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.82.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

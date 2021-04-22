@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>programmers - Category - </title>
+        <link>https://colinder.github.io/categories/programmers/</link>
+        <description>programmers - Category - </description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 21 Apr 2021 23:42:17 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/programmers/" rel="self" type="application/rss+xml" /><item>
+    <title>programmers_21.04.21</title>
+    <link>https://colinder.github.io/pg_21.04.21/</link>
+    <pubDate>Wed, 21 Apr 2021 23:42:17 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/pg_21.04.21/</guid>
+    <description><![CDATA[​
+타겟 넘버 1 2 3 4 5 6 7 8 9 10 11 12  numbers = [1, 1, 1, 1, 1] target = 3 # return = 5 from itertools import product l = [(-number, number)for number in numbers] s = list(map(sum, product(*l))) print(s.count(target)) ## 미쳤다. product()..   ​
+K번째 수 1 2 3 4 5 6 7 8 9 10 11 12 13 14  array = [1, 5, 2, 6, 3, 7, 4]	commands = [[2, 5, 3], [4, 4, 1], [1, 7, 3]] def solution(array, commands): answer = [] for _ in commands: i, j, k = _ q = array[i-1: j] q.]]></description>
+</item></channel>
+</rss>
