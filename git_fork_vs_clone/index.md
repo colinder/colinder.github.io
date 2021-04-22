@@ -16,13 +16,17 @@ graph LR;
 
 ---
 
+{{< mermaid >}}
 graph LR;
     A[원본 repository에 변화 발생] --> |fetch or rebase 실행|B(new repository에 변화 반영)
+{{< /mermaid >}}
 
 ---
 
+{{< mermaid >}}
 graph LR;
     A[원본 repository에 변화 발생] --> |fetch or rebase 실행 X|B(new repository_Ver.1.0.0)
+{{< /mermaid >}}
 
 
 - fork는 보통 2가지 목적을 위해 사용합니다.
