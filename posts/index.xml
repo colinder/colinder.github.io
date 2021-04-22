@@ -3,7 +3,20 @@
         <title>All Posts - </title>
         <link>https://colinder.github.io/posts/</link>
         <description>All Posts | </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 22 Apr 2021 23:13:25 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 22 Apr 2021 23:17:41 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Django_02_addapp</title>
+    <link>https://colinder.github.io/django_02_addapp/</link>
+    <pubDate>Thu, 22 Apr 2021 23:17:41 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/django_02_addapp/</guid>
+    <description><![CDATA[​
+Django_app  이번에는 생성된 프로젝트에서 1. app을 추가해 등록해보고 2. 서버 접속시 첫 메인 페이지를 등록해봅시다.
+ ​
+뜬금없이 CRUD를 알아보고 갑시다.  CRUD는 대부분의 컴퓨터 소프트웨어가 가지는 기본적인 데이터 처리 기능인 Create(생성), Read(읽기), Update(갱신), Delete(삭제)를 묶어서 일컫는 말입니다. 사용자 인터페이스가 갖추어야 할 기능(정보의 참조/검색/갱신 등) 중 가장 기본이라고 생각되는 기술들입니다.
+ ​
+이제 이어서 개발해봅시다. ​
+1. App 생성 지난번에는 프로젝트를 생성하고 setting.py에서 기본 설정만 변경해주었습니다. 이제 app을 생성해봅시다.]]></description>
+</item><item>
     <title>Django_01_startproject</title>
     <link>https://colinder.github.io/django_01_startproject/</link>
     <pubDate>Thu, 22 Apr 2021 23:13:25 &#43;0900</pubDate>
@@ -93,13 +106,5 @@ Python Library 😀   Idea 1 2 3 4 5 6 7 8 9 10 11 12 13  # 모두 &#39;거짓&#
     <guid>https://colinder.github.io/bj_21.02.25/</guid>
     <description><![CDATA[​
 5052_전화번호 목록 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22  import sys for T in range(int(sys.stdin.readline().rstrip())): N = int(sys.stdin.readline().rstrip()) Numbers = [] for _ in range(N): Numbers.append(sys.stdin.readline().rstrip()) Numbers.sort() result = &#34;YES&#34; for i in range(len(Numbers)-1): if Numbers[i+1].find(Numbers[i], 0, len(Numbers[i])) != -1: result = &#39;NO&#39; break print(result) # 흠.. 다른 사람들은 트리로 풀었나..? # 이게 왜 트리에 있지.]]></description>
-</item><item>
-    <title>BEAKJOON 1991, 11725, 1967, 1167</title>
-    <link>https://colinder.github.io/bj_21.02.18/</link>
-    <pubDate>Thu, 18 Feb 2021 21:24:02 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/bj_21.02.18/</guid>
-    <description><![CDATA[​
-1991_트리 순회 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44  class Node: def __init__(self, data, L, R): self.data = data self.left = L self.right = R def preorder(node): # 전위 순회 print(node.data, end=&#34;&#34;) if node.]]></description>
 </item></channel>
 </rss>
