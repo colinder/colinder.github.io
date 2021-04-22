@@ -182,8 +182,6 @@ def main(request):
 
 <image src="/images/django_02_02.png" width="1000px" style="border: 1px solid">
 
-​	
-
 ​		
 
 ​		
@@ -193,6 +191,10 @@ def main(request):
 # 👀요약
 
 > 폴더 구조를 이해하면서 진행합시다!	
+
+​	
+
+​	
 
 ​	
 
