@@ -13,7 +13,7 @@
 
 - 로그인까지 마치면 이제 Django 개발 준비 끝.
 
-  <image src="/images/django_c9_main.png" caption="C9 접속 화면(`블랙테마 적용되어 있음`)">
+  <image src="/images/django_c9_main.png" caption="C9 접속 화면(블랙테마 적용되어 있음)">
 
   ​		
 
@@ -83,7 +83,7 @@
   TIME_ZONE = 'Asia/Seoul'		#시간대 서울로 변경
   ```
 
-  <image src="/images/django_main.png" caption="여기까지 진행한 것을 보통(`로켓을 띄운다.`)고 한다.">
+  <image src="/images/django_main.png" caption="여기까지 진행한 것을 보통 `로켓을 띄운다.`고 한다.">
 
   - 이와 같은 화면이 나오면 Basic Setting 완료입니다.
 
