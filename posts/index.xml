@@ -3,7 +3,19 @@
         <title>All Posts - </title>
         <link>https://colinder.github.io/posts/</link>
         <description>All Posts | </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 21 Apr 2021 23:42:17 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 22 Apr 2021 23:10:27 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Django_00_basic</title>
+    <link>https://colinder.github.io/django_00_whatisdjango/</link>
+    <pubDate>Thu, 22 Apr 2021 23:10:27 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/django_00_whatisdjango/</guid>
+    <description><![CDATA[​
+Web ?  월드 와이드 웹(World Wide Web)이란 인터넷에 연결된 사용자들이 서로의 정보를 공유할 수 있는 공간을 의미하며, 줄여서 WWW나 W3라고도 부르며, 간단히 웹(Web)이라고 가장 많이 불린다.
+인터넷과 같은 의미로 많이 사용되고 있지만, 정확히 말해 웹은 인터넷상의 인기 있는 하나의 서비스일 뿐.
+Web의 작동방식을 간단히 설명하자면, 요청과 응답.
+사용자는 서버에 어떠한 요구사항을 요청하고 서버는 이에 따라 처리결과를 응답한다.
+예를들어 사용자가 Login 버튼을 누른 행위는 user가 서버에 로그인 하고 싶다고 요청한 것이며, 서버는 로그인 창을 띄움으로서 user가 로그인할 수 있게 응답한 것입니다.]]></description>
+</item><item>
     <title>programmers_21.04.21</title>
     <link>https://colinder.github.io/pg_21.04.21/</link>
     <pubDate>Wed, 21 Apr 2021 23:42:17 &#43;0900</pubDate>
@@ -86,13 +98,5 @@ Python Library 😀   Idea 1 2 3 4 5 6 7 8 9 10 11 12 13  # 모두 &#39;거짓&#
     <description><![CDATA[​
 D4_3143_가장 빠른 문자열 타이핑 1 2 3 4 5 6 7  for T in range(int(input())): A, B = input().split() result = len(A) - (A.count(B)*(len(B)-1)) print(f&#39;#{T+1} {result}&#39;) # 왜 D4 인가.   ​
 D4_10966_물놀이를 가자 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31  from collections import deque dx = [0, 1, 0, -1] dy = [1, 0, -1, 0] for T in range(int(input())): N, M = map(int, input().]]></description>
-</item><item>
-    <title>BEAKJOON 15649, 15650</title>
-    <link>https://colinder.github.io/bj_21.02.09/</link>
-    <pubDate>Tue, 09 Feb 2021 17:59:18 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/bj_21.02.09/</guid>
-    <description><![CDATA[​
-15649_N과 M (1) 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22  N, M = map(int, input().split()) def DFS(count): if count == M: print(*arr) return for i in range(N): if visited[i] == True: continue visited[i] = True arr.append(num_list[i]) DFS(count+1) arr.pop() visited[i] = False num_list = [i + 1 for i in range(N)] visited = [False] * N arr = [] DFS(0)   ​]]></description>
 </item></channel>
 </rss>
