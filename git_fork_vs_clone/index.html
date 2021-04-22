@@ -9,7 +9,7 @@
 <meta property="og:description" content="​
 Fork  fork는 다른 사람(프로젝트)의 github repository에서 내가 어떤 부분을 수정하거나, 기능을 추가 하고 싶을 때 해당 repository를 그대로 복제하는 기능.
  fork한 저장소는 원본 repository와 연결되어 있습니다. 여기서 연결되어 있다는 의미는, 원본 repository에 어떤 변화가 생기면 이는 forked된 나의 repository에도 반영될 수 있다는 것입니다. (단, fetch나 rebase의 과정이 필요합니다. fetch나 rebase를 하지 않았다면, 단순히 원본 repository를 복사해서 가져온 상태라고 할 수 있습니다.)
-&lt; mermaid &gt; graph LR; A[원본 repository_Ver." />
+graph LR; A[원본 repository_Ver.1.0.0] &ndash;&gt;|fork| B[new repository_Ver." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://colinder.github.io/git_fork_vs_clone/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-10-11T21:26:25&#43;09:00" />
@@ -22,7 +22,7 @@ Fork  fork는 다른 사람(프로젝트)의 github repository에서 내가 어�
 <meta name="twitter:description" content="​
 Fork  fork는 다른 사람(프로젝트)의 github repository에서 내가 어떤 부분을 수정하거나, 기능을 추가 하고 싶을 때 해당 repository를 그대로 복제하는 기능.
  fork한 저장소는 원본 repository와 연결되어 있습니다. 여기서 연결되어 있다는 의미는, 원본 repository에 어떤 변화가 생기면 이는 forked된 나의 repository에도 반영될 수 있다는 것입니다. (단, fetch나 rebase의 과정이 필요합니다. fetch나 rebase를 하지 않았다면, 단순히 원본 repository를 복사해서 가져온 상태라고 할 수 있습니다.)
-&lt; mermaid &gt; graph LR; A[원본 repository_Ver."/>
+graph LR; A[원본 repository_Ver.1.0.0] &ndash;&gt;|fork| B[new repository_Ver."/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -35,7 +35,7 @@ Fork  fork는 다른 사람(프로젝트)의 github repository에서 내가 어�
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/git_fork_vs_clone\/"
-        },"genre": "posts","keywords": "git, fork, clone","wordcount":  561 ,
+        },"genre": "posts","keywords": "git, fork, clone","wordcount":  543 ,
         "url": "https:\/\/colinder.github.io\/git_fork_vs_clone\/","datePublished": "2020-10-11T21:26:25+09:00","dateModified": "2020-10-11T21:26:25+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -112,7 +112,7 @@ Fork  fork는 다른 사람(프로젝트)의 github repository에서 내가 어�
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Git_fork vs clone</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/git/"><i class="far fa-folder fa-fw"></i>git</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-10-11">2020-10-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;561 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-10-11">2020-10-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;543 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -126,20 +126,14 @@ Fork  fork는 다른 사람(프로젝트)의 github repository에서 내가 어�
 <p>fork는 다른 사람(프로젝트)의 github repository에서 내가 어떤 부분을 수정하거나, 기능을 추가 하고 싶을 때 해당 repository를 그대로 복제하는 기능.</p>
 </blockquote>
 <p>fork한 저장소는 원본 repository와 <span style='color:orange'><b>연결</b></span>되어 있습니다. 여기서 <span style='color:orange'>연결</span>되어 있다는 의미는, 원본 repository에 어떤 변화가 생기면 이는 forked된 나의 repository에도 반영될 수 있다는 것입니다. (단, <a href="https://git-scm.com/book/ko/v2/Git%EC%9D%98-%EA%B8%B0%EC%B4%88-%EB%A6%AC%EB%AA%A8%ED%8A%B8-%EC%A0%80%EC%9E%A5%EC%86%8C" target="_blank" rel="noopener noreffer">fetch</a>나 <a href="https://git-scm.com/book/ko/v2/Git-%EB%B8%8C%EB%9E%9C%EC%B9%98-Rebase-%ED%95%98%EA%B8%B0" target="_blank" rel="noopener noreffer">rebase</a>의 과정이 필요합니다. fetch나 rebase를 하지 않았다면, 단순히 원본 repository를 복사해서 가져온 상태라고 할 수 있습니다.)</p>
-<p>&lt; mermaid &gt;
-graph LR;
-A[원본 repository_Ver.1.0.0] &ndash;&gt;|fork| B[new repository_Ver.1.0.0]
-&lt; /mermaid &gt;</p>
+<p>graph LR;
+A[원본 repository_Ver.1.0.0] &ndash;&gt;|fork| B[new repository_Ver.1.0.0]</p>
 <hr>
-<p>&lt; mermaid &gt;
-graph LR;
-A[원본 repository에 변화 발생] &ndash;&gt; |fetch or rebase 실행|B(new repository에 변화 반영)
-&lt; /mermaid &gt;</p>
+<p>graph LR;
+A[원본 repository에 변화 발생] &ndash;&gt; |fetch or rebase 실행|B(new repository에 변화 반영)</p>
 <hr>
-<p>&lt; mermaid &gt;
-graph LR;
-A[원본 repository에 변화 발생] &ndash;&gt; |fetch or rebase 실행 X|B(new repository_Ver.1.0.0)
-&lt; /mermaid &gt;</p>
+<p>graph LR;
+A[원본 repository에 변화 발생] &ndash;&gt; |fetch or rebase 실행 X|B(new repository_Ver.1.0.0)</p>
 <ul>
 <li>fork는 보통 2가지 목적을 위해 사용합니다.
 <ol>

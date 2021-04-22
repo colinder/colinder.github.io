@@ -9,24 +9,20 @@
 
 fork한 저장소는 원본 repository와 <span style='color:orange'><b>연결</b></span>되어 있습니다. 여기서 <span style='color:orange'>연결</span>되어 있다는 의미는, 원본 repository에 어떤 변화가 생기면 이는 forked된 나의 repository에도 반영될 수 있다는 것입니다. (단, [fetch](https://git-scm.com/book/ko/v2/Git%EC%9D%98-%EA%B8%B0%EC%B4%88-%EB%A6%AC%EB%AA%A8%ED%8A%B8-%EC%A0%80%EC%9E%A5%EC%86%8C)나 [rebase](https://git-scm.com/book/ko/v2/Git-%EB%B8%8C%EB%9E%9C%EC%B9%98-Rebase-%ED%95%98%EA%B8%B0)의 과정이 필요합니다. fetch나 rebase를 하지 않았다면, 단순히 원본 repository를 복사해서 가져온 상태라고 할 수 있습니다.) 
 
-< mermaid >
+
 graph LR;
     A[원본 repository_Ver.1.0.0] -->|fork| B[new repository_Ver.1.0.0]
-< /mermaid >
 
 ---
 
-< mermaid >
 graph LR;
     A[원본 repository에 변화 발생] --> |fetch or rebase 실행|B(new repository에 변화 반영)
-< /mermaid >
 
 ---
 
-< mermaid >
 graph LR;
     A[원본 repository에 변화 발생] --> |fetch or rebase 실행 X|B(new repository_Ver.1.0.0)
-< /mermaid >
+
 
 - fork는 보통 2가지 목적을 위해 사용합니다.
   1. 오픈소스 기여를 위해
