@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>06_Vue_LifeCycle - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="06_Vue_LifeCycle" />
+<meta property="og:description" content="​
+Vue_LifeCycle  솔직히 처음 라이프사이클이란 것을 공부했을 때는 이게 무슨 말인지? 삶의 주기를 왜 알아야 하는지 전혀 몰랐습니다. 이런 저에게 Vue 공식문서에는 말했습니다.
+지금 당장 모든 것을 완전히 이해할 필요는 없지만 다이어그램은 앞으로 도움이 될 것입니다.
+ 그리고, LifeCycle을 공부 하기 전 DOM에 대한 개념이 부족하다면 what is DOM?을 꼭 보고 오길 추천합니다.
+​
+Vue.js의 라이프 사이클은 크게 Creation, Mounting, Updating, Destruction으로 나눌 수 있습니다. 이는 생성(create)되고, DOM에 부착(mount)되고, 업데이트(update)되며, 없어지는(destroy) 4가지 과정을 말합니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://colinder.github.io/06_vue_lifecycle/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-10-15T21:04:53&#43;09:00" />
+<meta property="article:modified_time" content="2020-10-15T21:04:53&#43;09:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
+
+<meta name="twitter:title" content="06_Vue_LifeCycle"/>
+<meta name="twitter:description" content="​
+Vue_LifeCycle  솔직히 처음 라이프사이클이란 것을 공부했을 때는 이게 무슨 말인지? 삶의 주기를 왜 알아야 하는지 전혀 몰랐습니다. 이런 저에게 Vue 공식문서에는 말했습니다.
+지금 당장 모든 것을 완전히 이해할 필요는 없지만 다이어그램은 앞으로 도움이 될 것입니다.
+ 그리고, LifeCycle을 공부 하기 전 DOM에 대한 개념이 부족하다면 what is DOM?을 꼭 보고 오길 추천합니다.
+​
+Vue.js의 라이프 사이클은 크게 Creation, Mounting, Updating, Destruction으로 나눌 수 있습니다. 이는 생성(create)되고, DOM에 부착(mount)되고, 업데이트(update)되며, 없어지는(destroy) 4가지 과정을 말합니다."/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/06_vue_lifecycle/" /><link rel="prev" href="https://colinder.github.io/what_is_dom/" /><link rel="next" href="https://colinder.github.io/what_is_cookie/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "06_Vue_LifeCycle",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/colinder.github.io\/06_vue_lifecycle\/"
+        },"genre": "posts","keywords": "Vue","wordcount":  702 ,
+        "url": "https:\/\/colinder.github.io\/06_vue_lifecycle\/","datePublished": "2020-10-15T21:04:53+09:00","dateModified": "2020-10-15T21:04:53+09:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "colinder"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="">Hello New World</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="">Hello New World</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">06_Vue_LifeCycle</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/vue/"><i class="far fa-folder fa-fw"></i>Vue</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-10-15">2020-10-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;702 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-creation-컴포넌트-초기화-단계">1. Creation (컴포넌트 초기화 단계)</a></li>
+    <li><a href="#beforecreate"><strong>beforeCreate()</strong></a></li>
+    <li><a href="#created">created()</a></li>
+    <li><a href="#2-mounting-dom-삽입-단계">2. Mounting (DOM 삽입 단계)</a></li>
+    <li><a href="#beforemount">beforeMount()</a></li>
+    <li><a href="#mount">mount()</a></li>
+    <li><a href="#3-updating-diff-및-재-렌더링-단계">3. Updating (Diff 및 재 렌더링 단계)</a></li>
+    <li><a href="#beforeupdate">beforeUpdate()</a></li>
+    <li><a href="#updated">updated()</a></li>
+    <li><a href="#4-destruction-해체-단계">4. Destruction (해체 단계)</a></li>
+    <li><a href="#beforedestroy">beforeDestroy()</a></li>
+    <li><a href="#destroyed">destroyed()</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#참고-했던-글">참고 했던 글.</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>​</p>
+<h1 id="vue_lifecycle">Vue_LifeCycle</h1>
+<blockquote>
+<p>솔직히 처음 <strong>라이프사이클</strong>이란 것을 공부했을 때는 이게 무슨 말인지? <strong>삶의 주기</strong>를 왜 알아야 하는지 전혀 몰랐습니다. 이런 저에게 <a href="https://kr.vuejs.org/v2/guide/instance.html#%EB%9D%BC%EC%9D%B4%ED%94%84%EC%82%AC%EC%9D%B4%ED%81%B4-%EB%8B%A4%EC%9D%B4%EC%96%B4%EA%B7%B8%EB%9E%A8]%28https://kr.vuejs.org/v2/guide/instance.html#%eb%9d%bc%ec%9d%b4%ed%94%84%ec%82%ac%ec%9d%b4%ed%81%b4-%eb%8b%a4%ec%9d%b4%ec%96%b4%ea%b7%b8%eb%9e%a8%29" target="_blank" rel="noopener noreffer">Vue 공식문서</a>에는 말했습니다.</p>
+<p><strong>지금 당장 모든 것을 완전히 이해할 필요는 없지만 다이어그램은 앞으로 도움이 될 것입니다.</strong></p>
+</blockquote>
+<p><em>그리고, LifeCycle을 공부 하기 전 DOM에 대한 개념이 부족하다면 <a href="https://colinder.github.io/what_is_dom/" target="_blank" rel="noopener noreffer">what is DOM?</a>을 꼭 보고 오길 추천합니다.</em></p>
+<p>​</p>
+<p>Vue.js의 라이프 사이클은 크게 <strong>Creation</strong>, <strong>Mounting</strong>, <strong>Updating</strong>, <strong>Destruction</strong>으로 나눌 수 있습니다. 이는 <strong>생성(create)되고</strong>, <strong>DOM에 부착(mount)되고</strong>, <strong>업데이트(update)되며</strong>, <strong>없어지는(destroy)</strong> 4가지 과정을 말합니다.</p>
+<p>각각의 단계에서, Vue를 사용하는 사람들을 위해 훅(Hook)을 할 수 있도록 API를 제공합니다. 일반적으로 많이 사용하는 종류로는 <code>beforeCreate</code>, <code>created</code>, <code>beforeMount</code>, <code>mounted</code>, <code>beforeUpdate</code>, <code>updated</code>, <code>beforeDestroy</code>, <code>destroyed</code>가 있습니다.</p>
+<image src="/images/Vue_LifeCycle_00.png" width="600px" style="display: block; margin: 30px auto;">
+<p>​</p>
+<h2 id="1-creation-컴포넌트-초기화-단계">1. Creation (컴포넌트 초기화 단계)</h2>
+<p>Creation 단계에서 실행되는 훅(hook)들이 라이프사이클 중에서 가장 처음 실행됩니다. 이 단계는 컴포넌트가 DOM에 추가되기 전이기 때문에 DOM에 접근하거나 this.$el를 사용할 수 없고, <strong>서버 사이드 렌더링(SSR)에서는 지원되는 훅입니다.</strong></p>
+<p>따라서 클라이언트 단과 서버단 렌더링, 모두에서 처리해야할 일이 있다면 이 단계에서 하면됩니다.</p>
+<p><em>Creation단계에서 호출되는 라이프 사이클 훅은 [beforeCreate]과 [created]가 있습니다.</em></p>
+<ul>
+<li>
+<h2 id="beforecreate"><strong>beforeCreate()</strong></h2>
+<p>이름처럼 가장 먼저 실행되는 <strong>beforeCreate</strong>훅입니다. Vue 인스턴스가 초기화 된 직후에 발생됩니다. 컴포넌트가 DOM에 추가되기도 전이어서 <code>this.$el</code>에 접근할 수 없습니다. 또한 <code>data</code>, <code>methods</code>, <code>watch</code>, <code>computed</code>, <code>events(vm.$on, vm.$once, vm.$off, vm.$emit)</code>등이 설정되기 전이라 접근할 수 없습니다.</p>
+</li>
+<li>
+<h2 id="created">created()</h2>
+<p><code>data</code>를 반응형으로 추적할 수 있게 되며 , <code>methods</code>, <code>watch</code>, <code>computed</code>, <code>events</code>등이 활성화되어 접근이 가능하게 됩니다. 하지만 아직까지 DOM에는 추가되지 않은 상태입니다. 하여 <code>this.$el</code>에는 접근할 수 없습니다. 컴포넌트 초기에 외부에서 받아온 값들로 <strong>data를 세팅</strong>해야 하거나 <strong>이벤트 리스너를 선언</strong>해야 한다면 이 단계에서 하는 것이 가장 적절합니다.</p>
+<p>​</p>
+</li>
+</ul>
+<hr>
+<h2 id="2-mounting-dom-삽입-단계">2. Mounting (DOM 삽입 단계)</h2>
+<p>Mounting단계는 초기 렌더링 직전에 컴포넌트에 직접 접근할 수 있습니다. (서버 사이드 렌더링(SSR)시에 호출되지 않습니다.)</p>
+<p>초기 랜더링 직전에 돔을 변경하고자 한다면 이 단계를 활용할 수 있습니다. 그러나 <strong>컴포넌트 초기에 세팅되어야할 데이터 fetch는 created() 단계에 주로 사용하게 될 겁니다!</strong></p>
+<p><em>Mounting단계에서 호출되는 라이프 사이클 훅은 [beforeMount]과 [mount]가 있습니다.</em></p>
+<p><em>*fetch: api를 불러오고, 정보를 내보내 주기도 하는 함수</em></p>
+<ul>
+<li>
+<h2 id="beforemount">beforeMount()</h2>
+<p>DOM에 부착하기 직전에 호출되는 <strong>beforeMount</strong>훅입니다. 가상 DOM은 생성되어 있으나 실제 DOM에 부착되지는 않은 상태입니다. 하여 아직도 <code>this.$el</code>에는 접근할 수 없습니다. (서버 사이드 렌더링(SSR)시에 호출되지 않습니다.)</p>
+</li>
+<li>
+<h2 id="mount">mount()</h2>
+<p>드디어! mounted 훅에서는 컴포넌트, 템플릿, 렌더링된 <strong><code>DOM에 접근할 수 있습니다.</code></strong> <strong><code>this.$el</code>을 비롯한 <code>data</code>, <code>computed</code>, <code>methods</code>, <code>watch</code> 등 모든 요소에 접근이 가능합니다.</strong> 하지만 모든 하위 컴포넌트가 마운트된 상태를 보장하지는 않습니다. (서버 사이드 렌더링(SSR)시에 호출되지 않습니다.)</p>
+<p>mount에는 약간의 이슈가 있습니다. 위의 설명에</p>
+<p>&ldquo;하지만 모든 하위 component가 mount된 상태를 보장하지는 않고&rdquo;  <strong>==</strong> 여러 component가 중첩되어 사용되는 경우 부모, 자식 component의 로딩에 순서가 있기 때문입니다.</p>
+<p><em>순서: 부모 created =&gt; 자식 created =&gt; 자식 mounted =&gt; 부모 mounted</em></p>
+<image src="/images/Vue_LifeCycle_01.png" width="400px" style="display: block; margin: 30px auto;">
+<p>*이때는 <code>this.$nextTick</code>을 이용한다면, 모든 화면이 렌더링 된 이후에 실행되므로 마운트 상태를 보장할 수 있습니다.</p>
+<p><image src="/images/Vue_LifeCycle_02.png" width="auto" ></p>
+<p>​</p>
+</li>
+</ul>
+<hr>
+<h2 id="3-updating-diff-및-재-렌더링-단계">3. Updating (Diff 및 재 렌더링 단계)</h2>
+<p>컴포넌트에서 사용되는 반응형 속성들이 변경되거나 어떤 이유로 재 렌더링이 발생되면 실행됩니다. 디버깅이나 프로파일링 등을 위해 <strong>컴포넌트 재 렌더링 시점을 알고 싶을때 사용하면 되죠.</strong> 조심스럽지만, 꽤 유용하게 활용될 수 있는 훅입니다. (서버 사이드 렌더링(SSR)시에 호출되지 않습니다.)</p>
+<p><em>Updating단계에서 호출되는 라이프 사이클 훅은 [beforeUpdate]과 [updated]가 있습니다.</em></p>
+<ul>
+<li>
+<h2 id="beforeupdate">beforeUpdate()</h2>
+<p>이 훅은 컴포넌트의 데이터가 변하여 업데이트 사이클이 시작될 때 실행됩니다. 정확히는 DOM이 재 렌더링되고 패치되기 직전에 실행됩니다. 컴포넌트 초기에 <code>data</code>가 세팅되어야 한다면 <code>created</code> 훅을, 렌더링 되고 DOM을 변경해야 한다면 <code>mounted</code> 훅을 사용하면 되기 때문에, 거의 사용하지 않는 라이프 사이클 훅입니다.</p>
+</li>
+<li>
+<h2 id="updated">updated()</h2>
+<p>이 훅은 <strong>DOM이 재 렌더링 된 후 호출</strong>되는 라이프 사이클 훅입니다. DOM이 업데이트 완료된 상태이므로 DOM의 종속적인 연산을 할 수 있습니다.</p>
+<p>예를 들어 변경된 <code>data</code>가 DOM에도 적용된 후에 호출되는 훅입니다. (<code>updated</code>훅에서 <code>data</code>를 수정하게 되면 <code>update</code>훅이 호출 되기 때문에 무한 루프에 빠질 수 있으니 되도록이면 안쓰는 것이 좋습니다&hellip;) 또 위의 mounted와 비슷한 이유로 모든 자식 컴포넌트의 재 렌더링 상태를 보장하지는 않으며, <code>this.$nextTick()</code>을 이용해, 모든 화면이 업데이트 된 이후의 상태를 보장할 수 있습니다.</p>
+<p>​</p>
+</li>
+</ul>
+<hr>
+<h2 id="4-destruction-해체-단계">4. Destruction (해체 단계)</h2>
+<p>컴포넌트가 제거 될 때 실행되는 라이프 사이클 훅입니다. (서버 사이드 렌더링(SSR)시에도 호출되지 않습니다.)</p>
+<p><em>Destruction단계에서 호출되는 라이프 사이클 훅은 [beforeDestroy]과 [destroyed]가 있습니다.</em></p>
+<ul>
+<li>
+<h2 id="beforedestroy">beforeDestroy()</h2>
+<p>컴포넌트가 제거 되기 직전에 호출되는 라이프 사이클 훅입니다. 이 훅에서 컴포넌트는 본래의 기능들을 가지고 있는 온전한 상태이기 때문에 모든 속성에 접근이 가능합니다. 하여 이 훅에서 이벤트 리스너를 해제하거나 컴포넌트에서 동작으로 할당 받은 자원들은 해제해야 할 때 사용하기 적합한 훅입니다.</p>
+</li>
+<li>
+<h2 id="destroyed">destroyed()</h2>
+<p>컴포넌트가 제거 된 후 호출되는 라이프 사이클 훅입니다. 컴포넌트의 모든 이벤트 리스너(<code>@click</code>, <code>@change</code> 등..)와 디렉티브(<code>v-model</code>, <code>v-show</code> 등..)의 바인딩이 해제 되고, 하위 컴포넌트도 모두 제거됩니다.</p>
+<p>​</p>
+<p>​</p>
+</li>
+</ul>
+<h1 id="요약">👀요약</h1>
+<blockquote>
+<p>LifeCycle을 모르고 개발한다는게 <strong>운 좋으면 되고 운 나쁘면 안되고, 하는 막무가내 개발</strong>과 비슷하다고 느꼈습니다. 간단하게라도 흐름을 숙지하면 많은 도움이 될 것이고, 아무리 바쁘더라도 created와 mouted 정도는 알고 개발하면 확실히 도움이 됩니다.</p>
+</blockquote>
+<p>​</p>
+<p>​</p>
+<hr>
+<h2 id="참고-했던-글">참고 했던 글.</h2>
+<ul>
+<li><a href="https://vuejs.org/v2/api/#Options-Lifecycle-Hooks">https://vuejs.org/v2/api/#Options-Lifecycle-Hooks</a></li>
+<li><a href="https://beomy.tistory.com/47">https://beomy.tistory.com/47</a></li>
+<li><a href="https://medium.com/witinweb/vue-js-%EB%9D%BC%EC%9D%B4%ED%94%84%EC%82%AC%EC%9D%B4%ED%81%B4-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-7780cdd97dd4">https://medium.com/witinweb/vue-js-%EB%9D%BC%EC%9D%B4%ED%94%84%EC%82%AC%EC%9D%B4%ED%81%B4-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-7780cdd97dd4</a></li>
+<li><a href="https://wormwlrm.github.io/2018/12/29/Understanding-Vue-Lifecycle-hooks.html">https://wormwlrm.github.io/2018/12/29/Understanding-Vue-Lifecycle-hooks.html</a></li>
+<li><a href="https://junsday.tistory.com/44">https://junsday.tistory.com/44</a></li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2020-10-15</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/06_vue_lifecycle/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/vue/">Vue</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/what_is_dom/" class="prev" rel="prev" title="what is DOM?"><i class="fas fa-angle-left fa-fw"></i>what is DOM?</a>
+            <a href="/what_is_cookie/" class="next" rel="next" title="what is Cookie?">what is Cookie?<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.82.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
