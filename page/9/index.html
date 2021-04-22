@@ -102,6 +102,13 @@
         alt="/images/jg_02.jpg"
         title="/images/jg_02.jpg" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/colinder" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="mailto:kjonggwan@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/bj_20.12.18/">BEAKJOON 10872, 10870, 2447, 11729</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-12-18">2020-12-18</time></span>&nbsp;<span class="post-category">included in <a href="/categories/beakjoon/"><i class="far fa-folder fa-fw"></i>BEAKJOON</a></span></div><div class="content">​
+10872_팩토리얼 1 2 3 4 5 6 7 8 9 10 11  import sys N = int(sys.stdin.readline().rstrip()) def fac(n): if n &gt; 1: return n * fac(n-1) else: return 1 print(fac(N))   ​
+10870_피보나치 수 5 1 2 3 4 5 6 7 8 9 10 11  import sys def fivo(n): if n &gt;= 2: return fivo(n-1) + fivo(n-2) else: return n N = int(sys.stdin.readline().rstrip()) print(fivo(N))   ​</div><div class="post-footer">
+        <a href="/bj_20.12.18/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/algorithm/">algorithm</a>,&nbsp;<a href="/tags/%EC%9E%AC%EA%B7%80/">재귀</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/bj_20.12.17/">BEAKJOON 4948, 9020, 3053, 1002</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-12-17">2020-12-17</time></span>&nbsp;<span class="post-category">included in <a href="/categories/beakjoon/"><i class="far fa-folder fa-fw"></i>BEAKJOON</a></span></div><div class="content">​
 4948_베르트랑 공준 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20  import sys while True: N = int(sys.stdin.readline().rstrip()) if N == 0: break arr = [0,0] + [1] * ((2*N)-1) rootN = int((2*N)**0.5) for i in range(2, rootN+1): if arr[i] == 1: for j in range(2*i, 2*N+1, i): arr[j] = 0 print(sum(arr[N+1:(2*N)+1])) # 입출력에 제한이 있다가 0을 입력 받을 때 까지 # 출력을 해야 하는 조건을 달지 않는 것을 주의!</div><div class="post-footer">
@@ -120,16 +127,6 @@
 2941_크로아티아 알파벳 1 2 3 4 5 6 7 8 9 10  import sys cro = [&#34;c=&#34;, &#34;c-&#34;, &#34;dz=&#34;, &#34;d-&#34;, &#34;lj&#34;, &#34;nj&#34;, &#34;s=&#34;, &#34;z=&#34;] s = sys.</div><div class="post-footer">
         <a href="/bj_20.12.15/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/algorithm/">algorithm</a>,&nbsp;<a href="/tags/%EB%AC%B8%EC%9E%90%EC%97%B4/">문자열</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/processvsthread/">Process VS Thread</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-12-01">2020-12-01</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computer-science/"><i class="far fa-folder fa-fw"></i>Computer Science</a></span></div><div class="content">​
-Process VS Thread  면접 질문에서 가장 많이 들어본 이야기라고 친구들이 이야기 해줬습니다. 근데 전 아직 자신있게 설명할 정도로 알지 못하기에 알아봅시다!
- ​
-​
-프로그램(Program)란 무엇인지 우선 알아봅시다. 소프트웨어의 한가지로, 어떤 문제를 해결하기 위하여 그 처리 방법과 순서(a.k.a ALGORITHM)를 기술하여 컴퓨터에 주어지는 일련의 명령문 집합체를 뜻합니다. 쉽게 말해, “어떤 작업을 위해 실행할 수 있는 파일”을 뜻합니다. 그리고 그 프로그램을 실행 시키는 주체를 인스턴스라고도 표현합니다.
-예들 들어, Excel.exe, kakaotalk.exe 등과 같이 어떤 작업을 위해 실행할 수 있는 (설치 등)파일을 생각해 볼 수 있습니다.</div><div class="post-footer">
-        <a href="/processvsthread/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/cs/">CS</a>,&nbsp;<a href="/tags/process/">Process</a>,&nbsp;<a href="/tags/thread/">Thread</a>,&nbsp;<a href="/tags/computer-science/">computer science</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -160,7 +157,7 @@ Process VS Thread  면접 질문에서 가장 많이 들어본 이야기라고 �
                     <span class="page-link" aria-hidden="true">&hellip;</span>
                 </li><li class="page-item ">
                     <span class="page-link">
-                        <a href="/page/18/">18</a>
+                        <a href="/page/19/">19</a>
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">
