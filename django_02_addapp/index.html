@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Django_02_app - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="Django_02_app" />
+<meta property="og:description" content="​
+Django_app  이번에는 생성된 프로젝트에서 1. app을 추가해 등록해보고 2. 서버 접속시 첫 메인 페이지를 등록해봅시다.
+ ​
+뜬금없이 CRUD를 알아보고 갑시다.  CRUD는 대부분의 컴퓨터 소프트웨어가 가지는 기본적인 데이터 처리 기능인 Create(생성), Read(읽기), Update(갱신), Delete(삭제)를 묶어서 일컫는 말입니다. 사용자 인터페이스가 갖추어야 할 기능(정보의 참조/검색/갱신 등) 중 가장 기본이라고 생각되는 기술들입니다.
+ ​
+이제 이어서 개발해봅시다. ​
+1. App 생성 지난번에는 프로젝트를 생성하고 setting.py에서 기본 설정만 변경해주었습니다. 이제 app을 생성해봅시다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://colinder.github.io/django_02_addapp/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-04-18T22:04:11&#43;09:00" />
+<meta property="article:modified_time" content="2021-04-18T22:04:11&#43;09:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
+
+<meta name="twitter:title" content="Django_02_app"/>
+<meta name="twitter:description" content="​
+Django_app  이번에는 생성된 프로젝트에서 1. app을 추가해 등록해보고 2. 서버 접속시 첫 메인 페이지를 등록해봅시다.
+ ​
+뜬금없이 CRUD를 알아보고 갑시다.  CRUD는 대부분의 컴퓨터 소프트웨어가 가지는 기본적인 데이터 처리 기능인 Create(생성), Read(읽기), Update(갱신), Delete(삭제)를 묶어서 일컫는 말입니다. 사용자 인터페이스가 갖추어야 할 기능(정보의 참조/검색/갱신 등) 중 가장 기본이라고 생각되는 기술들입니다.
+ ​
+이제 이어서 개발해봅시다. ​
+1. App 생성 지난번에는 프로젝트를 생성하고 setting.py에서 기본 설정만 변경해주었습니다. 이제 app을 생성해봅시다."/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/django_02_addapp/" /><link rel="prev" href="https://colinder.github.io/django_01_startproject/" /><link rel="next" href="https://colinder.github.io/django_03_overriding/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Django_02_app",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/colinder.github.io\/django_02_addapp\/"
+        },"genre": "posts","keywords": "Django","wordcount":  593 ,
+        "url": "https:\/\/colinder.github.io\/django_02_addapp\/","datePublished": "2021-04-18T22:04:11+09:00","dateModified": "2021-04-18T22:04:11+09:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "colinder"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="">Hello New World</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="">Hello New World</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Django_02_app</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw"></i>Django</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-04-18">2021-04-18</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;593 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#뜬금없이-crud를-알아보고-갑시다">뜬금없이 CRUD를 알아보고 갑시다.</a>
+      <ul>
+        <li><a href="#이제-이어서-개발해봅시다">이제 이어서 개발해봅시다.</a></li>
+        <li><a href="#1-app-생성">1. App 생성</a></li>
+        <li><a href="#2-생성한-app을-프로젝트-폴더blog에-등록합니다">2. 생성한 app을 프로젝트 폴더(blog)에 등록합니다.</a></li>
+        <li><a href="#3-urlspy-등록">3. urls.py 등록</a></li>
+        <li><a href="#3-articlesviewspy-세팅">3. articles/views.py 세팅</a></li>
+        <li><a href="#4-articlestemplatesarticlesmainhtml-생성">4. articles/templates/articles/main.html 생성</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#더-알아보기">더 알아보기</a></li>
+    <li><a href="#참고-했던-글">참고 했던 글</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>​</p>
+<h1 id="django_app">Django_app</h1>
+<blockquote>
+<p>이번에는 생성된 프로젝트에서 1. app을 추가해 등록해보고 2. 서버 접속시 첫 메인 페이지를 등록해봅시다.</p>
+</blockquote>
+<p>​</p>
+<h2 id="뜬금없이-crud를-알아보고-갑시다">뜬금없이 CRUD를 알아보고 갑시다.</h2>
+<blockquote>
+<p><strong>CRUD</strong>는 대부분의 컴퓨터 소프트웨어가 가지는 기본적인 데이터 처리 기능인 Create(생성), Read(읽기), Update(갱신), Delete(삭제)를 묶어서 일컫는 말입니다. 사용자 인터페이스가 갖추어야 할 기능(정보의 참조/검색/갱신 등) 중 가장 기본이라고 생각되는 기술들입니다.</p>
+</blockquote>
+<p>​</p>
+<h3 id="이제-이어서-개발해봅시다">이제 이어서 개발해봅시다.</h3>
+<p>​</p>
+<h3 id="1-app-생성">1. App 생성</h3>
+<p>지난번에는 프로젝트를 생성하고 setting.py에서 기본 설정만 변경해주었습니다. 이제 app을 생성해봅시다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1">## DJ폴더 안에서 django-admin startproject blog / django-admin startproject blog . 두가지 중</span>
+<span class="c1">## 후자로 프로젝트를 생성하고 진행하겠습니다. 그러면 폴더 구조가 아래와 같습니다.</span>
+<span class="c1"># DJ</span>
+<span class="c1">#	blog</span>
+<span class="c1">#	manage.py</span>
+
+<span class="o">&gt;</span> <span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">startapp</span> <span class="n">articles</span>	<span class="c1"># articles라는 app을 manage.py라는 python파일로 만들겠다.</span>
+
+<span class="c1"># 입력 후 폴더 구조</span>
+<span class="c1"># DJ</span>
+<span class="c1">#	blog</span>
+<span class="c1">#	manage.py</span>
+<span class="c1">#	articles	👈👈</span>
+
+<span class="err">✨</span><span class="n">Point</span>
+<span class="mf">1.</span> <span class="err">명령어는</span> <span class="n">manage</span><span class="o">.</span><span class="n">py가</span> <span class="err">있는</span> <span class="n">root폴더안에서</span> <span class="err">입력해야</span> <span class="err">합니다</span><span class="o">.</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<h3 id="2-생성한-app을-프로젝트-폴더blog에-등록합니다">2. 생성한 app을 프로젝트 폴더(blog)에 등록합니다.</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1">## blog/setting.py</span>
+
+<span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;django.contrib.admin&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.auth&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.contenttypes&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.sessions&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.messages&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.staticfiles&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;articles&#39;</span><span class="p">,</span>		<span class="c1">#👈👈</span>
+<span class="p">]</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>잠시 django의 개발 패턴을 보면</p>
+<image src="/images/django_02_03.png" width="1000px">
+<p>url로 요청을 접수한다는 것을 알 수 있습니다. urls.py로 들어오는 요청을 접수해봅시다.</p>
+<p>​</p>
+<h3 id="3-urlspy-등록">3. urls.py 등록</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1">## blog/urls.py</span>
+
+<span class="s2">&#34;&#34;&#34;blog URL Configuration
+</span><span class="s2">
+</span><span class="s2">The `urlpatterns` list routes URLs to views. For more information please see:
+</span><span class="s2">    https://docs.djangoproject.com/en/3.2/topics/http/urls/
+</span><span class="s2">Examples:
+</span><span class="s2">Function views
+</span><span class="s2">    1. Add an import:  from my_app import views
+</span><span class="s2">    2. Add a URL to urlpatterns:  path(&#39;&#39;, views.home, name=&#39;home&#39;)
+</span><span class="s2">Class-based views
+</span><span class="s2">    1. Add an import:  from other_app.views import Home
+</span><span class="s2">    2. Add a URL to urlpatterns:  path(&#39;&#39;, Home.as_view(), name=&#39;home&#39;)
+</span><span class="s2">Including another URLconf
+</span><span class="s2">    1. Import the include() function: from django.urls import include, path
+</span><span class="s2">    2. Add a URL to urlpatterns:  path(&#39;blog/&#39;, include(&#39;blog.urls&#39;))
+</span><span class="s2">&#34;&#34;&#34;</span>
+<span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
+<span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span><span class="p">,</span> <span class="n">include</span>
+
+<span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;admin/&#39;</span><span class="p">,</span> <span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">urls</span><span class="p">),</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s1">&#39;articles.urls&#39;</span><span class="p">)),</span>		<span class="c1">#👈👈도메인 &#39;&#39;로 접속시 articles.urls로 요청을 보낸다.</span>
+<span class="p">]</span>
+
+
+	
+<span class="err">✨</span><span class="n">Point</span> 
+<span class="mf">1.</span> <span class="err">상단에</span> <span class="err">주석처리되어있는</span> <span class="err">내용을</span> <span class="err">읽어보며</span><span class="p">,</span> <span class="err">어떻게</span> <span class="n">url설정을</span> <span class="err">하는지</span> <span class="err">파악하는</span> <span class="err">것이</span> <span class="err">중요합니다</span><span class="o">.</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>이어서 articles 폴더에 urls.py 파일을 만들고 url을 만들어 줍시다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1">## articles/urls.py 생성</span>
+
+<span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">views</span>			<span class="c1">#👈👈 articles 폴더에 있는 views.py폴더 사용할 수 있게 등록.</span>
+
+<span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">main</span><span class="p">),</span>	<span class="c1">#👈👈도메인 &#39;&#39;로 접속시 views에 있는 main함수를 동작한다.</span>
+<span class="p">]</span>
+
+
+<span class="err">✨</span><span class="n">Point</span>
+<span class="mf">1.</span> <span class="n">blog</span><span class="o">/</span><span class="n">urls</span> <span class="err">→</span> <span class="n">articles</span><span class="o">/</span><span class="n">urls</span> <span class="err">→</span> <span class="n">articles</span><span class="o">/</span><span class="n">views</span> <span class="err">로</span> <span class="err">요청을</span> <span class="err">전달하는</span> <span class="err">과정을</span> <span class="err">이해하는</span> <span class="err">것이</span> <span class="err">중요합니다</span><span class="o">.</span> 
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<p>​</p>
+<p>이제는 views를 설정합니다.</p>
+<image src="/images/django_02_05.png" width="1000px">
+<h3 id="3-articlesviewspy-세팅">3. articles/views.py 세팅</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1">## articles/views.py</span>
+
+<span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span>
+
+<span class="c1"># Create your views here.</span>
+<span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;articles/main.html&#39;</span><span class="p">)</span>	<span class="c1">#👈👈 main함수는 render함수를 사용해 인자로 받은 request를 articles/main.html에 담아 사용자에게 보여준다.</span>
+
+
+
+<span class="c1"># 아직 articles/main.html파일이 없습니다. 이제 우리가 사용자에게 응답할 페이지를 만들어야 합니다.</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<p>​</p>
+<p>이제 마지막 templates를 설정합니다.</p>
+<image src="/images/django_02_06.png" width="1000px">
+<h3 id="4-articlestemplatesarticlesmainhtml-생성">4. articles/templates/articles/main.html 생성</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1">## articles/templates/articles/main.html 생성</span>
+
+<span class="c1"># !+tab 하면 html 기본 프레임이 나옵니다.</span>
+
+<span class="o">&lt;</span><span class="err">!</span><span class="n">DOCTYPE</span> <span class="n">html</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">html</span> <span class="n">lang</span><span class="o">=</span><span class="s2">&#34;en&#34;</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">meta</span> <span class="n">charset</span><span class="o">=</span><span class="s2">&#34;UTF-8&#34;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">meta</span> <span class="n">http</span><span class="o">-</span><span class="n">equiv</span><span class="o">=</span><span class="s2">&#34;X-UA-Compatible&#34;</span> <span class="n">content</span><span class="o">=</span><span class="s2">&#34;IE=edge&#34;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">meta</span> <span class="n">name</span><span class="o">=</span><span class="s2">&#34;viewport&#34;</span> <span class="n">content</span><span class="o">=</span><span class="s2">&#34;width=device-width, initial-scale=1.0&#34;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span><span class="n">Document</span><span class="o">&lt;/</span><span class="n">title</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">body</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">main</span> <span class="err">페이지</span> <span class="err">입니다</span><span class="o">.&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>		<span class="c1">#👈👈</span>
+<span class="o">&lt;/</span><span class="n">body</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">html</span><span class="o">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<p>​</p>
+<p><em>완성된 화면은 아래와 같습니다.</em></p>
+<image src="/images/django_02_02.png" width="1000px" style="border: 1px solid">
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<h1 id="요약">👀요약</h1>
+<blockquote>
+<p>폴더 구조를 이해하면서 진행합시다!</p>
+</blockquote>
+<p>​</p>
+<h2 id="더-알아보기">더 알아보기</h2>
+<p>1️⃣ <em>urls.py를 통해 요청을 전달할때 왜? include를 사용했을까요? <a href="https://docs.djangoproject.com/ko/3.2/intro/tutorial01/" target="_blank" rel="noopener noreffer">django공식문서</a>에는 아래와 같이 설명합니다.</em></p>
+<image src="/images/django_02_00.png" width="1000px">
+<p>​</p>
+<p>2️⃣ <em>왜 templates를 만드는데 articles폴더를 안에 하나 더 만들까요?</em></p>
+<p>∴ 이는 <strong>1. templates 상속시 오류를 없게 하기 위함</strong>과 <strong>2. 대규모 프로젝트의 경우 하나의 app안에 다양한 templates 구성이 있는 경우 관리의 편리성</strong> 때문입니다.</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<h2 id="참고-했던-글">참고 했던 글</h2>
+<ul>
+<li><a href="https://senticoding.tistory.com/77">https://senticoding.tistory.com/77</a></li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2021-04-18</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/django_02_addapp/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/django/">Django</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/django_01_startproject/" class="prev" rel="prev" title="Django_01_start"><i class="fas fa-angle-left fa-fw"></i>Django_01_start</a>
+            <a href="/django_03_overriding/" class="next" rel="next" title="Django_03_overriding templates">Django_03_overriding templates<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.82.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
