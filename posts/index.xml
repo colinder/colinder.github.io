@@ -13,55 +13,6 @@
 타겟 넘버 1 2 3 4 5 6 7 8 9 10 11 12  numbers = [1, 1, 1, 1, 1] target = 3 # return = 5 from itertools import product l = [(-number, number)for number in numbers] s = list(map(sum, product(*l))) print(s.count(target)) ## 미쳤다. product()..   ​
 K번째 수 1 2 3 4 5 6 7 8 9 10 11 12 13 14  array = [1, 5, 2, 6, 3, 7, 4]	commands = [[2, 5, 3], [4, 4, 1], [1, 7, 3]] def solution(array, commands): answer = [] for _ in commands: i, j, k = _ q = array[i-1: j] q.]]></description>
 </item><item>
-    <title>Django_04_form</title>
-    <link>https://colinder.github.io/django_04_form/</link>
-    <pubDate>Tue, 20 Apr 2021 09:04:47 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/django_04_form/</guid>
-    <description><![CDATA[​
-Django_form  이제 여러 html파일을 만들어 여러 화면을 돌아다닐 수 있게 되었습니다. 그렇다면 A화면에서 입력한 정보를 B화면으로 가져가고 싶다면 어떻게 해야 할까요? __form__테그를 사용하면 됩니다.
- ​
-👨‍💻 개발해봅시다. 기존에 만들었던 main.html을 활용해 만들어 보겠습니다.
-1. form 태그 생성 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19  &lt;!-- articles/templates/articles/main.html --&gt; &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;IE=edge&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.]]></description>
-</item><item>
-    <title>Django_03_overriding templates</title>
-    <link>https://colinder.github.io/django_03_overriding/</link>
-    <pubDate>Mon, 19 Apr 2021 23:27:30 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/django_03_overriding/</guid>
-    <description><![CDATA[​
-Django Overriding Templates  웹개발을 하다보면 재활용되어야 하는 부분. 즉, 변경되지 않아야 하는 부분과, 변해야 하는 부분이 있습니다. (대표적으로 navbar) 그리고 이런 개발의 편의성을 위해 Django는 Overriding 이라는 기술을 제공합니다.
- ​
-지난 &ldquo;app&quot;에 이어 진행
-변경되지 않아야 하는 부분은 **그림의 &lsquo;배경&rsquo;**이고, 변해야 하는 부분은 **그림의 &lsquo;디테일 요소&rsquo;**라고 생각하면 이해가 쉽습니다. / 그럼 변경되지 않아야 하는 부분을 먼저 제작해봅시다.
-1. 변경 하지 않을 부분 == 배경 제작 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  &lt;!]]></description>
-</item><item>
-    <title>Django_02_app</title>
-    <link>https://colinder.github.io/django_02_addapp/</link>
-    <pubDate>Sun, 18 Apr 2021 22:04:11 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/django_02_addapp/</guid>
-    <description><![CDATA[​
-Django_app  이번에는 생성된 프로젝트에서 1. app을 추가해 등록해보고 2. 서버 접속시 첫 메인 페이지를 등록해봅시다.
- ​
-뜬금없이 CRUD를 알아보고 갑시다.  CRUD는 대부분의 컴퓨터 소프트웨어가 가지는 기본적인 데이터 처리 기능인 Create(생성), Read(읽기), Update(갱신), Delete(삭제)를 묶어서 일컫는 말입니다. 사용자 인터페이스가 갖추어야 할 기능(정보의 참조/검색/갱신 등) 중 가장 기본이라고 생각되는 기술들입니다.
- ​
-이제 이어서 개발해봅시다. ​
-1. App 생성 지난번에는 프로젝트를 생성하고 setting.py에서 기본 설정만 변경해주었습니다. 이제 app을 생성해봅시다.]]></description>
-</item><item>
-    <title>Django_01_start</title>
-    <link>https://colinder.github.io/django_01_startproject/</link>
-    <pubDate>Sun, 18 Apr 2021 19:52:40 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/django_01_startproject/</guid>
-    <description><![CDATA[​
-Django 개발환경준비   편리함을 추구하기 위해 AWS Cloud9을 사용하여 진행
-  https://ide.cs50.io/ 주소로 접속하면 진행이 가능하며, 진행을 위해선 Git 아이디가 있어야 한다.
-Git? : 버전 관리 시스템이며 Git은 소프트웨어를 개발하는 기업의 핵심 자산인 소스코드를 효과적으로 관리할 수 있게 해주는 무료, 공개소프트웨어. git에 대한 내용은 따로 정리해보도록 한다.
-  로그인까지 마치면 이제 Django 개발 준비 끝.
-​
-   👏 21.04.18 기준 django : 3.2 V 으로 다시 정리 합니다.]]></description>
-</item><item>
     <title>SW Expert Academy_D4 11316</title>
     <link>https://colinder.github.io/sw_21.04.04/</link>
     <pubDate>Sun, 04 Apr 2021 14:56:09 &#43;0900</pubDate>
@@ -110,5 +61,38 @@ Python Library 😀   Idea 1 2 3 4 5 6 7 8 9 10 11 12 13  # 모두 &#39;거짓&#
     <guid>https://colinder.github.io/bj_21.03.02/</guid>
     <description><![CDATA[​
 2630_색종이 만들기 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34  import sys def DFS(x, y, N): global W, B color = arr[x][y] for cx in range(x, x+N): for cy in range(y, y+N): if arr[cx][cy] != color: DFS(x, y, N//2) DFS(x, N//2+y, N//2) DFS(N//2+x, y, N//2) DFS(N//2+x, N//2+y, N//2) return	# 이걸 안해주면 쓸모 없는 DFS에 더 들어가게 된다.]]></description>
+</item><item>
+    <title>BEAKJOON 5052, 9372</title>
+    <link>https://colinder.github.io/bj_21.02.25/</link>
+    <pubDate>Thu, 25 Feb 2021 20:42:26 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/bj_21.02.25/</guid>
+    <description><![CDATA[​
+5052_전화번호 목록 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22  import sys for T in range(int(sys.stdin.readline().rstrip())): N = int(sys.stdin.readline().rstrip()) Numbers = [] for _ in range(N): Numbers.append(sys.stdin.readline().rstrip()) Numbers.sort() result = &#34;YES&#34; for i in range(len(Numbers)-1): if Numbers[i+1].find(Numbers[i], 0, len(Numbers[i])) != -1: result = &#39;NO&#39; break print(result) # 흠.. 다른 사람들은 트리로 풀었나..? # 이게 왜 트리에 있지.]]></description>
+</item><item>
+    <title>BEAKJOON 1991, 11725, 1967, 1167</title>
+    <link>https://colinder.github.io/bj_21.02.18/</link>
+    <pubDate>Thu, 18 Feb 2021 21:24:02 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/bj_21.02.18/</guid>
+    <description><![CDATA[​
+1991_트리 순회 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44  class Node: def __init__(self, data, L, R): self.data = data self.left = L self.right = R def preorder(node): # 전위 순회 print(node.data, end=&#34;&#34;) if node.]]></description>
+</item><item>
+    <title>SW Expert Academy_D4 3143, 10966, 11592, 11545</title>
+    <link>https://colinder.github.io/sw_21.02.16/</link>
+    <pubDate>Tue, 16 Feb 2021 23:33:17 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/sw_21.02.16/</guid>
+    <description><![CDATA[​
+D4_3143_가장 빠른 문자열 타이핑 1 2 3 4 5 6 7  for T in range(int(input())): A, B = input().split() result = len(A) - (A.count(B)*(len(B)-1)) print(f&#39;#{T+1} {result}&#39;) # 왜 D4 인가.   ​
+D4_10966_물놀이를 가자 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31  from collections import deque dx = [0, 1, 0, -1] dy = [1, 0, -1, 0] for T in range(int(input())): N, M = map(int, input().]]></description>
+</item><item>
+    <title>BEAKJOON 15649, 15650</title>
+    <link>https://colinder.github.io/bj_21.02.09/</link>
+    <pubDate>Tue, 09 Feb 2021 17:59:18 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/bj_21.02.09/</guid>
+    <description><![CDATA[​
+15649_N과 M (1) 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22  N, M = map(int, input().split()) def DFS(count): if count == M: print(*arr) return for i in range(N): if visited[i] == True: continue visited[i] = True arr.append(num_list[i]) DFS(count+1) arr.pop() visited[i] = False num_list = [i + 1 for i in range(N)] visited = [False] * N arr = [] DFS(0)   ​]]></description>
 </item></channel>
 </rss>
