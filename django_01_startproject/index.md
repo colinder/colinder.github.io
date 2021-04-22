@@ -97,9 +97,7 @@
 
   <image src="/images/django_01_00.png" width="1000px">
 
-  ​	
-
-  2️⃣ *'python manage.py migrate'를 진행하라는 말 같은데 해당 내용은 나중에 'model'이라는 것을 설정할 때 자세히 보겠습니다. django의 공식문서 역시 지금 단계에서는 아래와 같이 안내합니다.*
+  *'python manage.py migrate'를 진행하라는 말 같은데 해당 내용은 나중에 'model'이라는 것을 설정할 때 자세히 보겠습니다. django의 공식문서 역시 지금 단계에서는 아래와 같이 안내합니다.*
 
   <image src="/images/django_01_01.png" width="1000px">
 
