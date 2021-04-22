@@ -81,7 +81,7 @@
 
   1. Terminal창에 vue create myproject 명령어 입력 후
 
-     < image src="/images/image-20200713230725043.png" caption=" " width="500px">
+     <image src="/images/image-20200713230725043.png" caption=" " width="500px">
 
      이와 같은 창이 뜨는데 `default`로 설정하고 enter하고, 프로젝트를 시작한다.
 
@@ -89,7 +89,7 @@
 
   2. 프로젝트 생성이 완료되면 `(router 미설치)`
 
-     < image src="/images/image-20200713232004608.png" caption=" " width="200px">
+     <image src="/images/image-20200713232004608.png" caption=" " width="200px">
 
      이와 같은 폴더 구조를 확인할 수 있다.
 
@@ -97,7 +97,7 @@
 
   3. vue add router를 한다면. 두번의 묻는데 전부 y 로 처리`(router와 history mode 설정을 묻는 것)`
 
-     < image src="/images/image-20200713231411715.png" caption=" " width="200px">
+     <image src="/images/image-20200713231411715.png" caption=" " width="200px">
 
 
 
@@ -120,7 +120,7 @@
 
 ### 2.  vue add router 필요한가?
 
-< image src="/images/image-20200731224139667.png" caption=" " width="800px">
+<image src="/images/image-20200731224139667.png" caption=" " width="800px">
 
 라우팅은 URI에 따라 해당하는 정적파일을 보여주는 방식. 이를 브라우저에서 구현 하는것이 **SPA** 개발의 핵심
 
@@ -132,7 +132,7 @@
 
 ### 3.  vue add router 후 History Mode 설정은 왜 필요한가?
 
-< image src="/images/image-20200731224303419.png" caption=" " width="800px">
+<image src="/images/image-20200731224303419.png" caption=" " width="800px">
 
 > vue add router를 설치하게 되면 `해쉬백 모드`와 `히스토리 모드` 중 디폴트로 `해쉬백 모드가 적용`된다.
 >
