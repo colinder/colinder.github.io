@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>02_SQLD_제2 절 엔터티 &amp; 제3 절 속성 - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="02_SQLD_제2 절 엔터티 &amp; 제3 절 속성" />
+<meta property="og:description" content="​
+# SQL  제1 장 데이터 모델링의 이해  제2 절 엔터티(Entity)   엔터티의 개념
+  실체, 객체 / 실무적으론는 앤터티라고 부른다. 즉 업무에 필요하고 유용한 정보를 저장하고 관리하기 위한 집합적인 것
+​
+    엔터티와 인스턴스에 대한 내용과 표기법
+​	  엔터티의 특징
+  반드시 해당 업무에서 필요하고 관리하고자 하는 정보여야 한다.
+  유일한 식별자에 의해 식별이 가능해야 한다.
+  영속적으로 존재하는 인스턴스의 집합이어야 한다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://colinder.github.io/02_sqld_%EC%A0%9C2-%EC%A0%88-%EC%97%94%ED%84%B0%ED%8B%B0-%EC%A0%9C3-%EC%A0%88-%EC%86%8D%EC%84%B1/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-03-25T19:25:43&#43;09:00" />
+<meta property="article:modified_time" content="2021-03-25T19:25:43&#43;09:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
+
+<meta name="twitter:title" content="02_SQLD_제2 절 엔터티 &amp; 제3 절 속성"/>
+<meta name="twitter:description" content="​
+# SQL  제1 장 데이터 모델링의 이해  제2 절 엔터티(Entity)   엔터티의 개념
+  실체, 객체 / 실무적으론는 앤터티라고 부른다. 즉 업무에 필요하고 유용한 정보를 저장하고 관리하기 위한 집합적인 것
+​
+    엔터티와 인스턴스에 대한 내용과 표기법
+​	  엔터티의 특징
+  반드시 해당 업무에서 필요하고 관리하고자 하는 정보여야 한다.
+  유일한 식별자에 의해 식별이 가능해야 한다.
+  영속적으로 존재하는 인스턴스의 집합이어야 한다."/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/02_sqld_%EC%A0%9C2-%EC%A0%88-%EC%97%94%ED%84%B0%ED%8B%B0-%EC%A0%9C3-%EC%A0%88-%EC%86%8D%EC%84%B1/" /><link rel="prev" href="https://colinder.github.io/sw_21.03.24/" /><link rel="next" href="https://colinder.github.io/git_lfslarge-file-storage/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "02_SQLD_제2 절 엔터티 \u0026 제3 절 속성",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/colinder.github.io\/02_sqld_%EC%A0%9C2-%EC%A0%88-%EC%97%94%ED%84%B0%ED%8B%B0-%EC%A0%9C3-%EC%A0%88-%EC%86%8D%EC%84%B1\/"
+        },"genre": "posts","keywords": "SQLD","wordcount":  426 ,
+        "url": "https:\/\/colinder.github.io\/02_sqld_%EC%A0%9C2-%EC%A0%88-%EC%97%94%ED%84%B0%ED%8B%B0-%EC%A0%9C3-%EC%A0%88-%EC%86%8D%EC%84%B1\/","datePublished": "2021-03-25T19:25:43+09:00","dateModified": "2021-03-25T19:25:43+09:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "colinder"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="">Hello New World</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="">Hello New World</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">02_SQLD_제2 절 엔터티 &amp; 제3 절 속성</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/sqld/"><i class="far fa-folder fa-fw"></i>SQLD</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-03-25">2021-03-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;426 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#제2-절-엔터티entity">제2 절 엔터티(Entity)</a></li>
+    <li><a href="#제3-절-속성attribute">제3 절 속성(Attribute)</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>​</p>
+<h1 id="-sql"># SQL</h1>
+<hr>
+<h1 id="제1-장-데이터-모델링의-이해">제1 장 데이터 모델링의 이해</h1>
+<hr>
+<h2 id="제2-절-엔터티entity">제2 절 엔터티(Entity)</h2>
+<ol>
+<li>
+<p>엔터티의 개념</p>
+<ul>
+<li>
+<p>실체, 객체 / 실무적으론는 앤터티라고 부른다. 즉 업무에 필요하고 유용한 정보를 저장하고 관리하기 위한 집합적인 것</p>
+<p>​</p>
+</li>
+</ul>
+</li>
+<li>
+<p>엔터티와 인스턴스에 대한 내용과 표기법</p>
+<p>​	<image src="/images/SQLD_01.jpg" width="1000px"></p>
+</li>
+<li>
+<p>엔터티의 특징</p>
+<ul>
+<li>
+<p><strong>반드시 해당 업무에서 필요하고 관리하고자 하는 정보</strong>여야 한다.</p>
+</li>
+<li>
+<p><strong>유일한 식별자</strong>에 의해 식별이 가능해야 한다.</p>
+</li>
+<li>
+<p>영속적으로 존재하는 인스턴스의 집합이어야 한다. <strong>(반드시 &lsquo;두 개 이상&rsquo;)</strong></p>
+</li>
+<li>
+<p>엔터티는 업무에 이용되어야 한다.</p>
+</li>
+<li>
+<p>엔터티는 <strong>반드시 &lsquo;두 개 이상&rsquo;의 속성</strong>을 갖는다.</p>
+</li>
+<li>
+<p>엔터티는 <strong>다른 엔터티와 최소 한 개 이상의 관계가 있어야</strong> 한다.</p>
+<p>​</p>
+</li>
+</ul>
+</li>
+<li>
+<p>엔터티의 분류</p>
+<ol>
+<li>
+<p>우뮤형에 따른 분류 - 유형, 개념, 사건엔터티</p>
+</li>
+<li>
+<p>발생시점에 따른 분류 - 기본(키), 중심, 행위엔터</p>
+</li>
+<li>
+<p>스스로 생성할 수 있는지에 따라 - 독립, 의존 엔터티</p>
+<p>​</p>
+</li>
+</ol>
+</li>
+<li>
+<p>엔터티의 명명</p>
+<ul>
+<li>현업 업무에서 사용하는 용어를 사용</li>
+<li>약어를 가능하면 사용하지 않는다.</li>
+<li><strong>단수 명사</strong>를 사용</li>
+<li>모든 엔티티명은 유일해야 함</li>
+<li>엔티티 생성 의미대로 이름을 부여</li>
+</ul>
+</li>
+</ol>
+<p>​</p>
+<hr>
+<h2 id="제3-절-속성attribute">제3 절 속성(Attribute)</h2>
+<ol>
+<li>
+<p>속성의 개념</p>
+<ul>
+<li>
+<p><strong>업무에서 필요로 하는 인스턴스</strong>로 <strong>관리하고자 하는 의미상</strong> 더 이상 <strong>분리되지 않는 최소의 데이터</strong></p>
+<p>즉, 속성이란 의미상 더 이상 분리되지 않으며, 엔터티를 설명하는 요소이며, 인스턴스의 구성요소이다.</p>
+<image src="/images/SQLD_01.jpg" width="900px" caption="다시 한 번 보자">
+</li>
+</ul>
+</li>
+<li>
+<p>엔터티, 인스턴스, 속성, 속성값</p>
+<ul>
+<li>
+<p><strong><span style="color: red">엔터티, 인스턴스, 속성, 속성값의 관계</span></strong></p>
+<ul>
+<li><strong>한 개의 엔터티</strong>는 <strong><span style="color:red">두 개 이상</span>의 인스턴스 집합</strong>이어야 한다.</li>
+<li><strong>한 개의 엔터티</strong>는 <strong><span style="color:red">두 개 이상</span>의 속성</strong>을 갖는다.</li>
+<li><strong>한 개의 속성</strong>은 <strong>한 개의 속성값</strong>을 갖는다.</li>
+</ul>
+</li>
+<li>
+<p>속성의 표기법</p>
+<ol>
+<li>
+<p>IE 표기법</p>
+</li>
+<li>
+<p>Barker 표기법</p>
+<p>​</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p>속성의 특징</p>
+<ol>
+<li>
+<p>반드시 해당 업무에서 필요하고 관리하고자 하는 정보여야 한다.</p>
+</li>
+<li>
+<p>정규화 이론에 근간하여 정해진 주식별자에 <strong>함수 종속성</strong>을 가져야 한다.</p>
+</li>
+<li>
+<p><strong>한 개의 속성</strong>은 <strong>한 개의 속성값</strong>을 갖는다. 만약 <strong>한 개의 속성</strong>에 <strong>여러 속성값</strong>을 갖는 다중 값일 경우 별도의 엔터티로 분리하여 관리한다.</p>
+<p>​</p>
+</li>
+</ol>
+</li>
+<li>
+<p>속성의 분류</p>
+<ul>
+<li>
+<p><strong>속성의 특성에 따른 분류</strong></p>
+<ol>
+<li>
+<p>기본속성</p>
+<ul>
+<li>업무로부터 추출한 모든 속성</li>
+</ul>
+</li>
+<li>
+<p>설계속성</p>
+<ul>
+<li>기본속성 외에 새롭게 만들거나 변형하여 정의한 속성</li>
+</ul>
+</li>
+<li>
+<p>파생속성</p>
+<ul>
+<li>타 속성에 의해 지속적으로 영향을 받아 값이 변하는 성질을 가지고 있는 속성
+<ul>
+<li><span style="font-size:.9em">파생속성은 그 속성이 가지고 있는 계산방법에 대해 반드시 어떤 엔터티에 어떤 속성에 의해 영향을 받는지 정의가 되어야 한다.</span></li>
+<li><span style="font-size:.9em">파생속성은 꼭 필요한 경우에만 정의하여 업무로직이 속성내부로 스며들지 못하도록 주의해야 한다.</span></li>
+<li><span style="font-size:.9em">파생속성을 정의한 경우라면 그 값의 정합성을 유지할 수 있도록 해야 한다.</span></li>
+<li><span style="font-size:.9em">주로 통계관련 엔터티, 배치작업 수행 관련에 사용된다.</span></li>
+</ul>
+</li>
+</ul>
+<p>​</p>
+</li>
+</ol>
+</li>
+<li>
+<p>엔터티 구성방식에 따른 분류</p>
+<ul>
+<li>
+<p>PK(Prime Key) == 엔터티를 식별할 수 있는 <strong>고유한</strong> 속성</p>
+</li>
+<li>
+<p>FK(Foreign Key) == 다른 엔터티와의 관계로, <strong>연결된</strong> 속성</p>
+</li>
+<li>
+<p>일반 속성 == 엔터티에 포함되어 있고, PK, FK가 아닌 속성</p>
+</li>
+<li>
+<p>추가로 의미를 쪼갤 수 있는지에 따라 단순형, 복합형으로 분류할 수 있다.</p>
+</li>
+<li>
+<p>한 속성에 한 개의 값 → 단일값(Single Value)</p>
+</li>
+<li>
+<p>한 속성에 여러 개의 값 → 다중값(Multi Value)</p>
+<p>​</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>도메인(Domain)</p>
+<ul>
+<li>
+<p>각 속성이 가질 수 있는 값의 범위 <span style="font-size:.9em">(일종의 테이터 타입, 크기, 제약사항등을 지정하는 것)</span></p>
+<p><span style="color:grey; font-size:.8em">ex) &lsquo;&lsquo;학점'&lsquo;이라는 &lsquo;&lsquo;도메인'&lsquo;은 0 &lt;= X &lt;= 4.5 </span></p>
+<p>​</p>
+</li>
+</ul>
+</li>
+<li>
+<p>속성의 명명(Naming)</p>
+<ol>
+<li>가급적 현업에서 사용하는 이름을 부여한다.</li>
+<li>서술식 속성명은 사용하지 않는다.</li>
+<li>약어사용은 자제한다.</li>
+<li>전체 데이터모델에서 유일성을 확보하는 것이 좋다.</li>
+</ol>
+</li>
+</ol>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2021-03-25</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/02_sqld_%EC%A0%9C2-%EC%A0%88-%EC%97%94%ED%84%B0%ED%8B%B0-%EC%A0%9C3-%EC%A0%88-%EC%86%8D%EC%84%B1/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/sqld/">SQLD</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/sw_21.03.24/" class="prev" rel="prev" title="SW Expert Academy_D3 11445, 11387, 11285, 11315"><i class="fas fa-angle-left fa-fw"></i>SW Expert Academy_D3 11445, 11387, 11285, 11315</a>
+            <a href="/git_lfslarge-file-storage/" class="next" rel="next" title="Git_LFS">Git_LFS<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.82.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
