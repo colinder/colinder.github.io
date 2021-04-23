@@ -133,6 +133,8 @@ def overriding(request):									# 👈
 
 ​	
 
+​	
+
 # 👀요약
 
 > 프로젝트를 진행하다 보면, 생각보다 <span style="color:red">변하지 않아야 하는 부분</span>과, <span style="color:blue">변해야 하는 부분</span>의 고려가 간단하진 않습니다. 하지만, **templates의 재사용성을 높이는 방식**으로 개발하는 것이 편리한 경우가 많이 있으니, 잘 알아보고 기획해서 사용하면 좋습니다.
