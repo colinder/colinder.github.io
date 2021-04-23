@@ -3,9 +3,21 @@
         <title></title>
         <link>https://colinder.github.io/</link>
         <description>Hello New World</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 22 Apr 2021 23:17:41 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 23 Apr 2021 20:27:30 &#43;0900</lastBuildDate>
             <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Django_03_overriding templates</title>
+    <link>https://colinder.github.io/django_03_overridingtemplates/</link>
+    <pubDate>Fri, 23 Apr 2021 20:27:30 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/django_03_overridingtemplates/</guid>
+    <description><![CDATA[​
+Django Overriding Templates  웹개발을 하다보면 재활용되어야 하는 부분. 즉, 변경되지 않아야 하는 부분과, 변해야 하는 부분이 있습니다. (대표적으로 navbar) 그리고 이런 개발의 편의성을 위해 Django는 Overriding 이라는 기술을 제공합니다.
+ ​
+지난 &ldquo;app&quot;에 이어 진행
+변경되지 않아야 하는 부분은 **그림의 &lsquo;배경&rsquo;**이고, 변해야 하는 부분은 **그림의 &lsquo;디테일 요소&rsquo;**라고 생각하면 이해가 쉽습니다. / 그럼 변경되지 않아야 하는 부분을 먼저 제작해봅시다.
+1. 변경 하지 않을 부분 == 배경 제작 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  &lt;!]]></description>
+</item><item>
     <title>Django_02_addapp</title>
     <link>https://colinder.github.io/django_02_addapp/</link>
     <pubDate>Thu, 22 Apr 2021 23:17:41 &#43;0900</pubDate>
@@ -115,14 +127,5 @@ LFS는 별도로 설치하여 사용하면 되며, 방법을 정리한다.
   반드시 해당 업무에서 필요하고 관리하고자 하는 정보여야 한다.
   유일한 식별자에 의해 식별이 가능해야 한다.
   영속적으로 존재하는 인스턴스의 집합이어야 한다.]]></description>
-</item><item>
-    <title>SW Expert Academy_D3 11445, 11387, 11285, 11315</title>
-    <link>https://colinder.github.io/sw_21.03.24/</link>
-    <pubDate>Wed, 24 Mar 2021 18:34:58 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/sw_21.03.24/</guid>
-    <description><![CDATA[​
-D3_11445_무한 사전 1 2 3 4 5 6 7 8 9 10 11 12  for T in range(int(input())): P = input().rstrip() Q = input().rstrip() if P + &#34;a&#34; != Q: result = &#34;Y&#34; else: result = &#34;N&#34; print(f&#39;#{T+1} {result}&#39;) # 왜 D3 인가.   ​
-D3_11387_몬스터 사냥 1 2 3 4 5 6 7 8  for T in range(int(input())): D, L, N = map(int, input().split()) result = 0 for i in range(N): result += D * (1 + L*i/100) print(f&#39;#{T+1} {int(result)}&#39;)   ​]]></description>
 </item></channel>
 </rss>

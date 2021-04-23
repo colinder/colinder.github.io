@@ -3,7 +3,19 @@
         <title>Django - Category - </title>
         <link>https://colinder.github.io/categories/django/</link>
         <description>Django - Category - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 22 Apr 2021 23:17:41 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/django/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 23 Apr 2021 20:27:30 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/django/" rel="self" type="application/rss+xml" /><item>
+    <title>Django_03_overriding templates</title>
+    <link>https://colinder.github.io/django_03_overridingtemplates/</link>
+    <pubDate>Fri, 23 Apr 2021 20:27:30 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/django_03_overridingtemplates/</guid>
+    <description><![CDATA[​
+Django Overriding Templates  웹개발을 하다보면 재활용되어야 하는 부분. 즉, 변경되지 않아야 하는 부분과, 변해야 하는 부분이 있습니다. (대표적으로 navbar) 그리고 이런 개발의 편의성을 위해 Django는 Overriding 이라는 기술을 제공합니다.
+ ​
+지난 &ldquo;app&quot;에 이어 진행
+변경되지 않아야 하는 부분은 **그림의 &lsquo;배경&rsquo;**이고, 변해야 하는 부분은 **그림의 &lsquo;디테일 요소&rsquo;**라고 생각하면 이해가 쉽습니다. / 그럼 변경되지 않아야 하는 부분을 먼저 제작해봅시다.
+1. 변경 하지 않을 부분 == 배경 제작 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  &lt;!]]></description>
+</item><item>
     <title>Django_02_addapp</title>
     <link>https://colinder.github.io/django_02_addapp/</link>
     <pubDate>Thu, 22 Apr 2021 23:17:41 &#43;0900</pubDate>
