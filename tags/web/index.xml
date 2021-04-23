@@ -40,6 +40,41 @@ Interpreter VS Compiler_Language  web 개발을 하다보면 javascript를 공�
 뜬금없이 프로그래밍 언어란 무엇인지 우선 알아봅시다. 컴퓨터는 이진수만 이해할 수 있습니다. 즉 컴퓨터는 우리가 사용하는 언어가 아닌 &lsquo;0&rsquo;, &lsquo;1&rsquo;만 이해합니다.
 근데 이게 프로그래밍 언어랑 무슨 상관일까요? 상관이 아주 많습니다&hellip;ㅎ.. 프로그래밍 언어로 프로그램을 만들고 실행 할 때 우리는 &lsquo;0&rsquo;, &lsquo;1&rsquo; 같은 명령어로 코딩을 하지 않습니다.]]></description>
 </item><item>
+    <title>React-Native_google login</title>
+    <link>https://colinder.github.io/react-native_googlelogin/</link>
+    <pubDate>Thu, 29 Oct 2020 23:13:25 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/react-native_googlelogin/</guid>
+    <description><![CDATA[​
+React-Native google login  서비스를 개발하다보면 로그인 기능이 새삼 대단해보입니다. 신경쓸 것도 많고, 하지만 이런 수고를 sns로그인 기능으로 대신한다면 편의성이 많이 높아집니다. 하여 해보겠습니다.
+ *google login을 하기 위해 firebase(모바일 및 웹 애플리케이션 개발 플랫폼)을 사용합니다.
+  개발환경
+  npm으로 진행
+  react-native_cli (✨expo로 진행하지 않습니다.)
+  android 기준
+  함수형 컴포넌트로 진행 (✨ 클래스 컴포넌트로 진행하지 않습니다.)
+  RN 버전 0.60이상에서 진행]]></description>
+</item><item>
+    <title>React-Native_navigation</title>
+    <link>https://colinder.github.io/react-native_navigation/</link>
+    <pubDate>Thu, 29 Oct 2020 21:24:52 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/react-native_navigation/</guid>
+    <description><![CDATA[​
+React-Native navigation  vue는 router를 사용해 화면을 이동합니다. 그렇다면, react-native는 어떻게 화면을 이동할까요?
+바로 react-native navigation을 사용합니다. 어떻게 사용하는건지 기록합시다.
+ 공식홈페이지의 Getting started로 알아봅시다.
+​
+*새로운 프로젝트를 만들고 root폴더에서 진행.
+  개발환경
+  npm으로 진행
+  react-native_cli (✨expo로 진행하지 않습니다.)
+  android 기준
+  함수형 컴포넌트로 진행 (✨ 클래스 컴포넌트로 진행하지 않습니다.)
+  RN 버전 0.60이상에서 진행
+  react-native-cli: 2.0.1
+  react-native: 0.]]></description>
+</item><item>
     <title>what is Cookie?</title>
     <link>https://colinder.github.io/what_is_cookie/</link>
     <pubDate>Mon, 19 Oct 2020 14:59:01 &#43;0900</pubDate>
@@ -102,20 +137,5 @@ AJAX  세상에는 다양한 web서버가 있다.
     <description><![CDATA[​
 REST API Reference [TOC]
 1.사용자 API    Members Descriptions     POST /accounts/signup 회원가입   POST /accounts/login 회원 로그인   POST /accounts/userDetail 회원정보   PUT /accounts/update 회원정보 수정   DELETE /accounts/dropUser 회원탈퇴   GET /accounts/emailAuth 이메일 인증   GET /accounts/emailCheck 이메일 중복 확인   GET /accounts/nicknameCheck 닉네임 중복 확인    1.1 회원 로그인 POST /accounts/login ​	회원 로그인 API 입니다.]]></description>
-</item><item>
-    <title>Naming Convention</title>
-    <link>https://colinder.github.io/namingconvention/</link>
-    <pubDate>Sun, 02 Aug 2020 22:24:45 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/namingconvention/</guid>
-    <description><![CDATA[​
-Naming Convention  정해진 규정은 없으나, 많은 개발자들이 암묵적으로 지키고 있는 이름짓는 방법.
- ​
-  snake_case 🐍
-1 2 3  # _ == snake some_var = 5 my_awesome = 3   ​
-  camelCase 🐪
-1 2 3  # 낙타등이 솟아 있는 모습 someVar = 5 pyAwesome = 3   ​
-  UpperCamelCase 🐪🐪
-1 2 3  # 낙타얼굴과 등이 중간에 솟아 있는 모습 (파스칼식(Pascal case)이라고도 불린다.]]></description>
 </item></channel>
 </rss>
