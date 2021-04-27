@@ -3,9 +3,21 @@
         <title></title>
         <link>https://colinder.github.io/</link>
         <description>Hello New World</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 23 Apr 2021 20:04:47 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 27 Apr 2021 20:27:30 &#43;0900</lastBuildDate>
             <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Django_03_overriding templates</title>
+    <link>https://colinder.github.io/django_03_overridingtemplates/</link>
+    <pubDate>Tue, 27 Apr 2021 20:27:30 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/django_03_overridingtemplates/</guid>
+    <description><![CDATA[​
+Django Overriding Templates  웹개발을 하다보면 재활용되어야 하는 부분. 즉, 변경되지 않아야 하는 부분과, 변해야 하는 부분이 있습니다. (대표적으로 navbar) 그리고 이런 개발의 편의성을 위해 Django는 Overriding 이라는 기술을 제공합니다.
+ ​
+지난 &ldquo;app&quot;에 이어 진행
+변경되지 않아야 하는 부분은 **그림의 &lsquo;배경&rsquo;**이고, 변해야 하는 부분은 **그림의 &lsquo;디테일 요소&rsquo;**라고 생각하면 이해가 쉽습니다. / 그럼 변경되지 않아야 하는 부분을 먼저 제작해봅시다.
+1. 변경 하지 않을 부분 == 배경 제작 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  &lt;!]]></description>
+</item><item>
     <title>Django_04_form</title>
     <link>https://colinder.github.io/django_04_form/</link>
     <pubDate>Fri, 23 Apr 2021 20:04:47 &#43;0900</pubDate>
@@ -111,20 +123,5 @@ LFS는 별도로 설치하여 사용하면 되며, 방법을 정리한다.
 ​
   git LFS를 적용할 폴더로 이동해 다음 명령어를 입력합니다.
 1  $ git lfs install   ​]]></description>
-</item><item>
-    <title>02_SQLD_제2 절 엔터티 &amp; 제3 절 속성</title>
-    <link>https://colinder.github.io/02_sqld_%EC%A0%9C2-%EC%A0%88-%EC%97%94%ED%84%B0%ED%8B%B0-%EC%A0%9C3-%EC%A0%88-%EC%86%8D%EC%84%B1/</link>
-    <pubDate>Thu, 25 Mar 2021 19:25:43 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/02_sqld_%EC%A0%9C2-%EC%A0%88-%EC%97%94%ED%84%B0%ED%8B%B0-%EC%A0%9C3-%EC%A0%88-%EC%86%8D%EC%84%B1/</guid>
-    <description><![CDATA[​
-# SQL  제1 장 데이터 모델링의 이해  제2 절 엔터티(Entity)   엔터티의 개념
-  실체, 객체 / 실무적으론는 앤터티라고 부른다. 즉 업무에 필요하고 유용한 정보를 저장하고 관리하기 위한 집합적인 것
-​
-    엔터티와 인스턴스에 대한 내용과 표기법
-​	  엔터티의 특징
-  반드시 해당 업무에서 필요하고 관리하고자 하는 정보여야 한다.
-  유일한 식별자에 의해 식별이 가능해야 한다.
-  영속적으로 존재하는 인스턴스의 집합이어야 한다.]]></description>
 </item></channel>
 </rss>

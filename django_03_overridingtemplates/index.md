@@ -17,9 +17,7 @@ _지난 "app"에 이어 진행_
 
 ```html
 <!-- blog/templates/base.html 생성 -->
-<!-- hugo bulid시 error가 발생하여 주석처리한 소스코드로 기재 -->
 
-<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +32,6 @@ _지난 "app"에 이어 진행_
     {% endblock %}						👈 body 종료 위치
 </body>
 </html>
--->
 ```
 
 ​	
@@ -76,7 +73,6 @@ TEMPLATES = [
 ```html
 <!-- articles/templates/articles/overriding.html 생성 -->
 
-<!--
 {% extends 'base.html' %}		👈 setting.py에서 등록한 templates인 base.html을 불러오겠다. 
 
 {% block body %}				👈 base.html의 body 시작위치 
@@ -84,7 +80,6 @@ TEMPLATES = [
     <h1>Overriding 페이지입니다.</h1>
 </div>
 {% endblock %}					👈 base.html의 body 종료위치
--->
 ```
 
 _templates설정이 완료되었으니 이제 url을 연결해주어야 합니다._
