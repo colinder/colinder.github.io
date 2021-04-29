@@ -43,6 +43,6 @@
 
 # JQuery의 문법
 
-<image src="/images/JQuery_00.jpg" width="1000px">
+<image src="/images/JQuery_00.png" width="1000px">
 
 

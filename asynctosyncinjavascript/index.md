@@ -133,8 +133,8 @@ _*동기, 비동기 설명은 [이전 포스팅](https://colinder.github.io/sync
 
   {{< mermaid >}}
   graph LR;
-      A [ pending 대기상태 ] -->|성공| D[fulfilled 성공상태]
-      A [ pending 대기상태 ] -->|실패| E[rejected 실패상태]
+      A[pending 대기상태] -->|성공| B[fulfilled 성공상태]
+      A[pending 대기상태] -->|실패| C[rejected 실패상태]
   {{< /mermaid >}}
 
 
