@@ -10,7 +10,7 @@
 Django Overriding Templates  웹개발을 하다보면 재활용되어야 하는 부분. 즉, 변경되지 않아야 하는 부분과, 변해야 하는 부분이 있습니다. (대표적으로 navbar) 그리고 이런 개발의 편의성을 위해 Django는 Overriding 이라는 기술을 제공합니다.
  ​
 지난 &ldquo;app&quot;에 이어 진행
-변경되지 않아야 하는 부분은 **그림의 &lsquo;배경&rsquo;**이고, 변해야 하는 부분은 **그림의 &lsquo;디테일 요소&rsquo;**라고 생각하면 이해가 쉽습니다. / 그럼 변경되지 않아야 하는 부분을 먼저 제작해봅시다.
+변경되지 않아야 하는 부분은 그림의 &lsquo;배경&rsquo;이고, 변해야 하는 부분은 그림의 &lsquo;디테일 요소&rsquo;라고 생각하면 이해가 쉽습니다. / 그럼 변경되지 않아야 하는 부분을 먼저 제작해봅시다.
 1. 변경 하지 않을 부분 == 배경 제작 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  &lt;!" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://colinder.github.io/django_03_overridingtemplates/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
@@ -25,7 +25,7 @@ Django Overriding Templates  웹개발을 하다보면 재활용되어야 하는
 Django Overriding Templates  웹개발을 하다보면 재활용되어야 하는 부분. 즉, 변경되지 않아야 하는 부분과, 변해야 하는 부분이 있습니다. (대표적으로 navbar) 그리고 이런 개발의 편의성을 위해 Django는 Overriding 이라는 기술을 제공합니다.
  ​
 지난 &ldquo;app&quot;에 이어 진행
-변경되지 않아야 하는 부분은 **그림의 &lsquo;배경&rsquo;**이고, 변해야 하는 부분은 **그림의 &lsquo;디테일 요소&rsquo;**라고 생각하면 이해가 쉽습니다. / 그럼 변경되지 않아야 하는 부분을 먼저 제작해봅시다.
+변경되지 않아야 하는 부분은 그림의 &lsquo;배경&rsquo;이고, 변해야 하는 부분은 그림의 &lsquo;디테일 요소&rsquo;라고 생각하면 이해가 쉽습니다. / 그럼 변경되지 않아야 하는 부분을 먼저 제작해봅시다.
 1. 변경 하지 않을 부분 == 배경 제작 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  &lt;!"/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
@@ -39,7 +39,7 @@ Django Overriding Templates  웹개발을 하다보면 재활용되어야 하는
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/django_03_overridingtemplates\/"
-        },"genre": "posts","keywords": "Django","wordcount":  398 ,
+        },"genre": "posts","keywords": "Django","wordcount":  396 ,
         "url": "https:\/\/colinder.github.io\/django_03_overridingtemplates\/","datePublished": "2021-04-27T20:27:30+09:00","dateModified": "2021-04-27T20:27:30+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -116,7 +116,7 @@ Django Overriding Templates  웹개발을 하다보면 재활용되어야 하는
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Django_03_overriding templates</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw"></i>Django</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-04-27">2021-04-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;398 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-04-27">2021-04-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;396 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -143,7 +143,7 @@ Django Overriding Templates  웹개발을 하다보면 재활용되어야 하는
 </blockquote>
 <p>​</p>
 <p><em>지난 &ldquo;app&quot;에 이어 진행</em></p>
-<p><span style="color:red">변경되지 않아야 하는 부분</span>은 **그림의 &lsquo;배경&rsquo;**이고, <span style="color:blue">변해야 하는 부분</span>은 **그림의 &lsquo;디테일 요소&rsquo;**라고 생각하면 이해가 쉽습니다. / 그럼 <span style="color:red">변경되지 않아야 하는 부분</span>을 먼저 제작해봅시다.</p>
+<p><span style="color:red">변경되지 않아야 하는 부분</span>은 <b>그림의 &lsquo;배경&rsquo;</b>이고, <span style="color:blue">변해야 하는 부분</span>은 <b>그림의 &lsquo;디테일 요소&rsquo;</b>라고 생각하면 이해가 쉽습니다. / 그럼 <span style="color:red">변경되지 않아야 하는 부분</span>을 먼저 제작해봅시다.</p>
 <h3 id="1-변경-하지-않을-부분--배경-제작">1. 변경 하지 않을 부분 == 배경 제작</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -165,7 +165,7 @@ Django Overriding Templates  웹개발을 하다보면 재활용되어야 하는
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- blog/templates/base.html 생성 --&gt;</span>
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- /templates/base.html 생성 --&gt;</span>
 
 <span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
@@ -223,7 +223,7 @@ Django Overriding Templates  웹개발을 하다보면 재활용되어야 하는
 <span class="n">TEMPLATES</span> <span class="o">=</span> <span class="p">[</span>
     <span class="p">{</span>
         <span class="s1">&#39;BACKEND&#39;</span><span class="p">:</span> <span class="s1">&#39;django.template.backends.django.DjangoTemplates&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;DIRS&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">BASE_DIR</span> <span class="o">/</span> <span class="s1">&#39;blog&#39;</span> <span class="o">/</span> <span class="s1">&#39;templates&#39;</span><span class="p">],</span>		<span class="c1"># 👈👈  &#39;/&#39;로 구분합니다.</span>
+        <span class="s1">&#39;DIRS&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">BASE_DIR</span> <span class="o">/</span> <span class="s1">&#39;templates&#39;</span><span class="p">],</span>		<span class="c1"># 👈👈  &#39;/&#39;로 구분합니다.</span>
         <span class="s1">&#39;APP_DIRS&#39;</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
         <span class="s1">&#39;OPTIONS&#39;</span><span class="p">:</span> <span class="p">{</span>
             <span class="s1">&#39;context_processors&#39;</span><span class="p">:</span> <span class="p">[</span>

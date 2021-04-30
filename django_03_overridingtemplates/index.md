@@ -11,12 +11,12 @@
 
 _지난 "app"에 이어 진행_
 
-<span style="color:red">변경되지 않아야 하는 부분</span>은 **그림의 '배경'**이고, <span style="color:blue">변해야 하는 부분</span>은 **그림의 '디테일 요소'**라고 생각하면 이해가 쉽습니다. / 그럼 <span style="color:red">변경되지 않아야 하는 부분</span>을 먼저 제작해봅시다.
+<span style="color:red">변경되지 않아야 하는 부분</span>은 <b>그림의 '배경'</b>이고, <span style="color:blue">변해야 하는 부분</span>은 <b>그림의 '디테일 요소'</b>라고 생각하면 이해가 쉽습니다. / 그럼 <span style="color:red">변경되지 않아야 하는 부분</span>을 먼저 제작해봅시다.
 
 ### 1. 변경 하지 않을 부분 == 배경 제작
 
 ```html
-<!-- blog/templates/base.html 생성 -->
+<!-- /templates/base.html 생성 -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -48,7 +48,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'blog' / 'templates'],		# 👈👈  '/'로 구분합니다.
+        'DIRS': [BASE_DIR / 'templates'],		# 👈👈  '/'로 구분합니다.
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
