@@ -22,7 +22,7 @@ Django Overriding Templates  웹개발을 하다보면 재활용되어야 하는
     <author>Author</author>
     <guid>https://colinder.github.io/django_04_form/</guid>
     <description><![CDATA[​
-Django_form  이제 여러 html파일을 만들어 여러 화면을 돌아다닐 수 있게 되었습니다. 그렇다면 A화면에서 입력한 정보를 B화면으로 가져가고 싶다면 어떻게 해야 할까요? __form__테그를 사용하면 됩니다.
+Django_form  이제 여러 html파일을 만들어 여러 화면을 돌아다닐 수 있게 되었습니다. 그렇다면 A화면에서 입력한 정보를 B화면으로 가져가고 싶다면 어떻게 해야 할까요? form테그를 사용하면 됩니다.
  ​
 👨‍💻 개발해봅시다. 기존에 만들었던 main.html을 활용해 만들어 보겠습니다.
 1. form 태그 생성 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19  &lt;!-- articles/templates/articles/main.html --&gt; &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;IE=edge&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.]]></description>
