@@ -171,7 +171,7 @@ Git? : 버전 관리 시스템이며 Git은 소프트웨어를 개발하는 기�
 <td class="lntd">
 <pre class="chroma"><code class="language-python" data-lang="python"><span class="c1">## 개발을 진행하려는 폴더에서  </span>
 <span class="o">&gt;</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">django</span>	<span class="c1"># 설치가 진행될 것입니다.</span>
-  
+
 <span class="c1"># 저는 DJ라는 폴더를 생성하고 진행하였습니다.</span>
 </code></pre></td></tr></table>
 </div>
@@ -200,16 +200,16 @@ Git? : 버전 관리 시스템이며 Git은 소프트웨어를 개발하는 기�
 <pre class="chroma"><code class="language-python" data-lang="python"><span class="c1">## 1. 프로젝트 생성</span>
 <span class="c1"># case 1</span>
 <span class="o">&gt;</span> <span class="n">django</span><span class="o">-</span><span class="n">admin</span> <span class="n">startproject</span> <span class="n">blog</span>		<span class="c1"># blog라는 root폴더를 만들고 django프로젝트를 시작</span>
-  
+
 <span class="c1"># case 2</span>
 <span class="o">&gt;</span> <span class="n">django</span><span class="o">-</span><span class="n">admin</span> <span class="n">startproject</span> <span class="n">blog</span> <span class="o">.</span>	<span class="c1"># . 을 붙이면, root폴더 생성없이 django프로젝트 시작</span>
-  
+
 <span class="c1">#========================================================================================#</span>
 <span class="c1">## 2. 프로젝트 구동 테스트</span>
 <span class="o">&gt;</span> <span class="n">cd</span> <span class="n">blog</span>		<span class="c1"># blog 폴더로 </span>
 <span class="o">&gt;</span> <span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">runserver</span> <span class="mi">8080</span>		<span class="c1"># 프로젝트 구동 / 8080은 생략가능</span>
-  
-  
+
+
 <span class="err">✨</span><span class="n">Point</span>
 <span class="mf">1.</span> <span class="n">blog라는</span> <span class="err">이름</span><span class="p">(</span><span class="n">root폴더</span><span class="p">)</span><span class="err">은</span> <span class="err">내가</span> <span class="err">원하는</span> <span class="err">프로젝트</span> <span class="err">명으로</span> <span class="err">변경이</span> <span class="err">가능</span>
 <span class="mf">2.</span> <span class="n">cd</span> <span class="n">blog</span> <span class="err">→</span> <span class="n">django의</span> <span class="err">명령어는</span> <span class="err">모두</span> <span class="n">manage</span><span class="o">.</span><span class="n">py가</span> <span class="err">존재하는</span> <span class="err">폴더안에서</span> <span class="err">실행해야</span> <span class="err">함</span><span class="p">,</span> <span class="err">이를</span> <span class="err">위한</span> <span class="err">이동</span>
@@ -243,10 +243,10 @@ Git? : 버전 관리 시스템이며 Git은 소프트웨어를 개발하는 기�
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># settings.py</span>
-  
+
 <span class="c1"># 웹 사용자를 특정하는 부분</span>
 <span class="n">ALLOWED_HOSTS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;*&#39;</span><span class="p">]</span>		<span class="c1"># &#39;*&#39; == 모든 사용자가 입장가능</span>
-  
+
 <span class="c1"># 프로젝트에 사용되는 APP 및 기능들을 등록</span>
 <span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
     <span class="s1">&#39;django.contrib.admin&#39;</span><span class="p">,</span>
@@ -256,12 +256,12 @@ Git? : 버전 관리 시스템이며 Git은 소프트웨어를 개발하는 기�
     <span class="s1">&#39;django.contrib.messages&#39;</span><span class="p">,</span>
     <span class="s1">&#39;django.contrib.staticfiles&#39;</span><span class="p">,</span>
 <span class="p">]</span>
-  
+
 <span class="o">...</span>
 <span class="o">...</span>
-  
+
 <span class="n">LANGUAGE_CODE</span> <span class="o">=</span> <span class="s1">&#39;ko-KR&#39;</span>			<span class="c1">#한글로 설정 변경</span>
-  
+
 <span class="n">TIME_ZONE</span> <span class="o">=</span> <span class="s1">&#39;Asia/Seoul&#39;</span>		<span class="c1">#시간대 서울로 변경</span>
 </code></pre></td></tr></table>
 </div>
@@ -315,7 +315,7 @@ Git? : 버전 관리 시스템이며 Git은 소프트웨어를 개발하는 기�
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.82.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

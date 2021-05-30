@@ -316,23 +316,23 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Vagrantfile	=&gt;  내용을 수정한다. </span>
-   
+
 <span class="c1"># -*- mode: ruby -*-</span>
 <span class="c1"># vi: set ft=ruby :</span>
-   
+
 <span class="c1"># All Vagrant configuration is done below. The &#34;2&#34; in Vagrant.configure</span>
 <span class="c1"># configures the configuration version (we support older styles for</span>
 <span class="c1"># backwards compatibility). Please don&#39;t change it unless you know what</span>
 <span class="c1"># you&#39;re doing.</span>
-   
-   
+
+
 <span class="nv">VAGRANT_API_VERSION</span> <span class="o">=</span> <span class="s2">&#34;2&#34;</span>
-   
+
 <span class="nv">vms</span> <span class="o">=</span> <span class="o">{</span>
   <span class="s1">&#39;eth0&#39;</span> <span class="o">=</span>&gt; <span class="s2">&#34;10&#34;</span>,
   <span class="s1">&#39;eth1&#39;</span> <span class="o">=</span>&gt; <span class="s2">&#34;11&#34;</span>
 <span class="o">}</span>
-   
+
 Vagrant.configure<span class="o">(</span>VAGRANT_API_VERSION<span class="o">)</span> <span class="k">do</span> <span class="p">|</span>config<span class="p">|</span>
   config.vm.box <span class="o">=</span> <span class="s2">&#34;ubuntu/bionic64&#34;</span>
   vms.each <span class="k">do</span> <span class="p">|</span>key, value<span class="p">|</span>
@@ -348,7 +348,7 @@ Vagrant.configure<span class="o">(</span>VAGRANT_API_VERSION<span class="o">)</s
     end
   end
 end
-   
+
 <span class="c1"># 내가 이해?한 바로는 eth0과 eth1이라는 2개의 노드(광구)를 설정했다. 정도</span>
 </code></pre></td></tr></table>
 </div>
@@ -452,18 +452,18 @@ end
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># vagrant@eth0:~$ 가상머신에서 수행</span>
-   
+
 &gt; sudo apt-get update
 &gt; sudo apt-get install software-properties-common
 &gt; sudo add-apt-repository -y ppa:ethereum/ethereum
 &gt; sudo apt-get install ethereum
 <span class="c1">#여기까지 순서대로 설치하면 geth설치는 완료.</span>
-   
+
 <span class="c1"># 프라이빗 이더리움를 관리할 폴더 생성</span>
 &gt; mkdir -p dev/eth_localdata		<span class="c1">#-p는 mkdir 옵션사항 =&gt; 중간경로도 다 만들어라</span>
 &gt; mkdir database		
 &gt; <span class="nb">cd</span> database
-   
+
 <span class="c1"># 프라이빗 이더리움을 위한 genesis.json블록파일(블록들을 연결하기 위한 최초의 블럭) 생성</span>
 &gt; vi genesis.json		<span class="c1"># genesis.json를 만들겠다.</span>
 </code></pre></td></tr></table>
@@ -494,7 +494,7 @@ end
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># genesis.json의 내용 등록 (예시)</span>
 i → 입력 활성화 → 아래 내용입력 후 → esc → ZZ<span class="o">(</span>저장하고 종료<span class="o">)</span>
-   
+
 <span class="o">{</span>
   <span class="s2">&#34;config&#34;</span>: <span class="o">{</span>
     <span class="s2">&#34;chainId&#34;</span>: 5245,
@@ -548,7 +548,7 @@ i → 입력 활성화 → 아래 내용입력 후 → esc → ZZ<span class="o"
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 위의 --datadir을 참고하여</span>
-   
+
 &gt; geth --datadir ~/dev/eth_localdata init ~/database/genesis.json
 <span class="c1"># ~/database 위치에 있는 genesis.json을 등록(초기화)하고 등록 후 생기는 관련 자료는 ~/dev/eth_localdata에 모아놓겠다는 뜻</span>
 </code></pre></td></tr></table>
@@ -602,13 +602,13 @@ i → 입력 활성화 → 아래 내용입력 후 → esc → ZZ<span class="o"
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># eth0의 노드(광구) 입장 명령어</span>
 &gt; geth console
-   
+
 <span class="c1"># 다만 보통의 경우 아래와 같이 노드(eth0)에 다양한 주소 및 설정을 붙이고 진행한다. </span>
 &gt; geth --networkid <span class="m">5245</span> --port <span class="m">30303</span> --maxpeers <span class="m">2</span> --datadir ~/dev/eth_localdata --rpcaddr 0.0.0.0 --nodiscover --nousb console &gt;&gt; ~/eth0.log
-   
+
 <span class="c1"># 일단 이걸로 채굴 성공</span>
 geth --datadir ~/dev/eth_localdata --nodiscover --nousb --networkid <span class="m">5245</span> console
-   
+
 <span class="c1"># 맨 마지막에 2&gt;&gt; ~/eth0.log를 붙이면, 진행기록을 root주소에 eth0.log를 만들어 저장한다.란 뜻.</span>
 </code></pre></td></tr></table>
 </div>
@@ -624,10 +624,10 @@ geth --datadir ~/dev/eth_localdata --nodiscover --nousb --networkid <span class=
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 진행 도중 ERROR 모음</span>
-      
+
 Failed to enumerate USB <span class="nv">devices</span>  <span class="o">=</span>&gt; --nousb 추가해주면 사라짐.
 <span class="c1">#if you want USB wallet support disabled. By default it&#39;s enabled.</span>
-      
+
 Looking <span class="k">for</span> <span class="nv">peers</span>  <span class="o">=</span>&gt; --nodiscover 추가해주면 사라짐
 <span class="c1"># --nodiscover 옵션은 같은 제네시스 블록과 네트워크ID에 있는 노드들이 연결하는 것을 방지</span>
 </code></pre></td></tr></table>
@@ -949,7 +949,7 @@ personal.unlockAccount<span class="o">(</span>eth.accounts<span class="o">[</spa
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.82.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

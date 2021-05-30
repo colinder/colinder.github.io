@@ -194,15 +194,15 @@ React-Native google login  서비스를 개발하다보면 로그인 기능이 �
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># index.js</span>
-   
+
 /**
  * @format
  */
-   
+
 import <span class="o">{</span>AppRegistry<span class="o">}</span> from <span class="s1">&#39;react-native&#39;</span><span class="p">;</span>
 import App from <span class="s1">&#39;./googleSignin&#39;</span><span class="p">;</span>			// 변경
 import <span class="o">{</span>name as appName<span class="o">}</span> from <span class="s1">&#39;./app.json&#39;</span><span class="p">;</span>
-   
+
 AppRegistry.registerComponent<span class="o">(</span>appName, <span class="o">()</span> <span class="o">=</span>&gt; App<span class="o">)</span><span class="p">;</span>
 </code></pre></td></tr></table>
 </div>
@@ -228,10 +228,10 @@ AppRegistry.registerComponent<span class="o">(</span>appName, <span class="o">()
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># googleSignin.js</span>
-   
+
 import React from <span class="s1">&#39;react&#39;</span>
 import <span class="o">{</span> View, Text <span class="o">}</span> from <span class="s1">&#39;react-native&#39;</span>
-   
+
 const <span class="nv">googleSignin</span> <span class="o">=</span> <span class="o">()</span> <span class="o">=</span>&gt; <span class="o">{</span>
   <span class="k">return</span> <span class="o">(</span>
     &lt;View&gt;
@@ -287,7 +287,7 @@ const <span class="nv">googleSignin</span> <span class="o">=</span> <span class=
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># root/android/app으로 이동</span>
 <span class="c1"># terminal</span>
-      
+
 keytool -list -v -keystore debug.keystore -alias androiddebugkey -storepass android -keypass android
 </code></pre></td></tr></table>
 </div>
@@ -328,16 +328,16 @@ keytool -list -v -keystore debug.keystore -alias androiddebugkey -storepass andr
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># In: android/app/src/main/java/MY/APP/NEW_ID/MainActivity.java:</span>
 package 새로운 패키지 이름 등록<span class="p">;</span>
-      
+
 <span class="c1"># In: android/app/src/main/java/MY/APP/NEW_ID/MainApplication.java:</span>
 package 새로운 패키지 이름 등록<span class="p">;</span>
-      
+
 <span class="c1"># In: android/app/src/main/AndroidManifest.xml:</span>
 <span class="nv">package</span><span class="o">=</span><span class="s2">&#34;새로운 패키지 이름 등록&#34;</span>
-      
+
 <span class="c1"># And in android/app/build.gradle:</span>
 applicationId <span class="s2">&#34;새로운 패키지 이름 등록&#34;</span>
-      
+
 <span class="c1"># In: android/app/BUCK:</span>
 android_build_config<span class="o">(</span>
   <span class="nv">package</span><span class="o">=</span><span class="s2">&#34;새로운 패키지 이름 등록&#34;</span>
@@ -345,7 +345,7 @@ android_build_config<span class="o">(</span>
 android_resource<span class="o">(</span>
   <span class="nv">package</span><span class="o">=</span><span class="s2">&#34;새로운 패키지 이름 등록&#34;</span>
 <span class="o">)</span>
-      
+
 <span class="c1"># Gradle&#39; cleaning in the end (in /android folder):</span>
 ./gradlew clean
 </code></pre></td></tr></table>
@@ -473,7 +473,7 @@ apply plugin: <span class="s1">&#39;com.google.gms.google-services&#39;</span> /
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># googleSignin.js</span>
-      
+
 import <span class="o">{</span> GoogleSignin, GoogleSigninButton, statusCodes <span class="o">}</span> from <span class="s1">&#39;@react-native-community/google-signin&#39;</span><span class="p">;</span>
 </code></pre></td></tr></table>
 </div>
@@ -503,7 +503,7 @@ import <span class="o">{</span> GoogleSignin, GoogleSigninButton, statusCodes <s
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># googleSignin.js</span>
-      
+
 const <span class="nv">googleSignin</span> <span class="o">=</span> <span class="o">()</span> <span class="o">=</span>&gt; <span class="o">{</span>
   useEffect<span class="o">(()</span> <span class="o">=</span>&gt; <span class="o">{</span>
     GoogleSignin.configure<span class="o">({</span>
@@ -518,9 +518,9 @@ const <span class="nv">googleSignin</span> <span class="o">=</span> <span class=
     <span class="o">})</span><span class="p">;</span>
   <span class="o">}</span>, <span class="o">[])</span>
 <span class="o">}</span>
-      
+
 <span class="nb">export</span> default googleSignin
-      
+
 <span class="c1"># 필요없는 항목들은 주석해줍니다.다만 webClientId는 firebase에서 확인하고 등록합니다.</span>
 <span class="c1"># useEffect: 리액트 컴포넌트가 렌더링 될 때마다 특정 작업을 수행하도록 설정 할 수 있는 Hook 입니다. 클래스형 컴포넌트의 componentDidMount 와 componentDidUpdate 를 합친 형태로 보아도 무방합니다.</span>
 </code></pre></td></tr></table>
@@ -553,7 +553,7 @@ const <span class="nv">googleSignin</span> <span class="o">=</span> <span class=
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># googleSignin.js</span>
-      
+
 const <span class="nv">signIn</span> <span class="o">=</span> async<span class="o">()</span> <span class="o">=</span>&gt; <span class="o">{</span>
     try <span class="o">{</span>
       await GoogleSignin.hasPlayServices<span class="o">()</span><span class="p">;</span>
@@ -635,12 +635,12 @@ const <span class="nv">signIn</span> <span class="o">=</span> async<span class="
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># googleSignin.js</span>
-      
+
 import React, <span class="o">{</span> useState, useEffect <span class="o">}</span> from <span class="s1">&#39;react&#39;</span><span class="p">;</span>
 import <span class="o">{</span> View, Text, Image, <span class="o">}</span> from <span class="s1">&#39;react-native&#39;</span>
 import <span class="o">{</span> GoogleSignin, GoogleSigninButton, statusCodes <span class="o">}</span> from <span class="s1">&#39;@react-native-community/google-signin&#39;</span><span class="p">;</span>
-      
-      
+
+
 const <span class="nv">googleSignin</span> <span class="o">=</span> <span class="o">()</span> <span class="o">=</span>&gt; <span class="o">{</span>
   useEffect<span class="o">(()</span> <span class="o">=</span>&gt; <span class="o">{</span>
     GoogleSignin.configure<span class="o">({</span>
@@ -654,7 +654,7 @@ const <span class="nv">googleSignin</span> <span class="o">=</span> <span class=
 </span><span class="s1">      // iosClientId: &#39;</span>&lt;FROM DEVELOPER CONSOLE&gt;<span class="err">&#39;</span>, // <span class="o">[</span>iOS<span class="o">]</span> optional, <span class="k">if</span> you want to specify the client ID of <span class="nb">type</span> iOS <span class="o">(</span>otherwise, it is taken from GoogleService-Info.plist<span class="o">)</span>
     <span class="o">})</span><span class="p">;</span>
   <span class="o">}</span>, <span class="o">[])</span>
-        
+
   const <span class="nv">signIn</span> <span class="o">=</span> async<span class="o">()</span> <span class="o">=</span>&gt; <span class="o">{</span>
     try <span class="o">{</span>
       await GoogleSignin.hasPlayServices<span class="o">()</span><span class="p">;</span>
@@ -686,7 +686,7 @@ const <span class="nv">googleSignin</span> <span class="o">=</span> <span class=
     &lt;/View&gt;
   <span class="o">)</span>
 <span class="o">}</span>
-      
+
 <span class="nb">export</span> default googleSignin
 </code></pre></td></tr></table>
 </div>
@@ -747,7 +747,7 @@ const <span class="nv">googleSignin</span> <span class="o">=</span> <span class=
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.82.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

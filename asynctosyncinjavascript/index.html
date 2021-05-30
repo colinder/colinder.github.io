@@ -196,21 +196,21 @@ Async(비동기) to Sync(동기) 방법 자바스크립트에서의 비동기를
 <td class="lntd">
 <pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// Callback 사용 예제
 </span><span class="c1">// a와 b라는 함수를 선언
-</span><span class="c1"></span>  
+</span><span class="c1"></span>
 <span class="kd">function</span> <span class="nx">a</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>       <span class="c1">// 함수 a는 callback이라는 함수를 받는다.
 </span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="s1">&#39;i am data&#39;</span> <span class="c1">// i am data라는 값을 담은 변수 data를 생성
 </span><span class="c1"></span>    <span class="nx">callback</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>           <span class="c1">// callback이라는 함수에 data라는 변수를 넘겨줌.
 </span><span class="c1"></span><span class="p">}</span>
-  
+
 <span class="kd">function</span> <span class="nx">b</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>			<span class="c1">// 함수 b는 입력받은 값 value를 콘솔에 출력하는 함수.
 </span><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;넘겨받은 값&#39;</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span>
 <span class="p">}</span>
-  
+
 <span class="c1">// 사용해 봅시다.
 </span><span class="c1"></span><span class="nx">a</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>                    <span class="c1">// 함수 a에 function을 받는데 값으로 value를 받는다. 
 </span><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;넘겨받은 값&#39;</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span>   <span class="c1">// 함수 a가 실행되면 자동으로 const data를 만드는데 data에는 &#39;i am data&#39;라는 값이 할당. 되고 value가 된다.
 </span><span class="c1"></span><span class="p">})</span>
-  
+
 <span class="c1">// 위를 간소화한 코드.
 </span><span class="c1"></span><span class="nx">a</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span>
 </code></pre></td></tr></table>
@@ -242,20 +242,20 @@ Async(비동기) to Sync(동기) 방법 자바스크립트에서의 비동기를
 <td class="lntd">
 <pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// Callback 비동기적 코딩
 </span><span class="c1">// a가 동작하고 b가 동작하길 원하며 코딩
-</span><span class="c1"></span>  
+</span><span class="c1"></span>
 <span class="c1">// a와 b라는 함수를 선언
 </span><span class="c1"></span><span class="kd">function</span> <span class="nx">a</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>       <span class="c1">// 함수 a는 2초 후에 동작
 </span><span class="c1"></span>    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
         <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;running a....&#39;</span><span class="p">)</span>
     <span class="p">},</span> <span class="mi">2000</span><span class="p">)</span>
 <span class="p">}</span>
-  
+
 <span class="kd">function</span> <span class="nx">b</span><span class="p">()</span> <span class="p">{</span>       <span class="c1">// 함수 b는 1초 후에 동작
 </span><span class="c1"></span>    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
         <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;running b....&#39;</span><span class="p">)</span>
     <span class="p">},</span> <span class="mi">1000</span><span class="p">)</span>
 <span class="p">}</span>
-  
+
 <span class="c1">// 실행해봅시다.
 </span><span class="c1"></span><span class="nx">a</span><span class="p">()</span>
 <span class="nx">b</span><span class="p">()</span>
@@ -291,7 +291,7 @@ Async(비동기) to Sync(동기) 방법 자바스크립트에서의 비동기를
 <td class="lntd">
 <pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// Callback 동기적 코딩
 </span><span class="c1">// a가 동작하고 b가 동작하길 원하며 코딩
-</span><span class="c1"></span>  
+</span><span class="c1"></span>
 <span class="c1">// a와 b라는 함수를 선언
 </span><span class="c1"></span><span class="kd">function</span> <span class="nx">a</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>       <span class="c1">// 함수 a는 2초 후에 동작
 </span><span class="c1"></span>    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
@@ -299,13 +299,13 @@ Async(비동기) to Sync(동기) 방법 자바스크립트에서의 비동기를
         <span class="nx">callback</span><span class="p">()</span>			 <span class="c1">// 👈 callback함수를 추가
 </span><span class="c1"></span>    <span class="p">},</span> <span class="mi">2000</span><span class="p">)</span>
 <span class="p">}</span>
-  
+
 <span class="kd">function</span> <span class="nx">b</span><span class="p">()</span> <span class="p">{</span>       <span class="c1">// 함수 b는 1초 후에 동작
 </span><span class="c1"></span>    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
         <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;running b....&#39;</span><span class="p">)</span>
     <span class="p">},</span> <span class="mi">1000</span><span class="p">)</span>
 <span class="p">}</span>
-  
+
 <span class="c1">// 실행해봅시다.
 </span><span class="c1"></span><span class="nx">a</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span>
 </code></pre></td></tr></table>
@@ -363,7 +363,7 @@ Async(비동기) to Sync(동기) 방법 자바스크립트에서의 비동기를
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// Promise 사용 예제
-</span><span class="c1"></span>  
+</span><span class="c1"></span>
 <span class="kd">function</span> <span class="nx">test</span><span class="p">()</span> <span class="p">{</span>                                    <span class="c1">// test라는 동작(함수)을 만드는데
 </span><span class="c1"></span>    <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span>   <span class="c1">// Promise로 만들고 Promise는 인자로 resolve, reject를 받는다.
 </span><span class="c1"></span>        <span class="k">try</span> <span class="p">{</span>                                        <span class="c1">// 정상처리되면(조건은 다양하게 구성)
@@ -377,7 +377,7 @@ Async(비동기) to Sync(동기) 방법 자바스크립트에서의 비동기를
         <span class="p">}</span>
     <span class="p">})</span>
 <span class="p">}</span>
-  
+
 <span class="nx">test</span><span class="p">()</span>                              <span class="c1">// test를 동작(함수실행)하는데
 </span><span class="c1"></span><span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span>                      <span class="c1">// 에러가 없다면
 </span><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;정상 처리 완료&#39;</span><span class="p">)</span>    <span class="c1">// &#39;정상 처리 완료&#39;를 출력하고
@@ -433,7 +433,7 @@ Async(비동기) to Sync(동기) 방법 자바스크립트에서의 비동기를
 <td class="lntd">
 <pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// Promise 동기적 코딩
 </span><span class="c1">// 1,2,3 순서대로 출력되길 원하며 코딩
-</span><span class="c1"></span>  
+</span><span class="c1"></span>
 <span class="kd">function</span> <span class="nx">test</span><span class="p">()</span> <span class="p">{</span>                                    <span class="c1">// test라는 동작(함수)을 만드는데
 </span><span class="c1"></span>    <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span>   <span class="c1">// Promise로 만들고 Promise는 인자로 reselve, reject를 받는다.
 </span><span class="c1"></span>        <span class="k">try</span> <span class="p">{</span>
@@ -453,12 +453,12 @@ Async(비동기) to Sync(동기) 방법 자바스크립트에서의 비동기를
         <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;3&#39;</span><span class="p">)</span>
     <span class="p">},</span> <span class="mi">1000</span><span class="p">)</span>
 <span class="p">}</span>
-  
+
 <span class="c1">// 실행해봅시다.
 </span><span class="c1"></span><span class="nx">test</span><span class="p">()</span>
 <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span>
 <span class="c1">// .then(function() {b()})
-</span><span class="c1"></span>  
+</span><span class="c1"></span>
 <span class="c1">//////////////////////////////////////////////////////////////////////////////////////
 </span><span class="c1">// .then(b) === .then(function() {b()}) === .then(() =&gt; {b()}) !== .then(b())
 </span><span class="c1">// .then(b) / .then(function() {b()}) / .then(() =&gt; {b()})는 
@@ -527,13 +527,13 @@ Async(비동기) to Sync(동기) 방법 자바스크립트에서의 비동기를
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// Async/Await 사용 예제
-</span><span class="c1"></span>  
+</span><span class="c1"></span>
 <span class="kd">function</span> <span class="nx">promise</span><span class="p">()</span> <span class="p">{</span>		
     <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">resolve</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
     <span class="p">})</span>
 <span class="p">}</span>
-  
+
 <span class="kr">async</span> <span class="kd">function</span> <span class="nx">foo</span><span class="p">()</span> <span class="p">{</span>
     <span class="kr">const</span> <span class="nx">num</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">promise</span><span class="p">()</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span>
@@ -567,7 +567,7 @@ Async(비동기) to Sync(동기) 방법 자바스크립트에서의 비동기를
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// Async/Await 동기적 코딩
-</span><span class="c1"></span>  
+</span><span class="c1"></span>
 <span class="kd">function</span> <span class="nx">promise</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;AsyncAwait running...&#39;</span><span class="p">)</span>
     <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span>
@@ -576,7 +576,7 @@ Async(비동기) to Sync(동기) 방법 자바스크립트에서의 비동기를
         <span class="p">},</span> <span class="mi">5000</span><span class="p">)</span>
     <span class="p">})</span>
 <span class="p">}</span>
-  
+
 <span class="kr">async</span> <span class="kd">function</span> <span class="nx">foo</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;foo running...&#39;</span><span class="p">)</span>
     <span class="kr">const</span> <span class="nx">num</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">promise</span><span class="p">()</span>
@@ -639,7 +639,7 @@ Async(비동기) to Sync(동기) 방법 자바스크립트에서의 비동기를
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// 여러 test 중 하나. 
-</span><span class="c1"></span>  
+</span><span class="c1"></span>
 <span class="kd">function</span> <span class="nx">promise</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;AsyncAwait running...&#39;</span><span class="p">)</span>
     <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span>
@@ -648,7 +648,7 @@ Async(비동기) to Sync(동기) 방법 자바스크립트에서의 비동기를
         <span class="p">},</span> <span class="mi">5000</span><span class="p">)</span>
     <span class="p">})</span>
 <span class="p">}</span>
-  
+
 <span class="kd">function</span> <span class="nx">test2Promise</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;test2Promise 시작&#39;</span><span class="p">)</span>
     <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span>
@@ -658,7 +658,7 @@ Async(비동기) to Sync(동기) 방법 자바스크립트에서의 비동기를
 </span><span class="c1"></span>        <span class="p">},</span><span class="mi">3000</span><span class="p">)</span>
     <span class="p">})</span> 
 <span class="p">}</span>
-  
+
 <span class="kr">async</span> <span class="kd">function</span> <span class="nx">foo</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;foo running...&#39;</span><span class="p">)</span>
     <span class="kr">const</span> <span class="nx">num</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">promise</span><span class="p">()</span>
@@ -754,7 +754,7 @@ Async(비동기) to Sync(동기) 방법 자바스크립트에서의 비동기를
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.82.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
