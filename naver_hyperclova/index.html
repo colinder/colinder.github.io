@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>NAVER AI NOW HyperCLOVA_NLP - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="NAVER AI NOW HyperCLOVA_NLP" />
+<meta property="og:description" content="NAVER HyperCLOVA의 한국어 모델  2021.05.25 NAVER AI NOW HyperCLOVA의 자연어 전처리 과정의 토근화 방법에 대하여 정리
+ ​
+데이터 토큰화  자연어 처리를 위한 문장 데이터 토큰화에 대한 NAVER의 처리 방법을 정리해보겠습니다.
+말뭉치를 어떻게 구성하고 나눌 것인가에 대한 고민 → 서브워드 토크나이저를 활용. 서브워드는 어떤방식으로 진행할 것인가? → **Byte-Pair Encoding (BPE)**를 사용 그 중에서도 **Morpheme-Aware Byte-Level Byte Pair Encoding(형태소 단위로 분리)**을 사용 Morpheme-Aware Byte-Level Byte Pair Encoding는 많은 메모리를 필요로 하여 말뭉치 데이터의 크기를 최적화하는 것이 필요함." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://colinder.github.io/naver_hyperclova/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-05-31T15:23:45&#43;09:00" />
+<meta property="article:modified_time" content="2021-05-31T15:23:45&#43;09:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
+
+<meta name="twitter:title" content="NAVER AI NOW HyperCLOVA_NLP"/>
+<meta name="twitter:description" content="NAVER HyperCLOVA의 한국어 모델  2021.05.25 NAVER AI NOW HyperCLOVA의 자연어 전처리 과정의 토근화 방법에 대하여 정리
+ ​
+데이터 토큰화  자연어 처리를 위한 문장 데이터 토큰화에 대한 NAVER의 처리 방법을 정리해보겠습니다.
+말뭉치를 어떻게 구성하고 나눌 것인가에 대한 고민 → 서브워드 토크나이저를 활용. 서브워드는 어떤방식으로 진행할 것인가? → **Byte-Pair Encoding (BPE)**를 사용 그 중에서도 **Morpheme-Aware Byte-Level Byte Pair Encoding(형태소 단위로 분리)**을 사용 Morpheme-Aware Byte-Level Byte Pair Encoding는 많은 메모리를 필요로 하여 말뭉치 데이터의 크기를 최적화하는 것이 필요함."/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/naver_hyperclova/" /><link rel="prev" href="https://colinder.github.io/what_is_jquery/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "NAVER AI NOW HyperCLOVA_NLP",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/colinder.github.io\/naver_hyperclova\/"
+        },"genre": "posts","keywords": "NLP, naver","wordcount":  766 ,
+        "url": "https:\/\/colinder.github.io\/naver_hyperclova\/","datePublished": "2021-05-31T15:23:45+09:00","dateModified": "2021-05-31T15:23:45+09:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "colinder"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="">Hello New World</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="">Hello New World</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">NAVER AI NOW HyperCLOVA_NLP</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/nlp/"><i class="far fa-folder fa-fw"></i>NLP</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-05-31">2021-05-31</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;766 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#데이터-토큰화">데이터 토큰화</a></li>
+    <li><a href="#서브워드란">서브워드란?</a></li>
+    <li><a href="#bpebyte-pair-encoding">BPE(Byte Pair Encoding)</a></li>
+    <li><a href="#morpheme-aware-byte-level-byte-pair-encoding">Morpheme-Aware Byte-Level Byte Pair Encoding</a></li>
+    <li><a href="#서브워드로-나눈-말뭉치의-크기는-얼마나-설정할-것인가">서브워드로 나눈 말뭉치의 크기는 얼마나 설정할 것인가?</a></li>
+    <li><a href="#성능-평가---언어-생성관점">성능 평가 - 언어 생성관점</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="naver-hyperclova의-한국어-모델">NAVER HyperCLOVA의 한국어 모델</h1>
+<blockquote>
+<p>2021.05.25 NAVER AI NOW
+HyperCLOVA의 자연어 전처리 과정의 <strong>토근화</strong> 방법에 대하여 정리</p>
+</blockquote>
+<p>​</p>
+<h2 id="데이터-토큰화">데이터 토큰화</h2>
+<blockquote>
+<p>자연어 처리를 위한 문장 데이터 토큰화에 대한 NAVER의 처리 방법을 정리해보겠습니다.</p>
+<p>말뭉치를 어떻게 구성하고 나눌 것인가에 대한 고민 → <strong>서브워드 토크나이저</strong>를 활용. 
+서브워드는 어떤방식으로 진행할 것인가? → **Byte-Pair Encoding (BPE)**를 사용
+그 중에서도 **Morpheme-Aware Byte-Level Byte Pair Encoding(형태소 단위로 분리)**을 사용
+Morpheme-Aware Byte-Level Byte Pair Encoding는 많은 메모리를 필요로 하여 말뭉치 데이터의 크기를 최적화하는 것이 필요함.</p>
+</blockquote>
+<p>​</p>
+<h2 id="서브워드란">서브워드란?</h2>
+<p>자연어 처리를 하려면 기계가 문장을 끊어 읽을 수 있게 만들어줘야 합니다. 이를 보통 토크나이징(tokenizing)은 이라고 하며 나눠진 단어나 형태소를 토큰이라고 합니다. 하지만 토큰은 &lsquo;문장&rsquo;에서 추출한 데이터고 &lsquo;문장&rsquo;은 글쓴이 개개인의 특성에 따라 구성이 다르기도 하며, 신조어를 사용하는 등 고려해야하는 사항이 많습니다. 특히 Out of Vocabulary(OOV) 미등록 된 단어의 문제는 자연어 처리에 있어서 해결이 어려운 이슈사항입니다.</p>
+<p>그리고 이를 보완하기 위해 Subword 방식이 대두되었습니다. 
+<strong>하나의 단어는 더 작은 단위의 의미있는 여러 서브워드들의 조합으로 구성된 경우가 많기 때문</strong>에, 하나의 단어를 여러 서브워드로 분리해서 기계어로 변환하기 위한 작업입니다.</p>
+<p>​</p>
+<h2 id="bpebyte-pair-encoding">BPE(Byte Pair Encoding)</h2>
+<p>BPE은 <strong>압축 알고리즘</strong>으로 연속적으로 가장 많이 등장한 글자의 쌍을 찾아서 하나의 글자로 병합하는 방식을 수행합니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># dictionary
+l o w : 5,  l o w e r : 2,  n e w e s t : 6,  w i d e s t : 3
+</code></pre></td></tr></table>
+</div>
+</div><p>딕셔너리를 참고로 한 초기 단어 집합(vocabulary)을 아래와 같습니다. 간단히 말해 <strong>초기 구성은 글자 단위로 분리된 상태입니다.</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># vocabulary
+l, o, w, e, r, n, w, s, t, i, d
+</code></pre></td></tr></table>
+</div>
+</div><p>BPE의 특징은 알고리즘의 동작을 몇 회 반복(iteration)할 것인지를 사용자가 정한다는 점입니다. 여기서는 총 10회를 수행한다고 가정합니다. 다시 말해 <strong>가장 빈도수가 높은 유니그램의 쌍을 하나의 유니그램으로 통합</strong>하는 과정을 총 10회 반복합니다. 위의 딕셔너리에 따르면 빈도수가 현재 가장 높은 유니그램의 쌍은 (e, s)입니다.</p>
+<p><strong>1회 - 딕셔너리를 참고로 하였을 때 빈도수가 9로 가장 높은 (e, s)의 쌍을 es로 통합합니다.</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># dictionary update!
+l o w : 5,
+l o w e r : 2,
+n e w es t : 6,
+w i d es t : 3
+# vocabulary update!
+l, o, w, e, r, n, w, s, t, i, d, es
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>2회 - 빈도수가 9로 가장 높은 (es, t)의 쌍을 est로 통합합니다.</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># dictionary update!
+l o w : 5,
+l o w e r : 2,
+n e w est : 6,
+w i d est : 3
+# vocabulary update!
+l, o, w, e, r, n, w, s, t, i, d, es, est
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>3회 - 빈도수가 7로 가장 높은 (l, o)의 쌍을 lo로 통합합니다.</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># dictionary update!
+lo w : 5,
+lo w e r : 2,
+n e w est : 6,
+w i d est : 3
+# vocabulary update!
+l, o, w, e, r, n, w, s, t, i, d, es, est, lo
+</code></pre></td></tr></table>
+</div>
+</div><p>이와 같은 방식으로 총 10회 반복하였을 때 얻은 딕셔너리와 단어 집합은 아래와 같습니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># dictionary update!
+low : 5,
+low e r : 2,
+newest : 6,
+widest : 3
+# vocabulary update!
+l, o, w, e, r, n, w, s, t, i, d, es, est, lo, low, ne, new, newest, wi, wid, widest
+</code></pre></td></tr></table>
+</div>
+</div><p style="text-align:right; color:grey; font-style:italic; font-size:0.9em">출처  https://wikidocs.net/22592</p>
+<p>​</p>
+<h2 id="morpheme-aware-byte-level-byte-pair-encoding">Morpheme-Aware Byte-Level Byte Pair Encoding</h2>
+<p>Byte Pair Encoding을 한국어를 형태소 수준으로 나누어 진행
+ex) &lsquo;나는 배가고프다.&rsquo; → &lsquo;나&rsquo;, &lsquo;는&rsquo;, &lsquo;배&rsquo;, &lsquo;가&rsquo;, &lsquo;고&rsquo;, &lsquo;프&rsquo;, &lsquo;다&rsquo;. 로 	나누어 Byte Pair Encoding을 진행</p>
+<p>​</p>
+<h2 id="서브워드로-나눈-말뭉치의-크기는-얼마나-설정할-것인가">서브워드로 나눈 말뭉치의 크기는 얼마나 설정할 것인가?</h2>
+<ol>
+<li>
+<p>일반적으로 자연어 말뭉치에 사용된 단어를 빈도순으로 나열했을 경우 **지프의 법칙(Zipf&rsquo;s Law)**을 따름.</p>
+<blockquote>
+<p>Zipf&rsquo;s Law :  어떠한 <a href="https://ko.wikipedia.org/wiki/%ec%9e%90%ec%97%b0%ec%96%b4" target="_blank" rel="noopener noreffer">자연어</a> <a href="https://ko.wikipedia.org/wiki/%eb%a7%90%eb%ad%89%ec%b9%98" target="_blank" rel="noopener noreffer">말뭉치</a> 표현에 나타나는 단어들을 그 사용 빈도가 높은 순서대로 나열하였을 때, 모든 단어의 사용 빈도는 해당 단어의 순위에 <a href="https://ko.wikipedia.org/wiki/%eb%b0%98%eb%b9%84%eb%a1%80" target="_blank" rel="noopener noreffer">반비례</a>한다. 따라서 가장 사용 빈도가 높은 단어는 두 번째 단어보다 빈도가 약 두 배 높으며, 세 번째 단어보다는 빈도가 세 배 높다.</p>
+<p>한가지 예로 )<em>약 135개 항목의 어휘만으로 브라운 대학 말뭉치의 절반을 나타낼 수 있다.</em></p>
+</blockquote>
+</li>
+<li>
+<p>1에 따라 <strong>네이버는 <em>학습에 사용한 말뭉치 양의 차이에 따른 서브워드 토크나이저의 어위 집합(Vocabulary)에는 큰 차이가 없을 것으로 판단.</em></strong></p>
+</li>
+</ol>
+<p>👉  네이버의 경우, 전체 말뭉치와 전체 말뭉치의 1% (20GB)로 서브워드 토크나이저를 실행한 결과를 비교해보니 어휘 집합 구성의 유사함을 확인.</p>
+<h2 id="성능-평가---언어-생성관점">성능 평가 - 언어 생성관점</h2>
+<p>NAVER는 발전한 대규모 모델의 언어생성능력에 비해 기존의 평가 지표(품질: BLEU, ROUGE, METEOR&hellip; / 다양성: Self-BLEU, Distinct-N, Unique-N&hellip;)들이 여전이 2000년대 초반에 머물러 있다는 점을 파악</p>
+<ol>
+<li>
+<p>&lsquo;생성 문장&rsquo;과 &lsquo;레퍼런스 문장&rsquo;의 유사성이 더 이상 문장의 품질을 보장하지 않는다.</p>
+</li>
+<li>
+<p>학습 어휘에 따라 성능에 차이가 발생함으로 perplexity(ppL)로 비교하는 것은 부적절하다.</p>
+<blockquote>
+<p>펄플렉서티(perplexity)는 언어 모델을 평가하기 위한 내부 평가 지표. &lsquo;perplexed&rsquo;는 &lsquo;헷갈리는&rsquo;과 유사한 의미를 가집니다. 그러니까 여기서 PPL은 &lsquo;헷갈리는 정도&rsquo;로 레퍼런스들과의 차이를 판별하는 지표로 이해하면 됩니다.</p>
+</blockquote>
+</li>
+</ol>
+<p>👉  네이버의 경우, &lsquo;언어의 유창함&rsquo;을 판별활 수 있는 모델을 만들어 자체적으로 성능을 평가함.</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2021-05-31</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/naver_hyperclova/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/nlp/">NLP</a>,&nbsp;<a href="/tags/naver/">naver</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/what_is_jquery/" class="prev" rel="prev" title="What is jQuery($)?"><i class="fas fa-angle-left fa-fw"></i>What is jQuery($)?</a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

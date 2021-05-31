@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "style.min.css",
-	"sourceRoot": "C:/Work/SSAFY/First semester/03_Blog",
+	"sourceRoot": "C:/Users/kjong/Desktop/03_Blog",
 	"sources": [
 		"assets/css/style.scss",
 		"assets/css/_variables.scss",
