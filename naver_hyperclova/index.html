@@ -9,7 +9,10 @@
 <meta property="og:description" content="NAVER HyperCLOVA의 한국어 모델  2021.05.25 NAVER AI NOW HyperCLOVA의 자연어 전처리 과정의 토근화 방법에 대하여 정리
  ​
 데이터 토큰화  자연어 처리를 위한 문장 데이터 토큰화에 대한 NAVER의 처리 방법을 정리해보겠습니다.
-말뭉치를 어떻게 구성하고 나눌 것인가에 대한 고민 → 서브워드 토크나이저를 활용. 서브워드는 어떤방식으로 진행할 것인가? → **Byte-Pair Encoding (BPE)**를 사용 그 중에서도 **Morpheme-Aware Byte-Level Byte Pair Encoding(형태소 단위로 분리)**을 사용 Morpheme-Aware Byte-Level Byte Pair Encoding는 많은 메모리를 필요로 하여 말뭉치 데이터의 크기를 최적화하는 것이 필요함." />
+  말뭉치를 어떻게 구성하고 나눌 것인가에 대한 고민 → 서브워드 토크나이저를 활용.
+  서브워드는 어떤방식으로 진행할 것인가? → Byte-Pair Encoding (BPE)를 사용
+그 중에서도 Morpheme-Aware Byte-Level Byte Pair Encoding(형태소 단위로 분리)을 사용
+  Morpheme-Aware Byte-Level Byte Pair Encoding는 많은 메모리를 필요로 하여 말뭉치 데이터의 크기를 최적화하는 것이 필요함." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://colinder.github.io/naver_hyperclova/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-05-31T15:23:45&#43;09:00" />
@@ -22,7 +25,10 @@
 <meta name="twitter:description" content="NAVER HyperCLOVA의 한국어 모델  2021.05.25 NAVER AI NOW HyperCLOVA의 자연어 전처리 과정의 토근화 방법에 대하여 정리
  ​
 데이터 토큰화  자연어 처리를 위한 문장 데이터 토큰화에 대한 NAVER의 처리 방법을 정리해보겠습니다.
-말뭉치를 어떻게 구성하고 나눌 것인가에 대한 고민 → 서브워드 토크나이저를 활용. 서브워드는 어떤방식으로 진행할 것인가? → **Byte-Pair Encoding (BPE)**를 사용 그 중에서도 **Morpheme-Aware Byte-Level Byte Pair Encoding(형태소 단위로 분리)**을 사용 Morpheme-Aware Byte-Level Byte Pair Encoding는 많은 메모리를 필요로 하여 말뭉치 데이터의 크기를 최적화하는 것이 필요함."/>
+  말뭉치를 어떻게 구성하고 나눌 것인가에 대한 고민 → 서브워드 토크나이저를 활용.
+  서브워드는 어떤방식으로 진행할 것인가? → Byte-Pair Encoding (BPE)를 사용
+그 중에서도 Morpheme-Aware Byte-Level Byte Pair Encoding(형태소 단위로 분리)을 사용
+  Morpheme-Aware Byte-Level Byte Pair Encoding는 많은 메모리를 필요로 하여 말뭉치 데이터의 크기를 최적화하는 것이 필요함."/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -35,7 +41,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/naver_hyperclova\/"
-        },"genre": "posts","keywords": "NLP, naver","wordcount":  768 ,
+        },"genre": "posts","keywords": "NLP, naver","wordcount":  799 ,
         "url": "https:\/\/colinder.github.io\/naver_hyperclova\/","datePublished": "2021-05-31T15:23:45+09:00","dateModified": "2021-05-31T15:23:45+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -112,7 +118,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">&#39;NAVER AI NOW&#39; HyperCLOVA_NLP</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/nlp/"><i class="far fa-folder fa-fw"></i>NLP</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-05-31">2021-05-31</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;768 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-05-31">2021-05-31</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;799 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;4 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -138,15 +144,23 @@ HyperCLOVA의 자연어 전처리 과정의 <strong>토근화</strong> 방법에
 <h2 id="데이터-토큰화">데이터 토큰화</h2>
 <blockquote>
 <p>자연어 처리를 위한 문장 데이터 토큰화에 대한 NAVER의 처리 방법을 정리해보겠습니다.</p>
-<p>말뭉치를 어떻게 구성하고 나눌 것인가에 대한 고민 → <strong>서브워드 토크나이저</strong>를 활용. 
-서브워드는 어떤방식으로 진행할 것인가? → **Byte-Pair Encoding (BPE)**를 사용
-그 중에서도 **Morpheme-Aware Byte-Level Byte Pair Encoding(형태소 단위로 분리)**을 사용
-Morpheme-Aware Byte-Level Byte Pair Encoding는 많은 메모리를 필요로 하여 말뭉치 데이터의 크기를 최적화하는 것이 필요함.</p>
+<ul>
+<li>
+<p>말뭉치를 어떻게 구성하고 나눌 것인가에 대한 고민 → <strong>서브워드 토크나이저</strong>를 활용.</p>
+</li>
+<li>
+<p>서브워드는 어떤방식으로 진행할 것인가? → <b>Byte-Pair Encoding (BPE)</b>를 사용<br>
+그 중에서도 <b>Morpheme-Aware Byte-Level Byte Pair Encoding(형태소 단위로 분리)</b>을 사용</p>
+</li>
+<li>
+<p>Morpheme-Aware Byte-Level Byte Pair Encoding는 많은 메모리를 필요로 하여 말뭉치 데이터의 크기를 최적화하는 것이 필요함.</p>
+</li>
+</ul>
 </blockquote>
 <p>​</p>
 <h2 id="서브워드란">서브워드란?</h2>
-<p>자연어 처리를 하려면 기계가 문장을 끊어 읽을 수 있게 만들어줘야 합니다. 이를 보통 토크나이징(tokenizing)은 이라고 하며 나눠진 단어나 형태소를 토큰이라고 합니다. 하지만 토큰은 &lsquo;문장&rsquo;에서 추출한 데이터고 &lsquo;문장&rsquo;은 글쓴이 개개인의 특성에 따라 구성이 다르기도 하며, 신조어를 사용하는 등 고려해야하는 사항이 많습니다. 특히 Out of Vocabulary(OOV) 미등록 된 단어의 문제는 자연어 처리에 있어서 해결이 어려운 이슈사항입니다.</p>
-<p>그리고 이를 보완하기 위해 Subword 방식이 대두되었습니다. 
+<p>자연어 처리를 하려면 기계가 문장을 끊어 읽을 수 있게 만들어줘야 합니다. 이를 보통 토크나이징(tokenizing)이라고 하며 나눠진 단어나 형태소를 <strong>토큰</strong>이라고 합니다. 하지만 토큰은 &lsquo;문장&rsquo;에서 추출한 데이터고 / &lsquo;문장&rsquo;은 작성한 사람에 따라 구성이 다르기도 하며, 신조어를 사용하는 등 고려해야하는 사항이 많습니다. 특히 Out of Vocabulary(OOV) 미등록 된 단어의 문제는 자연어 처리에 있어서 해결이 어려운 이슈사항입니다.</p>
+<p>그리고 이를 보완하기 위해 <strong>Subword</strong> 방식이 대두되었습니다. 
 <strong>하나의 단어는 더 작은 단위의 의미있는 여러 서브워드들의 조합으로 구성된 경우가 많기 때문</strong>에, 하나의 단어를 여러 서브워드로 분리해서 기계어로 변환하기 위한 작업입니다.</p>
 <p>​</p>
 <h2 id="bpebyte-pair-encoding">BPE(Byte Pair Encoding)</h2>
@@ -266,7 +280,7 @@ ex) &lsquo;나는 배가고프다.&rsquo; → &lsquo;나&rsquo;, &lsquo;는&rsqu
 <h2 id="서브워드로-나눈-말뭉치의-크기는-얼마나-설정할-것인가">서브워드로 나눈 말뭉치의 크기는 얼마나 설정할 것인가?</h2>
 <ol>
 <li>
-<p>일반적으로 자연어 말뭉치에 사용된 단어를 빈도순으로 나열했을 경우 **지프의 법칙(Zipf&rsquo;s Law)**을 따름.</p>
+<p>일반적으로 자연어 말뭉치에 사용된 단어를 빈도순으로 나열했을 경우 <b>지프의 법칙(Zipf&rsquo;s Law)</b>을 따름.</p>
 <blockquote>
 <p>Zipf&rsquo;s Law :  어떠한 <a href="https://ko.wikipedia.org/wiki/%ec%9e%90%ec%97%b0%ec%96%b4" target="_blank" rel="noopener noreffer">자연어</a> <a href="https://ko.wikipedia.org/wiki/%eb%a7%90%eb%ad%89%ec%b9%98" target="_blank" rel="noopener noreffer">말뭉치</a> 표현에 나타나는 단어들을 그 사용 빈도가 높은 순서대로 나열하였을 때, 모든 단어의 사용 빈도는 해당 단어의 순위에 <a href="https://ko.wikipedia.org/wiki/%eb%b0%98%eb%b9%84%eb%a1%80" target="_blank" rel="noopener noreffer">반비례</a>한다. 따라서 가장 사용 빈도가 높은 단어는 두 번째 단어보다 빈도가 약 두 배 높으며, 세 번째 단어보다는 빈도가 세 배 높다.</p>
 <p>한가지 예로 )<em>약 135개 항목의 어휘만으로 브라운 대학 말뭉치의 절반을 나타낼 수 있다.</em></p>
@@ -293,6 +307,11 @@ ex) &lsquo;나는 배가고프다.&rsquo; → &lsquo;나&rsquo;, &lsquo;는&rsqu
 <p>👉  네이버의 경우, &lsquo;언어의 유창함&rsquo;을 판별활 수 있는 모델을 만들어 자체적으로 성능을 평가함.</p>
 <p>​</p>
 <p>​</p>
+<h1 id="요약">👀요약</h1>
+<blockquote>
+<p>NLP관련 자료들을 보다 보니 개인적으로 고집해봤던 &lsquo;완벽한 토큰화&rsquo;는 아직 불가능해 보였습니다. konlpy, 한국전자통신연구원(ETRI), google NLP 등&hellip;
+다만, 이번에 개발된 네이버의 자연어 처리기술이 한국어에 있어서는 가장 진보되었고 &lsquo;사람다운&rsquo; 처리를 보여주는 것 같습니다.</p>
+</blockquote>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
