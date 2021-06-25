@@ -43,7 +43,7 @@ Activation Function(활성화 함수)  입력 신호의 총합을 출력신호�
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/activation_function\/"
-        },"genre": "posts","wordcount":  882 ,
+        },"genre": "posts","wordcount":  925 ,
         "url": "https:\/\/colinder.github.io\/activation_function\/","datePublished": "2021-06-24T15:04:29+09:00","dateModified": "2021-06-24T15:04:29+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -120,7 +120,7 @@ Activation Function(활성화 함수)  입력 신호의 총합을 출력신호�
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Activation_Function</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-06-24">2021-06-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;882 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-06-24">2021-06-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;925 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;5 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -152,14 +152,15 @@ Activation Function(활성화 함수)  입력 신호의 총합을 출력신호�
         </li>
         <li><a href="#center-softmax-functioncenter"><center>🔗 Softmax function</center></a>
           <ul>
-            <li><a href="#-span-stylecolorgreysigmoidspan다중-분류span-stylecolorgrey가-필요하다면span">🤔 <span style="color:grey">Sigmoid </span>다중 분류<span style="color:grey">가 필요하다면?</span></a></li>
+            <li><a href="#-span-stylecolorgrey-spangradient-vanishing-문제가-없는span-stylecolorgrey활성화-함수가-필요하다면span">🤔 <span style="color:grey"> </span>Gradient Vanishing 문제가 없는<span style="color:grey"> 활성화 함수가 필요하다면?</span></a></li>
           </ul>
         </li>
-        <li><a href="#center-relu-functioncenter"><center>🔗 ReLu function</center></a>
+        <li><a href="#center-relurectified-linear-unit-functioncenter"><center>🔗 ReLU(Rectified Linear Unit) function</center></a>
           <ul>
-            <li><a href="#-relu의-span-stylecolorgrey음수값을-살린span를-학습법이span-stylecolorgrey-필요하다면span">🤔 ReLu의 <span style="color:grey">음수값을 살린</span>를 학습법이<span style="color:grey"> 필요하다면?</span></a></li>
+            <li><a href="#-relu의-span-stylecolorgrey음수값을-살린span를-학습법이span-stylecolorgrey-필요하다면span">🤔 ReLU의 <span style="color:grey">음수값을 살린</span>를 학습법이<span style="color:grey"> 필요하다면?</span></a></li>
           </ul>
         </li>
+        <li><a href="#center-leaky-relu-functioncenter"><center>🔗 Leaky ReLU function</center></a></li>
       </ul>
     </li>
   </ul>
@@ -315,7 +316,7 @@ Activation Function(활성화 함수)  입력 신호의 총합을 출력신호�
 <image src="/images/Activation_Function_04.png" width="300px" style="display: block; margin: 40px auto">
 <ul>
 <li>
-<p>세 개 이상으로 분류하는 다중 클래스 분류에서 사용되는 활성화 함수.</p>
+<p>세 개 이상으로 분류하는 다중 클래스 분류에서 사용되는 활성화 함수입니다.</p>
 </li>
 <li>
 <p>기본적인 아이디어는 N개의 분류가 있을 때, N개의 이진 분류기를 사용하는 것입니다.</p>
@@ -332,16 +333,16 @@ Activation Function(활성화 함수)  입력 신호의 총합을 출력신호�
 <p>​</p>
 <p>​</p>
 <hr>
-<h4 id="-span-stylecolorgreysigmoidspan다중-분류span-stylecolorgrey가-필요하다면span">🤔 <span style="color:grey">Sigmoid </span>다중 분류<span style="color:grey">가 필요하다면?</span></h4>
+<h4 id="-span-stylecolorgrey-spangradient-vanishing-문제가-없는span-stylecolorgrey활성화-함수가-필요하다면span">🤔 <span style="color:grey"> </span>Gradient Vanishing 문제가 없는<span style="color:grey"> 활성화 함수가 필요하다면?</span></h4>
 <p>​</p>
-<h3 id="center-relu-functioncenter"><center>🔗 ReLu function</center></h3>
+<h3 id="center-relurectified-linear-unit-functioncenter"><center>🔗 ReLU(Rectified Linear Unit) function</center></h3>
 <image src="/images/Activation_Function_05.png" width="600px" style="display: block; margin: 40px auto">
 <ul>
-<li></li>
-</ul>
-<ul>
 <li>
-<p>음수를 입력하면 0을 출력하고, 양수를 입력하면 입력값을 그대로 반환</p>
+<p><b>가장 많이 사용되는 활성화 함수</b> 중 하나입니다.</p>
+</li>
+<li>
+<p>음수를 입력하면 0을 출력하고, 양수를 입력하면 입력값을 그대로 반환 =&gt; <b>Output은 0 이상의 실수</b></p>
 </li>
 <li>
 <p>tanh함수 대비 약 6배 빠른 속도로 학습이 가능하고, <strong>Gradient Vanishing</strong>가 발생하지 않습니다.</p>
@@ -352,7 +353,7 @@ Activation Function(활성화 함수)  입력 신호의 총합을 출력신호�
 </li>
 <li>
 <p>ReLu의 문제점은 <u>음수 값은 무조건 0으로 처리하기 때문에 학습 능력이 감소</u>한다.는 것에 있습니다.<br>
-이를 죽은 렐루(dying ReLU)라고 합니다.</p>
+이를 죽은 렐루(Dying ReLU)라고 합니다.</p>
 </li>
 <li>
 <p>그리고 이 문제를 완화하기 위해 <b>Leaky ReLu</b>함수가 등장하였습니다.</p>
@@ -363,10 +364,14 @@ Activation Function(활성화 함수)  입력 신호의 총합을 출력신호�
 </li>
 </ul>
 <hr>
-<h4 id="-relu의-span-stylecolorgrey음수값을-살린span를-학습법이span-stylecolorgrey-필요하다면span">🤔 ReLu의 <span style="color:grey">음수값을 살린</span>를 학습법이<span style="color:grey"> 필요하다면?</span></h4>
+<h4 id="-relu의-span-stylecolorgrey음수값을-살린span를-학습법이span-stylecolorgrey-필요하다면span">🤔 ReLU의 <span style="color:grey">음수값을 살린</span>를 학습법이<span style="color:grey"> 필요하다면?</span></h4>
 <p>​</p>
-<p>​</p>
-<p>​</p>
+<h3 id="center-leaky-relu-functioncenter"><center>🔗 Leaky ReLU function</center></h3>
+<image src="/images/Activation_Function_06.png" width="600px" style="display: block; margin: 40px auto">
+<ul>
+<li>위 그래프에서 공식 <b>αx (x ≤ 0)</b>에서 α는 사용자가 지정하는데 &lsquo;<b>매우 작은 수</b>&lsquo;로 지정하며 보통 <b>0.01</b>로 설정합니다.</li>
+<li>ReLU에서 음수값을 물이 누수(Leaky)되듯이 매우 작게나마 표시해주는 함수입니다.</li>
+</ul>
 <p>​</p>
 <p>​</p>
 <p>​</p>
