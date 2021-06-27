@@ -102,53 +102,45 @@
         alt="/images/jg_02.jpg"
         title="/images/jg_02.jpg" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/colinder" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="mailto:kjonggwan@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/04_sqld_%EC%A0%9C2-%EC%9E%A5-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%AA%A8%EB%8D%B8%EA%B3%BC-%EC%84%B1%EB%8A%A5/">04_SQLD_제1 절 성능데이터모델링의 개요 &amp; 제2 절 정규화와 성능</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-04-02">2021-04-02</time></span>&nbsp;<span class="post-category">included in <a href="/categories/sqld/"><i class="far fa-folder fa-fw"></i>SQLD</a></span></div><div class="content">​
-# SQLD  제2 장 데이터 모델과 성능  제1 절 성능데이터모델링의 개요   성능데이터모델링의 정의
-  데이터 용량이 커질수록 처리 속도 증가가 필요해진다.
-  성능 저하의 대표적인 원인 3가지
- 데이터 모델 구조에 의해 성능 저하 데이터가 대용량이 됨으로 인해 성능 저하 인덱스 특성을 고려하지 않고 생성해 성능 저하    즉, 어떤 작업 유형에 따라 성능향상을 도모해야 하는지 목표를 분명하게 해야 정확한 성능향상 모델링을 할 수 있다.</div><div class="post-footer">
-        <a href="/04_sqld_%EC%A0%9C2-%EC%9E%A5-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%AA%A8%EB%8D%B8%EA%B3%BC-%EC%84%B1%EB%8A%A5/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/sqld/">SQLD</a></div></div>
+        <a href="/django_04_form/">Django_04_form</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-04-23">2021-04-23</time></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw"></i>Django</a></span></div><div class="content">​
+Django_form  이제 여러 html파일을 만들어 여러 화면을 돌아다닐 수 있게 되었습니다. 그렇다면 A화면에서 입력한 정보를 B화면으로 가져가고 싶다면 어떻게 해야 할까요? form테그를 사용하면 됩니다.
+ ​
+👨‍💻 개발해봅시다. 기존에 만들었던 main.html을 활용해 만들어 보겠습니다.
+1. form 태그 생성 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19  &lt;!-- articles/templates/articles/main.html --&gt; &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;IE=edge&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.</div><div class="post-footer">
+        <a href="/django_04_form/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/django/">Django</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/03_sqld_%EC%A0%9C4-%EC%A0%88-%EA%B4%80%EA%B3%84-%EC%A0%9C5-%EC%A0%88-%EC%8B%9D%EB%B3%84%EC%9E%90/">03_SQLD_제4 절 관계 &amp; 제5 절 식별자</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-03-28">2021-03-28</time></span>&nbsp;<span class="post-category">included in <a href="/categories/sqld/"><i class="far fa-folder fa-fw"></i>SQLD</a></span></div><div class="content">​
-# SQL  제1 장 데이터 모델링의 이해  제4 절 관계(Relationship)   관계의 개념
-  관계의 정의
-&ldquo;인스턴스 사이의 논리적인 연관성으로서 존재의 형태 or 행위로서 서로에게 연관성이 부여된 상태&rdquo;
-  관계의 페어링
-&ldquo;관계는 인스턴스가 개별적으로 관계를 가지는 것(페어링)이고, 이것의 집합을 관계로 표현하는 것&rdquo;
-&ldquo;따라서 개별 인스턴스가 각각 다른 종류의 관계를 가지고 있다면, 두 엔터티 사이에 두 개 이상의 관계가 형성될 수 도 있다.&rdquo;
-​
-    관계의 분류</div><div class="post-footer">
-        <a href="/03_sqld_%EC%A0%9C4-%EC%A0%88-%EA%B4%80%EA%B3%84-%EC%A0%9C5-%EC%A0%88-%EC%8B%9D%EB%B3%84%EC%9E%90/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/sqld/">SQLD</a></div></div>
+        <a href="/django_02_addapp/">Django_02_addapp</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-04-22">2021-04-22</time></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw"></i>Django</a></span></div><div class="content">​
+Django_app  이번에는 생성된 프로젝트에서 1. app을 추가해 등록해보고 2. 서버 접속시 첫 메인 페이지를 제작해봅시다.
+ ​
+뜬금없이 CRUD를 알아보고 갑시다.  CRUD는 대부분의 컴퓨터 소프트웨어가 가지는 기본적인 데이터 처리 기능인 Create(생성), Read(읽기), Update(갱신), Delete(삭제)를 묶어서 일컫는 말입니다. 사용자 인터페이스가 갖추어야 할 기능(정보의 참조/검색/갱신 등) 중 가장 기본이라고 생각되는 기술들입니다.
+ ​
+이제 이어서 개발해봅시다. ​
+1. App 생성 지난번에는 프로젝트를 생성하고 setting.py에서 기본 설정만 변경해주었습니다. 이제 app을 생성해봅시다.</div><div class="post-footer">
+        <a href="/django_02_addapp/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/django/">Django</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/git_lfslarge-file-storage/">Git_LFS</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-03-25">2021-03-25</time></span>&nbsp;<span class="post-category">included in <a href="/categories/git/"><i class="far fa-folder fa-fw"></i>git</a></span></div><div class="content">​
-Git LFS(Large File Storage) 사용법  Git은 개당 파일에 100MB의 용량 제한이 걸려 있다. (전체 용량 제한은 없다.) 다만, 프로젝트를 하다보면 대용량의 자료나 파일이 생기는 경우가 있다. 이때 용량 제한의 문제를 해소할 수 있는 방법이 LFS이다.
-LFS는 별도로 설치하여 사용하면 되며, 방법을 정리한다.
- *주소: https://git-lfs.github.com
+        <a href="/django_01_startproject/">Django_01_startproject</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-04-22">2021-04-22</time></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw"></i>Django</a></span></div><div class="content">Django 개발환경준비   편리함을 추구하기 위해 AWS Cloud9을 사용하여 진행
+  https://ide.cs50.io/ 주소로 접속하면 진행이 가능하며, 진행을 위해선 Git 아이디가 있어야 한다.
+Git? : 버전 관리 시스템이며 Git은 소프트웨어를 개발하는 기업의 핵심 자산인 소스코드를 효과적으로 관리할 수 있게 해주는 무료, 공개소프트웨어. git에 대한 내용은 따로 정리해보도록 한다.
+  로그인까지 마치면 이제 Django 개발 준비 끝.
 ​
-  git LFS을 다운을 받고 설치 합니다.
-​
-  git LFS를 적용할 폴더로 이동해 다음 명령어를 입력합니다.
-1  $ git lfs install   ​</div><div class="post-footer">
-        <a href="/git_lfslarge-file-storage/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/git/">git</a>,&nbsp;<a href="/tags/lfs/">LFS</a></div></div>
+   👏 21.04.18 기준 django : 3.2 V 으로 다시 정리 합니다.</div><div class="post-footer">
+        <a href="/django_01_startproject/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/django/">Django</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/02_sqld_%EC%A0%9C2-%EC%A0%88-%EC%97%94%ED%84%B0%ED%8B%B0-%EC%A0%9C3-%EC%A0%88-%EC%86%8D%EC%84%B1/">02_SQLD_제2 절 엔터티 &amp; 제3 절 속성</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-03-25">2021-03-25</time></span>&nbsp;<span class="post-category">included in <a href="/categories/sqld/"><i class="far fa-folder fa-fw"></i>SQLD</a></span></div><div class="content">​
-# SQL  제1 장 데이터 모델링의 이해  제2 절 엔터티(Entity)   엔터티의 개념
-  실체, 객체 / 실무적으론는 앤터티라고 부른다. 즉 업무에 필요하고 유용한 정보를 저장하고 관리하기 위한 집합적인 것
-​
-    엔터티와 인스턴스에 대한 내용과 표기법
-​	  엔터티의 특징
-  반드시 해당 업무에서 필요하고 관리하고자 하는 정보여야 한다.
-  유일한 식별자에 의해 식별이 가능해야 한다.
-  영속적으로 존재하는 인스턴스의 집합이어야 한다.</div><div class="post-footer">
-        <a href="/02_sqld_%EC%A0%9C2-%EC%A0%88-%EC%97%94%ED%84%B0%ED%8B%B0-%EC%A0%9C3-%EC%A0%88-%EC%86%8D%EC%84%B1/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/sqld/">SQLD</a></div></div>
+        <a href="/django_00_whatisdjango/">Django_00_basic</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-04-22">2021-04-22</time></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw"></i>Django</a></span></div><div class="content">​
+Web ?  월드 와이드 웹(World Wide Web)이란 인터넷에 연결된 사용자들이 서로의 정보를 공유할 수 있는 공간을 의미하며, 줄여서 WWW나 W3라고도 부르며, 간단히 웹(Web)이라고 가장 많이 불린다.
+인터넷과 같은 의미로 많이 사용되고 있지만, 정확히 말해 웹은 인터넷상의 인기 있는 하나의 서비스일 뿐.
+Web의 작동방식을 간단히 설명하자면, 요청과 응답.
+사용자는 서버에 어떠한 요구사항을 요청하고 서버는 이에 따라 처리결과를 응답한다.
+예를들어 사용자가 Login 버튼을 누른 행위는 user가 서버에 로그인 하고 싶다고 요청한 것이며, 서버는 로그인 창을 띄움으로서 user가 로그인할 수 있게 응답한 것입니다.</div><div class="post-footer">
+        <a href="/django_00_whatisdjango/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/django/">Django</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -173,7 +165,7 @@ LFS는 별도로 설치하여 사용하면 되며, 방법을 정리한다.
                     <span class="page-link" aria-hidden="true">&hellip;</span>
                 </li><li class="page-item ">
                     <span class="page-link">
-                        <a href="/page/22/">22</a>
+                        <a href="/page/24/">24</a>
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">
