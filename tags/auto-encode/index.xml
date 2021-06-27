@@ -1,0 +1,20 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>auto-Encode - Tag - </title>
+        <link>https://colinder.github.io/tags/auto-encode/</link>
+        <description>auto-Encode - Tag - </description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 16 Jun 2021 15:02:22 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/auto-encode/" rel="self" type="application/rss+xml" /><item>
+    <title>Collaborative filtering by auto Encoder</title>
+    <link>https://colinder.github.io/collaborative-filtering-by-auto-encoder/</link>
+    <pubDate>Wed, 16 Jun 2021 15:02:22 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/collaborative-filtering-by-auto-encoder/</guid>
+    <description><![CDATA[​
+Collaborative filtering by auto Encoder  협업필터링을 딥러닝 방식의 하나인 오토 인코더로 구현하는데 알아두어야 할 배경지식에 대하여 정리
+ ​
+​
+Machine learning   기계가 명시적으로 코딩되지 않은 동작을 스스로 학습해 수행하게 하는 연구 분야. 인공지능(AI)의 한 분야로 간주된다. 기계 학습의 핵심은 표현(representation)과 일반화(generalization)에 있다. 표현이란 데이터의 평가이며, 일반화란 아직 알 수 없는 데이터에 대한 처리이다.
+​
+  What&rsquo;s the difference with &lsquo;Deep learning&rsquo;?   Machine learning은 어떤 문제와 답을 막 던져주면 기계가 계속 풀어내면서 추상적인 원리를 스스로 깨우치고 새로운 문제가 주어져도 스스로 답을 낼 수 있게 하는 것이다.]]></description>
+</item></channel>
+</rss>
