@@ -1,9 +1,9 @@
-# 09_Vue3._global_variable
+# 09_Vue3. global variable
 
 
 ​	
 
-# A singularity in vue3.
+# A Singularity in vue3.
 
 > vue2. 버전의 프로젝트 경험만 있었기에 최근에 새롭게 웹 개발 프로젝트를 준비하면서 변화된 Vue3. 버전에 대한 몇 가지 내용들을 정리합니다.
 

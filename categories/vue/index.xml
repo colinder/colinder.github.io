@@ -4,13 +4,13 @@
         <link>https://colinder.github.io/categories/vue/</link>
         <description>Vue - Category - </description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 23 Jun 2021 17:30:33 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/vue/" rel="self" type="application/rss+xml" /><item>
-    <title>09_Vue3._global_variable</title>
+    <title>09_Vue3. global variable</title>
     <link>https://colinder.github.io/09_vue3._global_variable/</link>
     <pubDate>Wed, 23 Jun 2021 17:30:33 &#43;0900</pubDate>
     <author>Author</author>
     <guid>https://colinder.github.io/09_vue3._global_variable/</guid>
     <description><![CDATA[​
-A singularity in vue3.  vue2. 버전의 프로젝트 경험만 있었기에 최근에 새롭게 웹 개발 프로젝트를 준비하면서 변화된 Vue3. 버전에 대한 몇 가지 내용들을 정리합니다.
+A Singularity in vue3.  vue2. 버전의 프로젝트 경험만 있었기에 최근에 새롭게 웹 개발 프로젝트를 준비하면서 변화된 Vue3. 버전에 대한 몇 가지 내용들을 정리합니다.
  ​
 Vue3. 전역 변수(Global Variable) 등록  간단하게 axios를 사용해보려고 했는데 Vue2. 버전과 Vue3. 버전의 main.js 초기 세팅이 달랐습니다. 한참을 헤매다 방법을 찾아 기록으로 남김니다.
  ​

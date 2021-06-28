@@ -21,7 +21,7 @@
 
 - `타원형`, `이쁜 노란색`, `푸르른 꼭지` 라는 데이터를 눈으로 보고 뇌속의 뉴런들이 이 정보를 분석해 `맛있겠다.`라는 출력을 불러왔습니다.
 
-입력된 데이터를 어떤 <b>규칙? 방법</b>에 따라 변환하여 출력 데이터로 변환하였는데요. 이 역할을 해주는 것이 ***Activation Function***입니다.
+입력된 데이터를 어떤 <b>규칙? 방법</b>에 따라 분석하여 출력 데이터로 변환하였는데요. 이 역할을 해주는 것이 ***Activation Function***입니다.
 
 
 ​		
@@ -34,7 +34,7 @@
 
 <image src="/images/Node_Layer_00.png" width="1000px" style="display: block; margin: 20px auto">
 
-<p style='text-align:right; font-style:italic; color:grey'><u>Node</u>는 <u>뇌속의 뉴런</u>과 같은 역할이고,<br><u>Node</u>들이 모여 <u>인공신경망의 층이라 불리는 Layer</u>가 됩니다.</p>
+<p style='text-align:right; font-style:italic; color:grey; font-size:0.9em'><u>Node</u>는 <u>뇌속의 뉴런</u>과 같은 역할이고,<br><u>Node</u>들이 모여 <u>인공신경망의 층이라 불리는 Layer</u>가 됩니다.</p>
 
 ​			
 
