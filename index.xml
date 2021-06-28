@@ -3,9 +3,19 @@
         <title></title>
         <link>https://colinder.github.io/</link>
         <description>Hello New World</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 24 Jun 2021 15:04:29 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 28 Jun 2021 14:35:39 &#43;0900</lastBuildDate>
             <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>RNN &amp; LSTM</title>
+    <link>https://colinder.github.io/rnn-lstm/</link>
+    <pubDate>Mon, 28 Jun 2021 14:35:39 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/rnn-lstm/</guid>
+    <description><![CDATA[​
+RNN &amp; LSTM  감정분석을 위한 프로젝트를 기획하면서 RNN과 LSTM이라는 신경망 분석에 대하여 알게 되었습니다. 신경망 분석은 기계학습과 인지과학에서 영감을 얻어 설계된 통계학적 학습 알고리즘인데요. 이 둘의 개념를 알아보고 간단한 실습자료까지 진행해보겠습니다.
+ ​
+&lsquo;머신러닝&rsquo;이란 무엇인지 우선 알아봅시다.  머신 러닝(machine learning) 또는 기계 학습(機械學習)은 경험을 통해 자동으로 개선하는 컴퓨터 알고리즘 연구 분야입니다. 이는 인공지능의 한 분야로 간주되며, 컴퓨터가 학습할 수 있도록 하는 알고리즘과 기술을 개발합니다. 예를 들어 &lsquo;이 운동화가 진품이 맞는지?]]></description>
+</item><item>
     <title>Activation_Function</title>
     <link>https://colinder.github.io/activation-function/</link>
     <pubDate>Thu, 24 Jun 2021 15:04:29 &#43;0900</pubDate>
@@ -111,18 +121,5 @@ Django_form  이제 여러 html파일을 만들어 여러 화면을 돌아다닐
  ​
 👨‍💻 개발해봅시다. 기존에 만들었던 main.html을 활용해 만들어 보겠습니다.
 1. form 태그 생성 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19  &lt;!-- articles/templates/articles/main.html --&gt; &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;IE=edge&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.]]></description>
-</item><item>
-    <title>Django_02_addapp</title>
-    <link>https://colinder.github.io/django_02_addapp/</link>
-    <pubDate>Thu, 22 Apr 2021 23:17:41 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/django_02_addapp/</guid>
-    <description><![CDATA[​
-Django_app  이번에는 생성된 프로젝트에서 1. app을 추가해 등록해보고 2. 서버 접속시 첫 메인 페이지를 제작해봅시다.
- ​
-뜬금없이 CRUD를 알아보고 갑시다.  CRUD는 대부분의 컴퓨터 소프트웨어가 가지는 기본적인 데이터 처리 기능인 Create(생성), Read(읽기), Update(갱신), Delete(삭제)를 묶어서 일컫는 말입니다. 사용자 인터페이스가 갖추어야 할 기능(정보의 참조/검색/갱신 등) 중 가장 기본이라고 생각되는 기술들입니다.
- ​
-이제 이어서 개발해봅시다. ​
-1. App 생성 지난번에는 프로젝트를 생성하고 setting.py에서 기본 설정만 변경해주었습니다. 이제 app을 생성해봅시다.]]></description>
 </item></channel>
 </rss>
