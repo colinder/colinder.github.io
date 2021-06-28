@@ -35,7 +35,7 @@ RNN &amp; LSTM  감정분석을 위한 프로젝트를 기획하면서 RNN과 LS
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/rnn-lstm\/"
-        },"genre": "posts","keywords": "RNN, LSTM, Activation Function","wordcount":  759 ,
+        },"genre": "posts","keywords": "RNN, LSTM, Activation Function","wordcount":  761 ,
         "url": "https:\/\/colinder.github.io\/rnn-lstm\/","datePublished": "2021-06-28T14:35:39+09:00","dateModified": "2021-06-28T14:35:39+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -112,7 +112,7 @@ RNN &amp; LSTM  감정분석을 위한 프로젝트를 기획하면서 RNN과 LS
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">RNN &amp; LSTM</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/rnn/"><i class="far fa-folder fa-fw"></i>RNN</a>&nbsp;<a href="/categories/lstm/"><i class="far fa-folder fa-fw"></i>LSTM</a>&nbsp;<a href="/categories/activation-function/"><i class="far fa-folder fa-fw"></i>Activation Function</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-06-28">2021-06-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;759 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-06-28">2021-06-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;761 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;4 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -186,17 +186,19 @@ RNN &amp; LSTM  감정분석을 위한 프로젝트를 기획하면서 RNN과 LS
 <image src="/images/RNN_04.png">
 <p>위 그림은 싱글 레이어(단일 tanh 레이어)를 가지고 반복되는 <span style="color:#01DF3A">simple RNN</span> 모듈을 표현하고 있습니다.</p>
 <p>그럼 <span style="color:#E3A437">LSTM</span>네트워크는 어떻게 생겼을까요?</p>
-<image src="/images/RNN_06.png" width="1000px" style="display: block; margin: 20px auto">
-<p>​</p>
+<p><image src="/images/LSTM_00.png" width="800px" style="display: block; margin: 10px auto" ></p>
+<p>Cell의 내부는</p>
+<p><image src="/images/LSTM_01.png" width="600px" style="display: block; margin: 10px auto" ></p>
 <p>RNN에 비해 복잡한 구조를 가지고 있습니다. 차근히 알아보겠습니다.</p>
+<p>​</p>
 <p>위의 그림에서 <image src="/images/LSTM_cell_state.png" height="25px"> 이 <strong>(cell) state</strong> / <image src="/images/LSTM_hidden_state.png" height="25px">이 <strong>hidden state</strong>입니다.</p>
 <ul>
 <li>
-<p>Cell state</p>
+<p><i><b>Cell state</b></i></p>
 <p>(cell) state는 컨베이어 벨트 처럼 담겨있는 정보(state)를 계속 흐르게 하는 부분입니다. (cell) state에는 뭔가를 더하거나 없앨 수 있는데 이는 gate라는 곳에서 제어됩니다.</p>
 </li>
 <li>
-<p>Hidden state</p>
+<p><i><b>Hidden state</b></i></p>
 <p>hidden state는 &lsquo;<strong>이전 출력물(previous output)</strong>&lsquo;입니다. RNN에서 확인했던 <b><span style="color:#EE863A">출력을 다시 입력으로 받</span></b>는 부분입니다.</p>
 <p>​</p>
 </li>

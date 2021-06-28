@@ -74,19 +74,23 @@ _간단히, **길이가 긴 Sequence data 의미를 잘 파악하지 못하며, 
 
 그럼 <span style="color:#E3A437">LSTM</span>네트워크는 어떻게 생겼을까요?
 
-<image src="/images/RNN_06.png" width="1000px" style="display: block; margin: 20px auto">
+<image src="/images/LSTM_00.png" width="800px" style="display: block; margin: 10px auto" >
 
-​			
+Cell의 내부는 
+
+<image src="/images/LSTM_01.png" width="600px" style="display: block; margin: 10px auto" >
 
 RNN에 비해 복잡한 구조를 가지고 있습니다. 차근히 알아보겠습니다.
 
+​		
+
 위의 그림에서 <image src="/images/LSTM_cell_state.png" height="25px"> 이 **(cell) state** / <image src="/images/LSTM_hidden_state.png" height="25px">이 **hidden state**입니다. 
 
-- Cell state
+- <i><b>Cell state</b></i>
 
   (cell) state는 컨베이어 벨트 처럼 담겨있는 정보(state)를 계속 흐르게 하는 부분입니다. (cell) state에는 뭔가를 더하거나 없앨 수 있는데 이는 gate라는 곳에서 제어됩니다. 
 
-- Hidden state
+- <i><b>Hidden state</b></i>
 
   hidden state는 '**이전 출력물(previous output)**'입니다. RNN에서 확인했던 <b><span style="color:#EE863A">출력을 다시 입력으로 받</span></b>는 부분입니다.
 
