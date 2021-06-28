@@ -255,7 +255,6 @@ _<b>선형함수(직선 그래프로 표현되는 함수)를 사용하면 Layer(
 
 <image src="/images/Activation_Function_06.png" width="600px" style="display: block; margin: 40px auto">
 
-- Leaky ReLU의 정확한 공식은 <i><u><b>max(αx, x)</b></u></i>입니다. 
 - 위 그래프에서 공식 <b>αx (x ≤ 0)</b>에서 α는 사용자가 지정하는데 '<b>매우 작은 수</b>'로 지정하며 보통 <b>0.01</b>로 설정합니다.
 - ReLU에서 음수값을 물이 누수(Leaky)되듯이 매우 작게나마 표시해주는 함수입니다.
 
