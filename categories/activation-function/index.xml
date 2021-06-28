@@ -10,9 +10,9 @@
     <author>Author</author>
     <guid>https://colinder.github.io/rnn-lstm/</guid>
     <description><![CDATA[​
-RNN &amp; LSTM  감정분석을 위한 프로젝트를 기획하면서 RNN과 LSTM이라는 신경망 분석에 대하여 알게 되었습니다. 신경망 분석은 기계학습과 인지과학에서 영감을 얻어 설계된 통계학적 학습 알고리즘인데요. 이 둘의 개념를 알아보고 간단한 실습자료까지 진행해보겠습니다.
+RNN &amp; LSTM  감정분석을 위한 프로젝트를 기획하면서 RNN과 LSTM이라는 신경망 분석에 대하여 알게 되었습니다. 신경망 분석은 기계학습과 인지과학에서 영감을 얻어 설계된 통계학적 학습 알고리즘인데요. 이 둘의 개념를 알아보겠습니다.
  ​
-&lsquo;머신러닝&rsquo;이란 무엇인지 우선 알아봅시다.  머신 러닝(machine learning) 또는 기계 학습(機械學習)은 경험을 통해 자동으로 개선하는 컴퓨터 알고리즘 연구 분야입니다. 이는 인공지능의 한 분야로 간주되며, 컴퓨터가 학습할 수 있도록 하는 알고리즘과 기술을 개발합니다. 예를 들어 &lsquo;이 운동화가 진품이 맞는지?]]></description>
+&lsquo;머신러닝&rsquo;이란 무엇인지 우선 알아봅시다.  머신 러닝(machine learning) 또는 기계 학습(機械學習)은 경험을 통해 자동으로 개선하는 컴퓨터 알고리즘 연구 분야입니다. 이는 인공지능의 한 분야로 간주되며, 컴퓨터가 학습할 수 있도록 하는 알고리즘과 기술을 개발합니다. 예를 들어 &lsquo;이 운동화가 진품이 맞는지?&rsquo;, &lsquo;특정 시간대에 A에서 B까지 가는데 얼마나 시간이 걸리는지?]]></description>
 </item><item>
     <title>Activation_Function</title>
     <link>https://colinder.github.io/activation-function/</link>
