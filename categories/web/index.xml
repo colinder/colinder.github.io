@@ -3,7 +3,18 @@
         <title>web - Category - </title>
         <link>https://colinder.github.io/categories/web/</link>
         <description>web - Category - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 10 Jun 2021 09:06:44 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/web/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 22 Jun 2021 17:22:50 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/web/" rel="self" type="application/rss+xml" /><item>
+    <title>Django vs Node.js 질문을 받았습니다.</title>
+    <link>https://colinder.github.io/django-vs-node.js-%EC%A7%88%EB%AC%B8%EC%9D%84-%EB%B0%9B%EC%95%98%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
+    <pubDate>Tue, 22 Jun 2021 17:22:50 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/django-vs-node.js-%EC%A7%88%EB%AC%B8%EC%9D%84-%EB%B0%9B%EC%95%98%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
+    <description><![CDATA[​
+🎈질문을 받았습니다.  저희는 이전에는 django로 풀스택 개발을 했어요. 개발자님은 django - vue.js로 개발을 하신다고 들었는데, vue는 javaScript 언어고 django는 Python 언어인데 둘이 뭔가 통신? 데이터를 주고 받고 하는 것에 있어서 문제는 없나요?
+또 같은 javaScript 언어인 node.js 라는 것으로도 Backend 개발이 가능하다고 봤는데 node.js를 Backend로 개발하는 것이, 같은 javaScript로 개발하니까 더 효율적? 좋은거 아닌가요?
+ ​
+👨‍💻 하나는 명확히 답을 드릴 수 있는데, 하나는 모르겠네요. 알아보고 말씀드리겠습니다 . ​]]></description>
+</item><item>
     <title>form 태그</title>
     <link>https://colinder.github.io/form/</link>
     <pubDate>Thu, 10 Jun 2021 09:06:44 &#43;0900</pubDate>
@@ -114,20 +125,5 @@ AJAX  세상에는 다양한 web서버가 있다.
     <description><![CDATA[​
 REST API Reference [TOC]
 1.사용자 API    Members Descriptions     POST /accounts/signup 회원가입   POST /accounts/login 회원 로그인   POST /accounts/userDetail 회원정보   PUT /accounts/update 회원정보 수정   DELETE /accounts/dropUser 회원탈퇴   GET /accounts/emailAuth 이메일 인증   GET /accounts/emailCheck 이메일 중복 확인   GET /accounts/nicknameCheck 닉네임 중복 확인    1.1 회원 로그인 POST /accounts/login ​	회원 로그인 API 입니다.]]></description>
-</item><item>
-    <title>Naming Convention</title>
-    <link>https://colinder.github.io/namingconvention/</link>
-    <pubDate>Sun, 02 Aug 2020 22:24:45 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/namingconvention/</guid>
-    <description><![CDATA[​
-Naming Convention  정해진 규정은 없으나, 많은 개발자들이 암묵적으로 지키고 있는 이름짓는 방법.
- ​
-  snake_case 🐍
-1 2 3  # _ == snake some_var = 5 my_awesome = 3   ​
-  camelCase 🐪
-1 2 3  # 낙타등이 솟아 있는 모습 someVar = 5 pyAwesome = 3   ​
-  UpperCamelCase 🐪🐪
-1 2 3  # 낙타얼굴과 등이 중간에 솟아 있는 모습 (파스칼식(Pascal case)이라고도 불린다.]]></description>
 </item></channel>
 </rss>

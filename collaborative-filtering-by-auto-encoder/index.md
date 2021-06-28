@@ -9,8 +9,6 @@
 
 ​	
 
-​	
-
 ## Machine learning
 
 - **기계가 명시적으로 코딩되지 않은 동작을 스스로 학습해 수행하게 하는 연구 분야**. 인공지능(AI)의 한 분야로 간주된다. 
@@ -47,6 +45,6 @@
   예를들어 아래 그림처럼 hidden layer(회색 동그라미)의 뉴런 수를 input layer(입력층)보다 작게해서 데이터를 압축(차원을 축소)한다거나, 입력 데이터에 노이즈(noise)를 추가한 후 원본 입력을 복원할 수 있도록 네트워크를 학습시키는 등 다양한 오토인코더가 있다.
   이러한 제약들은 오토인코더가 단순히 입력을 바로 출력으로 복사하지 못하도록 방지하며, 데이터를 효율적으로 표현(representation)하는 방법을 학습하도록 컨트롤한다.
 
-  ![img](https://t1.daumcdn.net/cfile/tistory/996C93475BDC97C00A)
+<image src="https://t1.daumcdn.net/cfile/tistory/996C93475BDC97C00A" style="display: block; margin: 10px auto;">
 
 

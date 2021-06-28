@@ -3,7 +3,19 @@
         <title>Vue - Tag - </title>
         <link>https://colinder.github.io/tags/vue/</link>
         <description>Vue - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 15 Oct 2020 21:04:53 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/vue/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 23 Jun 2021 17:30:33 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/vue/" rel="self" type="application/rss+xml" /><item>
+    <title>09_Vue3._global_variable</title>
+    <link>https://colinder.github.io/09_vue3._global_variable/</link>
+    <pubDate>Wed, 23 Jun 2021 17:30:33 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/09_vue3._global_variable/</guid>
+    <description><![CDATA[​
+A singularity in vue3.  vue2. 버전의 프로젝트 경험만 있었기에 최근에 새롭게 웹 개발 프로젝트를 준비하면서 변화된 Vue3. 버전에 대한 몇 가지 내용들을 정리합니다.
+ ​
+Vue3. 전역 변수(Global Variable) 등록  간단하게 axios를 사용해보려고 했는데 Vue2. 버전과 Vue3. 버전의 main.js 초기 세팅이 달랐습니다. 한참을 헤매다 방법을 찾아 기록으로 남김니다.
+ ​
+1. 프로젝트 생성 후 axios 설치 1 2 3  # 프로젝트 폴더(package.json이 있는 폴더)에서 npm install axios   ​]]></description>
+</item><item>
     <title>06_Vue_LifeCycle</title>
     <link>https://colinder.github.io/06_vue_lifecycle/</link>
     <pubDate>Thu, 15 Oct 2020 21:04:53 &#43;0900</pubDate>
@@ -58,33 +70,33 @@ AJAX  세상에는 다양한 web서버가 있다.
   대표적인 통신 방법을 AJAX라 한다. 이는 JavaScript의 라이브러리중 하나이며 Asynchronous Javascript And Xml(비동기식 자바스크립트와 xml)의 약자며, 자체가 하나의 특정한 기술을 말하는 것이 아니며, 함께 사용하는 기술의 묶음을 지칭하는 용어이다.
 브라우저가 가지고있는 XMLHttpRequest 객체를 이용해서 전체 페이지를 새로 고치지 않고도 페이지의 일부만을 위한 데이터를 로드하는 기법 이며 Ajax를 한마디로 정의하자면 JavaScript를 사용한 비동기 통신, 클라이언트와 서버간에 XML 데이터를 주고받는 기술이라고 할 수 있겠습니다.]]></description>
 </item><item>
-    <title>08_Vuex_03</title>
-    <link>https://colinder.github.io/08_vuex_03/</link>
+    <title>08_Vue_Vuex Concept...</title>
+    <link>https://colinder.github.io/08_vue_vuex-concept/</link>
     <pubDate>Thu, 27 Aug 2020 21:48:19 &#43;0900</pubDate>
     <author>Author</author>
-    <guid>https://colinder.github.io/08_vuex_03/</guid>
+    <guid>https://colinder.github.io/08_vue_vuex-concept/</guid>
     <description><![CDATA[​
 Vuex 핵심컨셉(getters, mutations, actions, modules)  3. Actions  공식문서에 따르면 액션(Actions)은 변이(mutations)와 유사하나, 몇가지 다른 점이 있다고 한다.
  상태를 변이시키는 대신 액션으로 변이에 대한 커밋을 합니다. 작업에는 임의의 비동기 작업이 포함될 수 있습니다.    Q. 상태를 변이시키는 대신 액션으로 변이에 대한 커밋을 합니다.
 A. mutations의 역할은 State를 관리하는 것이다. 그런데 만약 비동기적 요청을 마구잡이로 보내게 된다면, State가 변질될 가능성이 높아진다. 결국 비동기 요청의 경우에도 mutations에 정의한 메소드의 형태로 보내어 상태가 변화하는 것을 추적한다.]]></description>
 </item><item>
-    <title>07_Vuex_02</title>
-    <link>https://colinder.github.io/07_vuex_02/</link>
+    <title>07_Vue_Vuex Concept</title>
+    <link>https://colinder.github.io/07_vue_vuex-concept/</link>
     <pubDate>Sun, 16 Aug 2020 19:39:10 &#43;0900</pubDate>
     <author>Author</author>
-    <guid>https://colinder.github.io/07_vuex_02/</guid>
+    <guid>https://colinder.github.io/07_vue_vuex-concept/</guid>
     <description><![CDATA[​
 Vuex 핵심컨셉(getters, mutations, actions, modules)  1. Getters  만약? A.vue와 B.vue에서 각각 store의 state에 등록된 second의 2를 3으로 변형해 사용하고 싶다면 어떻게 해야 할까? 저장소에 등록되어 있는 상태(state)를 변경하고 싶다면?
  아마 귀찮겠지만, 각각의 파일에서
 1 2 3 4 5 6 7  // A.vue  computed: { change() { return this.$store.state.second + 1 } }   1 2 3 4 5 6 7  // B.vue  computed: { change() { return this.]]></description>
 </item><item>
-    <title>05_Vuex_01</title>
-    <link>https://colinder.github.io/05_vuex_01/</link>
+    <title>05_Vue_What is Vuex?</title>
+    <link>https://colinder.github.io/05_vue_what-is-vuex/</link>
     <pubDate>Sun, 02 Aug 2020 22:22:58 &#43;0900</pubDate>
     <author>Author</author>
-    <guid>https://colinder.github.io/05_vuex_01/</guid>
+    <guid>https://colinder.github.io/05_vue_what-is-vuex/</guid>
     <description><![CDATA[​
-Vuex 란? (공식문서)  Vuex는 Vue.js 애플리케이션에 대한 상태 관리 패턴 + 라이브러리 입니다. 애플리케이션의 모든 컴포넌트에 대한 중앙 집중식 저장소 역할을 하며 예측 가능한 방식으로 상태를 변경할 수 있습니다. 또한 Vue의 공식 devtools 확장 프로그램과 통합되어 설정 시간이 필요 없는 디버깅 및 상태 스냅 샷 내보내기/가져오기와 같은 고급 기능을 제공합니다. (공식문서 설명)
+What is Vuex? (공식문서)  Vuex는 Vue.js 애플리케이션에 대한 상태 관리 패턴 + 라이브러리 입니다. 애플리케이션의 모든 컴포넌트에 대한 중앙 집중식 저장소 역할을 하며 예측 가능한 방식으로 상태를 변경할 수 있습니다. 또한 Vue의 공식 devtools 확장 프로그램과 통합되어 설정 시간이 필요 없는 디버깅 및 상태 스냅 샷 내보내기/가져오기와 같은 고급 기능을 제공합니다. (공식문서 설명)
  ​
 1 2 3 4 5  # 설치 명령어 npm i vuex or npm install vuex # 이후  src폴더안에 vuex폴더를 만들고 store.]]></description>
 </item><item>
@@ -108,22 +120,5 @@ Vuex 란? (공식문서)  Vuex는 Vue.js 애플리케이션에 대한 상태 관
     <description><![CDATA[​
 Vue의 기본 문법 및 동작 방법을 계속 알아보자 08_methods
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38  ✨Point 1. method는 methods: {}의 문법으로 구성한다. &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt; &lt;title&gt;Methods&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;div id=&#39;app&#39;&gt; {{ message }} &lt;/div&gt; &lt;!]]></description>
-</item><item>
-    <title>01_Vue_basic (Vue란? &amp; Vue 문법1)</title>
-    <link>https://colinder.github.io/01_vue_basic/</link>
-    <pubDate>Fri, 17 Jul 2020 22:03:05 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/01_vue_basic/</guid>
-    <description><![CDATA[​
-Vue  Vue.js는 웹 애플리케이션의 사용자 인터페이스를 만들기 위해 사용하는 오픈 소스 프로그레시브 자바스크립트 프레임워크
-간단히, 온라인 홈페이지를 만드는 프로그램입니다.
-아래 정리할 내용들이 당장 크게 와닿지 않을 수 있습니다. 하지만 필요할 때 보면, 도움이 될 것입니다!
- ​
-Vue의 이론적 구성 및 설명을 알아보자 1. Vue는 MVVM 패턴을 따른다.
- MVVM(Model-View-ViewModel) 패턴?
-모델과 뷰 사이에 뷰모델이 위치하는 구조
- ​
-2. Vue는 SPA (Single-Page Application)
- 서버로부터 완전한 새로운 페이지를 불러오지 않고 현재의 페이지를 동적으로 다시 작성함으로써 사용자와 소통하는 웹 애플리케이션을 말한다.]]></description>
 </item></channel>
 </rss>

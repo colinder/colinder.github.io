@@ -3,7 +3,18 @@
         <title>web - Tag - </title>
         <link>https://colinder.github.io/tags/web/</link>
         <description>web - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 10 Jun 2021 09:06:44 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/web/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 22 Jun 2021 17:22:50 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/web/" rel="self" type="application/rss+xml" /><item>
+    <title>Django vs Node.js 질문을 받았습니다.</title>
+    <link>https://colinder.github.io/django-vs-node.js-%EC%A7%88%EB%AC%B8%EC%9D%84-%EB%B0%9B%EC%95%98%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
+    <pubDate>Tue, 22 Jun 2021 17:22:50 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/django-vs-node.js-%EC%A7%88%EB%AC%B8%EC%9D%84-%EB%B0%9B%EC%95%98%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
+    <description><![CDATA[​
+🎈질문을 받았습니다.  저희는 이전에는 django로 풀스택 개발을 했어요. 개발자님은 django - vue.js로 개발을 하신다고 들었는데, vue는 javaScript 언어고 django는 Python 언어인데 둘이 뭔가 통신? 데이터를 주고 받고 하는 것에 있어서 문제는 없나요?
+또 같은 javaScript 언어인 node.js 라는 것으로도 Backend 개발이 가능하다고 봤는데 node.js를 Backend로 개발하는 것이, 같은 javaScript로 개발하니까 더 효율적? 좋은거 아닌가요?
+ ​
+👨‍💻 하나는 명확히 답을 드릴 수 있는데, 하나는 모르겠네요. 알아보고 말씀드리겠습니다 . ​]]></description>
+</item><item>
     <title>form 태그</title>
     <link>https://colinder.github.io/form/</link>
     <pubDate>Thu, 10 Jun 2021 09:06:44 &#43;0900</pubDate>
@@ -122,21 +133,5 @@ Web을 공부하다보면 반드시 듣게 되는 단어. &ldquo;DOM&rdquo;
 ​
 DOM이란?  DOM(Document Object Model)은 웹 페이지에 대한 인터페이스입니다. 기본적으로 페이지의 콘텐츠 및 구조, 그리고 스타일을 읽고 조작할 수 있도록 API를 제공합니다. 먼저 DOM을 이해하기 전에 웹 페이지가 어떻게 빌드 되는지 알아보면 이해하는데 도움이 됩니다. 하여 알아봅시다!
  *인터페이스(interface): 서로 다른 두 개의 시스템, 장치 사이에서 정보나 신호를 주고받는 경우의 접점이나 경계면이다.]]></description>
-</item><item>
-    <title>동기 &amp; 비동기 &amp; CallBack함수</title>
-    <link>https://colinder.github.io/sync_async_callback/</link>
-    <pubDate>Sun, 11 Oct 2020 21:47:43 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/sync_async_callback/</guid>
-    <description><![CDATA[​
-동기(Synchronous)란? 어떤 작업을 실행했을 때, 그 작업이 끝나고 결과를 응답받은 뒤에 다음 함수를 실행하는 방식.
-만약 응답값이 없다면, 무한정 기다려요. 즉, 응답을 받아야! 다음 실행이 되는 방식입니다.
-ex) A실행 👉 A의 결과값 return 확인 👉 B실행
- ​
-비동기(Asynchronous)란? 어떤 작업을 실행한 후 결과값을 기다리지 않고, 바로 다음 함수를 실행합니다.
-ex) A실행 👉 B실행 👉 &hellip;
- ​
-CallBack함수란? 비동기 처리결과로 반환되는 Callback함수
-Callback함수는 특정함수에 매개변수로 전달된 함수를 의미합니다.]]></description>
 </item></channel>
 </rss>

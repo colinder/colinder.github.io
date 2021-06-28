@@ -3,9 +3,46 @@
         <title></title>
         <link>https://colinder.github.io/</link>
         <description>Hello New World</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 16 Jun 2021 15:02:22 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 24 Jun 2021 15:04:29 &#43;0900</lastBuildDate>
             <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Activation_Function</title>
+    <link>https://colinder.github.io/activation-function/</link>
+    <pubDate>Thu, 24 Jun 2021 15:04:29 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/activation-function/</guid>
+    <description><![CDATA[​
+Activation Function(활성화 함수)  입력 신호의 총합을 출력신호로 변환하는 함수를 일반적으로 Activation Function이라고 합니다.
+ ​
+아직 잘 모르겠습니다. 하여 인공신경망에 빗대어 이해해보겠습니다.
+인공 신경망은 인간의 중추신경계(뇌)속의 뉴런들이 정보를 전달하고 학습하여 결과를 도출해내는 과정을 모방한 학습알고리즘입니다.
+여기서 의문점이 생깁니다.
+  예를 들어 지나가다 귤을 보았는데 맛이 있을지 없을지 어떻게 알 수 있을까요? 저 귤의 데이터를 수집해 봅시다.
+  타원형, 이쁜 노란색, 푸르른 꼭지 라는 데이터를 눈으로 보고 뇌속의 뉴런들이 이 정보를 분석해 맛있겠다.]]></description>
+</item><item>
+    <title>09_Vue3._global_variable</title>
+    <link>https://colinder.github.io/09_vue3._global_variable/</link>
+    <pubDate>Wed, 23 Jun 2021 17:30:33 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/09_vue3._global_variable/</guid>
+    <description><![CDATA[​
+A singularity in vue3.  vue2. 버전의 프로젝트 경험만 있었기에 최근에 새롭게 웹 개발 프로젝트를 준비하면서 변화된 Vue3. 버전에 대한 몇 가지 내용들을 정리합니다.
+ ​
+Vue3. 전역 변수(Global Variable) 등록  간단하게 axios를 사용해보려고 했는데 Vue2. 버전과 Vue3. 버전의 main.js 초기 세팅이 달랐습니다. 한참을 헤매다 방법을 찾아 기록으로 남김니다.
+ ​
+1. 프로젝트 생성 후 axios 설치 1 2 3  # 프로젝트 폴더(package.json이 있는 폴더)에서 npm install axios   ​]]></description>
+</item><item>
+    <title>Django vs Node.js 질문을 받았습니다.</title>
+    <link>https://colinder.github.io/django-vs-node.js-%EC%A7%88%EB%AC%B8%EC%9D%84-%EB%B0%9B%EC%95%98%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
+    <pubDate>Tue, 22 Jun 2021 17:22:50 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/django-vs-node.js-%EC%A7%88%EB%AC%B8%EC%9D%84-%EB%B0%9B%EC%95%98%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
+    <description><![CDATA[​
+🎈질문을 받았습니다.  저희는 이전에는 django로 풀스택 개발을 했어요. 개발자님은 django - vue.js로 개발을 하신다고 들었는데, vue는 javaScript 언어고 django는 Python 언어인데 둘이 뭔가 통신? 데이터를 주고 받고 하는 것에 있어서 문제는 없나요?
+또 같은 javaScript 언어인 node.js 라는 것으로도 Backend 개발이 가능하다고 봤는데 node.js를 Backend로 개발하는 것이, 같은 javaScript로 개발하니까 더 효율적? 좋은거 아닌가요?
+ ​
+👨‍💻 하나는 명확히 답을 드릴 수 있는데, 하나는 모르겠네요. 알아보고 말씀드리겠습니다 . ​]]></description>
+</item><item>
     <title>Collaborative filtering by auto Encoder</title>
     <link>https://colinder.github.io/collaborative-filtering-by-auto-encoder/</link>
     <pubDate>Wed, 16 Jun 2021 15:02:22 &#43;0900</pubDate>
@@ -14,7 +51,6 @@
     <description><![CDATA[​
 Collaborative filtering by auto Encoder  협업필터링을 딥러닝 방식의 하나인 오토 인코더로 구현하는데 알아두어야 할 배경지식에 대하여 정리
  ​
-​
 Machine learning   기계가 명시적으로 코딩되지 않은 동작을 스스로 학습해 수행하게 하는 연구 분야. 인공지능(AI)의 한 분야로 간주된다. 기계 학습의 핵심은 표현(representation)과 일반화(generalization)에 있다. 표현이란 데이터의 평가이며, 일반화란 아직 알 수 없는 데이터에 대한 처리이다.
 ​
   What&rsquo;s the difference with &lsquo;Deep learning&rsquo;?   Machine learning은 어떤 문제와 답을 막 던져주면 기계가 계속 풀어내면서 추상적인 원리를 스스로 깨우치고 새로운 문제가 주어져도 스스로 답을 낼 수 있게 하는 것이다.]]></description>
@@ -88,38 +124,5 @@ Django_app  이번에는 생성된 프로젝트에서 1. app을 추가해 등록
  ​
 이제 이어서 개발해봅시다. ​
 1. App 생성 지난번에는 프로젝트를 생성하고 setting.py에서 기본 설정만 변경해주었습니다. 이제 app을 생성해봅시다.]]></description>
-</item><item>
-    <title>Django_01_startproject</title>
-    <link>https://colinder.github.io/django_01_startproject/</link>
-    <pubDate>Thu, 22 Apr 2021 23:13:25 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/django_01_startproject/</guid>
-    <description><![CDATA[Django 개발환경준비   편리함을 추구하기 위해 AWS Cloud9을 사용하여 진행
-  https://ide.cs50.io/ 주소로 접속하면 진행이 가능하며, 진행을 위해선 Git 아이디가 있어야 한다.
-Git? : 버전 관리 시스템이며 Git은 소프트웨어를 개발하는 기업의 핵심 자산인 소스코드를 효과적으로 관리할 수 있게 해주는 무료, 공개소프트웨어. git에 대한 내용은 따로 정리해보도록 한다.
-  로그인까지 마치면 이제 Django 개발 준비 끝.
-​
-   👏 21.04.18 기준 django : 3.2 V 으로 다시 정리 합니다.]]></description>
-</item><item>
-    <title>Django_00_basic</title>
-    <link>https://colinder.github.io/django_00_whatisdjango/</link>
-    <pubDate>Thu, 22 Apr 2021 23:10:27 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/django_00_whatisdjango/</guid>
-    <description><![CDATA[​
-Web ?  월드 와이드 웹(World Wide Web)이란 인터넷에 연결된 사용자들이 서로의 정보를 공유할 수 있는 공간을 의미하며, 줄여서 WWW나 W3라고도 부르며, 간단히 웹(Web)이라고 가장 많이 불린다.
-인터넷과 같은 의미로 많이 사용되고 있지만, 정확히 말해 웹은 인터넷상의 인기 있는 하나의 서비스일 뿐.
-Web의 작동방식을 간단히 설명하자면, 요청과 응답.
-사용자는 서버에 어떠한 요구사항을 요청하고 서버는 이에 따라 처리결과를 응답한다.
-예를들어 사용자가 Login 버튼을 누른 행위는 user가 서버에 로그인 하고 싶다고 요청한 것이며, 서버는 로그인 창을 띄움으로서 user가 로그인할 수 있게 응답한 것입니다.]]></description>
-</item><item>
-    <title>programmers_21.04.21</title>
-    <link>https://colinder.github.io/pg_21.04.21/</link>
-    <pubDate>Wed, 21 Apr 2021 23:42:17 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/pg_21.04.21/</guid>
-    <description><![CDATA[​
-타겟 넘버 1 2 3 4 5 6 7 8 9 10 11 12  numbers = [1, 1, 1, 1, 1] target = 3 # return = 5 from itertools import product l = [(-number, number)for number in numbers] s = list(map(sum, product(*l))) print(s.count(target)) ## 미쳤다. product()..   ​
-K번째 수 1 2 3 4 5 6 7 8 9 10 11 12 13 14  array = [1, 5, 2, 6, 3, 7, 4]	commands = [[2, 5, 3], [4, 4, 1], [1, 7, 3]] def solution(array, commands): answer = [] for _ in commands: i, j, k = _ q = array[i-1: j] q.]]></description>
 </item></channel>
 </rss>
