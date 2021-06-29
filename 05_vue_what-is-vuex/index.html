@@ -35,7 +35,7 @@ What is Vuex? (공식문서)  Vuex는 Vue.js 애플리케이션에 대한 상태
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/05_vue_what-is-vuex\/"
-        },"genre": "posts","keywords": "Vue","wordcount":  545 ,
+        },"genre": "posts","keywords": "Vue","wordcount":  587 ,
         "url": "https:\/\/colinder.github.io\/05_vue_what-is-vuex\/","datePublished": "2020-08-02T22:22:58+09:00","dateModified": "2020-08-02T22:22:58+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -112,7 +112,7 @@ What is Vuex? (공식문서)  Vuex는 Vue.js 애플리케이션에 대한 상태
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">05_Vue_What is Vuex?</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/vue/"><i class="far fa-folder fa-fw"></i>Vue</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-08-02">2020-08-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;545 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-08-02">2020-08-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;587 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -160,13 +160,31 @@ src폴더안에 vuex폴더를 만들고 store.js라는 파일을 생성. <span c
 </li>
 <li>
 <p>형제 components는 부모를 거쳐 데이터를 이동해야 하는 불편함이 발생한다.</p>
-<image src="/images/image-20200802223729072.png" caption="형제 components = 같은 가로층의 components" width="380px">
+<figure><a class="lightgallery" href="/images/image-20200802223729072.png" title="/images/image-20200802223729072.png" data-thumbnail="/images/image-20200802223729072.png" data-sub-html="<h2>형제 components = 같은 가로층의 components</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/image-20200802223729072.png"
+            data-srcset="/images/image-20200802223729072.png, /images/image-20200802223729072.png 1.5x, /images/image-20200802223729072.png 2x"
+            data-sizes="auto"
+            alt="/images/image-20200802223729072.png" width="380px" />
+    </a><figcaption class="image-caption">형제 components = 같은 가로층의 components</figcaption>
+    </figure>
 <p>심지어 손자 components 끼리 데이터를 이동하려면 엄청나게 많은 props와 emit이 작성되어야 하는데, 이런 불편함을 해소하기 위해 데이터 저장소(<strong>STORE</strong>)를 생성하는 것을 고민해볼 수 있다.</p>
 </li>
 </ol>
 <p>​</p>
 <p>이 때문에 <strong>대규모 애플리케이션의 상태를 관리할 수 있는</strong> 상태 관리 패턴이 필요해진다. 예를 들면</p>
-<image src="/images/image-20200802223314342.png" caption="이런 모습으로" width="380px">
+<figure><a class="lightgallery" href="/images/image-20200802223314342.png" title="/images/image-20200802223314342.png" data-thumbnail="/images/image-20200802223314342.png" data-sub-html="<h2>이런 모습으로</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/image-20200802223314342.png"
+            data-srcset="/images/image-20200802223314342.png, /images/image-20200802223314342.png 1.5x, /images/image-20200802223314342.png 2x"
+            data-sizes="auto"
+            alt="/images/image-20200802223314342.png" width="380px" />
+    </a><figcaption class="image-caption">이런 모습으로</figcaption>
+    </figure>
 <p>이를 <strong>단일 상태 트리(single state tree)</strong> 로 데이터를 관리한다고 표현한다.</p>
 <p><a href="https://vuex.vuejs.org/kr/guide/state.html" target="_blank" rel="noopener noreffer">공식문서</a>에 이에 대한 설명이 있는데 내가 생각하는 핵심은 아래와 같다.</p>
 <blockquote>
@@ -379,11 +397,38 @@ new Vue<span class="o">({</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>​</p>
-<image src="/images/Vuex_00.png" caption="방법에 차이가 있을 뿐 노출되는 화면은 동일하다." width="1000px">
+<figure><a class="lightgallery" href="/images/Vuex_00.png" title="/images/Vuex_00.png" data-thumbnail="/images/Vuex_00.png" data-sub-html="<h2>방법에 차이가 있을 뿐 노출되는 화면은 동일하다.</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/Vuex_00.png"
+            data-srcset="/images/Vuex_00.png, /images/Vuex_00.png 1.5x, /images/Vuex_00.png 2x"
+            data-sizes="auto"
+            alt="/images/Vuex_00.png" width="1000px" />
+    </a><figcaption class="image-caption">방법에 차이가 있을 뿐 노출되는 화면은 동일하다.</figcaption>
+    </figure>
 <hr>
 <hr>
-<image src="/images/Vuex_02.png" caption="방법.1의 경우 폴더구조" width="1000px">
-<image src="/images/Vuex_03.png" caption="방법.2의 경우 폴더구조" width="1000px">
+<figure><a class="lightgallery" href="/images/Vuex_02.png" title="/images/Vuex_02.png" data-thumbnail="/images/Vuex_02.png" data-sub-html="<h2>방법.1의 경우 폴더구조</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/Vuex_02.png"
+            data-srcset="/images/Vuex_02.png, /images/Vuex_02.png 1.5x, /images/Vuex_02.png 2x"
+            data-sizes="auto"
+            alt="/images/Vuex_02.png" width="1000px" />
+    </a><figcaption class="image-caption">방법.1의 경우 폴더구조</figcaption>
+    </figure>
+<figure><a class="lightgallery" href="/images/Vuex_03.png" title="/images/Vuex_03.png" data-thumbnail="/images/Vuex_03.png" data-sub-html="<h2>방법.2의 경우 폴더구조</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/Vuex_03.png"
+            data-srcset="/images/Vuex_03.png, /images/Vuex_03.png 1.5x, /images/Vuex_03.png 2x"
+            data-sizes="auto"
+            alt="/images/Vuex_03.png" width="1000px" />
+    </a><figcaption class="image-caption">방법.2의 경우 폴더구조</figcaption>
+    </figure>
 <p>Thanks to &lsquo;이서영'💑</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">

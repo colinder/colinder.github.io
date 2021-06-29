@@ -29,7 +29,7 @@ src폴더안에 vuex폴더를 만들고 store.js라는 파일을 생성. (파일
 
 2. 형제 components는 부모를 거쳐 데이터를 이동해야 하는 불편함이 발생한다.
 
-   <image src="/images/image-20200802223729072.png" caption="형제 components = 같은 가로층의 components" width="380px">
+   {{<image src="/images/image-20200802223729072.png" caption="형제 components = 같은 가로층의 components" width="380px">}}
 
    심지어 손자 components 끼리 데이터를 이동하려면 엄청나게 많은 props와 emit이 작성되어야 하는데, 이런 불편함을 해소하기 위해 데이터 저장소(**STORE**)를 생성하는 것을 고민해볼 수 있다.
 
@@ -39,7 +39,7 @@ src폴더안에 vuex폴더를 만들고 store.js라는 파일을 생성. (파일
 
 이 때문에 **대규모 애플리케이션의 상태를 관리할 수 있는** 상태 관리 패턴이 필요해진다. 예를 들면
 
-<image src="/images/image-20200802223314342.png" caption="이런 모습으로" width="380px">
+{{<image src="/images/image-20200802223314342.png" caption="이런 모습으로" width="380px">}}
 
 이를 **단일 상태 트리(single state tree)** 로 데이터를 관리한다고 표현한다.
 
@@ -179,7 +179,7 @@ export default {
 
 ​	
 
-<image src="/images/Vuex_00.png" caption="방법에 차이가 있을 뿐 노출되는 화면은 동일하다." width="1000px">
+{{<image src="/images/Vuex_00.png" caption="방법에 차이가 있을 뿐 노출되는 화면은 동일하다." width="1000px">}}
 
 
 
@@ -187,9 +187,9 @@ export default {
 
 ___
 
-<image src="/images/Vuex_02.png" caption="방법.1의 경우 폴더구조" width="1000px">
+{{<image src="/images/Vuex_02.png" caption="방법.1의 경우 폴더구조" width="1000px">}}
 
-<image src="/images/Vuex_03.png" caption="방법.2의 경우 폴더구조" width="1000px">
+{{<image src="/images/Vuex_03.png" caption="방법.2의 경우 폴더구조" width="1000px">}}
 
 
 
