@@ -149,13 +149,13 @@ Connectionless란, 클라이언트가 행위를 통해 서비스를 제공받기
 <p>📃 쿠키는 주로 아래의 세 가지 목적을 위해 사용됩니다.</p>
 <ol>
 <li>
-<p><strong>세션 관리</strong>(Session Management) 로그인, 사용자 닉네임, 접속 시간, 장바구니 등의 서버가 알아야할 정보들을 저장합니다.</p>
+<p><b>세션 관리(Session Management)</b> 로그인, 사용자 닉네임, 접속 시간, 장바구니 등의 서버가 알아야할 정보들을 저장합니다.</p>
 </li>
 <li>
-<p><strong>개인화</strong>(Personalization) 사용자마다 다르게 그 사람에 적절한 페이지를 보여줄 수 있습니다.</p>
+<p><b>개인화(Personalization)</b> 사용자마다 다르게 그 사람에 적절한 페이지를 보여줄 수 있습니다.</p>
 </li>
 <li>
-<p><strong>트래킹</strong>(Tracking) 사용자의 행동과 패턴을 분석하고 기록합니다.</p>
+<p><b>트래킹(Tracking)</b> 사용자의 행동과 패턴을 분석하고 기록합니다.</p>
 <p>​</p>
 </li>
 </ol>
@@ -174,10 +174,10 @@ Connectionless란, 클라이언트가 행위를 통해 서비스를 제공받기
 </li>
 <li>
 <p>서버측에서는 쿠키로 사용자를 인식하고 서비스 로직에 따라 클라이언트의 cookie값을 update 하게 된다.</p>
+<p><em>*새로운 페이지에 접근하기전에는 클라이언트(사용자)에게 쿠키가 없습니다.</em></p>
+<p><em>*서버는 쿠키를 보낼때 이 쿠키를 사용할 Domain과 Path정보까지 함께 브라우저로 전송합니다. 즉, Domain과 Path는 쿠키를 어느 도메인의 어느 패스에서 인증하는데 사용할지 브라우저에게 알려주고 브라우저는 Domain과 Path가 일치할 때만 쿠키를 서버로 전송해서 사용자를 인증 받습니다. 일단 그렇게 알고 봅시다ㅎㅎ.</em></p>
 </li>
 </ol>
-<p><em>*새로운 페이지에 접근하기전에는 클라이언트에게 쿠키가 없습니다.</em></p>
-<p><em>*서버는 쿠키를 보낼때 이 쿠키를 사용할 Domain과 Path정보까지 함께 브라우저로 전송합니다. 즉, Domain과 Path는 쿠키를 어느 도메인의 어느 패스에서 인증하는데 사용할지 브라우저에게 알려주고 브라우저는 Domain과 Path가 일치할 때만 쿠키를 서버로 전송해서 사용자를 인증 받습니다. 일단 그렇게 알고 봅시다ㅎㅎ.</em></p>
 <p>​</p>
 <p>근데 쿠키에는 “세션 식별자(session identifier) 정보”가 담겨 있다고 했는데 쿠키는 어떻게 구성되어 있을까요? 또 어떻게 접근해서 정보를 보는 걸까요? 알아봅시다!</p>
 <h2 id="쿠키-문법">쿠키 문법</h2>
@@ -302,7 +302,7 @@ Connectionless란, 클라이언트가 행위를 통해 서비스를 제공받기
 <ul>
 <li>
 <p><code>path=/</code></p>
-<p><a href="https://opentutorials.org/course/3387/21745" target="_blank" rel="noopener noreffer">서버 이름 뒤에 오는 경로</a>(ex. site.com**/login**, site.com**/main** 등)에 따라 쿠키 사용여부가 결정됩니다. 위와 같이 슬래쉬( / )로 설정하면 모든 path에서 쿠키를 사용할 수 있습니다. (미 지정시) 기본값은 현재 경로입니다.</p>
+<p><a href="https://opentutorials.org/course/3387/21745" target="_blank" rel="noopener noreffer">서버 이름 뒤에 오는 경로</a>(ex. site.com<b>/login</b>, site.com<b>/main</b> 등)에 따라 쿠키 사용여부가 결정됩니다. 위와 같이 슬래쉬( / )로 설정하면 모든 path에서 쿠키를 사용할 수 있습니다. (미 지정시) 기본값은 현재 경로입니다.</p>
 <p><code>path=/admin</code> 옵션을 사용하여 설정한 쿠키는 <code>/admin</code>과 <code>/admin/something</code>에선 볼 수 있지만, <code>/home</code> 이나 <code>/adminpage</code>에선 볼 수 없습니다.</p>
 <p>특별한 경우가 아니라면, <code>path</code> 옵션을 <code>path=/</code>같이 루트로 설정해 웹사이트의 모든 페이지에서 쿠키에 접근할 수 있도록 합니다.</p>
 </li>
