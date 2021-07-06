@@ -147,7 +147,7 @@ _**👀주의**_
 
 1. **SQL Developer** 접속 후 초록색 ➕ 클릭
 
-   {{<image src="/images/oracle_DB_network_03.png" width="600px" style="display: block; margin: 40px auto">}}
+   {{<image src="/images/oracle_DB_network_03.png" width="1000px" style="display: block; margin: 40px auto">}}
 
 2. 채워야 할 값들 정리
 
