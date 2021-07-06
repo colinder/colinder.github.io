@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Oracle 18C_network_connect - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="Oracle 18C_network_connect" />
+<meta property="og:description" content="​
+오라클 18C_외부DB 접근(네트워크 연동) 방법  오라클 18 버전의 외부 DB 접근(네트워크 연동) 방법에 대하여 정리합니다.
+제가 네트워크 연동을 기획하면서 두 가지 관점으로 생각했습니다.
+첫째, DB를 가진 host가 있을 것이고
+둘째, DB에 연결할 guest가 있을 것이다.
+그렇다면, host가 guest의 IP를 등록해놓으면 guest가 접근하면 DB가 연결되는 걸까?
+guest가 host의 IP를 입력해 DB를 연결하는 걸까?
+아래 내용은 위의 두 가지를 다 진행하여 연결하였습니다. 
+ ​
+👀주의
+각 단계 단계들이 필수적인 사항인지는 파악되지 않았습니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://colinder.github.io/oracle_network_connect/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-07-06T14:17:20&#43;09:00" />
+<meta property="article:modified_time" content="2021-07-06T14:17:20&#43;09:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
+
+<meta name="twitter:title" content="Oracle 18C_network_connect"/>
+<meta name="twitter:description" content="​
+오라클 18C_외부DB 접근(네트워크 연동) 방법  오라클 18 버전의 외부 DB 접근(네트워크 연동) 방법에 대하여 정리합니다.
+제가 네트워크 연동을 기획하면서 두 가지 관점으로 생각했습니다.
+첫째, DB를 가진 host가 있을 것이고
+둘째, DB에 연결할 guest가 있을 것이다.
+그렇다면, host가 guest의 IP를 등록해놓으면 guest가 접근하면 DB가 연결되는 걸까?
+guest가 host의 IP를 입력해 DB를 연결하는 걸까?
+아래 내용은 위의 두 가지를 다 진행하여 연결하였습니다. 
+ ​
+👀주의
+각 단계 단계들이 필수적인 사항인지는 파악되지 않았습니다."/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/oracle_network_connect/" /><link rel="prev" href="https://colinder.github.io/rnn-lstm/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Oracle 18C_network_connect",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/colinder.github.io\/oracle_network_connect\/"
+        },"genre": "posts","keywords": "oracle, network","wordcount":  608 ,
+        "url": "https:\/\/colinder.github.io\/oracle_network_connect\/","datePublished": "2021-07-06T14:17:20+09:00","dateModified": "2021-07-06T14:17:20+09:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "colinder"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="">Hello New World</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="">Hello New World</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Oracle 18C_network_connect</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/oracle/"><i class="far fa-folder fa-fw"></i>oracle</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-07-06">2021-07-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;608 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;<span id="/oracle_network_connect/" class="leancloud_visitors" data-flag-title="Oracle 18C_network_connect">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#-우선-host가-할-일">🧔 우선 host가 할 일.</a></li>
+    <li><a href="#이제는-guest에서-진행">🙋‍♂️이제는 guest에서 진행</a></li>
+    <li><a href="#이상-연결이-완료되고-host가-생성한-db를-guest-pc에서-확인할-수-있었습니다">👍이상 연결이 완료되고 host가 생성한 DB를 guest PC에서 확인할 수 있었습니다.</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>​</p>
+<h1 id="오라클-18c_외부db-접근네트워크-연동-방법">오라클 18C_외부DB 접근(네트워크 연동) 방법</h1>
+<blockquote>
+<p>오라클 18 버전의 외부 DB 접근(네트워크 연동) 방법에 대하여 정리합니다.</p>
+<p>제가 네트워크 연동을 기획하면서 두 가지 관점으로 생각했습니다.<br>
+첫째, <b>DB를 가진 host</b>가 있을 것이고<br>
+둘째, <b>DB에 연결할 guest</b>가 있을 것이다.</p>
+<p>그렇다면, host가 guest의 IP를 등록해놓으면 guest가 접근하면 DB가 연결되는 걸까?<br>
+guest가 host의 IP를 입력해 DB를 연결하는 걸까?</p>
+<p><b>아래 내용은 위의 두 가지를 다 진행하여 연결하였습니다. </b></p>
+</blockquote>
+<p>​</p>
+<p><em><strong>👀주의</strong></em></p>
+<p>각 단계 단계들이 필수적인 사항인지는 파악되지 않았습니다. <br>
+<strong>다만, 저는 해당 방법으로 진행했더니 연결이 되었기에 그 내용을 정리하였습니다.</strong></p>
+<p>​</p>
+<h2 id="-우선-host가-할-일">🧔 우선 host가 할 일.</h2>
+<ol>
+<li>
+<p>tnsnames.ora</p>
+<ol>
+<li>
+<p>tnsnames.ora를 찾아야 합니다. <br>
+(저는 <b>C:\app\<i>UESR</i>\product</b>\18.0.0\dbhomeXE\network\admin에 위치했으나, 이는 다른 블로그에 내용을 참고해 직접 찾은 것이고 상황에 따라 다를 수 있습니다.)</p>
+<p>파일을 찾았다면 내용을 수정합니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># tnsnames.ora Network Configuration File: </span>
+<span class="c1"># C:\app\kjong\product\18.0.0\dbhomeXE\NETWORK\ADMIN\tnsnames.ora</span>
+
+<span class="c1"># Generated by Oracle configuration tools.</span>
+
+<span class="nv">XE</span> <span class="o">=</span>
+  <span class="o">(</span><span class="nv">DESCRIPTION</span> <span class="o">=</span>
+    <span class="o">(</span><span class="nv">ADDRESS</span> <span class="o">=</span> <span class="o">(</span><span class="nv">PROTOCOL</span> <span class="o">=</span> TCP<span class="o">)(</span><span class="nv">HOST</span> <span class="o">=</span> DESKTOP-HKDL12K<span class="o">)(</span><span class="nv">PORT</span> <span class="o">=</span> 1521<span class="o">))</span>
+    <span class="o">(</span><span class="nv">CONNECT_DATA</span> <span class="o">=</span>
+      <span class="o">(</span><span class="nv">SERVER</span> <span class="o">=</span> DEDICATED<span class="o">)</span>
+      <span class="o">(</span><span class="nv">SERVICE_NAME</span> <span class="o">=</span> XE<span class="o">)</span>
+    <span class="o">)</span>
+  <span class="o">)</span>
+
+
+<span class="nv">LISTENER_XE</span> <span class="o">=</span>
+  <span class="o">(</span><span class="nv">ADDRESS</span> <span class="o">=</span> <span class="o">(</span><span class="nv">PROTOCOL</span> <span class="o">=</span> TCP<span class="o">)(</span><span class="nv">HOST</span> <span class="o">=</span> DESKTOP-HKDL12K<span class="o">)(</span><span class="nv">PORT</span> <span class="o">=</span> 1521<span class="o">))</span>
+
+
+<span class="nv">ORACLR_CONNECTION_DATA</span> <span class="o">=</span>
+  <span class="o">(</span><span class="nv">DESCRIPTION</span> <span class="o">=</span>
+    <span class="o">(</span><span class="nv">ADDRESS_LIST</span> <span class="o">=</span>
+      <span class="o">(</span><span class="nv">ADDRESS</span> <span class="o">=</span> <span class="o">(</span><span class="nv">PROTOCOL</span> <span class="o">=</span> IPC<span class="o">)(</span><span class="nv">KEY</span> <span class="o">=</span> EXTPROC1521<span class="o">))</span>
+    <span class="o">)</span>
+    <span class="o">(</span><span class="nv">CONNECT_DATA</span> <span class="o">=</span>
+      <span class="o">(</span><span class="nv">SID</span> <span class="o">=</span> CLRExtProc<span class="o">)</span>
+      <span class="o">(</span><span class="nv">PRESENTATION</span> <span class="o">=</span> RO<span class="o">)</span>
+    <span class="o">)</span>
+  <span class="o">)</span>
+
+
+<span class="c1">########################여기 아래가 추가된 내용########################</span>
+<span class="nv">my_DataBase</span> <span class="o">=</span>
+  <span class="o">(</span><span class="nv">DESCRIPTION</span> <span class="o">=</span>
+    <span class="o">(</span><span class="nv">ADDRESS</span> <span class="o">=</span> <span class="o">(</span><span class="nv">PROTOCOL</span> <span class="o">=</span> TCP<span class="o">)(</span><span class="nv">HOST</span> <span class="o">=</span> guest_IP<span class="o">)(</span><span class="nv">PORT</span> <span class="o">=</span> 1521<span class="o">))</span>
+    <span class="o">(</span><span class="nv">CONNECT_DATA</span> <span class="o">=</span>
+      <span class="o">(</span><span class="nv">SERVER</span> <span class="o">=</span> DEDICATED<span class="o">)</span>
+      <span class="o">(</span><span class="nv">SERVICE_NAME</span> <span class="o">=</span> XE<span class="o">)</span>
+    <span class="o">)</span>
+  <span class="o">)</span>
+
+
+<span class="c1">## 3가지 요소에 대하여 알아봅시다. </span>
+<span class="c1"># 1. Database Name = (my_DataBase, host가 설정한 공유할 DB의 이름입니다. 아무렇게나 해도 됨.)</span>
+<span class="c1"># 2. HOST = (guest_IP, host DB에 접근할 guest의 IP주소를 입력합니다. 아래에 확인방법 있음)</span>
+<span class="c1"># 3. SERVICE_NAME = (XE, 처음 오라클을 설치할 때 설정하게 됩니다. 아래에 확인방법 있음)</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p><i><u>IP 확인 방법</u></i></p>
+<ol>
+<li>
+<p>cmd(명령 프롬프트)를 연다.</p>
+</li>
+<li>
+<p><code>ipconfig</code> 입력 후 enter</p>
+</li>
+<li>
+<p>출력된 항목 중 <code>IPv4 주소</code> 값 == <code>IP</code></p>
+<a class="lightgallery" href="/images/oracle_DB_network_00.png" title="/images/oracle_DB_network_00.png" data-thumbnail="/images/oracle_DB_network_00.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/oracle_DB_network_00.png"
+            data-srcset="/images/oracle_DB_network_00.png, /images/oracle_DB_network_00.png 1.5x, /images/oracle_DB_network_00.png 2x"
+            data-sizes="auto"
+            alt="/images/oracle_DB_network_00.png" width="1000px" />
+    </a>
+<p>​</p>
+</li>
+</ol>
+</li>
+<li>
+<p><i><u>SERVICE_NAME 확인 방법</u></i></p>
+<ol>
+<li>
+<p>oracle을 설치하면서 같이 설치되는 <code>SQL Plus</code> 실행</p>
+</li>
+<li>
+<p><code>sys as sysdba</code> 입력 (이어서 비밀번호를 입력해야 하는데 전 그냥 enter하니 넘어감)</p>
+</li>
+<li>
+<p><strong>SQL&gt;</strong> 가 생기면 <code>select name from v$database;</code> 입력</p>
+</li>
+<li>
+<p>NAME 아래에 <code>SERVICE_NAME</code> 확인 가능</p>
+<a class="lightgallery" href="/images/oracle_DB_network_01.png" title="/images/oracle_DB_network_01.png" data-thumbnail="/images/oracle_DB_network_01.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/oracle_DB_network_01.png"
+            data-srcset="/images/oracle_DB_network_01.png, /images/oracle_DB_network_01.png 1.5x, /images/oracle_DB_network_01.png 2x"
+            data-sizes="auto"
+            alt="/images/oracle_DB_network_01.png" width="1000px" />
+    </a>
+<p>​</p>
+<p>​</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p>tnsnames.ora가 있는 폴더 안에 있는 <b>listener.ora</b>파일과 관련있는 <b>Listener를 재시작</b>한다.</p>
+<blockquote>
+<p>오라클 리스너는 네트워크를 이용하여 클라이언트에서 오라클 서버로 연결하기 위한 오라클 네트워크 관리자 입니다. 네트워크를 통한 연결은 모두 리스너가 담당하며 리스너와 연결되기 위해서는 클라이언트에 오라클 NET8(오라클 클라이언트)이 설치되어 있고 이를 통해 오라클 서비스명이라는 것을 만들어 접속을 해야 합니다.</p>
+<p>오라클 서버에서 리스너를 시작시켜줘야 클라이언트들이 접속을 할 수 있습니다. <span style="font-size:0.8em; color:grey">(한 번 켜주니 재실행할 필요 없이 계속 접속 가능했음.)</span></p>
+</blockquote>
+<ol>
+<li>
+<p><b>cmd(명령 프롬프트)를 <code>관리자 권한</code>으로 실행</b>한다.</p>
+</li>
+<li>
+<p><code>lsnrctl stop</code> 입력 (상태 끄기)</p>
+</li>
+<li>
+<p><code>lsnrctl start</code> 입력 (상태 시작)</p>
+<a class="lightgallery" href="/images/oracle_DB_network_02.png" title="/images/oracle_DB_network_02.png" data-thumbnail="/images/oracle_DB_network_02.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/oracle_DB_network_02.png"
+            data-srcset="/images/oracle_DB_network_02.png, /images/oracle_DB_network_02.png 1.5x, /images/oracle_DB_network_02.png 2x"
+            data-sizes="auto"
+            alt="/images/oracle_DB_network_02.png" width="1000px" />
+    </a>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="이제는-guest에서-진행">🙋‍♂️이제는 guest에서 진행</h2>
+<ol>
+<li>
+<p><strong>SQL Developer</strong> 접속 후 초록색 ➕ 클릭</p>
+<a class="lightgallery" href="/images/oracle_DB_network_03.png" title="/images/oracle_DB_network_03.png" data-thumbnail="/images/oracle_DB_network_03.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/oracle_DB_network_03.png"
+            data-srcset="/images/oracle_DB_network_03.png, /images/oracle_DB_network_03.png 1.5x, /images/oracle_DB_network_03.png 2x"
+            data-sizes="auto"
+            alt="/images/oracle_DB_network_03.png" width="600px" />
+    </a>
+</li>
+<li>
+<p>채워야 할 값들 정리</p>
+<ul>
+<li>
+<p>Name : host의 DB를 guest가 사용할 건데 이름 설정 (<code>아무렇게나 설정 해도 ok</code>)</p>
+</li>
+<li>
+<p>사용자 이름(<u>U</u>) : <code>host가 DB를 만들면서 등록한 ID</code></p>
+</li>
+<li>
+<p>비밀번호(<u>P</u>) : <code>host가 DB를 만들면서 등록한 PW</code></p>
+</li>
+<li>
+<p>호스트 이름(<u>A</u>) : <code>host의 IP</code>를 기재</p>
+</li>
+<li>
+<p>포트(<u>R</u>) :  전 따로 손대지 않았어서 defualt값인 <code>1521</code> 기재. <span style="font-size:0.8em">(아마 아까 tnsnames.ora의 추가한 내용 중 <b>(ADDRESS = (PROTOCOL = TCP)(HOST = guest_IP)(PORT = 1521))</b>여기 <b>PORT 값</b>일 듯.)</span></p>
+</li>
+<li>
+<p>SID(<u>I</u>) : host PC에서 확인 할 수 있습니다.</p>
+<ol>
+<li>
+<p><code>SQL Plus</code> 실행</p>
+</li>
+<li>
+<p><code>/as sysdba</code> 입력</p>
+</li>
+<li>
+<p><strong>SQL&gt;</strong> 가 생기면 <code>select name from v$thread;</code> 입력</p>
+</li>
+<li>
+<p>INSTANCE 아래에서 확인 가능</p>
+<a class="lightgallery" href="/images/oracle_DB_network_04.png" title="/images/oracle_DB_network_04.png" data-thumbnail="/images/oracle_DB_network_04.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/oracle_DB_network_04.png"
+            data-srcset="/images/oracle_DB_network_04.png, /images/oracle_DB_network_04.png 1.5x, /images/oracle_DB_network_04.png 2x"
+            data-sizes="auto"
+            alt="/images/oracle_DB_network_04.png" width="600px" />
+    </a>
+<blockquote>
+<p>Service Name : 서버관련, 클라이언트에서 사용하고자 하는 DB
+SID : 오라클 DB가 설치되어있는 곳에서 생성한 DB명</p>
+<p>네트워크를 연결하는 경우 host가 생성한 DB의 고유한 값과 guest가 불러온 DB의 구분을 위해 존재하는 것 같습니다.</p>
+</blockquote>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<h2 id="이상-연결이-완료되고-host가-생성한-db를-guest-pc에서-확인할-수-있었습니다">👍이상 연결이 완료되고 host가 생성한 DB를 guest PC에서 확인할 수 있었습니다.</h2>
+<blockquote>
+<p>찾아보면 더 간편한 방법이 있을 수 있습니다. 정리한 방법은 다양한 정답 중 하나 정도로만 생각하고 참고하시면 좋을 것 같습니다.</p>
+</blockquote>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2021-07-06</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/oracle_network_connect/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/oracle/">oracle</a>,&nbsp;<a href="/tags/network/">network</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/rnn-lstm/" class="prev" rel="prev" title="RNN &amp; LSTM"><i class="fas fa-angle-left fa-fw"></i>RNN &amp; LSTM</a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/valine/Valine.min.js"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{"valine":{"appId":"","appKey":"","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"en","pageSize":10,"placeholder":"Your comment ...","recordIP":true,"visitor":true}},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
