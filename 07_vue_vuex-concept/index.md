@@ -19,9 +19,9 @@
 // A.vue
 
 computed: {
-	change() {
-		return this.$store.state.second + 1
-	}
+  change() {
+    return this.$store.state.second + 1
+  }
 }
 ```
 
@@ -29,9 +29,9 @@ computed: {
 // B.vue
 
 computed: {
-	change() {
-		return this.$store.state.second + 1
-	}
+  change() {
+    return this.$store.state.second + 1
+  }
 }
 ```
 
@@ -58,19 +58,19 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
 	state: {
-    first: '첫번째 데이터입니다.',
-    second: 2,
-    listData: [
-      {name: "john"},
-      {name: "poul"},
-      {name: "kim"}
-    ]
-  },
-  getters: {                         👈
-    addOne(state) {                  👈
-      return state.second + 1        👈
-    }                                👈
-  }                                  👈
+      first: '첫번째 데이터입니다.',
+      second: 2,
+      listData: [
+        {name: "john"},
+        {name: "poul"},
+        {name: "kim"}
+      ]
+    },
+    getters: {                         👈
+      addOne(state) {                  👈
+          return state.second + 1      👈
+      }                                👈
+    }                                  👈
 })
 ```
 
@@ -96,10 +96,10 @@ export default {
     change1() {                              👈 그냥 store에서 
       return this.$store.state.second        👈 불러온 자료를
     },                                       👈 노출하기 위한 등록
-    useGetters() {                                     👈 store에 addOne이라는  
-      return this.$store.getters.addOne                👈 ✨ getters를 불러오기
-    }                                                  👈 위해 작성한 코드
-  }                                                    👈 입니다.
+    useGetters() {                                    👈 store에 addOne이라는  
+      return this.$store.getters.addOne               👈 ✨ getters를 불러오기
+    }                                                 👈 위해 작성한 코드
+  }                                                   👈 입니다.
 }
 </script>
 
