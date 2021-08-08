@@ -10,8 +10,8 @@
 D4_1258_행렬찾기 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31  def check(x, y): dx, dy = 0, 0 while x &#43; dx &lt; N and arr[x&#43;dx][y]: dx &#43;= 1 while y &#43; dy &lt; N and arr[x][y&#43;dy]: dy &#43;= 1 result.append([dx*dy, dx, dy]) for i in range(x, x&#43;dx): for j in range(y, y&#43;dy): arr[i][j] = 0 for T in range(int(input())): N = int(input()) arr = [list(map(int, input()." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://colinder.github.io/sw_21.02.02/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-02-02T22:38:05&#43;09:00" />
-<meta property="article:modified_time" content="2021-02-02T22:38:05&#43;09:00" />
+<meta property="article:published_time" content="2021-02-02T22:38:05+09:00" />
+<meta property="article:modified_time" content="2021-02-02T22:38:05+09:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
@@ -31,7 +31,7 @@ D4_1258_행렬찾기 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/sw_21.02.02\/"
-        },"genre": "posts","keywords": "algorithm","wordcount":  502 ,
+        },"genre": "posts","keywords": "algorithm","wordcount":  498 ,
         "url": "https:\/\/colinder.github.io\/sw_21.02.02\/","datePublished": "2021-02-02T22:38:05+09:00","dateModified": "2021-02-02T22:38:05+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -108,7 +108,7 @@ D4_1258_행렬찾기 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">SW Expert Academy_D4 1258, 1249, 1238, 4261</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/sw-expert-academy/"><i class="far fa-folder fa-fw"></i>SW Expert Academy</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-02-02">2021-02-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;502 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-02-02">2021-02-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;498 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -131,7 +131,7 @@ D4_1258_행렬찾기 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
 <h3 id="d4_1258_행렬찾기">D4_1258_행렬찾기</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -164,7 +164,7 @@ D4_1258_행렬찾기 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
 </span><span class="lnt">31
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
     <span class="n">dx</span><span class="p">,</span> <span class="n">dy</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
     <span class="k">while</span> <span class="n">x</span> <span class="o">+</span> <span class="n">dx</span> <span class="o">&lt;</span> <span class="n">N</span> <span class="ow">and</span> <span class="n">arr</span><span class="p">[</span><span class="n">x</span><span class="o">+</span><span class="n">dx</span><span class="p">][</span><span class="n">y</span><span class="p">]:</span>
         <span class="n">dx</span> <span class="o">+=</span> <span class="mi">1</span>
@@ -187,7 +187,7 @@ D4_1258_행렬찾기 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
                 <span class="n">check</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
     
     <span class="n">aws</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]])</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;#{T+1} {len(aws)}&#39;</span><span class="p">,</span> <span class="o">*</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">aws</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;#</span><span class="si">{</span><span class="n">T</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">aws</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="o">*</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">aws</span><span class="p">])</span>
 
     
 <span class="c1"># DFS로 구현해보려 했는데.</span>
@@ -201,7 +201,7 @@ D4_1258_행렬찾기 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
 <h3 id="d4_1249_보급로">D4_1249_보급로</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -232,7 +232,7 @@ D4_1258_행렬찾기 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
 </span><span class="lnt">29
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">deque</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">deque</span>
 
 <span class="n">dx</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 <span class="n">dy</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
@@ -256,7 +256,7 @@ D4_1258_행렬찾기 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
                     <span class="n">visited</span><span class="p">[</span><span class="n">cx</span><span class="p">][</span><span class="n">cy</span><span class="p">]</span> <span class="o">=</span> <span class="n">Sum</span>
                     <span class="n">q</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">])</span>
 
-    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;#{T+1} {visited[N-1][N-1]}&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;#</span><span class="si">{</span><span class="n">T</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">visited</span><span class="p">[</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
     
     
 <span class="c1"># DFS로 구현해보려 했지만, 특정 위치에 왔을 때 종료를 </span>
@@ -267,7 +267,7 @@ D4_1258_행렬찾기 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
 <h3 id="d4_1238_contact">D4_1238_Contact</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -297,7 +297,7 @@ D4_1258_행렬찾기 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
 </span><span class="lnt">28
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">deque</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">deque</span>
 
 <span class="k">for</span> <span class="n">T</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
     <span class="n">N</span><span class="p">,</span> <span class="n">S</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
@@ -324,14 +324,14 @@ D4_1258_행렬찾기 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
         <span class="k">if</span> <span class="n">visited</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="n">step</span><span class="p">:</span>
             <span class="n">result</span> <span class="o">=</span> <span class="n">j</span>
     
-    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;#{T+1} {result}&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;#</span><span class="si">{</span><span class="n">T</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>​</p>
 <h3 id="d4_4261_빠른-휴대전화-키패드">D4_4261_빠른 휴대전화 키패드</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -358,7 +358,7 @@ D4_1258_행렬찾기 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
 </span><span class="lnt">25
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">anycall</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;2&#39;</span><span class="p">:</span><span class="s2">&#34;abc&#34;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">:</span> <span class="s2">&#34;def&#34;</span><span class="p">,</span> <span class="s1">&#39;4&#39;</span><span class="p">:</span><span class="s2">&#34;ghi&#34;</span><span class="p">,</span> <span class="s1">&#39;5&#39;</span><span class="p">:</span><span class="s2">&#34;jkl&#34;</span><span class="p">,</span> <span class="s1">&#39;6&#39;</span><span class="p">:</span><span class="s2">&#34;mno&#34;</span><span class="p">,</span> <span class="s1">&#39;7&#39;</span><span class="p">:</span><span class="s2">&#34;pqrs&#34;</span><span class="p">,</span> <span class="s1">&#39;8&#39;</span><span class="p">:</span><span class="s2">&#34;tuv&#34;</span><span class="p">,</span> <span class="s1">&#39;9&#39;</span><span class="p">:</span><span class="s2">&#34;wxyz&#34;</span><span class="p">}</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">anycall</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;2&#39;</span><span class="p">:</span><span class="s2">&#34;abc&#34;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">:</span> <span class="s2">&#34;def&#34;</span><span class="p">,</span> <span class="s1">&#39;4&#39;</span><span class="p">:</span><span class="s2">&#34;ghi&#34;</span><span class="p">,</span> <span class="s1">&#39;5&#39;</span><span class="p">:</span><span class="s2">&#34;jkl&#34;</span><span class="p">,</span> <span class="s1">&#39;6&#39;</span><span class="p">:</span><span class="s2">&#34;mno&#34;</span><span class="p">,</span> <span class="s1">&#39;7&#39;</span><span class="p">:</span><span class="s2">&#34;pqrs&#34;</span><span class="p">,</span> <span class="s1">&#39;8&#39;</span><span class="p">:</span><span class="s2">&#34;tuv&#34;</span><span class="p">,</span> <span class="s1">&#39;9&#39;</span><span class="p">:</span><span class="s2">&#34;wxyz&#34;</span><span class="p">}</span>
 
 <span class="k">for</span> <span class="n">T</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())):</span>
     <span class="n">S</span><span class="p">,</span> <span class="n">N</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
@@ -379,7 +379,7 @@ D4_1258_행렬찾기 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
         <span class="k">else</span><span class="p">:</span>
             <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
 
-    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;#{T+1} {result}&#39;</span><span class="p">)</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;#</span><span class="si">{</span><span class="n">T</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span> 
 
             
 <span class="c1"># 비교적 쉬운 문제.</span>
@@ -418,7 +418,7 @@ D4_1258_행렬찾기 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

@@ -17,8 +17,8 @@ Vue  Vue.js는 웹 애플리케이션의 사용자 인터페이스를 만들기 
   💻 개발 환경 설정   vscode 설치" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://colinder.github.io/00_vue_setting/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-07-17T21:56:29&#43;09:00" />
-<meta property="article:modified_time" content="2020-07-17T21:56:29&#43;09:00" />
+<meta property="article:published_time" content="2020-07-17T21:56:29+09:00" />
+<meta property="article:modified_time" content="2020-07-17T21:56:29+09:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
@@ -175,7 +175,7 @@ Vue  Vue.js는 웹 애플리케이션의 사용자 인터페이스를 만들기 
 <p><a href="https://nodejs.org/ko/" target="_blank" rel="noopener noreffer">nodeJS</a> 설치</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -183,7 +183,7 @@ Vue  Vue.js는 웹 애플리케이션의 사용자 인터페이스를 만들기 
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 🤔 안정적인 버전 vs 최신 버전 </span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 🤔 안정적인 버전 vs 최신 버전 </span>
 <span class="c1"># 상관없으나 개인적으로 안정적인 버전을 추천합니다.</span>
 
 <span class="c1"># 😀 설치가 잘 되었나 확인 방법!</span>
@@ -228,13 +228,13 @@ Vue  Vue.js는 웹 애플리케이션의 사용자 인터페이스를 만들기 
 <h4 id="-프로젝트-생성">🎉 프로젝트 생성</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"> $ vue create myproject		<span class="c1"># myproject 프로젝트 생성</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"> $ vue create myproject		<span class="c1"># myproject 프로젝트 생성</span>
  $ <span class="nb">cd</span> myproject				<span class="c1"># 생성한 myproject 폴더로 이동</span>
  $ vue add router				<span class="c1"># (선택사항) myproject 히스토리를 관리해줄 router기능 설치</span>
  $ npm run serve				<span class="c1"># myproject의 디폴트 서버 실행</span>
@@ -242,7 +242,7 @@ Vue  Vue.js는 웹 애플리케이션의 사용자 인터페이스를 만들기 
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -250,7 +250,7 @@ Vue  Vue.js는 웹 애플리케이션의 사용자 인터페이스를 만들기 
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">  App running at:
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">  App running at:
     - Local:   http://localhost:8080/
     - Network: http://192.168.219.164:8080/
 
@@ -307,7 +307,7 @@ Vue  Vue.js는 웹 애플리케이션의 사용자 인터페이스를 만들기 
 <p>만약 위의 그림에서 히스토리 모드를 사용하지 않더라도 나중에 URL에 있는 해쉬를 제거하기 위해 라우터의 <strong>히스토리 모드</strong>로 변경할 수 있다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -315,7 +315,7 @@ Vue  Vue.js는 웹 애플리케이션의 사용자 인터페이스를 만들기 
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># src/router/index.js</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># src/router/index.js</span>
 
 const <span class="nv">router</span> <span class="o">=</span> new VueRouter<span class="o">({</span>
   mode: <span class="s1">&#39;history&#39;</span>,						👈요거를 등록하면 <span class="nb">history</span> 모드 실행
@@ -356,7 +356,7 @@ const <span class="nv">router</span> <span class="o">=</span> new VueRouter<span
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
