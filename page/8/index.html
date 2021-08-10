@@ -102,6 +102,12 @@
         alt="/images/jg_02.jpg"
         title="/images/jg_02.jpg" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/colinder" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="mailto:kjonggwan@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/bj_21.02.09/">BEAKJOON 15649, 15650</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-02-09">2021-02-09</time></span>&nbsp;<span class="post-category">included in <a href="/categories/beakjoon/"><i class="far fa-folder fa-fw"></i>BEAKJOON</a></span></div><div class="content">​
+15649_N과 M (1) 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22  N, M = map(int, input().split()) def DFS(count): if count == M: print(*arr) return for i in range(N): if visited[i] == True: continue visited[i] = True arr.append(num_list[i]) DFS(count+1) arr.pop() visited[i] = False num_list = [i + 1 for i in range(N)] visited = [False] * N arr = [] DFS(0)   ​</div><div class="post-footer">
+        <a href="/bj_21.02.09/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/algorithm/">algorithm</a>,&nbsp;<a href="/tags/%EB%B0%B1%ED%8A%B8%EB%9E%98%ED%82%B9/">백트래킹</a>,&nbsp;<a href="/tags/%EB%90%98%EC%B6%94%EC%A0%81/">되추적</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/sw_21.02.02/">SW Expert Academy_D4 1258, 1249, 1238, 4261</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-02-02">2021-02-02</time></span>&nbsp;<span class="post-category">included in <a href="/categories/sw-expert-academy/"><i class="far fa-folder fa-fw"></i>SW Expert Academy</a></span></div><div class="content">​
 D4_1258_행렬찾기 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31  def check(x, y): dx, dy = 0, 0 while x + dx &lt; N and arr[x+dx][y]: dx += 1 while y + dy &lt; N and arr[x][y+dy]: dy += 1 result.append([dx*dy, dx, dy]) for i in range(x, x+dx): for j in range(y, y+dy): arr[i][j] = 0 for T in range(int(input())): N = int(input()) arr = [list(map(int, input().</div><div class="post-footer">
@@ -119,12 +125,6 @@ D4_1258_행렬찾기 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
 18258_큐 2 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42  import sys from collections import deque # import time N = int(sys.stdin.readline().rstrip()) # start = time.time() # 시작 시간 저장 q = deque() for _ in range(N): command = sys.</div><div class="post-footer">
         <a href="/bj_21.01.28/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/algorithm/">algorithm</a>,&nbsp;<a href="/tags/%ED%81%90-%EB%8D%B1/">큐 &amp; 덱</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/bj_21.01.27/">BEAKJOON 4949, 10828, 1874, 17298</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-01-27">2021-01-27</time></span>&nbsp;<span class="post-category">included in <a href="/categories/beakjoon/"><i class="far fa-folder fa-fw"></i>BEAKJOON</a></span></div><div class="content">​
-4949_균형잡힌 세상 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30  import sys while True: text = sys.stdin.readline().rstrip() if text == &#34;.&#34;: break stack =[] result = &#34;yes&#34; for i in text: if i.isalpha() or i == &#34; &#34;: continue elif i == &#34;(&#34; or i == &#34;[&#34;: stack.</div><div class="post-footer">
-        <a href="/bj_21.01.27/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/algorithm/">algorithm</a>,&nbsp;<a href="/tags/%EC%8A%A4%ED%83%9D/">스택</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>

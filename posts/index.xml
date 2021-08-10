@@ -3,7 +3,19 @@
         <title>All Posts - </title>
         <link>https://colinder.github.io/posts/</link>
         <description>All Posts | </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 06 Jul 2021 14:17:20 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 08 Aug 2021 14:09:22 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Vue_DevInfo</title>
+    <link>https://colinder.github.io/vue_devinfo/</link>
+    <pubDate>Sun, 08 Aug 2021 14:09:22 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/vue_devinfo/</guid>
+    <description><![CDATA[​
+Vue Dev_Info  Vue 개발을 하면서 알게 된(깨닫게 된) 내용을 정리해 기록합니다.
+ ​
+  Vuex 동작에 대한 고찰
+ 개인적으로 DB의 자료를 가져오는데 5개 이상의 테이블에서 DB를 가져오고, 이를 종합해 새로운 리스트 혹은 데이터를 만들어야 한다면 무조건 vuex의 사용을 추천합니다. 다만, vuex를 사용하는데 일반적으로 알려진 단계를 지켜야 하는 이유와 방법에 대하여 정리합니다.
+  위의 그래프를 보면 .vue 파일에서 .dispatch()를 사용에 vuex의 store.js에 등록된 actions의 함수를 동작하는 신호를 보냅니다.]]></description>
+</item><item>
     <title>Oracle 18C_network_connect</title>
     <link>https://colinder.github.io/oracle_network_connect/</link>
     <pubDate>Tue, 06 Jul 2021 14:17:20 &#43;0900</pubDate>
@@ -113,17 +125,5 @@ form 태그의 고찰   form tag의 inline 요소 중 **&lsquo;action&rsquo;**�
 ​
 jQuery란?  jQuery(제이쿼리)는 HTML의 클라이언트 사이드 조작(ex. 사용자가 어떤 버튼을 누른다. 사용자가 드랍박스에 선택지를 고른다.)을 단순화 하도록 설계된 크로스 플랫폼(여러 종류의 컴퓨터 플랫폼에서 동작할 수 있다는 것)의 자바스크립트 라이브러리다. 존 레식이 2006년 뉴욕 시 바캠프(Barcamp NYC)에서 공식적으로 소개하였다. 출처: 위키백과
 최대한 구체적으로 알아보았는데요. 이 내용이 이해되었다면 다음으로 넘어갑시다.]]></description>
-</item><item>
-    <title>Django_03_overriding templates</title>
-    <link>https://colinder.github.io/django_03_overridingtemplates/</link>
-    <pubDate>Tue, 27 Apr 2021 20:27:30 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/django_03_overridingtemplates/</guid>
-    <description><![CDATA[​
-Django Overriding Templates  웹개발을 하다보면 재활용되어야 하는 부분. 즉, 변경되지 않아야 하는 부분과, 변해야 하는 부분이 있습니다. (대표적으로 navbar) 그리고 이런 개발의 편의성을 위해 Django는 Overriding 이라는 기술을 제공합니다.
- ​
-지난 &ldquo;app&quot;에 이어 진행
-변경되지 않아야 하는 부분은 그림의 &lsquo;배경&rsquo;이고, 변해야 하는 부분은 그림의 &lsquo;디테일 요소&rsquo;라고 생각하면 이해가 쉽습니다. / 그럼 변경되지 않아야 하는 부분을 먼저 제작해봅시다.
-1. 변경 하지 않을 부분 == 배경 제작 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  &lt;!]]></description>
 </item></channel>
 </rss>

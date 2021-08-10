@@ -34,17 +34,17 @@ _*동기, 비동기 설명은 [이전 포스팅](https://colinder.github.io/sync
   // a와 b라는 함수를 선언
   
   function a(callback) {       // 함수 a는 callback이라는 함수를 받는다.
-      const data = 'i am data' // i am data라는 값을 담은 변수 data를 생성
-      callback(data)           // callback이라는 함수에 data라는 변수를 넘겨줌.
+    const data = 'i am data'   // i am data라는 값을 담은 변수 data를 생성
+    callback(data)             // callback이라는 함수에 data라는 변수를 넘겨줌.
   }
   
-  function b(value) {			// 함수 b는 입력받은 값 value를 콘솔에 출력하는 함수.
-      console.log('넘겨받은 값', value)
+  function b(value) {			  // 함수 b는 입력받은 값 value를 콘솔에 출력하는 함수.
+    console.log('넘겨받은 값', value)
   }
   
   // 사용해 봅시다.
-  a(function(value) {                    // 함수 a에 function을 받는데 값으로 value를 받는다. 
-      console.log('넘겨받은 값', value)   // 함수 a가 실행되면 자동으로 const data를 만드는데 data에는 'i am data'라는 값이 할당. 되고 value가 된다.
+  a(function(value) {                   // 함수 a에 function을 받는데 값으로 value를 받는다. 
+    console.log('넘겨받은 값', value)     // 함수 a가 실행되면 자동으로 const data를 만드는데 data에는 'i am data'라는 값이 할당. 되고 value가 된다.
   })
   
   // 위를 간소화한 코드.
@@ -61,15 +61,15 @@ _*동기, 비동기 설명은 [이전 포스팅](https://colinder.github.io/sync
   
   // a와 b라는 함수를 선언
   function a(callback) {       // 함수 a는 2초 후에 동작
-      setTimeout(function() {
-          console.log('running a....')
-      }, 2000)
+    setTimeout(function() {
+        console.log('running a....')
+    }, 2000)
   }
   
   function b() {       // 함수 b는 1초 후에 동작
-      setTimeout(function() {
-          console.log('running b....')
-      }, 1000)
+    setTimeout(function() {
+        console.log('running b....')
+    }, 1000)
   }
   
   // 실행해봅시다.
@@ -93,16 +93,16 @@ _*동기, 비동기 설명은 [이전 포스팅](https://colinder.github.io/sync
   
   // a와 b라는 함수를 선언
   function a(callback) {       // 함수 a는 2초 후에 동작
-      setTimeout(function() {
-          console.log('running a....')
-          callback()			 // 👈 callback함수를 추가
-      }, 2000)
+    setTimeout(function() {
+        console.log('running a....')
+        callback()			 // 👈 callback함수를 추가
+    }, 2000)
   }
   
   function b() {       // 함수 b는 1초 후에 동작
-      setTimeout(function() {
-          console.log('running b....')
-      }, 1000)
+    setTimeout(function() {
+        console.log('running b....')
+    }, 1000)
   }
   
   // 실행해봅시다.
@@ -152,26 +152,26 @@ _*동기, 비동기 설명은 [이전 포스팅](https://colinder.github.io/sync
   ```javascript
   // Promise 사용 예제
   
-  function test() {                                    // test라는 동작(함수)을 만드는데
-      return new Promise(function(resolve, reject) {   // Promise로 만들고 Promise는 인자로 resolve, reject를 받는다.
-          try {                                        // 정상처리되면(조건은 다양하게 구성)
-              resolve(                                 // resolve를 동작하는데
-                  console.log('Promise resolve')       // Promise resolve를 출력하고
-              )
-          } catch {                                    // error가 발생하면
-              reject(                                  // reject를 동작하는데
-                  console.log('Promise reject')        // Promise reject를 출력한다.
-              )
-          }
-      })
+  function test() {                                  // test라는 동작(함수)을 만드는데
+    return new Promise(function(resolve, reject) {   // Promise로 만들고 Promise는 인자로 resolve, reject를 받는다.
+        try {                                        // 정상처리되면(조건은 다양하게 구성)
+            resolve(                                 // resolve를 동작하는데
+                console.log('Promise resolve')       // Promise resolve를 출력하고
+            )
+        } catch {                                    // error가 발생하면
+            reject(                                  // reject를 동작하는데
+                console.log('Promise reject')        // Promise reject를 출력한다.
+            )
+        }
+    })
   }
   
-  test()                              // test를 동작(함수실행)하는데
-  .then((res) =>                      // 에러가 없다면
-      console.log('정상 처리 완료')    // '정상 처리 완료'를 출력하고
+  test()                            // test를 동작(함수실행)하는데
+  .then((res) =>                    // 에러가 없다면
+    console.log('정상 처리 완료')    // '정상 처리 완료'를 출력하고
   )
-  .catch((err) =>                     // 에러가 발생했다면
-      console.log('에러 발생')        // '에러 발생'을 출력한다.
+  .catch((err) =>                   // 에러가 발생했다면
+    console.log('에러 발생')        // '에러 발생'을 출력한다.
   )
   ```
 
@@ -184,23 +184,23 @@ _*동기, 비동기 설명은 [이전 포스팅](https://colinder.github.io/sync
   // 1,2,3 순서대로 출력되길 원하며 코딩
   
   function test() {                                    // test라는 동작(함수)을 만드는데
-      return new Promise(function(resolve, reject) {   // Promise로 만들고 Promise는 인자로 reselve, reject를 받는다.
-          try {
-              setTimeout(function() {					// AJAX등의 처리를 기다리는 '지연 시간'을 setTimeout으로 설정
-                  resolve( console.log('1') )			// resolve처리를 하는데 3초의 딜레이를 주고
-              },3000)
-              console.log('2')                    	// resolve 
-          } catch {
-              reject(
-                  console.log('reject running')
-              )
-          }
-      })
+    return new Promise(function(resolve, reject) {   // Promise로 만들고 Promise는 인자로 reselve, reject를 받는다.
+        try {
+            setTimeout(function() {					// AJAX등의 처리를 기다리는 '지연 시간'을 setTimeout으로 설정
+                resolve( console.log('1') )			// resolve처리를 하는데 3초의 딜레이를 주고
+            },3000)
+            console.log('2')                    	// resolve 
+        } catch {
+            reject(
+                console.log('reject running')
+            )
+        }
+    })
   }
   function b() {
-      setTimeout(function() {
-          console.log('3')
-      }, 1000)
+    setTimeout(function() {
+        console.log('3')
+    }, 1000)
   }
   
   // 실행해봅시다.
@@ -257,14 +257,14 @@ _*동기, 비동기 설명은 [이전 포스팅](https://colinder.github.io/sync
   // Async/Await 사용 예제
   
   function promise() {		
-      return new Promise(function(resolve, reject) {
-          resolve(10)
-      })
+    return new Promise(function(resolve, reject) {
+        resolve(10)
+    })
   }
   
   async function foo() {
-      const num = await promise()
-      console.log(num)
+    const num = await promise()
+    console.log(num)
   }
   // 돌려봅시다!
   foo()		// 10
@@ -278,18 +278,18 @@ _*동기, 비동기 설명은 [이전 포스팅](https://colinder.github.io/sync
   // Async/Await 동기적 코딩
   
   function promise() {
-      console.log('AsyncAwait running...')
-      return new Promise(function(resolve, reject) {
-          setTimeout(function() {
-              resolve(10)
-          }, 5000)
-      })
+    console.log('AsyncAwait running...')
+    return new Promise(function(resolve, reject) {
+        setTimeout(function() {
+            resolve(10)
+        }, 5000)
+    })
   }
   
   async function foo() {
-      console.log('foo running...')
-      const num = await promise()
-      console.log('num:', num)
+    console.log('foo running...')
+    const num = await promise()
+    console.log('num:', num)
   }
   // 돌려봅시다!
   foo()
@@ -325,30 +325,30 @@ _*동기, 비동기 설명은 [이전 포스팅](https://colinder.github.io/sync
   // 여러 test 중 하나. 
   
   function promise() {
-      console.log('AsyncAwait running...')
-      return new Promise(function(resolve, reject) {
-          setTimeout(function() {
-              resolve(10)
-          }, 5000)
-      })
+    console.log('AsyncAwait running...')
+    return new Promise(function(resolve, reject) {
+        setTimeout(function() {
+            resolve(10)
+        }, 5000)
+    })
   }
   
   function test2Promise() {
-      console.log('test2Promise 시작')
-      return new Promise(function(resolve, reject) {
-          setTimeout(()=> {
-              console.log('test2Promise running...')
-              						// 👈 Promise의 resolve가 없습니다.
-          },3000)
-      }) 
+    console.log('test2Promise 시작')
+    return new Promise(function(resolve, reject) {
+        setTimeout(()=> {
+            console.log('test2Promise running...')
+            						// 👈 Promise의 resolve가 없습니다.
+        },3000)
+    }) 
   }
   
   async function foo() {
-      console.log('foo running...')
-      const num = await promise()
-      // await test1()
-      await test2Promise()
-      console.log('num:', num)
+    console.log('foo running...')
+    const num = await promise()
+    // await test1()
+    await test2Promise()
+    console.log('num:', num)
   }
   // 돌려봅시다!
   foo()
