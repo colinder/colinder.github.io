@@ -156,8 +156,8 @@ Vue Dev_Info  Vue 개발을 하면서 알게 된(깨닫게 된) 내용을 정리
 <p>EventBus 사용 로직을 생각해보자</p>
 <p>어떤 동작(method)을 하여 신호나 데이터를 보내려는 파일(A)이 존재할 것이고,
 그 신호나 데이터를 받는 파일(B)이 존재한다.</p>
-<p>하여 보통 A에서는 어떤 동작과 함께 신호나 데이터를 보내려는 동작(EventBus.$emit)을 method에 등록하고,
-B에서는 신호나 동작을 받는 것(EventBus.$on)을 created나 mounted에 등록한다.</p>
+<p>하여 보통 A에서는 어떤 동작과 함께 신호나 데이터를 보내려는 동작(<code>EventBus.$emit</code>)을 method에 등록하고,
+B에서는 신호나 동작을 받는 것(<code>EventBus.$on</code>)을 created나 mounted에 등록한다.</p>
 </blockquote>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -220,7 +220,7 @@ Back은 DB 자료를 넘겨주기만 하고 Front 중심으로 개발을 해보�
 <blockquote>
 <p>동기화 처리를 위해 async await을 사용하려 했습니다. 
 다만 원하는 대로 개발은 되지 않았습니다. 많은 레퍼런스를 찾아보았고 방법을 찾았지만 적용하는 것은 어려웠습니다.</p>
-<p>원인 1. actions에서 axios</p>
+<p>원인 1.  actions에서 axios</p>
 <p>.vue  → (.dispatch()) → actions → (.commit()) → mutations → axios 의 로직으로 개발하였습니다. 
 하지만 제가 확인한 레퍼런스들 중 API 통신을 actions에서 axios를 사용하는 형태의 async await 구현이 많았습니다.
 또 저는 actions에서  여러개의 .commit()을 날려 여러개의 mutations동작을 원했고 이미 구현해 놓은 부분이 있어 변경이 어려웠습니다.</p>

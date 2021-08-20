@@ -47,8 +47,8 @@ vuex는 `상태`를 관리하기 위해 만들어졌습니다. `상태`는 `무�
 > 어떤 동작(method)을 하여 신호나 데이터를 보내려는 파일(A)이 존재할 것이고,
 > 그 신호나 데이터를 받는 파일(B)이 존재한다.
 >
-> 하여 보통 A에서는 어떤 동작과 함께 신호나 데이터를 보내려는 동작(EventBus.$emit)을 method에 등록하고,
-> B에서는 신호나 동작을 받는 것(EventBus.$on)을 created나 mounted에 등록한다.
+> 하여 보통 A에서는 어떤 동작과 함께 신호나 데이터를 보내려는 동작(`EventBus.$emit`)을 method에 등록하고,
+> B에서는 신호나 동작을 받는 것(`EventBus.$on`)을 created나 mounted에 등록한다.
 
 ```javascript
 //// 이벤트버스 생성
@@ -95,7 +95,7 @@ EventBus.$off 를 잘 사용하는 것이 중요합니다. <b>이벤트 버스�
 > 동기화 처리를 위해 async await을 사용하려 했습니다. 
 > 다만 원하는 대로 개발은 되지 않았습니다. 많은 레퍼런스를 찾아보았고 방법을 찾았지만 적용하는 것은 어려웠습니다. 
 >
-> 원인 1. actions에서 axios 
+> 원인 1.  actions에서 axios 
 >
 > .vue  → (.dispatch()) → actions → (.commit()) → mutations → axios 의 로직으로 개발하였습니다. 
 > 하지만 제가 확인한 레퍼런스들 중 API 통신을 actions에서 axios를 사용하는 형태의 async await 구현이 많았습니다.
