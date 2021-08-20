@@ -52,8 +52,8 @@ graph LR;
     A(A.vue 파일 `EventBus.$emit()`) -->B(B.vue `EventBus.$on()`)
 {{< /mermaid >}}
 
-> 하여 보통 A에서는 어떤 동작과 함께 신호나 데이터를 보내려는 동작(`EventBus.$emit()`)을 method에 등록하고,
-> B에서는 신호나 동작을 받는 것(`EventBus.$on()`)을 created나 mounted에 등록한다.
+보통 A에서는 어떤 동작과 함께 신호나 데이터를 보내려는 동작(`EventBus.$emit()`)을 method에 등록하고,<br>
+B에서는 신호나 동작을 받는 것(`EventBus.$on()`)을 created나 mounted에 등록합니다.
 
 ```javascript
 //// 이벤트버스 생성
@@ -120,7 +120,7 @@ graph LR;
     E --> |"axios"|F[backend]
     F --> |"response"|E
     E --> |"완료"|B
-    B --> |"next commit..."|G[mutation 3]
+    B --> |"next commit..."|mutation 3
 {{< /mermaid >}}
 
 > 혹시 1개의 actions에서 여러개의 .commit()을 날리는데 async await을 구현하는 레퍼런스 혹은 방법을 알고있다면 조언 부탁드립니다.
