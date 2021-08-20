@@ -106,15 +106,15 @@ EventBus.$off 를 잘 사용하는 것이 중요합니다. <b>이벤트 버스�
 {{< mermaid >}}
 graph LR;
     A(.vue 파일) -->|".dispatch()"| B(actions)
-    B --> |".commit()"|C[mutations]
+    B --> |".commit()"|C[mutation 1]
     C --> |"axios"|D[backend]
     D --> |"response"|C
     C --> |"완료"|B
-    B --> |".commit()"|E[mutations]
+    B --> |".commit()"|E[mutation 2]
     E --> |"axios"|F[backend]
     F --> |"response"|E
     E --> |"완료"|B
-    B --> |"next commit..."|G
+    B --> |"next commit..."|G[mutation 3]
 {{< /mermaid >}}
 
 > 혹시 1개의 actions에서 여러개의 .commit()을 날리는데 async await을 구현하는 레퍼런스 혹은 방법을 알고있다면 조언 부탁드립니다.
