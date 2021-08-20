@@ -39,7 +39,7 @@ Vue Dev_Info  Vue 개발을 하면서 알게 된(깨닫게 된) 내용을 정리
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/vue_devinfo\/"
-        },"genre": "posts","keywords": "Vue","wordcount":  177 ,
+        },"genre": "posts","keywords": "Vue","wordcount":  363 ,
         "url": "https:\/\/colinder.github.io\/vue_devinfo\/","datePublished": "2021-08-08T14:09:22+09:00","dateModified": "2021-08-08T14:09:22+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -116,8 +116,8 @@ Vue Dev_Info  Vue 개발을 하면서 알게 된(깨닫게 된) 내용을 정리
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Vue_DevInfo</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/vue/"><i class="far fa-folder fa-fw"></i>Vue</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-08-08">2021-08-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;177 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;One minute&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-08-08">2021-08-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;363 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
@@ -146,9 +146,69 @@ Vue Dev_Info  Vue 개발을 하면서 알게 된(깨닫게 된) 내용을 정리
 <p>그런데 <span style="color:green"><b>actions는 비동기</b></span>적 처리를 하며 <span style="color:blue"><b>mutatinos는 동기</b></span>적으로 처리합니다.</p>
 <p>이렇게 단계가 나누어져 있는 것에 이유는 1. 일단  <span style="color:green">사용자들의 요청(actions)는 접수받고(쌓아두고)</span> 2. 이를 반영하는  <span style="color:blue">처리(mutations)는 동기(순차)적으로 처리</span>하여 3. 데이터의 무결성을 유지하기 위함이라고 생각합니다.</p>
 <p>간단히 선착순의 개념을 떠올려 접수는 일단 쌓아두고 내 능력에 따라 처리하는 사람과 비슷한 모양새의 일처리 방식입니다.</p>
-<p>공식문서를 확인해보면 <a href="https://vuex.vuejs.org/kr/guide/actions.html" target="_blank" rel="noopener noreffer">actions도 동기적으로 사용</a>할 수 있습니다. 다만, 굳이 필요하지 않다면, vue 개발자가 의도한 흐름대로 사용하는 것을 권장하고 싶습니다.</p>
+<p>공식문서를 확인해보면 <a href="https://vuex.vuejs.org/kr/guide/actions.html" target="_blank" rel="noopener noreffer">actions도 동기적으로 사용</a>할 수 있습니다. 다만, 굳이 필요하지 않다면, vue 개발자가 의도한 흐름대로 사용하는 것을 권장하고 싶습니다. (동기적인 actions를 실제 프로젝트에 적용해보려했으나 쉽지 않았습니다&hellip;)</p>
+<p>​</p>
+</li>
+<li>
+<p>EventBus 사용시 주의사항</p>
+<blockquote>
+<p>EventBus 사용 로직을 생각해보자</p>
+<p>어떤 동작(method)을 하여 신호나 데이터를 보내려는 파일(A)이 존재할 것이고,
+그 신호나 데이터를 받는 파일(B)이 존재한다.</p>
+<p>하여 보통 A에서는 어떤 동작과 함께 신호나 데이터를 보내려는 동작(EventBus.$emit)을 method에 등록하고,
+B에서는 신호나 동작을 받는 것(EventBus.$on)을 created나 mounted에 등록한다.</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">//// 이벤트버스 생성
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">EventBus</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">()</span>
+
+<span class="c1">//// 이벤트 발행
+</span><span class="c1">// 신호 or 데이터를 보내려는 .vue파일 안에서
+</span><span class="c1"></span><span class="nx">EventBus</span><span class="p">.</span><span class="nx">$emit</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">,</span> <span class="s1">&#39;hello world&#39;</span><span class="p">);</span>	<span class="c1">// message라는 이름의 신호에 &#39;hello world&#39;를 데이터로 보냄
+</span><span class="c1"></span>
+<span class="c1">//// 이벤트 수신(구독)
+</span><span class="c1">// 신호 or 데이터를 받으려는 .vue파일 안에서
+</span><span class="c1"></span><span class="nx">EventBus</span><span class="p">.</span><span class="nx">$on</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">text</span><span class="p">)</span> <span class="p">{</span>	<span class="c1">// message라는 신호를 수신하고 전달받은 인자(text)를
+</span><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span>						<span class="c1">// console에 찍어본다.
+</span><span class="c1"></span><span class="p">});</span>
+
+<span class="c1">//// 이벤트 한번 만 수신
+</span><span class="c1"></span><span class="nx">EventBus</span><span class="p">.</span><span class="nx">$once</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">text</span><span class="p">)</span> <span class="p">{</span> 	<span class="c1">// message라는 신호를 단 한번 만 수신한다.
+</span><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="c1">//// 이벤트 제거
+</span><span class="c1"></span><span class="nx">EventBus</span><span class="p">.</span><span class="nx">$off</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">)</span>	<span class="c1">// message라는 신호를 제거(보통 beforeDestroy()에 등록)
+</span></code></pre></td></tr></table>
+</div>
+</div><p>EventBus.$off 를 잘 사용하는 것이 중요합니다. <b>이벤트 버스는 객체가 계속 쌓이기 때문에 <code>off</code>를 해주지 않으면 첫 번째 신호에서는 1번 동작, 두 번째 신호에서는 2번 동작, 세 번째 신호에서는 3번이 동작되어 누적된 신호를 수신하게 됩니다.</b></p>
+<p>​</p>
 </li>
 </ol>
+<p>​</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
