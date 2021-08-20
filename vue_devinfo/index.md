@@ -46,7 +46,12 @@ vuex는 `상태`를 관리하기 위해 만들어졌습니다. `상태`는 `무�
 >
 > 어떤 동작(method)을 하여 신호나 데이터를 보내려는 파일(A)이 존재할 것이고,
 > 그 신호나 데이터를 받는 파일(B)이 존재한다.
->
+
+{{< mermaid >}}
+graph LR;
+    A(A.vue 파일 `EventBus.$emit()`) -->B(B.vue `EventBus.$on()`)
+{{< /mermaid >}}
+
 > 하여 보통 A에서는 어떤 동작과 함께 신호나 데이터를 보내려는 동작(`EventBus.$emit()`)을 method에 등록하고,
 > B에서는 신호나 동작을 받는 것(`EventBus.$on()`)을 created나 mounted에 등록한다.
 
@@ -73,7 +78,8 @@ EventBus.$once('message', function(text) { 	// message라는 신호를 단 한�
 EventBus.$off('message')	// message라는 신호를 제거(보통 beforeDestroy()에 등록)
 ```
 
-EventBus.$off 를 잘 사용하는 것이 중요합니다. <b>이벤트 버스는 객체가 계속 쌓이기 때문에 `off`를 해주지 않으면 첫 번째 신호에서는 1번 동작, 두 번째 신호에서는 2번 동작, 세 번째 신호에서는 3번이 동작되어 누적된 신호를 수신하게 됩니다.</b>
+개인적으로 `EventBus.$off()` 를 잘 사용하는 것이 중요하다고 생각합니다. <br>
+<b>이벤트 버스는 객체가 계속 쌓이기 때문에 `$off()`를 해주지 않으면 첫 번째 신호에서는 1번 동작, 두 번째 신호에서는 2번 동작, 세 번째 신호에서는 3번이 동작되어 누적된 신호를 수신하게 됩니다.</b>
 
 ​				
 
