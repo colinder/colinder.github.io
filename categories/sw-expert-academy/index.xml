@@ -10,7 +10,7 @@
     <author>Author</author>
     <guid>https://colinder.github.io/sw_21.04.04/</guid>
     <description><![CDATA[​
-D4_11316_주기 찾기 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27  for T in range(int(input())): s, p, q, m = map(int, input().split()) V = s visited = [0]*m i = 1 while True: V = (p*V + q) % m i += 1 if visited[V] != 0: result = i - visited[V] break visited[V] = i print(f&#39;#{T+1} {result}&#39;) # 한 번 나왔던 숫자의 &#39;위치 정보(i)&#39;를  # visited에 저장해 두었다가 # 한 번이라도 방문했던 숫자가 나왔을 때 # 저장해주었던 &#39;위치 정보&#39;의 차리를 계산해 준다.]]></description>
+D4_11316_주기 찾기 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27  for T in range(int(input())): s, p, q, m = map(int, input().split()) V = s visited = [0]*m i = 1 while True: V = (p*V + q) % m i += 1 if visited[V] != 0: result = i - visited[V] break visited[V] = i print(f&#39;#{T+1}{result}&#39;) # 한 번 나왔던 숫자의 &#39;위치 정보(i)&#39;를  # visited에 저장해 두었다가 # 한 번이라도 방문했던 숫자가 나왔을 때 # 저장해주었던 &#39;위치 정보&#39;의 차리를 계산해 준다.]]></description>
 </item><item>
     <title>SW Expert Academy_D3 11445, 11387, 11285, 11315</title>
     <link>https://colinder.github.io/sw_21.03.24/</link>
@@ -18,8 +18,8 @@ D4_11316_주기 찾기 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 
     <author>Author</author>
     <guid>https://colinder.github.io/sw_21.03.24/</guid>
     <description><![CDATA[​
-D3_11445_무한 사전 1 2 3 4 5 6 7 8 9 10 11 12  for T in range(int(input())): P = input().rstrip() Q = input().rstrip() if P + &#34;a&#34; != Q: result = &#34;Y&#34; else: result = &#34;N&#34; print(f&#39;#{T+1} {result}&#39;) # 왜 D3 인가.   ​
-D3_11387_몬스터 사냥 1 2 3 4 5 6 7 8  for T in range(int(input())): D, L, N = map(int, input().split()) result = 0 for i in range(N): result += D * (1 + L*i/100) print(f&#39;#{T+1} {int(result)}&#39;)   ​]]></description>
+D3_11445_무한 사전 1 2 3 4 5 6 7 8 9 10 11 12  for T in range(int(input())): P = input().rstrip() Q = input().rstrip() if P + &#34;a&#34; != Q: result = &#34;Y&#34; else: result = &#34;N&#34; print(f&#39;#{T+1}{result}&#39;) # 왜 D3 인가.   ​
+D3_11387_몬스터 사냥 1 2 3 4 5 6 7 8  for T in range(int(input())): D, L, N = map(int, input().split()) result = 0 for i in range(N): result += D * (1 + L*i/100) print(f&#39;#{T+1}{int(result)}&#39;)   ​]]></description>
 </item><item>
     <title>SW Expert Academy_D4 3143, 10966, 11592, 11545</title>
     <link>https://colinder.github.io/sw_21.02.16/</link>
@@ -27,7 +27,7 @@ D3_11387_몬스터 사냥 1 2 3 4 5 6 7 8  for T in range(int(input())): D, L, N
     <author>Author</author>
     <guid>https://colinder.github.io/sw_21.02.16/</guid>
     <description><![CDATA[​
-D4_3143_가장 빠른 문자열 타이핑 1 2 3 4 5 6 7  for T in range(int(input())): A, B = input().split() result = len(A) - (A.count(B)*(len(B)-1)) print(f&#39;#{T+1} {result}&#39;) # 왜 D4 인가.   ​
+D4_3143_가장 빠른 문자열 타이핑 1 2 3 4 5 6 7  for T in range(int(input())): A, B = input().split() result = len(A) - (A.count(B)*(len(B)-1)) print(f&#39;#{T+1}{result}&#39;) # 왜 D4 인가.   ​
 D4_10966_물놀이를 가자 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31  from collections import deque dx = [0, 1, 0, -1] dy = [1, 0, -1, 0] for T in range(int(input())): N, M = map(int, input().]]></description>
 </item><item>
     <title>SW Expert Academy_D4 1258, 1249, 1238, 4261</title>
@@ -52,7 +52,7 @@ D4_1226_미로1 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 2
     <author>Author</author>
     <guid>https://colinder.github.io/sw_21.01.20/</guid>
     <description><![CDATA[​
-D4_1218_괄호 짝짓기 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24  def Pair_bracket(): for i in range(L): if q[i] in check: ni = i - 1 while True: if q[ni] == 0: ni -= 1 else: break a = q[ni] b = check[q[i]] if a == b: q[i] = 0 q[ni] = 0 else: return 0 return 1 check = {&#34;)&#34; :&#34;(&#34;, &#34;]&#34;:&#34;[&#34;, &#34;}&#34;:&#34;{&#34;, &#34;&gt;&#34;:&#34;&lt;&#34;} for T in range(10): L = int(input()) q = list(input()) print(f&#39;#{T+1} {Pair_bracket()}&#39;)   ​]]></description>
+D4_1218_괄호 짝짓기 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24  def Pair_bracket(): for i in range(L): if q[i] in check: ni = i - 1 while True: if q[ni] == 0: ni -= 1 else: break a = q[ni] b = check[q[i]] if a == b: q[i] = 0 q[ni] = 0 else: return 0 return 1 check = {&#34;)&#34; :&#34;(&#34;, &#34;]&#34;:&#34;[&#34;, &#34;}&#34;:&#34;{&#34;, &#34;&gt;&#34;:&#34;&lt;&#34;} for T in range(10): L = int(input()) q = list(input()) print(f&#39;#{T+1}{Pair_bracket()}&#39;)   ​]]></description>
 </item><item>
     <title>SW Expert Academy_D4 6959, 4613, 6109, 1211</title>
     <link>https://colinder.github.io/sw_20.10.23/</link>
@@ -60,7 +60,7 @@ D4_1218_괄호 짝짓기 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 2
     <author>Author</author>
     <guid>https://colinder.github.io/sw_20.10.23/</guid>
     <description><![CDATA[​
-D4_6959_이상한 나라의 덧셈게임 1 2 3 4 5 6 7 8 9 10  for T in range(int(input())): N = input() result = [&#34;A&#34;, &#34;B&#34;] turn = 1 while len(N) &gt; 1: N = str(int(N[0]) + int(N[1])) + N[2:] turn += 1 print(f&#39;#{T+1} {result[turn%2]}&#39;) # 단순 산수   ​
+D4_6959_이상한 나라의 덧셈게임 1 2 3 4 5 6 7 8 9 10  for T in range(int(input())): N = input() result = [&#34;A&#34;, &#34;B&#34;] turn = 1 while len(N) &gt; 1: N = str(int(N[0]) + int(N[1])) + N[2:] turn += 1 print(f&#39;#{T+1}{result[turn%2]}&#39;) # 단순 산수   ​
 D4_4613_러시아 국기 같은 깃발 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19  for T in range(int(input())): N, M = map(int, input().]]></description>
 </item><item>
     <title>SW Expert Academy_D3 5678, 5672, 7465, 7701</title>
@@ -69,7 +69,7 @@ D4_4613_러시아 국기 같은 깃발 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
     <author>Author</author>
     <guid>https://colinder.github.io/sw_21.01.06/</guid>
     <description><![CDATA[​
-D4_5678_[Professional] 팰린드롬 1 2 3 4 5 6 7 8 9 10 11 12  for T in range(int(input())): S = &#34; &#34; + input() L = len(S) result = 1 for i in range(2, L): for j in range(L-i): if S[j+1:j+i+1] == S[j+i:j:-1]: result = i print(f&#39;#{T+1} {result}&#39;) # 슬라이싱을 잘 고민 하면 쉽게 해결   ​
+D4_5678_[Professional] 팰린드롬 1 2 3 4 5 6 7 8 9 10 11 12  for T in range(int(input())): S = &#34; &#34; + input() L = len(S) result = 1 for i in range(2, L): for j in range(L-i): if S[j+1:j+i+1] == S[j+i:j:-1]: result = i print(f&#39;#{T+1}{result}&#39;) # 슬라이싱을 잘 고민 하면 쉽게 해결   ​
 D4_5672_[Professional] 올해의 조련사 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43  for T in range(int(input())): q = [] n = &#34;&#34; for N in range(int(input())): q.]]></description>
 </item><item>
     <title>SW Expert Academy_D3 10761, 10804, 10912, 10965</title>
@@ -86,6 +86,6 @@ D3_10761_신뢰 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 2
     <author>Author</author>
     <guid>https://colinder.github.io/sw_20.09.26/</guid>
     <description><![CDATA[​
-D3_3975_승률 비교하기 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  result = [] for T in range(int(input())): A, B, C, D = map(int, input().split()) if B/A &gt; D/C: result.append(&#34;BOB&#34;) elif B/A &lt; D/C: result.append(&#34;ALICE&#34;) else: result.append(&#34;DRAW&#34;) for t in range(T+1): print(f&#34;#{t+1} {result[t]}&#34;) # 아니 이게 D3라고? 완전 난이도 설정 실수네. 했다가 런타임 오류 보고 # 왜 그런건지 알았다. # python은 결과를 모았다가 출력하는 게 더 빠르다.]]></description>
+D3_3975_승률 비교하기 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  result = [] for T in range(int(input())): A, B, C, D = map(int, input().split()) if B/A &gt; D/C: result.append(&#34;BOB&#34;) elif B/A &lt; D/C: result.append(&#34;ALICE&#34;) else: result.append(&#34;DRAW&#34;) for t in range(T+1): print(f&#34;#{t+1}{result[t]}&#34;) # 아니 이게 D3라고? 완전 난이도 설정 실수네. 했다가 런타임 오류 보고 # 왜 그런건지 알았다. # python은 결과를 모았다가 출력하는 게 더 빠르다.]]></description>
 </item></channel>
 </rss>

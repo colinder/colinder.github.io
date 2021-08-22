@@ -16,8 +16,8 @@
 
 {{< mermaid >}}
 graph LR;
-    A[.vue 파일] -->|".dispatch()"| B[actions]
-    B --> |".commit()"|C[mutations]
+    A[.vue 파일] -->|".dispatch()"| B(actions)
+    B --> |".commit()"|C(mutations)
 {{< /mermaid >}}
 
 위의 그래프를 보면 `.vue 파일`에서 `.dispatch()`를 사용에 vuex의 store.js에 등록된 `actions`의 함수를 동작하는 신호를 보냅니다.
@@ -49,7 +49,7 @@ vuex는 `상태`를 관리하기 위해 만들어졌습니다. `상태`는 `무�
 
 {{< mermaid >}}
 graph LR;
-    A(A.vue 파일 `EventBus.$emit()`) -->B(B.vue `EventBus.$on()`)
+    A(A.vue `EventBus.$emit`) --> B(B.vue `EventBus.$on`)
 {{< /mermaid >}}
 
 보통 A에서는 어떤 동작과 함께 신호나 데이터를 보내려는 동작(`EventBus.$emit()`)을 method에 등록하고,<br>
@@ -111,16 +111,16 @@ EventBus.$off('message')	// message라는 신호를 제거(보통 beforeDestroy(
 
 {{< mermaid >}}
 graph LR;
-    A(.vue 파일) -->|".dispatch()"| B(actions)
-    B --> |".commit()"|C[mutation 1]
+    A[.vue 파일] -->|".dispatch()"| B(actions)
+    B --> |".commit()"|C(mutation 1)
     C --> |"axios"|D[backend]
     D --> |"response"|C
     C --> |"완료"|B
-    B --> |".commit()"|E[mutation 2]
+    B --> |".commit()"|E(mutation 2)
     E --> |"axios"|F[backend]
     F --> |"response"|E
     E --> |"완료"|B
-    B --> |"next commit..."|mutation 3
+    B --> |"next commit()..."|G(mutation 3)
 {{< /mermaid >}}
 
 > 혹시 1개의 actions에서 여러개의 .commit()을 날리는데 async await을 구현하는 레퍼런스 혹은 방법을 알고있다면 조언 부탁드립니다.
