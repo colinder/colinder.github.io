@@ -27,16 +27,20 @@ Creation 단계에서 실행되는 훅(hook)들이 라이프사이클 중에서 
 
 따라서 클라이언트 단과 서버단 렌더링, 모두에서 처리해야할 일이 있다면 이 단계에서 하면됩니다. 
 
-*Creation단계에서 호출되는 라이프 사이클 훅은 [beforeCreate]과 [created]가 있습니다.*
+*Creation단계에서 호출되는 라이프 사이클 훅은 [beforeCreate]과 [create]가 있습니다.*
 
 - ## **beforeCreate()**
+
+  <image src="/images/Vue_LifeCycle_03.png" width="1000px" style="border-radius: 10px">
 
   이름처럼 가장 먼저 실행되는 **beforeCreate**훅입니다. Vue 인스턴스가 초기화 된 직후에 발생됩니다. 컴포넌트가 DOM에 추가되기도 전이어서 `this.$el`에 접근할 수 없습니다. 또한 `data`, `methods`, `watch`, `computed`, `events(vm.$on, vm.$once, vm.$off, vm.$emit)`등이 설정되기 전이라 접근할 수 없습니다.	
 
 - ## created()
 
-  `data`를 반응형으로 추적할 수 있게 되며 , `methods`, `watch`, `computed`, `events`등이 활성화되어 접근이 가능하게 됩니다. 하지만 아직까지 DOM에는 추가되지 않은 상태입니다. 하여 `this.$el`에는 접근할 수 없습니다. 컴포넌트 초기에 외부에서 받아온 값들로 **data를 세팅**해야 하거나 **이벤트 리스너를 선언**해야 한다면 이 단계에서 하는 것이 가장 적절합니다.
+  <image src="/images/Vue_LifeCycle_04.png" width="1000px" style="border-radius: 10px">
 
+  `data`를 반응형으로 추적할 수 있게 되며 , `methods`, `watch`, `computed`, `events`등이 활성화되어 접근이 가능하게 됩니다. 하지만 아직까지 DOM에는 추가되지 않은 상태입니다. 하여 `this.$el`에는 접근할 수 없습니다. 컴포넌트 초기에 외부에서 받아온 값들로 <span style="color: blue">**data를 세팅**해야 하거나 **이벤트 리스너(ex. EventBus 등..)를 선언**해야 한다면 이 단계에서 하는 것이 가장 적절</span>합니다.
+  
   ​		
 
 ---
@@ -53,24 +57,28 @@ _*fetch: api를 불러오고, 정보를 내보내 주기도 하는 함수_
 
 - ## beforeMount()
 
+  <image src="/images/Vue_LifeCycle_05.png" width="1000px" style="border-radius: 10px">
+  
   DOM에 부착하기 직전에 호출되는 **beforeMount**훅입니다. 가상 DOM은 생성되어 있으나 실제 DOM에 부착되지는 않은 상태입니다. 하여 아직도 `this.$el`에는 접근할 수 없습니다. (서버 사이드 렌더링(SSR)시에 호출되지 않습니다.)
   
-- ## mount()
+- ## mounted()
 
-  드디어! mounted 훅에서는 컴포넌트, 템플릿, 렌더링된 **`DOM에 접근할 수 있습니다.`** **`this.$el`을 비롯한 `data`, `computed`, `methods`, `watch` 등 모든 요소에 접근이 가능합니다.** 하지만 모든 하위 컴포넌트가 마운트된 상태를 보장하지는 않습니다. (서버 사이드 렌더링(SSR)시에 호출되지 않습니다.)
+  <image src="/images/Vue_LifeCycle_06.png" width="1000px" style="border-radius: 10px">
+
+  <span style="color: blue">드디어! mounted 훅에서는 컴포넌트, 템플릿, 렌더링된 **`DOM에 접근할 수 있습니다.`** **`this.$el`을 비롯한 `data`, `computed`, `methods`, `watch` 등 모든 요소에 접근이 가능합니다.**</span> 하지만 모든 하위 컴포넌트가 마운트된 상태를 보장하지는 않습니다. (서버 사이드 렌더링(SSR)시에 호출되지 않습니다.)
 
   mount에는 약간의 이슈가 있습니다. 위의 설명에
 
-  "하지만 모든 하위 component가 mount된 상태를 보장하지는 않고"  **==** 여러 component가 중첩되어 사용되는 경우 부모, 자식 component의 로딩에 순서가 있기 때문입니다. 
+  "하지만 모든 하위 component가 mount된 상태를 보장하지는 않습니다."  **==** 여러 component가 중첩되어 사용되는 경우 부모, 자식 component의 로딩에 순서가 있다. 
 
   *순서: 부모 created => 자식 created => 자식 mounted => 부모 mounted*
 
-  <image src="/images/Vue_LifeCycle_01.png" width="400px" style="display: block; margin: 30px auto;">
+  <image src="/images/Vue_LifeCycle_01.png" width="700px" style="display: block; margin: 30px auto;">
 
   *이때는 `this.$nextTick`을 이용한다면, 모든 화면이 렌더링 된 이후에 실행되므로 마운트 상태를 보장할 수 있습니다.
 
-  <image src="/images/Vue_LifeCycle_02.png" width="auto" >
-
+  <image src="/images/Vue_LifeCycle_07.png" width="1000px" style="border-radius: 10px">
+  
   ​	
 
 ---
@@ -83,14 +91,20 @@ _*fetch: api를 불러오고, 정보를 내보내 주기도 하는 함수_
 
 - ## beforeUpdate()
 
+  <image src="/images/Vue_LifeCycle_08.png" width="1000px" style="border-radius: 10px">
+
   이 훅은 컴포넌트의 데이터가 변하여 업데이트 사이클이 시작될 때 실행됩니다. 정확히는 DOM이 재 렌더링되고 패치되기 직전에 실행됩니다. 컴포넌트 초기에 `data`가 세팅되어야 한다면 `created` 훅을, 렌더링 되고 DOM을 변경해야 한다면 `mounted` 훅을 사용하면 되기 때문에, 거의 사용하지 않는 라이프 사이클 훅입니다.
 
 - ## updated()
 
+  <image src="/images/Vue_LifeCycle_09.png" width="1000px" style="border-radius: 10px">
+
   이 훅은 **DOM이 재 렌더링 된 후 호출**되는 라이프 사이클 훅입니다. DOM이 업데이트 완료된 상태이므로 DOM의 종속적인 연산을 할 수 있습니다. 
 
   예를 들어 변경된 `data`가 DOM에도 적용된 후에 호출되는 훅입니다. (`updated`훅에서 `data`를 수정하게 되면 `update`훅이 호출 되기 때문에 무한 루프에 빠질 수 있으니 되도록이면 안쓰는 것이 좋습니다...) 또 위의 mounted와 비슷한 이유로 모든 자식 컴포넌트의 재 렌더링 상태를 보장하지는 않으며, `this.$nextTick()`을 이용해, 모든 화면이 업데이트 된 이후의 상태를 보장할 수 있습니다.
-
+  
+  <image src="/images/Vue_LifeCycle_10.png" width="1000px" style="border-radius: 10px">
+  
   ​	
 
 ---
@@ -103,14 +117,18 @@ _*fetch: api를 불러오고, 정보를 내보내 주기도 하는 함수_
 
 - ## beforeDestroy()
 
-  컴포넌트가 제거 되기 직전에 호출되는 라이프 사이클 훅입니다. 이 훅에서 컴포넌트는 본래의 기능들을 가지고 있는 온전한 상태이기 때문에 모든 속성에 접근이 가능합니다. 하여 이 훅에서 이벤트 리스너를 해제하거나 컴포넌트에서 동작으로 할당 받은 자원들은 해제해야 할 때 사용하기 적합한 훅입니다.
+  <image src="/images/Vue_LifeCycle_11.png" width="1000px" style="border-radius: 10px">
+
+  컴포넌트가 제거 되기 직전에 호출되는 라이프 사이클 훅입니다. 이 훅에서 컴포넌트는 본래의 기능들을 가지고 있는 온전한 상태이기 때문에 모든 속성에 접근이 가능합니다. 하여 이 훅에서 <span style="color: blue">이벤트 리스너를 해제하거나 컴포넌트에서 동작으로 할당 받은 자원들은 해제해야 할 때 사용</span>하기 적합한 훅입니다.
 
 - ## destroyed()
+
+  <image src="/images/Vue_LifeCycle_12.png" width="1000px" style="border-radius: 10px">
 
   컴포넌트가 제거 된 후 호출되는 라이프 사이클 훅입니다. 컴포넌트의 모든 이벤트 리스너(`@click`, `@change` 등..)와 디렉티브(`v-model`, `v-show` 등..)의 바인딩이 해제 되고, 하위 컴포넌트도 모두 제거됩니다.
 
   ​	
-
+  
   ​	
 
 # 👀요약

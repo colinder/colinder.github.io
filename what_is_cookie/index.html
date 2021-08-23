@@ -14,8 +14,8 @@ HTTP 프로토콜의 특징 HTTP는 Connectionless(비연결성)하고, Stateles
 Connectionless란, 클라이언트가 행위를 통해 서비스를 제공받기 위해 서버에 request(요청)를 하면 서버는 클라이언트의 요청값에 따라 클라이언트에게 response(응답)하게 됩니다. 이렇게 한번의 request — response의 결과로 클라이언트는 어플리케이션이 제공하는 서비스를 받게되면서, 서로의 접속을 끊게 된다는 특성입니다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://colinder.github.io/what_is_cookie/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-10-19T14:59:01+09:00" />
-<meta property="article:modified_time" content="2020-10-19T14:59:01+09:00" />
+<meta property="article:published_time" content="2020-10-19T14:59:01&#43;09:00" />
+<meta property="article:modified_time" content="2020-10-19T14:59:01&#43;09:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
@@ -183,7 +183,7 @@ Connectionless란, 클라이언트가 행위를 통해 서비스를 제공받기
 <h2 id="쿠키-문법">쿠키 문법</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -199,7 +199,7 @@ Connectionless란, 클라이언트가 행위를 통해 서비스를 제공받기
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// 쿠키는 &#34;이름=값&#34; 페어로 시작됩니다.
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// 쿠키는 &#34;이름=값&#34; 페어로 시작됩니다.
 </span><span class="c1"></span><span class="nx">Set</span><span class="o">-</span><span class="nx">Cookie</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">name</span><span class="o">&gt;=&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">value</span><span class="o">&gt;</span> 
 <span class="nx">Set</span><span class="o">-</span><span class="nx">Cookie</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">name</span><span class="o">&gt;=&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">value</span><span class="o">&gt;</span><span class="p">;</span> <span class="nx">Expires</span><span class="o">=&lt;</span><span class="nx">date</span><span class="o">&gt;</span>
 <span class="nx">Set</span><span class="o">-</span><span class="nx">Cookie</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">name</span><span class="o">&gt;=&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">value</span><span class="o">&gt;</span><span class="p">;</span> <span class="nx">Max</span><span class="o">-</span><span class="nx">Age</span><span class="o">=&lt;</span><span class="nx">non</span><span class="o">-</span><span class="nx">zero</span><span class="o">-</span><span class="nx">digit</span><span class="o">&gt;</span>
@@ -220,13 +220,13 @@ Connectionless란, 클라이언트가 행위를 통해 서비스를 제공받기
 <p><code>document.cookie</code> 프로퍼티를 이용하면 브라우저에서도 쿠키를 확인할 수 있습니다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// ex) 
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// ex) 
 </span><span class="c1"></span><span class="nx">alert</span><span class="p">(</span> <span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="p">);</span> <span class="c1">// cookie1=value1; cookie2=value2;...	 // 모든 쿠키를 알림창으로 확인하겠다.는 명령어
 </span><span class="c1"></span>
 <span class="c1">// 어디든 사이트에 들어가서 개발자 도구창을 열고 console.log(document.cookie) 를 입력해 보세요!
@@ -254,14 +254,14 @@ Connectionless란, 클라이언트가 행위를 통해 서비스를 제공받기
 <p>이 외에 까다로운 제약사항이 하나 더 있습니다. <strong>서브 도메인(subdomain)</strong> (ex. <code>forum.site.com</code>)<strong>에서도 쿠키 정보를 얻을 수 없다는 점입니다.</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// ex) site.com에서 user가 colinder라는 쿠키를 설정함
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// ex) site.com에서 user가 colinder라는 쿠키를 설정함
 </span><span class="c1"></span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="o">=</span> <span class="s2">&#34;user=colinder&#34;</span>
 
 <span class="c1">// site.com의 서브도메인인 forum.site.com에서 쿠키에 접근하려 함
@@ -272,7 +272,7 @@ Connectionless란, 클라이언트가 행위를 통해 서비스를 제공받기
 <p>하지만, <code>forum.site.com</code>과 같은 서브 도메인에서 <code>site.com</code>에서 생성한 쿠키 정보를 얻을 방법이 있습니다. <code>site.com</code>에서 쿠키를 설정할 때 <code>domain</code> 옵션에 루트 도메인인 <code>domain=site.com</code>을 명시적으로 설정해 주면 됩니다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -282,7 +282,7 @@ Connectionless란, 클라이언트가 행위를 통해 서비스를 제공받기
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// site.com에서
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// site.com에서
 </span><span class="c1">// 서브 도메인(*.site.com) 어디서든 쿠키에 접속하게 설정할 수 있습니다.
 </span><span class="c1"></span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="o">=</span> <span class="s2">&#34;user=colinder; domain=site.com&#34;</span>
 
@@ -341,13 +341,13 @@ Connectionless란, 클라이언트가 행위를 통해 서비스를 제공받기
 <p><em>쿠키의 유효 일자는 반드시 GMT(Greenwich Mean Time) 포맷으로 설정해야 합니다. <code>date.toUTCString</code>을 사용하면 해당 포맷으로 쉽게 변경할 수 있습니다. 아래는 유효 기간이 하루인 쿠키를 만드는 예시입니다.</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"> <span class="c1">// 지금으로부터 하루 후
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"> <span class="c1">// 지금으로부터 하루 후
 </span><span class="c1"></span> <span class="kd">let</span> <span class="nx">date</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">()</span> <span class="o">+</span> <span class="mf">86400e3</span><span class="p">);</span>
  <span class="nx">date</span> <span class="o">=</span> <span class="nx">date</span><span class="p">.</span><span class="nx">toUTCString</span><span class="p">();</span>
  <span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="o">=</span> <span class="s2">&#34;user=colinder; expires=&#34;</span> <span class="o">+</span> <span class="nx">date</span><span class="p">;</span>
@@ -360,14 +360,14 @@ Connectionless란, 클라이언트가 행위를 통해 서비스를 제공받기
 <p><code>max-age</code>는 <code>expires</code> 옵션의 대안으로, 쿠키 만료 기간을 설정할 수 있게 해줍니다. 현재부터 설정하고자 하는 만료일시까지의 시간을 <strong>초</strong>로 환산한 값을 설정합니다. (0이나 음수값을 설정하면 쿠키는 바로 삭제됩니다.)</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// 1시간 뒤에 쿠키가 삭제됩니다.
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// 1시간 뒤에 쿠키가 삭제됩니다.
 </span><span class="c1"></span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="o">=</span> <span class="s2">&#34;user=colinder; max-age=3600&#34;</span><span class="p">;</span>
 
 <span class="c1">// 만료 기간을 0으로 지정하여 쿠키를 바로 삭제함
@@ -392,12 +392,12 @@ Connectionless란, 클라이언트가 행위를 통해 서비스를 제공받기
 <p>쿠키는 기본적으로 도메인만 확인하지 프로토콜을 따지진 않기 때문입니다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// (https:// 로 통신하고 있다고 가정 중)
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// (https:// 로 통신하고 있다고 가정 중)
 </span><span class="c1">// 설정한 쿠키는 HTTPS 통신시에만 접근할 수 있음
 </span><span class="c1"></span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="o">=</span> <span class="s2">&#34;user=John; secure&#34;</span><span class="p">;</span>
 </code></pre></td></tr></table>
@@ -471,15 +471,15 @@ Connectionless란, 클라이언트가 행위를 통해 서비스를 제공받기
 <p>​</p>
 <h2 id="참고-했던-글">참고 했던 글</h2>
 <ul>
-<li><a href="https://thoughtbot.com/blog/lucky-cookies" target="_blank" rel="noopener noreffer">https://thoughtbot.com/blog/lucky-cookies</a></li>
-<li><a href="https://www.joinc.co.kr/w/man/12/cookie" target="_blank" rel="noopener noreffer">https://www.joinc.co.kr/w/man/12/cookie</a></li>
-<li><a href="https://ko.javascript.info/cookie#ref-201" target="_blank" rel="noopener noreffer">https://ko.javascript.info/cookie#ref-201</a></li>
-<li><a href="https://ko.javascript.info/cookie" target="_blank" rel="noopener noreffer">https://ko.javascript.info/cookie</a></li>
-<li><a href="https://genesis8.tistory.com/220" target="_blank" rel="noopener noreffer">https://genesis8.tistory.com/220</a></li>
-<li><a href="https://medium.com/@ddinggu/cookie%EB%9E%80-a650c6d2803e" target="_blank" rel="noopener noreffer">https://medium.com/@ddinggu/cookie%EB%9E%80-a650c6d2803e</a></li>
-<li><a href="https://jeong-pro.tistory.com/80" target="_blank" rel="noopener noreffer">https://jeong-pro.tistory.com/80</a></li>
-<li><a href="https://im-first-rate.tistory.com/33" target="_blank" rel="noopener noreffer">https://im-first-rate.tistory.com/33</a></li>
-<li><a href="https://noritersand.github.io/javascript/javascript-document-cookie-%EC%BF%A0%ED%82%A4-%EC%BB%A8%ED%8A%B8%EB%A1%A4/" target="_blank" rel="noopener noreffer">https://noritersand.github.io/javascript/javascript-document-cookie-%EC%BF%A0%ED%82%A4-%EC%BB%A8%ED%8A%B8%EB%A1%A4/</a></li>
+<li><a href="https://thoughtbot.com/blog/lucky-cookies">https://thoughtbot.com/blog/lucky-cookies</a></li>
+<li><a href="https://www.joinc.co.kr/w/man/12/cookie">https://www.joinc.co.kr/w/man/12/cookie</a></li>
+<li><a href="https://ko.javascript.info/cookie#ref-201">https://ko.javascript.info/cookie#ref-201</a></li>
+<li><a href="https://ko.javascript.info/cookie">https://ko.javascript.info/cookie</a></li>
+<li><a href="https://genesis8.tistory.com/220">https://genesis8.tistory.com/220</a></li>
+<li><a href="https://medium.com/@ddinggu/cookie%EB%9E%80-a650c6d2803e">https://medium.com/@ddinggu/cookie%EB%9E%80-a650c6d2803e</a></li>
+<li><a href="https://jeong-pro.tistory.com/80">https://jeong-pro.tistory.com/80</a></li>
+<li><a href="https://im-first-rate.tistory.com/33">https://im-first-rate.tistory.com/33</a></li>
+<li><a href="https://noritersand.github.io/javascript/javascript-document-cookie-%EC%BF%A0%ED%82%A4-%EC%BB%A8%ED%8A%B8%EB%A1%A4/">https://noritersand.github.io/javascript/javascript-document-cookie-%EC%BF%A0%ED%82%A4-%EC%BB%A8%ED%8A%B8%EB%A1%A4/</a></li>
 </ul>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
@@ -513,7 +513,7 @@ Connectionless란, 클라이언트가 행위를 통해 서비스를 제공받기
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

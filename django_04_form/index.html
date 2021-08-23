@@ -13,8 +13,8 @@ Django_form  이제 여러 html파일을 만들어 여러 화면을 돌아다닐
 1. form 태그 생성 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19  &lt;!-- articles/templates/articles/main.html --&gt; &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;IE=edge&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://colinder.github.io/django_04_form/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-04-23T20:04:47+09:00" />
-<meta property="article:modified_time" content="2021-04-23T20:04:47+09:00" />
+<meta property="article:published_time" content="2021-04-23T20:04:47&#43;09:00" />
+<meta property="article:modified_time" content="2021-04-23T20:04:47&#43;09:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
@@ -145,7 +145,7 @@ Django_form  이제 여러 html파일을 만들어 여러 화면을 돌아다닐
 <h3 id="1-form-태그-생성">1. form 태그 생성</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -166,7 +166,7 @@ Django_form  이제 여러 html파일을 만들어 여러 화면을 돌아다닐
 </span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- articles/templates/articles/main.html --&gt;</span>
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- articles/templates/articles/main.html --&gt;</span>
 
 <span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
@@ -192,7 +192,7 @@ Django_form  이제 여러 html파일을 만들어 여러 화면을 돌아다닐
 <p>위에서 articles/output으로 데이터를 보냈으니</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -204,7 +204,7 @@ Django_form  이제 여러 html파일을 만들어 여러 화면을 돌아다닐
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1">## articles/urls.py</span>
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1">## articles/urls.py</span>
 
 <span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span><span class="p">,</span> <span class="n">include</span>
 <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">views</span>
@@ -221,7 +221,7 @@ Django_form  이제 여러 html파일을 만들어 여러 화면을 돌아다닐
 <p>위에서 articles/output/ 로 접속하면 views의 output함수를 동작시킨다고 선언했으니.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -242,7 +242,7 @@ Django_form  이제 여러 html파일을 만들어 여러 화면을 돌아다닐
 </span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1">## articles/views.py</span>
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1">## articles/views.py</span>
 
 <span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span>
 
@@ -253,21 +253,21 @@ Django_form  이제 여러 html파일을 만들어 여러 화면을 돌아다닐
 <span class="k">def</span> <span class="nf">overriding</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;articles/overriding.html&#39;</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">output</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>											<span class="err">👈</span> <span class="n">output함수</span> <span class="n">선언</span>
-    <span class="n">title</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">GET</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">)</span>							<span class="err">👈</span> <span class="n">output함수의</span> <span class="n">request에서</span> <span class="n">title항목</span> <span class="n">추출</span>	
-    <span class="n">content</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">GET</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;content&#39;</span><span class="p">)</span>						<span class="err">👈</span> <span class="n">output함수에</span> <span class="n">request에서</span> <span class="n">content항목</span> <span class="n">추출</span>
-    <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>													<span class="err">👈</span> <span class="n">추출한</span> <span class="n">두</span> <span class="n">요소를</span> <span class="n">context라는</span> <span class="n">하나로</span> <span class="n">묶고</span>
+<span class="k">def</span> <span class="nf">output</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>											<span class="err">👈</span> <span class="n">output함수</span> <span class="err">선언</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">GET</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">)</span>							<span class="err">👈</span> <span class="n">output함수의</span> <span class="n">request에서</span> <span class="n">title항목</span> <span class="err">추출</span>	
+    <span class="n">content</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">GET</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;content&#39;</span><span class="p">)</span>						<span class="err">👈</span> <span class="n">output함수에</span> <span class="n">request에서</span> <span class="n">content항목</span> <span class="err">추출</span>
+    <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>													<span class="err">👈</span> <span class="err">추출한</span> <span class="err">두</span> <span class="err">요소를</span> <span class="n">context라는</span> <span class="err">하나로</span> <span class="err">묶고</span>
         <span class="s1">&#39;title&#39;</span><span class="p">:</span><span class="n">title</span><span class="p">,</span>											<span class="err">👈</span>
         <span class="s1">&#39;content&#39;</span><span class="p">:</span><span class="n">content</span>										<span class="err">👈</span>
     <span class="p">}</span>															<span class="err">👈</span>
-    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;articles/output.html&#39;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>		<span class="err">👈</span> <span class="n">render함수의</span> <span class="n">마지막</span> <span class="n">인자로</span> <span class="n">context</span> <span class="n">전달</span><span class="o">.</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;articles/output.html&#39;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>		<span class="err">👈</span> <span class="n">render함수의</span> <span class="err">마지막</span> <span class="err">인자로</span> <span class="n">context</span> <span class="err">전달</span><span class="o">.</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>​</p>
 <h3 id="4-outputhtml-제작">4. output.html 제작</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -285,7 +285,7 @@ Django_form  이제 여러 html파일을 만들어 여러 화면을 돌아다닐
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- articles/templates/articles/output.html --&gt;</span>
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- articles/templates/articles/output.html --&gt;</span>
 
 <span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
@@ -354,7 +354,7 @@ Django_form  이제 여러 html파일을 만들어 여러 화면을 돌아다닐
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

@@ -14,8 +14,8 @@ JavaScript Hoisting  web 개발을 하면서 여러 레퍼런스들을 확인하
 최상단이라는 표현이 중요한데요. 인터프리터 언어인 자바스크립트가 한 줄씩 순서대로 코딩을 실행하는 것이 아니라, 임의로 특정 내용을 최상단으로 끌어 올려서 우선 실행하는 것을 호이스팅이라고 합니다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://colinder.github.io/js_hoisting/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-12-11T11:16:09+09:00" />
-<meta property="article:modified_time" content="2020-12-11T11:16:09+09:00" />
+<meta property="article:published_time" content="2020-12-11T11:16:09&#43;09:00" />
+<meta property="article:modified_time" content="2020-12-11T11:16:09&#43;09:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
@@ -172,7 +172,7 @@ JavaScript Hoisting  web 개발을 하면서 여러 레퍼런스들을 확인하
 <h4 id="-var-변수-vs-let-변수-비교">🙋‍♂️ var 변수 vs let 변수 비교</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -183,7 +183,7 @@ JavaScript Hoisting  web 개발을 하면서 여러 레퍼런스들을 확인하
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// 예시 0
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// 예시 0
 </span><span class="c1">// 아래 코드를 전체 복사 후 붙여넣으면 결과 확인 가능
 </span><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>		<span class="c1">// undefined
 </span><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span>		<span class="c1">// VM85:2 Uncaught ReferenceError: b is not defined
@@ -197,7 +197,7 @@ JavaScript Hoisting  web 개발을 하면서 여러 레퍼런스들을 확인하
 </div><p>만약 변수를 선언한 뒤 나중에 초기화시켜 사용한다면, 그 값은 undefined로 지정됩니다. 아래 예제로 동작 순서를 알아 봅시다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -212,7 +212,7 @@ JavaScript Hoisting  web 개발을 하면서 여러 레퍼런스들을 확인하
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// 예시 1
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// 예시 1
 </span><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;x:&#34;</span><span class="p">,</span> <span class="nx">x</span><span class="p">)</span>	     <span class="c1">// x: undefined
 </span><span class="c1"></span><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> 				 	 <span class="c1">// x 선언 &amp; 초기화
 </span><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span> <span class="o">+</span> <span class="s2">&#34;/&#34;</span> <span class="o">+</span> <span class="nx">y</span><span class="p">);</span>	 <span class="c1">// &#39;1/undefined&#39;
@@ -233,7 +233,7 @@ JavaScript Hoisting  web 개발을 하면서 여러 레퍼런스들을 확인하
 <h4 id="-함수선언식function-declarations-vs-함수표현식function-expressions">🙋‍♂️ 함수선언식(Function Declarations) vs 함수표현식(Function Expressions)</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -247,7 +247,7 @@ JavaScript Hoisting  web 개발을 하면서 여러 레퍼런스들을 확인하
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// 함수 선언식(function declaration) 예시
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// 함수 선언식(function declaration) 예시
 </span><span class="c1"></span><span class="kd">function</span> <span class="nx">함수명</span><span class="p">()</span> <span class="p">{</span>
   <span class="nx">함수</span> <span class="nx">로직</span> <span class="nx">부분</span>
 <span class="p">}</span>
@@ -297,7 +297,7 @@ JavaScript Hoisting  web 개발을 하면서 여러 레퍼런스들을 확인하
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
