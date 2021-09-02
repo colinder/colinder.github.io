@@ -3,7 +3,24 @@
         <title>All Posts - </title>
         <link>https://colinder.github.io/posts/</link>
         <description>All Posts | </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 08 Aug 2021 14:09:22 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 02 Sep 2021 09:54:00 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>SoftWare License</title>
+    <link>https://colinder.github.io/00_license/</link>
+    <pubDate>Thu, 02 Sep 2021 09:54:00 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/00_license/</guid>
+    <description><![CDATA[​
+License  실무를 담당하고 있다면, 새로운 프로젝트에 앞서 어떤 기술을 사용할 것인지 조사하는 것도 업무중의 하나입니다.
+근데 항상 고민이 되는 부분. 비용과 권한
+그리고 비용과 권한 정리되어 있는 것이 License
+ ​
+한국저작권위원회의 OLIS(오픈소스SW 라이선스 종합정보시스템)에는 라이선스에 대한 내용이 잘 정리 되어 있습니다. 많은 라이선스들이 있지만,
+접해본 라이선스 위주로, 개발을 위해 중요하게 보았던 부분을 정리합니다.
+​
+​
+1. MIT License  아마 가장 흔하게 접하는 라이선스일 것입니다.
+&ldquo;MIT 라이선스(MIT License)는 미국 매사추세츠 공과대학교(MIT)에서 해당 대학의 소프트웨어 공학도들을 돕기 위해 개발한 라이선스다.]]></description>
+</item><item>
     <title>Vue_DevInfo</title>
     <link>https://colinder.github.io/vue_devinfo/</link>
     <pubDate>Sun, 08 Aug 2021 14:09:22 &#43;0900</pubDate>
@@ -113,16 +130,5 @@ form 태그의 고찰   form tag의 inline 요소 중 **&lsquo;action&rsquo;**�
  ​
 데이터 토큰화 자연어 처리를 위한 문장 데이터 토큰화에 대한 NAVER의 처리 방법을 정리해보겠습니다.
   말뭉치를 어떻게 구성하고 나눌 것인가에 대한 고민 → 서브워드 토크나이저를 활용. 서브워드는 어떤방식으로 진행할 것인가? → Byte-Pair Encoding (BPE)를 사용 그 중에서도 Morpheme-Aware Byte-Level BPE (형태소 단위 분리)을 사용 Morpheme-Aware Byte-Level BPE는 많은 메모리를 필요로 하여 말뭉치 데이터의 크기를 최적화하는 것이 필요함.]]></description>
-</item><item>
-    <title>What is jQuery($)?</title>
-    <link>https://colinder.github.io/what_is_jquery/</link>
-    <pubDate>Thu, 29 Apr 2021 23:09:27 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/what_is_jquery/</guid>
-    <description><![CDATA[​
-웹 개발을 위해 인터넷의 레퍼런스들을 참고하다보면, 눈에 띄는 기호가 있습니다. $ 이게 뭘까요.? 검색해보니 제이쿼리라는데 많이 쓰이는 것 같습니다. 이에 알아봅시다!
-​
-jQuery란?  jQuery(제이쿼리)는 HTML의 클라이언트 사이드 조작(ex. 사용자가 어떤 버튼을 누른다. 사용자가 드랍박스에 선택지를 고른다.)을 단순화 하도록 설계된 크로스 플랫폼(여러 종류의 컴퓨터 플랫폼에서 동작할 수 있다는 것)의 자바스크립트 라이브러리다. 존 레식이 2006년 뉴욕 시 바캠프(Barcamp NYC)에서 공식적으로 소개하였다. 출처: 위키백과
-최대한 구체적으로 알아보았는데요. 이 내용이 이해되었다면 다음으로 넘어갑시다.]]></description>
 </item></channel>
 </rss>
