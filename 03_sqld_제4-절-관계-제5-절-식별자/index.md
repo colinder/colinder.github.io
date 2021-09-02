@@ -43,15 +43,15 @@
 
    - **관계차수** : 엔터티간의 관계에서 참여자의 수를 표현
 
-     1. 1:1
+     1. 1 : 1
 
         <image src="/images/SQLD_03.png" width="1000px">
 
-     2. 1:M 
+     2. 1 : N
 
         <image src="/images/SQLD_04.png" width="1000px">
 
-     3. M:M
+     3. N : N
 
         <image src="/images/SQLD_05.png" width="1000px">
 
