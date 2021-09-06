@@ -1,0 +1,22 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Link - Tag - </title>
+        <link>https://colinder.github.io/tags/link/</link>
+        <description>Link - Tag - </description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 06 Sep 2021 10:10:24 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/link/" rel="self" type="application/rss+xml" /><item>
+    <title>정적(Static) 링크 Vs 동적(Dynamic) 링크</title>
+    <link>https://colinder.github.io/link/</link>
+    <pubDate>Mon, 06 Sep 2021 10:10:24 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/link/</guid>
+    <description><![CDATA[​
+정적(Static) 링크 Vs 동적(Dynamic) 링크 ​
+정적(Static) 링크 란?  link 단계에서 라이브러리(*.lib 파일)을 실행 바이너리(컴퓨터가 이해할 수 있는 문법으로 만들어진 결과물)에 포함한다는 의미
+ *.lib 파일이란? &gt; Library 파일, 개발 코드에서 반복되는 기능들을 모아둔 파일
+  ex) *.exe 파일
+  라이브러리 관련 수정사항이 생기면 파일 전체를 다시 컴파일하여 재배포해야 한다.
+​
+​
+  동적(Dynamic) 링크 란?  특정 기능을 사용하고자 하는 실행 바이너리에서 필요시 사용할 수 있도록 최소한의 정보만 포함하여 링크하거나, 독립적으로 dll을 로드/사용/해제 시킨다는 의미.]]></description>
+</item></channel>
+</rss>
