@@ -286,7 +286,7 @@ _<b>선형함수(직선 그래프로 표현되는 함수)를 사용하면 Layer(
 
 # 👀참고
 
-- 일반적으로는 ELU -> LeakyReLU -> ReLU -> tanh -> sigmoid 순으로 사용한다고 한다. cs231n 강의에서는 ReLU를 먼저 쓰고, 그 다음으로 LeakyReLU나 ELU 같은 ReLU Family를 사용하며, sigmoid는 사용하지 말라고 하고 있습니다.
+- 일반적으로는 ELU -> LeakyReLU -> ReLU -> tanh -> sigmoid 순으로 사용한다고 합니다. cs231n 강의에서는 ReLU를 먼저 쓰고, 그 다음으로 LeakyReLU나 ELU 같은 ReLU Family를 사용하며, sigmoid는 사용하지 말라고 하고 있습니다.
 
 - chain rule은 두 함수를 합성한 합성 함수의 도함수(derivative)에 관한 공식입니다.<br>
   <b>chain rule = 연쇄법칙 = 합성함수의 미분법.</b>
