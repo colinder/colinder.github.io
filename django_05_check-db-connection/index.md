@@ -32,3 +32,13 @@ $ python manage.py shell_plus	# 모델에 접근하기 위해 shell_plus 실행
 
 하면 연결된 모델의 값을 확인할 수 있다.
 
+​	
+
+​	
+
+​	
+
+​	
+
+​	
+

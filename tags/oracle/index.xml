@@ -3,7 +3,21 @@
         <title>oracle - Tag - </title>
         <link>https://colinder.github.io/tags/oracle/</link>
         <description>oracle - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 06 Jul 2021 14:17:20 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/oracle/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 06 Sep 2021 11:41:44 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/oracle/" rel="self" type="application/rss+xml" /><item>
+    <title>Django_06_Django &amp; Oracle18 error LOG</title>
+    <link>https://colinder.github.io/django_06_djangooracle18_error_log/</link>
+    <pubDate>Mon, 06 Sep 2021 11:41:44 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/django_06_djangooracle18_error_log/</guid>
+    <description><![CDATA[​
+Django &amp; Oracle 18 오류 일지  각종 스트레스의 원인에 대하여 해결방법을 정리합니다.
+ ​
+  ORA-00955: name is already used by an existing object
+ 1 2 3  # 해결법 python manage.py makemigrations python manage.py migrate --fake-initial    이미 migrate 한 내용을 수정하니 반영되지 않아 오류가 발생하였는데 위의 명령어는 migratie를 초기화해서 재설정 하는 것 같습니다.
+​
+  그리고 많은 경우에
+ 1 2  python manage.]]></description>
+</item><item>
     <title>Oracle 18C_network_connect</title>
     <link>https://colinder.github.io/oracle_network_connect/</link>
     <pubDate>Tue, 06 Jul 2021 14:17:20 &#43;0900</pubDate>

@@ -3,7 +3,21 @@
         <title>All Posts - </title>
         <link>https://colinder.github.io/posts/</link>
         <description>All Posts | </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 06 Sep 2021 11:29:11 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 06 Sep 2021 11:41:44 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Django_06_Django &amp; Oracle18 error LOG</title>
+    <link>https://colinder.github.io/django_06_djangooracle18_error_log/</link>
+    <pubDate>Mon, 06 Sep 2021 11:41:44 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/django_06_djangooracle18_error_log/</guid>
+    <description><![CDATA[​
+Django &amp; Oracle 18 오류 일지  각종 스트레스의 원인에 대하여 해결방법을 정리합니다.
+ ​
+  ORA-00955: name is already used by an existing object
+ 1 2 3  # 해결법 python manage.py makemigrations python manage.py migrate --fake-initial    이미 migrate 한 내용을 수정하니 반영되지 않아 오류가 발생하였는데 위의 명령어는 migratie를 초기화해서 재설정 하는 것 같습니다.
+​
+  그리고 많은 경우에
+ 1 2  python manage.]]></description>
+</item><item>
     <title>Django_05_Check DB connection</title>
     <link>https://colinder.github.io/django_05_check-db-connection/</link>
     <pubDate>Mon, 06 Sep 2021 11:29:11 &#43;0900</pubDate>
@@ -125,16 +139,5 @@ A Singularity in vue3.  vue2. 버전의 프로젝트 경험만 있었기에 최�
 Vue3. 전역 변수(Global Variable) 등록  간단하게 axios를 사용해보려고 했는데 Vue2. 버전과 Vue3. 버전의 main.js 초기 세팅이 달랐습니다. 한참을 헤매다 방법을 찾아 기록으로 남김니다.
  ​
 1. 프로젝트 생성 후 axios 설치 1 2 3  # 프로젝트 폴더(package.json이 있는 폴더)에서 npm install axios   ​]]></description>
-</item><item>
-    <title>Django vs Node.js 질문을 받았습니다.</title>
-    <link>https://colinder.github.io/django-vs-node.js-%EC%A7%88%EB%AC%B8%EC%9D%84-%EB%B0%9B%EC%95%98%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
-    <pubDate>Tue, 22 Jun 2021 17:22:50 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/django-vs-node.js-%EC%A7%88%EB%AC%B8%EC%9D%84-%EB%B0%9B%EC%95%98%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
-    <description><![CDATA[​
-🎈질문을 받았습니다.  저희는 이전에는 django로 풀스택 개발을 했어요. 개발자님은 django - vue.js로 개발을 하신다고 들었는데, vue는 javaScript 언어고 django는 Python 언어인데 둘이 뭔가 통신? 데이터를 주고 받고 하는 것에 있어서 문제는 없나요?
-또 같은 javaScript 언어인 node.js 라는 것으로도 Backend 개발이 가능하다고 봤는데 node.js를 Backend로 개발하는 것이, 같은 javaScript로 개발하니까 더 효율적? 좋은거 아닌가요?
- ​
-👨‍💻 하나는 명확히 답을 드릴 수 있는데, 하나는 모르겠네요. 알아보고 말씀드리겠습니다 . ​]]></description>
 </item></channel>
 </rss>
