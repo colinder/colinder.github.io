@@ -3,7 +3,20 @@
         <title>Django - Category - </title>
         <link>https://colinder.github.io/categories/django/</link>
         <description>Django - Category - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 27 Apr 2021 20:27:30 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/django/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 06 Sep 2021 11:29:11 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/django/" rel="self" type="application/rss+xml" /><item>
+    <title>Django_05_Check DB connection</title>
+    <link>https://colinder.github.io/django_05_check-db-connection/</link>
+    <pubDate>Mon, 06 Sep 2021 11:29:11 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/django_05_check-db-connection/</guid>
+    <description><![CDATA[​
+Django DB 연결 확인 ​
+python manage.py createsuperuser 후.. default로 생기는 DB를 기준으로 실행
+​
+1 2  ## setting.py AUTH_USER_MODEL = &#39;auth.User&#39; # default 설정.   ​
+이후 terminal에서
+1 2 3 4 5 6 7  $ python manage.py shell_plus	# 모델에 접근하기 위해 shell_plus 실행 &gt; Post = get_user_model()	# 생성된 모델의 user table 불러오기 &gt; post = Post.objects.all()	# user table의 모든 값 가져오기 &gt; for i in post:	# for문으로 user table값 순환 &gt; print(i)	# user table 값 출력   하면 연결된 모델의 값을 확인할 수 있다.]]></description>
+</item><item>
     <title>Django_03_overriding templates</title>
     <link>https://colinder.github.io/django_03_overridingtemplates/</link>
     <pubDate>Tue, 27 Apr 2021 20:27:30 &#43;0900</pubDate>

@@ -5,48 +5,44 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>정적(Static) 링크 Vs 동적(Dynamic) 링크 - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="정적(Static) 링크 Vs 동적(Dynamic) 링크" />
+        <title>Django_05_Check DB connection - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="Django_05_Check DB connection" />
 <meta property="og:description" content="​
-정적(Static) 링크 Vs 동적(Dynamic) 링크 ​
-정적(Static) 링크 란?  link 단계에서 라이브러리(*.lib 파일)을 실행 바이너리(컴퓨터가 이해할 수 있는 문법으로 만들어진 결과물)에 포함한다는 의미
- *.lib 파일이란? &gt; Library 파일, 개발 코드에서 반복되는 기능들을 모아둔 파일
-  ex) *.exe 파일
-  라이브러리 관련 수정사항이 생기면 파일 전체를 다시 컴파일하여 재배포해야 한다.
+Django DB 연결 확인 ​
+python manage.py createsuperuser 후.. default로 생기는 DB를 기준으로 실행
 ​
-​
-  동적(Dynamic) 링크 란?  특정 기능을 사용하고자 하는 실행 바이너리에서 필요시 사용할 수 있도록 최소한의 정보만 포함하여 링크하거나, 독립적으로 dll을 로드/사용/해제 시킨다는 의미." />
+1 2  ## setting.py AUTH_USER_MODEL = &#39;auth.User&#39; # default 설정.   ​
+이후 terminal에서
+1 2 3 4 5 6 7  $ python manage.py shell_plus	# 모델에 접근하기 위해 shell_plus 실행 &gt; Post = get_user_model()	# 생성된 모델의 user table 불러오기 &gt; post = Post.objects.all()	# user table의 모든 값 가져오기 &gt; for i in post:	# for문으로 user table값 순환 &gt; print(i)	# user table 값 출력   하면 연결된 모델의 값을 확인할 수 있다." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://colinder.github.io/link/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-09-06T10:10:24&#43;09:00" />
-<meta property="article:modified_time" content="2021-09-06T10:10:24&#43;09:00" />
+<meta property="og:url" content="https://colinder.github.io/django_05_check-db-connection/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-09-06T11:29:11&#43;09:00" />
+<meta property="article:modified_time" content="2021-09-06T11:29:11&#43;09:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
 
-<meta name="twitter:title" content="정적(Static) 링크 Vs 동적(Dynamic) 링크"/>
+<meta name="twitter:title" content="Django_05_Check DB connection"/>
 <meta name="twitter:description" content="​
-정적(Static) 링크 Vs 동적(Dynamic) 링크 ​
-정적(Static) 링크 란?  link 단계에서 라이브러리(*.lib 파일)을 실행 바이너리(컴퓨터가 이해할 수 있는 문법으로 만들어진 결과물)에 포함한다는 의미
- *.lib 파일이란? &gt; Library 파일, 개발 코드에서 반복되는 기능들을 모아둔 파일
-  ex) *.exe 파일
-  라이브러리 관련 수정사항이 생기면 파일 전체를 다시 컴파일하여 재배포해야 한다.
+Django DB 연결 확인 ​
+python manage.py createsuperuser 후.. default로 생기는 DB를 기준으로 실행
 ​
-​
-  동적(Dynamic) 링크 란?  특정 기능을 사용하고자 하는 실행 바이너리에서 필요시 사용할 수 있도록 최소한의 정보만 포함하여 링크하거나, 독립적으로 dll을 로드/사용/해제 시킨다는 의미."/>
+1 2  ## setting.py AUTH_USER_MODEL = &#39;auth.User&#39; # default 설정.   ​
+이후 terminal에서
+1 2 3 4 5 6 7  $ python manage.py shell_plus	# 모델에 접근하기 위해 shell_plus 실행 &gt; Post = get_user_model()	# 생성된 모델의 user table 불러오기 &gt; post = Post.objects.all()	# user table의 모든 값 가져오기 &gt; for i in post:	# for문으로 user table값 순환 &gt; print(i)	# user table 값 출력   하면 연결된 모델의 값을 확인할 수 있다."/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/link/" /><link rel="prev" href="https://colinder.github.io/01_dutis_and_scope_at_deployment/" /><link rel="next" href="https://colinder.github.io/django_05_check-db-connection/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/django_05_check-db-connection/" /><link rel="prev" href="https://colinder.github.io/link/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "정적(Static) 링크 Vs 동적(Dynamic) 링크",
+        "headline": "Django_05_Check DB connection",
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/colinder.github.io\/link\/"
-        },"genre": "posts","keywords": "Link","wordcount":  121 ,
-        "url": "https:\/\/colinder.github.io\/link\/","datePublished": "2021-09-06T10:10:24+09:00","dateModified": "2021-09-06T10:10:24+09:00","publisher": {
+            "@id": "https:\/\/colinder.github.io\/django_05_check-db-connection\/"
+        },"genre": "posts","keywords": "Django","wordcount":  90 ,
+        "url": "https:\/\/colinder.github.io\/django_05_check-db-connection\/","datePublished": "2021-09-06T11:29:11+09:00","dateModified": "2021-09-06T11:29:11+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -120,57 +116,54 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">정적(Static) 링크 Vs 동적(Dynamic) 링크</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/link/"><i class="far fa-folder fa-fw"></i>Link</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-09-06">2021-09-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;121 words&nbsp;
+        </div><article class="page single"><h1 class="single-title animated flipInX">Django_05_Check DB connection</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw"></i>Django</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-09-06">2021-09-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;90 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;One minute&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
-  <ul>
-    <li><a href="#정적static-링크-란">정적(Static) 링크 란?</a></li>
-    <li><a href="#동적dynamic-링크-란">동적(Dynamic) 링크 란?</a></li>
-    <li><a href="#둘의-차이점">둘의 차이점</a></li>
-  </ul>
-</nav></div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
             </div><div class="content" id="content"><p>​</p>
-<h1 id="정적static-링크-vs-동적dynamic-링크">정적(Static) 링크 Vs 동적(Dynamic) 링크</h1>
+<h1 id="django-db-연결-확인">Django DB 연결 확인</h1>
 <p>​</p>
-<h2 id="정적static-링크-란">정적(Static) 링크 란?</h2>
-<blockquote>
-<p><a href="https://jhnyang.tistory.com/40" target="_blank" rel="noopener noreffer">link 단계</a>에서 라이브러리(<code>*.lib 파일</code>)을 실행 바이너리<span style="font-size: .8em; color:grey">(컴퓨터가 이해할 수 있는 문법으로 만들어진 결과물)</span>에 포함한다는 의미</p>
-</blockquote>
-<p><code>*.lib 파일</code>이란?  &gt;  <strong>Library</strong> 파일, 개발 코드에서 반복되는 기능들을 모아둔 파일</p>
-<ul>
-<li>
-<p>ex) *.exe 파일</p>
-</li>
-<li>
-<p>라이브러리 관련 수정사항이 생기면 파일 전체를 다시 컴파일하여 재배포해야 한다.</p>
+<p>python manage.py createsuperuser 후.. default로 생기는 DB를 기준으로 실행</p>
 <p>​</p>
-<p>​</p>
-</li>
-</ul>
-<h2 id="동적dynamic-링크-란">동적(Dynamic) 링크 란?</h2>
-<blockquote>
-<p>특정 기능을 사용하고자 하는 실행 바이너리에서 필요시 사용할 수 있도록 최소한의 정보만 포함하여 링크하거나, 독립적으로 dll을 로드/사용/해제 시킨다는 의미.</p>
-</blockquote>
-<p><code>*.dll 파일</code>이란?  &gt;  <strong>Dynamic Link Library</strong> 파일, 개발 코드에서 반복되는 기능들을 모아둔 파일 (다만, 동적 링크로 사용되는 라이브러리 파일)</p>
-<ul>
-<li>
-<p>라이브러리 관련 수정사항이 생기면 .dll 파일만 다시 컴파일 하여 재배포하며 된다.</p>
-<p>​</p>
-<p>​</p>
-</li>
-</ul>
-<h2 id="둘의-차이점">둘의 차이점</h2>
-<p>*.lib 파일은 링크 시에 필요한 파일이고, *.dll 파일은 실행 시에 필요한 파일이다.</p>
-<p>​</p>
-<p>​</p>
-<p>​</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">## setting.py</span>
+<span class="nv">AUTH_USER_MODEL</span> <span class="o">=</span> <span class="s1">&#39;auth.User&#39;</span>   <span class="c1"># default 설정.</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<p>이후 terminal에서</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ python manage.py shell_plus	<span class="c1"># 모델에 접근하기 위해 shell_plus 실행</span>
+
+&gt; <span class="nv">Post</span> <span class="o">=</span> get_user_model<span class="o">()</span>		<span class="c1"># 생성된 모델의 user table 불러오기</span>
+&gt; <span class="nv">post</span> <span class="o">=</span> Post.objects.all<span class="o">()</span>		<span class="c1"># user table의 모든 값 가져오기</span>
+
+&gt; <span class="k">for</span> i in post:				<span class="c1"># for문으로 user table값 순환</span>
+&gt;     print<span class="o">(</span>i<span class="o">)</span>					<span class="c1"># user table 값 출력</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>하면 연결된 모델의 값을 확인할 수 있다.</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -181,7 +174,7 @@
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/link/index.md" target="_blank">Read Markdown</a>
+                            <a class="link-to-markdown" href="/django_05_check-db-connection/index.md" target="_blank">Read Markdown</a>
                         </span></div>
             <div class="post-info-share">
                 <span></span>
@@ -190,14 +183,13 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/link/">Link</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/django/">Django</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/01_dutis_and_scope_at_deployment/" class="prev" rel="prev" title="License 배포 시 소스코드 제공 의무와 범위"><i class="fas fa-angle-left fa-fw"></i>License 배포 시 소스코드 제공 의무와 범위</a>
-            <a href="/django_05_check-db-connection/" class="next" rel="next" title="Django_05_Check DB connection">Django_05_Check DB connection<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/link/" class="prev" rel="prev" title="정적(Static) 링크 Vs 동적(Dynamic) 링크"><i class="fas fa-angle-left fa-fw"></i>정적(Static) 링크 Vs 동적(Dynamic) 링크</a></div>
 </div>
 <div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.

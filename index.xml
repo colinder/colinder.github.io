@@ -3,9 +3,22 @@
         <title></title>
         <link>https://colinder.github.io/</link>
         <description>Hello New World</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 06 Sep 2021 10:10:24 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 06 Sep 2021 11:29:11 &#43;0900</lastBuildDate>
             <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Django_05_Check DB connection</title>
+    <link>https://colinder.github.io/django_05_check-db-connection/</link>
+    <pubDate>Mon, 06 Sep 2021 11:29:11 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/django_05_check-db-connection/</guid>
+    <description><![CDATA[​
+Django DB 연결 확인 ​
+python manage.py createsuperuser 후.. default로 생기는 DB를 기준으로 실행
+​
+1 2  ## setting.py AUTH_USER_MODEL = &#39;auth.User&#39; # default 설정.   ​
+이후 terminal에서
+1 2 3 4 5 6 7  $ python manage.py shell_plus	# 모델에 접근하기 위해 shell_plus 실행 &gt; Post = get_user_model()	# 생성된 모델의 user table 불러오기 &gt; post = Post.objects.all()	# user table의 모든 값 가져오기 &gt; for i in post:	# for문으로 user table값 순환 &gt; print(i)	# user table 값 출력   하면 연결된 모델의 값을 확인할 수 있다.]]></description>
+</item><item>
     <title>정적(Static) 링크 Vs 동적(Dynamic) 링크</title>
     <link>https://colinder.github.io/link/</link>
     <pubDate>Mon, 06 Sep 2021 10:10:24 &#43;0900</pubDate>
@@ -125,17 +138,5 @@ Vue3. 전역 변수(Global Variable) 등록  간단하게 axios를 사용해보�
 또 같은 javaScript 언어인 node.js 라는 것으로도 Backend 개발이 가능하다고 봤는데 node.js를 Backend로 개발하는 것이, 같은 javaScript로 개발하니까 더 효율적? 좋은거 아닌가요?
  ​
 👨‍💻 하나는 명확히 답을 드릴 수 있는데, 하나는 모르겠네요. 알아보고 말씀드리겠습니다 . ​]]></description>
-</item><item>
-    <title>Collaborative filtering by auto Encoder</title>
-    <link>https://colinder.github.io/collaborative-filtering-by-auto-encoder/</link>
-    <pubDate>Wed, 16 Jun 2021 15:02:22 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/collaborative-filtering-by-auto-encoder/</guid>
-    <description><![CDATA[​
-Collaborative filtering by auto Encoder  협업필터링을 딥러닝 방식의 하나인 오토 인코더로 구현하는데 알아두어야 할 배경지식에 대하여 정리
- ​
-Machine learning   기계가 명시적으로 코딩되지 않은 동작을 스스로 학습해 수행하게 하는 연구 분야. 인공지능(AI)의 한 분야로 간주된다. 기계 학습의 핵심은 표현(representation)과 일반화(generalization)에 있다. 표현이란 데이터의 평가이며, 일반화란 아직 알 수 없는 데이터에 대한 처리이다.
-​
-  What&rsquo;s the difference with &lsquo;Deep learning&rsquo;?   Machine learning은 어떤 문제와 답을 막 던져주면 기계가 계속 풀어내면서 추상적인 원리를 스스로 깨우치고 새로운 문제가 주어져도 스스로 답을 낼 수 있게 하는 것이다.]]></description>
 </item></channel>
 </rss>
