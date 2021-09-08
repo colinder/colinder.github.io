@@ -5,10 +5,10 @@
         <description>Link - Category - </description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 06 Sep 2021 10:10:24 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/link/" rel="self" type="application/rss+xml" /><item>
     <title>정적(Static) 링크 Vs 동적(Dynamic) 링크</title>
-    <link>https://colinder.github.io/link/</link>
+    <link>https://colinder.github.io/staticvsdynamic_link/</link>
     <pubDate>Mon, 06 Sep 2021 10:10:24 &#43;0900</pubDate>
     <author>Author</author>
-    <guid>https://colinder.github.io/link/</guid>
+    <guid>https://colinder.github.io/staticvsdynamic_link/</guid>
     <description><![CDATA[​
 정적(Static) 링크 Vs 동적(Dynamic) 링크 ​
 정적(Static) 링크 란?  link 단계에서 라이브러리(*.lib 파일)을 실행 바이너리(컴퓨터가 이해할 수 있는 문법으로 만들어진 결과물)에 포함한다는 의미

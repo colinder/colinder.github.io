@@ -32,10 +32,10 @@ python manage.py createsuperuser 후.. default로 생기는 DB를 기준으로 �
 1 2 3 4 5 6 7  $ python manage.py shell_plus	# 모델에 접근하기 위해 shell_plus 실행 &gt; Post = get_user_model()	# 생성된 모델의 user table 불러오기 &gt; post = Post.objects.all()	# user table의 모든 값 가져오기 &gt; for i in post:	# for문으로 user table값 순환 &gt; print(i)	# user table 값 출력   하면 연결된 모델의 값을 확인할 수 있다.]]></description>
 </item><item>
     <title>정적(Static) 링크 Vs 동적(Dynamic) 링크</title>
-    <link>https://colinder.github.io/link/</link>
+    <link>https://colinder.github.io/staticvsdynamic_link/</link>
     <pubDate>Mon, 06 Sep 2021 10:10:24 &#43;0900</pubDate>
     <author>Author</author>
-    <guid>https://colinder.github.io/link/</guid>
+    <guid>https://colinder.github.io/staticvsdynamic_link/</guid>
     <description><![CDATA[​
 정적(Static) 링크 Vs 동적(Dynamic) 링크 ​
 정적(Static) 링크 란?  link 단계에서 라이브러리(*.lib 파일)을 실행 바이너리(컴퓨터가 이해할 수 있는 문법으로 만들어진 결과물)에 포함한다는 의미
