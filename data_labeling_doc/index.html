@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Data labeling Image &amp; Video DOC - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="Data labeling Image &amp; Video DOC" />
+<meta property="og:description" content="​
+이미지/영상 데이터 Annotation Tool  기초 라벨링 툴 제작에 필요한 사항들을 정리합니다.
+ ​
+저작도구?  저작(여러 형태의 데이터를 편집)에 사용되는 소프트웨어
+ ​
+라벨링 가이드라인?  라벨링 작업 방식과 기준이 기재된 문서. (프로젝트 별로 내용이 상이함)
+ ​
+용어 정리   객체(Object)
+ 라벨링 대상
+   카테고리(Category)
+ 분류/탐지하고자 하는 대상을 카테고리화 한 것으로 분류체계를 의미
+   태스크(Task)
+ 작업을 태스크라고 하며, 대기/작업완료/반려/완료 등의 상태 속성을 가짐" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://colinder.github.io/data_labeling_doc/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-09-09T17:24:56&#43;09:00" />
+<meta property="article:modified_time" content="2021-09-09T17:24:56&#43;09:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
+
+<meta name="twitter:title" content="Data labeling Image &amp; Video DOC"/>
+<meta name="twitter:description" content="​
+이미지/영상 데이터 Annotation Tool  기초 라벨링 툴 제작에 필요한 사항들을 정리합니다.
+ ​
+저작도구?  저작(여러 형태의 데이터를 편집)에 사용되는 소프트웨어
+ ​
+라벨링 가이드라인?  라벨링 작업 방식과 기준이 기재된 문서. (프로젝트 별로 내용이 상이함)
+ ​
+용어 정리   객체(Object)
+ 라벨링 대상
+   카테고리(Category)
+ 분류/탐지하고자 하는 대상을 카테고리화 한 것으로 분류체계를 의미
+   태스크(Task)
+ 작업을 태스크라고 하며, 대기/작업완료/반려/완료 등의 상태 속성을 가짐"/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/data_labeling_doc/" /><link rel="prev" href="https://colinder.github.io/django_06_djangooracle18_error_log/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Data labeling Image \u0026 Video DOC",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/colinder.github.io\/data_labeling_doc\/"
+        },"genre": "posts","keywords": "annotation","wordcount":  402 ,
+        "url": "https:\/\/colinder.github.io\/data_labeling_doc\/","datePublished": "2021-09-09T17:24:56+09:00","dateModified": "2021-09-09T17:24:56+09:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "colinder"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="">Hello New World</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="">Hello New World</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Data labeling Image &amp; Video DOC</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/annotation/"><i class="far fa-folder fa-fw"></i>annotation</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-09-09">2021-09-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;402 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#저작도구">저작도구?</a></li>
+    <li><a href="#라벨링-가이드라인">라벨링 가이드라인?</a></li>
+    <li><a href="#용어-정리">용어 정리</a></li>
+    <li><a href="#이미지-라벨링-처리를-위한-방식">이미지 라벨링 처리를 위한 방식</a>
+      <ul>
+        <li><a href="#오픈-소스-데이터-라벨링-저작도구">오픈 소스 데이터 라벨링 저작도구</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#용어-정리-1">용어 정리</a></li>
+    <li><a href="#음성텍스트-데이터의-학습-처리-과정">음성/텍스트 데이터의 학습 처리 과정</a>
+      <ul>
+        <li><a href="#오픈-소스-데이터-라벨링-저작도구-1">오픈 소스 데이터 라벨링 저작도구</a></li>
+        <li><a href="#전사-규칙">전사 규칙</a></li>
+        <li><a href="#분류별-전사-유형">분류별 전사 유형</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>​</p>
+<h1 id="이미지영상-데이터-annotation-tool">이미지/영상 데이터 Annotation Tool</h1>
+<blockquote>
+<p>기초 라벨링 툴 제작에 필요한 사항들을 정리합니다.</p>
+</blockquote>
+<p>​</p>
+<h2 id="저작도구">저작도구?</h2>
+<blockquote>
+<p>저작(여러 형태의 데이터를 편집)에 사용되는 소프트웨어</p>
+</blockquote>
+<p>​</p>
+<h2 id="라벨링-가이드라인">라벨링 가이드라인?</h2>
+<blockquote>
+<p>라벨링 작업 방식과 기준이 기재된 문서. (프로젝트 별로 내용이 상이함)</p>
+</blockquote>
+<p>​</p>
+<h2 id="용어-정리">용어 정리</h2>
+<ol>
+<li>
+<p>객체(Object)</p>
+<blockquote>
+<p>라벨링 대상</p>
+</blockquote>
+</li>
+<li>
+<p>카테고리(Category)</p>
+<blockquote>
+<p>분류/탐지하고자 하는 대상을 카테고리화 한 것으로 분류체계를 의미</p>
+</blockquote>
+</li>
+<li>
+<p>태스크(Task)</p>
+<blockquote>
+<p>작업을 태스크라고 하며, 대기/작업완료/반려/완료 등의 상태 속성을 가짐</p>
+</blockquote>
+</li>
+<li>
+<p>검수(Inspection)</p>
+<blockquote>
+<p>기준에 적합하게 라벨링이 되었는지 검사함. 작업완료된 태스크는 검수를 거쳐 반려/완료 상태로 전환됨</p>
+</blockquote>
+</li>
+<li>
+<p>반려(Return)</p>
+<blockquote>
+<p>기준에 적합하게 라벨링 되지 않아 검수를 통과하지 못한 태스크의 상태로, 수정 작업을 통해 다시 검수 과정을 거쳐야 함.</p>
+</blockquote>
+</li>
+<li>
+<p>코멘트(Comment)</p>
+<blockquote>
+<p>반려 태스크 수정 시 반려 사유를 기재해 둔 것을 코멘트라고 일컫음.</p>
+</blockquote>
+<p>​</p>
+</li>
+</ol>
+<h2 id="이미지-라벨링-처리를-위한-방식">이미지 라벨링 처리를 위한 방식</h2>
+<ol>
+<li>
+<p>바운딩 박스</p>
+</li>
+<li>
+<p>키포인트</p>
+</li>
+<li>
+<p>폴리곤</p>
+</li>
+<li>
+<p>폴리라인</p>
+</li>
+<li>
+<p>시멘틱 세그멘테이션</p>
+</li>
+<li>
+<p>OCR</p>
+<p>​</p>
+</li>
+</ol>
+<h3 id="오픈-소스-데이터-라벨링-저작도구">오픈 소스 데이터 라벨링 저작도구</h3>
+<ol>
+<li>
+<p>Label Studio</p>
+</li>
+<li>
+<p>Label box</p>
+</li>
+<li>
+<p>CVAT</p>
+<ul>
+<li>컴퓨터 비전 라벨리을 지정하는데 주로 활용되는 웹 기반 이미지 및 비디오 저작도구</li>
+</ul>
+</li>
+<li>
+<p>LabelImg</p>
+<ul>
+<li>Object Detection을 위한 Bounding Box 저작도구, 데이터 출력시 xml로 저장</li>
+</ul>
+</li>
+<li>
+<p>Datamaker Annotator - 이미지/영상 교육 과정 실습 플랫폼</p>
+<ul>
+<li>
+<p>이미지, 영상 라벨링 저작도구 및 크라우드 소싱 플랫폼</p>
+<p>​</p>
+</li>
+</ul>
+</li>
+</ol>
+<p><em>겹쳐지거나, 잘려있는 이미지의 라벨링은 프로젝트 가이드에 따라 진행한다.</em></p>
+<p>​</p>
+<p>​</p>
+<h1 id="음성텍스트-데이터-annotation-tool">음성/텍스트 데이터 Annotation Tool</h1>
+<p>​</p>
+<h2 id="용어-정리-1">용어 정리</h2>
+<ul>
+<li>
+<p>전사</p>
+<blockquote>
+<p>말소리를 문자로 옮겨 적음</p>
+</blockquote>
+</li>
+<li>
+<p>속기</p>
+<blockquote>
+<p>빨리 적기, 속기법으로 적은 기록</p>
+</blockquote>
+</li>
+<li>
+<p>음성 싱크 작업</p>
+<blockquote>
+<p>재생되는 음성과 문자의 내용을 일치 시켜 주는 작엄</p>
+</blockquote>
+</li>
+<li>
+<p>비식별화 작업</p>
+<blockquote>
+<p>이름이나 전화번호 등의 개인 정보가 있는 데이터에 해당해는데 이러한 개인 정보를 전사 단계에서 해당 단어를 대신해 특정 기호로 표기하는 방법</p>
+</blockquote>
+</li>
+<li>
+<p>이중 전사 작업</p>
+<blockquote>
+<p>비표준어가 음성 파일에서 나타냈을 때 표준어와 함께 표기해 주거나 각 지역의 사투리를 전사하는 방언 전사 작업에서 방언과 그에 해당하는 표준어를 함께 표기하는 방법</p>
+</blockquote>
+<p>​</p>
+</li>
+</ul>
+<h2 id="음성텍스트-데이터의-학습-처리-과정">음성/텍스트 데이터의 학습 처리 과정</h2>
+<p>수집(녹음) &gt; 정제 &gt; 검사 &gt; 전사 &gt; 검사 &gt; 최종 검수 &gt; 학습  <span style="font-size:0.8em">*검사시 마다 오류사항을 분석하고 오류&amp;품질 발견시 이전 단계로 회귀</span></p>
+<p>​</p>
+<h3 id="오픈-소스-데이터-라벨링-저작도구-1">오픈 소스 데이터 라벨링 저작도구</h3>
+<ol>
+<li>
+<p>Audacity - 음성데이터 전제 도구 (*.exe)</p>
+</li>
+<li>
+<p>전사툴 - 전사 데이터 저작도구 (Web)</p>
+<p>​</p>
+</li>
+</ol>
+<h3 id="전사-규칙">전사 규칙</h3>
+<blockquote>
+<p>전사 규칙은 프로젝트의 특성과 데이터 사용자의 요구사항에 맞게 제작해야하기 때문에 일정한 양식은 없고 프로젝트 별로 상이함.</p>
+</blockquote>
+<p>​</p>
+<h3 id="분류별-전사-유형">분류별 전사 유형</h3>
+<ol>
+<li>
+<p>음성 데이터 전사 <strong>방법</strong>에 따른 분류</p>
+<ul>
+<li>
+<p>일반 전사</p>
+</li>
+<li>
+<p>이중 전사 - (이케/이렇게)와 같이 방언/표준어 2개를 전사</p>
+</li>
+<li>
+<p>화자 전사 - 다중화자의 경우 화자를 구분하기 위한 작업 (noise/spk1/spk2 등으로 화자를 구분)</p>
+</li>
+<li>
+<p>배경음 및 화자 감정 태깅 - 화자의 감정을 (중립/분노/기쁨) 등으로 전사</p>
+</li>
+<li>
+<p>방송 영상 자막 사전 제작</p>
+<p>​</p>
+</li>
+</ul>
+</li>
+<li>
+<p>음성 데이터 전사 <strong>주체</strong>에 따른 분류</p>
+<ul>
+<li>
+<p>사람에 의한 전사</p>
+</li>
+<li>
+<p>프로그램에 의한 전사(STT, Speech To Text)</p>
+<p>​</p>
+</li>
+</ul>
+</li>
+<li>
+<p>음성 데이터 <strong>기관</strong>에 따른 분류</p>
+<ul>
+<li>
+<p>연구 기관의 과제 전사</p>
+</li>
+<li>
+<p>기업의 콜센터 녹취 전사</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+</li>
+</ul>
+</li>
+</ol>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2021-09-09</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/data_labeling_doc/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/annotation/">annotation</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/django_06_djangooracle18_error_log/" class="prev" rel="prev" title="Django_06_Django &amp; Oracle18 error LOG"><i class="fas fa-angle-left fa-fw"></i>Django_06_Django &amp; Oracle18 error LOG</a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://colinder-github-io.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

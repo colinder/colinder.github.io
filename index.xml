@@ -3,9 +3,28 @@
         <title></title>
         <link>https://colinder.github.io/</link>
         <description>Hello New World</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 06 Sep 2021 11:41:44 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 09 Sep 2021 17:24:56 &#43;0900</lastBuildDate>
             <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Data labeling Image &amp; Video DOC</title>
+    <link>https://colinder.github.io/data_labeling_doc/</link>
+    <pubDate>Thu, 09 Sep 2021 17:24:56 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/data_labeling_doc/</guid>
+    <description><![CDATA[​
+이미지/영상 데이터 Annotation Tool  기초 라벨링 툴 제작에 필요한 사항들을 정리합니다.
+ ​
+저작도구?  저작(여러 형태의 데이터를 편집)에 사용되는 소프트웨어
+ ​
+라벨링 가이드라인?  라벨링 작업 방식과 기준이 기재된 문서. (프로젝트 별로 내용이 상이함)
+ ​
+용어 정리   객체(Object)
+ 라벨링 대상
+   카테고리(Category)
+ 분류/탐지하고자 하는 대상을 카테고리화 한 것으로 분류체계를 의미
+   태스크(Task)
+ 작업을 태스크라고 하며, 대기/작업완료/반려/완료 등의 상태 속성을 가짐]]></description>
+</item><item>
     <title>Django_06_Django &amp; Oracle18 error LOG</title>
     <link>https://colinder.github.io/django_06_djangooracle18_error_log/</link>
     <pubDate>Mon, 06 Sep 2021 11:41:44 &#43;0900</pubDate>
@@ -129,17 +148,5 @@ Activation Function(활성화 함수)  입력 신호의 총합을 출력신호�
 여기서 의문점이 생깁니다.
   예를 들어 지나가다 귤을 보았는데 맛이 있을지 없을지 어떻게 알 수 있을까요? 저 귤의 데이터를 수집해 봅시다.
   타원형, 이쁜 노란색, 푸르른 꼭지 라는 데이터를 눈으로 보고 뇌속의 뉴런들이 이 정보를 분석해 맛있겠다.]]></description>
-</item><item>
-    <title>09_Vue3. global variable</title>
-    <link>https://colinder.github.io/09_vue3._global_variable/</link>
-    <pubDate>Wed, 23 Jun 2021 17:30:33 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/09_vue3._global_variable/</guid>
-    <description><![CDATA[​
-A Singularity in vue3.  vue2. 버전의 프로젝트 경험만 있었기에 최근에 새롭게 웹 개발 프로젝트를 준비하면서 변화된 Vue3. 버전에 대한 몇 가지 내용들을 정리합니다.
- ​
-Vue3. 전역 변수(Global Variable) 등록  간단하게 axios를 사용해보려고 했는데 Vue2. 버전과 Vue3. 버전의 main.js 초기 세팅이 달랐습니다. 한참을 헤매다 방법을 찾아 기록으로 남김니다.
- ​
-1. 프로젝트 생성 후 axios 설치 1 2 3  # 프로젝트 폴더(package.json이 있는 폴더)에서 npm install axios   ​]]></description>
 </item></channel>
 </rss>
