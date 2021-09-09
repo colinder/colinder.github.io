@@ -1,4 +1,4 @@
-# SoftWare License
+# Software License
 
 
 ​			
