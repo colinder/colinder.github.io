@@ -102,16 +102,6 @@
         alt="/images/jg_02.jpg"
         title="/images/jg_02.jpg" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/colinder" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="mailto:kjonggwan@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/private-vs-public-blockchain-vs-network/">block_chain private Vs public / blockchain Vs network</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-09-17">2020-09-17</time></span>&nbsp;<span class="post-category">included in <a href="/categories/block_chain/"><i class="far fa-folder fa-fw"></i>block_chain</a></span></div><div class="content">​
-🧔프라이빗 블록체인 VS 👨🏻‍🤝‍👨🏻퍼블릭 블록체인 VS 🔒프라이빗 네트워크 VS 🔐퍼블릭 네트워크   Why 이런 질문을?
- 블록체인 관련 정보를 구글링하다보면, 프라이빗 네트워크, 퍼블릭 네트워크, 프라이빗 블록체인, 퍼블릭 블록체인. 이 4가지의 말을 혼용해서 사용하고 있는 것을 쉽게 볼 수 있다. 여기서
-프라이빗 네트워크와 프라이빗 블록체인과 같이 네트워크와 블록체인을 같은 의미로 많이 사용하는데. 과연 이 둘이 같은 것을 의미하는지 알아보았다.
- ​
-결론 - 블록체인=&gt; 사용자의 접근조건을 기준으로 프라이빗과 퍼블릭을 나눔 - 네트워크=&gt; 서비스 운용형태를 기준으로 프라이빗과 퍼블릭을 나눔 ​</div><div class="post-footer">
-        <a href="/private-vs-public-blockchain-vs-network/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/block_chain/">block_chain</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/sw_20.09.09/">SW Expert Academy_D3 4698, 1493, 10570, 3032</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-09-08">2020-09-08</time></span>&nbsp;<span class="post-category">included in <a href="/categories/sw-expert-academy/"><i class="far fa-folder fa-fw"></i>SW Expert Academy</a></span></div><div class="content">​
 D3_4698_테네스의 특별한 소수 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19  for T in range(int(input())): D, A, B = map(int, input().split()) D = str(D) arr = [0, 0] + [1] * (B - 1) # 에라토스테네스의 체를 활용할껀데 어떤 수까지 검증하면 될까? # 검증해보니 모든 수는 자신의 int(root)까지만 확인하면 배수값인지 확인이 가능했다. rootB = int(B**0.5)	#👈 이 아이디어를 얻기까지 오랜시간이 걸렸다.</div><div class="post-footer">
@@ -130,6 +120,15 @@ D3_10505_소득 불균형 1 2 3 4 5 6 7 8 9  for T in range(int(input())): N = i
 D3_10200_구독자 전쟁 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  for T in range(int(input())): N, A, B = map(int, input().</div><div class="post-footer">
         <a href="/sw_20.09.04/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/algorithm/">algorithm</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/block_chain/">Block_Chain setting &amp; basic</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-09-03">2020-09-03</time></span>&nbsp;<span class="post-category">included in <a href="/categories/block_chain/"><i class="far fa-folder fa-fw"></i>block_chain</a></span></div><div class="content">​
+🎈가상환경에서 블록체인 채굴 및 기본 시스템 정리 ​
+1. geth(Go-ethereum) 설치  블록체인 기술은 중앙집중화된 데이터베이스에 반기를 들고 나온 개념이기 때문에 중앙 서버 이런게 없다. 즉 누구라도 해당 블록체인 네트워크에 참여하고 싶다면 언제라도 블록체인 데이터베이스를 싱크해주는 로컬 프로그램을 다운 받아 실행하면 데이터를 받을 수 있다.
+그렇다면 블록체인 네트워크에 참여하고 싶다면 어떻게 해야 할까? 앞서 말한 로컬 프로그램을 다운 받으면 참여가 가능하다.
+이 프로그램들 중 하나인 GO 로 짜여진 Go Ethereum(줄여서, geth)을 설치해본다.</div><div class="post-footer">
+        <a href="/block_chain/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/block_chain/">block_chain</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
