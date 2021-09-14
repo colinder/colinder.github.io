@@ -3,9 +3,22 @@
         <title></title>
         <link>https://colinder.github.io/</link>
         <description>Hello New World</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 06 Sep 2021 11:41:44 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 14 Sep 2021 17:25:44 &#43;0900</lastBuildDate>
             <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Django_07_1:N 불러오기</title>
+    <link>https://colinder.github.io/django_07_1vsn_%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0/</link>
+    <pubDate>Tue, 14 Sep 2021 17:25:44 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/django_07_1vsn_%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0/</guid>
+    <description><![CDATA[​
+Django 1:N 불러오기  prefetch_related() or annotate()
+ ​
+models.py 구성
+1 2 3  class Question(models.Model): question_text = models.CharField(max_length=200) pub_date = models.DateTimeField(&#39;date published&#39;)   1 2 3 4  class Choice(models.Model): question = models.ForeignKey(Question, on_delete=models.CASCADE, related_name=&#39;choices&#39;) choice_text = models.CharField(max_length=200) votes = models.IntegerField(default=0)   ​
+​
+prefetch_related() 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  # views.py def get_context_data(): context[&#34;questions&#34;] = Question.]]></description>
+</item><item>
     <title>Django_06_Django &amp; Oracle18 error LOG</title>
     <link>https://colinder.github.io/django_06_djangooracle18_error_log/</link>
     <pubDate>Mon, 06 Sep 2021 11:41:44 &#43;0900</pubDate>
@@ -129,17 +142,5 @@ Activation Function(활성화 함수)  입력 신호의 총합을 출력신호�
 여기서 의문점이 생깁니다.
   예를 들어 지나가다 귤을 보았는데 맛이 있을지 없을지 어떻게 알 수 있을까요? 저 귤의 데이터를 수집해 봅시다.
   타원형, 이쁜 노란색, 푸르른 꼭지 라는 데이터를 눈으로 보고 뇌속의 뉴런들이 이 정보를 분석해 맛있겠다.]]></description>
-</item><item>
-    <title>09_Vue3. global variable</title>
-    <link>https://colinder.github.io/09_vue3._global_variable/</link>
-    <pubDate>Wed, 23 Jun 2021 17:30:33 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/09_vue3._global_variable/</guid>
-    <description><![CDATA[​
-A Singularity in vue3.  vue2. 버전의 프로젝트 경험만 있었기에 최근에 새롭게 웹 개발 프로젝트를 준비하면서 변화된 Vue3. 버전에 대한 몇 가지 내용들을 정리합니다.
- ​
-Vue3. 전역 변수(Global Variable) 등록  간단하게 axios를 사용해보려고 했는데 Vue2. 버전과 Vue3. 버전의 main.js 초기 세팅이 달랐습니다. 한참을 헤매다 방법을 찾아 기록으로 남김니다.
- ​
-1. 프로젝트 생성 후 axios 설치 1 2 3  # 프로젝트 폴더(package.json이 있는 폴더)에서 npm install axios   ​]]></description>
 </item></channel>
 </rss>
