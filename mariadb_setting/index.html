@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>MariaDB 설치 방법 - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="MariaDB 설치 방법" />
+<meta property="og:description" content="​
+MariaDB 설치 방법 1. 설치 https://mariadb.org/download/ 에서 자동으로 확인된 버전으로 다운로드 받습니다.
+​
+Next 클릭​
+별도의 커스텀은 하지 않습니다.​
+&lsquo;root 비밀번호 설정&rsquo;과 &lsquo;UTF 변환 및 외부에서 root 접속을 허용 할 것&rsquo;인지 물어보는 데 이곳이 중요합니다.
+단순 개발용이라면 상관없을 수 있으나 개인적으로 실제 운용할 서버 or 개발 서버라도 외부에서 root에 접속하게 하는 것은 보안상 좋지 않을 것이라고 생각합니다.
+실제로 서비스를 운영 할 서버라면 절때 root를 원격지에서 사용할 수 없게 하는 것을 추천합니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://colinder.github.io/mariadb_setting/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-09-15T10:44:21&#43;09:00" />
+<meta property="article:modified_time" content="2021-09-15T10:44:21&#43;09:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
+
+<meta name="twitter:title" content="MariaDB 설치 방법"/>
+<meta name="twitter:description" content="​
+MariaDB 설치 방법 1. 설치 https://mariadb.org/download/ 에서 자동으로 확인된 버전으로 다운로드 받습니다.
+​
+Next 클릭​
+별도의 커스텀은 하지 않습니다.​
+&lsquo;root 비밀번호 설정&rsquo;과 &lsquo;UTF 변환 및 외부에서 root 접속을 허용 할 것&rsquo;인지 물어보는 데 이곳이 중요합니다.
+단순 개발용이라면 상관없을 수 있으나 개인적으로 실제 운용할 서버 or 개발 서버라도 외부에서 root에 접속하게 하는 것은 보안상 좋지 않을 것이라고 생각합니다.
+실제로 서비스를 운영 할 서버라면 절때 root를 원격지에서 사용할 수 없게 하는 것을 추천합니다."/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/mariadb_setting/" /><link rel="prev" href="https://colinder.github.io/django_07_1vsn_%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "MariaDB 설치 방법",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/colinder.github.io\/mariadb_setting\/"
+        },"genre": "posts","keywords": "mariaDB","wordcount":  174 ,
+        "url": "https:\/\/colinder.github.io\/mariadb_setting\/","datePublished": "2021-09-15T10:44:21+09:00","dateModified": "2021-09-15T10:44:21+09:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "colinder"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="">Hello New World</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="">Hello New World</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">MariaDB 설치 방법</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/mariadb/"><i class="far fa-folder fa-fw"></i>mariaDB</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-09-15">2021-09-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;174 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;One minute&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-설치">1. 설치</a></li>
+    <li><a href="#2-db-setting">2. DB setting</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>​</p>
+<h1 id="mariadb-설치-방법">MariaDB 설치 방법</h1>
+<h2 id="1-설치">1. 설치</h2>
+<p><a href="https://mariadb.org/download/">https://mariadb.org/download/</a> 에서 자동으로 확인된 버전으로 다운로드 받습니다.</p>
+<p>​</p>
+<image src="/images/MariaDB_setting_00.png" width="500px" style="display: block; margin: 5px auto">
+<center>Next 클릭</center>
+<p>​</p>
+<image src="/images/MariaDB_setting_01.png" width="500px" style="display: block; margin: 5px auto">
+<center>별도의 커스텀은 하지 않습니다.</center>
+<p>​</p>
+<image src="/images/MariaDB_setting_02.png" width="500px" style="display: block; margin: 5px auto">
+<p>&lsquo;root 비밀번호 설정&rsquo;과 &lsquo;UTF 변환 및 외부에서 root 접속을 허용 할 것&rsquo;인지 물어보는 데 이곳이 중요합니다.</p>
+<p>단순 개발용이라면 상관없을 수 있으나 개인적으로 <span style="color: red"><strong>실제 운용할 서버 or 개발 서버라도 외부에서 root에 접속하게 하는 것은 보안상 좋지 않을 것이라고 생각합니다.</strong></span></p>
+<p><span style="color: red"><strong>실제로 서비스를 운영 할 서버라면 절때 root를 원격지에서 사용할 수 없게 하는 것을 추천합니다.</strong></span></p>
+<p>root의 비밀번호를 등록하고, UTF-8 설정은 체크하겠습니다. <span style="font-size:0.8em">(나중에 변경할 수 있습니다.)</span></p>
+<image src="/images/MariaDB_setting_03.png" width="500px" style="display: block; margin: 5px auto">
+<center>이렇게 Next 하겠습니다.</center>
+<p>​</p>
+<image src="/images/MariaDB_setting_04.png" width="500px" style="display: block; margin: 5px auto">
+<p>Database 서버에 접속할 <strong>port</strong>와 <strong>서비스 이름</strong>을 설정하는 곳입니다.<br>
+<em>(혹시 Maria DB 설치전에 Mysql 서버가 설지되있는 경우에는 3306 port로 지정했을 때 충돌이 날 수 있으니 Maria DB의 port를 바꾸어사용하는 것을 추천합니다.)</em></p>
+<p>​</p>
+<image src="/images/MariaDB_setting_05.png" width="500px" style="display: block; margin: 5px auto">
+<center>Install 클릭하면 설치가 마무리됩니다.</center>
+<p>​</p>
+<p>​</p>
+<h2 id="2-db-setting">2. DB setting</h2>
+<image src="/images/MariaDB_setting_06.png" width="100px" style="display: block; margin: 5px auto">
+<center>정상적으로 설치가 되었다면 배경화면에서 해당 아이콘을 발견할 수 있습니다. (실행)</center>
+<p>​</p>
+<image src="/images/MariaDB_setting_07.png" width="500px" style="display: block; margin: 5px auto">
+<center>실행 초기 화면</center>
+<p>​</p>
+<center>왼쪽 하단에 "<b><span style="color: green">⊕</span>신규</b>" 클릭 후 화면</center>
+<image src="/images/MariaDB_setting_08.png" width="500px" style="display: block; margin: 5px auto">
+<p>​</p>
+<image src="/images/MariaDB_setting_09.png" width="500px" style="display: block; margin: 5px auto">
+<center>설치하면서 등록했던 root의 비밀번호를 입력 후 하단에 '열기'를 클릭합니다.</center>
+<p>​</p>
+<image src="/images/MariaDB_setting_10.png" width="800px" style="display: block; margin: 10px auto">
+<center>이제 새로운 DB table이 생성되었고 개발하는 프로그램과 연결하여 사용할 준비가 끝났습니다.</center>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2021-09-15</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/mariadb_setting/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/mariadb/">mariaDB</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/django_07_1vsn_%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0/" class="prev" rel="prev" title="Django_07_1:N 불러오기"><i class="fas fa-angle-left fa-fw"></i>Django_07_1:N 불러오기</a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://colinder-github-io.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
