@@ -3,7 +3,21 @@
         <title>Django - Tag - </title>
         <link>https://colinder.github.io/tags/django/</link>
         <description>Django - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 14 Sep 2021 17:25:44 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/django/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 07 Oct 2021 10:17:20 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/django/" rel="self" type="application/rss+xml" /><item>
+    <title>Django_08_AbstractBaseUser VS AbstractUser</title>
+    <link>https://colinder.github.io/django_08_abstractbaseuservsabstractuser/</link>
+    <pubDate>Thu, 07 Oct 2021 10:17:20 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/django_08_abstractbaseuservsabstractuser/</guid>
+    <description><![CDATA[​
+Django AbstractBaseUser VS AbstractUser  Django로 프로젝트를 진행하면서 계정관련 내용을 등록하는 것을 가장 많이 했음에도, 아직 명확하게 차이를 알지 못하고 사용했던 것이 있었습니다.
+바로! User custom에 관한 부분이었는데요. 크게 AbstractBaseUser와 AbstractUser를 사용하는 방법이 있는데 이 둘의 차이를 꼼꼼히 알아보기 위해 해당 포스팅이 작성되었습니다.
+ ​
+AbstractBaseUser VS AbstractUser  프로젝트 생성 후 accounts 라는 app을 만들고 makemigrations &amp; migrate를 하기 전
+ ​
+1. Model 설정 AbstractBaseUser
+위치: accounts/models.py]]></description>
+</item><item>
     <title>Django_07_1:N 불러오기</title>
     <link>https://colinder.github.io/django_07_1vsn_%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0/</link>
     <pubDate>Tue, 14 Sep 2021 17:25:44 &#43;0900</pubDate>

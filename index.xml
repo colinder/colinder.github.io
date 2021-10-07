@@ -3,9 +3,23 @@
         <title></title>
         <link>https://colinder.github.io/</link>
         <description>Hello New World</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 15 Sep 2021 10:44:21 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 07 Oct 2021 10:17:20 &#43;0900</lastBuildDate>
             <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Django_08_AbstractBaseUser VS AbstractUser</title>
+    <link>https://colinder.github.io/django_08_abstractbaseuservsabstractuser/</link>
+    <pubDate>Thu, 07 Oct 2021 10:17:20 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/django_08_abstractbaseuservsabstractuser/</guid>
+    <description><![CDATA[​
+Django AbstractBaseUser VS AbstractUser  Django로 프로젝트를 진행하면서 계정관련 내용을 등록하는 것을 가장 많이 했음에도, 아직 명확하게 차이를 알지 못하고 사용했던 것이 있었습니다.
+바로! User custom에 관한 부분이었는데요. 크게 AbstractBaseUser와 AbstractUser를 사용하는 방법이 있는데 이 둘의 차이를 꼼꼼히 알아보기 위해 해당 포스팅이 작성되었습니다.
+ ​
+AbstractBaseUser VS AbstractUser  프로젝트 생성 후 accounts 라는 app을 만들고 makemigrations &amp; migrate를 하기 전
+ ​
+1. Model 설정 AbstractBaseUser
+위치: accounts/models.py]]></description>
+</item><item>
     <title>MariaDB 설치 방법</title>
     <link>https://colinder.github.io/mariadb_setting/</link>
     <pubDate>Wed, 15 Sep 2021 10:44:21 &#43;0900</pubDate>
@@ -132,15 +146,5 @@ guest가 host의 IP를 입력해 DB를 연결하는 걸까?
  ​
 👀주의
 각 단계 단계들이 필수적인 사항인지는 파악되지 않았습니다.]]></description>
-</item><item>
-    <title>RNN &amp; LSTM</title>
-    <link>https://colinder.github.io/rnn-lstm/</link>
-    <pubDate>Mon, 28 Jun 2021 14:35:39 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/rnn-lstm/</guid>
-    <description><![CDATA[​
-RNN &amp; LSTM  감정분석을 위한 프로젝트를 기획하면서 RNN과 LSTM이라는 신경망 분석에 대하여 알게 되었습니다. 신경망 분석은 기계학습과 인지과학에서 영감을 얻어 설계된 통계학적 학습 알고리즘인데요. 이 둘의 개념를 알아보겠습니다.
- ​
-&lsquo;머신러닝&rsquo;이란 무엇인지 우선 알아봅시다.  머신 러닝(machine learning) 또는 기계 학습(機械學習)은 경험을 통해 자동으로 개선하는 컴퓨터 알고리즘 연구 분야입니다. 이는 인공지능의 한 분야로 간주되며, 컴퓨터가 학습할 수 있도록 하는 알고리즘과 기술을 개발합니다. 예를 들어 &lsquo;이 운동화가 진품이 맞는지?&rsquo;, &lsquo;특정 시간대에 A에서 B까지 가는데 얼마나 시간이 걸리는지?]]></description>
 </item></channel>
 </rss>
