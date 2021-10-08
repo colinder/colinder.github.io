@@ -3,7 +3,18 @@
         <title>AbstractUser - Category - </title>
         <link>https://colinder.github.io/categories/abstractuser/</link>
         <description>AbstractUser - Category - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 07 Oct 2021 10:17:20 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/abstractuser/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 08 Oct 2021 10:17:53 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/abstractuser/" rel="self" type="application/rss+xml" /><item>
+    <title>Django_10_CustomAuthUser_AbstractUser</title>
+    <link>https://colinder.github.io/django_10_customauthuser_abstractuser/</link>
+    <pubDate>Fri, 08 Oct 2021 10:17:53 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/django_10_customauthuser_abstractuser/</guid>
+    <description><![CDATA[​
+Django AbstractUser  이전에 AbstractBaseUser를 사용한 커스텀 사용자 인증 테이블을 구성해보았습니다. 해당 내용에 이어서 AbstractUser로 커스텀 사용자 인증 테이블을 구성해보고 createsuperuser 명령어 입력시, 관리자 계정이 커스텀한 테이블에 생성되게 해보겠습니다.
+ ​
+AbstractUser을 상속받아 커스텀을 진행  우선 AbstractUser는 Django에서 기본으로 제공해주는 사용자 인증 테이블의 요소를 그대로 가져와 사용하기 때문에 그 요소들은 어떤 것들이 있는지 알아보자.
+id, password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined 총 11개의 column이 존재하며 이외에 column을 추가 하고 싶을 때 코드를 추가로 작성합니다.]]></description>
+</item><item>
     <title>Django_08_AbstractBaseUser VS AbstractUser</title>
     <link>https://colinder.github.io/django_08_abstractbaseuservsabstractuser/</link>
     <pubDate>Thu, 07 Oct 2021 10:17:20 &#43;0900</pubDate>

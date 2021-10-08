@@ -3,7 +3,31 @@
         <title>Django - Category - </title>
         <link>https://colinder.github.io/categories/django/</link>
         <description>Django - Category - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 07 Oct 2021 10:17:20 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/django/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 08 Oct 2021 10:17:53 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/django/" rel="self" type="application/rss+xml" /><item>
+    <title>Django_10_CustomAuthUser_AbstractUser</title>
+    <link>https://colinder.github.io/django_10_customauthuser_abstractuser/</link>
+    <pubDate>Fri, 08 Oct 2021 10:17:53 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/django_10_customauthuser_abstractuser/</guid>
+    <description><![CDATA[​
+Django AbstractUser  이전에 AbstractBaseUser를 사용한 커스텀 사용자 인증 테이블을 구성해보았습니다. 해당 내용에 이어서 AbstractUser로 커스텀 사용자 인증 테이블을 구성해보고 createsuperuser 명령어 입력시, 관리자 계정이 커스텀한 테이블에 생성되게 해보겠습니다.
+ ​
+AbstractUser을 상속받아 커스텀을 진행  우선 AbstractUser는 Django에서 기본으로 제공해주는 사용자 인증 테이블의 요소를 그대로 가져와 사용하기 때문에 그 요소들은 어떤 것들이 있는지 알아보자.
+id, password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined 총 11개의 column이 존재하며 이외에 column을 추가 하고 싶을 때 코드를 추가로 작성합니다.]]></description>
+</item><item>
+    <title>Django_09_CustomAuthUser_AbstractBaseUser</title>
+    <link>https://colinder.github.io/django_09_customauthuser_abstractbaseuser/</link>
+    <pubDate>Fri, 08 Oct 2021 10:17:50 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/django_09_customauthuser_abstractbaseuser/</guid>
+    <description><![CDATA[​
+Django AbstractBaseUser  django는 기본적으로 username 과 password를 가지고 로그인합니다. 하지만 요즘에는 대부분의 웹사이트들이 email 과 password로 로그인(사용자를 인식 및 인증)을 합니다.
+제가 진행할 것은 django의 사용자 인증 테이블을 AbstractBaseUser을 사용해 커스텀하고, createsuperuser 명령어 입력시, 관리자 계정이 커스텀한 테이블에 생성되게 하는 것입니다.
+ ​
+Django 공식문서에는 models.py에서 기본적인 사용자모델을 설정하고 이를 활용해 admin.py에서 관리자모델을 만드는 예제가 있어 이를 따라하며 약간의 수정을 더해 진행해보려 합니다.
+​
+먼저 AbstractBaseUser를 상속받아 커스텀을 진행  django의 예제에는 AbstractBaseUser라는 클래스를 상속받은 모델을 제작하는데, Abstract(추상적인)Base(기초)User(사용자)의 틀을 가져와 이를 활용해 내 입맛대로 커스텀 하는 과정.]]></description>
+</item><item>
     <title>Django_08_AbstractBaseUser VS AbstractUser</title>
     <link>https://colinder.github.io/django_08_abstractbaseuservsabstractuser/</link>
     <pubDate>Thu, 07 Oct 2021 10:17:20 &#43;0900</pubDate>
@@ -105,17 +129,5 @@ Git? : 버전 관리 시스템이며 Git은 소프트웨어를 개발하는 기�
   로그인까지 마치면 이제 Django 개발 준비 끝.
 ​
    👏 21.04.18 기준 django : 3.2 V 으로 다시 정리 합니다.]]></description>
-</item><item>
-    <title>Django_00_basic</title>
-    <link>https://colinder.github.io/django_00_whatisdjango/</link>
-    <pubDate>Thu, 22 Apr 2021 23:10:27 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/django_00_whatisdjango/</guid>
-    <description><![CDATA[​
-Web ?  월드 와이드 웹(World Wide Web)이란 인터넷에 연결된 사용자들이 서로의 정보를 공유할 수 있는 공간을 의미하며, 줄여서 WWW나 W3라고도 부르며, 간단히 웹(Web)이라고 가장 많이 불린다.
-인터넷과 같은 의미로 많이 사용되고 있지만, 정확히 말해 웹은 인터넷상의 인기 있는 하나의 서비스일 뿐.
-Web의 작동방식을 간단히 설명하자면, 요청과 응답.
-사용자는 서버에 어떠한 요구사항을 요청하고 서버는 이에 따라 처리결과를 응답한다.
-예를들어 사용자가 Login 버튼을 누른 행위는 user가 서버에 로그인 하고 싶다고 요청한 것이며, 서버는 로그인 창을 띄움으로서 user가 로그인할 수 있게 응답한 것입니다.]]></description>
 </item></channel>
 </rss>
