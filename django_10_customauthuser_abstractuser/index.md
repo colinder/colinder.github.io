@@ -19,7 +19,7 @@
 
 ​	
 
-_아래 정리는 [이전에](https://colinder.github.io/django_08_abstractbaseuservsabstractuser/) <span style="color: #f2b141"><b>AbstractUser</b></span>관련 테스트를 진행한 후에 내용입니다. 즉, **프로젝트를 만들고, accounts라는 앱을 만들고, settings.py에 AUTH_USER_MODEL='accounts/myabuser'**를 등록한 후 진행합니다._
+_아래 정리는 [이전에](https://colinder.github.io/django_08_abstractbaseuservsabstractuser/) <span style="color: #f2b141"><b>AbstractUser</b></span>관련 테스트를 진행한 후에 내용입니다. 즉, <b>프로젝트를 만들고, accounts라는 앱을 만들고, settings.py에 AUTH_USER_MODEL='accounts/myabuser'</b>를 등록한 후 진행합니다._
 
 ​	
 
@@ -50,20 +50,18 @@ _아래 정리는 [이전에](https://colinder.github.io/django_08_abstractbaseu
 
    DB를 확인해보니
 
-   ![image-20211007133929980](C:\Users\kjong\Desktop\JG\03_Blog\content\posts\Django\Django_10_CustomAuthUser_AbstractUser.assets\image-20211007133929980.png)
+   <image src="/images/Django_10_CustomAuthUser_AbstractUser.assets\image-20211007133929980.png" width="400px">
 
-   ​	
-
-   nickname column이 생겼고 이때 
+   nickname column이 생겼고 이제,
 
    ```python
    # Terminal에 관리자 계정 생성을 시도
    > python manage.py createsuperuser
    ```
 
-   했더니 제가 원했던 email, nickname, password를 받는 것이 아닌 default로 createsuperuser를 했을 때 입력받는 항목들이 나왔습니다. 
+   했더니 제가 원했던 email, nickname, password를 받는 것이 아닌 default로 createsuperuser를 했을 때 입력받는 항목들이 나왔습니다.
 
-   ![image-20211007134406448](C:\Users\kjong\Desktop\JG\03_Blog\content\posts\Django\Django_10_CustomAuthUser_AbstractUser.assets\image-20211007134406448.png)
+   <image src="/images/Django_10_CustomAuthUser_AbstractUser.assets\image-20211007134406448.png" width="500px">
 
    즉, <span style="color: #4f8ae8;"><b>AbstractBaseUser</b></span>를 사용하든지 <span style="color: #f2b141"><b>AbstractUser</b></span>을 사용하든지 간에, 최소한 **커스텀된 관리자 계정을 생성**하기 위해서는 `BaseUserManager`가 필요하다는 것을 알았습니다.
 
@@ -121,7 +119,7 @@ _아래 정리는 [이전에](https://colinder.github.io/django_08_abstractbaseu
 
    하였지만, REQUIRED_FIELDS에 등록된 nickname을 추가로 받긴 하지만, 아직 email을 필수로 받지 않고, Username이 고윳값(PK)로 설정되어 있는 것 같습니다. 
 
-   ![image-20211007135527919](C:\Users\kjong\Desktop\JG\03_Blog\content\posts\Django\Django_10_CustomAuthUser_AbstractUser.assets\image-20211007135527919.png)
+   <image src="/images/Django_10_CustomAuthUser_AbstractUser.assets\image-20211007135527919.png" width="500px">
 
    ​	
 
@@ -148,18 +146,20 @@ _아래 정리는 [이전에](https://colinder.github.io/django_08_abstractbaseu
 
    하지만, 
 
-   ![image-20211007140106344](C:\Users\kjong\Desktop\JG\03_Blog\content\posts\Django\Django_10_CustomAuthUser_AbstractUser.assets\image-20211007140106344.png)
+   <image src="/images/Django_10_CustomAuthUser_AbstractUser.assets\image-20211007140106344.png" width="1000px">
+
+   
 
    오류가 납니다. email을 unique하게 세팅해야 한다는 말 같아서 email의 필드설정을 해보겠습니다.
-
+   
    ```python
    # accounts/models.py
    
    class MyAbUser(AbstractUser):
-       email = models.EmailField(		#👈
+       email = models.EmailField(		   #👈
            verbose_name='email addresss', #👈
            max_length=255,
-           unique=True,	#👈
+           unique=True,	               #👈
            default=None,
        )
        nickname = models.CharField(max_length=100, default=None)
@@ -170,13 +170,17 @@ _아래 정리는 [이전에](https://colinder.github.io/django_08_abstractbaseu
        REQUIRED_FIELDS = ['nickname']
    ```
 
-   이제 됩니다. 제가 작성한 코드가 동작하는지 확인하려 **일부로 오기재한 'email addresss'**으로 입력을 받고, 제가 원하던 모습인 email, nickname, password만 입력을 받으며 관리자 계정이 생성되었습니다.
+   이제 됩니다. 제가 작성한 코드가 동작하는지 확인하려 <b>일부로 오기재한 'email addresss'</b>으로 입력을 받고, 제가 원하던 모습인 email, nickname, password만 입력을 받으며 관리자 계정이 생성되었습니다.
 
-   ![image-20211007140531630](C:\Users\kjong\Desktop\JG\03_Blog\content\posts\Django\Django_10_CustomAuthUser_AbstractUser.assets\image-20211007140531630.png)
+   <image src="/images/Django_10_CustomAuthUser_AbstractUser.assets\image-20211007140531630.png" width="1000px">
+
+   ​	
 
    DB를 확인해보니
 
-   ![image-20211007140842035](C:\Users\kjong\Desktop\JG\03_Blog\content\posts\Django\Django_10_CustomAuthUser_AbstractUser.assets\image-20211007140842035.png)
+   <image src="/images/Django_10_CustomAuthUser_AbstractUser.assets\image-20211007140842035.png" width="1000px">
+
+   ​	
 
    <span style="color: #f2b141"><b>AbstractUser</b></span>를 상속받아 커스텀한 사용자 인증 항목 중, Default로 설정되는 값인 **is_superuser, is_staff, is_active, date_joinnd**를 제외한 email, nickname, password가 입력된 값으로 반영된 것을 확인하였습니다. 
 
@@ -193,10 +197,10 @@ _아래 정리는 [이전에](https://colinder.github.io/django_08_abstractbaseu
    #### <span style="color: #4f8ae8;"><b>AbstractBaseUser</b></span>와 <span style="color: #f2b141"><b>AbstractUser</b></span>의 차이를 알아보았고 코드와 DB의 모습까지 살펴보았습니다. 이 둘의 차이와 장,단점을 이해하는데 많은 도움이 되었으면 합니다.
 
    ​		
-
+   
    ​		
-
+   
    ​		
-
+   
    ​		
 

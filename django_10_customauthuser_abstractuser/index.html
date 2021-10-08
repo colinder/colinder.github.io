@@ -37,7 +37,7 @@ id, password, last_login, is_superuser, username, first_name, last_name, email, 
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/django_10_customauthuser_abstractuser\/"
-        },"genre": "posts","keywords": "Django, AbstractUser","wordcount":  595 ,
+        },"genre": "posts","keywords": "Django, AbstractUser","wordcount":  596 ,
         "url": "https:\/\/colinder.github.io\/django_10_customauthuser_abstractuser\/","datePublished": "2021-10-08T10:17:53+09:00","dateModified": "2021-10-08T10:17:53+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -114,7 +114,7 @@ id, password, last_login, is_superuser, username, first_name, last_name, email, 
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Django_10_CustomAuthUser_AbstractUser</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw"></i>Django</a>&nbsp;<a href="/categories/abstractuser/"><i class="far fa-folder fa-fw"></i>AbstractUser</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-10-08">2021-10-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;595 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-10-08">2021-10-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;596 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -148,7 +148,7 @@ id, password, last_login, is_superuser, username, first_name, last_name, email, 
 <p>전 이전에 <span style="color: #4f8ae8;"><b>AbstractBaseUser</b></span>의 경우와 같이, 추가로 <strong>nickname</strong>을 필수로 등록받는 것으로 시작하여 createsuperuser했을 때, myabuser 테이블에 nickname을 필수로 입력받는 관리자 계정이 생기도록 진행해보겠습니다.</p>
 </blockquote>
 <p>​</p>
-<p><em>아래 정리는 <a href="https://colinder.github.io/django_08_abstractbaseuservsabstractuser/" target="_blank" rel="noopener noreffer">이전에</a> <span style="color: #f2b141"><b>AbstractUser</b></span>관련 테스트를 진행한 후에 내용입니다. 즉, **프로젝트를 만들고, accounts라는 앱을 만들고, settings.py에 AUTH_USER_MODEL=&lsquo;accounts/myabuser&rsquo;**를 등록한 후 진행합니다.</em></p>
+<p><em>아래 정리는 <a href="https://colinder.github.io/django_08_abstractbaseuservsabstractuser/" target="_blank" rel="noopener noreffer">이전에</a> <span style="color: #f2b141"><b>AbstractUser</b></span>관련 테스트를 진행한 후에 내용입니다. 즉, <b>프로젝트를 만들고, accounts라는 앱을 만들고, settings.py에 AUTH_USER_MODEL=&lsquo;accounts/myabuser&rsquo;</b>를 등록한 후 진행합니다.</em></p>
 <p>​</p>
 <h4 id="-소스-코드를-작성해보려는데-궁금증이-생겼습니다">🤔 소스 코드를 작성해보려는데 궁금증이 생겼습니다.</h4>
 <ol>
@@ -191,16 +191,8 @@ id, password, last_login, is_superuser, username, first_name, last_name, email, 
 </code></pre></td></tr></table>
 </div>
 </div><p>DB를 확인해보니</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="C:%5cUsers%5ckjong%5cDesktop%5cJG%5c03_Blog%5ccontent%5cposts%5cDjango%5cDjango_10_CustomAuthUser_AbstractUser.assets%5cimage-20211007133929980.png"
-        data-srcset="C:%5cUsers%5ckjong%5cDesktop%5cJG%5c03_Blog%5ccontent%5cposts%5cDjango%5cDjango_10_CustomAuthUser_AbstractUser.assets%5cimage-20211007133929980.png, C:%5cUsers%5ckjong%5cDesktop%5cJG%5c03_Blog%5ccontent%5cposts%5cDjango%5cDjango_10_CustomAuthUser_AbstractUser.assets%5cimage-20211007133929980.png 1.5x, C:%5cUsers%5ckjong%5cDesktop%5cJG%5c03_Blog%5ccontent%5cposts%5cDjango%5cDjango_10_CustomAuthUser_AbstractUser.assets%5cimage-20211007133929980.png 2x"
-        data-sizes="auto"
-        alt="C:\Users\kjong\Desktop\JG\03_Blog\content\posts\Django\Django_10_CustomAuthUser_AbstractUser.assets\image-20211007133929980.png"
-        title="image-20211007133929980" /></p>
-<p>​</p>
-<p>nickname column이 생겼고 이때</p>
+<image src="/images/Django_10_CustomAuthUser_AbstractUser.assets\image-20211007133929980.png" width="400px">
+<p>nickname column이 생겼고 이제,</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -212,14 +204,7 @@ id, password, last_login, is_superuser, username, first_name, last_name, email, 
 </code></pre></td></tr></table>
 </div>
 </div><p>했더니 제가 원했던 email, nickname, password를 받는 것이 아닌 default로 createsuperuser를 했을 때 입력받는 항목들이 나왔습니다.</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="C:%5cUsers%5ckjong%5cDesktop%5cJG%5c03_Blog%5ccontent%5cposts%5cDjango%5cDjango_10_CustomAuthUser_AbstractUser.assets%5cimage-20211007134406448.png"
-        data-srcset="C:%5cUsers%5ckjong%5cDesktop%5cJG%5c03_Blog%5ccontent%5cposts%5cDjango%5cDjango_10_CustomAuthUser_AbstractUser.assets%5cimage-20211007134406448.png, C:%5cUsers%5ckjong%5cDesktop%5cJG%5c03_Blog%5ccontent%5cposts%5cDjango%5cDjango_10_CustomAuthUser_AbstractUser.assets%5cimage-20211007134406448.png 1.5x, C:%5cUsers%5ckjong%5cDesktop%5cJG%5c03_Blog%5ccontent%5cposts%5cDjango%5cDjango_10_CustomAuthUser_AbstractUser.assets%5cimage-20211007134406448.png 2x"
-        data-sizes="auto"
-        alt="C:\Users\kjong\Desktop\JG\03_Blog\content\posts\Django\Django_10_CustomAuthUser_AbstractUser.assets\image-20211007134406448.png"
-        title="image-20211007134406448" /></p>
+<image src="/images/Django_10_CustomAuthUser_AbstractUser.assets\image-20211007134406448.png" width="500px">
 <p>즉, <span style="color: #4f8ae8;"><b>AbstractBaseUser</b></span>를 사용하든지 <span style="color: #f2b141"><b>AbstractUser</b></span>을 사용하든지 간에, 최소한 <strong>커스텀된 관리자 계정을 생성</strong>하기 위해서는 <code>BaseUserManager</code>가 필요하다는 것을 알았습니다.</p>
 <p>​</p>
 </li>
@@ -316,14 +301,7 @@ id, password, last_login, is_superuser, username, first_name, last_name, email, 
 </code></pre></td></tr></table>
 </div>
 </div><p>하였지만, REQUIRED_FIELDS에 등록된 nickname을 추가로 받긴 하지만, 아직 email을 필수로 받지 않고, Username이 고윳값(PK)로 설정되어 있는 것 같습니다.</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="C:%5cUsers%5ckjong%5cDesktop%5cJG%5c03_Blog%5ccontent%5cposts%5cDjango%5cDjango_10_CustomAuthUser_AbstractUser.assets%5cimage-20211007135527919.png"
-        data-srcset="C:%5cUsers%5ckjong%5cDesktop%5cJG%5c03_Blog%5ccontent%5cposts%5cDjango%5cDjango_10_CustomAuthUser_AbstractUser.assets%5cimage-20211007135527919.png, C:%5cUsers%5ckjong%5cDesktop%5cJG%5c03_Blog%5ccontent%5cposts%5cDjango%5cDjango_10_CustomAuthUser_AbstractUser.assets%5cimage-20211007135527919.png 1.5x, C:%5cUsers%5ckjong%5cDesktop%5cJG%5c03_Blog%5ccontent%5cposts%5cDjango%5cDjango_10_CustomAuthUser_AbstractUser.assets%5cimage-20211007135527919.png 2x"
-        data-sizes="auto"
-        alt="C:\Users\kjong\Desktop\JG\03_Blog\content\posts\Django\Django_10_CustomAuthUser_AbstractUser.assets\image-20211007135527919.png"
-        title="image-20211007135527919" /></p>
+<image src="/images/Django_10_CustomAuthUser_AbstractUser.assets\image-20211007135527919.png" width="500px">
 <p>​</p>
 <p>그렇다면, 고윳값(PK)를 변경할 수 있는 <strong>USERNAME_FIELD</strong>를 설정하고</p>
 <div class="highlight"><div class="chroma">
@@ -362,14 +340,7 @@ id, password, last_login, is_superuser, username, first_name, last_name, email, 
 </code></pre></td></tr></table>
 </div>
 </div><p>하지만,</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="C:%5cUsers%5ckjong%5cDesktop%5cJG%5c03_Blog%5ccontent%5cposts%5cDjango%5cDjango_10_CustomAuthUser_AbstractUser.assets%5cimage-20211007140106344.png"
-        data-srcset="C:%5cUsers%5ckjong%5cDesktop%5cJG%5c03_Blog%5ccontent%5cposts%5cDjango%5cDjango_10_CustomAuthUser_AbstractUser.assets%5cimage-20211007140106344.png, C:%5cUsers%5ckjong%5cDesktop%5cJG%5c03_Blog%5ccontent%5cposts%5cDjango%5cDjango_10_CustomAuthUser_AbstractUser.assets%5cimage-20211007140106344.png 1.5x, C:%5cUsers%5ckjong%5cDesktop%5cJG%5c03_Blog%5ccontent%5cposts%5cDjango%5cDjango_10_CustomAuthUser_AbstractUser.assets%5cimage-20211007140106344.png 2x"
-        data-sizes="auto"
-        alt="C:\Users\kjong\Desktop\JG\03_Blog\content\posts\Django\Django_10_CustomAuthUser_AbstractUser.assets\image-20211007140106344.png"
-        title="image-20211007140106344" /></p>
+<image src="/images/Django_10_CustomAuthUser_AbstractUser.assets\image-20211007140106344.png" width="1000px">
 <p>오류가 납니다. email을 unique하게 세팅해야 한다는 말 같아서 email의 필드설정을 해보겠습니다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -393,10 +364,10 @@ id, password, last_login, is_superuser, username, first_name, last_name, email, 
 <pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># accounts/models.py</span>
 
 <span class="k">class</span> <span class="nc">MyAbUser</span><span class="p">(</span><span class="n">AbstractUser</span><span class="p">):</span>
-    <span class="n">email</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">EmailField</span><span class="p">(</span>		<span class="c1">#👈</span>
+    <span class="n">email</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">EmailField</span><span class="p">(</span>		   <span class="c1">#👈</span>
         <span class="n">verbose_name</span><span class="o">=</span><span class="s1">&#39;email addresss&#39;</span><span class="p">,</span> <span class="c1">#👈</span>
         <span class="n">max_length</span><span class="o">=</span><span class="mi">255</span><span class="p">,</span>
-        <span class="n">unique</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>	<span class="c1">#👈</span>
+        <span class="n">unique</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>	               <span class="c1">#👈</span>
         <span class="n">default</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
     <span class="p">)</span>
     <span class="n">nickname</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
@@ -407,24 +378,12 @@ id, password, last_login, is_superuser, username, first_name, last_name, email, 
     <span class="n">REQUIRED_FIELDS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;nickname&#39;</span><span class="p">]</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>이제 됩니다. 제가 작성한 코드가 동작하는지 확인하려 **일부로 오기재한 &lsquo;email addresss&rsquo;**으로 입력을 받고, 제가 원하던 모습인 email, nickname, password만 입력을 받으며 관리자 계정이 생성되었습니다.</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="C:%5cUsers%5ckjong%5cDesktop%5cJG%5c03_Blog%5ccontent%5cposts%5cDjango%5cDjango_10_CustomAuthUser_AbstractUser.assets%5cimage-20211007140531630.png"
-        data-srcset="C:%5cUsers%5ckjong%5cDesktop%5cJG%5c03_Blog%5ccontent%5cposts%5cDjango%5cDjango_10_CustomAuthUser_AbstractUser.assets%5cimage-20211007140531630.png, C:%5cUsers%5ckjong%5cDesktop%5cJG%5c03_Blog%5ccontent%5cposts%5cDjango%5cDjango_10_CustomAuthUser_AbstractUser.assets%5cimage-20211007140531630.png 1.5x, C:%5cUsers%5ckjong%5cDesktop%5cJG%5c03_Blog%5ccontent%5cposts%5cDjango%5cDjango_10_CustomAuthUser_AbstractUser.assets%5cimage-20211007140531630.png 2x"
-        data-sizes="auto"
-        alt="C:\Users\kjong\Desktop\JG\03_Blog\content\posts\Django\Django_10_CustomAuthUser_AbstractUser.assets\image-20211007140531630.png"
-        title="image-20211007140531630" /></p>
+</div><p>이제 됩니다. 제가 작성한 코드가 동작하는지 확인하려 <b>일부로 오기재한 &lsquo;email addresss&rsquo;</b>으로 입력을 받고, 제가 원하던 모습인 email, nickname, password만 입력을 받으며 관리자 계정이 생성되었습니다.</p>
+<image src="/images/Django_10_CustomAuthUser_AbstractUser.assets\image-20211007140531630.png" width="1000px">
+<p>​</p>
 <p>DB를 확인해보니</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="C:%5cUsers%5ckjong%5cDesktop%5cJG%5c03_Blog%5ccontent%5cposts%5cDjango%5cDjango_10_CustomAuthUser_AbstractUser.assets%5cimage-20211007140842035.png"
-        data-srcset="C:%5cUsers%5ckjong%5cDesktop%5cJG%5c03_Blog%5ccontent%5cposts%5cDjango%5cDjango_10_CustomAuthUser_AbstractUser.assets%5cimage-20211007140842035.png, C:%5cUsers%5ckjong%5cDesktop%5cJG%5c03_Blog%5ccontent%5cposts%5cDjango%5cDjango_10_CustomAuthUser_AbstractUser.assets%5cimage-20211007140842035.png 1.5x, C:%5cUsers%5ckjong%5cDesktop%5cJG%5c03_Blog%5ccontent%5cposts%5cDjango%5cDjango_10_CustomAuthUser_AbstractUser.assets%5cimage-20211007140842035.png 2x"
-        data-sizes="auto"
-        alt="C:\Users\kjong\Desktop\JG\03_Blog\content\posts\Django\Django_10_CustomAuthUser_AbstractUser.assets\image-20211007140842035.png"
-        title="image-20211007140842035" /></p>
+<image src="/images/Django_10_CustomAuthUser_AbstractUser.assets\image-20211007140842035.png" width="1000px">
+<p>​</p>
 <p><span style="color: #f2b141"><b>AbstractUser</b></span>를 상속받아 커스텀한 사용자 인증 항목 중, Default로 설정되는 값인 <strong>is_superuser, is_staff, is_active, date_joinnd</strong>를 제외한 email, nickname, password가 입력된 값으로 반영된 것을 확인하였습니다.</p>
 <p>​</p>
 <p>아마, <strong>is_superuser와 date_joined</strong>는 필수값이 아니기 때문에 강제로 기록하고 싶지 않다면 방법이 있을 것입니다. 다만 이번에 알아보지는 않겠습니다.</p>
