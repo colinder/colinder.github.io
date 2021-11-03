@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Foreign Key constraint failed - Tag - </title>
+        <link>https://colinder.github.io/tags/foreign-key-constraint-failed/</link>
+        <description>Foreign Key constraint failed - Tag - </description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 09 Oct 2021 14:49:10 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/foreign-key-constraint-failed/" rel="self" type="application/rss+xml" /><item>
+    <title>Django_11_CustomUserhotfix</title>
+    <link>https://colinder.github.io/django_11_customuserhotfix/</link>
+    <pubDate>Sat, 09 Oct 2021 14:49:10 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/django_11_customuserhotfix/</guid>
+    <description><![CDATA[​
+Django Foreign Key constraint failed [ 주의! 본 포스팅은 내용이 정확하지 않을 수 있습니다. 수정할 부분은 피드백해주시면 감사드리겠습니다.]
+이미지를 첨부하고 싶었으나 다시 에러를 내기가 귀찮았..ㄷ
+예전에 Django 공부하다가 FOREIGN KEY constraint failed 라는 에러가 한번 났었는데 도대체 무슨 원인인지 몰라서 한참 헤맸었다. 회사 선임님의 도움을 받아 해결했지만 어떻게 해결했는지 잘 모르던 시절.. 아 감사합니다 하고 해결되서 좋아했었다.
+그런데 저 에러가 오늘 발견되었다. Django admin 에서 유저관련 데이터를 추가,수정할 때 발생하는 에러같다.]]></description>
+</item></channel>
+</rss>

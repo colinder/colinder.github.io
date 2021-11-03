@@ -41,7 +41,7 @@ Django 공식문서에는 models.py에서 기본적인 사용자모델을 설정
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/django_09_customauthuser_abstractbaseuser\/"
-        },"genre": "posts","keywords": "Django, AbstractBaseUser","wordcount":  1057 ,
+        },"genre": "posts","keywords": "Django, AbstractBaseUser","wordcount":  1070 ,
         "url": "https:\/\/colinder.github.io\/django_09_customauthuser_abstractbaseuser\/","datePublished": "2021-10-08T10:17:50+09:00","dateModified": "2021-10-08T10:17:50+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -118,8 +118,8 @@ Django 공식문서에는 models.py에서 기본적인 사용자모델을 설정
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Django_09_CustomAuthUser_AbstractBaseUser</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw"></i>Django</a>&nbsp;<a href="/categories/abstractbaseuser/"><i class="far fa-folder fa-fw"></i>AbstractBaseUser</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-10-08">2021-10-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1057 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;5 minutes&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-10-08">2021-10-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1070 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;6 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
@@ -475,7 +475,7 @@ Django 공식문서에는 models.py에서 기본적인 사용자모델을 설정
 <h1 id="오류-모음"><strong>🔧오류 모음</strong></h1>
 <ol>
 <li>
-<p><em>Non-default argument follows default argument</em></p>
+<p><strong>Non-default argument follows default argument</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -496,7 +496,7 @@ Django 공식문서에는 models.py에서 기본적인 사용자모델을 설정
 <p>​</p>
 </li>
 <li>
-<p>Dependency on app with no migrations: accounts</p>
+<p><strong>Dependency on app with no migrations: accounts</strong></p>
 <blockquote>
 <p>custom user의 모델을 만들고(models.py 수정 후) 마이그레이션 명령어를 입력하지 않아서 발생한 오류 같다.</p>
 </blockquote>
@@ -515,8 +515,7 @@ Django 공식문서에는 models.py에서 기본적인 사용자모델을 설정
 </div><p>​</p>
 </li>
 <li>
-<p>You are trying to add a non-nullable field &lsquo;nickname&rsquo; to myuser without a default; we can&rsquo;t do that (the database needs something to populate existing rows).
-Please select a fix:</p>
+<p><strong>You are trying to add a non-nullable field &lsquo;nickname&rsquo; to myuser without a default; we can&rsquo;t do that (the database needs something to populate existing rows). Please select a fix:</strong></p>
 <pre><code>1) Provide a one-off default now (will be set on all existing rows with a null value for this column)
 2) Quit, and let me add a default in models.py
 </code></pre>
@@ -527,6 +526,10 @@ Please select a fix:</p>
 <p>코드로는 <strong>CharField(default = &lsquo;')  or  CharField(null = True)</strong> 같이 default값과 null 을 허용해서 기존의 데이터들을 null 값이나 default 값으로 설정하는 방법과 <br>migrations 폴더안의 요소를 지우는 방법이 있으나 이는 기존의 데이터를 모두 지우고 새롭게 시작하는 방법이 존재(비추..)</p>
 </blockquote>
 </blockquote>
+<p>​</p>
+</li>
+<li>
+<p><strong>django.db.migrations.exceptions.InconsistentMigrationHistory: Migration admin.0001_initial is applied before its dependency accounts.0001_initial on database &lsquo;default&rsquo;.</strong></p>
 </li>
 </ol>
 </div><div class="post-footer" id="post-footer">

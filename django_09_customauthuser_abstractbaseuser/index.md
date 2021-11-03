@@ -224,7 +224,7 @@ _잠깐! 제가 만든 코드들이 동작하는지 알기 위해서 **의도한
 
 # **🔧오류 모음**
 
-1. *Non-default argument follows default argument*
+1. **Non-default argument follows default argument**
 
    ```python
    from django.contrib.auth.models import BaseUserManager
@@ -238,7 +238,7 @@ _잠깐! 제가 만든 코드들이 동작하는지 알기 위해서 **의도한
 
    ​				
 
-2. Dependency on app with no migrations: accounts
+2. **Dependency on app with no migrations: accounts**
 
    > custom user의 모델을 만들고(models.py 수정 후) 마이그레이션 명령어를 입력하지 않아서 발생한 오류 같다.
 
@@ -250,16 +250,20 @@ _잠깐! 제가 만든 코드들이 동작하는지 알기 위해서 **의도한
 
    ​				
 
-3. You are trying to add a non-nullable field 'nickname' to myuser without a default; we can't do that (the database needs something to populate existing rows).
-   Please select a fix:
-
+3. **You are trying to add a non-nullable field 'nickname' to myuser without a default; we can't do that (the database needs something to populate existing rows). Please select a fix:**
+   
        1) Provide a one-off default now (will be set on all existing rows with a null value for this column)
        2) Quit, and let me add a default in models.py
-
+   
    > 이 오류는 DB, 모델을 수정할 경우에 자주 발생하는데, 기존에 makemigrations 를 통해 존재하는 정보들을 어떻게 수정할 지 정하지 않았기 때문.
    >
    > 코드상으로 해결하는 방법과 물리적으로 해결하는 방법이 존재.
    >
    > > 코드로는 __CharField(default = '')  or  CharField(null = True)__ 같이 default값과 null 을 허용해서 기존의 데이터들을 null 값이나 default 값으로 설정하는 방법과 <br>migrations 폴더안의 요소를 지우는 방법이 있으나 이는 기존의 데이터를 모두 지우고 새롭게 시작하는 방법이 존재(비추..)
+   
+   ​		
+   
+4. **django.db.migrations.exceptions.InconsistentMigrationHistory: Migration admin.0001_initial is applied before its dependency accounts.0001_initial on database 'default'.**
 
+   
 

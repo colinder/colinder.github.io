@@ -3,7 +3,24 @@
         <title>mariaDB - Tag - </title>
         <link>https://colinder.github.io/tags/mariadb/</link>
         <description>mariaDB - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 15 Sep 2021 10:44:21 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/mariadb/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 03 Nov 2021 11:19:43 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/mariadb/" rel="self" type="application/rss+xml" /><item>
+    <title>MariaDB 외부접속 허용</title>
+    <link>https://colinder.github.io/mariadb_share/</link>
+    <pubDate>Wed, 03 Nov 2021 11:19:43 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/mariadb_share/</guid>
+    <description><![CDATA[​
+MariaDB 외부 접속 허용  해당 MariaDB 공유는 root PC에서 진행하는 것이며 외부에서 접속할 client는 별도로 진행할 사항이 없습니다.
+또한 무조건 이 방법이 맞다!라기보다는 제가 이렇게 하니 외부 접속이 되었다. 는 경험의 기록입니다.
+ ​
+MySQL Client를 실행합니다.
+​
+실행하면 아래와 같은 초기 화면에 진입합니다.
+​
+MariaDB 설치를 진행하면서 등록한 password입력하면 아래와 같은 화면이 나옵니다.
+​
+초기 접속의 경우, DB table이 &lsquo;none&rsquo;으로 설정되어 있는데, **공유를 원하는 table로 설정을 바꿔줍니다. **]]></description>
+</item><item>
     <title>MariaDB 설치 방법</title>
     <link>https://colinder.github.io/mariadb_setting/</link>
     <pubDate>Wed, 15 Sep 2021 10:44:21 &#43;0900</pubDate>

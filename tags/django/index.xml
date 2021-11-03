@@ -3,7 +3,18 @@
         <title>Django - Tag - </title>
         <link>https://colinder.github.io/tags/django/</link>
         <description>Django - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 08 Oct 2021 10:17:53 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/django/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 09 Oct 2021 14:49:10 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/django/" rel="self" type="application/rss+xml" /><item>
+    <title>Django_11_CustomUserhotfix</title>
+    <link>https://colinder.github.io/django_11_customuserhotfix/</link>
+    <pubDate>Sat, 09 Oct 2021 14:49:10 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/django_11_customuserhotfix/</guid>
+    <description><![CDATA[​
+Django Foreign Key constraint failed [ 주의! 본 포스팅은 내용이 정확하지 않을 수 있습니다. 수정할 부분은 피드백해주시면 감사드리겠습니다.]
+이미지를 첨부하고 싶었으나 다시 에러를 내기가 귀찮았..ㄷ
+예전에 Django 공부하다가 FOREIGN KEY constraint failed 라는 에러가 한번 났었는데 도대체 무슨 원인인지 몰라서 한참 헤맸었다. 회사 선임님의 도움을 받아 해결했지만 어떻게 해결했는지 잘 모르던 시절.. 아 감사합니다 하고 해결되서 좋아했었다.
+그런데 저 에러가 오늘 발견되었다. Django admin 에서 유저관련 데이터를 추가,수정할 때 발생하는 에러같다.]]></description>
+</item><item>
     <title>Django_10_CustomAuthUser_AbstractUser</title>
     <link>https://colinder.github.io/django_10_customauthuser_abstractuser/</link>
     <pubDate>Fri, 08 Oct 2021 10:17:53 &#43;0900</pubDate>
@@ -117,17 +128,5 @@ Django_app  이번에는 생성된 프로젝트에서 1. app을 추가해 등록
  ​
 이제 이어서 개발해봅시다. ​
 1. App 생성 지난번에는 프로젝트를 생성하고 setting.py에서 기본 설정만 변경해주었습니다. 이제 app을 생성해봅시다.]]></description>
-</item><item>
-    <title>Django_01_startproject</title>
-    <link>https://colinder.github.io/django_01_startproject/</link>
-    <pubDate>Thu, 22 Apr 2021 23:13:25 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/django_01_startproject/</guid>
-    <description><![CDATA[Django 개발환경준비   편리함을 추구하기 위해 AWS Cloud9을 사용하여 진행
-  https://ide.cs50.io/ 주소로 접속하면 진행이 가능하며, 진행을 위해선 Git 아이디가 있어야 한다.
-Git? : 버전 관리 시스템이며 Git은 소프트웨어를 개발하는 기업의 핵심 자산인 소스코드를 효과적으로 관리할 수 있게 해주는 무료, 공개소프트웨어. git에 대한 내용은 따로 정리해보도록 한다.
-  로그인까지 마치면 이제 Django 개발 준비 끝.
-​
-   👏 21.04.18 기준 django : 3.2 V 으로 다시 정리 합니다.]]></description>
 </item></channel>
 </rss>
