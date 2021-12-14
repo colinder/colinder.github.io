@@ -10,7 +10,7 @@
     <author>Author</author>
     <guid>https://colinder.github.io/mariadb_share/</guid>
     <description><![CDATA[​
-MariaDB 외부 접속 허용  해당 MariaDB 공유는 root PC에서 진행하는 것이며 외부에서 접속할 client는 별도로 진행할 사항이 없습니다.
+MariaDB 외부 접속 허용  해당 MariaDB 공유는 root PC에서 진행하는 것이며, 외부에서 접속할 client는 별도로 설정할 건 없습니다.
 또한 무조건 이 방법이 맞다!라기보다는 제가 이렇게 하니 외부 접속이 되었다. 는 경험의 기록입니다.
  ​
 MySQL Client를 실행합니다.
