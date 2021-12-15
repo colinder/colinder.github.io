@@ -6,10 +6,18 @@
 # Django <span style="color: #4f8ae8">AbstractBaseUser</span>
 
 > django는 기본적으로 username 과 password를 가지고 로그인합니다. 하지만 요즘에는 대부분의 웹사이트들이 email 과 password로 로그인(사용자를 인식 및 인증)을 합니다. 
->
-> 제가 진행할 것은 django의 사용자 인증 테이블을 <span style="color: #4f8ae8">AbstractBaseUser</span>을 사용해 커스텀하고, createsuperuser 명령어 입력시, 관리자 계정이 커스텀한 테이블에 생성되게 하는 것입니다. 
 
-​		
+​	
+
+제가 진행할 것은 django의 <span style="color: #4f8ae8">AbstractBaseUser</span>을 사용해 테이블을 만들고 사용자 인증하기 입니다.
+
+- 조건
+
+  1. email, password, nickname 및 필수 요소(is_active, is_admin)로만 인증 테이블 구성.
+
+  2. createsuperuser 명령어 입력시, 관리자 계정이 커스텀한 테이블에 생성. 
+
+     ​		
 
 Django 공식문서에는 models.py에서 기본적인 **사용자**모델을 설정하고 이를 활용해 admin.py에서 **관리자**모델을 만드는 예제가 있어 이를 따라하며 약간의 수정을 더해 진행해보려 합니다.
 
@@ -88,6 +96,8 @@ class MyUser(AbstractBaseUser):
         return self.is_admin
 ```
 
+​		
+
 **설명이 있는** 소스코드(위와 동일한 코드이나 자세한 설명이 있습니다.)
 
 ```python
@@ -143,7 +153,9 @@ class MyUser(AbstractBaseUser):
     # 반드시 지정해주어야 합니다. (안하면 오류를 뱉습니다.)
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
-	
+	# 테이블을 생성하면 last_login 컬럼도 생성되는데 models.~~을 설정해주지 않으면 NULL값으로 입력됩니다.
+    
+    
     # 위에서 생성한 일반 유저 및 슈퍼유저의 생성 방식을 정의할 나만의 사용자 매니저 모델을 가져옵니다.
     objects = MyUserManager()
 	
@@ -265,5 +277,13 @@ _잠깐! 제가 만든 코드들이 동작하는지 알기 위해서 **의도한
    
 4. **django.db.migrations.exceptions.InconsistentMigrationHistory: Migration admin.0001_initial is applied before its dependency accounts.0001_initial on database 'default'.**
 
+   > ??????
    
+   ​	
+   
+   ​	
+   
+   ​	
+   
+   ​	
 

@@ -22,11 +22,13 @@ id, password, last_login, is_superuser, username, first_name, last_name, email, 
     <guid>https://colinder.github.io/django_09_customauthuser_abstractbaseuser/</guid>
     <description><![CDATA[​
 Django AbstractBaseUser  django는 기본적으로 username 과 password를 가지고 로그인합니다. 하지만 요즘에는 대부분의 웹사이트들이 email 과 password로 로그인(사용자를 인식 및 인증)을 합니다.
-제가 진행할 것은 django의 사용자 인증 테이블을 AbstractBaseUser을 사용해 커스텀하고, createsuperuser 명령어 입력시, 관리자 계정이 커스텀한 테이블에 생성되게 하는 것입니다.
  ​
-Django 공식문서에는 models.py에서 기본적인 사용자모델을 설정하고 이를 활용해 admin.py에서 관리자모델을 만드는 예제가 있어 이를 따라하며 약간의 수정을 더해 진행해보려 합니다.
+제가 진행할 것은 django의 AbstractBaseUser을 사용해 테이블을 만들고 사용자 인증하기 입니다.
+  조건
+  email, password, nickname 및 필수 요소(is_active, is_admin)로만 인증 테이블 구성.
+  createsuperuser 명령어 입력시, 관리자 계정이 커스텀한 테이블에 생성.
 ​
-먼저 AbstractBaseUser를 상속받아 커스텀을 진행  django의 예제에는 AbstractBaseUser라는 클래스를 상속받은 모델을 제작하는데, Abstract(추상적인)Base(기초)User(사용자)의 틀을 가져와 이를 활용해 내 입맛대로 커스텀 하는 과정.]]></description>
+    Django 공식문서에는 models.py에서 기본적인 사용자모델을 설정하고 이를 활용해 admin.]]></description>
 </item><item>
     <title>Django_08_AbstractBaseUser VS AbstractUser</title>
     <link>https://colinder.github.io/django_08_abstractbaseuservsabstractuser/</link>

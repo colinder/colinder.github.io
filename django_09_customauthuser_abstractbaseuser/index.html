@@ -8,11 +8,13 @@
         <title>Django_09_CustomAuthUser_AbstractBaseUser - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="Django_09_CustomAuthUser_AbstractBaseUser" />
 <meta property="og:description" content="​
 Django AbstractBaseUser  django는 기본적으로 username 과 password를 가지고 로그인합니다. 하지만 요즘에는 대부분의 웹사이트들이 email 과 password로 로그인(사용자를 인식 및 인증)을 합니다.
-제가 진행할 것은 django의 사용자 인증 테이블을 AbstractBaseUser을 사용해 커스텀하고, createsuperuser 명령어 입력시, 관리자 계정이 커스텀한 테이블에 생성되게 하는 것입니다.
  ​
-Django 공식문서에는 models.py에서 기본적인 사용자모델을 설정하고 이를 활용해 admin.py에서 관리자모델을 만드는 예제가 있어 이를 따라하며 약간의 수정을 더해 진행해보려 합니다.
+제가 진행할 것은 django의 AbstractBaseUser을 사용해 테이블을 만들고 사용자 인증하기 입니다.
+  조건
+  email, password, nickname 및 필수 요소(is_active, is_admin)로만 인증 테이블 구성.
+  createsuperuser 명령어 입력시, 관리자 계정이 커스텀한 테이블에 생성.
 ​
-먼저 AbstractBaseUser를 상속받아 커스텀을 진행  django의 예제에는 AbstractBaseUser라는 클래스를 상속받은 모델을 제작하는데, Abstract(추상적인)Base(기초)User(사용자)의 틀을 가져와 이를 활용해 내 입맛대로 커스텀 하는 과정." />
+    Django 공식문서에는 models.py에서 기본적인 사용자모델을 설정하고 이를 활용해 admin." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://colinder.github.io/django_09_customauthuser_abstractbaseuser/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-10-08T10:17:50&#43;09:00" />
@@ -24,11 +26,13 @@ Django 공식문서에는 models.py에서 기본적인 사용자모델을 설정
 <meta name="twitter:title" content="Django_09_CustomAuthUser_AbstractBaseUser"/>
 <meta name="twitter:description" content="​
 Django AbstractBaseUser  django는 기본적으로 username 과 password를 가지고 로그인합니다. 하지만 요즘에는 대부분의 웹사이트들이 email 과 password로 로그인(사용자를 인식 및 인증)을 합니다.
-제가 진행할 것은 django의 사용자 인증 테이블을 AbstractBaseUser을 사용해 커스텀하고, createsuperuser 명령어 입력시, 관리자 계정이 커스텀한 테이블에 생성되게 하는 것입니다.
  ​
-Django 공식문서에는 models.py에서 기본적인 사용자모델을 설정하고 이를 활용해 admin.py에서 관리자모델을 만드는 예제가 있어 이를 따라하며 약간의 수정을 더해 진행해보려 합니다.
+제가 진행할 것은 django의 AbstractBaseUser을 사용해 테이블을 만들고 사용자 인증하기 입니다.
+  조건
+  email, password, nickname 및 필수 요소(is_active, is_admin)로만 인증 테이블 구성.
+  createsuperuser 명령어 입력시, 관리자 계정이 커스텀한 테이블에 생성.
 ​
-먼저 AbstractBaseUser를 상속받아 커스텀을 진행  django의 예제에는 AbstractBaseUser라는 클래스를 상속받은 모델을 제작하는데, Abstract(추상적인)Base(기초)User(사용자)의 틀을 가져와 이를 활용해 내 입맛대로 커스텀 하는 과정."/>
+    Django 공식문서에는 models.py에서 기본적인 사용자모델을 설정하고 이를 활용해 admin."/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -41,7 +45,7 @@ Django 공식문서에는 models.py에서 기본적인 사용자모델을 설정
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/django_09_customauthuser_abstractbaseuser\/"
-        },"genre": "posts","keywords": "Django, AbstractBaseUser","wordcount":  1070 ,
+        },"genre": "posts","keywords": "Django, AbstractBaseUser","wordcount":  1100 ,
         "url": "https:\/\/colinder.github.io\/django_09_customauthuser_abstractbaseuser\/","datePublished": "2021-10-08T10:17:50+09:00","dateModified": "2021-10-08T10:17:50+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -118,7 +122,7 @@ Django 공식문서에는 models.py에서 기본적인 사용자모델을 설정
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Django_09_CustomAuthUser_AbstractBaseUser</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw"></i>Django</a>&nbsp;<a href="/categories/abstractbaseuser/"><i class="far fa-folder fa-fw"></i>AbstractBaseUser</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-10-08">2021-10-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1070 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-10-08">2021-10-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1100 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;6 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -143,9 +147,23 @@ Django 공식문서에는 models.py에서 기본적인 사용자모델을 설정
 <h1 id="django-span-stylecolor-4f8ae8abstractbaseuserspan">Django <span style="color: #4f8ae8">AbstractBaseUser</span></h1>
 <blockquote>
 <p>django는 기본적으로 username 과 password를 가지고 로그인합니다. 하지만 요즘에는 대부분의 웹사이트들이 email 과 password로 로그인(사용자를 인식 및 인증)을 합니다.</p>
-<p>제가 진행할 것은 django의 사용자 인증 테이블을 <span style="color: #4f8ae8">AbstractBaseUser</span>을 사용해 커스텀하고, createsuperuser 명령어 입력시, 관리자 계정이 커스텀한 테이블에 생성되게 하는 것입니다.</p>
 </blockquote>
 <p>​</p>
+<p>제가 진행할 것은 django의 <span style="color: #4f8ae8">AbstractBaseUser</span>을 사용해 테이블을 만들고 사용자 인증하기 입니다.</p>
+<ul>
+<li>
+<p>조건</p>
+<ol>
+<li>
+<p>email, password, nickname 및 필수 요소(is_active, is_admin)로만 인증 테이블 구성.</p>
+</li>
+<li>
+<p>createsuperuser 명령어 입력시, 관리자 계정이 커스텀한 테이블에 생성.</p>
+<p>​</p>
+</li>
+</ol>
+</li>
+</ul>
 <p>Django 공식문서에는 models.py에서 기본적인 <strong>사용자</strong>모델을 설정하고 이를 활용해 admin.py에서 <strong>관리자</strong>모델을 만드는 예제가 있어 이를 따라하며 약간의 수정을 더해 진행해보려 합니다.</p>
 <p>​</p>
 <h2 id="먼저-abstractbaseuser를-상속받아-커스텀을-진행">먼저 AbstractBaseUser를 상속받아 커스텀을 진행</h2>
@@ -270,7 +288,8 @@ Django 공식문서에는 models.py에서 기본적인 사용자모델을 설정
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_admin</span>
 </code></pre></td></tr></table>
 </div>
-</div><p><strong>설명이 있는</strong> 소스코드(위와 동일한 코드이나 자세한 설명이 있습니다.)</p>
+</div><p>​</p>
+<p><strong>설명이 있는</strong> 소스코드(위와 동일한 코드이나 자세한 설명이 있습니다.)</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -354,6 +373,8 @@ Django 공식문서에는 models.py에서 기본적인 사용자모델을 설정
 </span><span class="lnt">79
 </span><span class="lnt">80
 </span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># accounts/models.py</span>
@@ -408,7 +429,9 @@ Django 공식문서에는 models.py에서 기본적인 사용자모델을 설정
     <span class="c1"># 반드시 지정해주어야 합니다. (안하면 오류를 뱉습니다.)</span>
     <span class="n">is_active</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">BooleanField</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
     <span class="n">is_admin</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">BooleanField</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
-	
+	<span class="c1"># 테이블을 생성하면 last_login 컬럼도 생성되는데 models.~~을 설정해주지 않으면 NULL값으로 입력됩니다.</span>
+    
+    
     <span class="c1"># 위에서 생성한 일반 유저 및 슈퍼유저의 생성 방식을 정의할 나만의 사용자 매니저 모델을 가져옵니다.</span>
     <span class="n">objects</span> <span class="o">=</span> <span class="n">MyUserManager</span><span class="p">()</span>
 	
@@ -530,6 +553,13 @@ Django 공식문서에는 models.py에서 기본적인 사용자모델을 설정
 </li>
 <li>
 <p><strong>django.db.migrations.exceptions.InconsistentMigrationHistory: Migration admin.0001_initial is applied before its dependency accounts.0001_initial on database &lsquo;default&rsquo;.</strong></p>
+<blockquote>
+<p>??????</p>
+</blockquote>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
 </li>
 </ol>
 </div><div class="post-footer" id="post-footer">
