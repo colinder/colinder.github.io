@@ -8,9 +8,9 @@
         <title>Django_11_CustomUserhotfix - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="Django_11_CustomUserhotfix" />
 <meta property="og:description" content="​
 Django Foreign Key constraint failed [ 주의! 본 포스팅은 내용이 정확하지 않을 수 있습니다. 수정할 부분은 피드백해주시면 감사드리겠습니다.]
-이미지를 첨부하고 싶었으나 다시 에러를 내기가 귀찮았..ㄷ
-예전에 Django 공부하다가 FOREIGN KEY constraint failed 라는 에러가 한번 났었는데 도대체 무슨 원인인지 몰라서 한참 헤맸었다. 회사 선임님의 도움을 받아 해결했지만 어떻게 해결했는지 잘 모르던 시절.. 아 감사합니다 하고 해결되서 좋아했었다.
-그런데 저 에러가 오늘 발견되었다. Django admin 에서 유저관련 데이터를 추가,수정할 때 발생하는 에러같다." />
+문제는 Custom User Model 을 생성하면서 생긴 user_user 테이블과 기존에 python manage.py createsuperuser 명령어로 어드민 계정이 저장된 auth_user 테이블의 상속문제? 때문에 에러가 발생.
+Custom User Model 을 사용할 때 settings.py 에 AUTH_USER_MODEL = &#39;내가만든app이름.User모델&#39; 을 추가하게 되는데 기존의 auth_user 테이블 대신 새로운 user_user 모델을 사용하겠다는 뜻.
+그런데 나는 기존에 크롤러 데이터를 확인하기위해 auth_user 에 이미 admin 계정이 하나 생성되어있었던 상황." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://colinder.github.io/django_11_customuserhotfix/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-10-09T14:49:10&#43;09:00" />
@@ -22,9 +22,9 @@ Django Foreign Key constraint failed [ 주의! 본 포스팅은 내용이 정확
 <meta name="twitter:title" content="Django_11_CustomUserhotfix"/>
 <meta name="twitter:description" content="​
 Django Foreign Key constraint failed [ 주의! 본 포스팅은 내용이 정확하지 않을 수 있습니다. 수정할 부분은 피드백해주시면 감사드리겠습니다.]
-이미지를 첨부하고 싶었으나 다시 에러를 내기가 귀찮았..ㄷ
-예전에 Django 공부하다가 FOREIGN KEY constraint failed 라는 에러가 한번 났었는데 도대체 무슨 원인인지 몰라서 한참 헤맸었다. 회사 선임님의 도움을 받아 해결했지만 어떻게 해결했는지 잘 모르던 시절.. 아 감사합니다 하고 해결되서 좋아했었다.
-그런데 저 에러가 오늘 발견되었다. Django admin 에서 유저관련 데이터를 추가,수정할 때 발생하는 에러같다."/>
+문제는 Custom User Model 을 생성하면서 생긴 user_user 테이블과 기존에 python manage.py createsuperuser 명령어로 어드민 계정이 저장된 auth_user 테이블의 상속문제? 때문에 에러가 발생.
+Custom User Model 을 사용할 때 settings.py 에 AUTH_USER_MODEL = &#39;내가만든app이름.User모델&#39; 을 추가하게 되는데 기존의 auth_user 테이블 대신 새로운 user_user 모델을 사용하겠다는 뜻.
+그런데 나는 기존에 크롤러 데이터를 확인하기위해 auth_user 에 이미 admin 계정이 하나 생성되어있었던 상황."/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -37,7 +37,7 @@ Django Foreign Key constraint failed [ 주의! 본 포스팅은 내용이 정확
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/django_11_customuserhotfix\/"
-        },"genre": "posts","keywords": "Django, Foreign Key constraint failed","wordcount":  251 ,
+        },"genre": "posts","keywords": "Django, Foreign Key constraint failed","wordcount":  157 ,
         "url": "https:\/\/colinder.github.io\/django_11_customuserhotfix\/","datePublished": "2021-10-09T14:49:10+09:00","dateModified": "2021-10-09T14:49:10+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -114,8 +114,8 @@ Django Foreign Key constraint failed [ 주의! 본 포스팅은 내용이 정확
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Django_11_CustomUserhotfix</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-10-09">2021-10-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;251 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-10-09">2021-10-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;157 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;One minute&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
@@ -137,12 +137,9 @@ Django Foreign Key constraint failed [ 주의! 본 포스팅은 내용이 정확
             </div><div class="content" id="content"><p>​</p>
 <h1 id="django-foreign-key-constraint-failed">Django Foreign Key constraint failed</h1>
 <p>[ 주의! 본 포스팅은 내용이 정확하지 않을 수 있습니다. 수정할 부분은 피드백해주시면 감사드리겠습니다.]</p>
-<p>이미지를 첨부하고 싶었으나 다시 에러를 내기가 귀찮았..ㄷ</p>
-<p>예전에 Django 공부하다가 <code>FOREIGN KEY constraint failed</code> 라는 에러가 한번 났었는데 도대체 무슨 원인인지 몰라서 한참 헤맸었다. 회사 선임님의 도움을 받아 해결했지만 어떻게 해결했는지 잘 모르던 시절.. 아 감사합니다 하고 해결되서 좋아했었다.</p>
-<p>그런데 저 에러가 오늘 발견되었다. Django admin 에서 유저관련 데이터를 추가,수정할 때 발생하는 에러같다. 이전에 봤던 에러인데 어떻게 해결한지 기억이 나질않으니 답답했다… 원인을 찾기 어려워했던 이유중 하나가 에러명은 Foreign Key 관련인거 같은데 모델 컬럼에 Foreign Key 가 한번도 사용되지않았다.</p>
-<p>뭐가 문제지..?하면서 DB 도 지워보고 구조도바꿔보고.. 별에 별짓을 다 해본결과 30-40분정도 걸려서 해결했다.</p>
-<p>일단 문제는 Custom User Model 을 생성하면서 생긴 user_user 테이블과 기존에 <code>python manage.py createsuperuser</code> 명령어로 어드민 계정이 저장된 auth_user 테이블의 상속문제? 때문에 에러가 났던것이다.</p>
-<p>Custom User Model 을 사용할 때 settings.py 에 <code>AUTH_USER_MODEL = 'user.User'</code> 을 추가하게 되는데 기존의 auth_user 테이블 대신 새로운 user_user 모델을 사용하겠다는뜻이..겠지? ( 아..아닐수도있어요 ) 그런데 나는 기존에 크롤러 데이터를 확인하기위해 auth_user 에 이미 admin 계정이 하나 생성되어있었던 상황.. 거기에 user_user 가 하나 더 생겨버렸으니 유저 테이블을 혼동하기 시작한것이다. 그래서 django admin 에서 추가,수정이 안됐던것같다.</p>
+<p>문제는 Custom User Model 을 생성하면서 생긴 user_user 테이블과 기존에 <code>python manage.py createsuperuser</code> 명령어로 어드민 계정이 저장된 auth_user 테이블의 상속문제? 때문에 에러가 발생.</p>
+<p>Custom User Model 을 사용할 때 settings.py 에 <code>AUTH_USER_MODEL = '내가만든app이름.User모델'</code> 을 추가하게 되는데 기존의 auth_user 테이블 대신 새로운 user_user 모델을 사용하겠다는 뜻.</p>
+<p>그런데 나는 기존에 크롤러 데이터를 확인하기위해 auth_user 에 이미 admin 계정이 하나 생성되어있었던 상황. 거기에 user_user 가 하나 더 생겨버렸으니 유저 테이블을 혼동하기 시작한것이다. 그래서 django admin 에서 추가,수정이 안됐던것같다.</p>
 <p>​</p>
 <h4 id="해결법">해결법</h4>
 <p>migrate 할때 Custom User Model 구현을 끝내고 하면 편하다.</p>
