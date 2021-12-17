@@ -36,17 +36,6 @@ MariaDB 설치를 진행하면서 등록한 password입력하면 아래와 같�
 ​
 초기 접속의 경우, DB table이 &lsquo;none&rsquo;으로 설정되어 있는데, **공유를 원하는 table로 설정을 바꿔줍니다. **]]></description>
 </item><item>
-    <title>Django_11_CustomUserhotfix</title>
-    <link>https://colinder.github.io/django_11_customuserhotfix/</link>
-    <pubDate>Sat, 09 Oct 2021 14:49:10 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/django_11_customuserhotfix/</guid>
-    <description><![CDATA[​
-Django Foreign Key constraint failed [ 주의! 본 포스팅은 내용이 정확하지 않을 수 있습니다. 수정할 부분은 피드백해주시면 감사드리겠습니다.]
-문제는 Custom User Model 을 생성하면서 생긴 user_user 테이블과 기존에 python manage.py createsuperuser 명령어로 어드민 계정이 저장된 auth_user 테이블의 상속문제? 때문에 에러가 발생.
-Custom User Model 을 사용할 때 settings.py 에 AUTH_USER_MODEL = '내가만든app이름.User모델' 을 추가하게 되는데 기존의 auth_user 테이블 대신 새로운 user_user 모델을 사용하겠다는 뜻.
-그런데 나는 기존에 크롤러 데이터를 확인하기위해 auth_user 에 이미 admin 계정이 하나 생성되어있었던 상황.]]></description>
-</item><item>
     <title>Django_10_CustomAuthUser_AbstractUser</title>
     <link>https://colinder.github.io/django_10_customauthuser_abstractuser/</link>
     <pubDate>Fri, 08 Oct 2021 10:17:53 &#43;0900</pubDate>
@@ -140,5 +129,20 @@ python manage.py createsuperuser 후.. default로 생기는 DB를 기준으로 �
 1 2  ## setting.py AUTH_USER_MODEL = &#39;auth.User&#39; # default 설정.   ​
 이후 terminal에서
 1 2 3 4 5 6 7  $ python manage.py shell_plus	# 모델에 접근하기 위해 shell_plus 실행 &gt; Post = get_user_model()	# 생성된 모델의 user table 불러오기 &gt; post = Post.objects.all()	# user table의 모든 값 가져오기 &gt; for i in post:	# for문으로 user table값 순환 &gt; print(i)	# user table 값 출력   하면 연결된 모델의 값을 확인할 수 있다.]]></description>
+</item><item>
+    <title>정적(Static) 링크 Vs 동적(Dynamic) 링크</title>
+    <link>https://colinder.github.io/staticvsdynamic_link/</link>
+    <pubDate>Mon, 06 Sep 2021 10:10:24 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/staticvsdynamic_link/</guid>
+    <description><![CDATA[​
+정적(Static) 링크 Vs 동적(Dynamic) 링크 ​
+정적(Static) 링크 란?  link 단계에서 라이브러리(*.lib 파일)을 실행 바이너리(컴퓨터가 이해할 수 있는 문법으로 만들어진 결과물)에 포함한다는 의미
+ *.lib 파일이란? &gt; Library 파일, 개발 코드에서 반복되는 기능들을 모아둔 파일
+  ex) *.exe 파일
+  라이브러리 관련 수정사항이 생기면 파일 전체를 다시 컴파일하여 재배포해야 한다.
+​
+​
+  동적(Dynamic) 링크 란?  특정 기능을 사용하고자 하는 실행 바이너리에서 필요시 사용할 수 있도록 최소한의 정보만 포함하여 링크하거나, 독립적으로 dll을 로드/사용/해제 시킨다는 의미.]]></description>
 </item></channel>
 </rss>

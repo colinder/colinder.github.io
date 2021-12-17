@@ -128,15 +128,6 @@ MariaDB 설치를 진행하면서 등록한 password입력하면 아래와 같�
         <a href="/mariadb_share/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/mariadb/">mariaDB</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/django_11_customuserhotfix/">Django_11_CustomUserhotfix</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-10-09">2021-10-09</time></span></div><div class="content">​
-Django Foreign Key constraint failed [ 주의! 본 포스팅은 내용이 정확하지 않을 수 있습니다. 수정할 부분은 피드백해주시면 감사드리겠습니다.]
-문제는 Custom User Model 을 생성하면서 생긴 user_user 테이블과 기존에 python manage.py createsuperuser 명령어로 어드민 계정이 저장된 auth_user 테이블의 상속문제? 때문에 에러가 발생.
-Custom User Model 을 사용할 때 settings.py 에 AUTH_USER_MODEL = '내가만든app이름.User모델' 을 추가하게 되는데 기존의 auth_user 테이블 대신 새로운 user_user 모델을 사용하겠다는 뜻.
-그런데 나는 기존에 크롤러 데이터를 확인하기위해 auth_user 에 이미 admin 계정이 하나 생성되어있었던 상황.</div><div class="post-footer">
-        <a href="/django_11_customuserhotfix/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/django/">Django</a>,&nbsp;<a href="/tags/foreign-key-constraint-failed/">Foreign Key constraint failed</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/django_10_customauthuser_abstractuser/">Django_10_CustomAuthUser_AbstractUser</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-10-08">2021-10-08</time></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw"></i>Django</a>&nbsp;<a href="/categories/abstractuser/"><i class="far fa-folder fa-fw"></i>AbstractUser</a></span></div><div class="content">​
 Django AbstractUser  이전에 AbstractBaseUser를 사용한 커스텀 사용자 인증 테이블을 구성해보았습니다. 해당 내용에 이어서 AbstractUser로 커스텀 사용자 인증 테이블을 구성해보고 createsuperuser 명령어 입력시, 관리자 계정이 커스텀한 테이블에 생성되게 해보겠습니다.
@@ -145,6 +136,19 @@ AbstractUser을 상속받아 커스텀을 진행  우선 AbstractUser는 Django�
 id, password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined 총 11개의 column이 존재하며 이외에 column을 추가 하고 싶을 때 코드를 추가로 작성합니다.</div><div class="post-footer">
         <a href="/django_10_customauthuser_abstractuser/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/django/">Django</a>,&nbsp;<a href="/tags/abstractuser/">AbstractUser</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/django_09_customauthuser_abstractbaseuser/">Django_09_CustomAuthUser_AbstractBaseUser</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-10-08">2021-10-08</time></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw"></i>Django</a>&nbsp;<a href="/categories/abstractbaseuser/"><i class="far fa-folder fa-fw"></i>AbstractBaseUser</a></span></div><div class="content">​
+Django AbstractBaseUser  django는 기본적으로 username 과 password를 가지고 로그인합니다. 하지만 요즘에는 대부분의 웹사이트들이 email 과 password로 로그인(사용자를 인식 및 인증)을 합니다.
+ ​
+제가 진행할 것은 django의 AbstractBaseUser을 사용해 테이블을 만들고 사용자 인증하기 입니다.
+  조건
+  email, password, nickname 및 필수 요소(is_active, is_admin)로만 인증 테이블 구성.
+  createsuperuser 명령어 입력시, 관리자 계정이 커스텀한 테이블에 생성.
+​
+    Django 공식문서에는 models.py에서 기본적인 사용자모델을 설정하고 이를 활용해 admin.</div><div class="post-footer">
+        <a href="/django_09_customauthuser_abstractbaseuser/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/django/">Django</a>,&nbsp;<a href="/tags/abstractbaseuser/">AbstractBaseUser</a></div></div>
 </article><ul class="pagination"><li class="page-item active">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -161,7 +165,7 @@ id, password, last_login, is_superuser, username, first_name, last_name, email, 
                     <span class="page-link" aria-hidden="true">&hellip;</span>
                 </li><li class="page-item ">
                     <span class="page-link">
-                        <a href="/page/28/">28</a>
+                        <a href="/page/27/">27</a>
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">
