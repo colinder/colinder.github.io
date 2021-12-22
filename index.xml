@@ -3,9 +3,20 @@
         <title></title>
         <link>https://colinder.github.io/</link>
         <description>Hello New World</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 15 Dec 2021 14:29:31 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 22 Dec 2021 12:16:29 &#43;0900</lastBuildDate>
             <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Django_11_simple_JWT</title>
+    <link>https://colinder.github.io/django_11_simple_jwt/</link>
+    <pubDate>Wed, 22 Dec 2021 12:16:29 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/django_11_simple_jwt/</guid>
+    <description><![CDATA[​
+Django JWT(Json Web Token)  Django의 대표적인 jwt 패키지는 djangorestframework-jwt, djangorestframework-simplejwt가 있지만 전자는 업데이트가 더이상 진행되지 않아서 후자를 사용하는 것을 추천합니다.
+ ​
+djangorestframework-simplejwt  간단한 사용법 정리
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25  def Usage(request): ## SIMPLEJWT METHOD TEST # print(&#34;================================&#34;) # a = JWTAuthentication() # b = a.]]></description>
+</item><item>
     <title>Numpy &amp; Pandas</title>
     <link>https://colinder.github.io/numpy-pandas/</link>
     <pubDate>Wed, 15 Dec 2021 14:29:31 &#43;0900</pubDate>
@@ -129,20 +140,5 @@ python manage.py createsuperuser 후.. default로 생기는 DB를 기준으로 �
 1 2  ## setting.py AUTH_USER_MODEL = &#39;auth.User&#39; # default 설정.   ​
 이후 terminal에서
 1 2 3 4 5 6 7  $ python manage.py shell_plus	# 모델에 접근하기 위해 shell_plus 실행 &gt; Post = get_user_model()	# 생성된 모델의 user table 불러오기 &gt; post = Post.objects.all()	# user table의 모든 값 가져오기 &gt; for i in post:	# for문으로 user table값 순환 &gt; print(i)	# user table 값 출력   하면 연결된 모델의 값을 확인할 수 있다.]]></description>
-</item><item>
-    <title>정적(Static) 링크 Vs 동적(Dynamic) 링크</title>
-    <link>https://colinder.github.io/staticvsdynamic_link/</link>
-    <pubDate>Mon, 06 Sep 2021 10:10:24 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/staticvsdynamic_link/</guid>
-    <description><![CDATA[​
-정적(Static) 링크 Vs 동적(Dynamic) 링크 ​
-정적(Static) 링크 란?  link 단계에서 라이브러리(*.lib 파일)을 실행 바이너리(컴퓨터가 이해할 수 있는 문법으로 만들어진 결과물)에 포함한다는 의미
- *.lib 파일이란? &gt; Library 파일, 개발 코드에서 반복되는 기능들을 모아둔 파일
-  ex) *.exe 파일
-  라이브러리 관련 수정사항이 생기면 파일 전체를 다시 컴파일하여 재배포해야 한다.
-​
-​
-  동적(Dynamic) 링크 란?  특정 기능을 사용하고자 하는 실행 바이너리에서 필요시 사용할 수 있도록 최소한의 정보만 포함하여 링크하거나, 독립적으로 dll을 로드/사용/해제 시킨다는 의미.]]></description>
 </item></channel>
 </rss>
