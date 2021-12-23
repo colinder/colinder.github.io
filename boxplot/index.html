@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>boxplot 해석 방법 - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="boxplot 해석 방법" />
+<meta property="og:description" content="​
+What is Boxplot?  데이터 분석을 진행하면서 다른 분들의 분석 레퍼런스를 보며 공부하다보니 많은 분들이 boxplot을 사용하는 것을 보았습니다. 다만, 저는 그 박스가 어떤 경우에 사용하는 것인지? 어떤 의미로 그려지는 것인지? 어떻게 해석하면 좋은지? 개념이 약했기 때문에 내용을 정리해보겠습니다.
+ ​
+Box Plot  최댓값, 최솟값, 중앙값, 사분편차를 사용하여 자료의 측정값들이 어떤 모양으로 분포되어 있으며, 극단값들은 어떠한지 등을 쉽게 알 수 있도록 하는 그림이다. 자료들이 비대칭으로 분포되어 있을 경우에는 상자그림을 그려 극단값의 개수, 비대칭 여부 등을 파악할 수 있으므로 측정값들의 중심위치와 산포도의 척도로 사용할 수 있다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://colinder.github.io/boxplot/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-12-23T13:53:00&#43;09:00" />
+<meta property="article:modified_time" content="2021-12-23T13:53:00&#43;09:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
+
+<meta name="twitter:title" content="boxplot 해석 방법"/>
+<meta name="twitter:description" content="​
+What is Boxplot?  데이터 분석을 진행하면서 다른 분들의 분석 레퍼런스를 보며 공부하다보니 많은 분들이 boxplot을 사용하는 것을 보았습니다. 다만, 저는 그 박스가 어떤 경우에 사용하는 것인지? 어떤 의미로 그려지는 것인지? 어떻게 해석하면 좋은지? 개념이 약했기 때문에 내용을 정리해보겠습니다.
+ ​
+Box Plot  최댓값, 최솟값, 중앙값, 사분편차를 사용하여 자료의 측정값들이 어떤 모양으로 분포되어 있으며, 극단값들은 어떠한지 등을 쉽게 알 수 있도록 하는 그림이다. 자료들이 비대칭으로 분포되어 있을 경우에는 상자그림을 그려 극단값의 개수, 비대칭 여부 등을 파악할 수 있으므로 측정값들의 중심위치와 산포도의 척도로 사용할 수 있다."/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/boxplot/" /><link rel="prev" href="https://colinder.github.io/django_11_simple_jwt/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "boxplot 해석 방법",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/colinder.github.io\/boxplot\/"
+        },"genre": "posts","keywords": "analysis, boxplot","wordcount":  282 ,
+        "url": "https:\/\/colinder.github.io\/boxplot\/","datePublished": "2021-12-23T13:53:00+09:00","dateModified": "2021-12-23T13:53:00+09:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "colinder"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="">Hello New World</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="">Hello New World</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">boxplot 해석 방법</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/analysis/"><i class="far fa-folder fa-fw"></i>analysis</a>&nbsp;<a href="/categories/boxplot/"><i class="far fa-folder fa-fw"></i>boxplot</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-12-23">2021-12-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;282 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#box-plot">Box Plot</a></li>
+    <li><a href="#어떤-경우에-box-plot을-사용할까">어떤 경우에 Box Plot을 사용할까?</a></li>
+    <li><a href="#box-plot은-어떻게-해석해야-하는가">Box Plot은 어떻게 해석해야 하는가?</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#사분위수">사분위수?</a></li>
+            <li><a href="#중앙값">중앙값?</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>​</p>
+<h1 id="what-is-boxplot">What is Boxplot?</h1>
+<blockquote>
+<p>데이터 분석을 진행하면서 다른 분들의 분석 레퍼런스를 보며 공부하다보니 많은 분들이 boxplot을 사용하는 것을 보았습니다. 다만, 저는 그 박스가 어떤 경우에 사용하는 것인지? 어떤 의미로 그려지는 것인지? 어떻게 해석하면 좋은지? 개념이 약했기 때문에 내용을 정리해보겠습니다.</p>
+</blockquote>
+<p>​</p>
+<h2 id="box-plot">Box Plot</h2>
+<blockquote>
+<p>최댓값, 최솟값, <a href="https://terms.naver.com/entry.nhn?docId=1924474&amp;ref=y" target="_blank" rel="noopener noreffer">중앙값</a>, <a href="https://terms.naver.com/entry.nhn?docId=1924152&amp;ref=y" target="_blank" rel="noopener noreffer">사분편차</a>를 사용하여 자료의 측정값들이 어떤 모양으로 분포되어 있으며, 극단값들은 어떠한지 등을 쉽게 알 수 있도록 하는 그림이다. 자료들이 비대칭으로 분포되어 있을 경우에는 상자그림을 그려 극단값의 개수, 비대칭 여부 등을 파악할 수 있으므로 측정값들의 중심위치와 산포도의 척도로 사용할 수 있다.</p>
+<p>출처 : <strong>[네이버 지식백과]</strong> <a href="https://terms.naver.com/entry.naver?docId=1924178" target="_blank" rel="noopener noreffer">상자그림</a> [box plot, box and whisker plot] (교육평가용어사전, 2004. 5. 31., 한국교육평가학회)</p>
+</blockquote>
+<p><span style="font-size: 1.3em">👉 <b><i>박스로 표현한 데이터에 4분위 값들의 분포와 특이값을 표현한 그림</i></b></span></p>
+<p>​</p>
+<p>​</p>
+<h2 id="어떤-경우에-box-plot을-사용할까">어떤 경우에 Box Plot을 사용할까?</h2>
+<blockquote>
+<p>데이터 분포에 관한 정보를 얻고 싶을 때 사용.</p>
+</blockquote>
+<p>​</p>
+<p>​</p>
+<h2 id="box-plot은-어떻게-해석해야-하는가">Box Plot은 어떻게 해석해야 하는가?</h2>
+<p>​</p>
+<image src="/images/boxplot.assets\image-20211223144200670.png" width="auto">
+<p>​</p>
+<p>​</p>
+<h4 id="사분위수">사분위수?</h4>
+<blockquote>
+<p>자료를 크기 순으로 배열하고, 누적 백분율을 4 등분한 각 점에 해당하는 값을 말한다. <br>제1사분위수는 누적 백분율이 25%에 해당하는 점수이고, 제2사분위수는 누적 백분율이 50%, 제3사분위수는 75%, 제4사분위수는 100%에 해당하는 점수이다. <br>특히 제2사분위수는 누적 백분율이 50%이므로 개념적으로 <a href="https://terms.naver.com/entry.nhn?docId=1924474&amp;ref=y" target="_blank" rel="noopener noreffer">중앙값</a>과 동일하다.</p>
+<p>출처: <strong>[네이버 지식백과]</strong> <a href="https://terms.naver.com/entry.naver?docId=1924151" target="_blank" rel="noopener noreffer">사분위수</a> [quartile] (교육평가용어사전, 2004. 5. 31., 한국교육평가학회)</p>
+</blockquote>
+<p>​</p>
+<h4 id="중앙값">중앙값?</h4>
+<blockquote>
+<p>자료를 크기 순서대로 배열했을 때, 중앙에 위치하게 되는 값이다.<br> 중앙값을 기준으로 자료의 반은 중앙값보다 큰 값을 갖고, 나머지 반은 중앙값보다 작은 값을 갖는다. <br>자료가 (4, 5, 7, 8, 10)으로 구성되어 있다면, 7보다 작은 값이 2개, 7보다 큰 값이 2개 있으므로 7이 중앙값이 된다.</p>
+<p>자료가 (1, 3, 5, 7, 8, 9)와 같이 짝수로 구성되어 있는 경우, 가운데 있는 두 값인 5와 7의 평균으로 중앙값이 결정된다. 자료에 중복된 값이 있는 경우 중앙값 계산은 복잡해지며, 이 경우는 누적 백분율이 50%인 점을 계산하는 공식을 활용하여 중앙값을 산출할 수 있다.</p>
+<p>출처: <strong>[네이버 지식백과]</strong> <a href="https://terms.naver.com/entry.naver?docId=1924474" target="_blank" rel="noopener noreffer">중앙값</a> [median] (교육평가용어사전, 2004. 5. 31., 한국교육평가학회)</p>
+</blockquote>
+<p>​</p>
+<p>​</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2021-12-23</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/boxplot/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/analysis/">analysis</a>,&nbsp;<a href="/tags/boxplot/">boxplot</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/django_11_simple_jwt/" class="prev" rel="prev" title="Django_11_simple_JWT"><i class="fas fa-angle-left fa-fw"></i>Django_11_simple_JWT</a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://colinder-github-io.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
