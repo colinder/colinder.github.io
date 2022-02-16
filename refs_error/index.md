@@ -5,10 +5,10 @@
 
 # vue typescript_<span style="color: #56C4FF">$refs</span> error
 
-1. Object is possibly 'undefined'
-
-2. Property 'value' does not exist on type 'Vue | Element | (Vue | Element)[]'.       
-   Property 'value' does not exist on type 'Vue'
+>1. Object is possibly 'undefined'
+>
+>2. Property 'value' does not exist on type 'Vue | Element | (Vue | Element)[]'.       
+>   Property 'value' does not exist on type 'Vue'
 
 **typescript를 적용한 vue에서 $refs 값을 가져와 사용하는데 위와 같은 문제가 발생했습니다.**
 
