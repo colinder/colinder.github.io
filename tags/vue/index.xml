@@ -1,9 +1,21 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Vue - Tag - </title>
+        <title>vue - Tag - </title>
         <link>https://colinder.github.io/tags/vue/</link>
-        <description>Vue - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 08 Aug 2021 14:09:22 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/vue/" rel="self" type="application/rss+xml" /><item>
+        <description>vue - Tag - </description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 16 Feb 2022 14:35:56 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/vue/" rel="self" type="application/rss+xml" /><item>
+    <title>typescript Refs_error</title>
+    <link>https://colinder.github.io/refs_error/</link>
+    <pubDate>Wed, 16 Feb 2022 14:35:56 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/refs_error/</guid>
+    <description><![CDATA[​
+vue typescript_$refs error   Object is possibly &lsquo;undefined&rsquo;
+  Property &lsquo;value&rsquo; does not exist on type &lsquo;Vue | Element | (Vue | Element)[]&rsquo;. Property &lsquo;value&rsquo; does not exist on type &lsquo;Vue&rsquo;
+  typescript를 적용한 vue에서 $refs 값을 가져와 사용하는데 위와 같은 문제가 발생했습니다.
+​
+에러가 나오는 이유 개발자가 보기에는 너무 당연히 데이터가 있지만, 객체가 비어 있을 수도 있는데 해당 객체의 내부 메소드를 사용하거나 내부 객체 키에 값을 넣어주려고 할 때 발생합니다.]]></description>
+</item><item>
     <title>Vue_DevInfo</title>
     <link>https://colinder.github.io/vue_devinfo/</link>
     <pubDate>Sun, 08 Aug 2021 14:09:22 &#43;0900</pubDate>
@@ -110,17 +122,5 @@ Vuex 핵심컨셉(getters, mutations, actions, modules)  1. Getters  만약? A.v
 What is Vuex? (공식문서)  Vuex는 Vue.js 애플리케이션에 대한 상태 관리 패턴 + 라이브러리 입니다. 애플리케이션의 모든 컴포넌트에 대한 중앙 집중식 저장소 역할을 하며 예측 가능한 방식으로 상태를 변경할 수 있습니다. 또한 Vue의 공식 devtools 확장 프로그램과 통합되어 설정 시간이 필요 없는 디버깅 및 상태 스냅 샷 내보내기/가져오기와 같은 고급 기능을 제공합니다. (공식문서 설명)
  ​
 1 2 3 4 5  # 설치 명령어 npm i vuex or npm install vuex # 이후  src폴더안에 vuex폴더를 만들고 store.]]></description>
-</item><item>
-    <title>03_Vue_cli &amp; router &amp; histoyMode</title>
-    <link>https://colinder.github.io/03_vue_cli/</link>
-    <pubDate>Fri, 17 Jul 2020 22:03:11 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/03_vue_cli/</guid>
-    <description><![CDATA[​
-1. Vue CLI 란? (공식문서) 간단히 vue-cli 는 기본 vue 개발 환경을 설정해주는 도구입니다.
- 여기서 CLI 란 ?
-명령 줄 인터페이스(CLI, Command line interface) 또는 명령어 인터페이스는 텍스트 터미널을 통해 사용자와 컴퓨터가 상호 작용하는 방식. 즉, 작업 명령은 사용자가 컴퓨터 키보드 등을 통해 문자열의 형태로 입력하며, 컴퓨터로부터의 출력 역시 문자열의 형태로 주어진다. (위키백과)
- ​
-2. Vue router 프로젝트 생성 후 보통의 경우 편의를 위해 terminal에 vue add router를 입력해 router설치를 진행합니다.]]></description>
 </item></channel>
 </rss>

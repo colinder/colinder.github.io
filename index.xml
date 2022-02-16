@@ -3,9 +3,21 @@
         <title></title>
         <link>https://colinder.github.io/</link>
         <description>Hello New World</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 23 Dec 2021 13:53:00 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 16 Feb 2022 14:35:56 &#43;0900</lastBuildDate>
             <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>typescript Refs_error</title>
+    <link>https://colinder.github.io/refs_error/</link>
+    <pubDate>Wed, 16 Feb 2022 14:35:56 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/refs_error/</guid>
+    <description><![CDATA[​
+vue typescript_$refs error   Object is possibly &lsquo;undefined&rsquo;
+  Property &lsquo;value&rsquo; does not exist on type &lsquo;Vue | Element | (Vue | Element)[]&rsquo;. Property &lsquo;value&rsquo; does not exist on type &lsquo;Vue&rsquo;
+  typescript를 적용한 vue에서 $refs 값을 가져와 사용하는데 위와 같은 문제가 발생했습니다.
+​
+에러가 나오는 이유 개발자가 보기에는 너무 당연히 데이터가 있지만, 객체가 비어 있을 수도 있는데 해당 객체의 내부 메소드를 사용하거나 내부 객체 키에 값을 넣어주려고 할 때 발생합니다.]]></description>
+</item><item>
     <title>boxplot 해석 방법</title>
     <link>https://colinder.github.io/boxplot/</link>
     <pubDate>Thu, 23 Dec 2021 13:53:00 &#43;0900</pubDate>
@@ -123,19 +135,5 @@ models.py 구성
 1 2 3  class Question(models.Model): question_text = models.CharField(max_length=200) pub_date = models.DateTimeField(&#39;date published&#39;)   1 2 3 4  class Choice(models.Model): question = models.ForeignKey(Question, on_delete=models.CASCADE, related_name=&#39;choices&#39;) choice_text = models.CharField(max_length=200) votes = models.IntegerField(default=0)   ​
 ​
 prefetch_related() 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  # views.py def get_context_data(): context[&#34;questions&#34;] = Question.]]></description>
-</item><item>
-    <title>Django_06_Django &amp; Oracle18 error LOG</title>
-    <link>https://colinder.github.io/django_06_djangooracle18_error_log/</link>
-    <pubDate>Mon, 06 Sep 2021 11:41:44 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/django_06_djangooracle18_error_log/</guid>
-    <description><![CDATA[​
-Django &amp; Oracle 18 오류 일지  각종 스트레스의 원인에 대하여 해결방법을 정리합니다.
- ​
-  ORA-00955: name is already used by an existing object
- 1 2 3  # 해결법 python manage.py makemigrations python manage.py migrate --fake-initial    이미 migrate 한 내용을 수정하니 반영되지 않아 오류가 발생하였는데 위의 명령어는 migratie를 초기화해서 재설정 하는 것 같습니다.
-​
-  그리고 많은 경우에
- 1 2  python manage.]]></description>
 </item></channel>
 </rss>

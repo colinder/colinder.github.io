@@ -1,9 +1,21 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Vue - Category - </title>
+        <title>vue - Category - </title>
         <link>https://colinder.github.io/categories/vue/</link>
-        <description>Vue - Category - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 08 Aug 2021 14:09:22 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/vue/" rel="self" type="application/rss+xml" /><item>
+        <description>vue - Category - </description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 16 Feb 2022 14:35:56 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/vue/" rel="self" type="application/rss+xml" /><item>
+    <title>typescript Refs_error</title>
+    <link>https://colinder.github.io/refs_error/</link>
+    <pubDate>Wed, 16 Feb 2022 14:35:56 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/refs_error/</guid>
+    <description><![CDATA[​
+vue typescript_$refs error   Object is possibly &lsquo;undefined&rsquo;
+  Property &lsquo;value&rsquo; does not exist on type &lsquo;Vue | Element | (Vue | Element)[]&rsquo;. Property &lsquo;value&rsquo; does not exist on type &lsquo;Vue&rsquo;
+  typescript를 적용한 vue에서 $refs 값을 가져와 사용하는데 위와 같은 문제가 발생했습니다.
+​
+에러가 나오는 이유 개발자가 보기에는 너무 당연히 데이터가 있지만, 객체가 비어 있을 수도 있는데 해당 객체의 내부 메소드를 사용하거나 내부 객체 키에 값을 넣어주려고 할 때 발생합니다.]]></description>
+</item><item>
     <title>Vue_DevInfo</title>
     <link>https://colinder.github.io/vue_devinfo/</link>
     <pubDate>Sun, 08 Aug 2021 14:09:22 &#43;0900</pubDate>
@@ -106,20 +118,5 @@ Vue의 이론적 구성 및 설명을 알아보자 1. Vue는 MVVM 패턴을 따�
  ​
 2. Vue는 SPA (Single-Page Application)
  서버로부터 완전한 새로운 페이지를 불러오지 않고 현재의 페이지를 동적으로 다시 작성함으로써 사용자와 소통하는 웹 애플리케이션을 말한다.]]></description>
-</item><item>
-    <title>00_Vue_setting</title>
-    <link>https://colinder.github.io/00_vue_setting/</link>
-    <pubDate>Fri, 17 Jul 2020 21:56:29 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/00_vue_setting/</guid>
-    <description><![CDATA[​
-Vue  Vue.js는 웹 애플리케이션의 사용자 인터페이스를 만들기 위해 사용하는 오픈 소스 프로그레시브 자바스크립트 프레임워크
-간단히, 온라인 홈페이지를 만드는 프로그램입니다.
- ​
-1. 시작하기   &lsquo;Vue&rsquo; VS &lsquo;Django&rsquo;
- 어느 정도 공부를 하면서 체득한 가장 큰 구분점은 &ldquo;Django는 App별로 응답을 구분하고, Vue는 Component별로 응답을 구분한다.&ldquo;는 것입니다.
-큰 차이가 없어보이고, 큰 의미가 없어보일 수 있으나 알아두면 좋습니다!
- ​
-  💻 개발 환경 설정   vscode 설치]]></description>
 </item></channel>
 </rss>
