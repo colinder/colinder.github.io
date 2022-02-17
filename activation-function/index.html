@@ -43,7 +43,7 @@ Activation Function(활성화 함수)  입력 신호의 총합을 출력신호�
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/activation-function\/"
-        },"genre": "posts","keywords": "AI, Activation Function","wordcount":  997 ,
+        },"genre": "posts","keywords": "AI, Activation Function","wordcount":  1005 ,
         "url": "https:\/\/colinder.github.io\/activation-function\/","datePublished": "2021-06-24T15:04:29+09:00","dateModified": "2021-06-24T15:04:29+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -120,7 +120,7 @@ Activation Function(활성화 함수)  입력 신호의 총합을 출력신호�
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Activation_Function</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/ai/"><i class="far fa-folder fa-fw"></i>AI</a>&nbsp;<a href="/categories/activation-function/"><i class="far fa-folder fa-fw"></i>Activation Function</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-06-24">2021-06-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;997 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-06-24">2021-06-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1005 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;5 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -321,11 +321,11 @@ Activation Function(활성화 함수)  입력 신호의 총합을 출력신호�
 <p>세 개 이상으로 분류하는 다중 클래스 분류에서 사용되는 활성화 함수입니다.</p>
 </li>
 <li>
-<p>N개의 class로 분류한다고 가정했을 때 Softmax함수는 들어오는 값들을 확률값으로 바꿔줍니다.</p>
-<p>예를 들어 어떤 이미지가 주어지고 이것이 사과인지, 배인지, 귤인지 판단해야 할 때, Softmax함수는 <b>사과일 확률, 배일 확률, 귤일 확률</b>을 출력해줍니다. 즉, <b>Output은 class 별 확률</b>이고 <b>class별 출력값의 총합은 1</b>이 되어야합니다.</p>
+<p>입력받은 값을 출력으로 0~1사이의 값으로 모두 정규화하며 출력 값들의 총합은 항상 1이 되는 특성을 가진 함수입니다.</p>
+<p>예를 들어 어떤 이미지가 주어지고 이것이 사과인지, 배인지, 귤인지 판단해야 할 때, Softmax함수는 <b>사과일 확률, 배일 확률, 귤일 확률</b>[0.5, 0.3, 0.2]을 출력해줍니다. 즉, <b>Output은 class 별 확률</b>이고 <b>class별 출력값의 총합은 1</b>이 됩니다.</p>
 </li>
 <li>
-<p>class별로 확률을 알려주다보니, <b>출력 노드</b>에서 확률을 확인하고 이를 최종결과로 반영하는 상황에서 <b>많이 사용</b>됩니다.</p>
+<p>class별로 확률을 알려주다보니, <span style="color:red"><b>출력 노드</b></span>에서 확률을 확인하고 이를 최종결과로 반영하는 상황에서 <b>많이 사용</b>됩니다.</p>
 <hr>
 </li>
 <li>
