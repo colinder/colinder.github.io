@@ -43,7 +43,7 @@ Activation Function(활성화 함수)  입력 신호의 총합을 출력신호�
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/activation-function\/"
-        },"genre": "posts","keywords": "AI, Activation Function","wordcount":  973 ,
+        },"genre": "posts","keywords": "AI, Activation Function","wordcount":  997 ,
         "url": "https:\/\/colinder.github.io\/activation-function\/","datePublished": "2021-06-24T15:04:29+09:00","dateModified": "2021-06-24T15:04:29+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -120,7 +120,7 @@ Activation Function(활성화 함수)  입력 신호의 총합을 출력신호�
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Activation_Function</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/ai/"><i class="far fa-folder fa-fw"></i>AI</a>&nbsp;<a href="/categories/activation-function/"><i class="far fa-folder fa-fw"></i>Activation Function</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-06-24">2021-06-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;973 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-06-24">2021-06-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;997 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;5 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -258,10 +258,13 @@ Activation Function(활성화 함수)  입력 신호의 총합을 출력신호�
 <image src="/images/Activation_Function_01.png" width="600px" style="display: block; margin: 20px auto">
 <ul>
 <li>
-<p>선형함수의 결과를 0 ~ 1까지의 비선형 형태로 변환하는 함수입니다. =&gt; <b>Output은 0~1 사이의 실수</b></p>
+<p>선형함수의 결과를 0 ~ 1까지의 비선형 형태로 변환하는 Logit 함수입니다. =&gt; <b>Output은 0~1 사이의 실수</b></p>
 </li>
 <li>
 <p>로지스틱, 정규분포 등과 같이 <b>이진 분류 문제(1 or 0 /성공 or 실패&hellip;)</b>의 확률 표현에 자주 사용됩니다.</p>
+</li>
+<li>
+<p>0~1 사이의 실수를 output으로 가져 0.5를 기준으로 1에 가까우면 1, 0에 가까우면 0으로 나누는 등 으로 활용합니다.</p>
 </li>
 <li>
 <p>binary classification의 출력층 노드에서 0~1사이의 값을 만들고 싶을때 사용합니다.</p>
@@ -397,6 +400,9 @@ Activation Function(활성화 함수)  입력 신호의 총합을 출력신호�
 <p>​</p>
 <h1 id="참고">👀참고</h1>
 <ul>
+<li>
+<p>Sigmoid 함수의 개념은 오즈(odds)에서 부터 출발합니다.</p>
+</li>
 <li>
 <p>일반적으로는 ELU -&gt; LeakyReLU -&gt; ReLU -&gt; tanh -&gt; sigmoid 순으로 사용한다고 합니다. cs231n 강의에서는 ReLU를 먼저 쓰고, 그 다음으로 LeakyReLU나 ELU 같은 ReLU Family를 사용하며, sigmoid는 사용하지 말라고 하고 있습니다.</p>
 </li>
