@@ -1,0 +1,19 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>file list import - Category - </title>
+        <link>https://colinder.github.io/categories/file-list-import/</link>
+        <description>file list import - Category - </description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 22 Feb 2022 10:37:15 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/file-list-import/" rel="self" type="application/rss+xml" /><item>
+    <title>폴더안에 있는 특정 파일 리스트 가져오기</title>
+    <link>https://colinder.github.io/filelistimport/</link>
+    <pubDate>Tue, 22 Feb 2022 10:37:15 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/filelistimport/</guid>
+    <description><![CDATA[​
+폴더 안에 있는 특정 파일 리스트 정리  어떤 폴더 안에 있는 특정 확장자명의 파일들의 리스트를 정리하고 싶을 때 사용합니다.
+ ​
+1 2 3 4 5 6 7  ## 폴더안에 있는 .csv파일 리스트 가져오기 import os path = &#39;/경로/&#39; file_lists = os.listdir(path) file_list_result = [file for file in file_lists if file.endswith(&#39;.csv&#39;)] ## 파일명 끝이 .csv인 경우   ​
+이후 pandas DataFrame에 넣을 때
+1 2 3 4 5 6  import pandas as pd df = pd.]]></description>
+</item></channel>
+</rss>

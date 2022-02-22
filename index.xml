@@ -3,9 +3,42 @@
         <title></title>
         <link>https://colinder.github.io/</link>
         <description>Hello New World</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 16 Feb 2022 14:35:56 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 22 Feb 2022 10:37:15 &#43;0900</lastBuildDate>
             <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>폴더안에 있는 특정 파일 리스트 가져오기</title>
+    <link>https://colinder.github.io/filelistimport/</link>
+    <pubDate>Tue, 22 Feb 2022 10:37:15 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/filelistimport/</guid>
+    <description><![CDATA[​
+폴더 안에 있는 특정 파일 리스트 정리  어떤 폴더 안에 있는 특정 확장자명의 파일들의 리스트를 정리하고 싶을 때 사용합니다.
+ ​
+1 2 3 4 5 6 7  ## 폴더안에 있는 .csv파일 리스트 가져오기 import os path = &#39;/경로/&#39; file_lists = os.listdir(path) file_list_result = [file for file in file_lists if file.endswith(&#39;.csv&#39;)] ## 파일명 끝이 .csv인 경우   ​
+이후 pandas DataFrame에 넣을 때
+1 2 3 4 5 6  import pandas as pd df = pd.]]></description>
+</item><item>
+    <title>Machine VS Deep Learning</title>
+    <link>https://colinder.github.io/machine-deep/</link>
+    <pubDate>Tue, 22 Feb 2022 09:43:00 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/machine-deep/</guid>
+    <description><![CDATA[​
+&lsquo;머신러닝&rsquo;이란 무엇인지 우선 알아봅시다.  머신 러닝(machine learning) 또는 기계 학습(機械學習)은 경험을 통해 자동으로 개선하는 컴퓨터 알고리즘 연구 분야입니다. 이는 인공지능의 한 분야로 간주되며, 컴퓨터가 학습할 수 있도록 하는 알고리즘과 기술을 개발합니다. 예를 들어 &lsquo;이 운동화가 진품이 맞는지?&rsquo;, &lsquo;특정 시간대에 A에서 B까지 가는데 얼마나 시간이 걸리는지?&rsquo;, &lsquo;수신한 메일이 스팸메일인지?&rsquo; 등 표현(representation)과 일반화(generalization)가 핵심인 기술입니다. 표현이란 데이터의 평가이며, 일반화란 아직 알 수 없는 데이터의 처리를 의미합니다.
+ 인공지능 ⊃ 머신러닝 ⊃ 딥러닝]]></description>
+</item><item>
+    <title>RNN &amp; LSTM</title>
+    <link>https://colinder.github.io/rnn-lstm/</link>
+    <pubDate>Mon, 21 Feb 2022 14:35:39 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/rnn-lstm/</guid>
+    <description><![CDATA[​
+RNN &amp; LSTM  감정분석을 위한 프로젝트를 기획하면서 RNN과 LSTM이라는 신경망 분석에 대하여 알게 되었습니다. 신경망 분석은 기계학습과 인지과학에서 영감을 얻어 설계된 통계학적 학습 알고리즘인데요. 이 둘의 개념를 알아보겠습니다.
+ ​
+​
+RNN(Recurrent Neural Network) 순환 신경망  시퀀스(Sequence)라는 것이 있습니다.
+시퀀스는 간단히 &lsquo;문맥이 있는 데이터&rsquo; 입니다. 문장은 단어들의 시퀀스, 음악은 음계들의 시퀀스, 동영상은 이미지의 시퀀스라고 할 수 있습니다. 그런데 시퀀스의 길이는 가변적입니다. 기존의 뉴럴 네트워크 알고리즘은 이미지처럼 고정된 크기의 입력을 다루는 데는 탁월하지만, 가변적인 크기의 데이터를 모델링하기에는 적합하지 않았습니다.]]></description>
+</item><item>
     <title>typescript Refs_error</title>
     <link>https://colinder.github.io/refs_error/</link>
     <pubDate>Wed, 16 Feb 2022 14:35:56 &#43;0900</pubDate>
@@ -94,46 +127,5 @@ Django AbstractBaseUser  django는 기본적으로 username 과 password를 가�
   createsuperuser 명령어 입력시, 관리자 계정이 커스텀한 테이블에 생성.
 ​
     Django 공식문서에는 models.py에서 기본적인 사용자모델을 설정하고 이를 활용해 admin.]]></description>
-</item><item>
-    <title>Django_08_AbstractBaseUser VS AbstractUser</title>
-    <link>https://colinder.github.io/django_08_abstractbaseuservsabstractuser/</link>
-    <pubDate>Thu, 07 Oct 2021 10:17:20 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/django_08_abstractbaseuservsabstractuser/</guid>
-    <description><![CDATA[​
-Django AbstractBaseUser VS AbstractUser  Django로 프로젝트를 진행하면서 계정관련 내용을 등록하는 것을 가장 많이 했음에도, 아직 명확하게 차이를 알지 못하고 사용했던 것이 있었습니다.
-바로! User custom에 관한 부분이었는데요. 크게 AbstractBaseUser와 AbstractUser를 사용하는 방법이 있는데 이 둘의 차이를 꼼꼼히 알아보기 위해 해당 포스팅이 작성되었습니다.
- ​
-AbstractBaseUser VS AbstractUser  프로젝트 생성 후 accounts 라는 app을 만들고 makemigrations &amp; migrate를 하기 전
- ​
-1. Model 설정 AbstractBaseUser
-위치: accounts/models.py]]></description>
-</item><item>
-    <title>MariaDB 설치 방법</title>
-    <link>https://colinder.github.io/mariadb_setting/</link>
-    <pubDate>Wed, 15 Sep 2021 10:44:21 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/mariadb_setting/</guid>
-    <description><![CDATA[​
-MariaDB 설치 방법 1. 설치 https://mariadb.org/download/ 에서 자동으로 확인된 버전으로 다운로드 받습니다.
-​
-Next 클릭​
-별도의 커스텀은 하지 않습니다.​
-&lsquo;root 비밀번호 설정&rsquo;과 &lsquo;UTF 변환 및 외부에서 root 접속을 허용 할 것&rsquo;인지 물어보는 데 이곳이 중요합니다.
-단순 개발용이라면 상관없을 수 있으나 개인적으로 실제 운용할 서버 or 개발 서버라도 외부에서 root에 접속하게 하는 것은 보안상 좋지 않을 것이라고 생각합니다.
-실제로 서비스를 운영 할 서버라면 절때 root를 원격지에서 사용할 수 없게 하는 것을 추천합니다.]]></description>
-</item><item>
-    <title>Django_07_1:N 불러오기</title>
-    <link>https://colinder.github.io/django_07_1vsn_%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0/</link>
-    <pubDate>Tue, 14 Sep 2021 17:25:44 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/django_07_1vsn_%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0/</guid>
-    <description><![CDATA[​
-Django 1:N 불러오기  prefetch_related() or annotate()
- ​
-models.py 구성
-1 2 3  class Question(models.Model): question_text = models.CharField(max_length=200) pub_date = models.DateTimeField(&#39;date published&#39;)   1 2 3 4  class Choice(models.Model): question = models.ForeignKey(Question, on_delete=models.CASCADE, related_name=&#39;choices&#39;) choice_text = models.CharField(max_length=200) votes = models.IntegerField(default=0)   ​
-​
-prefetch_related() 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  # views.py def get_context_data(): context[&#34;questions&#34;] = Question.]]></description>
 </item></channel>
 </rss>
