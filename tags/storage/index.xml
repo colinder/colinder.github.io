@@ -1,0 +1,23 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>storage - Tag - </title>
+        <link>https://colinder.github.io/tags/storage/</link>
+        <description>storage - Tag - </description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 23 Feb 2022 14:32:36 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/storage/" rel="self" type="application/rss+xml" /><item>
+    <title>localStorage vs sessionStorage</title>
+    <link>https://colinder.github.io/localvssession_storage/</link>
+    <pubDate>Wed, 23 Feb 2022 14:32:36 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/localvssession_storage/</guid>
+    <description><![CDATA[​
+Local Storage와 Session Storage의 차이 를 알아보기 전에
+​
+​
+&lsquo;Storage(web storage)&rsquo; 란 무엇인지 우선 알아봅시다.  HTML5에서 등장한 웹의 데이터를 클라이언트에 저장할 수 있는 기능
+ 인터넷상의 통신을 하는데 어떤 자료를 가지고 있어야 한다거나, 나의 정보(유저정보)를 관리하는 등의 데이터 관리를 위한 저장소 기능. 그리고 storage는 두 가지 종류가 존재
+​
+​
+Local Storage와 Session Storage   Local storage
+origin(요청이 시작된 서버를 나타내는 URL)이 같을 경우, 여러 탭과 브라우저 창에서 공유되는 저장소.]]></description>
+</item></channel>
+</rss>

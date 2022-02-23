@@ -5,10 +5,10 @@
         <description>LSTM - Category - </description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 21 Feb 2022 14:35:39 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/lstm/" rel="self" type="application/rss+xml" /><item>
     <title>RNN &amp; LSTM</title>
-    <link>https://colinder.github.io/rnn-lstm/</link>
+    <link>https://colinder.github.io/rnn__lstm/</link>
     <pubDate>Mon, 21 Feb 2022 14:35:39 &#43;0900</pubDate>
     <author>Author</author>
-    <guid>https://colinder.github.io/rnn-lstm/</guid>
+    <guid>https://colinder.github.io/rnn__lstm/</guid>
     <description><![CDATA[​
 RNN &amp; LSTM  감정분석을 위한 프로젝트를 기획하면서 RNN과 LSTM이라는 신경망 분석에 대하여 알게 되었습니다. 신경망 분석은 기계학습과 인지과학에서 영감을 얻어 설계된 통계학적 학습 알고리즘인데요. 이 둘의 개념를 알아보겠습니다.
  ​
