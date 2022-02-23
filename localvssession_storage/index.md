@@ -11,6 +11,8 @@
 
 ​	
 
+---
+
 ## 'Storage(web storage)' 란 무엇인지 우선 알아봅시다.
 
 > HTML5에서 등장한 웹의 데이터를 클라이언트에 저장할 수 있는 기능
@@ -20,6 +22,8 @@
 ​			
 
 ​			
+
+---
 
 ## Local Storage와 Session Storage
 
@@ -37,6 +41,8 @@
 
 ​	
 
+---
+
 ## 공통점(특징)
 
 1. Object와 비슷한 **key-value**의 구조 <span style="color: grey; font-size:0.8em">ex) {'username': 'imdeveloper', 'age': 'imold'}</span>
@@ -46,6 +52,8 @@
 ​			
 
 ​			
+
+---
 
 ## 간단한 사용법
 
