@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>What is Web Socket? - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="What is Web Socket?" />
+<meta property="og:description" content="​
+What is Web Socket?  Web 통신은 무조건 두 단계를 걸쳐 동작합니다. 요청과 응답. 간단히 어떤 요청이 있을 때만 서버와 연결되어 어떤 응답을 하게 됩니다. 이러한 방식을 HTTP라고 합니다. 예를 들어, Naver.com에 접속하는 것은 &lsquo;Naver.com&rsquo;이라는 요청을 보낸 것이고 그에 대한 응답으로 naver의 메인 화면을 보여주는 것이죠. 그런데 만약 실시간 채팅 서비스나 푸시 알람을 구현해야 한다면, 매우 잦은 요청을 보내야 하고 네트워크 상 많은 부하를 발생시킬 수 있습니다.
+ HTML5이라는 웹 표준이 생긴이래로 이러한 HTTP의 단점을 보완하기 위해 웹 소켓(Web Socket)이 등장했습니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://colinder.github.io/what_is_web_socket/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-02-25T12:20:35&#43;09:00" />
+<meta property="article:modified_time" content="2022-02-25T12:20:35&#43;09:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
+
+<meta name="twitter:title" content="What is Web Socket?"/>
+<meta name="twitter:description" content="​
+What is Web Socket?  Web 통신은 무조건 두 단계를 걸쳐 동작합니다. 요청과 응답. 간단히 어떤 요청이 있을 때만 서버와 연결되어 어떤 응답을 하게 됩니다. 이러한 방식을 HTTP라고 합니다. 예를 들어, Naver.com에 접속하는 것은 &lsquo;Naver.com&rsquo;이라는 요청을 보낸 것이고 그에 대한 응답으로 naver의 메인 화면을 보여주는 것이죠. 그런데 만약 실시간 채팅 서비스나 푸시 알람을 구현해야 한다면, 매우 잦은 요청을 보내야 하고 네트워크 상 많은 부하를 발생시킬 수 있습니다.
+ HTML5이라는 웹 표준이 생긴이래로 이러한 HTTP의 단점을 보완하기 위해 웹 소켓(Web Socket)이 등장했습니다."/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/what_is_web_socket/" /><link rel="prev" href="https://colinder.github.io/localvssession_storage/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "What is Web Socket?",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/colinder.github.io\/what_is_web_socket\/"
+        },"genre": "posts","keywords": "web, Web Socket","wordcount":  485 ,
+        "url": "https:\/\/colinder.github.io\/what_is_web_socket\/","datePublished": "2022-02-25T12:20:35+09:00","dateModified": "2022-02-25T12:20:35+09:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "colinder"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="">Hello New World</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="">Hello New World</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">What is Web Socket?</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/web/"><i class="far fa-folder fa-fw"></i>web</a>&nbsp;<a href="/categories/web-socket/"><i class="far fa-folder fa-fw"></i>Web Socket</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-02-25">2022-02-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;485 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#web-socket-사용법">Web Socket 사용법</a></li>
+    <li><a href="#web-socket-상태-확인">Web Socket 상태 확인</a></li>
+    <li><a href="#web-socket-접근법">Web Socket 접근법</a></li>
+    <li><a href="#web-socket-현황">Web Socket 현황</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>​</p>
+<h1 id="what-is-web-socket">What is Web Socket?</h1>
+<blockquote>
+<p>Web 통신은 무조건 두 단계를 걸쳐 동작합니다. 요청과 응답. 간단히 어떤 요청이 있을 때만 서버와 연결되어 어떤 응답을 하게 됩니다. 이러한 방식을 HTTP라고 합니다. 
+예를 들어, Naver.com에 접속하는 것은 &lsquo;Naver.com&rsquo;이라는 요청을 보낸 것이고 그에 대한 응답으로 naver의 메인 화면을 보여주는 것이죠.
+그런데 만약 실시간 채팅 서비스나 푸시 알람을 구현해야 한다면, 매우 잦은 요청을 보내야 하고 네트워크 상 많은 부하를 발생시킬 수 있습니다.</p>
+</blockquote>
+<p>HTML5이라는 웹 표준이 생긴이래로 이러한 HTTP의 단점을 보완하기 위해 웹 소켓(Web Socket)이 등장했습니다.</p>
+<p>웹 소켓은 서버와 사용자 간 연결을 유지한 상태로 추가 요청없이 양방향으로 데이터를 교환할 수 있는 프로토콜입니다. 이런 특성은 실시간으로 데이터 교환이 지속해서 일어냐야 하는 서비스에서 유용합니다.</p>
+<p>​</p>
+<p>​</p>
+<hr>
+<h2 id="web-socket-사용법">Web Socket 사용법</h2>
+<p>웹 소켓 연결을 만들 때는 Websocket 생성자를 이용합니다. 이때 매개변수 url에서 사용하는 프로토콜은 ws와 wss입니다. 둘의 관계는 http와 https와의 관계와 비슷하며 상대적으로 wss가 보안과 신회성이 더 높은 프로토콜입니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">socket</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">WebSocket</span><span class="p">(</span><span class="s2">&#34;wss://something_URL.com&#34;</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>웹 소켓의 핸드쉐이크(handshake) 과정은 HTTP를 이용합니다. HTTP는 반드시 1.1버전 이상이어야 하며 GET method를 이용해 요청을 보냅니다. 핸드쉐이크 과정을 간략하게 정리하면 아래와 같습니다.</p>
+<ol>
+<li>
+<p>브라우저에서 서버로 웹 소켓 지원여부를 물어봅니다.</p>
+</li>
+<li>
+<p>이때 아래 코드와 같이 Connection 헤더와 Upgrade 헤더의 값을 설정합니다.</p>
+</li>
+<li>
+<p>이 값의 의미는 클라이언트 측에서 프로토콜을 웹 소켓 프로토콜로 변경하고 싶다는 의미</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-http" data-lang="http"><span class="nf">GET</span> <span class="nn">/chat</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="n">Host</span><span class="o">:</span> <span class="l">something_URL.com</span>
+<span class="n">Upgrade</span><span class="o">:</span> <span class="l">websocket</span>
+<span class="n">Connection</span><span class="o">:</span> <span class="l">Upgrade</span>
+<span class="err">...</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>서버에서 웹 소켓 지원 여부를 반환.</li>
+<li>서버, 브라우저 모두 웹 소켓을 지원한다면 연결.</li>
+</ul>
+</li>
+</ol>
+<p>​</p>
+<p>​</p>
+<hr>
+<h2 id="web-socket-상태-확인">Web Socket 상태 확인</h2>
+<p>생성된 웹 소켓 객체는 XMLHttpRequest로 생성된 객체처럼 상태를 나타내는 readyState가 존재합니다. 각각의 상태를 상수 혹은 숫자로 구분하여 사용할 수 있습니다.</p>
+<table>
+<thead>
+<tr>
+<th>상수</th>
+<th>값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CONNECTING</td>
+<td>0</td>
+<td>연결이 수립되고 있는 상태</td>
+</tr>
+<tr>
+<td>OPEN</td>
+<td>1</td>
+<td>연결이 완료된 상태</td>
+</tr>
+<tr>
+<td>CLOSE</td>
+<td>2</td>
+<td>연결이 종료되고 있는 상태</td>
+</tr>
+<tr>
+<td>CLOSED</td>
+<td>3</td>
+<td>연결이 종료된 상태</td>
+</tr>
+</tbody>
+</table>
+<p>​</p>
+<p>​</p>
+<hr>
+<h2 id="web-socket-접근법">Web Socket 접근법</h2>
+<p>각 프로퍼티와 상태 상수에 접근하는 방법</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">socket</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">WebSocket</span><span class="p">(</span><span class="s2">&#34;wss://something_URL.com&#34;</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">socket</span><span class="p">.</span><span class="nx">readyState</span><span class="p">,</span> <span class="nx">Websocket</span><span class="p">.</span><span class="nx">CONNECTING</span><span class="p">);</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>웹 소켓이 정상적으로 생성되면 4개의 이벤트를 사용할 수 있습니다. 각각의 이벤트는 on(eventName)혹은 addEventListener()를 통해 등록할 수 있습니다.</p>
+<ul>
+<li>
+<p>open: readyState가 OPEN 되었을 때, 즉 데이터를 주고 받을 준비가 되었을 때 발생</p>
+</li>
+<li>
+<p>close: readyState가 CLOSED가 되었을 때, 즉, 연결이 종료되었을 때 발생</p>
+</li>
+<li>
+<p>message: 서버로부터 메시지를 받았을 때 발생. 이때 이벤트 객체를 통해 수신된 메세지에 접근할 수 있음.</p>
+</li>
+<li>
+<p>error: 에러가 발생했을 때 발생</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">socket</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">WebSocket</span><span class="p">(</span><span class="s2">&#34;wss://something_URL.com&#34;</span><span class="p">);</span>
+
+<span class="nx">socket</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;open&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;연결 완료&#39;</span><span class="p">)</span>
+<span class="p">})</span>
+
+<span class="nx">socket</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;메세지 수신&#39;</span><span class="p">,</span> <span class="nx">event</span><span class="p">,</span><span class="nx">data</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<p>​</p>
+</li>
+</ul>
+<hr>
+<h2 id="web-socket-현황">Web Socket 현황</h2>
+<p>웹 소켓은 HTTP의 요청과 응답의 한계를 넘어선 새로운 프로토콜이지만, 실제 도입시에는 아직 고려해야할 사항들이 많다고 합니다. 구형 브라우저에 대한 지원, 주고 받는 데이터의 크기와 빈도, 에러 처리, 부하 등. 이러한 사항들을 서비스로 제공하기 충분한지 파악하고 도입하는 것을 추천합니다.</p>
+<p>​</p>
+<p>*<strong>해당 포스팅은 <a href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;mallGb=KOR&amp;barcode=9791165921057&amp;orderClick=LEa&amp;Kc=" target="_blank" rel="noopener noreffer">기초부터 완성까지, 프런트엔드</a>의 내용을 공부하며 기록해 놓은 것입니다.</strong></p>
+<p>​</p>
+<p>​</p>
+<h1 id="요약">👀요약</h1>
+<p>현재 진행중인 프로젝트에도 웹 소켓을 적용하여 개발중인데 추가로 <a href="https://redis.io/" target="_blank" rel="noopener noreffer">redis</a>와 함께 사용하고 있습니다. 이제 슬슬 AI 개발에 집중하기 위해 손을 놓고 있는데 재미있는 기술들이 계속 도입되고 있어, 이래저리 정신없는 상태에서 정리된 글이라 더 깊이 있는 내용은 기회가 되면 추가해보겠습니다.</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-02-25</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/what_is_web_socket/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/web/">web</a>,&nbsp;<a href="/tags/web-socket/">Web Socket</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/localvssession_storage/" class="prev" rel="prev" title="localStorage vs sessionStorage"><i class="fas fa-angle-left fa-fw"></i>localStorage vs sessionStorage</a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://colinder-github-io.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

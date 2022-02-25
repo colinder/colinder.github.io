@@ -3,9 +3,18 @@
         <title></title>
         <link>https://colinder.github.io/</link>
         <description>Hello New World</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 23 Feb 2022 14:32:36 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 25 Feb 2022 12:20:35 &#43;0900</lastBuildDate>
             <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>What is Web Socket?</title>
+    <link>https://colinder.github.io/what_is_web_socket/</link>
+    <pubDate>Fri, 25 Feb 2022 12:20:35 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/what_is_web_socket/</guid>
+    <description><![CDATA[​
+What is Web Socket?  Web 통신은 무조건 두 단계를 걸쳐 동작합니다. 요청과 응답. 간단히 어떤 요청이 있을 때만 서버와 연결되어 어떤 응답을 하게 됩니다. 이러한 방식을 HTTP라고 합니다. 예를 들어, Naver.com에 접속하는 것은 &lsquo;Naver.com&rsquo;이라는 요청을 보낸 것이고 그에 대한 응답으로 naver의 메인 화면을 보여주는 것이죠. 그런데 만약 실시간 채팅 서비스나 푸시 알람을 구현해야 한다면, 매우 잦은 요청을 보내야 하고 네트워크 상 많은 부하를 발생시킬 수 있습니다.
+ HTML5이라는 웹 표준이 생긴이래로 이러한 HTTP의 단점을 보완하기 위해 웹 소켓(Web Socket)이 등장했습니다.]]></description>
+</item><item>
     <title>localStorage vs sessionStorage</title>
     <link>https://colinder.github.io/localvssession_storage/</link>
     <pubDate>Wed, 23 Feb 2022 14:32:36 &#43;0900</pubDate>
@@ -117,16 +126,5 @@ MySQL Client를 실행합니다.
 MariaDB 설치를 진행하면서 등록한 password입력하면 아래와 같은 화면이 나옵니다.
 ​
 초기 접속의 경우, DB table이 &lsquo;none&rsquo;으로 설정되어 있는데, **공유를 원하는 table로 설정을 바꿔줍니다. **]]></description>
-</item><item>
-    <title>Django_10_CustomAuthUser_AbstractUser</title>
-    <link>https://colinder.github.io/django_10_customauthuser_abstractuser/</link>
-    <pubDate>Fri, 08 Oct 2021 10:17:53 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/django_10_customauthuser_abstractuser/</guid>
-    <description><![CDATA[​
-Django AbstractUser  이전에 AbstractBaseUser를 사용한 커스텀 사용자 인증 테이블을 구성해보았습니다. 해당 내용에 이어서 AbstractUser로 커스텀 사용자 인증 테이블을 구성해보고 createsuperuser 명령어 입력시, 관리자 계정이 커스텀한 테이블에 생성되게 해보겠습니다.
- ​
-AbstractUser을 상속받아 커스텀을 진행  우선 AbstractUser는 Django에서 기본으로 제공해주는 사용자 인증 테이블의 요소를 그대로 가져와 사용하기 때문에 그 요소들은 어떤 것들이 있는지 알아보자.
-id, password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined 총 11개의 column이 존재하며 이외에 column을 추가 하고 싶을 때 코드를 추가로 작성합니다.]]></description>
 </item></channel>
 </rss>

@@ -3,7 +3,16 @@
         <title>web - Tag - </title>
         <link>https://colinder.github.io/tags/web/</link>
         <description>web - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 23 Feb 2022 14:32:36 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/web/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 25 Feb 2022 12:20:35 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/web/" rel="self" type="application/rss+xml" /><item>
+    <title>What is Web Socket?</title>
+    <link>https://colinder.github.io/what_is_web_socket/</link>
+    <pubDate>Fri, 25 Feb 2022 12:20:35 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/what_is_web_socket/</guid>
+    <description><![CDATA[​
+What is Web Socket?  Web 통신은 무조건 두 단계를 걸쳐 동작합니다. 요청과 응답. 간단히 어떤 요청이 있을 때만 서버와 연결되어 어떤 응답을 하게 됩니다. 이러한 방식을 HTTP라고 합니다. 예를 들어, Naver.com에 접속하는 것은 &lsquo;Naver.com&rsquo;이라는 요청을 보낸 것이고 그에 대한 응답으로 naver의 메인 화면을 보여주는 것이죠. 그런데 만약 실시간 채팅 서비스나 푸시 알람을 구현해야 한다면, 매우 잦은 요청을 보내야 하고 네트워크 상 많은 부하를 발생시킬 수 있습니다.
+ HTML5이라는 웹 표준이 생긴이래로 이러한 HTTP의 단점을 보완하기 위해 웹 소켓(Web Socket)이 등장했습니다.]]></description>
+</item><item>
     <title>localStorage vs sessionStorage</title>
     <link>https://colinder.github.io/localvssession_storage/</link>
     <pubDate>Wed, 23 Feb 2022 14:32:36 &#43;0900</pubDate>
@@ -117,25 +126,5 @@ React-Native google login  서비스를 개발하다보면 로그인 기능이 �
   android 기준
   함수형 컴포넌트로 진행 (✨ 클래스 컴포넌트로 진행하지 않습니다.)
   RN 버전 0.60이상에서 진행]]></description>
-</item><item>
-    <title>React-Native_navigation</title>
-    <link>https://colinder.github.io/react-native_navigation/</link>
-    <pubDate>Thu, 29 Oct 2020 21:24:52 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/react-native_navigation/</guid>
-    <description><![CDATA[​
-React-Native navigation  vue는 router를 사용해 화면을 이동합니다. 그렇다면, react-native는 어떻게 화면을 이동할까요?
-바로 react-native navigation을 사용합니다. 어떻게 사용하는건지 기록합시다.
- 공식홈페이지의 Getting started로 알아봅시다.
-​
-*새로운 프로젝트를 만들고 root폴더에서 진행.
-  개발환경
-  npm으로 진행
-  react-native_cli (✨expo로 진행하지 않습니다.)
-  android 기준
-  함수형 컴포넌트로 진행 (✨ 클래스 컴포넌트로 진행하지 않습니다.)
-  RN 버전 0.60이상에서 진행
-  react-native-cli: 2.0.1
-  react-native: 0.]]></description>
 </item></channel>
 </rss>
