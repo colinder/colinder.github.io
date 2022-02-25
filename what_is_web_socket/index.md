@@ -121,6 +121,8 @@ console.log(socket.readyState, Websocket.CONNECTING);
 
 ​		
 
+---
+
 # 👀요약
 
 현재 진행중인 프로젝트에도 웹 소켓을 적용하여 개발중인데 추가로 [redis](https://redis.io/)와 함께 사용하고 있습니다. 이제 슬슬 AI 개발에 집중하기 위해 손을 놓고 있는데 재미있는 기술들이 계속 도입되고 있어, 이래저리 정신없는 상태에서 정리된 글이라 더 깊이 있는 내용은 기회가 되면 추가해보겠습니다.
@@ -129,14 +131,5 @@ console.log(socket.readyState, Websocket.CONNECTING);
 
 ​	
 
-​			
-
 ​	
-
-​	
-
-​	
-
-
-
 
