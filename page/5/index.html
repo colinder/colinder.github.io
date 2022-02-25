@@ -102,17 +102,6 @@
         alt="/images/jg_02.jpg"
         title="/images/jg_02.jpg" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/colinder" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="mailto:kjonggwan@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/django_05_check-db-connection/">Django_05_Check DB connection</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-09-06">2021-09-06</time></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw"></i>Django</a></span></div><div class="content">​
-Django DB 연결 확인 ​
-python manage.py createsuperuser 후.. default로 생기는 DB를 기준으로 실행
-​
-1 2  ## setting.py AUTH_USER_MODEL = &#39;auth.User&#39; # default 설정.   ​
-이후 terminal에서
-1 2 3 4 5 6 7  $ python manage.py shell_plus	# 모델에 접근하기 위해 shell_plus 실행 &gt; Post = get_user_model()	# 생성된 모델의 user table 불러오기 &gt; post = Post.objects.all()	# user table의 모든 값 가져오기 &gt; for i in post:	# for문으로 user table값 순환 &gt; print(i)	# user table 값 출력   하면 연결된 모델의 값을 확인할 수 있다.</div><div class="post-footer">
-        <a href="/django_05_check-db-connection/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/django/">Django</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/staticvsdynamic_link/">정적(Static) 링크 Vs 동적(Dynamic) 링크</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-09-06">2021-09-06</time></span>&nbsp;<span class="post-category">included in <a href="/categories/link/"><i class="far fa-folder fa-fw"></i>Link</a></span></div><div class="content">​
 정적(Static) 링크 Vs 동적(Dynamic) 링크 ​
@@ -151,6 +140,15 @@ License  실무를 담당하고 있다면, 새로운 프로젝트에 앞서 어�
 &ldquo;MIT 라이선스(MIT License)는 미국 매사추세츠 공과대학교(MIT)에서 해당 대학의 소프트웨어 공학도들을 돕기 위해 개발한 라이선스다.</div><div class="post-footer">
         <a href="/00_license/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/license/">license</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/vue_devinfo/">Vue_DevInfo</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-08-08">2021-08-08</time></span>&nbsp;<span class="post-category">included in <a href="/categories/vue/"><i class="far fa-folder fa-fw"></i>vue</a></span></div><div class="content">​
+Vue Dev_Info  Vue 개발을 하면서 알게 된(깨닫게 된) 내용을 정리해 기록합니다.
+ ​
+1. Vuex 동작에 대한 고찰  개인적으로 DB의 자료를 가져오는데 5개 이상의 테이블에서 DB를 가져오고, 이를 종합해 새로운 리스트 혹은 데이터를 만들어야 한다면 무조건 vuex의 사용을 추천합니다. 다만, vuex를 사용하는데 일반적으로 알려진 단계를 지켜야 하는 이유와 방법에 대하여 정리합니다.
+  위의 그래프를 보면 .vue 파일에서 .dispatch()를 사용에 vuex의 store.js에 등록된 actions의 함수를 동작하는 신호를 보냅니다.</div><div class="post-footer">
+        <a href="/vue_devinfo/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/vue/">vue</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
