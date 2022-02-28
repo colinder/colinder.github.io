@@ -3,9 +3,21 @@
         <title></title>
         <link>https://colinder.github.io/</link>
         <description>Hello New World</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 25 Feb 2022 12:20:35 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 28 Feb 2022 09:23:51 &#43;0900</lastBuildDate>
             <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>What is ES2015?</title>
+    <link>https://colinder.github.io/what_is_es2015/</link>
+    <pubDate>Mon, 28 Feb 2022 09:23:51 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/what_is_es2015/</guid>
+    <description><![CDATA[​
+What is ES2015?  웹 개발 도구와 내용을 정리하다보면 등장하던 ES2015. 그냥 어떤 느낌의 단어인지 어렴풋이 알고만 있다가 확실하게 정리해 알아두고 싶어 내용을 정리합니다.
+ ​
+​
+​
+우선 javaScript에 대하여 조금 알아봅시다.  javaScript는 프로그래밍 언어입니다. 프로그래밍 언어는 지금도 꾸준히 개선되고 발전됩니다. 계속 변화하고 있기에 특정 시기에 개발된 상태를 1.2.1과 같이 버전으로 등록해 배포합니다. 자바스크립트는 결점이 상당히 많은 언어였고, 사용자들이 직접 결점을 보완하는 방법으로 발전되어 왔는데, **ECMA(European Computer Manufacturer&rsquo;s Association)**라는 단체에서 기존의 결점을 보완한 표준 자바스크립트 버전을 매년 발표하게 됩니다.]]></description>
+</item><item>
     <title>What is Web Socket?</title>
     <link>https://colinder.github.io/what_is_web_socket/</link>
     <pubDate>Fri, 25 Feb 2022 12:20:35 &#43;0900</pubDate>
@@ -24,7 +36,7 @@ What is Web Socket?  Web 통신은 무조건 두 단계를 걸쳐 동작합니�
 Local Storage와 Session Storage의 차이 를 알아보기 전에
 ​
 ​
- &lsquo;Storage(web storage)&rsquo; 란 무엇인지 우선 알아봅시다.  HTML5에서 등장한 웹의 데이터를 클라이언트에 저장할 수 있는 기능
+ &lsquo;Storage(web storage)&lsquo;란 무엇인지 우선 알아봅시다.  HTML5에서 등장한 웹의 데이터를 클라이언트에 저장할 수 있는 기능
  인터넷상의 통신을 하는데 어떤 자료를 가지고 있어야 한다거나, 나의 정보(유저정보)를 관리하는 등의 데이터 관리를 위한 저장소 기능. 그리고 storage는 두 가지 종류가 존재
 ​
 ​
@@ -84,6 +96,7 @@ vue typescript_$refs error    Object is possibly &lsquo;undefined&rsquo;
     <description><![CDATA[​
 What is Boxplot?  데이터 분석을 진행하면서 다른 분들의 분석 레퍼런스를 보며 공부하다보니 많은 분들이 boxplot을 사용하는 것을 보았습니다. 다만, 저는 그 박스가 어떤 경우에 사용하는 것인지? 어떤 의미로 그려지는 것인지? 어떻게 해석하면 좋은지? 개념이 약했기 때문에 내용을 정리해보겠습니다.
  ​
+​
 Box Plot  최댓값, 최솟값, 중앙값, 사분편차를 사용하여 자료의 측정값들이 어떤 모양으로 분포되어 있으며, 극단값들은 어떠한지 등을 쉽게 알 수 있도록 하는 그림이다. 자료들이 비대칭으로 분포되어 있을 경우에는 상자그림을 그려 극단값의 개수, 비대칭 여부 등을 파악할 수 있으므로 측정값들의 중심위치와 산포도의 척도로 사용할 수 있다.]]></description>
 </item><item>
     <title>Django_11_simple_JWT</title>
@@ -109,22 +122,5 @@ python만 할 줄 안다면 어렵지 않게 사용이 가능하지만, 그래�
  ​
 What is Numpy(Numerical Python)?  공식문서를 따르면,
 NumPy is the fundamental package for scientific computing in Python. It is a Python library that provides a multidimensional array object, various derived objects (such as masked arrays and matrices), and an assortment of routines for fast operations on arrays, including mathematical, logical, shape manipulation, sorting, selecting, I/O, discrete Fourier transforms, basic linear algebra, basic statistical operations, random simulation and much more.]]></description>
-</item><item>
-    <title>MariaDB 외부접속 허용</title>
-    <link>https://colinder.github.io/mariadb_share/</link>
-    <pubDate>Wed, 03 Nov 2021 11:19:43 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/mariadb_share/</guid>
-    <description><![CDATA[​
-MariaDB 외부 접속 허용  해당 MariaDB 공유는 root PC에서 진행하는 것이며, 외부에서 접속할 client는 별도로 설정할 건 없습니다.
-또한 무조건 이 방법이 맞다!라기보다는 제가 이렇게 하니 외부 접속이 되었다. 는 경험의 기록입니다.
- ​
-MySQL Client를 실행합니다.
-​
-실행하면 아래와 같은 초기 화면에 진입합니다.
-​
-MariaDB 설치를 진행하면서 등록한 password입력하면 아래와 같은 화면이 나옵니다.
-​
-초기 접속의 경우, DB table이 &lsquo;none&rsquo;으로 설정되어 있는데, **공유를 원하는 table로 설정을 바꿔줍니다. **]]></description>
 </item></channel>
 </rss>

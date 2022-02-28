@@ -13,7 +13,7 @@
 
 ---
 
-## 'Storage(web storage)' 란 무엇인지 우선 알아봅시다.
+## 'Storage(web storage)'란 무엇인지 우선 알아봅시다.
 
 > HTML5에서 등장한 웹의 데이터를 클라이언트에 저장할 수 있는 기능
 

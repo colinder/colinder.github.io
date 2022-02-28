@@ -3,7 +3,19 @@
         <title>web - Tag - </title>
         <link>https://colinder.github.io/tags/web/</link>
         <description>web - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 25 Feb 2022 12:20:35 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/web/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 28 Feb 2022 09:23:51 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/web/" rel="self" type="application/rss+xml" /><item>
+    <title>What is ES2015?</title>
+    <link>https://colinder.github.io/what_is_es2015/</link>
+    <pubDate>Mon, 28 Feb 2022 09:23:51 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/what_is_es2015/</guid>
+    <description><![CDATA[​
+What is ES2015?  웹 개발 도구와 내용을 정리하다보면 등장하던 ES2015. 그냥 어떤 느낌의 단어인지 어렴풋이 알고만 있다가 확실하게 정리해 알아두고 싶어 내용을 정리합니다.
+ ​
+​
+​
+우선 javaScript에 대하여 조금 알아봅시다.  javaScript는 프로그래밍 언어입니다. 프로그래밍 언어는 지금도 꾸준히 개선되고 발전됩니다. 계속 변화하고 있기에 특정 시기에 개발된 상태를 1.2.1과 같이 버전으로 등록해 배포합니다. 자바스크립트는 결점이 상당히 많은 언어였고, 사용자들이 직접 결점을 보완하는 방법으로 발전되어 왔는데, **ECMA(European Computer Manufacturer&rsquo;s Association)**라는 단체에서 기존의 결점을 보완한 표준 자바스크립트 버전을 매년 발표하게 됩니다.]]></description>
+</item><item>
     <title>What is Web Socket?</title>
     <link>https://colinder.github.io/what_is_web_socket/</link>
     <pubDate>Fri, 25 Feb 2022 12:20:35 &#43;0900</pubDate>
@@ -22,7 +34,7 @@ What is Web Socket?  Web 통신은 무조건 두 단계를 걸쳐 동작합니�
 Local Storage와 Session Storage의 차이 를 알아보기 전에
 ​
 ​
- &lsquo;Storage(web storage)&rsquo; 란 무엇인지 우선 알아봅시다.  HTML5에서 등장한 웹의 데이터를 클라이언트에 저장할 수 있는 기능
+ &lsquo;Storage(web storage)&lsquo;란 무엇인지 우선 알아봅시다.  HTML5에서 등장한 웹의 데이터를 클라이언트에 저장할 수 있는 기능
  인터넷상의 통신을 하는데 어떤 자료를 가지고 있어야 한다거나, 나의 정보(유저정보)를 관리하는 등의 데이터 관리를 위한 저장소 기능. 그리고 storage는 두 가지 종류가 존재
 ​
 ​
@@ -111,20 +123,5 @@ Interpreter VS Compiler_Language  web 개발을 하다보면 javascript를 공�
  ​
 뜬금없이 프로그래밍 언어란 무엇인지 우선 알아봅시다. 컴퓨터는 이진수만 이해할 수 있습니다. 즉 컴퓨터는 우리가 사용하는 언어가 아닌 &lsquo;0&rsquo;, &lsquo;1&rsquo;만 이해합니다.
 근데 이게 프로그래밍 언어랑 무슨 상관일까요? 상관이 아주 많습니다&hellip;ㅎ.. 프로그래밍 언어로 프로그램을 만들고 실행 할 때 우리는 &lsquo;0&rsquo;, &lsquo;1&rsquo; 같은 명령어로 코딩을 하지 않습니다.]]></description>
-</item><item>
-    <title>React-Native_google login</title>
-    <link>https://colinder.github.io/react-native_googlelogin/</link>
-    <pubDate>Thu, 29 Oct 2020 23:13:25 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/react-native_googlelogin/</guid>
-    <description><![CDATA[​
-React-Native google login  서비스를 개발하다보면 로그인 기능이 새삼 대단해보입니다. 신경쓸 것도 많고, 하지만 이런 수고를 sns로그인 기능으로 대신한다면 편의성이 많이 높아집니다. 하여 해보겠습니다.
- *google login을 하기 위해 firebase(모바일 및 웹 애플리케이션 개발 플랫폼)을 사용합니다.
-  개발환경
-  npm으로 진행
-  react-native_cli (✨expo로 진행하지 않습니다.)
-  android 기준
-  함수형 컴포넌트로 진행 (✨ 클래스 컴포넌트로 진행하지 않습니다.)
-  RN 버전 0.60이상에서 진행]]></description>
 </item></channel>
 </rss>
