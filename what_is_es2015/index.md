@@ -27,7 +27,7 @@
 
 ES는 자바스크립트를 이루는 코어(Core)스크립트 언어로써, 다양한 환경에서 운용될 수 있게 확장성을 갖고 있다. 확장성의 대표적인 예로 웹 브라우저에서 javaScript가 동작할 수 있도록 *BOM과 [DOM](https://colinder.github.io/what_is_dom/)을 함께 사용하는 확장성이 있다. 이러한 확장성들은 ES버전에 따른 문법과 기능의 확장을 가능하게 한다.
 
-<p style='text-align:right; font-style:italic; color:grey'>*BOM(Browser Object Model) –  javaScript가 browser와 소통하기 위해 만들어진 모델, window 객체를 통해 접근</p>
+<p style='text-align:right; font-style:italic; color:grey'>*BOM(Browser Object Model)<br>javaScript가 browser와 소통하기 위해 만들어진 모델, window 객체를 통해 접근</p>
 
 ​	
 
