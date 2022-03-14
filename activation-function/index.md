@@ -88,7 +88,7 @@ _<b>선형함수(직선 그래프로 표현되는 함수)를 사용하면 Layer(
 
 ​	
 
-### <center>🔗 Binary Step function</center>
+### <center><span style="color:green">🔗 Binary Step function</span></center>
 
 <image src="/images/Activation_Function_00.png" width="600px" style="display: block; margin: 20px auto">
 
@@ -112,7 +112,7 @@ _<b>선형함수(직선 그래프로 표현되는 함수)를 사용하면 Layer(
 
 ​	
 
-### <center>🔗 Sigmoid function</center>
+### <center><span style="color:red">🔗 Sigmoid function</span></center>
 
 <image src="/images/Activation_Function_01.png" width="600px" style="display: block; margin: 20px auto">
 
@@ -145,7 +145,7 @@ _<b>선형함수(직선 그래프로 표현되는 함수)를 사용하면 Layer(
 
 ​	
 
-### <center>🔗 Tanh(Hyperbolic tangent) function</center>
+### <center><span style="color:blue">🔗 Tanh(Hyperbolic tangent) function</span></center>
 
 <image src="/images/Activation_Function_02.png" width="600px" style="display: block; margin: 20px auto">
 
@@ -180,7 +180,7 @@ _<b>선형함수(직선 그래프로 표현되는 함수)를 사용하면 Layer(
 
 ​	
 
-### <center>🔗 Softmax function</center>
+### <center><span style="color:skyblue">🔗 Softmax function</span></center>
 
 <image src="/images/Activation_Function_04.png" width="300px" style="display: block; margin: 40px auto">
 
@@ -220,7 +220,7 @@ _<b>선형함수(직선 그래프로 표현되는 함수)를 사용하면 Layer(
 
 ​	
 
-### <center>🔗 ReLU(Rectified Linear Unit) function</center>
+### <center><span style="color:orange">🔗 ReLU(Rectified Linear Unit) function</span></center>
 
 <image src="/images/Activation_Function_05.png" width="600px" style="display: block; margin: 40px auto">
 
@@ -253,7 +253,7 @@ _<b>선형함수(직선 그래프로 표현되는 함수)를 사용하면 Layer(
 
 ​	
 
-### <center>🔗 Leaky ReLU function</center>
+### <center><span style="color:#c59d3e">🔗 Leaky ReLU function</span></center>
 
 <image src="/images/Activation_Function_06.png" width="600px" style="display: block; margin: 40px auto">
 
