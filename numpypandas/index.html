@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Numpy &amp; Pandas - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="Numpy &amp; Pandas" />
+<meta property="og:description" content="​
+Numpy  ML, AI 등 개발을 진행하다보면 무지성으로 import하는 library가 있다.
+import numpy as np
+python만 할 줄 안다면 어렵지 않게 사용이 가능하지만, 그래도 numpy의 개념을 알고 진행하고 싶은 마음에 내용을 정리해보자
+ ​
+What is Numpy(Numerical Python)?  공식문서를 따르면,
+NumPy is the fundamental package for scientific computing in Python. It is a Python library that provides a multidimensional array object, various derived objects (such as masked arrays and matrices), and an assortment of routines for fast operations on arrays, including mathematical, logical, shape manipulation, sorting, selecting, I/O, discrete Fourier transforms, basic linear algebra, basic statistical operations, random simulation and much more." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://colinder.github.io/numpypandas/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-12-15T14:29:31&#43;09:00" />
+<meta property="article:modified_time" content="2021-12-15T14:29:31&#43;09:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
+
+<meta name="twitter:title" content="Numpy &amp; Pandas"/>
+<meta name="twitter:description" content="​
+Numpy  ML, AI 등 개발을 진행하다보면 무지성으로 import하는 library가 있다.
+import numpy as np
+python만 할 줄 안다면 어렵지 않게 사용이 가능하지만, 그래도 numpy의 개념을 알고 진행하고 싶은 마음에 내용을 정리해보자
+ ​
+What is Numpy(Numerical Python)?  공식문서를 따르면,
+NumPy is the fundamental package for scientific computing in Python. It is a Python library that provides a multidimensional array object, various derived objects (such as masked arrays and matrices), and an assortment of routines for fast operations on arrays, including mathematical, logical, shape manipulation, sorting, selecting, I/O, discrete Fourier transforms, basic linear algebra, basic statistical operations, random simulation and much more."/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/numpypandas/" /><link rel="prev" href="https://colinder.github.io/mariadb_share/" /><link rel="next" href="https://colinder.github.io/django_11_simple_jwt/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Numpy \u0026 Pandas",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/colinder.github.io\/numpypandas\/"
+        },"genre": "posts","keywords": "Numpy, Pandas","wordcount":  540 ,
+        "url": "https:\/\/colinder.github.io\/numpypandas\/","datePublished": "2021-12-15T14:29:31+09:00","dateModified": "2021-12-15T14:29:31+09:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "colinder"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="">Hello New World</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="">Hello New World</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Numpy &amp; Pandas</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/numpy/"><i class="far fa-folder fa-fw"></i>Numpy</a>&nbsp;<a href="/categories/pandas/"><i class="far fa-folder fa-fw"></i>Pandas</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-12-15">2021-12-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;540 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-unumpyunumerical-python">What is <u>Numpy</u>(Numerical Python)?</a>
+      <ul>
+        <li><a href="#특징">특징</a></li>
+      </ul>
+    </li>
+    <li><a href="#scalar-">Scalar ?</a></li>
+    <li><a href="#vector-">Vector ?</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#여기서-잠깐-">여기서 잠깐! ✋</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#matrix-">Matrix ?</a></li>
+    <li><a href="#tensor-">Tensor ?</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#what-is-upandasupython-data-analysis">What is <u>Pandas</u>(Python data analysis)?</a></li>
+    <li><a href="#series">Series</a></li>
+    <li><a href="#dataframe">DataFrame</a></li>
+    <li><a href="#series--dataframe의-관계">Series &amp; DataFrame의 관계</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>​</p>
+<h1 id="numpy">Numpy</h1>
+<blockquote>
+<p>ML, AI 등 개발을 진행하다보면 무지성으로 import하는 library가 있다.</p>
+<p><strong>import numpy as np</strong></p>
+<p>python만 할 줄 안다면 어렵지 않게 사용이 가능하지만, 그래도 numpy의 개념을 알고 진행하고 싶은 마음에 내용을 정리해보자</p>
+</blockquote>
+<p>​</p>
+<h2 id="what-is-unumpyunumerical-python">What is <u>Numpy</u>(Numerical Python)?</h2>
+<blockquote>
+<p>공식문서를 따르면,<br>
+NumPy is the fundamental package for scientific computing in Python. It is a Python library that provides a multidimensional array object, various derived objects (such as masked arrays and matrices), and an assortment of routines for fast operations on arrays, including mathematical, logical, shape manipulation, sorting, selecting, I/O, discrete Fourier transforms, basic linear algebra, basic statistical operations, random simulation and much more.</p>
+</blockquote>
+<ol>
+<li>
+<p>NumPy는 python의 과학 컴퓨팅(scientific computing)을 위한 기본 패키지</p>
+<ul>
+<li><em>scientific computing: <strong>과학</strong> 및 <strong>공학</strong> 문제의 수학적 모델을 컴퓨터로 푸는 데 필요한 도구, 기술 및 이론의 모음</em></li>
+</ul>
+</li>
+<li>
+<p>&lsquo;다차원 배열&rsquo; 여기서 &lsquo;파생되는 객체&rsquo; 및 &lsquo;수학&rsquo;, &lsquo;논리&rsquo;, &lsquo;기본 선형대수&rsquo; 등을 지원하는 python library</p>
+<p>​</p>
+</li>
+</ol>
+<blockquote>
+<p>At the core of the NumPy package, is the <em>ndarray</em> object. This encapsulates <em>n</em>-dimensional arrays of homogeneous data types, with many operations being performed in compiled code for performance.</p>
+</blockquote>
+<ul>
+<li>
+<p>Numpy의 핵심은 ndarray 객체이며, 이는</p>
+</li>
+<li>
+<p>코드의 빠른 처리를 위해 <strong>동일 데이터 타입</strong>의 n차원 배열을 캡슐화한다. == 하나의 데이터 타입만 배열에 넣을 수 있다.</p>
+<image src="/images/numpy.assets/image-20211214131438955.png" width="1000px" style="display: block;">
+<p>​</p>
+</li>
+</ul>
+<h3 id="특징">특징</h3>
+<ul>
+<li>
+<p>일반 리스트에 비해 빠르고 효율적</p>
+</li>
+<li>
+<p>반복문 없이 데이터 배열에 대한 처리 지원</p>
+</li>
+<li>
+<p>선형대수와 관련된 다양한 기능을 제공</p>
+</li>
+<li>
+<p><u>Scalar</u>, <u>Vector</u>, <u>Matrix</u>, <u>Tensor</u> 형태의 데이터를 다루기 좋음.</p>
+<ul>
+<li>numpy에서 제공하는 데이터 형태</li>
+</ul>
+<p>​</p>
+<p>​</p>
+</li>
+</ul>
+<h2 id="scalar-">Scalar ?</h2>
+<blockquote>
+<p>Scalar는 <strong>0차원 데이터</strong></p>
+</blockquote>
+<image src="/images/numpy.assets/image-20211214140958930.png" width="800px" style="display: block;">
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<h2 id="vector-">Vector ?</h2>
+<blockquote>
+<p>Vector는 <strong>1차원 데이터</strong></p>
+</blockquote>
+<image src="/images/numpy.assets/image-20211214140922463.png" width="800px" style="display: block;">
+<p>​</p>
+<hr>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>다음과 같이 배열을 시각화할 수 있습니다.</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://numpy.org/doc/stable/_images/np_array.png"
+        data-srcset="https://numpy.org/doc/stable/_images/np_array.png, https://numpy.org/doc/stable/_images/np_array.png 1.5x, https://numpy.org/doc/stable/_images/np_array.png 2x"
+        data-sizes="auto"
+        alt="https://numpy.org/doc/stable/_images/np_array.png"
+        title="../_이미지/np_array.png" /></p>
+<h4 id="여기서-잠깐-">여기서 잠깐! ✋</h4>
+<image src="/images/numpy.assets/image-20211214133421746.png" width="800px" style="display: block;">
+<ul>
+<li>d는 <b>5행 1열</b>이 맞습니다. <em>다만 출력된 화면은 <b>1행 5열</b>로 보입니다.</em></li>
+<li>e는 <b>2행 5열</b>이 맞습니다. 출력된 화면대로 이해하면 됩니다.</li>
+</ul>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<h2 id="matrix-">Matrix ?</h2>
+<blockquote>
+<p>Matrix는 <b>2차원(행, 열) 데이터</b></p>
+</blockquote>
+<image src="/images/numpy.assets/image-20211214141907385.png" width="800px">
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<h2 id="tensor-">Tensor ?</h2>
+<blockquote>
+<p>Tensor는 <b>3차원 이상의 다차원 행렬 데이터</b></p>
+</blockquote>
+<image src="/images/numpy.assets/image-20211214142202572.png" width="800px">
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>추가로 Numpy와 비슷하지만 사용법 및 용도가 다른 Library 하나를 더 정리해보자</p>
+<h1 id="pandas">Pandas</h1>
+<blockquote>
+<p><strong>import pandas as pd</strong></p>
+<p>역시 무지성으로 입력하고 시작하게 되는 코드이다. pandas의 용도는 무엇인지? numpy와의 차이는 무엇인지 알아보자</p>
+</blockquote>
+<p>​</p>
+<h2 id="what-is-upandasupython-data-analysis">What is <u>Pandas</u>(Python data analysis)?</h2>
+<blockquote>
+<p><code>[pandas</code>](<a href="https://pandas.pydata.org/docs/#module-pandas">https://pandas.pydata.org/docs/#module-pandas</a>) is an open source, BSD-licensed library providing high-performance, easy-to-use data structures and data analysis tools for the <a href="https://www.python.org/" target="_blank" rel="noopener noreffer">Python</a> programming language.</p>
+</blockquote>
+<p>겸손한 pandas 공식문서 설명이다. 하여 추가로 Wikipedia의 내용을 조금 더 보면</p>
+<blockquote>
+<p><strong>pandas</strong> is a <a href="https://en.wikipedia.org/wiki/Software_library" target="_blank" rel="noopener noreffer">software library</a> written for the <a href="https://en.wikipedia.org/wiki/Python_%28programming_language%29" target="_blank" rel="noopener noreffer">Python programming language</a> for data manipulation and <a href="https://en.wikipedia.org/wiki/Data_analysis" target="_blank" rel="noopener noreffer">analysis</a>. In particular, it offers <a href="https://en.wikipedia.org/wiki/Data_structure" target="_blank" rel="noopener noreffer">data structures</a> and operations for manipulating numerical tables and <a href="https://en.wikipedia.org/wiki/Time_series" target="_blank" rel="noopener noreffer">time series</a>.</p>
+</blockquote>
+<ul>
+<li>
+<p>특히 숫자 테이블과 <a href="https://en.wikipedia.org/wiki/Time_series" target="_blank" rel="noopener noreffer">시계열</a>을 조작하기 위한 <a href="https://en.wikipedia.org/wiki/Data_structure" target="_blank" rel="noopener noreffer">데이터 구조</a> 와 연산을 제공하며 이에 특화된 library.</p>
+</li>
+<li>
+<p>역시 제공하는 데이터 형태를 알면 좋은데, <u>Series</u>, <u>DataFrame</u> 두 가지가 대표적.</p>
+<p>​</p>
+</li>
+</ul>
+<h2 id="series">Series</h2>
+<blockquote>
+<p>1차원 형태의 데이터,</p>
+</blockquote>
+<ul>
+<li>
+<p>numpy array 와 유사</p>
+<ul>
+<li>차이점 - numpy 와 달리 Series 는 axis (행, 열)에 label 을 부여할 수 있다. 즉, numpy 와 같이 숫자로만 indexing 하는 것이 아니라 label 명으로 indexing 을 할 수 있다. 또한 숫자 뿐 아니라 임의의 Python object 를 모두 element 로 가질 수 있다.</li>
+</ul>
+</li>
+<li>
+<p>list, numpy array, dictionary 를 모두 Series 로 변환할 수 있다.</p>
+</li>
+<li>
+<p>dictionary 의 경우 &ldquo;key&quot;가 label, &ldquo;value&quot;가 value로 변환된다.</p>
+<p>​</p>
+<p>​</p>
+</li>
+</ul>
+<h2 id="dataframe">DataFrame</h2>
+<blockquote>
+<p>2차원(table) 형태의 데이터</p>
+</blockquote>
+<ul>
+<li>
+<p>python program 안의 excel.</p>
+</li>
+<li>
+<p>DataFrame 은 여러개의 Series 를 같은 index 기준으로 모아 Table 을 만든 것.</p>
+<p>​</p>
+<p>​</p>
+</li>
+</ul>
+<h2 id="series--dataframe의-관계">Series &amp; DataFrame의 관계</h2>
+<ul>
+<li>구조적인 관계</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://www.datasciencemadesimple.com/wp-content/uploads/2020/05/create-series-in-python-pandas-0.png?ezimgfmt=ng%3Awebp%2Fngcb1%2Frs%3Adevice%2Frscb1-1"
+        data-srcset="https://www.datasciencemadesimple.com/wp-content/uploads/2020/05/create-series-in-python-pandas-0.png?ezimgfmt=ng%3Awebp%2Fngcb1%2Frs%3Adevice%2Frscb1-1, https://www.datasciencemadesimple.com/wp-content/uploads/2020/05/create-series-in-python-pandas-0.png?ezimgfmt=ng%3Awebp%2Fngcb1%2Frs%3Adevice%2Frscb1-1 1.5x, https://www.datasciencemadesimple.com/wp-content/uploads/2020/05/create-series-in-python-pandas-0.png?ezimgfmt=ng%3Awebp%2Fngcb1%2Frs%3Adevice%2Frscb1-1 2x"
+        data-sizes="auto"
+        alt="https://www.datasciencemadesimple.com/wp-content/uploads/2020/05/create-series-in-python-pandas-0.png?ezimgfmt=ng%3Awebp%2Fngcb1%2Frs%3Adevice%2Frscb1-1"
+        title="create series in python pandas 0" /></p>
+<p>​</p>
+<ul>
+<li>
+<p>Index관점의 Pandas 구조</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://bookdata.readthedocs.io/en/latest/_images/base_01_pandas_5_0.png"
+        data-srcset="https://bookdata.readthedocs.io/en/latest/_images/base_01_pandas_5_0.png, https://bookdata.readthedocs.io/en/latest/_images/base_01_pandas_5_0.png 1.5x, https://bookdata.readthedocs.io/en/latest/_images/base_01_pandas_5_0.png 2x"
+        data-sizes="auto"
+        alt="https://bookdata.readthedocs.io/en/latest/_images/base_01_pandas_5_0.png"
+        title="../_images/base_01_pandas_5_0.png" /></p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+</li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2021-12-15</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/numpypandas/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/numpy/">Numpy</a>,&nbsp;<a href="/tags/pandas/">Pandas</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/mariadb_share/" class="prev" rel="prev" title="MariaDB 외부접속 허용"><i class="fas fa-angle-left fa-fw"></i>MariaDB 외부접속 허용</a>
+            <a href="/django_11_simple_jwt/" class="next" rel="next" title="Django_11_simple_JWT">Django_11_simple_JWT<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://colinder-github-io.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

@@ -1,0 +1,26 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>variance - Category - </title>
+        <link>https://colinder.github.io/categories/variance/</link>
+        <description>variance - Category - </description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 14 Mar 2022 16:34:16 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/variance/" rel="self" type="application/rss+xml" /><item>
+    <title>편향(Bias) &amp; 분산(Variance)</title>
+    <link>https://colinder.github.io/biasvariance/</link>
+    <pubDate>Mon, 14 Mar 2022 16:34:16 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/biasvariance/</guid>
+    <description><![CDATA[​
+편향(Bias)과 분산(Variance)  인공지능 모델링을 하면 정답을 맞추기 위해 컴퓨터는 여러 번의 예측값을 내놓는데, 컴퓨터가 내놓은 예측값의 동태를 묘사하는 표현이 &lsquo;편향&rsquo;과 &lsquo;분산&rsquo;입니다.
+ ​
+​
+​
+🤔결론부터 말하자면 예측값들과 정답이 대체로 멀리 떨어져 있으면 편향이 놓다고 말하고,
+예측값들이 서로 멀리 흩어져 있으면 분산이 높다고 말합니다.
+​
+​
+​
+아래 그림을 보면 왼쪽 상단 과녁은
+예측값들이 대체로 정답 근방에서 왔다갔다 합니다. &gt; 편향이 낮습니다.
+예측값들끼리 서로 몰려 있습니다. &gt; 분산이 낮습니다.]]></description>
+</item></channel>
+</rss>

@@ -5,10 +5,10 @@
         <description>Collaborative filtering - Tag - </description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 16 Jun 2021 15:02:22 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/collaborative-filtering/" rel="self" type="application/rss+xml" /><item>
     <title>Collaborative filtering by auto Encoder</title>
-    <link>https://colinder.github.io/collaborative-filtering-by-auto-encoder/</link>
+    <link>https://colinder.github.io/collaborative_filtering_by_autoencoder/</link>
     <pubDate>Wed, 16 Jun 2021 15:02:22 &#43;0900</pubDate>
     <author>Author</author>
-    <guid>https://colinder.github.io/collaborative-filtering-by-auto-encoder/</guid>
+    <guid>https://colinder.github.io/collaborative_filtering_by_autoencoder/</guid>
     <description><![CDATA[​
 Collaborative filtering by auto Encoder  협업필터링을 딥러닝 방식의 하나인 오토 인코더로 구현하는데 알아두어야 할 배경지식에 대하여 정리
  ​
