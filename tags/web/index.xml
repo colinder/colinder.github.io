@@ -3,7 +3,19 @@
         <title>web - Tag - </title>
         <link>https://colinder.github.io/tags/web/</link>
         <description>web - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 01 Mar 2022 09:17:44 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/web/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 15 Mar 2022 13:23:41 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/web/" rel="self" type="application/rss+xml" /><item>
+    <title>What is Babel?</title>
+    <link>https://colinder.github.io/what_is_babel/</link>
+    <pubDate>Tue, 15 Mar 2022 13:23:41 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/what_is_babel/</guid>
+    <description><![CDATA[​
+Babel이란?  Babel은 최신 명세(또는 ES2015 이상)의 문법을 구형 브라우저에서도 동작하는 코드로 *트랜스파일해주는 개발 도구입니다.
+만약 Babel이 없다면? 구형 브라우저에서 동작할 수 있는 방식으로 웹 개발을 하고, 최신 브라우저에서 동작할 수 있는 방식으로 다시 개발해야 하는 상황이 발생합니다. 즉 구형 브라우저의 지원이 필요한 프런트엔드 프로젝트라면 현재 Babel의 사용은 필수입니다.
+ ​
+*트랜스파일러?
+ES2015 등장 이후로 javascript는 class문법, 화살표 함수, 모듈 도입 등 많은 변화가 있었습니다. 이후에도 동기, 비동기처리를 위한 async &amp; await, optional 등 다양한 문법과 편의성 높은 기술들이 추가되고 있습니다.]]></description>
+</item><item>
     <title>What is webpack?</title>
     <link>https://colinder.github.io/what_is_webpack/</link>
     <pubDate>Tue, 01 Mar 2022 09:17:44 &#43;0900</pubDate>
@@ -109,18 +121,5 @@ HTTP vs HTTPS  웹개발 프로젝트를 하면서 인터넷 주소창(URL)을 �
  ​
 뜬금없이 URL란 무엇인지 우선 알아봅시다. 우리가 &lsquo;인터넷 주소창&rsquo;이라고 흔히 말하는 URL은 Uniform Resource Locator, 자원 위치 규약? 정도로 이해하면 좋을 것 같습니다.
 우리가 사는 주소를 잠시 생각해봅시다. 먼저, 대한민국안에 서울특별시에 있는 강남구를 생각해보면 대한민국이라는 국가에서 서울특별시라는 위치로 그리고 그 안에 강남구로 범위를 좁히며 구체적인 위치를 생각할 수 있습니다.]]></description>
-</item><item>
-    <title>what is Domain</title>
-    <link>https://colinder.github.io/what_is_domain/</link>
-    <pubDate>Mon, 23 Nov 2020 12:47:53 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/what_is_domain/</guid>
-    <description><![CDATA[​
-도메인(domain)이란?  도메인의 뜻은 무엇일까요? 어찌저찌 설명할 순 있지만, 확신을 가지고 정확하게 답할 수 없었기에 정리해보겠습니다.
- ​
-이번에도 뜬금없이 &lsquo;IP&rsquo; 란 무엇인지 우선 알아봅시다. IP는 Internet Protocol의 약자로 인터넷에 연결되어 있는 장치(컴퓨터, 스마트폰, 타블릿, 서버 등등)들은 각각의 장치를 식별할 수 있는 주소를 가지고 있는데 이를 ip라고 합니다. 간단히 각 장치(device)들의 주민등록번호라고 생각하면 이해하는데 도움이 됩니다.
-ex) 125.209.222.141, 172.217.175.238
-​
-도메인(domain)이란? ip는 사람이 이해하고 기억하기 어렵기 때문에 쉽게 접근할 수 있게 각 ip에 고유한 이름을 부여할 수 있게 했는데, 이것을 도메인이라고 합니다.]]></description>
 </item></channel>
 </rss>
