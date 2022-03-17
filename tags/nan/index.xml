@@ -1,0 +1,20 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Nan - Tag - </title>
+        <link>https://colinder.github.io/tags/nan/</link>
+        <description>Nan - Tag - </description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 17 Mar 2022 17:12:00 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/nan/" rel="self" type="application/rss+xml" /><item>
+    <title>모델 학습 시 loss가 Nan으로 나올 때 해결법</title>
+    <link>https://colinder.github.io/loss_nan_solution/</link>
+    <pubDate>Thu, 17 Mar 2022 17:12:00 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/loss_nan_solution/</guid>
+    <description><![CDATA[​
+모델 학습 시 loss 값이 Nan으로 나올 때 해결 방법   if df == pandas.DataFrame() df.isnull().any()로 데이터셋에 NaN이나 inf 값이 들어있는지 확인한다.
+  다른 optimizer들을 사용해본다. (ex. sgd, adam, nadam)
+  다른 activation function을 사용해본다.
+ 사용하는 모델마다 적합한 activation function이 있습니다. 즉. 모델에 대하여 공부해야하고, 적합한 activation function을 찾아 학습해야 합니다.    learning rate(학습률)을 낮춰본다.
+  learnin rate는 batch_size와 연관이 있습니다.
+  러닝레이트 줄이기 vs 배치사이즈 키우기]]></description>
+</item></channel>
+</rss>
