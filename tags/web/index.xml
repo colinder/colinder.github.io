@@ -3,7 +3,20 @@
         <title>web - Tag - </title>
         <link>https://colinder.github.io/tags/web/</link>
         <description>web - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 15 Mar 2022 13:23:41 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/web/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 18 Mar 2022 13:28:48 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/web/" rel="self" type="application/rss+xml" /><item>
+    <title>what is Linter?</title>
+    <link>https://colinder.github.io/what_is_linter/</link>
+    <pubDate>Fri, 18 Mar 2022 13:28:48 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/what_is_linter/</guid>
+    <description><![CDATA[​
+Linter란?  Linter 혹은 Lint는 소스 코드를 분석해 오류나 오타, 잠재적인 버그를 찾아주는 도구입니다.
+javascript는 다른 언어들에 비해 유연한 문법 구조를 갖습니다. 이런 특징은 찾기 어려운 버그를 만들기도하고, 코드를 실행하기 전까지 알 수 없는 오류를 만들기도 합니다.
+Lint를 사용하면 검증을 자동화하여 이런 문제를 예방할 수 있습니다. 가장 많이 사용되는 javascript 린터로는 ESLint와 코드 포맷터인 Prettier, css 린터인 Stylelint가 있습니다.
+ ​
+​
+ESLint 2002년 JSON을 만든 더글라스 크락포드가 자바스크립트 린터인 JSLint를 만들었습니다.]]></description>
+</item><item>
     <title>What is Babel?</title>
     <link>https://colinder.github.io/what_is_babel/</link>
     <pubDate>Tue, 15 Mar 2022 13:23:41 &#43;0900</pubDate>
@@ -110,16 +123,5 @@ form 태그의 고찰   form tag의 inline 요소 중 **&lsquo;action&rsquo;**�
 ​
 jQuery란?  jQuery(제이쿼리)는 HTML의 클라이언트 사이드 조작(ex. 사용자가 어떤 버튼을 누른다. 사용자가 드랍박스에 선택지를 고른다.)을 단순화 하도록 설계된 크로스 플랫폼(여러 종류의 컴퓨터 플랫폼에서 동작할 수 있다는 것)의 자바스크립트 라이브러리다. 존 레식이 2006년 뉴욕 시 바캠프(Barcamp NYC)에서 공식적으로 소개하였다. 출처: 위키백과
 최대한 구체적으로 알아보았는데요. 이 내용이 이해되었다면 다음으로 넘어갑시다.]]></description>
-</item><item>
-    <title>HTTP VS HTTPS</title>
-    <link>https://colinder.github.io/httpvshttps/</link>
-    <pubDate>Tue, 24 Nov 2020 11:28:42 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/httpvshttps/</guid>
-    <description><![CDATA[​
-HTTP vs HTTPS  웹개발 프로젝트를 하면서 인터넷 주소창(URL)을 자주 보게 되었습니다. 그러던 중 HTTP와 HTTPS의 차이를 발견하였고 단순히 HTTPS가 보안이 더 뛰어나서 적용하면 좋다. 정도의 개념만을 가지고 있다, &lsquo;한 번 차이를 깔끔히 정리하면 좋겠다.&rsquo; 싶어 정리해보겠습니다.
- ​
-뜬금없이 URL란 무엇인지 우선 알아봅시다. 우리가 &lsquo;인터넷 주소창&rsquo;이라고 흔히 말하는 URL은 Uniform Resource Locator, 자원 위치 규약? 정도로 이해하면 좋을 것 같습니다.
-우리가 사는 주소를 잠시 생각해봅시다. 먼저, 대한민국안에 서울특별시에 있는 강남구를 생각해보면 대한민국이라는 국가에서 서울특별시라는 위치로 그리고 그 안에 강남구로 범위를 좁히며 구체적인 위치를 생각할 수 있습니다.]]></description>
 </item></channel>
 </rss>
