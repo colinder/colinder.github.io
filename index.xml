@@ -3,9 +3,24 @@
         <title></title>
         <link>https://colinder.github.io/</link>
         <description>Hello New World</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 18 Mar 2022 13:28:48 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 11 Apr 2022 17:19:29 &#43;0900</lastBuildDate>
             <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>How to Data_Scaling</title>
+    <link>https://colinder.github.io/data_scaling/</link>
+    <pubDate>Mon, 11 Apr 2022 17:19:29 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/data_scaling/</guid>
+    <description><![CDATA[​
+데이터 스케일링 (Data Scaling) 이란?  데이터의 값의 범위를 조정하는 것
+ ​
+​
+​
+🤔 왜 데이터 스케일링을 하는가?  데이터의 경향, feature의 영향, 상관관계 등 데이터를 분석하는데 활용할 수 있으며, 인공지능 개발 중 학습단계에서 여러 feature의 영향도를 비슷한 수준으로 맞추기 위해 범위를 조정.
+ ​
+아래 그림을 보면서 이해해보겠습니다.
+과제  여러 feature(성별, 나이, 몸무게, 자산현황)의 특성을 보고 Label을 예측하는 모델을 만든다고 가정  문제점  값의 범위를 보면  성별 0~1, 나이 0~100, 몸무게 0~120, 자산현황 0~700,000,000, Label은 0~800,000,000의 값을 갖는다고 가정한다면,    ​]]></description>
+</item><item>
     <title>what is Linter?</title>
     <link>https://colinder.github.io/what_is_linter/</link>
     <pubDate>Fri, 18 Mar 2022 13:28:48 &#43;0900</pubDate>
@@ -122,14 +137,5 @@ origin(요청이 시작된 서버를 나타내는 URL)이 같을 경우, 여러 
 1 2 3 4 5 6 7  ## 폴더안에 있는 .csv파일 리스트 가져오기 import os path = &#39;/경로/&#39; file_lists = os.listdir(path) file_list_result = [file for file in file_lists if file.endswith(&#39;.csv&#39;)] ## 파일명 끝이 .csv인 경우   ​
 이후 pandas DataFrame에 넣을 때
 1 2 3 4 5 6  import pandas as pd df = pd.]]></description>
-</item><item>
-    <title>Machine VS Deep Learning</title>
-    <link>https://colinder.github.io/machinedeep/</link>
-    <pubDate>Tue, 22 Feb 2022 09:43:00 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/machinedeep/</guid>
-    <description><![CDATA[​
-&lsquo;머신러닝&rsquo;이란 무엇인지 우선 알아봅시다.  머신 러닝(machine learning) 또는 기계 학습(機械學習)은 경험을 통해 자동으로 개선하는 컴퓨터 알고리즘 연구 분야입니다. 이는 인공지능의 한 분야로 간주되며, 컴퓨터가 학습할 수 있도록 하는 알고리즘과 기술을 개발합니다. 예를 들어 &lsquo;이 운동화가 진품이 맞는지?&rsquo;, &lsquo;특정 시간대에 A에서 B까지 가는데 얼마나 시간이 걸리는지?&rsquo;, &lsquo;수신한 메일이 스팸메일인지?&rsquo; 등 표현(representation)과 일반화(generalization)가 핵심인 기술입니다. 표현이란 데이터의 평가이며, 일반화란 아직 알 수 없는 데이터의 처리를 의미합니다.
- 인공지능 ⊃ 머신러닝 ⊃ 딥러닝]]></description>
 </item></channel>
 </rss>
