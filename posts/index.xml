@@ -19,6 +19,22 @@
 아래 그림을 보면서 이해해보겠습니다.
 과제  여러 feature(성별, 나이, 몸무게, 자산현황)의 특성을 보고 Label을 예측하는 모델을 만든다고 가정  문제점  값의 범위를 보면  성별 0, 1 나이 0~100, 몸무게 0~120, 자산현황 0~700,000,000, Label은 0~800,000,000의 값을 갖는다고 가정한다면,    ​]]></description>
 </item><item>
+    <title>Epoch</title>
+    <link>https://colinder.github.io/epoch/</link>
+    <pubDate>Fri, 18 Mar 2022 14:15:59 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/epoch/</guid>
+    <description><![CDATA[​
+Epoch의 의미 1~100의 데이터가 input의 양(x_train)으로 주어졌을 때
+20 epoch를 적용한다는 의미는
+단계별로 설명하자면,
+  1번째 학습(1 epoch) 시작
+  초기화된 가중치(w)와 편향(b)을 가지고 1에 대한 계산 진행 &gt;
+  1을 대입하여 나온 가중치(w) 와 편향(b) 도출
+  2에게 1을 대입하여 나온 가중치(w) 와 편향(b)을 대입하여 새로운 가중치(w)와 편향(b)가 도출
+  3에게 2를 대입하여 나온 가중치(w) 와 편향(b)을 대입하여 새로운 가중치(w)와 편향(b)가 도출
+  &hellip;]]></description>
+</item><item>
     <title>what is Linter?</title>
     <link>https://colinder.github.io/what_is_linter/</link>
     <pubDate>Fri, 18 Mar 2022 13:28:48 &#43;0900</pubDate>
@@ -123,17 +139,5 @@ Local Storage와 Session Storage의 차이 를 알아보기 전에
 ​
  Local Storage와 Session Storage   Local storage
 origin(요청이 시작된 서버를 나타내는 URL)이 같을 경우, 여러 탭과 브라우저 창에서 공유되는 저장소.]]></description>
-</item><item>
-    <title>폴더안에 있는 특정 파일 리스트 가져오기</title>
-    <link>https://colinder.github.io/filelistimport/</link>
-    <pubDate>Tue, 22 Feb 2022 10:37:15 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/filelistimport/</guid>
-    <description><![CDATA[​
-폴더 안에 있는 특정 파일 리스트 정리  어떤 폴더 안에 있는 특정 확장자명의 파일들의 리스트를 정리하고 싶을 때 사용합니다.
- ​
-1 2 3 4 5 6 7  ## 폴더안에 있는 .csv파일 리스트 가져오기 import os path = &#39;/경로/&#39; file_lists = os.listdir(path) file_list_result = [file for file in file_lists if file.endswith(&#39;.csv&#39;)] ## 파일명 끝이 .csv인 경우   ​
-이후 pandas DataFrame에 넣을 때
-1 2 3 4 5 6  import pandas as pd df = pd.]]></description>
 </item></channel>
 </rss>
