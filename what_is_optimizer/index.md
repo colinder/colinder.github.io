@@ -1,11 +1,13 @@
-# What is optimizer
+# what is optimizer
 
 
 ​	
 
-![img](C:\Users\kjong\Desktop\JG\03_Blog\content\posts\AI\what_is_optimizer.assets\img.png)
+<image src="/images/what_is_optimizer.assets/img.png" width="1000px" style="display: block; margin: 20px auto">
 
 ​	
+
+​		
 
 ## 옵티마이저의 목적
 

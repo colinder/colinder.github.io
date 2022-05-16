@@ -37,12 +37,13 @@ Epoch의 의미 1~100의 데이터가 input의 양(x_train)으로 주어졌을 �
   3에게 2를 대입하여 나온 가중치(w) 와 편향(b)을 대입하여 새로운 가중치(w)와 편향(b)가 도출
   &hellip;]]></description>
 </item><item>
-    <title>What is optimizer</title>
+    <title>what is optimizer</title>
     <link>https://colinder.github.io/what_is_optimizer/</link>
     <pubDate>Fri, 18 Mar 2022 14:13:56 &#43;0900</pubDate>
     <author>Author</author>
     <guid>https://colinder.github.io/what_is_optimizer/</guid>
     <description><![CDATA[​
+​
 ​
 옵티마이저의 목적  옵티마이저는 학습 데이터(Train data)셋을 이용하여 모델을 학습 할 때 데이터의 실제 결과와 모델이 예측한 결과를 기반으로 오차를 잘 줄일 수 있게 만들어주는 역할입니다.
  ​
@@ -50,7 +51,7 @@ Epoch의 의미 1~100의 데이터가 input의 양(x_train)으로 주어졌을 �
 ​
 ​
 ​
-옵티마이저 리스트  경사 하강법(Gradient Descent) 확률적 경사 하강법(Stochastic Gradient Descent, SGD) Momentum Nesterov Accelerated Gradient (NAG) Adam AdaGrad RMSProp AdaMax Nadam  참고 https://keras.io/api/optimizers/]]></description>
+옵티마이저 리스트  경사 하강법(Gradient Descent) 확률적 경사 하강법(Stochastic Gradient Descent, SGD) Momentum Nesterov Accelerated Gradient (NAG) Adam AdaGrad RMSProp AdaMax Nadam  참고 https://keras.]]></description>
 </item><item>
     <title>what is Linter?</title>
     <link>https://colinder.github.io/what_is_linter/</link>
