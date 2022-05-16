@@ -3,7 +3,22 @@
         <title>AI - Tag - </title>
         <link>https://colinder.github.io/tags/ai/</link>
         <description>AI - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 17 Mar 2022 17:12:00 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/ai/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 18 Mar 2022 14:13:56 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/ai/" rel="self" type="application/rss+xml" /><item>
+    <title>What is optimizer</title>
+    <link>https://colinder.github.io/what_is_optimizer/</link>
+    <pubDate>Fri, 18 Mar 2022 14:13:56 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/what_is_optimizer/</guid>
+    <description><![CDATA[​
+​
+옵티마이저의 목적  옵티마이저는 학습 데이터(Train data)셋을 이용하여 모델을 학습 할 때 데이터의 실제 결과와 모델이 예측한 결과를 기반으로 오차를 잘 줄일 수 있게 만들어주는 역할입니다.
+ ​
+따라서 최적화(Optimization)은 손실 함수(Loss Function)의 결과값을 최소화하는 모델의 파라미터(가중치)를 찾는 것을 의미합니다.
+​
+​
+​
+옵티마이저 리스트  경사 하강법(Gradient Descent) 확률적 경사 하강법(Stochastic Gradient Descent, SGD) Momentum Nesterov Accelerated Gradient (NAG) Adam AdaGrad RMSProp AdaMax Nadam  참고 https://keras.io/api/optimizers/]]></description>
+</item><item>
     <title>모델 학습 시 loss가 Nan으로 나올 때 해결법</title>
     <link>https://colinder.github.io/loss_nan_solution/</link>
     <pubDate>Thu, 17 Mar 2022 17:12:00 &#43;0900</pubDate>

@@ -5,50 +5,48 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Epoch - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="Epoch" />
+        <title>What is optimizer - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="What is optimizer" />
 <meta property="og:description" content="​
-Epoch의 의미 1~100의 데이터가 input의 양(x_train)으로 주어졌을 때
-20 epoch를 적용한다는 의미는
-단계별로 설명하자면,
-  1번째 학습(1 epoch) 시작
-  초기화된 가중치(w)와 편향(b)을 가지고 1에 대한 계산 진행 &gt;
-  1을 대입하여 나온 가중치(w) 와 편향(b) 도출
-  2에게 1을 대입하여 나온 가중치(w) 와 편향(b)을 대입하여 새로운 가중치(w)와 편향(b)가 도출
-  3에게 2를 대입하여 나온 가중치(w) 와 편향(b)을 대입하여 새로운 가중치(w)와 편향(b)가 도출
-  &hellip;" />
+​
+옵티마이저의 목적  옵티마이저는 학습 데이터(Train data)셋을 이용하여 모델을 학습 할 때 데이터의 실제 결과와 모델이 예측한 결과를 기반으로 오차를 잘 줄일 수 있게 만들어주는 역할입니다.
+ ​
+따라서 최적화(Optimization)은 손실 함수(Loss Function)의 결과값을 최소화하는 모델의 파라미터(가중치)를 찾는 것을 의미합니다.
+​
+​
+​
+옵티마이저 리스트  경사 하강법(Gradient Descent) 확률적 경사 하강법(Stochastic Gradient Descent, SGD) Momentum Nesterov Accelerated Gradient (NAG) Adam AdaGrad RMSProp AdaMax Nadam  참고 https://keras.io/api/optimizers/" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://colinder.github.io/epoch/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-03-18T14:15:59&#43;09:00" />
-<meta property="article:modified_time" content="2022-03-18T14:15:59&#43;09:00" />
+<meta property="og:url" content="https://colinder.github.io/what_is_optimizer/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-03-18T14:13:56&#43;09:00" />
+<meta property="article:modified_time" content="2022-03-18T14:13:56&#43;09:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
 
-<meta name="twitter:title" content="Epoch"/>
+<meta name="twitter:title" content="What is optimizer"/>
 <meta name="twitter:description" content="​
-Epoch의 의미 1~100의 데이터가 input의 양(x_train)으로 주어졌을 때
-20 epoch를 적용한다는 의미는
-단계별로 설명하자면,
-  1번째 학습(1 epoch) 시작
-  초기화된 가중치(w)와 편향(b)을 가지고 1에 대한 계산 진행 &gt;
-  1을 대입하여 나온 가중치(w) 와 편향(b) 도출
-  2에게 1을 대입하여 나온 가중치(w) 와 편향(b)을 대입하여 새로운 가중치(w)와 편향(b)가 도출
-  3에게 2를 대입하여 나온 가중치(w) 와 편향(b)을 대입하여 새로운 가중치(w)와 편향(b)가 도출
-  &hellip;"/>
+​
+옵티마이저의 목적  옵티마이저는 학습 데이터(Train data)셋을 이용하여 모델을 학습 할 때 데이터의 실제 결과와 모델이 예측한 결과를 기반으로 오차를 잘 줄일 수 있게 만들어주는 역할입니다.
+ ​
+따라서 최적화(Optimization)은 손실 함수(Loss Function)의 결과값을 최소화하는 모델의 파라미터(가중치)를 찾는 것을 의미합니다.
+​
+​
+​
+옵티마이저 리스트  경사 하강법(Gradient Descent) 확률적 경사 하강법(Stochastic Gradient Descent, SGD) Momentum Nesterov Accelerated Gradient (NAG) Adam AdaGrad RMSProp AdaMax Nadam  참고 https://keras.io/api/optimizers/"/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/epoch/" /><link rel="prev" href="https://colinder.github.io/what_is_optimizer/" /><link rel="next" href="https://colinder.github.io/data_scaling/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/what_is_optimizer/" /><link rel="prev" href="https://colinder.github.io/what_is_linter/" /><link rel="next" href="https://colinder.github.io/epoch/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Epoch",
+        "headline": "What is optimizer",
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/colinder.github.io\/epoch\/"
-        },"genre": "posts","wordcount":  159 ,
-        "url": "https:\/\/colinder.github.io\/epoch\/","datePublished": "2022-03-18T14:15:59+09:00","dateModified": "2022-03-18T14:15:59+09:00","publisher": {
+            "@id": "https:\/\/colinder.github.io\/what_is_optimizer\/"
+        },"genre": "posts","keywords": "ai, optimizer","wordcount":  139 ,
+        "url": "https:\/\/colinder.github.io\/what_is_optimizer\/","datePublished": "2022-03-18T14:13:56+09:00","dateModified": "2022-03-18T14:13:56+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -122,70 +120,63 @@ Epoch의 의미 1~100의 데이터가 input의 양(x_train)으로 주어졌을 �
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Epoch</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-18">2022-03-18</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;159 words&nbsp;
+        </div><article class="page single"><h1 class="single-title animated flipInX">What is optimizer</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/ai/"><i class="far fa-folder fa-fw"></i>AI</a>&nbsp;<a href="/categories/optimizer/"><i class="far fa-folder fa-fw"></i>optimizer</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-18">2022-03-18</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;139 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;One minute&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#옵티마이저의-목적">옵티마이저의 목적</a></li>
+    <li><a href="#옵티마이저-리스트">옵티마이저 리스트</a></li>
+    <li><a href="#loss">Loss?</a></li>
+  </ul>
+</nav></div>
             </div><div class="content" id="content"><p>​</p>
-<h1 id="epoch의-의미">Epoch의 의미</h1>
-<p>1~100의 데이터가 input의 양(x_train)으로 주어졌을 때</p>
-<p>20 epoch를 적용한다는 의미는</p>
-<p>단계별로 설명하자면,</p>
-<ol>
-<li>
-<p>1번째 학습(1 epoch) 시작</p>
-</li>
-<li>
-<p>초기화된 가중치(w)와 편향(b)을 가지고 1에 대한 계산 진행 &gt;</p>
-</li>
-<li>
-<p>1을 대입하여 나온 가중치(w) 와 편향(b) 도출</p>
-</li>
-<li>
-<p>2에게 1을 대입하여 나온 가중치(w) 와 편향(b)을 대입하여 새로운 가중치(w)와 편향(b)가 도출</p>
-</li>
-<li>
-<p>3에게 2를 대입하여 나온 가중치(w) 와 편향(b)을 대입하여 새로운 가중치(w)와 편향(b)가 도출</p>
-</li>
-<li>
-<p>&hellip;</p>
-</li>
-<li>
-<p>100에게 99를 대입하여 나온 가중치(w) 와 편향(b)을 대입하여 새로운 가중치(w)와 편향(b)가 도출</p>
-</li>
-</ol>
-<p>1 Epoch 학습 종료</p>
-<p>2번째 학습(2 epoch) 시작</p>
-<ol>
-<li>
-<p>1 Epoch를 통해 마지막으로 도출된 가중치(w)와 편향(b)을 가지고 다시 1에 대한 계산 진행</p>
-</li>
-<li>
-<p>1을 대입하여 나온 가중치(w) 와 편향(b) 도출</p>
-</li>
-<li>
-<p>2에게 1을 대입하여 나온 가중치(w) 와 편향(b)을 대입하여 새로운 가중치(w)와 편향(b)가 도출</p>
-</li>
-<li>
-<p>3에게 2를 대입하여 나온 가중치(w) 와 편향(b)을 대입하여 새로운 가중치(w)와 편향(b)가 도출</p>
-</li>
-<li>
-<p>&hellip;</p>
-</li>
-<li>
-<p>100에게 99를 대입하여 나온 가중치(w) 와 편향(b)을 대입하여 새로운 가중치(w)와 편향(b)가 도출</p>
-</li>
-</ol>
-<p>&hellip;반복</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="C:%5cUsers%5ckjong%5cDesktop%5cJG%5c03_Blog%5ccontent%5cposts%5cAI%5cwhat_is_optimizer.assets%5cimg.png"
+        data-srcset="C:%5cUsers%5ckjong%5cDesktop%5cJG%5c03_Blog%5ccontent%5cposts%5cAI%5cwhat_is_optimizer.assets%5cimg.png, C:%5cUsers%5ckjong%5cDesktop%5cJG%5c03_Blog%5ccontent%5cposts%5cAI%5cwhat_is_optimizer.assets%5cimg.png 1.5x, C:%5cUsers%5ckjong%5cDesktop%5cJG%5c03_Blog%5ccontent%5cposts%5cAI%5cwhat_is_optimizer.assets%5cimg.png 2x"
+        data-sizes="auto"
+        alt="C:\Users\kjong\Desktop\JG\03_Blog\content\posts\AI\what_is_optimizer.assets\img.png"
+        title="img" /></p>
 <p>​</p>
-<p>과 같이</p>
-<p>1번의 데이터 전체를 학습하고 난 후 도출된 가중치(w)와 편향(b) 계산하는 과정을 Epoch하고 합니다.</p>
+<h2 id="옵티마이저의-목적">옵티마이저의 목적</h2>
+<blockquote>
+<p>옵티마이저는 학습 데이터(Train data)셋을 이용하여 모델을 학습 할 때 <b>데이터의 실제 결과</b>와 <b>모델이 예측한 결과</b>를 기반으로 <b>오차를 잘 줄일 수 있게</b> 만들어주는 역할입니다.</p>
+</blockquote>
+<p>​</p>
+<p>따라서 <b>최적화(Optimization)</b>은 손실 함수(Loss Function)의 결과값을 최소화하는 모델의 파라미터(가중치)를 찾는 것을 의미합니다.</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<h2 id="옵티마이저-리스트">옵티마이저 리스트</h2>
+<ol>
+<li>경사 하강법(Gradient Descent)</li>
+<li>확률적 경사 하강법(Stochastic Gradient Descent, SGD)</li>
+<li>Momentum</li>
+<li>Nesterov Accelerated Gradient (NAG)</li>
+<li>Adam</li>
+<li>AdaGrad</li>
+<li>RMSProp</li>
+<li>AdaMax</li>
+<li>Nadam</li>
+</ol>
+<p><span style="float:right; font-size:0.8em; color:grey">참고 <a href="https://keras.io/api/optimizers/">https://keras.io/api/optimizers/</a></span></p>
+<p>​</p>
+<p>​</p>
+<h2 id="loss">Loss?</h2>
+<p><strong>loss</strong>는 손실함수를 의미합니다.</p>
+<p>입력 데이터로 부터 도출한 결과(예측값)가 Label값(정답)과 얼마나 일치하는지 평가해주는 함수를 의미합니다.</p>
+<p>여기서는 손실함수를 &lsquo;mse&rsquo;를 사용하겠다는 의미가 됩니다. mse는 평균제곱오차(mean squared error)를 의미합니다. 나중에 자세히 다룰 내용이고 여기서는 그냥 얼마나 예측과 다른지 평가해주는 값이라고 생각하시면 됩니다. 예측값과의 차이를 의미하므로 작으면 작을수록 좋은 모델이라는 의미가 됩니다.</p>
+<p>​</p>
+<p><strong>optimizer</strong>는 손실 함수를 기반으로 네트워크가 어떻게 업데이트될지 결정합니다. 여기서는 adam을 사용하였습니다.</p>
+<p>옵티마이저 종류 더 알아보기 -&gt; <a href="https://keras.io/ko/optimizers/">https://keras.io/ko/optimizers/</a></p>
 <p>​</p>
 <p>​</p>
 <p>​</p>
@@ -201,7 +192,7 @@ Epoch의 의미 1~100의 데이터가 input의 양(x_train)으로 주어졌을 �
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/epoch/index.md" target="_blank">Read Markdown</a>
+                            <a class="link-to-markdown" href="/what_is_optimizer/index.md" target="_blank">Read Markdown</a>
                         </span></div>
             <div class="post-info-share">
                 <span></span>
@@ -210,14 +201,14 @@ Epoch의 의미 1~100의 데이터가 input의 양(x_train)으로 주어졌을 �
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/ai/">AI</a>,&nbsp;<a href="/tags/optimizer/">optimizer</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/what_is_optimizer/" class="prev" rel="prev" title="What is optimizer"><i class="fas fa-angle-left fa-fw"></i>What is optimizer</a>
-            <a href="/data_scaling/" class="next" rel="next" title="How to Data_Scaling">How to Data_Scaling<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/what_is_linter/" class="prev" rel="prev" title="what is Linter?"><i class="fas fa-angle-left fa-fw"></i>what is Linter?</a>
+            <a href="/epoch/" class="next" rel="next" title="Epoch">Epoch<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.

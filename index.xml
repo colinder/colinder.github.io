@@ -37,6 +37,21 @@ Epoch의 의미 1~100의 데이터가 input의 양(x_train)으로 주어졌을 �
   3에게 2를 대입하여 나온 가중치(w) 와 편향(b)을 대입하여 새로운 가중치(w)와 편향(b)가 도출
   &hellip;]]></description>
 </item><item>
+    <title>What is optimizer</title>
+    <link>https://colinder.github.io/what_is_optimizer/</link>
+    <pubDate>Fri, 18 Mar 2022 14:13:56 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/what_is_optimizer/</guid>
+    <description><![CDATA[​
+​
+옵티마이저의 목적  옵티마이저는 학습 데이터(Train data)셋을 이용하여 모델을 학습 할 때 데이터의 실제 결과와 모델이 예측한 결과를 기반으로 오차를 잘 줄일 수 있게 만들어주는 역할입니다.
+ ​
+따라서 최적화(Optimization)은 손실 함수(Loss Function)의 결과값을 최소화하는 모델의 파라미터(가중치)를 찾는 것을 의미합니다.
+​
+​
+​
+옵티마이저 리스트  경사 하강법(Gradient Descent) 확률적 경사 하강법(Stochastic Gradient Descent, SGD) Momentum Nesterov Accelerated Gradient (NAG) Adam AdaGrad RMSProp AdaMax Nadam  참고 https://keras.io/api/optimizers/]]></description>
+</item><item>
     <title>what is Linter?</title>
     <link>https://colinder.github.io/what_is_linter/</link>
     <pubDate>Fri, 18 Mar 2022 13:28:48 &#43;0900</pubDate>
@@ -125,21 +140,5 @@ What is ES2015?  웹 개발 도구와 내용을 정리하다보면 등장하던 
     <description><![CDATA[​
 What is Web Socket?  Web 통신은 무조건 두 단계를 걸쳐 동작합니다. 요청과 응답. 간단히 어떤 요청이 있을 때만 서버와 연결되어 어떤 응답을 하게 됩니다. 이러한 방식을 HTTP라고 합니다. 예를 들어, Naver.com에 접속하는 것은 &lsquo;Naver.com&rsquo;이라는 요청을 보낸 것이고 그에 대한 응답으로 naver의 메인 화면을 보여주는 것이죠. 그런데 만약 실시간 채팅 서비스나 푸시 알람을 구현해야 한다면, 매우 잦은 요청을 보내야 하고 네트워크 상 많은 부하를 발생시킬 수 있습니다.
  HTML5이라는 웹 표준이 생긴이래로 이러한 HTTP의 단점을 보완하기 위해 웹 소켓(Web Socket)이 등장했습니다.]]></description>
-</item><item>
-    <title>localStorage vs sessionStorage</title>
-    <link>https://colinder.github.io/localvssession_storage/</link>
-    <pubDate>Wed, 23 Feb 2022 14:32:36 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/localvssession_storage/</guid>
-    <description><![CDATA[​
-Local Storage와 Session Storage의 차이 를 알아보기 전에
-​
-​
- &lsquo;Storage(web storage)&lsquo;란 무엇인지 우선 알아봅시다.  HTML5에서 등장한 웹의 데이터를 클라이언트에 저장할 수 있는 기능
- 인터넷상의 통신을 하는데 어떤 자료를 가지고 있어야 한다거나, 나의 정보(유저정보)를 관리하는 등의 데이터 관리를 위한 저장소 기능. 그리고 storage는 두 가지 종류가 존재
-​
-​
- Local Storage와 Session Storage   Local storage
-origin(요청이 시작된 서버를 나타내는 URL)이 같을 경우, 여러 탭과 브라우저 창에서 공유되는 저장소.]]></description>
 </item></channel>
 </rss>
