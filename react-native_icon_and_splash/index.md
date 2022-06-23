@@ -51,7 +51,7 @@ $ npx react-native init test --version 0.67.0
 
 ​	
 
-#### 3. 1024px x 1024px 이미지를 변환하여 제작. <span style="font-size:0.8em">(반드시 해당 사이즈로 해야 하는지는 모르겠습니다.)</span>
+#### 3. 이미지는 변환이 필요한데 1024px x 1024px 이미지로 변환하여 제작. <span style="font-size:0.6em">(반드시 해당 사이즈로 해야 하는지는 모르겠습니다.)</span>
 
 한 번에 두 이미지를 만들어 주는 사이트는 찾지 못해 두 개의 사이트를 이용하여 이미지를 제작하였습니다.
 
@@ -71,7 +71,7 @@ $ npx react-native init test --version 0.67.0
 
 #### 5. 캐시 초기화 하기
 
-- 아래 명령어를 통해 캐시를 초기화 합니다. <span style="font-size:0.8em">(초기화하는 이유는 환경설정 및 새롭게 추가된 파일을 읽어오는데 문제를 없게 하기 위함)</span>
+- 아래 명령어를 통해 캐시를 초기화 합니다. <span style="font-size:0.8em">(이유: 환경설정 및 새롭게 추가된 파일을 읽어오는데 문제없게 하기 위함)</span>
 
   ```bash
   # root 폴더 위치(package.json이 있는 위치)에서 명령어를 입력합니다.
@@ -222,7 +222,7 @@ npm i react-native-splash-screen --save
 
 #### 6. 캐시 초기화 하기
 
-- 아래 명령어를 통해 캐시를 초기화 합니다. <span style="font-size:0.8em">(초기화하는 이유는 환경설정 및 새롭게 추가된 파일을 읽어오는데 문제를 없게 하기 위함)</span>
+- 아래 명령어를 통해 캐시를 초기화 합니다. <span style="font-size:0.8em">(이유: 환경설정 및 새롭게 추가된 파일을 읽어오는데 문제없게 하기 위함)</span>
 
   ```bash
   # root 폴더 위치(package.json이 있는 위치)에서 명령어를 입력합니다.

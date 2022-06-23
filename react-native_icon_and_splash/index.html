@@ -47,7 +47,7 @@ Icon 변경 방법  결론부터 정리하자면 특정 폴더안에 이미지�
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/react-native_icon_and_splash\/"
-        },"genre": "posts","keywords": "react-native, web, icon, splash","wordcount":  684 ,
+        },"genre": "posts","keywords": "react-native, web, icon, splash","wordcount":  683 ,
         "url": "https:\/\/colinder.github.io\/react-native_icon_and_splash\/","datePublished": "2022-06-23T14:01:21+09:00","dateModified": "2022-06-23T14:01:21+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -124,7 +124,7 @@ Icon 변경 방법  결론부터 정리하자면 특정 폴더안에 이미지�
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">React-Native_icon_and_splash</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/react-native/"><i class="far fa-folder fa-fw"></i>react-native</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-06-23">2022-06-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;684 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-06-23">2022-06-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;683 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;4 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -139,7 +139,7 @@ Icon 변경 방법  결론부터 정리하자면 특정 폴더안에 이미지�
           <ul>
             <li><a href="#1-androidappsrcmainres-까지-폴더를-들어갑니다">1. android/app/src/main/res 까지 폴더를 들어갑니다.</a></li>
             <li><a href="#2-mipmap-hdpi-기준으로-살펴본다면">2 .mipmap-hdpi 기준으로 살펴본다면,</a></li>
-            <li><a href="#3-1024px-x-1024px-이미지를-변환하여-제작-span-stylefont-size08em반드시-해당-사이즈로-해야-하는지는-모르겠습니다span">3. 1024px x 1024px 이미지를 변환하여 제작. <span style="font-size:0.8em">(반드시 해당 사이즈로 해야 하는지는 모르겠습니다.)</span></a></li>
+            <li><a href="#3-이미지는-변환이-필요한데-1024px-x-1024px-이미지로-변환하여-제작-span-stylefont-size06em반드시-해당-사이즈로-해야-하는지는-모르겠습니다span">3. 이미지는 변환이 필요한데 1024px x 1024px 이미지로 변환하여 제작. <span style="font-size:0.6em">(반드시 해당 사이즈로 해야 하는지는 모르겠습니다.)</span></a></li>
             <li><a href="#4-제작한-두-이미지를-기존의-파일명과-동일하게-변경하고-덮어씌워-넣기">4. 제작한 두 이미지를 기존의 파일명과 동일하게 변경하고 덮어씌워 넣기</a></li>
             <li><a href="#5-캐시-초기화-하기">5. 캐시 초기화 하기</a></li>
             <li><a href="#6-다시-root-폴더-위치로-이동해">6. 다시 root 폴더 위치로 이동해</a></li>
@@ -200,7 +200,7 @@ Icon 변경 방법  결론부터 정리하자면 특정 폴더안에 이미지�
 <p><b>ic_launcher_round.png</b> 와 <b>ic_launcher.png</b> 를 내가 원하는 이미지로 변경.</p>
 <p>​</p>
 <p>​</p>
-<h4 id="3-1024px-x-1024px-이미지를-변환하여-제작-span-stylefont-size08em반드시-해당-사이즈로-해야-하는지는-모르겠습니다span">3. 1024px x 1024px 이미지를 변환하여 제작. <span style="font-size:0.8em">(반드시 해당 사이즈로 해야 하는지는 모르겠습니다.)</span></h4>
+<h4 id="3-이미지는-변환이-필요한데-1024px-x-1024px-이미지로-변환하여-제작-span-stylefont-size06em반드시-해당-사이즈로-해야-하는지는-모르겠습니다span">3. 이미지는 변환이 필요한데 1024px x 1024px 이미지로 변환하여 제작. <span style="font-size:0.6em">(반드시 해당 사이즈로 해야 하는지는 모르겠습니다.)</span></h4>
 <p>한 번에 두 이미지를 만들어 주는 사이트는 찾지 못해 두 개의 사이트를 이용하여 이미지를 제작하였습니다.</p>
 <ul>
 <li>
@@ -218,7 +218,7 @@ Icon 변경 방법  결론부터 정리하자면 특정 폴더안에 이미지�
 <h4 id="5-캐시-초기화-하기">5. 캐시 초기화 하기</h4>
 <ul>
 <li>
-<p>아래 명령어를 통해 캐시를 초기화 합니다. <span style="font-size:0.8em">(초기화하는 이유는 환경설정 및 새롭게 추가된 파일을 읽어오는데 문제를 없게 하기 위함)</span></p>
+<p>아래 명령어를 통해 캐시를 초기화 합니다. <span style="font-size:0.8em">(이유: 환경설정 및 새롭게 추가된 파일을 읽어오는데 문제없게 하기 위함)</span></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -403,7 +403,7 @@ $ ./gradlew clean	<span class="c1"># android 폴더 안에 gradlew을 초기화<
 <h4 id="6-캐시-초기화-하기">6. 캐시 초기화 하기</h4>
 <ul>
 <li>
-<p>아래 명령어를 통해 캐시를 초기화 합니다. <span style="font-size:0.8em">(초기화하는 이유는 환경설정 및 새롭게 추가된 파일을 읽어오는데 문제를 없게 하기 위함)</span></p>
+<p>아래 명령어를 통해 캐시를 초기화 합니다. <span style="font-size:0.8em">(이유: 환경설정 및 새롭게 추가된 파일을 읽어오는데 문제없게 하기 위함)</span></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
