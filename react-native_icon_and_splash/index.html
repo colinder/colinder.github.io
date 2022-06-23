@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>React-Native_icon_and_splash - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="React-Native_icon_and_splash" />
+<meta property="og:description" content="​
+React-native (android)  icon 변경과 splash를 적용해보겠습니다.
+ icon: 핸드폰에서 어플 접속시 보이는 모습을 의미.
+splash: 어플 실행시 잠시 노출되는 화면을 의미.​
+​
+Icon 변경 방법  결론부터 정리하자면 특정 폴더안에 이미지만 넣으면 됩니다.
+ ​
+*프로젝트를 시작할 때 이름을 test로 만들어 진행하였습니다. (버전은 0.67)
+1  $ npx react-native init test --version 0.67.0   ​
+1. android/app/src/main/res 까지 폴더를 들어갑니다. 이미지와 같은 구조가 보인다면 잘 접근한 것입니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://colinder.github.io/react-native_icon_and_splash/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-06-23T14:01:21&#43;09:00" />
+<meta property="article:modified_time" content="2022-06-23T14:01:21&#43;09:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
+
+<meta name="twitter:title" content="React-Native_icon_and_splash"/>
+<meta name="twitter:description" content="​
+React-native (android)  icon 변경과 splash를 적용해보겠습니다.
+ icon: 핸드폰에서 어플 접속시 보이는 모습을 의미.
+splash: 어플 실행시 잠시 노출되는 화면을 의미.​
+​
+Icon 변경 방법  결론부터 정리하자면 특정 폴더안에 이미지만 넣으면 됩니다.
+ ​
+*프로젝트를 시작할 때 이름을 test로 만들어 진행하였습니다. (버전은 0.67)
+1  $ npx react-native init test --version 0.67.0   ​
+1. android/app/src/main/res 까지 폴더를 들어갑니다. 이미지와 같은 구조가 보인다면 잘 접근한 것입니다."/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/react-native_icon_and_splash/" /><link rel="prev" href="https://colinder.github.io/selenium_%EB%8F%99%EC%9E%91%EB%8C%80%EA%B8%B0/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "React-Native_icon_and_splash",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/colinder.github.io\/react-native_icon_and_splash\/"
+        },"genre": "posts","keywords": "react-native, web, icon, splash","wordcount":  684 ,
+        "url": "https:\/\/colinder.github.io\/react-native_icon_and_splash\/","datePublished": "2022-06-23T14:01:21+09:00","dateModified": "2022-06-23T14:01:21+09:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "colinder"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="">Hello New World</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="">Hello New World</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">React-Native_icon_and_splash</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/react-native/"><i class="far fa-folder fa-fw"></i>react-native</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-06-23">2022-06-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;684 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#icon-변경-방법">Icon 변경 방법</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#1-androidappsrcmainres-까지-폴더를-들어갑니다">1. android/app/src/main/res 까지 폴더를 들어갑니다.</a></li>
+            <li><a href="#2-mipmap-hdpi-기준으로-살펴본다면">2 .mipmap-hdpi 기준으로 살펴본다면,</a></li>
+            <li><a href="#3-1024px-x-1024px-이미지를-변환하여-제작-span-stylefont-size08em반드시-해당-사이즈로-해야-하는지는-모르겠습니다span">3. 1024px x 1024px 이미지를 변환하여 제작. <span style="font-size:0.8em">(반드시 해당 사이즈로 해야 하는지는 모르겠습니다.)</span></a></li>
+            <li><a href="#4-제작한-두-이미지를-기존의-파일명과-동일하게-변경하고-덮어씌워-넣기">4. 제작한 두 이미지를 기존의 파일명과 동일하게 변경하고 덮어씌워 넣기</a></li>
+            <li><a href="#5-캐시-초기화-하기">5. 캐시 초기화 하기</a></li>
+            <li><a href="#6-다시-root-폴더-위치로-이동해">6. 다시 root 폴더 위치로 이동해</a></li>
+            <li><a href="#7-프로젝트를-실행해-변경된-아이콘을-확인">7. 프로젝트를 실행해 변경된 아이콘을 확인</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#splash-변경-방법">splash 변경 방법</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#1-관련-라이브러리-설치">1. 관련 라이브러리 설치</a></li>
+            <li><a href="#2-환경-설정하기">2. 환경 설정하기</a></li>
+            <li><a href="#3-splash-화면-그리기">3. splash 화면 그리기</a></li>
+            <li><a href="#4-스플래시-이미지-만들기">4, 스플래시 이미지 만들기</a></li>
+            <li><a href="#5-다운받은-파일을-압축을-해제-후-androidappsrcmainres-경로에-파일을-복붙">5. 다운받은 파일을 압축을 해제 후 android/app/src/main/res/ 경로에 파일을 복붙</a></li>
+            <li><a href="#6-캐시-초기화-하기">6. 캐시 초기화 하기</a></li>
+            <li><a href="#7-splash-등장-시간-설정">7. splash 등장 시간 설정</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>​</p>
+<h1 id="react-native-android">React-native (android)</h1>
+<blockquote>
+<p>icon 변경과 splash를 적용해보겠습니다.</p>
+</blockquote>
+<p style="text-align: right">icon: 핸드폰에서 어플 접속시 보이는 모습을 의미.</span><br>splash: 어플 실행시 잠시 노출되는 화면을 의미.
+<p>​</p>
+<p>​</p>
+<h2 id="icon-변경-방법">Icon 변경 방법</h2>
+<blockquote>
+<p><strong>결론부터 정리하자면 특정 폴더안에 이미지만 넣으면 됩니다.</strong></p>
+</blockquote>
+<p>​</p>
+<p>*프로젝트를 시작할 때 이름을 <strong>test</strong>로 만들어 진행하였습니다. (버전은 0.67)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">$</span> <span class="nx">npx</span> <span class="nx">react</span><span class="o">-</span><span class="kr">native</span> <span class="nx">init</span> <span class="nx">test</span> <span class="o">--</span><span class="nx">version</span> <span class="mf">0.67</span><span class="p">.</span><span class="mi">0</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<h4 id="1-androidappsrcmainres-까지-폴더를-들어갑니다">1. android/app/src/main/res 까지 폴더를 들어갑니다.</h4>
+<image src="/images/react-native_icon_and_splash.assets/image-20220622143357001.png" width="auto" style="display: block; margin: 10px ;  float:left;">
+<p><image src="/images/react-native_icon_and_splash.assets/image-20220622143452823.png" width="auto" style="display: block; margin-top: 15px; padding-top: 10px;"><br></p>
+<p>이미지와 같은 구조가 보인다면 잘 접근한 것입니다.</p>
+<p>그리고 오른쪽에 범위 잡혀있는 <b><span style="color:red">모든</span> 폴더 속의 이미지를 변경하고 싶은 이미지로 바꾸어 넣으면 됩니다.</b></p>
+<p>​</p>
+<p>​</p>
+<h4 id="2-mipmap-hdpi-기준으로-살펴본다면">2 .mipmap-hdpi 기준으로 살펴본다면,</h4>
+<image src="/images/react-native_icon_and_splash.assets/image-20220622143603188.png" width="auto" style="display: block; margin: 10px;">
+<p><b>ic_launcher_round.png</b> 와 <b>ic_launcher.png</b> 를 내가 원하는 이미지로 변경.</p>
+<p>​</p>
+<p>​</p>
+<h4 id="3-1024px-x-1024px-이미지를-변환하여-제작-span-stylefont-size08em반드시-해당-사이즈로-해야-하는지는-모르겠습니다span">3. 1024px x 1024px 이미지를 변환하여 제작. <span style="font-size:0.8em">(반드시 해당 사이즈로 해야 하는지는 모르겠습니다.)</span></h4>
+<p>한 번에 두 이미지를 만들어 주는 사이트는 찾지 못해 두 개의 사이트를 이용하여 이미지를 제작하였습니다.</p>
+<ul>
+<li>
+<p><a href="http://romannurik.github.io/AndroidAssetStudio/icons-launcher.html#foreground.type=image&amp;foreground.space.trim=1&amp;foreground.space.pad=-0.1&amp;foreColor=rgba%2896%2C%20125%2C%20139%2C%200%29&amp;backColor=rgb%28255%2C%20255%2C%20255%29&amp;crop=0&amp;backgroundShape=circle&amp;effects=none&amp;name=ic_launcher" target="_blank" rel="noopener noreffer">ic_launcher_round.png 이미지 생성 사이트</a></p>
+</li>
+<li>
+<p><a href="https://appicon.co/" target="_blank" rel="noopener noreffer">ic_launcher.png 생성 사이트</a></p>
+</li>
+</ul>
+<p>​</p>
+<p>​</p>
+<h4 id="4-제작한-두-이미지를-기존의-파일명과-동일하게-변경하고-덮어씌워-넣기">4. 제작한 두 이미지를 기존의 파일명과 동일하게 변경하고 덮어씌워 넣기</h4>
+<p>​</p>
+<p>​</p>
+<h4 id="5-캐시-초기화-하기">5. 캐시 초기화 하기</h4>
+<ul>
+<li>
+<p>아래 명령어를 통해 캐시를 초기화 합니다. <span style="font-size:0.8em">(초기화하는 이유는 환경설정 및 새롭게 추가된 파일을 읽어오는데 문제를 없게 하기 위함)</span></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># root 폴더 위치(package.json이 있는 위치)에서 명령어를 입력합니다.</span>
+$ <span class="nb">cd</span> android		<span class="c1"># android 폴더로 이동</span>
+$ ./gradlew clean	<span class="c1"># android 폴더 안에 gradlew을 초기화</span>
+
+<span class="c1">#이 둘을 묶어서 한 번에 실행하고 싶다면, cd android &amp;&amp; ./gradlew clean </span>
+</code></pre></td></tr></table>
+</div>
+</div><p>해준 후</p>
+<p>​</p>
+</li>
+</ul>
+<p>​</p>
+<h4 id="6-다시-root-폴더-위치로-이동해">6. 다시 root 폴더 위치로 이동해</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> ..  <span class="c1"># android폴더 안에서 상위 폴더로 빠져나오기</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<p>​</p>
+<h4 id="7-프로젝트를-실행해-변경된-아이콘을-확인">7. 프로젝트를 실행해 변경된 아이콘을 확인</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">npm run android  // 빌드 및 시뮬레이터 실행
+</code></pre></td></tr></table>
+</div>
+</div><p>실행하면 변환된 Icon 확인 가능.</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<h2 id="splash-변경-방법">splash 변경 방법</h2>
+<blockquote>
+<p><strong>icon 변경보다는 복잡하지만, 어렵지 않습니다.</strong></p>
+</blockquote>
+<p>​</p>
+<h4 id="1-관련-라이브러리-설치">1. 관련 라이브러리 설치</h4>
+<p>스플래시 이미지를 적용하기 위한 라이브러리를 설치합니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">npm i react-native-splash-screen --save
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<p>​</p>
+<h4 id="2-환경-설정하기">2. 환경 설정하기</h4>
+<ol>
+<li>
+<p>android/app/src/main/java/com/<strong>test</strong>/MainActivity.java 파일을 열어 수정합니다.<br>
+<span style="font-size: 0.8em">(중간에 test는 프로젝트 생성할 당시 만든  프로젝트명)</span></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-react" data-lang="react"><span class="kr">package</span> <span class="nx">com</span><span class="p">.</span><span class="nx">test</span><span class="p">;</span>
+
+<span class="kr">import</span> <span class="nx">android</span><span class="p">.</span><span class="nx">os</span><span class="p">.</span><span class="nx">Bundle</span><span class="p">;</span> <span class="c1">// add
+</span><span class="c1"></span><span class="kr">import</span> <span class="nx">com</span><span class="p">.</span><span class="nx">facebook</span><span class="p">.</span><span class="nx">react</span><span class="p">.</span><span class="nx">ReactActivity</span><span class="p">;</span>
+
+<span class="c1">// react-native-splash-screen &gt;= 0.3.1 
+</span><span class="c1"></span><span class="kr">import</span> <span class="nx">org</span><span class="p">.</span><span class="nx">devio</span><span class="p">.</span><span class="nx">rn</span><span class="p">.</span><span class="nx">splashscreen</span><span class="p">.</span><span class="nx">SplashScreen</span><span class="p">;</span> <span class="c1">// here 
+</span><span class="c1"></span>
+<span class="kr">public</span> <span class="kr">class</span> <span class="nx">MainActivity</span> <span class="kr">extends</span> <span class="nx">ReactActivity</span> <span class="p">{</span>
+  <span class="err">@</span><span class="nx">Override</span>
+  <span class="kr">protected</span> <span class="k">void</span> <span class="nx">onCreate</span><span class="p">(</span><span class="nx">Bundle</span> <span class="nx">savedInstanceState</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">SplashScreen</span><span class="p">.</span><span class="nx">show</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>  <span class="c1">// here 
+</span><span class="c1"></span>      <span class="kr">super</span><span class="p">.</span><span class="nx">onCreate</span><span class="p">(</span><span class="nx">savedInstanceState</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="cm">/**
+</span><span class="cm">   * Returns the name of the main component registered from JavaScript. This is used to schedule
+</span><span class="cm">   * rendering of the component.
+</span><span class="cm">   */</span>
+  <span class="err">@</span><span class="nx">Override</span>
+  <span class="kr">protected</span> <span class="nb">String</span> <span class="nx">getMainComponentName</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s2">&#34;test&#34;</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>만약에 <b>react-native navigation</b>을 설치한 상태라면, 중간 &ldquo;@Override&rdquo; 부분에 코드 중복이 발생하는데 그냥 무시하셔도 됩니다.</p>
+</li>
+</ol>
+<p>​</p>
+<p>​</p>
+<h4 id="3-splash-화면-그리기">3. splash 화면 그리기</h4>
+<ol>
+<li>
+<p>android/app/src/main/res에 layout 폴더를 생성합니다.</p>
+</li>
+<li>
+<p>layout 폴더에 <b>launch_screen.xml</b> 라는 이름의 파일을 생성합니다.</p>
+</li>
+<li>
+<p>방금 만든 launch_screen.xml 파일에 아래 코드를 복사하여 붙여넣어 줍니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+<span class="p">&lt;</span><span class="nt">RelativeLayout</span> <span class="na">xmlns:android</span><span class="o">=</span><span class="s">&#34;http://schemas.android.com/apk/res/android&#34;</span>
+    <span class="na">android:orientation</span><span class="o">=</span><span class="s">&#34;vertical&#34;</span> <span class="na">android:layout_width</span><span class="o">=</span><span class="s">&#34;match_parent&#34;</span>
+    <span class="na">android:layout_height</span><span class="o">=</span><span class="s">&#34;match_parent&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">ImageView</span> <span class="na">android:layout_width</span><span class="o">=</span><span class="s">&#34;match_parent&#34;</span> <span class="na">android:layout_height</span><span class="o">=</span><span class="s">&#34;match_parent&#34;</span> <span class="na">android:src</span><span class="o">=</span><span class="s">&#34;@drawable/launch_screen&#34;</span> <span class="na">android:scaleType</span><span class="o">=</span><span class="s">&#34;centerCrop&#34;</span> <span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">RelativeLayout</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<p>​</p>
+<p>​</p>
+<h4 id="4-스플래시-이미지-만들기">4, 스플래시 이미지 만들기</h4>
+<p>이미지를 필요한 사이즈 별로 만들어야 합니다.단 기존에 사용할 이미지 1장<span style='font-size: 0.8em'>(권장 사이즈 1242px x 2208px)</span>은 있어야 합니다.</p>
+<ol>
+<li>
+<p>가지고 있는 splash 파일에 이름을 <b>launch_screen.png로 변경</b>합니다.</p>
+</li>
+<li>
+<p><a href="https://appicon.co/#image-sets">https://appicon.co/#image-sets</a> 사이트에 접속 합니다.</p>
+</li>
+<li>
+<p>접속한 사이트에 이미지를 넣고 Generate 버튼을 눌러 Splash 이미지를 다운로드 합니다.</p>
+<image src="/images/react-native_icon_and_splash.assets/img-16558782448792.png" width="auto" style="display: block; margin: 10px;">
+<image src="/images/react-native_icon_and_splash.assets/img-16558782448793.png" width="auto" style="display: block; margin: 10px;">
+</li>
+</ol>
+<p>​</p>
+<p>​</p>
+<h4 id="5-다운받은-파일을-압축을-해제-후-androidappsrcmainres-경로에-파일을-복붙">5. 다운받은 파일을 압축을 해제 후 android/app/src/main/res/ 경로에 파일을 복붙</h4>
+<image src="/images/react-native_icon_and_splash.assets/img-16558782448794.png" width="auto" style="display: block; margin: 10px;">
+<p>​</p>
+<p>​</p>
+<h4 id="6-캐시-초기화-하기">6. 캐시 초기화 하기</h4>
+<ul>
+<li>
+<p>아래 명령어를 통해 캐시를 초기화 합니다. <span style="font-size:0.8em">(초기화하는 이유는 환경설정 및 새롭게 추가된 파일을 읽어오는데 문제를 없게 하기 위함)</span></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># root 폴더 위치(package.json이 있는 위치)에서 명령어를 입력합니다.</span>
+$ <span class="nb">cd</span> android		<span class="c1"># android 폴더로 이동</span>
+$ ./gradlew clean	<span class="c1"># android 폴더 안에 gradlew을 초기화</span>
+
+<span class="c1">#이 둘을 묶어서 한 번에 실행하고 싶다면, cd android &amp;&amp; ./gradlew clean</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>여기까지 진행하고 시뮬레이터에 화면을 띄워보면 splash 이미지가 등장은 하나 사라지지 않습니다. 하여</p>
+</li>
+</ul>
+<p>​</p>
+<p>​</p>
+<h4 id="7-splash-등장-시간-설정">7. splash 등장 시간 설정</h4>
+<ol>
+<li>
+<p>App.js 파일 SplashScreen Import 하고</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-react" data-lang="react"><span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span><span class="nx">useEffect</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span><span class="nx">StyleSheet</span><span class="p">,</span> <span class="nx">Text</span><span class="p">,</span> <span class="nx">View</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react-native&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">SplashScreen</span> <span class="nx">from</span> <span class="s1">&#39;react-native-splash-screen&#39;</span><span class="p">;</span>  <span class="c1">// here
+</span><span class="c1"></span>
+<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">useEffect</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="k">try</span> <span class="p">{</span>
+      <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="nx">SplashScreen</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
+      <span class="p">},</span> <span class="mi">1000</span><span class="p">);</span> <span class="c1">// here 스플래시 노출 시간 1초
+</span><span class="c1"></span>    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="p">&lt;</span><span class="nt">View</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">Text</span><span class="p">&gt;</span><span class="nx">스플래쉬</span> <span class="nx">테스트</span><span class="p">&lt;/</span><span class="nt">Text</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">View</span><span class="p">&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+</li>
+<li>
+<p>React Native 에뮬레이터를 실행하여 확인합니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">npm run android
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>이상 react-native에서 icon 및 splash 설정을 알아보았습니다.</p>
+<p>​</p>
+<p>​</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-06-23</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/react-native_icon_and_splash/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/react-native/">react-native</a>,&nbsp;<a href="/tags/web/">web</a>,&nbsp;<a href="/tags/icon/">icon</a>,&nbsp;<a href="/tags/splash/">splash</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/selenium_%EB%8F%99%EC%9E%91%EB%8C%80%EA%B8%B0/" class="prev" rel="prev" title="Selenium 동작 대기 방법"><i class="fas fa-angle-left fa-fw"></i>Selenium 동작 대기 방법</a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://colinder-github-io.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

@@ -3,7 +3,35 @@
         <title>web - Tag - </title>
         <link>https://colinder.github.io/tags/web/</link>
         <description>web - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 18 Mar 2022 13:28:48 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/web/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 23 Jun 2022 14:01:21 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/web/" rel="self" type="application/rss+xml" /><item>
+    <title>React-Native_icon_and_splash</title>
+    <link>https://colinder.github.io/react-native_icon_and_splash/</link>
+    <pubDate>Thu, 23 Jun 2022 14:01:21 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/react-native_icon_and_splash/</guid>
+    <description><![CDATA[​
+React-native (android)  icon 변경과 splash를 적용해보겠습니다.
+ icon: 핸드폰에서 어플 접속시 보이는 모습을 의미.
+splash: 어플 실행시 잠시 노출되는 화면을 의미.​
+​
+Icon 변경 방법  결론부터 정리하자면 특정 폴더안에 이미지만 넣으면 됩니다.
+ ​
+*프로젝트를 시작할 때 이름을 test로 만들어 진행하였습니다. (버전은 0.67)
+1  $ npx react-native init test --version 0.67.0   ​
+1. android/app/src/main/res 까지 폴더를 들어갑니다. 이미지와 같은 구조가 보인다면 잘 접근한 것입니다.]]></description>
+</item><item>
+    <title>Selenium 동작 대기 방법</title>
+    <link>https://colinder.github.io/selenium_%EB%8F%99%EC%9E%91%EB%8C%80%EA%B8%B0/</link>
+    <pubDate>Tue, 17 May 2022 15:50:42 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/selenium_%EB%8F%99%EC%9E%91%EB%8C%80%EA%B8%B0/</guid>
+    <description><![CDATA[​
+Selenium 동작대기 접근하려는 요소가 존재하지 않을 때 발생하는 NoSuchElementException error. 페이지와 서버가 통신중이거나 네트워크 지연 등으로 위의 크롤링을 원하는 요소가 html에 존재하기 전에 요소에 접근을 시도하기 때문에 발생하는 에러입니다.
+어떤 멋진 코드로 이를 해결할 수 있을까? 고민하였지만 조금 무식한? 방법인 시간 지연으로 이를 해결하였습니다.
+​
+​
+1. time.sleep  python 내장 library 지정한 시간만큼 지연 (프로세스 자체를 지정한 시간동안 기다림)  사용법 1 2 3  from time import sleep sleep(3) //3초간 기다림   ​]]></description>
+</item><item>
     <title>what is Linter?</title>
     <link>https://colinder.github.io/what_is_linter/</link>
     <pubDate>Fri, 18 Mar 2022 13:28:48 &#43;0900</pubDate>
@@ -99,29 +127,5 @@ vue typescript_$refs error    Object is possibly &lsquo;undefined&rsquo;
 또 같은 javaScript 언어인 node.js 라는 것으로도 Backend 개발이 가능하다고 봤는데 node.js를 Backend로 개발하는 것이, 같은 javaScript로 개발하니까 더 효율적? 좋은거 아닌가요?
  ​
 👨‍💻 하나는 명확히 답을 드릴 수 있는데, 하나는 모르겠네요. 알아보고 말씀드리겠습니다 . ​]]></description>
-</item><item>
-    <title>form 태그</title>
-    <link>https://colinder.github.io/form/</link>
-    <pubDate>Thu, 10 Jun 2021 09:06:44 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/form/</guid>
-    <description><![CDATA[​
-form 태그의 고찰   form tag의 inline 요소 중 **&lsquo;action&rsquo;**과 &lsquo;onsubmit&rsquo;
-1 2 3 4 5 6 7 8  &lt;form action=&#34;https://colinder.github.io/oh my god&#34; onsubmit=&#34;return test()&#34;&gt; &lt;input type=&#34;submit&#34; value=&#34;hahaha&#34;&gt; &lt;/form&gt; &lt;script&gt; function test(){ console.log(&#39;HHHI&#39;) } &lt;/script&gt;     submit 형태의 input을 클릭하게 되면, submit이 동작하면서 form의 &lsquo;onsubmit&rsquo;이 실행
-  이후 에 form 태그의 &lsquo;action&rsquo;이 실행
-즉, 두가지의 행동이 실행됩니다.
-​
-  비효율적이지만, 만약 위와 같은 코드에서 나중에 실행되는 action은 동작하지 않게 하고 싶다면.]]></description>
-</item><item>
-    <title>What is jQuery($)?</title>
-    <link>https://colinder.github.io/what_is_jquery/</link>
-    <pubDate>Thu, 29 Apr 2021 23:09:27 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/what_is_jquery/</guid>
-    <description><![CDATA[​
-웹 개발을 위해 인터넷의 레퍼런스들을 참고하다보면, 눈에 띄는 기호가 있습니다. $ 이게 뭘까요.? 검색해보니 제이쿼리라는데 많이 쓰이는 것 같습니다. 이에 알아봅시다!
-​
-jQuery란?  jQuery(제이쿼리)는 HTML의 클라이언트 사이드 조작(ex. 사용자가 어떤 버튼을 누른다. 사용자가 드랍박스에 선택지를 고른다.)을 단순화 하도록 설계된 크로스 플랫폼(여러 종류의 컴퓨터 플랫폼에서 동작할 수 있다는 것)의 자바스크립트 라이브러리다. 존 레식이 2006년 뉴욕 시 바캠프(Barcamp NYC)에서 공식적으로 소개하였다. 출처: 위키백과
-최대한 구체적으로 알아보았는데요. 이 내용이 이해되었다면 다음으로 넘어갑시다.]]></description>
 </item></channel>
 </rss>

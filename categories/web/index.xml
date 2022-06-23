@@ -3,7 +3,19 @@
         <title>web - Category - </title>
         <link>https://colinder.github.io/categories/web/</link>
         <description>web - Category - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 18 Mar 2022 13:28:48 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/web/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 17 May 2022 15:50:42 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/web/" rel="self" type="application/rss+xml" /><item>
+    <title>Selenium 동작 대기 방법</title>
+    <link>https://colinder.github.io/selenium_%EB%8F%99%EC%9E%91%EB%8C%80%EA%B8%B0/</link>
+    <pubDate>Tue, 17 May 2022 15:50:42 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/selenium_%EB%8F%99%EC%9E%91%EB%8C%80%EA%B8%B0/</guid>
+    <description><![CDATA[​
+Selenium 동작대기 접근하려는 요소가 존재하지 않을 때 발생하는 NoSuchElementException error. 페이지와 서버가 통신중이거나 네트워크 지연 등으로 위의 크롤링을 원하는 요소가 html에 존재하기 전에 요소에 접근을 시도하기 때문에 발생하는 에러입니다.
+어떤 멋진 코드로 이를 해결할 수 있을까? 고민하였지만 조금 무식한? 방법인 시간 지연으로 이를 해결하였습니다.
+​
+​
+1. time.sleep  python 내장 library 지정한 시간만큼 지연 (프로세스 자체를 지정한 시간동안 기다림)  사용법 1 2 3  from time import sleep sleep(3) //3초간 기다림   ​]]></description>
+</item><item>
     <title>what is Linter?</title>
     <link>https://colinder.github.io/what_is_linter/</link>
     <pubDate>Fri, 18 Mar 2022 13:28:48 &#43;0900</pubDate>
@@ -111,16 +123,5 @@ form 태그의 고찰   form tag의 inline 요소 중 **&lsquo;action&rsquo;**�
 ​
 jQuery란?  jQuery(제이쿼리)는 HTML의 클라이언트 사이드 조작(ex. 사용자가 어떤 버튼을 누른다. 사용자가 드랍박스에 선택지를 고른다.)을 단순화 하도록 설계된 크로스 플랫폼(여러 종류의 컴퓨터 플랫폼에서 동작할 수 있다는 것)의 자바스크립트 라이브러리다. 존 레식이 2006년 뉴욕 시 바캠프(Barcamp NYC)에서 공식적으로 소개하였다. 출처: 위키백과
 최대한 구체적으로 알아보았는데요. 이 내용이 이해되었다면 다음으로 넘어갑시다.]]></description>
-</item><item>
-    <title>HTTP VS HTTPS</title>
-    <link>https://colinder.github.io/httpvshttps/</link>
-    <pubDate>Tue, 24 Nov 2020 11:28:42 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/httpvshttps/</guid>
-    <description><![CDATA[​
-HTTP vs HTTPS  웹개발 프로젝트를 하면서 인터넷 주소창(URL)을 자주 보게 되었습니다. 그러던 중 HTTP와 HTTPS의 차이를 발견하였고 단순히 HTTPS가 보안이 더 뛰어나서 적용하면 좋다. 정도의 개념만을 가지고 있다, &lsquo;한 번 차이를 깔끔히 정리하면 좋겠다.&rsquo; 싶어 정리해보겠습니다.
- ​
-뜬금없이 URL란 무엇인지 우선 알아봅시다. 우리가 &lsquo;인터넷 주소창&rsquo;이라고 흔히 말하는 URL은 Uniform Resource Locator, 자원 위치 규약? 정도로 이해하면 좋을 것 같습니다.
-우리가 사는 주소를 잠시 생각해봅시다. 먼저, 대한민국안에 서울특별시에 있는 강남구를 생각해보면 대한민국이라는 국가에서 서울특별시라는 위치로 그리고 그 안에 강남구로 범위를 좁히며 구체적인 위치를 생각할 수 있습니다.]]></description>
 </item></channel>
 </rss>

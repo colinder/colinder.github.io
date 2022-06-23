@@ -3,9 +3,37 @@
         <title></title>
         <link>https://colinder.github.io/</link>
         <description>Hello New World</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 20 Apr 2022 17:19:29 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 23 Jun 2022 14:01:21 &#43;0900</lastBuildDate>
             <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>React-Native_icon_and_splash</title>
+    <link>https://colinder.github.io/react-native_icon_and_splash/</link>
+    <pubDate>Thu, 23 Jun 2022 14:01:21 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/react-native_icon_and_splash/</guid>
+    <description><![CDATA[​
+React-native (android)  icon 변경과 splash를 적용해보겠습니다.
+ icon: 핸드폰에서 어플 접속시 보이는 모습을 의미.
+splash: 어플 실행시 잠시 노출되는 화면을 의미.​
+​
+Icon 변경 방법  결론부터 정리하자면 특정 폴더안에 이미지만 넣으면 됩니다.
+ ​
+*프로젝트를 시작할 때 이름을 test로 만들어 진행하였습니다. (버전은 0.67)
+1  $ npx react-native init test --version 0.67.0   ​
+1. android/app/src/main/res 까지 폴더를 들어갑니다. 이미지와 같은 구조가 보인다면 잘 접근한 것입니다.]]></description>
+</item><item>
+    <title>Selenium 동작 대기 방법</title>
+    <link>https://colinder.github.io/selenium_%EB%8F%99%EC%9E%91%EB%8C%80%EA%B8%B0/</link>
+    <pubDate>Tue, 17 May 2022 15:50:42 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/selenium_%EB%8F%99%EC%9E%91%EB%8C%80%EA%B8%B0/</guid>
+    <description><![CDATA[​
+Selenium 동작대기 접근하려는 요소가 존재하지 않을 때 발생하는 NoSuchElementException error. 페이지와 서버가 통신중이거나 네트워크 지연 등으로 위의 크롤링을 원하는 요소가 html에 존재하기 전에 요소에 접근을 시도하기 때문에 발생하는 에러입니다.
+어떤 멋진 코드로 이를 해결할 수 있을까? 고민하였지만 조금 무식한? 방법인 시간 지연으로 이를 해결하였습니다.
+​
+​
+1. time.sleep  python 내장 library 지정한 시간만큼 지연 (프로세스 자체를 지정한 시간동안 기다림)  사용법 1 2 3  from time import sleep sleep(3) //3초간 기다림   ​]]></description>
+</item><item>
     <title>How to Data_Scaling</title>
     <link>https://colinder.github.io/data_scaling/</link>
     <pubDate>Wed, 20 Apr 2022 17:19:29 &#43;0900</pubDate>
@@ -120,26 +148,5 @@ What is webpack?  오늘나 자바스크립트 개발에서 모듈을 사용하�
 이런 문제를 해결하기 위해 *번들러를 사용하는데 wabpack은 가장 많이 사용되는 번들러 중 하나입니다.
  *번들러
 애플리케이션에 필요한 모든 종류의 파일들을 모듈 단위로 나누어 최소한의 파일 묶음(번들)으로 만들어 낸다.]]></description>
-</item><item>
-    <title>What is ES2015?</title>
-    <link>https://colinder.github.io/what_is_es2015/</link>
-    <pubDate>Mon, 28 Feb 2022 09:23:51 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/what_is_es2015/</guid>
-    <description><![CDATA[​
-What is ES2015?  웹 개발 도구와 내용을 정리하다보면 등장하던 ES2015. 그냥 어떤 느낌의 단어인지 어렴풋이 알고만 있다가 확실하게 정리해 알아두고 싶어 내용을 정리합니다.
- ​
-​
-​
-우선 javaScript에 대하여 조금 알아봅시다.  javaScript는 프로그래밍 언어입니다. 프로그래밍 언어는 지금도 꾸준히 개선되고 발전됩니다. 계속 변화하고 있기에 특정 시기에 개발된 상태를 1.2.1과 같이 버전으로 등록해 배포합니다. 자바스크립트는 결점이 상당히 많은 언어였고, 사용자들이 직접 결점을 보완하는 방법으로 발전되어 왔는데, **ECMA(European Computer Manufacturer&rsquo;s Association)**라는 단체에서 기존의 결점을 보완한 표준 자바스크립트 버전을 매년 발표하게 됩니다.]]></description>
-</item><item>
-    <title>What is Web Socket?</title>
-    <link>https://colinder.github.io/what_is_web_socket/</link>
-    <pubDate>Fri, 25 Feb 2022 12:20:35 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/what_is_web_socket/</guid>
-    <description><![CDATA[​
-What is Web Socket?  Web 통신은 무조건 두 단계를 걸쳐 동작합니다. 요청과 응답. 간단히 어떤 요청이 있을 때만 서버와 연결되어 어떤 응답을 하게 됩니다. 이러한 방식을 HTTP라고 합니다. 예를 들어, Naver.com에 접속하는 것은 &lsquo;Naver.com&rsquo;이라는 요청을 보낸 것이고 그에 대한 응답으로 naver의 메인 화면을 보여주는 것이죠. 그런데 만약 실시간 채팅 서비스나 푸시 알람을 구현해야 한다면, 매우 잦은 요청을 보내야 하고 네트워크 상 많은 부하를 발생시킬 수 있습니다.
- HTML5이라는 웹 표준이 생긴이래로 이러한 HTTP의 단점을 보완하기 위해 웹 소켓(Web Socket)이 등장했습니다.]]></description>
 </item></channel>
 </rss>
