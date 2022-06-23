@@ -14,7 +14,7 @@ splash: 어플 실행시 잠시 노출되는 화면을 의미.​
 Icon 변경 방법  결론부터 정리하자면 특정 폴더안에 이미지만 넣으면 됩니다.
  ​
 *프로젝트를 시작할 때 이름을 test로 만들어 진행하였습니다. (버전은 0.67)
-1  $ npx react-native init test --version 0.67.0   ​
+1  npx react-native init test --version 0.67.0   ​
 1. android/app/src/main/res 까지 폴더를 들어갑니다. 이미지와 같은 구조가 보인다면 잘 접근한 것입니다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://colinder.github.io/react-native_icon_and_splash/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
@@ -33,7 +33,7 @@ splash: 어플 실행시 잠시 노출되는 화면을 의미.​
 Icon 변경 방법  결론부터 정리하자면 특정 폴더안에 이미지만 넣으면 됩니다.
  ​
 *프로젝트를 시작할 때 이름을 test로 만들어 진행하였습니다. (버전은 0.67)
-1  $ npx react-native init test --version 0.67.0   ​
+1  npx react-native init test --version 0.67.0   ​
 1. android/app/src/main/res 까지 폴더를 들어갑니다. 이미지와 같은 구조가 보인다면 잘 접근한 것입니다."/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
@@ -47,7 +47,7 @@ Icon 변경 방법  결론부터 정리하자면 특정 폴더안에 이미지�
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/react-native_icon_and_splash\/"
-        },"genre": "posts","keywords": "react-native, web, icon, splash","wordcount":  683 ,
+        },"genre": "posts","keywords": "react-native, web, icon, splash","wordcount":  682 ,
         "url": "https:\/\/colinder.github.io\/react-native_icon_and_splash\/","datePublished": "2022-06-23T14:01:21+09:00","dateModified": "2022-06-23T14:01:21+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -124,7 +124,7 @@ Icon 변경 방법  결론부터 정리하자면 특정 폴더안에 이미지�
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">React-Native_icon_and_splash</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/react-native/"><i class="far fa-folder fa-fw"></i>react-native</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-06-23">2022-06-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;683 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-06-23">2022-06-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;682 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;4 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -184,7 +184,7 @@ Icon 변경 방법  결론부터 정리하자면 특정 폴더안에 이미지�
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">$</span> <span class="nx">npx</span> <span class="nx">react</span><span class="o">-</span><span class="kr">native</span> <span class="nx">init</span> <span class="nx">test</span> <span class="o">--</span><span class="nx">version</span> <span class="mf">0.67</span><span class="p">.</span><span class="mi">0</span>
+<pre class="chroma"><code class="language-bash" data-lang="bash">npx react-native init <span class="nb">test</span> --version 0.67.0
 </code></pre></td></tr></table>
 </div>
 </div><p>​</p>
@@ -216,8 +216,6 @@ Icon 변경 방법  결론부터 정리하자면 특정 폴더안에 이미지�
 <p>​</p>
 <p>​</p>
 <h4 id="5-캐시-초기화-하기">5. 캐시 초기화 하기</h4>
-<ul>
-<li>
 <p>아래 명령어를 통해 캐시를 초기화 합니다. <span style="font-size:0.8em">(이유: 환경설정 및 새롭게 추가된 파일을 읽어오는데 문제없게 하기 위함)</span></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -237,8 +235,6 @@ $ ./gradlew clean	<span class="c1"># android 폴더 안에 gradlew을 초기화<
 </div>
 </div><p>해준 후</p>
 <p>​</p>
-</li>
-</ul>
 <p>​</p>
 <h4 id="6-다시-root-폴더-위치로-이동해">6. 다시 root 폴더 위치로 이동해</h4>
 <div class="highlight"><div class="chroma">
@@ -257,7 +253,7 @@ $ ./gradlew clean	<span class="c1"># android 폴더 안에 gradlew을 초기화<
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">npm run android  // 빌드 및 시뮬레이터 실행
+<pre class="chroma"><code class="language-bash" data-lang="bash">npm run android  <span class="c1"># 빌드 및 시뮬레이터 실행</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>실행하면 변환된 Icon 확인 가능.</p>
@@ -284,8 +280,6 @@ $ ./gradlew clean	<span class="c1"># android 폴더 안에 gradlew을 초기화<
 </div><p>​</p>
 <p>​</p>
 <h4 id="2-환경-설정하기">2. 환경 설정하기</h4>
-<ol>
-<li>
 <p>android/app/src/main/java/com/<strong>test</strong>/MainActivity.java 파일을 열어 수정합니다.<br>
 <span style="font-size: 0.8em">(중간에 test는 프로젝트 생성할 당시 만든  프로젝트명)</span></p>
 <div class="highlight"><div class="chroma">
@@ -343,8 +337,6 @@ $ ./gradlew clean	<span class="c1"># android 폴더 안에 gradlew을 초기화<
 </code></pre></td></tr></table>
 </div>
 </div><p>만약에 <b>react-native navigation</b>을 설치한 상태라면, 중간 &ldquo;@Override&rdquo; 부분에 코드 중복이 발생하는데 그냥 무시하셔도 됩니다.</p>
-</li>
-</ol>
 <p>​</p>
 <p>​</p>
 <h4 id="3-splash-화면-그리기">3. splash 화면 그리기</h4>
@@ -380,7 +372,7 @@ $ ./gradlew clean	<span class="c1"># android 폴더 안에 gradlew을 초기화<
 <p>​</p>
 <p>​</p>
 <h4 id="4-스플래시-이미지-만들기">4, 스플래시 이미지 만들기</h4>
-<p>이미지를 필요한 사이즈 별로 만들어야 합니다.단 기존에 사용할 이미지 1장<span style='font-size: 0.8em'>(권장 사이즈 1242px x 2208px)</span>은 있어야 합니다.</p>
+<p>이미지를 필요한 사이즈 별로 만들어야 합니다. 단 원본 이미지 1장<span style='font-size: 0.8em'>(권장 사이즈 1242px x 2208px)</span>은 있어야 합니다.</p>
 <ol>
 <li>
 <p>가지고 있는 splash 파일에 이름을 <b>launch_screen.png로 변경</b>합니다.</p>
@@ -401,8 +393,6 @@ $ ./gradlew clean	<span class="c1"># android 폴더 안에 gradlew을 초기화<
 <p>​</p>
 <p>​</p>
 <h4 id="6-캐시-초기화-하기">6. 캐시 초기화 하기</h4>
-<ul>
-<li>
 <p>아래 명령어를 통해 캐시를 초기화 합니다. <span style="font-size:0.8em">(이유: 환경설정 및 새롭게 추가된 파일을 읽어오는데 문제없게 하기 위함)</span></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -421,13 +411,9 @@ $ ./gradlew clean	<span class="c1"># android 폴더 안에 gradlew을 초기화<
 </code></pre></td></tr></table>
 </div>
 </div><p>여기까지 진행하고 시뮬레이터에 화면을 띄워보면 splash 이미지가 등장은 하나 사라지지 않습니다. 하여</p>
-</li>
-</ul>
 <p>​</p>
 <p>​</p>
 <h4 id="7-splash-등장-시간-설정">7. splash 등장 시간 설정</h4>
-<ol>
-<li>
 <p>App.js 파일 SplashScreen Import 하고</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -478,8 +464,6 @@ $ ./gradlew clean	<span class="c1"># android 폴더 안에 gradlew을 초기화<
 </code></pre></td></tr></table>
 </div>
 </div><p>​</p>
-</li>
-<li>
 <p>React Native 에뮬레이터를 실행하여 확인합니다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -489,9 +473,7 @@ $ ./gradlew clean	<span class="c1"># android 폴더 안에 gradlew을 초기화<
 <pre class="chroma"><code class="language-bash" data-lang="bash">npm run android
 </code></pre></td></tr></table>
 </div>
-</div></li>
-</ol>
-<p>​</p>
+</div><p>​</p>
 <p>​</p>
 <p>​</p>
 <p>이상 react-native에서 icon 및 splash 설정을 알아보았습니다.</p>

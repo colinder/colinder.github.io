@@ -21,8 +21,8 @@
 
 *프로젝트를 시작할 때 이름을 **test**로 만들어 진행하였습니다. (버전은 0.67)
 
-```javascript
-$ npx react-native init test --version 0.67.0
+```bash
+npx react-native init test --version 0.67.0
 ```
 
 ​			
@@ -71,19 +71,19 @@ $ npx react-native init test --version 0.67.0
 
 #### 5. 캐시 초기화 하기
 
-- 아래 명령어를 통해 캐시를 초기화 합니다. <span style="font-size:0.8em">(이유: 환경설정 및 새롭게 추가된 파일을 읽어오는데 문제없게 하기 위함)</span>
+아래 명령어를 통해 캐시를 초기화 합니다. <span style="font-size:0.8em">(이유: 환경설정 및 새롭게 추가된 파일을 읽어오는데 문제없게 하기 위함)</span>
 
-  ```bash
-  # root 폴더 위치(package.json이 있는 위치)에서 명령어를 입력합니다.
-  $ cd android		# android 폴더로 이동
-  $ ./gradlew clean	# android 폴더 안에 gradlew을 초기화
-  
-  #이 둘을 묶어서 한 번에 실행하고 싶다면, cd android && ./gradlew clean 
-  ```
+```bash
+# root 폴더 위치(package.json이 있는 위치)에서 명령어를 입력합니다.
+$ cd android		# android 폴더로 이동
+$ ./gradlew clean	# android 폴더 안에 gradlew을 초기화
 
-  해준 후 
+#이 둘을 묶어서 한 번에 실행하고 싶다면, cd android && ./gradlew clean 
+```
 
-  ​	
+해준 후 
+
+​	
 
 ​		
 
@@ -100,7 +100,7 @@ cd ..  # android폴더 안에서 상위 폴더로 빠져나오기
 #### 7. 프로젝트를 실행해 변경된 아이콘을 확인
 
 ```bash
-npm run android  // 빌드 및 시뮬레이터 실행
+npm run android  # 빌드 및 시뮬레이터 실행
 ```
 
 실행하면 변환된 Icon 확인 가능.
@@ -133,41 +133,39 @@ npm i react-native-splash-screen --save
 
 ​	
 
-
-
 #### 2. 환경 설정하기
 
-1. android/app/src/main/java/com/**test**/MainActivity.java 파일을 열어 수정합니다.<br>
-   <span style="font-size: 0.8em">(중간에 test는 프로젝트 생성할 당시 만든  프로젝트명)</span>
+android/app/src/main/java/com/**test**/MainActivity.java 파일을 열어 수정합니다.<br>
+<span style="font-size: 0.8em">(중간에 test는 프로젝트 생성할 당시 만든  프로젝트명)</span>
 
-   ```react
-   package com.test;
-   
-   import android.os.Bundle; // add
-   import com.facebook.react.ReactActivity;
-   
-   // react-native-splash-screen >= 0.3.1 
-   import org.devio.rn.splashscreen.SplashScreen; // here 
-   
-   public class MainActivity extends ReactActivity {
-     @Override
-     protected void onCreate(Bundle savedInstanceState) {
-         SplashScreen.show(this);  // here 
-         super.onCreate(savedInstanceState);
-     }
-   
-     /**
-      * Returns the name of the main component registered from JavaScript. This is used to schedule
-      * rendering of the component.
-      */
-     @Override
-     protected String getMainComponentName() {
-       return "test";
-     }
-   }
-   ```
+```react
+package com.test;
 
-   만약에 <b>react-native navigation</b>을 설치한 상태라면, 중간 "@Override" 부분에 코드 중복이 발생하는데 그냥 무시하셔도 됩니다.
+import android.os.Bundle; // add
+import com.facebook.react.ReactActivity;
+
+// react-native-splash-screen >= 0.3.1 
+import org.devio.rn.splashscreen.SplashScreen; // here 
+
+public class MainActivity extends ReactActivity {
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+      SplashScreen.show(this);  // here 
+      super.onCreate(savedInstanceState);
+  }
+
+  /**
+   * Returns the name of the main component registered from JavaScript. This is used to schedule
+   * rendering of the component.
+   */
+  @Override
+  protected String getMainComponentName() {
+    return "test";
+  }
+}
+```
+
+만약에 <b>react-native navigation</b>을 설치한 상태라면, 중간 "@Override" 부분에 코드 중복이 발생하는데 그냥 무시하셔도 됩니다.
 
 ​	
 
@@ -196,7 +194,7 @@ npm i react-native-splash-screen --save
 
 #### 4, 스플래시 이미지 만들기
 
-이미지를 필요한 사이즈 별로 만들어야 합니다.단 기존에 사용할 이미지 1장<span style='font-size: 0.8em'>(권장 사이즈 1242px x 2208px)</span>은 있어야 합니다.
+이미지를 필요한 사이즈 별로 만들어야 합니다. 단 원본 이미지 1장<span style='font-size: 0.8em'>(권장 사이즈 1242px x 2208px)</span>은 있어야 합니다.
 
 1. 가지고 있는 splash 파일에 이름을 <b>launch_screen.png로 변경</b>합니다.
 
@@ -222,17 +220,17 @@ npm i react-native-splash-screen --save
 
 #### 6. 캐시 초기화 하기
 
-- 아래 명령어를 통해 캐시를 초기화 합니다. <span style="font-size:0.8em">(이유: 환경설정 및 새롭게 추가된 파일을 읽어오는데 문제없게 하기 위함)</span>
+아래 명령어를 통해 캐시를 초기화 합니다. <span style="font-size:0.8em">(이유: 환경설정 및 새롭게 추가된 파일을 읽어오는데 문제없게 하기 위함)</span>
 
-  ```bash
-  # root 폴더 위치(package.json이 있는 위치)에서 명령어를 입력합니다.
-  $ cd android		# android 폴더로 이동
-  $ ./gradlew clean	# android 폴더 안에 gradlew을 초기화
-  
-  #이 둘을 묶어서 한 번에 실행하고 싶다면, cd android && ./gradlew clean
-  ```
+```bash
+# root 폴더 위치(package.json이 있는 위치)에서 명령어를 입력합니다.
+$ cd android		# android 폴더로 이동
+$ ./gradlew clean	# android 폴더 안에 gradlew을 초기화
 
-  여기까지 진행하고 시뮬레이터에 화면을 띄워보면 splash 이미지가 등장은 하나 사라지지 않습니다. 하여
+#이 둘을 묶어서 한 번에 실행하고 싶다면, cd android && ./gradlew clean
+```
+
+여기까지 진행하고 시뮬레이터에 화면을 띄워보면 splash 이미지가 등장은 하나 사라지지 않습니다. 하여
 
 ​	
 
@@ -240,39 +238,39 @@ npm i react-native-splash-screen --save
 
 #### 7. splash 등장 시간 설정
 
-1. App.js 파일 SplashScreen Import 하고
+App.js 파일 SplashScreen Import 하고
 
-   ```react
-   import React, {useEffect} from 'react';
-   import {StyleSheet, Text, View} from 'react-native';
-   import SplashScreen from 'react-native-splash-screen';  // here
-   
-   export default function App() {
-     useEffect(() => {
-       try {
-         setTimeout(() => {
-           SplashScreen.hide();
-         }, 1000); // here 스플래시 노출 시간 1초
-       } catch (e) {
-         console.log(e.message);
-       }
-     });
-   
-     return (
-       <View>
-         <Text>스플래쉬 테스트</Text>
-       </View>
-     );
-   }
-   ```
+```react
+import React, {useEffect} from 'react';
+import {StyleSheet, Text, View} from 'react-native';
+import SplashScreen from 'react-native-splash-screen';  // here
 
-   ​		
+export default function App() {
+  useEffect(() => {
+    try {
+      setTimeout(() => {
+        SplashScreen.hide();
+      }, 1000); // here 스플래시 노출 시간 1초
+    } catch (e) {
+      console.log(e.message);
+    }
+  });
 
-2. React Native 에뮬레이터를 실행하여 확인합니다.
+  return (
+    <View>
+      <Text>스플래쉬 테스트</Text>
+    </View>
+  );
+}
+```
 
-   ```bash
-   npm run android
-   ```
+​		
+
+React Native 에뮬레이터를 실행하여 확인합니다.
+
+```bash
+npm run android
+```
 
 ​	
 
