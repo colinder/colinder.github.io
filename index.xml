@@ -3,9 +3,22 @@
         <title></title>
         <link>https://colinder.github.io/</link>
         <description>Hello New World</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 23 Jun 2022 14:01:21 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 30 Jun 2022 13:30:53 &#43;0900</lastBuildDate>
             <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>What is Train_test_split?</title>
+    <link>https://colinder.github.io/what_is_train_test_split/</link>
+    <pubDate>Thu, 30 Jun 2022 13:30:53 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/what_is_train_test_split/</guid>
+    <description><![CDATA[​
+What is &ldquo;train_test_split&rdquo; function?  AI 모델링을 위해 X_train, X_test, y_train, y_test로 나누는 작업은 필수적입니다. 저는 train과 test를 나누는 코드를 직접 짜서 사용했었는데 scikit learn에서 제공되는 함수가 있었습니다. &ldquo;train_test_split&rdquo;이를 알아보겠습니다.
+ ​
+직접 사용되는 모습을 보며 이해해보겠습니다.
+1 2 3 4  import numpy as np from sklearn.model_selection import train_test_split X_train, X_test, y_train, y_test = train_test_split(data, label, test_size=0.3, random_state=29)   ​
+​
+train_test_split() 함수안에 사용되는 인자에 대하여 하나씩 알아보겠습니다.]]></description>
+</item><item>
     <title>React-Native_icon_and_splash</title>
     <link>https://colinder.github.io/react-native_icon_and_splash/</link>
     <pubDate>Thu, 23 Jun 2022 14:01:21 &#43;0900</pubDate>
@@ -137,16 +150,5 @@ ES2015 등장 이후로 javascript는 class문법, 화살표 함수, 모듈 도�
 아래 그림을 보면 왼쪽 상단 과녁은
 예측값들이 대체로 정답 근방에서 왔다갔다 합니다. &gt; 편향이 낮습니다.
 예측값들끼리 서로 몰려 있습니다. &gt; 분산이 낮습니다.]]></description>
-</item><item>
-    <title>What is webpack?</title>
-    <link>https://colinder.github.io/what_is_webpack/</link>
-    <pubDate>Tue, 01 Mar 2022 09:17:44 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/what_is_webpack/</guid>
-    <description><![CDATA[​
-What is webpack?  오늘나 자바스크립트 개발에서 모듈을 사용하여 개발하는 것은 선택이 아닌 필수입니다. 하지만 아직 모든 브라우저(마이크로소프트 - 앳지, 네이버 - 웨일, 구글 - 크롬 등등)가 *ES2015 모듈을 지원하지 않기 때문에 모듈 단위로 패키지를 관리할 수 없습니다. 이런 경우 전역 스코프를 공유하기 때문에 변수명이 충돌하거나 값이 덮어씌워지는 등 문제가 발생할 수 있습니다.
-이런 문제를 해결하기 위해 *번들러를 사용하는데 wabpack은 가장 많이 사용되는 번들러 중 하나입니다.
- *번들러
-애플리케이션에 필요한 모든 종류의 파일들을 모듈 단위로 나누어 최소한의 파일 묶음(번들)으로 만들어 낸다.]]></description>
 </item></channel>
 </rss>
