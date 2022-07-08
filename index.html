@@ -126,10 +126,11 @@ Compute the minimum and maximum to be used for later scaling.
         <a href="/what_is_data_scaling/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/scaling/">scaling</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/what_is_train_test_split/">What is Train_test_split?</a>
+        <a href="/what_is_train_test_split/">What is train_test_split()?</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-06-30">2022-06-30</time></span>&nbsp;<span class="post-category">included in <a href="/categories/ai/"><i class="far fa-folder fa-fw"></i>AI</a>&nbsp;<a href="/categories/tenserflow/"><i class="far fa-folder fa-fw"></i>tenserflow</a>&nbsp;<a href="/categories/train_test_split/"><i class="far fa-folder fa-fw"></i>train_test_split</a></span></div><div class="content">​
-What is &ldquo;train_test_split&rdquo; function?  AI 모델링을 위해 X_train, X_test, y_train, y_test로 나누는 작업은 필수적입니다. 저는 train과 test를 나누는 코드를 직접 짜서 사용했었는데 scikit learn에서 제공되는 함수가 있었습니다. &ldquo;train_test_split&rdquo;이를 알아보겠습니다.
+What is &lsquo;train_test_split()&rsquo;?  AI 모델링을 위해 X_train, X_test, y_train, y_test로 나누는 작업은 필수적입니다. 저는 train과 test를 나누는 코드를 직접 짜서 사용했었는데 scikit learn에서 제공되는 함수가 있었습니다. &ldquo;train_test_split()&quot;이를 알아보겠습니다.
  ​
+​
 직접 사용되는 모습을 보며 이해해보겠습니다.
 1 2 3 4  import numpy as np from sklearn.model_selection import train_test_split X_train, X_test, y_train, y_test = train_test_split(data, label, test_size=0.3, random_state=29)   ​
 ​

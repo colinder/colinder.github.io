@@ -1,12 +1,14 @@
-# What is Train_test_split?
+# What is train_test_split()?
 
 
 ​	
 
-# What is "train_test_split" function?
+# What is 'train_test_split()'?
 
 > AI 모델링을 위해 X_train, X_test, y_train, y_test로 나누는 작업은 필수적입니다. 
-> 저는 train과 test를 나누는 코드를 직접 짜서 사용했었는데 scikit learn에서 제공되는 함수가 있었습니다. <b>"train_test_split"</b>이를 알아보겠습니다. 
+> 저는 train과 test를 나누는 코드를 직접 짜서 사용했었는데 scikit learn에서 제공되는 함수가 있었습니다. <b>"train_test_split()"</b>이를 알아보겠습니다. 
+
+​	
 
 ​	
 
