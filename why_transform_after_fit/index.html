@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>AI학습 때 왜 .fit() 한 뒤에 train, test data를 .transform()할까? - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="AI학습 때 왜 .fit() 한 뒤에 train, test data를 .transform()할까?" />
+<meta property="og:description" content="​
+🤔 왜 .fit() 한 뒤에 train, test data를 .transform()할까?  결론은 .fit()을 통해 학습데이터(train)의 경향을 파악 및 저장하고 이 경향을 train, test data를 적용해 조정해주기 위함입니다.
+  minmaxScaler를 대표로 .fit()한 결과를 출력해보면  .fit()이 어떤 역할을 하는지 알 수 없습니다. 그냥 MinMaxScaler()라는 객체가 할당된 것만 알 수 있습니다.
+공식문서를 살펴보면
+ fit(X, y=None)
+Compute the minimum and maximum to be used for later scaling.
+ * StandardScale()의 경우 Compute the mean and std to be used for later scaling." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://colinder.github.io/why_transform_after_fit/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-07-08T14:50:36&#43;09:00" />
+<meta property="article:modified_time" content="2022-07-08T14:50:36&#43;09:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
+
+<meta name="twitter:title" content="AI학습 때 왜 .fit() 한 뒤에 train, test data를 .transform()할까?"/>
+<meta name="twitter:description" content="​
+🤔 왜 .fit() 한 뒤에 train, test data를 .transform()할까?  결론은 .fit()을 통해 학습데이터(train)의 경향을 파악 및 저장하고 이 경향을 train, test data를 적용해 조정해주기 위함입니다.
+  minmaxScaler를 대표로 .fit()한 결과를 출력해보면  .fit()이 어떤 역할을 하는지 알 수 없습니다. 그냥 MinMaxScaler()라는 객체가 할당된 것만 알 수 있습니다.
+공식문서를 살펴보면
+ fit(X, y=None)
+Compute the minimum and maximum to be used for later scaling.
+ * StandardScale()의 경우 Compute the mean and std to be used for later scaling."/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/why_transform_after_fit/" /><link rel="prev" href="https://colinder.github.io/what_is_data_scaling/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "AI학습 때 왜 .fit() 한 뒤에 train, test data를 .transform()할까?",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/colinder.github.io\/why_transform_after_fit\/"
+        },"genre": "posts","keywords": "fit(), transform()","wordcount":  267 ,
+        "url": "https:\/\/colinder.github.io\/why_transform_after_fit\/","datePublished": "2022-07-08T14:50:36+09:00","dateModified": "2022-07-08T14:50:36+09:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "colinder"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="">Hello New World</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="">Hello New World</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">AI학습 때 왜 .fit() 한 뒤에 train, test data를 .transform()할까?</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/fit/"><i class="far fa-folder fa-fw"></i>fit()</a>&nbsp;<a href="/categories/transform/"><i class="far fa-folder fa-fw"></i>transform()</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-07-08">2022-07-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;267 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#-왜-fit-한-뒤에-train-test-data를-transform할까">🤔 왜 .fit() 한 뒤에 train, test data를 .transform()할까?</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#추가-사항--fit_transform">추가 사항 &gt; fit_transform()</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>​</p>
+<h2 id="-왜-fit-한-뒤에-train-test-data를-transform할까">🤔 왜 .fit() 한 뒤에 train, test data를 .transform()할까?</h2>
+<blockquote>
+<p>결론은 <b>.fit()을 통해 학습데이터(train)의 경향을 파악 및 저장하고 이 경향을 train, test data를 적용해 조정해주기 위함입니다.</b></p>
+</blockquote>
+<ul>
+<li>minmaxScaler를 대표로 .fit()한 결과를 출력해보면</li>
+</ul>
+<image src="/images/Data_Scaling.assets/image-20220411143534625.png" width="500px" style="display: block; margin: 20px auto">
+<p>.fit()이 어떤 역할을 하는지 알 수 없습니다. 그냥 MinMaxScaler()라는 객체가 할당된 것만 알 수 있습니다.</p>
+<p><a href="https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html#sklearn.preprocessing.MinMaxScaler" target="_blank" rel="noopener noreffer">공식문서</a>를 살펴보면</p>
+<blockquote>
+<p>fit(<em>X</em>, <em>y=None</em>)</p>
+<p>Compute the minimum and maximum to be used for later scaling.</p>
+</blockquote>
+<p><span style="color: grey; font-size:.8em; float:right">* StandardScale()의 경우 Compute the mean and std to be used for later scaling. 평균과 분산을 저장</p>
+<p>​</p>
+<p>나중에 스케일링할 때 사용할 최대 최소의 값을 계산한다고 합니다.</p>
+<p>어떤 동작을 하는지는 알았는데 <strong>왜 이런 과정이 필요할까? 왜 train data의 경향을 뽑아 test에 적용할까?</strong></p>
+<p>​</p>
+<p>​</p>
+<p>해당 내용은 스케일링 보다 <b>인공지능 학습에 대한 설명</b>일 수도 있습니다.</p>
+<p>우리가 인공지능을 통해 알고 싶은 것은 <b>어떤 경향(분포)를 학습한 모델이 특정 input값이 입력되었을 때, 신뢰성 있는 예측값</b>입니다.</p>
+<p>이 과정을 세분화해 알아보자면,</p>
+<ol>
+<li>train_data의 경향(분포)를 학습한 모델</li>
+<li>특정 input(test_data)값이 입력</li>
+<li>모델이 예측한 결과 도출</li>
+</ol>
+<p>​</p>
+<p>AI 모델은 1번 과정을 통해 학습합니다. 예를 들어 train_data가 1~100으로 이루어져 있고 이를 학습했다면,</p>
+<p>2번의 특정 input값이 입력되었을 때, <span style="color: red;"><strong>특정 input의 위치는 train_data의 1~100의 경향에 빗대어 보니 어디쯤 이다.</strong></span>는 결과를 도출합니다.</p>
+<image src="/images/Data_Scaling.assets/image-20220418134619188.png" width="500px" style="display: block; margin: 20px auto">
+<p>즉, 만약  train_data와 test_data에서 각각 .fit()하여 .transform() 하게 된다면,</p>
+<p>test_data의 규모만 줄여주며, 이를 train_data에 빗대어 예측할 수 없게 됩니다.</p>
+<p>​</p>
+<p>그래서 test_data를 train_data의 분포(경향)을 따르게 .transform() 해준 후 모델 예측(.predict())에 넣어 결과를 보는 것입니다.</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<h4 id="추가-사항--fit_transform">추가 사항 &gt; fit_transform()</h4>
+<p>위의 프로세스대로 스케일링을 진행한다면</p>
+<ol>
+<li>train의 경향 추출(.fit())</li>
+<li>2.train의 경향을 train에 반영하는 스케일링 진행(.transform()),</li>
+<li>train의 경향을 test에 반영하는 스케일링 진행(.transform())</li>
+</ol>
+<p>총 3번의 과정을 거처야 하나,</p>
+<p>이를 줄이기 위해 fit_transform()이라는 함수를 통해 1, 2 과정을 한 번에 진행할 수도 있습니다.</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-07-08</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/why_transform_after_fit/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/fit/">fit()</a>,&nbsp;<a href="/tags/transform/">transform()</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/what_is_data_scaling/" class="prev" rel="prev" title="What is Data_Scaling"><i class="fas fa-angle-left fa-fw"></i>What is Data_Scaling</a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://colinder-github-io.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

@@ -3,7 +3,35 @@
         <title>All Posts - </title>
         <link>https://colinder.github.io/posts/</link>
         <description>All Posts | </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 30 Jun 2022 13:30:53 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 08 Jul 2022 14:50:36 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>AI학습 때 왜 .fit() 한 뒤에 train, test data를 .transform()할까?</title>
+    <link>https://colinder.github.io/why_transform_after_fit/</link>
+    <pubDate>Fri, 08 Jul 2022 14:50:36 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/why_transform_after_fit/</guid>
+    <description><![CDATA[​
+🤔 왜 .fit() 한 뒤에 train, test data를 .transform()할까?  결론은 .fit()을 통해 학습데이터(train)의 경향을 파악 및 저장하고 이 경향을 train, test data를 적용해 조정해주기 위함입니다.
+  minmaxScaler를 대표로 .fit()한 결과를 출력해보면  .fit()이 어떤 역할을 하는지 알 수 없습니다. 그냥 MinMaxScaler()라는 객체가 할당된 것만 알 수 있습니다.
+공식문서를 살펴보면
+ fit(X, y=None)
+Compute the minimum and maximum to be used for later scaling.
+ * StandardScale()의 경우 Compute the mean and std to be used for later scaling.]]></description>
+</item><item>
+    <title>What is Data_Scaling</title>
+    <link>https://colinder.github.io/what_is_data_scaling/</link>
+    <pubDate>Thu, 07 Jul 2022 17:19:29 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/what_is_data_scaling/</guid>
+    <description><![CDATA[​
+데이터 스케일링(Data Scaling) 이란?  데이터의 값의 범위를 조정하는 것
+ ​
+​
+​
+🤔 왜 데이터 스케일링을 하는가?  데이터의 경향, feature의 영향, 상관관계 등 데이터를 분석하는데 활용할 수 있으며, 인공지능 개발 중 학습단계에서 여러 feature의 영향도를 비슷한 수준으로 맞추기 위해 범위를 조정.
+ ​
+아래 그림을 보면서 이해해보겠습니다.
+과제  여러 feature(성별, 나이, 몸무게, 자산현황)의 특성을 보고 Label을 예측하는 모델을 만든다고 가정  문제점  값의 범위를 보면  성별 0, 1 나이 0~100, 몸무게 0~120, 자산현황 0~700,000,000, Label은 0~800,000,000의 값을 갖는다고 가정한다면,    ​]]></description>
+</item><item>
     <title>What is Train_test_split?</title>
     <link>https://colinder.github.io/what_is_train_test_split/</link>
     <pubDate>Thu, 30 Jun 2022 13:30:53 &#43;0900</pubDate>
@@ -44,21 +72,6 @@ Selenium 동작대기 접근하려는 요소가 존재하지 않을 때 발생�
 ​
 ​
 1. time.sleep  python 내장 library 지정한 시간만큼 지연 (프로세스 자체를 지정한 시간동안 기다림)  사용법 1 2 3  from time import sleep sleep(3) //3초간 기다림   ​]]></description>
-</item><item>
-    <title>How to Data_Scaling</title>
-    <link>https://colinder.github.io/data_scaling/</link>
-    <pubDate>Wed, 20 Apr 2022 17:19:29 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/data_scaling/</guid>
-    <description><![CDATA[​
-데이터 스케일링 (Data Scaling) 이란?  데이터의 값의 범위를 조정하는 것
- ​
-​
-​
-🤔 왜 데이터 스케일링을 하는가?  데이터의 경향, feature의 영향, 상관관계 등 데이터를 분석하는데 활용할 수 있으며, 인공지능 개발 중 학습단계에서 여러 feature의 영향도를 비슷한 수준으로 맞추기 위해 범위를 조정.
- ​
-아래 그림을 보면서 이해해보겠습니다.
-과제  여러 feature(성별, 나이, 몸무게, 자산현황)의 특성을 보고 Label을 예측하는 모델을 만든다고 가정  문제점  값의 범위를 보면  성별 0, 1 나이 0~100, 몸무게 0~120, 자산현황 0~700,000,000, Label은 0~800,000,000의 값을 갖는다고 가정한다면,    ​]]></description>
 </item><item>
     <title>Epoch</title>
     <link>https://colinder.github.io/epoch/</link>
@@ -129,24 +142,5 @@ Babel이란?  Babel은 최신 명세(또는 ES2015 이상)의 문법을 구형 �
  ​
 *트랜스파일러?
 ES2015 등장 이후로 javascript는 class문법, 화살표 함수, 모듈 도입 등 많은 변화가 있었습니다. 이후에도 동기, 비동기처리를 위한 async &amp; await, optional 등 다양한 문법과 편의성 높은 기술들이 추가되고 있습니다.]]></description>
-</item><item>
-    <title>편향(Bias) &amp; 분산(Variance)</title>
-    <link>https://colinder.github.io/biasvariance/</link>
-    <pubDate>Mon, 14 Mar 2022 16:34:16 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/biasvariance/</guid>
-    <description><![CDATA[​
-편향(Bias)과 분산(Variance)  인공지능 모델링을 하면 정답을 맞추기 위해 컴퓨터는 여러 번의 예측값을 내놓는데, 컴퓨터가 내놓은 예측값의 동태를 묘사하는 표현이 &lsquo;편향&rsquo;과 &lsquo;분산&rsquo;입니다.
- ​
-​
-​
-🤔결론부터 말하자면 예측값들과 정답이 대체로 멀리 떨어져 있으면 편향이 놓다고 말하고,
-예측값들이 서로 멀리 흩어져 있으면 분산이 높다고 말합니다.
-​
-​
-​
-아래 그림을 보면 왼쪽 상단 과녁은
-예측값들이 대체로 정답 근방에서 왔다갔다 합니다. &gt; 편향이 낮습니다.
-예측값들끼리 서로 몰려 있습니다. &gt; 분산이 낮습니다.]]></description>
 </item></channel>
 </rss>

@@ -1,0 +1,20 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>transform() - Category - </title>
+        <link>https://colinder.github.io/categories/transform/</link>
+        <description>transform() - Category - </description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 08 Jul 2022 14:50:36 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/transform/" rel="self" type="application/rss+xml" /><item>
+    <title>AI학습 때 왜 .fit() 한 뒤에 train, test data를 .transform()할까?</title>
+    <link>https://colinder.github.io/why_transform_after_fit/</link>
+    <pubDate>Fri, 08 Jul 2022 14:50:36 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/why_transform_after_fit/</guid>
+    <description><![CDATA[​
+🤔 왜 .fit() 한 뒤에 train, test data를 .transform()할까?  결론은 .fit()을 통해 학습데이터(train)의 경향을 파악 및 저장하고 이 경향을 train, test data를 적용해 조정해주기 위함입니다.
+  minmaxScaler를 대표로 .fit()한 결과를 출력해보면  .fit()이 어떤 역할을 하는지 알 수 없습니다. 그냥 MinMaxScaler()라는 객체가 할당된 것만 알 수 있습니다.
+공식문서를 살펴보면
+ fit(X, y=None)
+Compute the minimum and maximum to be used for later scaling.
+ * StandardScale()의 경우 Compute the mean and std to be used for later scaling.]]></description>
+</item></channel>
+</rss>
