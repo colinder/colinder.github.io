@@ -3,9 +3,25 @@
         <title></title>
         <link>https://colinder.github.io/</link>
         <description>Hello New World</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 08 Jul 2022 14:50:36 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 10 Aug 2022 14:07:57 &#43;0900</lastBuildDate>
             <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Machine_learning type</title>
+    <link>https://colinder.github.io/machine_learning_classification/</link>
+    <pubDate>Wed, 10 Aug 2022 14:07:57 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/machine_learning_classification/</guid>
+    <description><![CDATA[​
+Machine learning (ML)  머신러닝을 활용하기에 좋은 분야에 대하여 알아보겠습니다.
+ ​
+  분류(classification)
+ 정해진 카테고리 중 어디에 속하는지 알아내는 경우
+   종류
+  KNN(k-nearest neighbor)
+ k-nearest neighbor는 데이터를 분류하고 새로운 데이터 포인트의 카테고리를 결정할 때 K 개의 가장 가까운 포인트를 선점하고 그중 가장 많이 선택된 포인트의 카테고리로 이 새로운 데이터를 분류하는 방법이다.
+ 중요 개념
+  좌표와 같이 데이터의 위치를 특정할 수 있게 변환]]></description>
+</item><item>
     <title>AI학습 때 왜 .fit() 한 뒤에 train, test data를 .transform()할까?</title>
     <link>https://colinder.github.io/why_transform_after_fit/</link>
     <pubDate>Fri, 08 Jul 2022 14:50:36 &#43;0900</pubDate>
@@ -133,17 +149,5 @@ ESLint 2002년 JSON을 만든 더글라스 크락포드가 자바스크립트 �
  사용하는 모델마다 적합한 activation function이 있습니다. 즉. 모델에 대하여 공부해야하고, 적합한 activation function을 찾아 학습해야 합니다.    learning rate(학습률)을 낮춰본다.
   learnin rate는 batch_size와 연관이 있습니다.
   러닝레이트 줄이기 vs 배치사이즈 키우기]]></description>
-</item><item>
-    <title>What is Babel?</title>
-    <link>https://colinder.github.io/what_is_babel/</link>
-    <pubDate>Tue, 15 Mar 2022 13:23:41 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/what_is_babel/</guid>
-    <description><![CDATA[​
-Babel이란?  Babel은 최신 명세(또는 ES2015 이상)의 문법을 구형 브라우저에서도 동작하는 코드로 *트랜스파일해주는 개발 도구입니다.
-만약 Babel이 없다면? 구형 브라우저에서 동작할 수 있는 방식으로 웹 개발을 하고, 최신 브라우저에서 동작할 수 있는 방식으로 다시 개발해야 하는 상황이 발생합니다. 즉 구형 브라우저의 지원이 필요한 프런트엔드 프로젝트라면 현재 Babel의 사용은 필수입니다.
- ​
-*트랜스파일러?
-ES2015 등장 이후로 javascript는 class문법, 화살표 함수, 모듈 도입 등 많은 변화가 있었습니다. 이후에도 동기, 비동기처리를 위한 async &amp; await, optional 등 다양한 문법과 편의성 높은 기술들이 추가되고 있습니다.]]></description>
 </item></channel>
 </rss>

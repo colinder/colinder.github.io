@@ -102,6 +102,17 @@
         alt="/images/jg_02.jpg"
         title="/images/jg_02.jpg" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/colinder" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="mailto:kjonggwan@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/form/">form 태그</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-06-10">2021-06-10</time></span>&nbsp;<span class="post-category">included in <a href="/categories/web/"><i class="far fa-folder fa-fw"></i>web</a></span></div><div class="content">​
+form 태그의 고찰   form tag의 inline 요소 중 **&lsquo;action&rsquo;**과 &lsquo;onsubmit&rsquo;
+1 2 3 4 5 6 7 8  &lt;form action=&#34;/oh my god&#34; onsubmit=&#34;return test()&#34;&gt; &lt;input type=&#34;submit&#34; value=&#34;hahaha&#34;&gt; &lt;/form&gt; &lt;script&gt; function test(){ console.log(&#39;HHHI&#39;) } &lt;/script&gt;     submit 형태의 input을 클릭하게 되면, submit이 동작하면서 form의 &lsquo;onsubmit&rsquo;이 실행
+  이후 에 form 태그의 &lsquo;action&rsquo;이 실행
+즉, 두가지의 행동이 실행됩니다.
+​
+  비효율적이지만, 만약 위와 같은 코드에서 나중에 실행되는 action은 동작하지 않게 하고 싶다면.</div><div class="post-footer">
+        <a href="/form/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/html/">html</a>,&nbsp;<a href="/tags/web/">web</a>,&nbsp;<a href="/tags/form/">form</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/naver_hyperclova/">&#39;NAVER AI NOW&#39; HyperCLOVA_NLP</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-05-31">2021-05-31</time></span>&nbsp;<span class="post-category">included in <a href="/categories/nlp/"><i class="far fa-folder fa-fw"></i>NLP</a></span></div><div class="content">&lsquo;NAVER&rsquo; HyperCLOVA의 한국어 모델  2021.05.25 NAVER AI NOW reference 내용 중 HyperCLOVA의 자연어 전처리 과정의 토근화 방법에 대하여 정리
  ​
@@ -127,15 +138,6 @@ Django Overriding Templates  웹개발을 하다보면 재활용되어야 하는
 변경되지 않아야 하는 부분은 그림의 &lsquo;배경&rsquo;이고, 변해야 하는 부분은 그림의 &lsquo;디테일 요소&rsquo;라고 생각하면 이해가 쉽습니다. / 그럼 변경되지 않아야 하는 부분을 먼저 제작해봅시다.
 1. 변경 하지 않을 부분 == 배경 제작 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  &lt;!</div><div class="post-footer">
         <a href="/django_03_overridingtemplates/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/django/">Django</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/django_04_form/">Django_04_form</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-04-23">2021-04-23</time></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw"></i>Django</a></span></div><div class="content">​
-Django_form  이제 여러 html파일을 만들어 여러 화면을 돌아다닐 수 있게 되었습니다. 그렇다면 A화면에서 입력한 정보를 B화면으로 가져가고 싶다면 어떻게 해야 할까요? form테그를 사용하면 됩니다.
- ​
-👨‍💻 개발해봅시다. 기존에 만들었던 main.html을 활용해 만들어 보겠습니다.
-1. form 태그 생성 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19  &lt;!-- articles/templates/articles/main.html --&gt; &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;IE=edge&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.</div><div class="post-footer">
-        <a href="/django_04_form/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/django/">Django</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
@@ -167,7 +169,7 @@ Django_form  이제 여러 html파일을 만들어 여러 화면을 돌아다닐
                     <span class="page-link" aria-hidden="true">&hellip;</span>
                 </li><li class="page-item ">
                     <span class="page-link">
-                        <a href="/page/32/">32</a>
+                        <a href="/page/33/">33</a>
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">
