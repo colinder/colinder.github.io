@@ -55,6 +55,8 @@ A회사 주식의 변화를 표로 나다내면 아래와 같다.
 
 ​	
 
+### apply AI
+
 **이를 인공지능에 적용하기 위해서는 `데이터 전처리 `라는 과정이 필요하다.**
 
 데이터를 어떻게 전처리해 AI의 학습 데이터로 사용할지는 
@@ -91,9 +93,9 @@ data_set = [[45,6,23,54,3], [41,8,28,50,1], [36,4,26,49,3], [47,7,29,46,1], [50,
 
 **seq_data**에 **filter**를 곱해(**seq_data** ⦿ **filter**)
 
-<image src="../posts/AI/what_is_sequence_data.assets\Screen-Shot-2017-12-21-at-17.29.53-300x251.png" style="display: block; margin: 10px auto;">
+<image src="../images/what_is_sequence_data.assets\Screen-Shot-2017-12-21-at-17.29.53-300x251.png" style="display: block; margin: 10px auto;">
 
-<image src="../posts/AI/what_is_sequence_data.assets\image-20221025133232909.png" style="display: block; margin: 10px auto;">
+<image src="../images/what_is_sequence_data.assets\image-20221025133232909.png" style="display: block; margin: 10px auto;">
 
 <b>output = [6, 11, 14]</b> 라는 결과가 나왔다. 
 
