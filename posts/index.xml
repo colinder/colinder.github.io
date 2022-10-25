@@ -3,7 +3,23 @@
         <title>All Posts - </title>
         <link>https://colinder.github.io/posts/</link>
         <description>All Posts | </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 10 Aug 2022 14:07:57 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 25 Oct 2022 12:38:54 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>What is Sequence_data &amp; apply AI</title>
+    <link>https://colinder.github.io/what_is_sequence_data/</link>
+    <pubDate>Tue, 25 Oct 2022 12:38:54 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/what_is_sequence_data/</guid>
+    <description><![CDATA[​
+Sequence data 자연에는 사건이 발생하는데, 이는 대부분 시간에 따른 원인에 의한 결과로써 발생하게 된다. 예를들어
+  오전에는 맑았는데 오후에는 흐리다.
+  상반기에는 잘 팔렸는데, 하반기에는 잘 안팔린다.
+  기분이 나빴는데, 좋아졌다. 등등
+   순서(sequence)대로 하나씩 나열하여 나타낼 수 있는 데이터를 Sequence data라고 한다.
+그리고 이 데이터들은 서로 독립적이지 않다.는 특징을 가지고 있다. 원인과 결과가 무한이 이어져있다.
+  ​
+​
+Sequence data의 구조와 주로 활용되는 형태 많은 사람들이 시도해보는 주식 예측 인공지능 개발을 가정하여 설명.]]></description>
+</item><item>
     <title>Machine_learning type</title>
     <link>https://colinder.github.io/machine_learning_classification/</link>
     <pubDate>Wed, 10 Aug 2022 14:07:57 &#43;0900</pubDate>
@@ -134,18 +150,5 @@ Lint를 사용하면 검증을 자동화하여 이런 문제를 예방할 수 �
  ​
 ​
 ESLint 2002년 JSON을 만든 더글라스 크락포드가 자바스크립트 린터인 JSLint를 만들었습니다.]]></description>
-</item><item>
-    <title>모델 학습 시 loss가 Nan으로 나올 때 해결법</title>
-    <link>https://colinder.github.io/loss_nan_solution/</link>
-    <pubDate>Thu, 17 Mar 2022 17:12:00 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/loss_nan_solution/</guid>
-    <description><![CDATA[​
-모델 학습 시 loss 값이 Nan으로 나올 때 해결 방법   if df == pandas.DataFrame() df.isnull().any()로 데이터셋에 NaN이나 inf 값이 들어있는지 확인한다.
-  다른 optimizer들을 사용해본다. (ex. sgd, adam, nadam)
-  다른 activation function을 사용해본다.
- 사용하는 모델마다 적합한 activation function이 있습니다. 즉. 모델에 대하여 공부해야하고, 적합한 activation function을 찾아 학습해야 합니다.    learning rate(학습률)을 낮춰본다.
-  learnin rate는 batch_size와 연관이 있습니다.
-  러닝레이트 줄이기 vs 배치사이즈 키우기]]></description>
 </item></channel>
 </rss>

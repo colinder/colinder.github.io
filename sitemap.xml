@@ -2,25 +2,28 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://colinder.github.io/</loc><lastmod>2022-08-10T14:07:57&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/categories/</loc><lastmod>2022-08-10T14:07:57&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/tags/machine_learning/</loc><lastmod>2022-08-10T14:07:57&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/categories/machine_learning/</loc><lastmod>2022-08-10T14:07:57&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/machine_learning_classification/</loc><lastmod>2022-08-10T14:07:57&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/tags/ml/</loc><lastmod>2022-08-10T14:07:57&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/categories/ml/</loc><lastmod>2022-08-10T14:07:57&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/posts/</loc><lastmod>2022-08-10T14:07:57&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/tags/</loc><lastmod>2022-08-10T14:07:57&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/why_transform_after_fit/</loc><lastmod>2022-07-08T14:50:36&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
-            <loc>https://colinder.github.io/tags/fit/</loc><lastmod>2022-07-08T14:50:36&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
-            <loc>https://colinder.github.io/categories/fit/</loc><lastmod>2022-07-08T14:50:36&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
-            <loc>https://colinder.github.io/tags/transform/</loc><lastmod>2022-07-08T14:50:36&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
-            <loc>https://colinder.github.io/categories/transform/</loc><lastmod>2022-07-08T14:50:36&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
-            <loc>https://colinder.github.io/tags/scaling/</loc><lastmod>2022-07-07T17:19:29&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
-            <loc>https://colinder.github.io/categories/scaling/</loc><lastmod>2022-07-07T17:19:29&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
-            <loc>https://colinder.github.io/what_is_data_scaling/</loc><lastmod>2022-07-07T17:19:29&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
-            <loc>https://colinder.github.io/tags/ai/</loc><lastmod>2022-06-30T13:30:53&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://colinder.github.io/categories/ai/</loc><lastmod>2022-06-30T13:30:53&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/</loc><lastmod>2022-10-25T12:38:54&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://colinder.github.io/tags/ai/</loc><lastmod>2022-10-25T12:38:54&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://colinder.github.io/categories/ai/</loc><lastmod>2022-10-25T12:38:54&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://colinder.github.io/categories/</loc><lastmod>2022-10-25T12:38:54&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://colinder.github.io/posts/</loc><lastmod>2022-10-25T12:38:54&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://colinder.github.io/tags/sequence/</loc><lastmod>2022-10-25T12:38:54&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://colinder.github.io/categories/sequence/</loc><lastmod>2022-10-25T12:38:54&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://colinder.github.io/tags/</loc><lastmod>2022-10-25T12:38:54&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://colinder.github.io/what_is_sequence_data/</loc><lastmod>2022-10-25T12:38:54&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://colinder.github.io/tags/machine_learning/</loc><lastmod>2022-08-10T14:07:57&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/machine_learning/</loc><lastmod>2022-08-10T14:07:57&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/machine_learning_classification/</loc><lastmod>2022-08-10T14:07:57&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/ml/</loc><lastmod>2022-08-10T14:07:57&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/ml/</loc><lastmod>2022-08-10T14:07:57&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/why_transform_after_fit/</loc><lastmod>2022-07-08T14:50:36&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/fit/</loc><lastmod>2022-07-08T14:50:36&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/fit/</loc><lastmod>2022-07-08T14:50:36&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/transform/</loc><lastmod>2022-07-08T14:50:36&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/transform/</loc><lastmod>2022-07-08T14:50:36&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/scaling/</loc><lastmod>2022-07-07T17:19:29&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/scaling/</loc><lastmod>2022-07-07T17:19:29&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/what_is_data_scaling/</loc><lastmod>2022-07-07T17:19:29&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/tags/tenserflow/</loc><lastmod>2022-06-30T13:30:53&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/categories/tenserflow/</loc><lastmod>2022-06-30T13:30:53&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/tags/train_test_split/</loc><lastmod>2022-06-30T13:30:53&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>

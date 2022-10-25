@@ -3,7 +3,23 @@
         <title>AI - Category - </title>
         <link>https://colinder.github.io/categories/ai/</link>
         <description>AI - Category - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 30 Jun 2022 13:30:53 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/ai/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 25 Oct 2022 12:38:54 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/ai/" rel="self" type="application/rss+xml" /><item>
+    <title>What is Sequence_data &amp; apply AI</title>
+    <link>https://colinder.github.io/what_is_sequence_data/</link>
+    <pubDate>Tue, 25 Oct 2022 12:38:54 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/what_is_sequence_data/</guid>
+    <description><![CDATA[​
+Sequence data 자연에는 사건이 발생하는데, 이는 대부분 시간에 따른 원인에 의한 결과로써 발생하게 된다. 예를들어
+  오전에는 맑았는데 오후에는 흐리다.
+  상반기에는 잘 팔렸는데, 하반기에는 잘 안팔린다.
+  기분이 나빴는데, 좋아졌다. 등등
+   순서(sequence)대로 하나씩 나열하여 나타낼 수 있는 데이터를 Sequence data라고 한다.
+그리고 이 데이터들은 서로 독립적이지 않다.는 특징을 가지고 있다. 원인과 결과가 무한이 이어져있다.
+  ​
+​
+Sequence data의 구조와 주로 활용되는 형태 많은 사람들이 시도해보는 주식 예측 인공지능 개발을 가정하여 설명.]]></description>
+</item><item>
     <title>What is train_test_split()?</title>
     <link>https://colinder.github.io/what_is_train_test_split/</link>
     <pubDate>Thu, 30 Jun 2022 13:30:53 &#43;0900</pubDate>
