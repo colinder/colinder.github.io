@@ -3,7 +3,22 @@
         <title>All Posts - </title>
         <link>https://colinder.github.io/posts/</link>
         <description>All Posts | </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 25 Oct 2022 12:38:54 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 11 Nov 2022 13:20:53 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Understand_of_MariaDB</title>
+    <link>https://colinder.github.io/understand_of_mariadb/</link>
+    <pubDate>Fri, 11 Nov 2022 13:20:53 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/understand_of_mariadb/</guid>
+    <description><![CDATA[​
+MariaDB  mysql, mariaDB를 계속해서 사용하고 있지만, 계정과 데이터베이스 연결 관계 등 정확한 개념과 이해는 하지 않은 채 시간이 흘러가고 있어, 이번에 정리하고 기록합니다.
+전체적인 용어와 개념이 틀렸을 수도 있습니다. 제가 이해하기 쉬운 언어와 그림으로 정리하였습니다. 잘못된 부분이 있다면 꼭. 피드백을 부탁드립니다.
+ ​
+진행과정  &ldquo;계정생성&rdquo; &gt; &ldquo;database생성&rdquo;&gt; &ldquo;권한부여&rdquo; &gt; &ldquo;하이디에서 확인&rdquo;
+ 과정을 통해 구조와 진행 방법을 정리.
+​
+MariaDB를 설치한 후 MySQL Client에서 우선 진행하겠습니다.
+​]]></description>
+</item><item>
     <title>What is Sequence_data &amp; apply AI</title>
     <link>https://colinder.github.io/what_is_sequence_data/</link>
     <pubDate>Tue, 25 Oct 2022 12:38:54 &#43;0900</pubDate>
@@ -137,18 +152,5 @@ Epoch의 의미 1~100의 데이터가 input의 양(x_train)으로 주어졌을 �
 ​
 ​
 옵티마이저 리스트  경사 하강법(Gradient Descent) 확률적 경사 하강법(Stochastic Gradient Descent, SGD) Momentum Nesterov Accelerated Gradient (NAG) Adam AdaGrad RMSProp AdaMax Nadam  참고 https://keras.]]></description>
-</item><item>
-    <title>what is Linter?</title>
-    <link>https://colinder.github.io/what_is_linter/</link>
-    <pubDate>Fri, 18 Mar 2022 13:28:48 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/what_is_linter/</guid>
-    <description><![CDATA[​
-Linter란?  Linter 혹은 Lint는 소스 코드를 분석해 오류나 오타, 잠재적인 버그를 찾아주는 도구입니다.
-javascript는 다른 언어들에 비해 유연한 문법 구조를 갖습니다. 이런 특징은 찾기 어려운 버그를 만들기도하고, 코드를 실행하기 전까지 알 수 없는 오류를 만들기도 합니다.
-Lint를 사용하면 검증을 자동화하여 이런 문제를 예방할 수 있습니다. 가장 많이 사용되는 javascript 린터로는 ESLint와 코드 포맷터인 Prettier, css 린터인 Stylelint가 있습니다.
- ​
-​
-ESLint 2002년 JSON을 만든 더글라스 크락포드가 자바스크립트 린터인 JSLint를 만들었습니다.]]></description>
 </item></channel>
 </rss>
