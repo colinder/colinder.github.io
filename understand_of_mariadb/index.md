@@ -250,7 +250,7 @@ delete from mysql.user where user='none_database_user';
 
 ```sql
 /* 계정 생성 */
-create user 'human'@'%' indentified by '1234';
+create user 'human'@'%' identified by '1234';
 
 /* 데이터베이스 생성 */
 create database box;
