@@ -11,16 +11,20 @@
 
 ​	
 
+​	
+
 ## 진행과정
 
 > "계정생성" > "database생성"> "권한부여" > "하이디에서 확인"
 
 
-과정을 통해 구조와 진행 방법을 정리.
+과정을 진행해보며 mariaDB의 구조와 흐름을 이해.
 
 ​	
 
-MariaDB를 설치한 후 MySQL Client에서 우선 진행하겠습니다.
+​	
+
+MariaDB를 설치한 후 MySQL Client에서 우선 진행.
 
 <image src="/images/understand_of_MariaDB.assets\image-20221110164326372.png" width="1000px" style="display: block;">
 
@@ -72,7 +76,7 @@ show databases;
 
 ​	
 
-### 여기서 잠깐💡--------------------------------------------------------------------------------------
+### 여기서 잠깐💡
 
 mariaDB는 '작업공간'이라는 개념이 있다.
 
@@ -85,7 +89,7 @@ mariaDB는 '작업공간'이라는 개념이 있다.
 아래와 같은 명령어로 테이터베이스(작업공간)으로 접속할 수 있다. 
 
 ```sql
-use mysql;
+use mysql;     /* mysql이라는 데이터베이스(작업공간)을 사용하겠다.*/
 ```
 
 <image src="/images/understand_of_MariaDB.assets\image-20221111093908545.png" width="1000px" style="display: block;">
@@ -94,19 +98,19 @@ use mysql;
 
 ​	
 
-명령어를 입력하는데 내가 의도한 작업공간이 아닌 경우 에러가 날 수 있으니, <b>내가 의도한 작업공간안에 들어와서 명령어를 입력한다.</b> 는 개념을 가지고 있어야 한다. 
+명령어를 입력하는데 내가 의도한 작업공간이 아닌 경우 에러가 날 수 있으니, <br><b>내가 의도한 작업공간안에 들어와서 명령어를 입력한다.</b> 는 개념을 가지고 있어야 한다. 
 
-### -----------------------------------------------------------------------------------------------------------
-
-​	
+​		
 
 ​		
 
 ​	
 
+​	
+
 ### Default 생성 계정 확인
 
-또한 계정이 생성되는데 생성되는 계정은 <b>mysql 데이터베이스</b> 안에 <b>user라는 테이블에 생성</b>된다. 
+또한 계정이 생성되는데 생성되는 계정은 <b>mysql 데이터베이스</b>안에 <b>user라는 테이블에 생성</b>된다. 
 
 ```sql
 /* mysql의 user라는 곳에서 user와 host를 선택한다.*/
@@ -154,7 +158,7 @@ performance_schema는 총 81개의 테이블이 있다.
 
 ​		
 
-간단히 mariaDB라는 시스템을 설치하면, 기본적으로 4개의 데이터베이스 생성되고 
+즉, mariaDB라는 시스템을 설치하면, 기본적으로 4개의 데이터베이스 생성되고 
 
 <image src="/images/understand_of_MariaDB.assets\image-20221110172248277.png" width="700px" style="display: block; margin:10px auto">
 
@@ -176,15 +180,23 @@ performance_schema는 총 81개의 테이블이 있다.
 
 ​	
 
+여기까지 MariaDB를 설치하면 생기는 기본적인 세팅에 대하여 살펴보았고,<br>지금부터 <b>"계정생성" > "database생성"> "권한부여" > "하이디에서 확인"</b>의 과정을 진행.
+
+​	
+
+​	
+
+​	
+
 ## 계정 생성
 
 이제 계정을 생성한다. 
 
 <image src="/images/understand_of_MariaDB.assets\image-20221111092602836.png" width="1000px" style="display: block;">
 
-처음 mariaDB에 접속하면 none으로 어떤 데이터베이스도 선택하지 않았음을 알 수 있다. 
+처음 mariaDB에 접속하면 "none으로 어떤 데이터베이스도 선택되지 않았음"을 알 수 있다. 
 
-
+​		
 
 어떤 데이터베이스도 선택하지 않고 테스트 계정을 만들어 보면,
 
@@ -201,7 +213,7 @@ create user 'none_database_user'@'%' identified by '1234';
 
 ​	
 
-
+​	
 
 ## 계정 삭제
 
@@ -217,6 +229,8 @@ delete from mysql.user where user='none_database_user';
 > delete from <span style="color:red">mysql.user</span> where user='none_database_user'; 
 >
 > *이 둘의 차이를 알아여하며, 내가 작업하고 있는 공간이 어디인지를 계속 생각해야 한다.*
+
+​	
 
 ​	
 
@@ -268,7 +282,7 @@ show databases;
 
 ​	
 
-생성한 human의 초기 권한을 확인해보겠습니다
+생성한 human의 초기 권한을 확인해보면,
 
 ```sql
 show grants for 'human'@'%';
@@ -282,7 +296,7 @@ show grants for 'human'@'%';
 
 ​	
 
-**human 계정**에 **box 데이터베이스를 다룰 수 있는 모든 권한을 주고 다시 확인**해보겠습니다.
+**human 계정**에 **box 데이터베이스의 모든 권한을 주고**
 
 ```sql
 grant all privileges on box.* to 'human'@'%';
@@ -299,8 +313,10 @@ grant all privileges on box.* to 'human'@'%';
 
 <image src="/images/understand_of_MariaDB.assets\image-20221111112237534.png" width="1000px" style="display: block;">
 
-1. USAGE ON _*._* 의 의미는 모든 데이터베이스에 대하여 <b>접근</b>할 수 있다. 정도인 것 같습니다. 
-2. box에 모든 권한을 받은 것을 확인
+> 나름의 해석
+>
+> 1. USAGE ON _*._* 의 의미는 모든 데이터베이스에 대하여 <b>접근</b>할 수 있다. 정도인 것 같습니다. 
+> 2. box에 모든 권한을 받은 것을 확인
 
 ​	
 
@@ -326,13 +342,19 @@ flush privileges;
 
 ## 하이디(MariaDB GUI 시스템)으로 확인
 
+> 하이디에서는 <b>계정</b> 별로 할당된 데이터베이스를 보는 시스템임을 알아 두어야 합니다.
+
+​	
+
 프로그램 시작 후 초기 모습
 
 <image src="/images/understand_of_MariaDB.assets\image-20221111122837120.png" width="1000px" style="display: block;">
 
+아무런 정보도 보이지 않음.
+
 ​	
 
-​		
+​	
 
 ​	
 
@@ -341,6 +363,12 @@ flush privileges;
 > 신규 > 세션이름 변경(root) > 사용자/암호 입력 > 열기
 
 <image src="/images/understand_of_MariaDB.assets\image-20221111123054722.png" width="1000px" style="display: block;">
+
+<span style="color:grey; font-size:.8em; display:flex; float:right">*세션 이름은 아무렇게나 설정해도 됩니다.</span>
+
+​	
+
+​	
 
 ​	
 
@@ -364,6 +392,12 @@ flush privileges;
 
 <image src="/images/understand_of_MariaDB.assets\image-20221111123347245.png" width="1000px" style="display: block;">
 
+<span style="color:grey; font-size:.8em; display:flex; float:right">*세션 이름은 아무렇게나 설정해도 됩니다.</span>
+
+​	
+
+​	
+
 ​	
 
 ​	
@@ -378,7 +412,9 @@ flush privileges;
 
 ​		
 
-위의 이미지에서 조금 더 구체적으로 표현할 때, 
+​	
+
+위의 상황을 이미지로 표현한다면, 
 
 **<span style="font-size: 1.6em">root 계정으로 접속한다면?</span>**
 
