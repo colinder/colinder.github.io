@@ -93,16 +93,6 @@ AJAX  세상에는 다양한 web서버가 있다.
   대표적인 통신 방법을 AJAX라 한다. 이는 JavaScript의 라이브러리중 하나이며 Asynchronous Javascript And Xml(비동기식 자바스크립트와 xml)의 약자며, 자체가 하나의 특정한 기술을 말하는 것이 아니며, 함께 사용하는 기술의 묶음을 지칭하는 용어이다.
 브라우저가 가지고있는 XMLHttpRequest 객체를 이용해서 전체 페이지를 새로 고치지 않고도 페이지의 일부만을 위한 데이터를 로드하는 기법 이며 Ajax를 한마디로 정의하자면 JavaScript를 사용한 비동기 통신, 클라이언트와 서버간에 XML 데이터를 주고받는 기술이라고 할 수 있겠습니다.]]></description>
 </item><item>
-    <title>08_Vue_Vuex Concept...</title>
-    <link>https://colinder.github.io/08_vue_vuex-concept/</link>
-    <pubDate>Thu, 27 Aug 2020 21:48:19 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/08_vue_vuex-concept/</guid>
-    <description><![CDATA[​
-Vuex 핵심컨셉(getters, mutations, actions, modules)  3. Actions  공식문서에 따르면 액션(Actions)은 변이(mutations)와 유사하나, 몇가지 다른 점이 있다고 한다.
- 상태를 변이시키는 대신 액션으로 변이에 대한 커밋을 합니다. 작업에는 임의의 비동기 작업이 포함될 수 있습니다.    Q. 상태를 변이시키는 대신 액션으로 변이에 대한 커밋을 합니다.
-A. mutations의 역할은 State를 관리하는 것이다. 그런데 만약 비동기적 요청을 마구잡이로 보내게 된다면, State가 변질될 가능성이 높아진다. 결국 비동기 요청의 경우에도 mutations에 정의한 메소드의 형태로 보내어 상태가 변화하는 것을 추적한다.]]></description>
-</item><item>
     <title>07_Vue_Vuex Concept</title>
     <link>https://colinder.github.io/07_vue_vuex-concept/</link>
     <pubDate>Sun, 16 Aug 2020 19:39:10 &#43;0900</pubDate>
@@ -122,5 +112,17 @@ Vuex 핵심컨셉(getters, mutations, actions, modules)  1. Getters  만약? A.v
 What is Vuex? (공식문서)  Vuex는 Vue.js 애플리케이션에 대한 상태 관리 패턴 + 라이브러리 입니다. 애플리케이션의 모든 컴포넌트에 대한 중앙 집중식 저장소 역할을 하며 예측 가능한 방식으로 상태를 변경할 수 있습니다. 또한 Vue의 공식 devtools 확장 프로그램과 통합되어 설정 시간이 필요 없는 디버깅 및 상태 스냅 샷 내보내기/가져오기와 같은 고급 기능을 제공합니다. (공식문서 설명)
  ​
 1 2 3 4 5  # 설치 명령어 npm i vuex or npm install vuex # 이후  src폴더안에 vuex폴더를 만들고 store.]]></description>
+</item><item>
+    <title>03_Vue_cli &amp; router &amp; histoyMode</title>
+    <link>https://colinder.github.io/03_vue_cli/</link>
+    <pubDate>Fri, 17 Jul 2020 22:03:11 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/03_vue_cli/</guid>
+    <description><![CDATA[​
+1. Vue CLI 란? (공식문서) 간단히 vue-cli 는 기본 vue 개발 환경을 설정해주는 도구입니다.
+ 여기서 CLI 란 ?
+명령 줄 인터페이스(CLI, Command line interface) 또는 명령어 인터페이스는 텍스트 터미널을 통해 사용자와 컴퓨터가 상호 작용하는 방식. 즉, 작업 명령은 사용자가 컴퓨터 키보드 등을 통해 문자열의 형태로 입력하며, 컴퓨터로부터의 출력 역시 문자열의 형태로 주어진다. (위키백과)
+ ​
+2. Vue router 프로젝트 생성 후 보통의 경우 편의를 위해 terminal에 vue add router를 입력해 router설치를 진행합니다.]]></description>
 </item></channel>
 </rss>

@@ -1,11 +1,27 @@
-# 08_Vue_Vuex Concept...
+# 
 
-
+	title: "08_Vue_Vuex Concept..."
+	date: 2020-08-27T21:48:19+09:00
+	draft: false
+	tags: [Vue]
+	categories: ['Vue']
 ​	
 
 # Vuex 핵심컨셉(getters, mutations, actions, modules)
 
 ---
+
+​	
+
+## 🤔여기까지 왔다면, 이 흐름을 보자.
+
+<image src="/images/vuex.png" caption="흐름을 보자" width="100%">
+
+이제 다시 컨셉들을 보자
+
+​	
+
+​	
 
 ## 3. Actions 
 
