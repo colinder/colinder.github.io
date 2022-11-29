@@ -102,6 +102,16 @@
         alt="/images/jg_02.jpg"
         title="/images/jg_02.jpg" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/colinder" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="mailto:kjonggwan@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/selenium_%EB%8F%99%EC%9E%91%EB%8C%80%EA%B8%B0/">Selenium 동작 대기 방법</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-05-17">2022-05-17</time></span>&nbsp;<span class="post-category">included in <a href="/categories/web/"><i class="far fa-folder fa-fw"></i>web</a>&nbsp;<a href="/categories/selenium/"><i class="far fa-folder fa-fw"></i>selenium</a>&nbsp;<a href="/categories/crawling/"><i class="far fa-folder fa-fw"></i>crawling</a></span></div><div class="content">​
+Selenium 동작대기 접근하려는 요소가 존재하지 않을 때 발생하는 NoSuchElementException error. 페이지와 서버가 통신중이거나 네트워크 지연 등으로 위의 크롤링을 원하는 요소가 html에 존재하기 전에 요소에 접근을 시도하기 때문에 발생하는 에러입니다.
+어떤 멋진 코드로 이를 해결할 수 있을까? 고민하였지만 조금 무식한? 방법인 시간 지연으로 이를 해결하였습니다.
+​
+​
+1. time.sleep  python 내장 library 지정한 시간만큼 지연 (프로세스 자체를 지정한 시간동안 기다림)  사용법 1 2 3  from time import sleep sleep(3) //3초간 기다림   ​</div><div class="post-footer">
+        <a href="/selenium_%EB%8F%99%EC%9E%91%EB%8C%80%EA%B8%B0/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/web/">web</a>,&nbsp;<a href="/tags/selenium/">selenium</a>,&nbsp;<a href="/tags/crawling/">crawling</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/epoch/">Epoch</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-03-18">2022-03-18</time></span></div><div class="content">​
 Epoch의 의미 1~100의 데이터가 input의 양(x_train)으로 주어졌을 때
@@ -139,17 +149,6 @@ Lint를 사용하면 검증을 자동화하여 이런 문제를 예방할 수 �
 ESLint 2002년 JSON을 만든 더글라스 크락포드가 자바스크립트 린터인 JSLint를 만들었습니다.</div><div class="post-footer">
         <a href="/what_is_linter/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/web/">web</a>,&nbsp;<a href="/tags/linter/">linter</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/loss_nan_solution/">모델 학습 시 loss가 Nan으로 나올 때 해결법</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-03-17">2022-03-17</time></span>&nbsp;<span class="post-category">included in <a href="/categories/ai/"><i class="far fa-folder fa-fw"></i>AI</a>&nbsp;<a href="/categories/loss/"><i class="far fa-folder fa-fw"></i>loss</a>&nbsp;<a href="/categories/nan/"><i class="far fa-folder fa-fw"></i>Nan</a></span></div><div class="content">​
-모델 학습 시 loss 값이 Nan으로 나올 때 해결 방법   if df == pandas.DataFrame() df.isnull().any()로 데이터셋에 NaN이나 inf 값이 들어있는지 확인한다.
-  다른 optimizer들을 사용해본다. (ex. sgd, adam, nadam)
-  다른 activation function을 사용해본다.
- 사용하는 모델마다 적합한 activation function이 있습니다. 즉. 모델에 대하여 공부해야하고, 적합한 activation function을 찾아 학습해야 합니다.    learning rate(학습률)을 낮춰본다.
-  learnin rate는 batch_size와 연관이 있습니다.
-  러닝레이트 줄이기 vs 배치사이즈 키우기</div><div class="post-footer">
-        <a href="/loss_nan_solution/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/ai/">AI</a>,&nbsp;<a href="/tags/loss/">loss</a>,&nbsp;<a href="/tags/nan/">Nan</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>

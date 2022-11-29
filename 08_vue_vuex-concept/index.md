@@ -1,11 +1,7 @@
-# 
+# 08_Vue_Vuex Concept...
 
-	title: "08_Vue_Vuex Concept..."
-	date: 2020-08-27T21:48:19+09:00
-	draft: false
-	tags: [Vue]
-	categories: ['Vue']
-​	
+
+​		
 
 # Vuex 핵심컨셉(getters, mutations, actions, modules)
 
