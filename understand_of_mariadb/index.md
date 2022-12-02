@@ -263,7 +263,7 @@ create database box;
 - 계정 생성 확인
 
 ```sql
-selec user, host from mysql.user;
+select user, host from mysql.user;
 ```
 
 <image src="/images/understand_of_MariaDB.assets\image-20221111105724005.png" width="1000px" style="display: block;">
