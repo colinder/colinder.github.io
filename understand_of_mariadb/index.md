@@ -218,7 +218,9 @@ create user 'none_database_user'@'%' identified by '1234';
 ## 계정 삭제
 
 ```sql
-delete from mysql.user where user='none_database_user';
+delete from mysql.user where user='삭제할계정이름';	/* user테이블에서 삭제 */
+delete from mysql.db where user='삭제할계정이름';		/* 계정DB에 반영 */
+flush privileges;	/* 시스템 반영 */
 ```
 
 <image src="/images/understand_of_MariaDB.assets\image-20221111094238203.png" width="1000px" style="display: block;">

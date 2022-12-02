@@ -47,7 +47,7 @@ MariaDB를 설치한 후 MySQL Client에서 우선 진행."/>
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/understand_of_mariadb\/"
-        },"genre": "posts","keywords": "mariaDB","wordcount":  790 ,
+        },"genre": "posts","keywords": "mariaDB","wordcount":  801 ,
         "url": "https:\/\/colinder.github.io\/understand_of_mariadb\/","datePublished": "2022-11-11T13:20:53+09:00","dateModified": "2022-11-11T13:20:53+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -124,7 +124,7 @@ MariaDB를 설치한 후 MySQL Client에서 우선 진행."/>
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Understand_of_MariaDB</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/mariadb/"><i class="far fa-folder fa-fw"></i>mariaDB</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-11-11">2022-11-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;790 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-11-11">2022-11-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;801 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;4 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -294,9 +294,13 @@ MariaDB를 설치한 후 MySQL Client에서 우선 진행."/>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">delete</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">mysql</span><span class="p">.</span><span class="k">user</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="k">user</span><span class="o">=</span><span class="s1">&#39;none_database_user&#39;</span><span class="p">;</span><span class="w">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">delete</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">mysql</span><span class="p">.</span><span class="k">user</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="k">user</span><span class="o">=</span><span class="s1">&#39;삭제할계정이름&#39;</span><span class="p">;</span><span class="w">	</span><span class="cm">/* user테이블에서 삭제 */</span><span class="w">
+</span><span class="w"></span><span class="k">delete</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">mysql</span><span class="p">.</span><span class="n">db</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="k">user</span><span class="o">=</span><span class="s1">&#39;삭제할계정이름&#39;</span><span class="p">;</span><span class="w">		</span><span class="cm">/* 계정DB에 반영 */</span><span class="w">
+</span><span class="w"></span><span class="n">flush</span><span class="w"> </span><span class="k">privileges</span><span class="p">;</span><span class="w">	</span><span class="cm">/* 시스템 반영 */</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
 </div><image src="/images/understand_of_MariaDB.assets\image-20221111094238203.png" width="1000px" style="display: block;">
