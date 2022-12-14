@@ -1,9 +1,21 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>web - Category - </title>
+        <title>Web - Category - </title>
         <link>https://colinder.github.io/categories/web/</link>
-        <description>web - Category - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 17 May 2022 15:50:42 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/web/" rel="self" type="application/rss+xml" /><item>
+        <description>Web - Category - </description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 14 Dec 2022 16:45:55 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/web/" rel="self" type="application/rss+xml" /><item>
+    <title>what is Axios &amp; usage for Vue</title>
+    <link>https://colinder.github.io/axios/</link>
+    <pubDate>Wed, 14 Dec 2022 16:45:55 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/axios/</guid>
+    <description><![CDATA[​
+axios 설치 및 전역변수 설정 방법 front와 back간의 통신에 자주 사용하는 axios의 설치 및 전역 변수 설정 방법을 기록합니다.
+먼저, axios의 특징은
+  구형 브라우저를 지원한다. 응답 시간 초과를 설정하는 방법이 있다. JSON 데이터 자동변환이 가능하다. node.js에서의 사용이 가능하다. request aborting(요청 취소)가 가능하다. catch에 걸렸을 때, .then을 실행하지 않고, console창에 해당 에러 로그를 보여준다.   설치부터 진행해보겠습니다. 테스트는 Vue를 활용하여 진행하였습니다.
+​
+1. axios 설치 1 2  // Terminal에 npm install axios	👈 axios 설치   ​]]></description>
+</item><item>
     <title>Selenium 동작 대기 방법</title>
     <link>https://colinder.github.io/selenium_%EB%8F%99%EC%9E%91%EB%8C%80%EA%B8%B0/</link>
     <pubDate>Tue, 17 May 2022 15:50:42 &#43;0900</pubDate>
@@ -112,16 +124,5 @@ form 태그의 고찰   form tag의 inline 요소 중 **&lsquo;action&rsquo;**�
 즉, 두가지의 행동이 실행됩니다.
 ​
   비효율적이지만, 만약 위와 같은 코드에서 나중에 실행되는 action은 동작하지 않게 하고 싶다면.]]></description>
-</item><item>
-    <title>What is jQuery($)?</title>
-    <link>https://colinder.github.io/what_is_jquery/</link>
-    <pubDate>Thu, 29 Apr 2021 23:09:27 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/what_is_jquery/</guid>
-    <description><![CDATA[​
-웹 개발을 위해 인터넷의 레퍼런스들을 참고하다보면, 눈에 띄는 기호가 있습니다. $ 이게 뭘까요.? 검색해보니 제이쿼리라는데 많이 쓰이는 것 같습니다. 이에 알아봅시다!
-​
-jQuery란?  jQuery(제이쿼리)는 HTML의 클라이언트 사이드 조작(ex. 사용자가 어떤 버튼을 누른다. 사용자가 드랍박스에 선택지를 고른다.)을 단순화 하도록 설계된 크로스 플랫폼(여러 종류의 컴퓨터 플랫폼에서 동작할 수 있다는 것)의 자바스크립트 라이브러리다. 존 레식이 2006년 뉴욕 시 바캠프(Barcamp NYC)에서 공식적으로 소개하였다. 출처: 위키백과
-최대한 구체적으로 알아보았는데요. 이 내용이 이해되었다면 다음으로 넘어갑시다.]]></description>
 </item></channel>
 </rss>

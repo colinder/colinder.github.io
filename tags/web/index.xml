@@ -3,7 +3,19 @@
         <title>web - Tag - </title>
         <link>https://colinder.github.io/tags/web/</link>
         <description>web - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 23 Jun 2022 14:01:21 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/web/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 14 Dec 2022 16:45:55 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/web/" rel="self" type="application/rss+xml" /><item>
+    <title>what is Axios &amp; usage for Vue</title>
+    <link>https://colinder.github.io/axios/</link>
+    <pubDate>Wed, 14 Dec 2022 16:45:55 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/axios/</guid>
+    <description><![CDATA[​
+axios 설치 및 전역변수 설정 방법 front와 back간의 통신에 자주 사용하는 axios의 설치 및 전역 변수 설정 방법을 기록합니다.
+먼저, axios의 특징은
+  구형 브라우저를 지원한다. 응답 시간 초과를 설정하는 방법이 있다. JSON 데이터 자동변환이 가능하다. node.js에서의 사용이 가능하다. request aborting(요청 취소)가 가능하다. catch에 걸렸을 때, .then을 실행하지 않고, console창에 해당 에러 로그를 보여준다.   설치부터 진행해보겠습니다. 테스트는 Vue를 활용하여 진행하였습니다.
+​
+1. axios 설치 1 2  // Terminal에 npm install axios	👈 axios 설치   ​]]></description>
+</item><item>
     <title>React-Native_icon_and_splash</title>
     <link>https://colinder.github.io/react-native_icon_and_splash/</link>
     <pubDate>Thu, 23 Jun 2022 14:01:21 &#43;0900</pubDate>
@@ -116,16 +128,5 @@ vue typescript_$refs error    Object is possibly &lsquo;undefined&rsquo;
    typescript를 적용한 vue에서 $refs 값을 가져와 사용하는데 위와 같은 문제가 발생했습니다.
 ​
 에러가 나오는 이유 개발자가 보기에는 너무 당연히 데이터가 있지만, 객체가 비어 있을 수도 있는데 해당 객체의 내부 메소드를 사용하거나 내부 객체 키에 값을 넣어주려고 할 때 발생합니다.]]></description>
-</item><item>
-    <title>Django vs Node.js 질문을 받았습니다.</title>
-    <link>https://colinder.github.io/django-vs-node.js-%EC%A7%88%EB%AC%B8%EC%9D%84-%EB%B0%9B%EC%95%98%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
-    <pubDate>Tue, 22 Jun 2021 17:22:50 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/django-vs-node.js-%EC%A7%88%EB%AC%B8%EC%9D%84-%EB%B0%9B%EC%95%98%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
-    <description><![CDATA[​
-🎈질문을 받았습니다.  저희는 이전에는 django로 풀스택 개발을 했어요. 개발자님은 django - vue.js로 개발을 하신다고 들었는데, vue는 javaScript 언어고 django는 Python 언어인데 둘이 뭔가 통신? 데이터를 주고 받고 하는 것에 있어서 문제는 없나요?
-또 같은 javaScript 언어인 node.js 라는 것으로도 Backend 개발이 가능하다고 봤는데 node.js를 Backend로 개발하는 것이, 같은 javaScript로 개발하니까 더 효율적? 좋은거 아닌가요?
- ​
-👨‍💻 하나는 명확히 답을 드릴 수 있는데, 하나는 모르겠네요. 알아보고 말씀드리겠습니다 . ​]]></description>
 </item></channel>
 </rss>

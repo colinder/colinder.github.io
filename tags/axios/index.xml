@@ -3,7 +3,19 @@
         <title>axios - Tag - </title>
         <link>https://colinder.github.io/tags/axios/</link>
         <description>axios - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 11 Oct 2020 21:25:51 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/axios/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 14 Dec 2022 16:45:55 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/axios/" rel="self" type="application/rss+xml" /><item>
+    <title>what is Axios &amp; usage for Vue</title>
+    <link>https://colinder.github.io/axios/</link>
+    <pubDate>Wed, 14 Dec 2022 16:45:55 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/axios/</guid>
+    <description><![CDATA[​
+axios 설치 및 전역변수 설정 방법 front와 back간의 통신에 자주 사용하는 axios의 설치 및 전역 변수 설정 방법을 기록합니다.
+먼저, axios의 특징은
+  구형 브라우저를 지원한다. 응답 시간 초과를 설정하는 방법이 있다. JSON 데이터 자동변환이 가능하다. node.js에서의 사용이 가능하다. request aborting(요청 취소)가 가능하다. catch에 걸렸을 때, .then을 실행하지 않고, console창에 해당 에러 로그를 보여준다.   설치부터 진행해보겠습니다. 테스트는 Vue를 활용하여 진행하였습니다.
+​
+1. axios 설치 1 2  // Terminal에 npm install axios	👈 axios 설치   ​]]></description>
+</item><item>
     <title>what is AJAX(axios)?</title>
     <link>https://colinder.github.io/what_is_ajaxaxios_00/</link>
     <pubDate>Sun, 11 Oct 2020 21:25:51 &#43;0900</pubDate>

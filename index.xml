@@ -3,9 +3,21 @@
         <title></title>
         <link>https://colinder.github.io/</link>
         <description>Hello New World</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 29 Nov 2022 13:01:01 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 14 Dec 2022 16:45:55 &#43;0900</lastBuildDate>
             <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>what is Axios &amp; usage for Vue</title>
+    <link>https://colinder.github.io/axios/</link>
+    <pubDate>Wed, 14 Dec 2022 16:45:55 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/axios/</guid>
+    <description><![CDATA[​
+axios 설치 및 전역변수 설정 방법 front와 back간의 통신에 자주 사용하는 axios의 설치 및 전역 변수 설정 방법을 기록합니다.
+먼저, axios의 특징은
+  구형 브라우저를 지원한다. 응답 시간 초과를 설정하는 방법이 있다. JSON 데이터 자동변환이 가능하다. node.js에서의 사용이 가능하다. request aborting(요청 취소)가 가능하다. catch에 걸렸을 때, .then을 실행하지 않고, console창에 해당 에러 로그를 보여준다.   설치부터 진행해보겠습니다. 테스트는 Vue를 활용하여 진행하였습니다.
+​
+1. axios 설치 1 2  // Terminal에 npm install axios	👈 axios 설치   ​]]></description>
+</item><item>
     <title>08_Vue_Vuex Concept...</title>
     <link>https://colinder.github.io/08_vue_vuex-concept/</link>
     <pubDate>Tue, 29 Nov 2022 13:01:01 &#43;0900</pubDate>
@@ -137,21 +149,5 @@ Selenium 동작대기 접근하려는 요소가 존재하지 않을 때 발생�
 ​
 ​
 1. time.sleep  python 내장 library 지정한 시간만큼 지연 (프로세스 자체를 지정한 시간동안 기다림)  사용법 1 2 3  from time import sleep sleep(3) //3초간 기다림   ​]]></description>
-</item><item>
-    <title>Epoch</title>
-    <link>https://colinder.github.io/epoch/</link>
-    <pubDate>Fri, 18 Mar 2022 14:15:59 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/epoch/</guid>
-    <description><![CDATA[​
-Epoch의 의미 1~100의 데이터가 input의 양(x_train)으로 주어졌을 때
-20 epoch를 적용한다는 의미는
-단계별로 설명하자면,
-  1번째 학습(1 epoch) 시작
-  초기화된 가중치(w)와 편향(b)을 가지고 1에 대한 계산 진행 &gt;
-  1을 대입하여 나온 가중치(w) 와 편향(b) 도출
-  2에게 1을 대입하여 나온 가중치(w) 와 편향(b)을 대입하여 새로운 가중치(w)와 편향(b)가 도출
-  3에게 2를 대입하여 나온 가중치(w) 와 편향(b)을 대입하여 새로운 가중치(w)와 편향(b)가 도출
-  &hellip;]]></description>
 </item></channel>
 </rss>
