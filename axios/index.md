@@ -31,7 +31,7 @@ npm install axios		👈 axios 설치
 
 ### 2. axios 전역 설정
 
-```toml
+```vue
 // main.js or main.ts
 
 import Vue from 'vue'
