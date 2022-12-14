@@ -187,25 +187,25 @@ npm install axios		👈 axios 설치
 </span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-vue" data-lang="vue"><span class="c1">// main.js or main.ts
-</span><span class="c1"></span>
-<span class="kr">import</span> <span class="nx">Vue</span> <span class="nx">from</span> <span class="s1">&#39;vue&#39;</span>
-<span class="kr">import</span> <span class="nx">App</span> <span class="nx">from</span> <span class="s1">&#39;./App.vue&#39;</span>
-<span class="kr">import</span> <span class="nx">router</span> <span class="nx">from</span> <span class="s1">&#39;./router&#39;</span>
-<span class="kr">import</span> <span class="nx">store</span> <span class="nx">from</span> <span class="s1">&#39;./store&#39;</span>
-<span class="kr">import</span> <span class="nx">vuetify</span> <span class="nx">from</span> <span class="s1">&#39;./plugins/vuetify&#39;</span>
-<span class="kr">import</span> <span class="nx">Axios</span> <span class="nx">from</span> <span class="s1">&#39;axios&#39;</span>  <span class="c1">// 👈추가
-</span><span class="c1"></span>
-<span class="nx">Vue</span><span class="p">.</span><span class="nx">config</span><span class="p">.</span><span class="nx">productionTip</span> <span class="o">=</span> <span class="kc">false</span>
+<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="err">//</span> <span class="nx">main</span><span class="p">.</span><span class="nx">js</span> <span class="nx">or</span> <span class="nx">main</span><span class="p">.</span><span class="nx">ts</span>
 
-<span class="nx">Vue</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">axios</span> <span class="o">=</span> <span class="nx">Axios</span>  <span class="c1">// 👈추가
-</span><span class="c1"></span>
-<span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+<span class="nx">import</span> <span class="nx">Vue</span> <span class="nx">from</span> <span class="s1">&#39;vue&#39;</span>
+<span class="nx">import</span> <span class="nx">App</span> <span class="nx">from</span> <span class="s1">&#39;./App.vue&#39;</span>
+<span class="nx">import</span> <span class="nx">router</span> <span class="nx">from</span> <span class="s1">&#39;./router&#39;</span>
+<span class="nx">import</span> <span class="nx">store</span> <span class="nx">from</span> <span class="s1">&#39;./store&#39;</span>
+<span class="nx">import</span> <span class="nx">vuetify</span> <span class="nx">from</span> <span class="s1">&#39;./plugins/vuetify&#39;</span>
+<span class="nx">import</span> <span class="nx">Axios</span> <span class="nx">from</span> <span class="s1">&#39;axios&#39;</span>  <span class="err">//</span> <span class="err">👈</span><span class="nx">추가</span>
+
+<span class="nx">Vue</span><span class="p">.</span><span class="nx">config</span><span class="p">.</span><span class="nx">productionTip</span> <span class="p">=</span> <span class="kc">false</span>
+
+<span class="nx">Vue</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">axios</span> <span class="p">=</span> <span class="nx">Axios</span>  <span class="err">//</span> <span class="err">👈</span><span class="nx">추가</span>
+
+<span class="nx">new</span> <span class="nx">Vue</span><span class="err">(</span><span class="p">{</span>
   <span class="nx">router</span><span class="p">,</span>
   <span class="nx">store</span><span class="p">,</span>
   <span class="nx">vuetify</span><span class="p">,</span>
-  <span class="nx">render</span><span class="o">:</span> <span class="nx">h</span> <span class="p">=&gt;</span> <span class="nx">h</span><span class="p">(</span><span class="nx">App</span><span class="p">)</span>
-<span class="p">}).</span><span class="nx">$mount</span><span class="p">(</span><span class="s1">&#39;#app&#39;</span><span class="p">)</span>
+  <span class="nx">render</span><span class="err">:</span> <span class="nx">h</span> <span class="p">=</span><span class="err">&gt;</span> <span class="nx">h</span><span class="err">(</span><span class="nx">App</span><span class="err">)</span>
+<span class="p">}</span><span class="err">)</span><span class="p">.</span><span class="err">$</span><span class="nx">mount</span><span class="err">(</span><span class="s1">&#39;#app&#39;</span><span class="err">)</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>두 번째 <code>// 👈추가</code>를 보면 어디서든 <code>axios</code>라는 이름으로 호출하겠다. 고 선언한 겁니다.</p>
