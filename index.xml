@@ -3,9 +3,21 @@
         <title></title>
         <link>https://colinder.github.io/</link>
         <description>Hello New World</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 14 Dec 2022 16:45:55 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 28 Dec 2022 16:44:00 &#43;0900</lastBuildDate>
             <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Overfitting</title>
+    <link>https://colinder.github.io/overfitting/</link>
+    <pubDate>Wed, 28 Dec 2022 16:44:00 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/overfitting/</guid>
+    <description><![CDATA[​
+과적합(Overfitting)  잘 정리된 내용을 발견하였고 거기에 개인적인 경험을 추가하기 위해 정리하였습니다. (대부분 필사입니다.)
+인공지능 모델링을 하다보면 항상 만나게 되는 과적합을 어떻게 해결해야하는지, 방법에 대하여 정리
+ ​
+인공지능에게 흔히 말하는 깊이있는 공부를 시키려면 모델의 layer을 늘리고, 노드(unit)을 늘리는 방법을 떠올린다. 그리고 그러다 보면 train data에 만 너무 적합하게, 처음 보는 test data를 집어넣었을 땐 형편없는 결과를 도출하는 모델이 된다. (이를 과적합이라 한다.)
+일반적으로 과적합은 모델 학습과정에서 valid loss가 지속적으로 감소하다가 증가하는 지점부터 발생한다고 정의된다.]]></description>
+</item><item>
     <title>what is Axios &amp; usage for Vue</title>
     <link>https://colinder.github.io/axios/</link>
     <pubDate>Wed, 14 Dec 2022 16:45:55 &#43;0900</pubDate>
@@ -137,17 +149,5 @@ Icon 변경 방법  결론부터 정리하자면 특정 폴더안에 이미지�
 *프로젝트를 시작할 때 이름을 test로 만들어 진행하였습니다. (버전은 0.67)
 1  npx react-native init test --version 0.67.0   ​
 1. android/app/src/main/res 까지 폴더를 들어갑니다. 이미지와 같은 구조가 보인다면 잘 접근한 것입니다.]]></description>
-</item><item>
-    <title>Selenium 동작 대기 방법</title>
-    <link>https://colinder.github.io/selenium_%EB%8F%99%EC%9E%91%EB%8C%80%EA%B8%B0/</link>
-    <pubDate>Tue, 17 May 2022 15:50:42 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/selenium_%EB%8F%99%EC%9E%91%EB%8C%80%EA%B8%B0/</guid>
-    <description><![CDATA[​
-Selenium 동작대기 접근하려는 요소가 존재하지 않을 때 발생하는 NoSuchElementException error. 페이지와 서버가 통신중이거나 네트워크 지연 등으로 위의 크롤링을 원하는 요소가 html에 존재하기 전에 요소에 접근을 시도하기 때문에 발생하는 에러입니다.
-어떤 멋진 코드로 이를 해결할 수 있을까? 고민하였지만 조금 무식한? 방법인 시간 지연으로 이를 해결하였습니다.
-​
-​
-1. time.sleep  python 내장 library 지정한 시간만큼 지연 (프로세스 자체를 지정한 시간동안 기다림)  사용법 1 2 3  from time import sleep sleep(3) //3초간 기다림   ​]]></description>
 </item></channel>
 </rss>
