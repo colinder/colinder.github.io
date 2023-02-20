@@ -102,6 +102,19 @@
         alt="/images/jg_02.jpg"
         title="/images/jg_02.jpg" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/colinder" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="mailto:kjonggwan@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/epoch/">Epoch</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-03-18">2022-03-18</time></span></div><div class="content">​
+Epoch의 의미 1~100의 데이터가 input의 양(x_train)으로 주어졌을 때
+20 epoch를 적용한다는 의미는
+단계별로 설명하자면,
+  1번째 학습(1 epoch) 시작
+  초기화된 가중치(w)와 편향(b)을 가지고 1에 대한 계산 진행 &gt;
+  1을 대입하여 나온 가중치(w) 와 편향(b) 도출
+  2에게 1을 대입하여 나온 가중치(w) 와 편향(b)을 대입하여 새로운 가중치(w)와 편향(b)가 도출
+  3에게 2를 대입하여 나온 가중치(w) 와 편향(b)을 대입하여 새로운 가중치(w)와 편향(b)가 도출
+  &hellip;</div><div class="post-footer">
+        <a href="/epoch/">Read More</a></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/what_is_optimizer/">what is optimizer</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-03-18">2022-03-18</time></span>&nbsp;<span class="post-category">included in <a href="/categories/ai/"><i class="far fa-folder fa-fw"></i>AI</a>&nbsp;<a href="/categories/optimizer/"><i class="far fa-folder fa-fw"></i>optimizer</a></span></div><div class="content">​
 ​
@@ -117,7 +130,7 @@
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/ai/">AI</a>,&nbsp;<a href="/tags/optimizer/">optimizer</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/what_is_linter/">what is Linter?</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-03-18">2022-03-18</time></span>&nbsp;<span class="post-category">included in <a href="/categories/web/"><i class="far fa-folder fa-fw"></i>Web</a>&nbsp;<a href="/categories/linter/"><i class="far fa-folder fa-fw"></i>linter</a></span></div><div class="content">​
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-03-18">2022-03-18</time></span>&nbsp;<span class="post-category">included in <a href="/categories/web/"><i class="far fa-folder fa-fw"></i>web</a>&nbsp;<a href="/categories/linter/"><i class="far fa-folder fa-fw"></i>linter</a></span></div><div class="content">​
 Linter란?  Linter 혹은 Lint는 소스 코드를 분석해 오류나 오타, 잠재적인 버그를 찾아주는 도구입니다.
 javascript는 다른 언어들에 비해 유연한 문법 구조를 갖습니다. 이런 특징은 찾기 어려운 버그를 만들기도하고, 코드를 실행하기 전까지 알 수 없는 오류를 만들기도 합니다.
 Lint를 사용하면 검증을 자동화하여 이런 문제를 예방할 수 있습니다. 가장 많이 사용되는 javascript 린터로는 ESLint와 코드 포맷터인 Prettier, css 린터인 Stylelint가 있습니다.
@@ -136,17 +149,6 @@ ROC(Receiver Operating Characteristic) = 모든 임계값에서 분류 모델의
 🤔 결론부터 정리하면  주로 분류로 결과를 확인하는 인공지능 성능 평가 방법으로 자주 쓰임. 그래프로 보자면 좌상단(파란 점)에 가까울수록 좋은 성능을 보이는 모델.  ​
 또 그래프의 x축, y축을 보면 &ldquo;FALSE POSITIVE RATE&rdquo;, &ldquo;TRUE POSITIVE RATE&ldquo;라고 적혀 있는데요.</div><div class="post-footer">
         <a href="/what_is_roc_curve/">Read More</a></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/loss_nan_solution/">모델 학습 시 loss가 Nan으로 나올 때 해결법</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-03-17">2022-03-17</time></span>&nbsp;<span class="post-category">included in <a href="/categories/ai/"><i class="far fa-folder fa-fw"></i>AI</a>&nbsp;<a href="/categories/loss/"><i class="far fa-folder fa-fw"></i>loss</a>&nbsp;<a href="/categories/nan/"><i class="far fa-folder fa-fw"></i>Nan</a></span></div><div class="content">​
-모델 학습 시 loss 값이 Nan으로 나올 때 해결 방법   if df == pandas.DataFrame() df.isnull().any()로 데이터셋에 NaN이나 inf 값이 들어있는지 확인한다.
-  다른 optimizer들을 사용해본다. (ex. sgd, adam, nadam)
-  다른 activation function을 사용해본다.
- 사용하는 모델마다 적합한 activation function이 있습니다. 즉. 모델에 대하여 공부해야하고, 적합한 activation function을 찾아 학습해야 합니다.    learning rate(학습률)을 낮춰본다.
-  learnin rate는 batch_size와 연관이 있습니다.
-  러닝레이트 줄이기 vs 배치사이즈 키우기</div><div class="post-footer">
-        <a href="/loss_nan_solution/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/ai/">AI</a>,&nbsp;<a href="/tags/loss/">loss</a>,&nbsp;<a href="/tags/nan/">Nan</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -180,7 +182,7 @@ ROC(Receiver Operating Characteristic) = 모든 임계값에서 분류 모델의
                 </li></ul></div></div>
             </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 

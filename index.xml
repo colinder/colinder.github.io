@@ -3,9 +3,24 @@
         <title></title>
         <link>https://colinder.github.io/</link>
         <description>Hello New World</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 28 Dec 2022 16:44:00 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 20 Feb 2023 16:48:04 &#43;0900</lastBuildDate>
             <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>what is AES</title>
+    <link>https://colinder.github.io/what_is_aes/</link>
+    <pubDate>Mon, 20 Feb 2023 16:48:04 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/what_is_aes/</guid>
+    <description><![CDATA[​
+​
+​
+AES 보안  보안 진단을 받아보니, 생각보다 API 통신은 해킹이 쉽다.
+하여 보안에 신경써야 하는 경우, 기술들이 다양하게 있는데, 그 중 AES&lt;Advanced Encryption Standard&gt;를 간단히 알아보고 이후 적용하는 방법과 과정에 대하여 정리한다.
+AES는 미국 표준 기술 연구소에 의해서 연방 정보 처리 표준으로 지정된 암호화 방식이며 NSA에 의해 1급 비밀에 사용할 수 있도록 승인된 암호화 알고리즘 중 유일하게 공개된 알고리즘 - 출처 : 나무위키
+ ​
+​
+​]]></description>
+</item><item>
     <title>Overfitting</title>
     <link>https://colinder.github.io/overfitting/</link>
     <pubDate>Wed, 28 Dec 2022 16:44:00 &#43;0900</pubDate>
@@ -133,21 +148,5 @@ What is &lsquo;train_test_split()&rsquo;?  AI 모델링을 위해 X_train, X_tes
 1 2 3 4  import numpy as np from sklearn.model_selection import train_test_split X_train, X_test, y_train, y_test = train_test_split(data, label, test_size=0.3, random_state=29)   ​
 ​
 train_test_split() 함수안에 사용되는 인자에 대하여 하나씩 알아보겠습니다.]]></description>
-</item><item>
-    <title>React-Native_icon_and_splash</title>
-    <link>https://colinder.github.io/react-native_icon_and_splash/</link>
-    <pubDate>Thu, 23 Jun 2022 14:01:21 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/react-native_icon_and_splash/</guid>
-    <description><![CDATA[​
-React-native (android)  icon 변경과 splash를 적용해보겠습니다.
- icon: 핸드폰에서 어플 접속시 보이는 모습을 의미.
-splash: 어플 실행시 잠시 노출되는 화면을 의미.​
-​
-Icon 변경 방법  결론부터 정리하자면 특정 폴더안에 이미지만 넣으면 됩니다.
- ​
-*프로젝트를 시작할 때 이름을 test로 만들어 진행하였습니다. (버전은 0.67)
-1  npx react-native init test --version 0.67.0   ​
-1. android/app/src/main/res 까지 폴더를 들어갑니다. 이미지와 같은 구조가 보인다면 잘 접근한 것입니다.]]></description>
 </item></channel>
 </rss>
