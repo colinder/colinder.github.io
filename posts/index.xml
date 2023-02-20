@@ -3,7 +3,20 @@
         <title>All Posts - </title>
         <link>https://colinder.github.io/posts/</link>
         <description>All Posts | </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 20 Feb 2023 16:48:04 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 20 Feb 2023 17:04:26 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>AES vue 적용</title>
+    <link>https://colinder.github.io/aes_vue/</link>
+    <pubDate>Mon, 20 Feb 2023 17:04:26 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/aes_vue/</guid>
+    <description><![CDATA[​
+​
+AES Vue 적용  vue.js에 CryptoJS를 설치하여 진행
+ 1  npm i crypto-js    주의 사항  AES에 사용되는 parameters는 모두 bytes 타입만 사용이 가능하다. 하여 대부분 utf-8로 encoding하여 사용 (이 부분은 아직 정확하게 이해하지 못했다.)    ​
+​
+​
+암호화(encryption) 1 2 3 4 5 6 7 8 9 10  var secretKey = &#39;abcdefghijklmnopqrstuvwxyzabcdef&#39;; var iv = &#39;1234567890123456&#39;; var data = this.]]></description>
+</item><item>
     <title>what is AES</title>
     <link>https://colinder.github.io/what_is_aes/</link>
     <pubDate>Mon, 20 Feb 2023 16:48:04 &#43;0900</pubDate>
@@ -132,19 +145,5 @@ Compute the minimum and maximum to be used for later scaling.
  ​
 아래 그림을 보면서 이해해보겠습니다.
 과제  여러 feature(성별, 나이, 몸무게, 자산현황)의 특성을 보고 Label을 예측하는 모델을 만든다고 가정  문제점  값의 범위를 보면  성별 0, 1 나이 0~100, 몸무게 0~120, 자산현황 0~700,000,000, Label은 0~800,000,000의 값을 갖는다고 가정한다면,    ​]]></description>
-</item><item>
-    <title>What is train_test_split()?</title>
-    <link>https://colinder.github.io/what_is_train_test_split/</link>
-    <pubDate>Thu, 30 Jun 2022 13:30:53 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/what_is_train_test_split/</guid>
-    <description><![CDATA[​
-What is &lsquo;train_test_split()&rsquo;?  AI 모델링을 위해 X_train, X_test, y_train, y_test로 나누는 작업은 필수적입니다. 저는 train과 test를 나누는 코드를 직접 짜서 사용했었는데 scikit learn에서 제공되는 함수가 있었습니다. &ldquo;train_test_split()&quot;이를 알아보겠습니다.
- ​
-​
-직접 사용되는 모습을 보며 이해해보겠습니다.
-1 2 3 4  import numpy as np from sklearn.model_selection import train_test_split X_train, X_test, y_train, y_test = train_test_split(data, label, test_size=0.3, random_state=29)   ​
-​
-train_test_split() 함수안에 사용되는 인자에 대하여 하나씩 알아보겠습니다.]]></description>
 </item></channel>
 </rss>

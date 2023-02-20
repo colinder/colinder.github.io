@@ -3,7 +3,20 @@
         <title>AES - Tag - </title>
         <link>https://colinder.github.io/tags/aes/</link>
         <description>AES - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 20 Feb 2023 16:48:04 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/aes/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 20 Feb 2023 17:04:26 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/aes/" rel="self" type="application/rss+xml" /><item>
+    <title>AES vue 적용</title>
+    <link>https://colinder.github.io/aes_vue/</link>
+    <pubDate>Mon, 20 Feb 2023 17:04:26 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/aes_vue/</guid>
+    <description><![CDATA[​
+​
+AES Vue 적용  vue.js에 CryptoJS를 설치하여 진행
+ 1  npm i crypto-js    주의 사항  AES에 사용되는 parameters는 모두 bytes 타입만 사용이 가능하다. 하여 대부분 utf-8로 encoding하여 사용 (이 부분은 아직 정확하게 이해하지 못했다.)    ​
+​
+​
+암호화(encryption) 1 2 3 4 5 6 7 8 9 10  var secretKey = &#39;abcdefghijklmnopqrstuvwxyzabcdef&#39;; var iv = &#39;1234567890123456&#39;; var data = this.]]></description>
+</item><item>
     <title>what is AES</title>
     <link>https://colinder.github.io/what_is_aes/</link>
     <pubDate>Mon, 20 Feb 2023 16:48:04 &#43;0900</pubDate>

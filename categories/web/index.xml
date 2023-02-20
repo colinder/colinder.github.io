@@ -3,7 +3,20 @@
         <title>web - Category - </title>
         <link>https://colinder.github.io/categories/web/</link>
         <description>web - Category - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 20 Feb 2023 16:48:04 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/web/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 20 Feb 2023 17:04:26 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/web/" rel="self" type="application/rss+xml" /><item>
+    <title>AES vue 적용</title>
+    <link>https://colinder.github.io/aes_vue/</link>
+    <pubDate>Mon, 20 Feb 2023 17:04:26 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/aes_vue/</guid>
+    <description><![CDATA[​
+​
+AES Vue 적용  vue.js에 CryptoJS를 설치하여 진행
+ 1  npm i crypto-js    주의 사항  AES에 사용되는 parameters는 모두 bytes 타입만 사용이 가능하다. 하여 대부분 utf-8로 encoding하여 사용 (이 부분은 아직 정확하게 이해하지 못했다.)    ​
+​
+​
+암호화(encryption) 1 2 3 4 5 6 7 8 9 10  var secretKey = &#39;abcdefghijklmnopqrstuvwxyzabcdef&#39;; var iv = &#39;1234567890123456&#39;; var data = this.]]></description>
+</item><item>
     <title>what is AES</title>
     <link>https://colinder.github.io/what_is_aes/</link>
     <pubDate>Mon, 20 Feb 2023 16:48:04 &#43;0900</pubDate>
@@ -115,16 +128,5 @@ Local Storage와 Session Storage의 차이 를 알아보기 전에
 ​
  Local Storage와 Session Storage   Local storage
 origin(요청이 시작된 서버를 나타내는 URL)이 같을 경우, 여러 탭과 브라우저 창에서 공유되는 저장소.]]></description>
-</item><item>
-    <title>Django vs Node.js 질문을 받았습니다.</title>
-    <link>https://colinder.github.io/django-vs-node.js-%EC%A7%88%EB%AC%B8%EC%9D%84-%EB%B0%9B%EC%95%98%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
-    <pubDate>Tue, 22 Jun 2021 17:22:50 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/django-vs-node.js-%EC%A7%88%EB%AC%B8%EC%9D%84-%EB%B0%9B%EC%95%98%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
-    <description><![CDATA[​
-🎈질문을 받았습니다.  저희는 이전에는 django로 풀스택 개발을 했어요. 개발자님은 django - vue.js로 개발을 하신다고 들었는데, vue는 javaScript 언어고 django는 Python 언어인데 둘이 뭔가 통신? 데이터를 주고 받고 하는 것에 있어서 문제는 없나요?
-또 같은 javaScript 언어인 node.js 라는 것으로도 Backend 개발이 가능하다고 봤는데 node.js를 Backend로 개발하는 것이, 같은 javaScript로 개발하니까 더 효율적? 좋은거 아닌가요?
- ​
-👨‍💻 하나는 명확히 답을 드릴 수 있는데, 하나는 모르겠네요. 알아보고 말씀드리겠습니다 . ​]]></description>
 </item></channel>
 </rss>

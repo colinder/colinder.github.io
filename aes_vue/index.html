@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>AES vue 적용 - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="AES vue 적용" />
+<meta property="og:description" content="​
+​
+AES Vue 적용  vue.js에 CryptoJS를 설치하여 진행
+ 1  npm i crypto-js    주의 사항  AES에 사용되는 parameters는 모두 bytes 타입만 사용이 가능하다. 하여 대부분 utf-8로 encoding하여 사용 (이 부분은 아직 정확하게 이해하지 못했다.)    ​
+​
+​
+암호화(encryption) 1 2 3 4 5 6 7 8 9 10  var secretKey = &#39;abcdefghijklmnopqrstuvwxyzabcdef&#39;; var iv = &#39;1234567890123456&#39;; var data = this." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://colinder.github.io/aes_vue/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-02-20T17:04:26&#43;09:00" />
+<meta property="article:modified_time" content="2023-02-20T17:04:26&#43;09:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
+
+<meta name="twitter:title" content="AES vue 적용"/>
+<meta name="twitter:description" content="​
+​
+AES Vue 적용  vue.js에 CryptoJS를 설치하여 진행
+ 1  npm i crypto-js    주의 사항  AES에 사용되는 parameters는 모두 bytes 타입만 사용이 가능하다. 하여 대부분 utf-8로 encoding하여 사용 (이 부분은 아직 정확하게 이해하지 못했다.)    ​
+​
+​
+암호화(encryption) 1 2 3 4 5 6 7 8 9 10  var secretKey = &#39;abcdefghijklmnopqrstuvwxyzabcdef&#39;; var iv = &#39;1234567890123456&#39;; var data = this."/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/aes_vue/" /><link rel="prev" href="https://colinder.github.io/what_is_aes/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "AES vue 적용",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/colinder.github.io\/aes_vue\/"
+        },"genre": "posts","keywords": "security, AES, web","wordcount":  380 ,
+        "url": "https:\/\/colinder.github.io\/aes_vue\/","datePublished": "2023-02-20T17:04:26+09:00","dateModified": "2023-02-20T17:04:26+09:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "colinder"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="">Hello New World</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="">Hello New World</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">AES vue 적용</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/security/"><i class="far fa-folder fa-fw"></i>security</a>&nbsp;<a href="/categories/aes/"><i class="far fa-folder fa-fw"></i>AES</a>&nbsp;<a href="/categories/web/"><i class="far fa-folder fa-fw"></i>web</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-02-20">2023-02-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;380 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#암호화encryption">암호화(encryption)</a>
+      <ul>
+        <li><a href="#암호화-유의사항">💡암호화 유의사항</a></li>
+      </ul>
+    </li>
+    <li><a href="#복호화decryption">복호화(decryption)</a>
+      <ul>
+        <li><a href="#복호화-유의사항">💡복호화 유의사항</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>​</p>
+<p>​</p>
+<h1 id="aes-vue-적용">AES Vue 적용</h1>
+<blockquote>
+<p>vue.js에 <a href="https://github.com/brix/crypto-js" target="_blank" rel="noopener noreffer">CryptoJS</a>를 설치하여 진행</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">npm i crypto-js
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>주의 사항
+<ol>
+<li>AES에 사용되는 parameters는 모두 bytes 타입만 사용이 가능하다.</li>
+<li>하여 대부분 utf-8로 encoding하여 사용 (이 부분은 아직 정확하게 이해하지 못했다.)</li>
+</ol>
+</li>
+</ul>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<h2 id="암호화encryption">암호화(encryption)</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">secretKey</span> <span class="o">=</span> <span class="s1">&#39;abcdefghijklmnopqrstuvwxyzabcdef&#39;</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">iv</span> <span class="o">=</span> <span class="s1">&#39;1234567890123456&#39;</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">accounts</span><span class="p">.</span><span class="nx">email</span><span class="p">.</span><span class="nx">padEnd</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="s2">&#34; &#34;</span><span class="p">)</span>
+<span class="kr">const</span> <span class="nx">cipher</span> <span class="o">=</span> <span class="nx">CryptoJS</span><span class="p">.</span><span class="nx">AES</span><span class="p">.</span><span class="nx">encrypt</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="nx">CryptoJS</span><span class="p">.</span><span class="nx">enc</span><span class="p">.</span><span class="nx">Utf8</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">secretKey</span><span class="p">),</span> <span class="p">{</span>
+    <span class="nx">iv</span><span class="o">:</span> <span class="nx">CryptoJS</span><span class="p">.</span><span class="nx">enc</span><span class="p">.</span><span class="nx">Utf8</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">iv</span><span class="p">),</span>
+    <span class="nx">padding</span><span class="o">:</span> <span class="nx">CryptoJS</span><span class="p">.</span><span class="nx">pad</span><span class="p">.</span><span class="nx">Pkcs7</span><span class="p">,</span>  <span class="c1">// default setting(없어도 됨)
+</span><span class="c1"></span>    <span class="nx">mode</span><span class="o">:</span> <span class="nx">CryptoJS</span><span class="p">.</span><span class="nx">mode</span><span class="p">.</span><span class="nx">CBC</span><span class="p">,</span>
+<span class="p">});</span>  <span class="c1">// out type: Object
+</span><span class="c1"></span>
+<span class="k">this</span><span class="p">.</span><span class="nx">$axios</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s2">&#34;myServerAdress&#34;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">cipher</span><span class="o">:</span> <span class="nx">cipher</span><span class="p">.</span><span class="nx">toString</span><span class="p">()</span> <span class="p">})</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<h3 id="암호화-유의사항">💡암호화 유의사항</h3>
+<ol>
+<li>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">secretKey</span> <span class="o">=</span> <span class="s1">&#39;abcdefghijklmnopqrstuvwxyzabcdef&#39;</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>AES256은 secretKey 길이가 32자여야 함</li>
+</ul>
+</li>
+<li>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">iv</span> <span class="o">=</span> <span class="s1">&#39;1234567890123456&#39;</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>mode.CBC모드를 사용하려면 iv 길이는 16자여야 함</li>
+</ul>
+</li>
+<li>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">accounts</span><span class="p">.</span><span class="nx">email</span><span class="p">.</span><span class="nx">padEnd</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="s2">&#34; &#34;</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>전달할 데이터에 최소 32bytes padding을 주지 않으면,</li>
+<li>django에서 데이터를 받는데 <a href="mailto:user@naver.com">user@naver.com</a>╗╗ 와 같이 알 수 없는 특수문자가 포함되어서 왔다.</li>
+</ul>
+</li>
+<li>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">this</span><span class="p">.</span><span class="nx">$axios</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s2">&#34;myServerAdress&#34;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">cipher</span><span class="o">:</span> <span class="nx">cipher</span><span class="p">.</span><span class="nx">toString</span><span class="p">()</span> <span class="p">})</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p>params로 담기 위해선 string tpye 변환이 필요</p>
+</li>
+<li>
+<p>toSting()안하면, Converting circular structure to JSON 에러 발생
+선회하는 구조를 JSON으로 바꾸려고 해서 나는 에러라는데 뭔지 잘 모르겠음.</p>
+</li>
+<li>
+<p>.toString() 함수를 사용하지 않으면, 암호화된 Object 타입이 되는데, 대략 아래와 같은 모습이다.</p>
+<ul>
+<li>
+<p><em>{$super: {…}, ciphertext: W…y.init, key: W…y.init, iv: W…y.init, init: *ƒ</em>, …}*</p>
+<ol>
+<li>
+<p><strong>$super</strong>: {$super: {…}, init: <em>ƒ</em>, toString: <em>ƒ</em>}</p>
+</li>
+<li>
+<p><strong>algorithm</strong>: {keySize: 8, _doReset: <em>ƒ</em>, encryptBlock: <em>ƒ</em>, decryptBlock: <em>ƒ</em>, _doCryptBlock: <em>ƒ</em>, …}</p>
+</li>
+<li>
+<p><strong>blockSize</strong>: 4</p>
+</li>
+<li>
+<p><strong>ciphertext</strong>: WordArray.init {words: Array(12), sigBytes: 48}</p>
+</li>
+<li>
+<p><strong>formatter</strong>: {stringify: <em>ƒ</em>, parse: <em>ƒ</em>}</p>
+</li>
+<li>
+<p><strong>init</strong>: <em>ƒ ()</em></p>
+</li>
+<li>
+<p><strong>iv</strong>: WordArray.init {words: Array(4), sigBytes: 16}</p>
+</li>
+<li>
+<p><strong>key</strong>: WordArray.init {words: Array(8), sigBytes: 32}</p>
+</li>
+<li>
+<p><strong>mode</strong>: {$super: {…}, Encryptor: {…}, Decryptor: {…}, init: <em>ƒ</em>}</p>
+</li>
+<li>
+<p><strong>padding</strong>: {pad: <em>ƒ</em>, unpad: <em>ƒ</em>}</p>
+</li>
+<li>
+<p>[[Prototype]]: Object</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>
+<p>여기에 .toString() 함수를 붙여주면.
+<b>0zs9xTyPtLkJDvwXCH1G4PZqxUwfuf/LVIq5Ovs3bR39B0sCxl87IxSaE1mtS4RE</b><br>와 같이 암호화가 된 것을 볼 수 있다.</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="복호화decryption">복호화(decryption)</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">secretKey</span> <span class="o">=</span> <span class="s1">&#39;abcdefghijklmnopqrstuvwxyzabcdef&#39;</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">iv</span> <span class="o">=</span> <span class="s1">&#39;1234567890123456&#39;</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">encrypted_data</span> <span class="o">=</span> <span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">OTP</span>  <span class="c1">// 복호화할 데이터 (tpye string)
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">decryptde_data</span> <span class="o">=</span> <span class="nx">CryptoJS</span><span class="p">.</span><span class="nx">AES</span><span class="p">.</span><span class="nx">decrypt</span><span class="p">(</span><span class="nx">encrypted_data</span><span class="p">,</span> <span class="nx">CryptoJS</span><span class="p">.</span><span class="nx">enc</span><span class="p">.</span><span class="nx">Utf8</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">secretKey</span><span class="p">),</span> <span class="p">{</span>
+    <span class="nx">iv</span><span class="o">:</span> <span class="nx">CryptoJS</span><span class="p">.</span><span class="nx">enc</span><span class="p">.</span><span class="nx">Utf8</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">iv</span><span class="p">),</span>
+    <span class="nx">padding</span><span class="o">:</span> <span class="nx">CryptoJS</span><span class="p">.</span><span class="nx">pad</span><span class="p">.</span><span class="nx">Pkcs7</span><span class="p">,</span> <span class="c1">// default setting (없어도 됨)
+</span><span class="c1"></span>    <span class="nx">mode</span><span class="o">:</span> <span class="nx">CryptoJS</span><span class="p">.</span><span class="nx">mode</span><span class="p">.</span><span class="nx">CBC</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;복호화&#39;</span><span class="p">,</span> <span class="nx">CryptoJS</span><span class="p">.</span><span class="nx">enc</span><span class="p">.</span><span class="nx">Utf8</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">decryptde_data</span><span class="p">).</span><span class="nx">toString</span><span class="p">())</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<h3 id="복호화-유의사항">💡복호화 유의사항</h3>
+<ol>
+<li>
+<p>본 테스트는 django에서 진행하였는데 django에서 전달되는 데이터 형태는 string이다.</p>
+</li>
+<li>
+<p>암호화에 사용된 동일한 secretKey, iv를 가져와서 사용해야 한다. (대칭키니까 당연하게도)</p>
+</li>
+<li>
+<p>레퍼런스를 확인해보니 전달되는 데이터에 iv를 포함하여 전달하고 받는 형태도 있던데, 저는 그냥 secretKey, iv를 별도로 지정하여 사용하였습니다.</p>
+</li>
+<li>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">encrypted_data</span> <span class="o">=</span> <span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">OTP</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>django에서 전달 받은 데이터를 변수로 저장. / 대략 <b>wh5woZao84Sgh7NmhQJVvQ==</b> 이런 모습</li>
+</ul>
+</li>
+</ol>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-02-20</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/aes_vue/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/security/">security</a>,&nbsp;<a href="/tags/aes/">AES</a>,&nbsp;<a href="/tags/web/">web</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/what_is_aes/" class="prev" rel="prev" title="what is AES"><i class="fas fa-angle-left fa-fw"></i>what is AES</a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://colinder-github-io.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
