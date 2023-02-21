@@ -3,7 +3,22 @@
         <title>AES - Category - </title>
         <link>https://colinder.github.io/categories/aes/</link>
         <description>AES - Category - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 20 Feb 2023 17:04:26 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/aes/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 20 Feb 2023 17:04:31 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/aes/" rel="self" type="application/rss+xml" /><item>
+    <title>AES django 적용</title>
+    <link>https://colinder.github.io/aes_django/</link>
+    <pubDate>Mon, 20 Feb 2023 17:04:31 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/aes_django/</guid>
+    <description><![CDATA[​
+​
+AES django 적용  django에 PyCryptodomex를 설치하여 적용
+ 1  pip install pycryptodomex     주의 사항
+  PyCryptodome is a fork of PyCrypto
+  For more information, see the homepage.를 클릭하면, pycryptodome의 문서로 이동하는데, 왜 그런건지 모르겠다. 아마 의존성?이 있어 그런건가 싶다.
+  문서에 예시를 보면
+1  from Crypto.Cipher import AES   와 같이 import 하라는데, 이러면 안되고
+1  from Cryptodome.]]></description>
+</item><item>
     <title>AES vue 적용</title>
     <link>https://colinder.github.io/aes_vue/</link>
     <pubDate>Mon, 20 Feb 2023 17:04:26 &#43;0900</pubDate>

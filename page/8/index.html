@@ -102,6 +102,16 @@
         alt="/images/jg_02.jpg"
         title="/images/jg_02.jpg" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/colinder" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="mailto:kjonggwan@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/refs_error/">typescript Refs_error</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-02-16">2022-02-16</time></span>&nbsp;<span class="post-category">included in <a href="/categories/typescript/"><i class="far fa-folder fa-fw"></i>typescript</a>&nbsp;<a href="/categories/vue/"><i class="far fa-folder fa-fw"></i>vue</a></span></div><div class="content">​
+vue typescript_$refs error    Object is possibly &lsquo;undefined&rsquo;
+  Property &lsquo;value&rsquo; does not exist on type &lsquo;Vue | Element | (Vue | Element)[]&rsquo;. Property &lsquo;value&rsquo; does not exist on type &lsquo;Vue&rsquo;
+   typescript를 적용한 vue에서 $refs 값을 가져와 사용하는데 위와 같은 문제가 발생했습니다.
+​
+에러가 나오는 이유 개발자가 보기에는 너무 당연히 데이터가 있지만, 객체가 비어 있을 수도 있는데 해당 객체의 내부 메소드를 사용하거나 내부 객체 키에 값을 넣어주려고 할 때 발생합니다.</div><div class="post-footer">
+        <a href="/refs_error/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/web/">web</a>,&nbsp;<a href="/tags/vue/">vue</a>,&nbsp;<a href="/tags/typescript/">typescript</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/boxplot/">boxplot 해석 방법</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-12-23">2021-12-23</time></span>&nbsp;<span class="post-category">included in <a href="/categories/analysis/"><i class="far fa-folder fa-fw"></i>analysis</a>&nbsp;<a href="/categories/boxplot/"><i class="far fa-folder fa-fw"></i>boxplot</a></span></div><div class="content">​
 What is Boxplot?  데이터 분석을 진행하면서 다른 분들의 분석 레퍼런스를 보며 공부하다보니 많은 분들이 boxplot을 사용하는 것을 보았습니다. 다만, 저는 그 박스가 어떤 경우에 사용하는 것인지? 어떤 의미로 그려지는 것인지? 어떻게 해석하면 좋은지? 개념이 약했기 때문에 내용을 정리해보겠습니다.
@@ -130,21 +140,6 @@ What is Numpy(Numerical Python)?  공식문서를 따르면,
 NumPy is the fundamental package for scientific computing in Python. It is a Python library that provides a multidimensional array object, various derived objects (such as masked arrays and matrices), and an assortment of routines for fast operations on arrays, including mathematical, logical, shape manipulation, sorting, selecting, I/O, discrete Fourier transforms, basic linear algebra, basic statistical operations, random simulation and much more.</div><div class="post-footer">
         <a href="/numpypandas/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/numpy/">Numpy</a>,&nbsp;<a href="/tags/pandas/">Pandas</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/mariadb_share/">MariaDB 외부접속 허용</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-11-03">2021-11-03</time></span>&nbsp;<span class="post-category">included in <a href="/categories/mariadb/"><i class="far fa-folder fa-fw"></i>mariaDB</a></span></div><div class="content">​
-MariaDB 외부 접속 허용  해당 MariaDB 공유는 root PC에서 진행하는 것이며, 외부에서 접속할 client는 별도로 설정할 건 없습니다.
-또한 무조건 이 방법이 맞다!라기보다는 제가 이렇게 하니 외부 접속이 되었다. 는 경험의 기록입니다.
- ​
-MySQL Client를 실행합니다.
-​
-실행하면 아래와 같은 초기 화면에 진입합니다.
-​
-MariaDB 설치를 진행하면서 등록한 password입력하면 아래와 같은 화면이 나옵니다.
-​
-초기 접속의 경우, DB table이 &lsquo;none&rsquo;으로 설정되어 있는데, **공유를 원하는 table로 설정을 바꿔줍니다. **</div><div class="post-footer">
-        <a href="/mariadb_share/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/mariadb/">mariaDB</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -175,7 +170,7 @@ MariaDB 설치를 진행하면서 등록한 password입력하면 아래와 같�
                     <span class="page-link" aria-hidden="true">&hellip;</span>
                 </li><li class="page-item ">
                     <span class="page-link">
-                        <a href="/page/34/">34</a>
+                        <a href="/page/35/">35</a>
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">
@@ -189,5 +184,5 @@ MariaDB 설치를 진행하면서 등록한 password입력하면 아래와 같�
             </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
                 <i class="fas fa-comment fa-fw"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"id-1":"\u003cb\u003e느리더라도 정확히, 바쁘지만 조급하지 않게, 무엇보다 포기하지 않는\u003c/b\u003e"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":-1},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"id-1":"\u003cb\u003e느리더라도 정확히, 바쁘지만 조급하지 않게, 무엇보다 포기하지 않는\u003c/b\u003e"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>
