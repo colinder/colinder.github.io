@@ -156,7 +156,7 @@ result = encryption(data)
    b = base64.b64decode(a)		# b'8ac9c453ae4f5056'
    ```
 
-   - base64.b64encode(), base64.b64decode()는 간단히 btyes type의 데이터를 [base64](https://ko.wikipedia.org/wiki/%EB%B2%A0%EC%9D%B4%EC%8A%A464)로 변경해주는 함수
+   - base64.b64encode(), base64.b64decode()는 간단히 bytes type의 데이터를 [base64](https://ko.wikipedia.org/wiki/%EB%B2%A0%EC%9D%B4%EC%8A%A464)로 변경해주는 함수
 
      ​	
 
@@ -190,8 +190,6 @@ result = encryption(data)
   https://inma.tistory.com/145
 
   https://www.pycryptodome.org/src/examples
-
-​	
 
 ​	
 
