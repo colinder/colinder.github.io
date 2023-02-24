@@ -102,6 +102,16 @@
         alt="/images/jg_02.jpg"
         title="/images/jg_02.jpg" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/colinder" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="mailto:kjonggwan@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/what_is_babel/">What is Babel?</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-03-15">2022-03-15</time></span>&nbsp;<span class="post-category">included in <a href="/categories/web/"><i class="far fa-folder fa-fw"></i>web</a>&nbsp;<a href="/categories/babel/"><i class="far fa-folder fa-fw"></i>babel</a></span></div><div class="content">​
+Babel이란?  Babel은 최신 명세(또는 ES2015 이상)의 문법을 구형 브라우저에서도 동작하는 코드로 *트랜스파일해주는 개발 도구입니다.
+만약 Babel이 없다면? 구형 브라우저에서 동작할 수 있는 방식으로 웹 개발을 하고, 최신 브라우저에서 동작할 수 있는 방식으로 다시 개발해야 하는 상황이 발생합니다. 즉 구형 브라우저의 지원이 필요한 프런트엔드 프로젝트라면 현재 Babel의 사용은 필수입니다.
+ ​
+*트랜스파일러?
+ES2015 등장 이후로 javascript는 class문법, 화살표 함수, 모듈 도입 등 많은 변화가 있었습니다. 이후에도 동기, 비동기처리를 위한 async &amp; await, optional 등 다양한 문법과 편의성 높은 기술들이 추가되고 있습니다.</div><div class="post-footer">
+        <a href="/what_is_babel/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/web/">web</a>,&nbsp;<a href="/tags/babel/">babel</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/biasvariance/">편향(Bias) &amp; 분산(Variance)</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-03-14">2022-03-14</time></span>&nbsp;<span class="post-category">included in <a href="/categories/ai/"><i class="far fa-folder fa-fw"></i>AI</a>&nbsp;<a href="/categories/bias/"><i class="far fa-folder fa-fw"></i>bias</a>&nbsp;<a href="/categories/variance/"><i class="far fa-folder fa-fw"></i>variance</a></span></div><div class="content">​
 편향(Bias)과 분산(Variance)  인공지능 모델링을 하면 정답을 맞추기 위해 컴퓨터는 여러 번의 예측값을 내놓는데, 컴퓨터가 내놓은 예측값의 동태를 묘사하는 표현이 &lsquo;편향&rsquo;과 &lsquo;분산&rsquo;입니다.
@@ -137,13 +147,6 @@ What is ES2015?  웹 개발 도구와 내용을 정리하다보면 등장하던 
 우선 javaScript에 대하여 조금 알아봅시다.  javaScript는 프로그래밍 언어입니다. 프로그래밍 언어는 지금도 꾸준히 개선되고 발전됩니다. 계속 변화하고 있기에 특정 시기에 개발된 상태를 1.2.1과 같이 버전으로 등록해 배포합니다. 자바스크립트는 결점이 상당히 많은 언어였고, 사용자들이 직접 결점을 보완하는 방법으로 발전되어 왔는데, **ECMA(European Computer Manufacturer&rsquo;s Association)**라는 단체에서 기존의 결점을 보완한 표준 자바스크립트 버전을 매년 발표하게 됩니다.</div><div class="post-footer">
         <a href="/what_is_es2015/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/web/">web</a>,&nbsp;<a href="/tags/javascript/">Javascript</a>,&nbsp;<a href="/tags/ecmascript/">ECMAScript</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/what_is_web_socket/">What is Web Socket?</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-02-25">2022-02-25</time></span>&nbsp;<span class="post-category">included in <a href="/categories/web/"><i class="far fa-folder fa-fw"></i>web</a>&nbsp;<a href="/categories/web-socket/"><i class="far fa-folder fa-fw"></i>Web Socket</a></span></div><div class="content">​
-What is Web Socket?  Web 통신은 무조건 두 단계를 걸쳐 동작합니다. 요청과 응답. 간단히 어떤 요청이 있을 때만 서버와 연결되어 어떤 응답을 하게 됩니다. 이러한 방식을 HTTP라고 합니다. 예를 들어, Naver.com에 접속하는 것은 &lsquo;Naver.com&rsquo;이라는 요청을 보낸 것이고 그에 대한 응답으로 naver의 메인 화면을 보여주는 것이죠. 그런데 만약 실시간 채팅 서비스나 푸시 알람을 구현해야 한다면, 매우 잦은 요청을 보내야 하고 네트워크 상 많은 부하를 발생시킬 수 있습니다.
- HTML5이라는 웹 표준이 생긴이래로 이러한 HTTP의 단점을 보완하기 위해 웹 소켓(Web Socket)이 등장했습니다.</div><div class="post-footer">
-        <a href="/what_is_web_socket/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/web/">web</a>,&nbsp;<a href="/tags/web-socket/">Web Socket</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>

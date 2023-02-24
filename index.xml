@@ -3,9 +3,23 @@
         <title></title>
         <link>https://colinder.github.io/</link>
         <description>Hello New World</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 21 Feb 2023 12:04:31 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 24 Feb 2023 12:14:10 &#43;0900</lastBuildDate>
             <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>AES_vue_django</title>
+    <link>https://colinder.github.io/aes_vue_django/</link>
+    <pubDate>Fri, 24 Feb 2023 12:14:10 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/aes_vue_django/</guid>
+    <description><![CDATA[​
+​
+AES_vue &gt; django  CryptoJS(vue) 에서 pycryptodomex(django)로 암호화 복호화 하는 과정을 정리
+ ​
+ ​
+​
+​
+✨기본 사항  각기 다른 시스템의 라이브러리를 사용. AES의 CBC 모드를 기본으로 가정. CBC모드를 사용하기 위해서 필수 인자 3가지  secret_key: 암호화 &amp; 복호화를 위한 메인 키 (대칭키) iv: 암호화 &amp; 복호화를 위한 서브 키 data: 암호화를 하고 싶은 데이터   vue에서 object를 통째로 암호화 하여 django로 전달하는 상황을 가정.]]></description>
+</item><item>
     <title>AES django 적용</title>
     <link>https://colinder.github.io/aes_django/</link>
     <pubDate>Tue, 21 Feb 2023 12:04:31 &#43;0900</pubDate>
@@ -134,18 +148,5 @@ Machine learning (ML)  머신러닝을 활용하기에 좋은 분야에 대하�
  k-nearest neighbor는 데이터를 분류하고 새로운 데이터 포인트의 카테고리를 결정할 때 K 개의 가장 가까운 포인트를 선점하고 그중 가장 많이 선택된 포인트의 카테고리로 이 새로운 데이터를 분류하는 방법이다.
  중요 개념
   좌표와 같이 데이터의 위치를 특정할 수 있게 변환]]></description>
-</item><item>
-    <title>AI학습 때 왜 .fit() 한 뒤에 train, test data를 .transform()할까?</title>
-    <link>https://colinder.github.io/why_transform_after_fit/</link>
-    <pubDate>Fri, 08 Jul 2022 14:50:36 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/why_transform_after_fit/</guid>
-    <description><![CDATA[​
-🤔 왜 .fit() 한 뒤에 train, test data를 .transform()할까?  결론은 .fit()을 통해 학습데이터(train)의 경향을 파악 및 저장하고 이 경향을 train, test data를 적용해 조정해주기 위함입니다.
-  minmaxScaler를 대표로 .fit()한 결과를 출력해보면  .fit()이 어떤 역할을 하는지 알 수 없습니다. 그냥 MinMaxScaler()라는 객체가 할당된 것만 알 수 있습니다.
-공식문서를 살펴보면
- fit(X, y=None)
-Compute the minimum and maximum to be used for later scaling.
- * StandardScale()의 경우 Compute the mean and std to be used for later scaling.]]></description>
 </item></channel>
 </rss>
