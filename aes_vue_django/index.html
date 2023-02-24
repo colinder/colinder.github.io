@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>AES_vue_django - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="AES_vue_django" />
+        <title>AES vue &gt; django 적용 - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="AES vue &gt; django 적용" />
 <meta property="og:description" content="​
 ​
 AES_vue &gt; django  CryptoJS(vue) 에서 pycryptodomex(django)로 암호화 복호화 하는 과정을 정리
@@ -22,7 +22,7 @@ AES_vue &gt; django  CryptoJS(vue) 에서 pycryptodomex(django)로 암호화 복
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
 
-<meta name="twitter:title" content="AES_vue_django"/>
+<meta name="twitter:title" content="AES vue &gt; django 적용"/>
 <meta name="twitter:description" content="​
 ​
 AES_vue &gt; django  CryptoJS(vue) 에서 pycryptodomex(django)로 암호화 복호화 하는 과정을 정리
@@ -38,12 +38,12 @@ AES_vue &gt; django  CryptoJS(vue) 에서 pycryptodomex(django)로 암호화 복
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "AES_vue_django",
+        "headline": "AES vue \u003e django 적용",
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/aes_vue_django\/"
-        },"genre": "posts","keywords": "security, AES, web","wordcount":  736 ,
+        },"genre": "posts","keywords": "security, AES, web","wordcount":  735 ,
         "url": "https:\/\/colinder.github.io\/aes_vue_django\/","datePublished": "2023-02-24T12:14:10+09:00","dateModified": "2023-02-24T12:14:10+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -118,9 +118,9 @@ AES_vue &gt; django  CryptoJS(vue) 에서 pycryptodomex(django)로 암호화 복
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">AES_vue_django</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">AES vue &gt; django 적용</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/security/"><i class="far fa-folder fa-fw"></i>security</a>&nbsp;<a href="/categories/aes/"><i class="far fa-folder fa-fw"></i>AES</a>&nbsp;<a href="/categories/web/"><i class="far fa-folder fa-fw"></i>web</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-02-24">2023-02-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;736 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-02-24">2023-02-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;735 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;4 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -135,7 +135,7 @@ AES_vue &gt; django  CryptoJS(vue) 에서 pycryptodomex(django)로 암호화 복
         <li><a href="#암호화-해설">💡암호화 해설</a></li>
       </ul>
     </li>
-    <li><a href="#django-복호화decryption">django 복호화(decryption)</a>
+    <li><a href="#django-복호화decryption">Django 복호화(decryption)</a>
       <ul>
         <li><a href="#복호화-해설">💡복호화 해설</a></li>
         <li><a href="#여기서-부터-중요">여기서 부터 중요!</a></li>
@@ -176,7 +176,7 @@ AES_vue &gt; django  CryptoJS(vue) 에서 pycryptodomex(django)로 암호화 복
 <li>다만 암호화를 하려면 string type의 데이터를 넣어야 한다.</li>
 </ul>
 </li>
-<li>pycryptodomex
+<li><b style="color: #d99a73">pycryptodomex</b>
 <ul>
 <li>secret_key와 iv, <b style="color: red">data</b>는 정해진 bytes 길이(long)를 지켜야 한다.  <span style="color: grey; font-size:0.8em">ex) 16bytes, 32bytes 등</span></li>
 <li>이는 이번 포스팅에서는 신경쓸 부분이 아니지만, 나중에 django에서 암호화하여 vue로 보낼때 중요한 사항이다. <span style="color: red; font-size:0.8em">pycryptodomex는 자동으로 data를 padding해주지 않기 때문에!</span></li>
@@ -270,7 +270,7 @@ AES_vue &gt; django  CryptoJS(vue) 에서 pycryptodomex(django)로 암호화 복
 </code></pre></td></tr></table>
 </div>
 </div><ul>
-<li>Object를 통째로 암호화 하여 사용할 것</li>
+<li>Object를 통째로 암호화하여 사용할 것</li>
 </ul>
 </li>
 <li>
@@ -328,7 +328,7 @@ AES_vue &gt; django  CryptoJS(vue) 에서 pycryptodomex(django)로 암호화 복
 <p>​</p>
 <p>​</p>
 <p>​</p>
-<h2 id="django-복호화decryption">django 복호화(decryption)</h2>
+<h2 id="django-복호화decryption">Django 복호화(decryption)</h2>
 <div class="details admonition info open">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-info-circle fa-fw"></i>info<i class="details-icon fas fa-angle-right fa-fw"></i>
@@ -496,7 +496,7 @@ AES_vue &gt; django  CryptoJS(vue) 에서 pycryptodomex(django)로 암호화 복
 <li>하여 Object의 데이터를 그대로 사용하기 위해 &ldquo;}&ldquo;를 기준으로 <code>split()</code>하고 다시 &ldquo;}&ldquo;를 붙여 dictionary 형태의 string으로 만들었다.</li>
 <li>그리고 이를 eval()함수를 사용해 dictionary type으로 만들었다.</li>
 <li>아직 정확한 원인?을 찾지 못했습니다.</li>
-<li>CryptoJS와 pycryptodomex라는 라이브러리의 차이 때문에 발생한 원인으로 이해하고 넘어갔습니다.</li>
+<li><b style="color: #6ae6dc">CryptoJS</b>와 <b style="color: #d99a73">pycryptodomex</b>라는 라이브러리의 차이 때문에 발생한 원인으로 이해하고 넘어갔습니다.</li>
 </ul>
 </li>
 <li>

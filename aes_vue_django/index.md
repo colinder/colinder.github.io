@@ -1,4 +1,4 @@
-# AES_vue_django
+# AES vue > django 적용
 
 
 ​	
@@ -37,7 +37,7 @@ graph LR;
      - secret_key와 iv는 정해진 bytes 길이(long)를 지켜야 한다.  <span style="color: grey; font-size:0.8em">ex) 16bytes, 32bytes 등. 사용자가 길이를 맞추어 사용하기 어렵다면, padding을 사용해 맞춘다.</span>
      - data는 길이가 상관없다. <b style="color: red">CryptoJS는 자동으로 padding하여 bytes길이를 맞추어주기 때문에!</b>
      - 다만 암호화를 하려면 string type의 데이터를 넣어야 한다.
-   - pycryptodomex
+   - <b style="color: #d99a73">pycryptodomex</b>
      - secret_key와 iv, <b style="color: red">data</b>는 정해진 bytes 길이(long)를 지켜야 한다.  <span style="color: grey; font-size:0.8em">ex) 16bytes, 32bytes 등</span> 
      - 이는 이번 포스팅에서는 신경쓸 부분이 아니지만, 나중에 django에서 암호화하여 vue로 보낼때 중요한 사항이다. <span style="color: red; font-size:0.8em">pycryptodomex는 자동으로 data를 padding해주지 않기 때문에!</span> 
 
@@ -92,7 +92,7 @@ this.$axios.post("myServerAdress", { send: cipher.toString() })
    }
    ```
 
-   - Object를 통째로 암호화 하여 사용할 것
+   - Object를 통째로 암호화하여 사용할 것
 
 3. ```javascript
    var enc = JSON.stringify(data)
@@ -124,7 +124,7 @@ this.$axios.post("myServerAdress", { send: cipher.toString() })
 
 ​	
 
-## django 복호화(decryption)
+## Django 복호화(decryption)
 
 {{< admonition type=info title="info" open=true >}}
 django에서 복호화 코드만 정리. api 통신을 위한 내용과 라이브러리들은 정리하지 않는다.
@@ -219,7 +219,7 @@ django에서 복호화 코드만 정리. api 통신을 위한 라이브러리들
    - 하여 Object의 데이터를 그대로 사용하기 위해 "}"를 기준으로 `split()`하고 다시 "}"를 붙여 dictionary 형태의 string으로 만들었다. 
    - 그리고 이를 eval()함수를 사용해 dictionary type으로 만들었다.
    - 아직 정확한 원인?을 찾지 못했습니다.
-   - CryptoJS와 pycryptodomex라는 라이브러리의 차이 때문에 발생한 원인으로 이해하고 넘어갔습니다.
+   - <b style="color: #6ae6dc">CryptoJS</b>와 <b style="color: #d99a73">pycryptodomex</b>라는 라이브러리의 차이 때문에 발생한 원인으로 이해하고 넘어갔습니다.
 
 6. ```python
    return decrypted_data
