@@ -3,9 +3,23 @@
         <title></title>
         <link>https://colinder.github.io/</link>
         <description>Hello New World</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 24 Feb 2023 12:14:10 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 28 Feb 2023 14:09:18 &#43;0900</lastBuildDate>
             <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>AES django &gt; vue 적용</title>
+    <link>https://colinder.github.io/aes_django_vue/</link>
+    <pubDate>Tue, 28 Feb 2023 14:09:18 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/aes_django_vue/</guid>
+    <description><![CDATA[​
+​
+AES_django &gt; vue  pycryptodomex(django)에서 CryptoJS(vue)로 암호화 복호화 하는 과정을 정리
+ ​
+ ​
+​
+​
+✨기본 사항  django에서 6자리 숫자의 OTP를 생성해 암호화 하여 vue로 전달하는 상황을 가정. 각기 다른 시스템의 라이브러리를 사용. AES의 CBC 모드를 기본으로 가정. CBC모드를 사용하기 위해서 필수 인자 3가지  secret_key: 암호화 &amp; 복호화를 위한 메인 키 (대칭키) iv: 암호화 &amp; 복호화를 위한 서브 키 data: 암호화를 하고 싶은 데이터   💡중요  pycryptodomex 암호화  해당 라이브러리에서는 bytes type의 데이터만 인자로 받을 수 있다.]]></description>
+</item><item>
     <title>AES vue &gt; django 적용</title>
     <link>https://colinder.github.io/aes_vue_django/</link>
     <pubDate>Fri, 24 Feb 2023 12:14:10 &#43;0900</pubDate>
@@ -132,21 +146,5 @@ Sequence data 자연에는 사건이 발생하는데, 이는 대부분 시간에
   ​
 ​
 Sequence data의 구조와 주로 활용되는 형태 많은 사람들이 시도해보는 주식 예측 인공지능 개발을 가정하여 설명.]]></description>
-</item><item>
-    <title>Machine_learning type</title>
-    <link>https://colinder.github.io/machine_learning_classification/</link>
-    <pubDate>Wed, 10 Aug 2022 14:07:57 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/machine_learning_classification/</guid>
-    <description><![CDATA[​
-Machine learning (ML)  머신러닝을 활용하기에 좋은 분야에 대하여 알아보겠습니다.
- ​
-  분류(classification)
- 정해진 카테고리 중 어디에 속하는지 알아내는 경우
-   종류
-  KNN(k-nearest neighbor)
- k-nearest neighbor는 데이터를 분류하고 새로운 데이터 포인트의 카테고리를 결정할 때 K 개의 가장 가까운 포인트를 선점하고 그중 가장 많이 선택된 포인트의 카테고리로 이 새로운 데이터를 분류하는 방법이다.
- 중요 개념
-  좌표와 같이 데이터의 위치를 특정할 수 있게 변환]]></description>
 </item></channel>
 </rss>

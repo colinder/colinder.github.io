@@ -3,7 +3,21 @@
         <title>web - Category - </title>
         <link>https://colinder.github.io/categories/web/</link>
         <description>web - Category - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 24 Feb 2023 12:14:10 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/web/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 28 Feb 2023 14:09:18 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/web/" rel="self" type="application/rss+xml" /><item>
+    <title>AES django &gt; vue 적용</title>
+    <link>https://colinder.github.io/aes_django_vue/</link>
+    <pubDate>Tue, 28 Feb 2023 14:09:18 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/aes_django_vue/</guid>
+    <description><![CDATA[​
+​
+AES_django &gt; vue  pycryptodomex(django)에서 CryptoJS(vue)로 암호화 복호화 하는 과정을 정리
+ ​
+ ​
+​
+​
+✨기본 사항  django에서 6자리 숫자의 OTP를 생성해 암호화 하여 vue로 전달하는 상황을 가정. 각기 다른 시스템의 라이브러리를 사용. AES의 CBC 모드를 기본으로 가정. CBC모드를 사용하기 위해서 필수 인자 3가지  secret_key: 암호화 &amp; 복호화를 위한 메인 키 (대칭키) iv: 암호화 &amp; 복호화를 위한 서브 키 data: 암호화를 하고 싶은 데이터   💡중요  pycryptodomex 암호화  해당 라이브러리에서는 bytes type의 데이터만 인자로 받을 수 있다.]]></description>
+</item><item>
     <title>AES vue &gt; django 적용</title>
     <link>https://colinder.github.io/aes_vue_django/</link>
     <pubDate>Fri, 24 Feb 2023 12:14:10 &#43;0900</pubDate>
@@ -120,17 +134,5 @@ What is webpack?  오늘나 자바스크립트 개발에서 모듈을 사용하�
 이런 문제를 해결하기 위해 *번들러를 사용하는데 wabpack은 가장 많이 사용되는 번들러 중 하나입니다.
  *번들러
 애플리케이션에 필요한 모든 종류의 파일들을 모듈 단위로 나누어 최소한의 파일 묶음(번들)으로 만들어 낸다.]]></description>
-</item><item>
-    <title>What is ES2015?</title>
-    <link>https://colinder.github.io/what_is_es2015/</link>
-    <pubDate>Mon, 28 Feb 2022 09:23:51 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/what_is_es2015/</guid>
-    <description><![CDATA[​
-What is ES2015?  웹 개발 도구와 내용을 정리하다보면 등장하던 ES2015. 그냥 어떤 느낌의 단어인지 어렴풋이 알고만 있다가 확실하게 정리해 알아두고 싶어 내용을 정리합니다.
- ​
-​
-​
-우선 javaScript에 대하여 조금 알아봅시다.  javaScript는 프로그래밍 언어입니다. 프로그래밍 언어는 지금도 꾸준히 개선되고 발전됩니다. 계속 변화하고 있기에 특정 시기에 개발된 상태를 1.2.1과 같이 버전으로 등록해 배포합니다. 자바스크립트는 결점이 상당히 많은 언어였고, 사용자들이 직접 결점을 보완하는 방법으로 발전되어 왔는데, **ECMA(European Computer Manufacturer&rsquo;s Association)**라는 단체에서 기존의 결점을 보완한 표준 자바스크립트 버전을 매년 발표하게 됩니다.]]></description>
 </item></channel>
 </rss>

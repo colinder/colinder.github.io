@@ -3,7 +3,21 @@
         <title>AES - Category - </title>
         <link>https://colinder.github.io/categories/aes/</link>
         <description>AES - Category - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 24 Feb 2023 12:14:10 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/aes/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 28 Feb 2023 14:09:18 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/aes/" rel="self" type="application/rss+xml" /><item>
+    <title>AES django &gt; vue 적용</title>
+    <link>https://colinder.github.io/aes_django_vue/</link>
+    <pubDate>Tue, 28 Feb 2023 14:09:18 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/aes_django_vue/</guid>
+    <description><![CDATA[​
+​
+AES_django &gt; vue  pycryptodomex(django)에서 CryptoJS(vue)로 암호화 복호화 하는 과정을 정리
+ ​
+ ​
+​
+​
+✨기본 사항  django에서 6자리 숫자의 OTP를 생성해 암호화 하여 vue로 전달하는 상황을 가정. 각기 다른 시스템의 라이브러리를 사용. AES의 CBC 모드를 기본으로 가정. CBC모드를 사용하기 위해서 필수 인자 3가지  secret_key: 암호화 &amp; 복호화를 위한 메인 키 (대칭키) iv: 암호화 &amp; 복호화를 위한 서브 키 data: 암호화를 하고 싶은 데이터   💡중요  pycryptodomex 암호화  해당 라이브러리에서는 bytes type의 데이터만 인자로 받을 수 있다.]]></description>
+</item><item>
     <title>AES vue &gt; django 적용</title>
     <link>https://colinder.github.io/aes_vue_django/</link>
     <pubDate>Fri, 24 Feb 2023 12:14:10 &#43;0900</pubDate>
