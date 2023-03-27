@@ -102,6 +102,15 @@
         alt="/images/jg_02.jpg"
         title="/images/jg_02.jpg" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/colinder" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="mailto:kjonggwan@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/django_10_customauthuser_abstractuser/">Django_10_CustomAuthUser_AbstractUser</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-10-08">2021-10-08</time></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw"></i>Django</a>&nbsp;<a href="/categories/abstractuser/"><i class="far fa-folder fa-fw"></i>AbstractUser</a></span></div><div class="content">​
+Django AbstractUser  이전에 AbstractBaseUser를 사용한 커스텀 사용자 인증 테이블을 구성해보았습니다. 해당 내용에 이어서 AbstractUser로 커스텀 사용자 인증 테이블을 구성해보고 createsuperuser 명령어 입력시, 관리자 계정이 커스텀한 테이블에 생성되게 해보겠습니다.
+ ​
+AbstractUser을 상속받아 커스텀을 진행  우선 AbstractUser는 Django에서 기본으로 제공해주는 사용자 인증 테이블의 요소를 그대로 가져와 사용하기 때문에 그 요소들은 어떤 것들이 있는지 알아보자.
+id, password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined 총 11개의 column이 존재하며 이외에 column을 추가 하고 싶을 때 코드를 추가로 작성합니다.</div><div class="post-footer">
+        <a href="/django_10_customauthuser_abstractuser/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/django/">Django</a>,&nbsp;<a href="/tags/abstractuser/">AbstractUser</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/django_09_customauthuser_abstractbaseuser/">Django_09_CustomAuthUser_AbstractBaseUser</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-10-08">2021-10-08</time></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw"></i>Django</a>&nbsp;<a href="/categories/abstractbaseuser/"><i class="far fa-folder fa-fw"></i>AbstractBaseUser</a></span></div><div class="content">​
 Django AbstractBaseUser  django는 기본적으로 username 과 password를 가지고 로그인합니다. 하지만 요즘에는 대부분의 웹사이트들이 email 과 password로 로그인(사용자를 인식 및 인증)을 합니다.
@@ -138,17 +147,6 @@ Next 클릭​
 실제로 서비스를 운영 할 서버라면 절때 root를 원격지에서 사용할 수 없게 하는 것을 추천합니다.</div><div class="post-footer">
         <a href="/mariadb_setting/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/mariadb/">mariaDB</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/django_07_1vsn_%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0/">Django_07_1:N 불러오기</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-09-14">2021-09-14</time></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw"></i>Django</a>&nbsp;<a href="/categories/1n/"><i class="far fa-folder fa-fw"></i>1:N</a></span></div><div class="content">​
-Django 1:N 불러오기  prefetch_related() or annotate()
- ​
-models.py 구성
-1 2 3  class Question(models.Model): question_text = models.CharField(max_length=200) pub_date = models.DateTimeField(&#39;date published&#39;)   1 2 3 4  class Choice(models.Model): question = models.ForeignKey(Question, on_delete=models.CASCADE, related_name=&#39;choices&#39;) choice_text = models.CharField(max_length=200) votes = models.IntegerField(default=0)   ​
-​
-prefetch_related() 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  # views.py def get_context_data(): context[&#34;questions&#34;] = Question.</div><div class="post-footer">
-        <a href="/django_07_1vsn_%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/django/">Django</a>,&nbsp;<a href="/tags/1n/">1:N</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
