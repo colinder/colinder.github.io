@@ -1,0 +1,24 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>React - Tag - </title>
+        <link>https://colinder.github.io/tags/react/</link>
+        <description>React - Tag - </description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 20 Apr 2023 14:33:44 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/react/" rel="self" type="application/rss+xml" /><item>
+    <title>React_init</title>
+    <link>https://colinder.github.io/init_setting/</link>
+    <pubDate>Thu, 20 Apr 2023 14:33:44 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/init_setting/</guid>
+    <description><![CDATA[​
+React 시작하기  vue2 서비스가 23년 12월 31일에 종료된다&hellip; vue3는 개인적으로 실패한 프로젝트라 생각해 vue2를 고집하고 있었는데&hellip;.
+vue3로 갈 것인가. 그냥 react로 갈 것인가 고민하다. 일단 알아보자는 마음으로 정리한 내용이다.
+ ​
+​
+react 시작하기 앞서 준비할 것  node.js 에디터(ex. vscode)  ​
+​
+react 시작하기  준비가 끝났으니, react 프로젝트를 생성해보자
+ ​
+  프로젝트 초기 세팅 명령어
+1  npx create-react-app hello-world     hello-world 라는 이름의 프로젝트를 생성]]></description>
+</item></channel>
+</rss>

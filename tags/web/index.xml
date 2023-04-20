@@ -3,7 +3,19 @@
         <title>web - Tag - </title>
         <link>https://colinder.github.io/tags/web/</link>
         <description>web - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 28 Feb 2023 14:09:18 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/web/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 20 Apr 2023 15:10:58 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/web/" rel="self" type="application/rss+xml" /><item>
+    <title>npm? npx?</title>
+    <link>https://colinder.github.io/npm_npx/</link>
+    <pubDate>Thu, 20 Apr 2023 15:10:58 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/npm_npx/</guid>
+    <description><![CDATA[​
+npm Vs npx  예전부터 궁금했지만 굳이 알아볼 필요까지는 없었다가, 여드름이 터지듯 갑자기 궁금해서져 알아봤습니다.
+ ​
+​
+가장 큰 차이는 설치를 할 것인가 아닌가   컴퓨터에 패키지 전역으로 설치하여 실행: npm 컴퓨터에 패키지 설치 없이 이번만 실행: npx     npm는 컴퓨터 전역(global)에 패키지(npm 모듈 시스템)를 설치한다는 의미입니다.
+만약 npm -g와 같이 뒤에 -g가 있다면, 전역으로 설치한다는 옵션입니다. -g 옵션이 없으면 NPM 패키지는 node_modules라는 이름의 폴더 안에 저장됩니다.]]></description>
+</item><item>
     <title>AES django &gt; vue 적용</title>
     <link>https://colinder.github.io/aes_django_vue/</link>
     <pubDate>Tue, 28 Feb 2023 14:09:18 &#43;0900</pubDate>
@@ -127,17 +139,5 @@ Lint를 사용하면 검증을 자동화하여 이런 문제를 예방할 수 �
  ​
 ​
 ESLint 2002년 JSON을 만든 더글라스 크락포드가 자바스크립트 린터인 JSLint를 만들었습니다.]]></description>
-</item><item>
-    <title>What is Babel?</title>
-    <link>https://colinder.github.io/what_is_babel/</link>
-    <pubDate>Tue, 15 Mar 2022 13:23:41 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/what_is_babel/</guid>
-    <description><![CDATA[​
-Babel이란?  Babel은 최신 명세(또는 ES2015 이상)의 문법을 구형 브라우저에서도 동작하는 코드로 *트랜스파일해주는 개발 도구입니다.
-만약 Babel이 없다면? 구형 브라우저에서 동작할 수 있는 방식으로 웹 개발을 하고, 최신 브라우저에서 동작할 수 있는 방식으로 다시 개발해야 하는 상황이 발생합니다. 즉 구형 브라우저의 지원이 필요한 프런트엔드 프로젝트라면 현재 Babel의 사용은 필수입니다.
- ​
-*트랜스파일러?
-ES2015 등장 이후로 javascript는 class문법, 화살표 함수, 모듈 도입 등 많은 변화가 있었습니다. 이후에도 동기, 비동기처리를 위한 async &amp; await, optional 등 다양한 문법과 편의성 높은 기술들이 추가되고 있습니다.]]></description>
 </item></channel>
 </rss>

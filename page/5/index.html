@@ -102,6 +102,32 @@
         alt="/images/jg_02.jpg"
         title="/images/jg_02.jpg" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/colinder" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="mailto:kjonggwan@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/what_is_train_test_split/">What is train_test_split()?</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-06-30">2022-06-30</time></span>&nbsp;<span class="post-category">included in <a href="/categories/ai/"><i class="far fa-folder fa-fw"></i>AI</a>&nbsp;<a href="/categories/tenserflow/"><i class="far fa-folder fa-fw"></i>tenserflow</a>&nbsp;<a href="/categories/train_test_split/"><i class="far fa-folder fa-fw"></i>train_test_split</a></span></div><div class="content">​
+What is &lsquo;train_test_split()&rsquo;?  AI 모델링을 위해 X_train, X_test, y_train, y_test로 나누는 작업은 필수적입니다. 저는 train과 test를 나누는 코드를 직접 짜서 사용했었는데 scikit learn에서 제공되는 함수가 있었습니다. &ldquo;train_test_split()&quot;이를 알아보겠습니다.
+ ​
+​
+직접 사용되는 모습을 보며 이해해보겠습니다.
+1 2 3 4  import numpy as np from sklearn.model_selection import train_test_split X_train, X_test, y_train, y_test = train_test_split(data, label, test_size=0.3, random_state=29)   ​
+​
+train_test_split() 함수안에 사용되는 인자에 대하여 하나씩 알아보겠습니다.</div><div class="post-footer">
+        <a href="/what_is_train_test_split/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/ai/">AI</a>,&nbsp;<a href="/tags/tenserflow/">tenserflow</a>,&nbsp;<a href="/tags/train_test_split/">train_test_split</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/react-native_icon_and_splash/">React-Native_icon_and_splash</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-06-23">2022-06-23</time></span>&nbsp;<span class="post-category">included in <a href="/categories/react-native/"><i class="far fa-folder fa-fw"></i>react-native</a></span></div><div class="content">​
+React-native (android)  icon 변경과 splash를 적용해보겠습니다.
+ icon: 핸드폰에서 어플 접속시 보이는 모습을 의미.
+splash: 어플 실행시 잠시 노출되는 화면을 의미.​
+​
+Icon 변경 방법  결론부터 정리하자면 특정 폴더안에 이미지만 넣으면 됩니다.
+ ​
+*프로젝트를 시작할 때 이름을 test로 만들어 진행하였습니다. (버전은 0.67)
+1  npx react-native init test --version 0.67.0   ​
+1. android/app/src/main/res 까지 폴더를 들어갑니다. 이미지와 같은 구조가 보인다면 잘 접근한 것입니다.</div><div class="post-footer">
+        <a href="/react-native_icon_and_splash/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/react-native/">react-native</a>,&nbsp;<a href="/tags/web/">web</a>,&nbsp;<a href="/tags/icon/">icon</a>,&nbsp;<a href="/tags/splash/">splash</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/selenium_%EB%8F%99%EC%9E%91%EB%8C%80%EA%B8%B0/">Selenium 동작 대기 방법</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-05-17">2022-05-17</time></span>&nbsp;<span class="post-category">included in <a href="/categories/web/"><i class="far fa-folder fa-fw"></i>web</a>&nbsp;<a href="/categories/selenium/"><i class="far fa-folder fa-fw"></i>selenium</a>&nbsp;<a href="/categories/crawling/"><i class="far fa-folder fa-fw"></i>crawling</a></span></div><div class="content">​
 Selenium 동작대기 접근하려는 요소가 존재하지 않을 때 발생하는 NoSuchElementException error. 페이지와 서버가 통신중이거나 네트워크 지연 등으로 위의 크롤링을 원하는 요소가 html에 존재하기 전에 요소에 접근을 시도하기 때문에 발생하는 에러입니다.
@@ -124,31 +150,6 @@ Epoch의 의미 1~100의 데이터가 input의 양(x_train)으로 주어졌을 �
   3에게 2를 대입하여 나온 가중치(w) 와 편향(b)을 대입하여 새로운 가중치(w)와 편향(b)가 도출
   &hellip;</div><div class="post-footer">
         <a href="/epoch/">Read More</a></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/what_is_optimizer/">what is optimizer</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-03-18">2022-03-18</time></span>&nbsp;<span class="post-category">included in <a href="/categories/ai/"><i class="far fa-folder fa-fw"></i>AI</a>&nbsp;<a href="/categories/optimizer/"><i class="far fa-folder fa-fw"></i>optimizer</a></span></div><div class="content">​
-​
-​
-옵티마이저의 목적  옵티마이저는 학습 데이터(Train data)셋을 이용하여 모델을 학습 할 때 데이터의 실제 결과와 모델이 예측한 결과를 기반으로 오차를 잘 줄일 수 있게 만들어주는 역할입니다.
- ​
-따라서 최적화(Optimization)은 손실 함수(Loss Function)의 결과값을 최소화하는 모델의 파라미터(가중치)를 찾는 것을 의미합니다.
-​
-​
-​
-옵티마이저 리스트  경사 하강법(Gradient Descent) 확률적 경사 하강법(Stochastic Gradient Descent, SGD) Momentum Nesterov Accelerated Gradient (NAG) Adam AdaGrad RMSProp AdaMax Nadam  참고 https://keras.</div><div class="post-footer">
-        <a href="/what_is_optimizer/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/ai/">AI</a>,&nbsp;<a href="/tags/optimizer/">optimizer</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/what_is_linter/">what is Linter?</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-03-18">2022-03-18</time></span>&nbsp;<span class="post-category">included in <a href="/categories/web/"><i class="far fa-folder fa-fw"></i>web</a>&nbsp;<a href="/categories/linter/"><i class="far fa-folder fa-fw"></i>linter</a></span></div><div class="content">​
-Linter란?  Linter 혹은 Lint는 소스 코드를 분석해 오류나 오타, 잠재적인 버그를 찾아주는 도구입니다.
-javascript는 다른 언어들에 비해 유연한 문법 구조를 갖습니다. 이런 특징은 찾기 어려운 버그를 만들기도하고, 코드를 실행하기 전까지 알 수 없는 오류를 만들기도 합니다.
-Lint를 사용하면 검증을 자동화하여 이런 문제를 예방할 수 있습니다. 가장 많이 사용되는 javascript 린터로는 ESLint와 코드 포맷터인 Prettier, css 린터인 Stylelint가 있습니다.
- ​
-​
-ESLint 2002년 JSON을 만든 더글라스 크락포드가 자바스크립트 린터인 JSLint를 만들었습니다.</div><div class="post-footer">
-        <a href="/what_is_linter/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/web/">web</a>,&nbsp;<a href="/tags/linter/">linter</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -179,7 +180,7 @@ ESLint 2002년 JSON을 만든 더글라스 크락포드가 자바스크립트 �
                     <span class="page-link" aria-hidden="true">&hellip;</span>
                 </li><li class="page-item ">
                     <span class="page-link">
-                        <a href="/page/35/">35</a>
+                        <a href="/page/36/">36</a>
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">
