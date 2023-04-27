@@ -65,16 +65,36 @@
 
    정상적으로 설치 및 실행이 된 것을 확인하였습니다. 
 
-   ​	
-
-   ​	
-
-   ​	
-
-   ​	
-
-   ​	
-
    
+
+   ​	
+
+   ​	
+
+   ​	
+
+   ​	
+
+   ​	
+   
+   
+
+## Typescript 적용한 프로젝트 생성 방법
+
+```bash
+npx create-react-app hello-world --template typescript
+```
+
+- `hello-world` 라는 이름의 프로젝트를 생성하는데 typescript로 생성
+
+​	
+
+​	
+
+​	
+
+​	
+
+​	
 
 
