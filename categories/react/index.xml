@@ -3,8 +3,24 @@
         <title>React - Category - </title>
         <link>https://colinder.github.io/categories/react/</link>
         <description>React - Category - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 20 Apr 2023 14:33:44 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/react/" rel="self" type="application/rss+xml" /><item>
-    <title>React_init</title>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 02 May 2023 14:32:19 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/react/" rel="self" type="application/rss+xml" /><item>
+    <title>React global_Style_관리</title>
+    <link>https://colinder.github.io/global_css_setting/</link>
+    <pubDate>Tue, 02 May 2023 14:32:19 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/global_css_setting/</guid>
+    <description><![CDATA[​
+React Style_관리  전역으로 사용할 css 설정은 어떻게 하는지 알아봅니다.
+ *기본적으로 typescript가 적용되어 있습니다.
+​
+​
+Global css 설정  전역으로 사용하고 싶은 css 설정 방법
+ ​
+폴더 구조를 보자면. (구조는 마음대로 구성하여도 됩니다. 아래는 제 마음대로 구성한 것입니다.)
+1 2 3 4 5 6  src ├── assets │ ├── Styles │ ├── common.css │ ... └── index.tsx   ​
+  global css 만들기]]></description>
+</item><item>
+    <title>React Init</title>
     <link>https://colinder.github.io/init_setting/</link>
     <pubDate>Thu, 20 Apr 2023 14:33:44 &#43;0900</pubDate>
     <author>Author</author>

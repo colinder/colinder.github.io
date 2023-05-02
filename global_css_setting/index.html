@@ -5,42 +5,50 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>npm? npx? - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="npm? npx?" />
+        <title>React global_Style_관리 - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="React global_Style_관리" />
 <meta property="og:description" content="​
-npm Vs npx  예전부터 궁금했지만 굳이 알아볼 필요까지는 없었다가, 여드름이 터지듯 갑자기 궁금해서져 알아봤습니다.
- ​
+React Style_관리  전역으로 사용할 css 설정은 어떻게 하는지 알아봅니다.
+ *기본적으로 typescript가 적용되어 있습니다.
 ​
-가장 큰 차이는 설치를 할 것인가 아닌가   컴퓨터에 패키지 전역으로 설치하여 실행: npm 컴퓨터에 패키지 설치 없이 이번만 실행: npx     npm는 컴퓨터 전역(global)에 패키지(npm 모듈 시스템)를 설치한다는 의미입니다.
-만약 npm -g와 같이 뒤에 -g가 있다면, 전역으로 설치한다는 옵션입니다. -g 옵션이 없으면 NPM 패키지는 node_modules라는 이름의 폴더 안에 저장됩니다." />
+​
+Global css 설정  전역으로 사용하고 싶은 css 설정 방법
+ ​
+폴더 구조를 보자면. (구조는 마음대로 구성하여도 됩니다. 아래는 제 마음대로 구성한 것입니다.)
+1 2 3 4 5 6  src ├── assets │ ├── Styles │ ├── common.css │ ... └── index.tsx   ​
+  global css 만들기" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://colinder.github.io/npm_npx/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-04-20T15:10:58&#43;09:00" />
-<meta property="article:modified_time" content="2023-04-20T15:10:58&#43;09:00" />
+<meta property="og:url" content="https://colinder.github.io/global_css_setting/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-05-02T14:32:19&#43;09:00" />
+<meta property="article:modified_time" content="2023-05-02T14:32:19&#43;09:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
 
-<meta name="twitter:title" content="npm? npx?"/>
+<meta name="twitter:title" content="React global_Style_관리"/>
 <meta name="twitter:description" content="​
-npm Vs npx  예전부터 궁금했지만 굳이 알아볼 필요까지는 없었다가, 여드름이 터지듯 갑자기 궁금해서져 알아봤습니다.
- ​
+React Style_관리  전역으로 사용할 css 설정은 어떻게 하는지 알아봅니다.
+ *기본적으로 typescript가 적용되어 있습니다.
 ​
-가장 큰 차이는 설치를 할 것인가 아닌가   컴퓨터에 패키지 전역으로 설치하여 실행: npm 컴퓨터에 패키지 설치 없이 이번만 실행: npx     npm는 컴퓨터 전역(global)에 패키지(npm 모듈 시스템)를 설치한다는 의미입니다.
-만약 npm -g와 같이 뒤에 -g가 있다면, 전역으로 설치한다는 옵션입니다. -g 옵션이 없으면 NPM 패키지는 node_modules라는 이름의 폴더 안에 저장됩니다."/>
+​
+Global css 설정  전역으로 사용하고 싶은 css 설정 방법
+ ​
+폴더 구조를 보자면. (구조는 마음대로 구성하여도 됩니다. 아래는 제 마음대로 구성한 것입니다.)
+1 2 3 4 5 6  src ├── assets │ ├── Styles │ ├── common.css │ ... └── index.tsx   ​
+  global css 만들기"/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/npm_npx/" /><link rel="prev" href="https://colinder.github.io/init_setting/" /><link rel="next" href="https://colinder.github.io/global_css_setting/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/global_css_setting/" /><link rel="prev" href="https://colinder.github.io/npm_npx/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "npm? npx?",
+        "headline": "React global_Style_관리",
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/colinder.github.io\/npm_npx\/"
-        },"genre": "posts","keywords": "Web, npm, npx","wordcount":  251 ,
-        "url": "https:\/\/colinder.github.io\/npm_npx\/","datePublished": "2023-04-20T15:10:58+09:00","dateModified": "2023-04-20T15:10:58+09:00","publisher": {
+            "@id": "https:\/\/colinder.github.io\/global_css_setting\/"
+        },"genre": "posts","keywords": "React","wordcount":  168 ,
+        "url": "https:\/\/colinder.github.io\/global_css_setting\/","datePublished": "2023-05-02T14:32:19+09:00","dateModified": "2023-05-02T14:32:19+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -114,10 +122,10 @@ npm Vs npx  예전부터 궁금했지만 굳이 알아볼 필요까지는 없었
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">npm? npx?</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/web/"><i class="far fa-folder fa-fw"></i>web</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-04-20">2023-04-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;251 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">React global_Style_관리</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/react/"><i class="far fa-folder fa-fw"></i>React</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-05-02">2023-05-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;168 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;One minute&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
@@ -125,91 +133,109 @@ npm Vs npx  예전부터 궁금했지만 굳이 알아볼 필요까지는 없었
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#가장-큰-차이는-설치를-할-것인가-아닌가">가장 큰 차이는 <code>설치</code>를 할 것인가 아닌가</a></li>
+    <li><a href="#global-css-설정">Global css 설정</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><p>​</p>
-<h1 id="npm-vs-npx">npm Vs npx</h1>
+<h1 id="react-style_관리">React Style_관리</h1>
 <blockquote>
-<p>예전부터 궁금했지만 굳이 알아볼 필요까지는 없었다가, 여드름이 터지듯 갑자기 궁금해서져 알아봤습니다.</p>
+<p>전역으로 사용할 css 설정은 어떻게 하는지 알아봅니다.</p>
+</blockquote>
+<p>*기본적으로 typescript가 적용되어 있습니다.</p>
+<p>​</p>
+<p>​</p>
+<h2 id="global-css-설정">Global css 설정</h2>
+<blockquote>
+<p>전역으로 사용하고 싶은 css 설정 방법</p>
 </blockquote>
 <p>​</p>
-<p>​</p>
-<h2 id="가장-큰-차이는-설치를-할-것인가-아닌가">가장 큰 차이는 <code>설치</code>를 할 것인가 아닌가</h2>
-<blockquote>
-<ul>
-<li>컴퓨터에 패키지 전역으로 설치하여 실행: <code>npm</code></li>
-<li>컴퓨터에 패키지 설치 없이 이번만 실행: <code>npx</code></li>
-</ul>
-</blockquote>
-<ul>
-<li>
-<p><code>npm</code>는 컴퓨터 전역(global)에 패키지(npm 모듈 시스템)를 설치한다는 의미입니다.</p>
-<p>만약  <code>npm -g</code>와 같이 뒤에 <code>-g</code>가 있다면, 전역으로 설치한다는 옵션입니다. 
-<code>-g</code> 옵션이 없으면 NPM 패키지는 <code>node_modules</code>라는 이름의 폴더 안에 저장됩니다. 
-<code>node_modules</code> 폴더는 <code>npm install</code>을 실행한 위치와 같은 계층에 있는 폴더입니다.</p>
-</li>
-</ul>
-<p>​</p>
-<ul>
-<li>
-<p>npm 패키지를 설치하지 않고 실행만 하려면 터미널에 <code>npx</code>를 입력하면 됩니다.</p>
-<p>npx는 노드 패키지 실행(Node Package Execute, NPX)의 약자로 NPM 패키지 실행자(NPM Package Runner)라고도 불립니다.
-<code>npx</code>가 설치되어 있는지를 확인하시려면 다음 명령어를 터미널에 입력하시면 됩니다.</p>
+<p>폴더 구조를 보자면. (구조는 마음대로 구성하여도 됩니다. 아래는 제 마음대로 구성한 것입니다.)</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">npx -v
+<pre class="chroma"><code class="language-bash" data-lang="bash">src
+├── assets
+│    ├── Styles
+│        ├── common.css
+│   ...
+└── index.tsx
 </code></pre></td></tr></table>
 </div>
 </div><p>​</p>
-</li>
-</ul>
-<p><b><span style="color: red">컴퓨터에 노드 패키지를 저장하고 싶은 분들은 아래 1번 방법을, 패키지를 저장하지 않고 실행하고 싶은 분들은 2번 방법을 사용하시면 됩니다.</span></b></p>
-<p>​</p>
-<p>​</p>
 <ol>
 <li>
-<p>컴퓨터에 패키지 전역으로 <code>설치</code>: <code>npm</code></p>
+<p>global css 만들기</p>
+<p>저는 공통으로 사용할 css 요소를 <code>assets &gt; Styles &gt; common.css</code>에 구성하였습니다. 예를 들어</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">npm create-react-app my-project
-...
+<pre class="chroma"><code class="language-react" data-lang="react"><span class="cm">/* common.css */</span>
+<span class="p">.</span><span class="nx">red</span> <span class="p">{</span>
+  <span class="nx">background</span><span class="o">-</span><span class="nx">color</span><span class="o">:</span> <span class="nx">red</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
-</div></li>
-</ol>
+</div><p>배경색을 붉게 하는 <code>red</code>라는 클래스를 만들었습니다.</p>
 <p>​</p>
-<ol start="2">
+<p>​</p>
+</li>
 <li>
-<p>컴퓨터에 패키지 <code>설치 없이 실행</code>: <code>npx</code></p>
+<p>최상단 컴포넌트에 반영하기</p>
+<p>저는 index.tsx를 최상위 컴포넌트로 사용하기 때문에 여기에 등록(import)해줍니다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">npx create-react-app my-project
-...
+<pre class="chroma"><code class="language-react" data-lang="react"><span class="cm">/* index.tsx */</span>
+
+<span class="kr">import</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">ReactDOM</span> <span class="nx">from</span> <span class="s1">&#39;react-dom/client&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">App</span> <span class="nx">from</span> <span class="s1">&#39;./App&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="s1">&#39;./assets/Styles/common.css&#39;</span>	   <span class="cm">/* 👈👈👈 */</span>
+
+<span class="kr">const</span> <span class="nx">root</span> <span class="o">=</span> <span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">createRoot</span><span class="p">(</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;root&#39;</span><span class="p">)</span> <span class="nx">as</span> <span class="nx">HTMLElement</span>
+<span class="p">);</span>
+<span class="nx">root</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+  <span class="p">&lt;</span><span class="nt">React.StrictMode</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">App</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">React.StrictMode</span><span class="p">&gt;</span>
+<span class="p">);</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>​</p>
+<p>​</p>
+<p>​</p>
 </li>
 </ol>
-<p>​</p>
-<p>​</p>
-<h1 id="heading">👀</h1>
-<p>저는 react를 배우다가 npm과 npx의 차이가 문득 궁금해져서 알아본 것인데, react를 시작하는 여러 방법 중 하나인 CRA(create-react-app)는 버전 변경이 자주 발생하는  <strong>React의 Boiler Plate입니다.</strong> <span style="color: grey; font-size: 0.8em">보일러 틀에 여러 개의 보일러를 찍어내듯, <strong>초기 환경을 자동으로 셋업해주는</strong> 도구라고 보면 된다. (Vue CLI 같은 개념이다.)</span></p>
-<p>버전 변경이 잦다는 것은 <u>한 버전을 글로벌하게 설치해서 사용할 경우 내가 사용하는 버전이 점점 뒤로 밀리는 후속버전이 된다는 의미</u>.</p>
-<p>즉 항상 최신 버전으로 프로젝트를 생성하고 싶다면, npx가 더 맞는 방법이 되는 것이다.</p>
-<p>이렇게 사용하려는 기술의 변화와 개인의 취향을 고려하여 사용하면 더 좋을 것 같습니다.</p>
-<p>​</p>
+<p>이렇게 등록해주면 어디서든 <code>red</code>라는 클래스를 사용할 수 있습니다.</p>
 <p>​</p>
 <p>​</p>
 <p>​</p>
@@ -217,13 +243,13 @@ npm Vs npx  예전부터 궁금했지만 굳이 알아볼 필요까지는 없었
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2023-04-20</span>
+                <span>Updated on 2023-05-02</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/npm_npx/index.md" target="_blank">Read Markdown</a>
+                            <a class="link-to-markdown" href="/global_css_setting/index.md" target="_blank">Read Markdown</a>
                         </span></div>
             <div class="post-info-share">
                 <span></span>
@@ -232,14 +258,13 @@ npm Vs npx  예전부터 궁금했지만 굳이 알아볼 필요까지는 없었
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/web/">web</a>,&nbsp;<a href="/tags/npm/">npm</a>,&nbsp;<a href="/tags/npx/">npx</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/react/">React</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/init_setting/" class="prev" rel="prev" title="React Init"><i class="fas fa-angle-left fa-fw"></i>React Init</a>
-            <a href="/global_css_setting/" class="next" rel="next" title="React global_Style_관리">React global_Style_관리<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/npm_npx/" class="prev" rel="prev" title="npm? npx?"><i class="fas fa-angle-left fa-fw"></i>npm? npx?</a></div>
 </div>
 <div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.

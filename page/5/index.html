@@ -102,6 +102,19 @@
         alt="/images/jg_02.jpg"
         title="/images/jg_02.jpg" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/colinder" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="mailto:kjonggwan@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/what_is_data_scaling/">What is Data_Scaling</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-07-07">2022-07-07</time></span>&nbsp;<span class="post-category">included in <a href="/categories/scaling/"><i class="far fa-folder fa-fw"></i>scaling</a></span></div><div class="content">​
+데이터 스케일링(Data Scaling) 이란?  데이터의 값의 범위를 조정하는 것
+ ​
+​
+​
+🤔 왜 데이터 스케일링을 하는가?  데이터의 경향, feature의 영향, 상관관계 등 데이터를 분석하는데 활용할 수 있으며, 인공지능 개발 중 학습단계에서 여러 feature의 영향도를 비슷한 수준으로 맞추기 위해 범위를 조정.
+ ​
+아래 그림을 보면서 이해해보겠습니다.
+과제  여러 feature(성별, 나이, 몸무게, 자산현황)의 특성을 보고 Label을 예측하는 모델을 만든다고 가정  문제점  값의 범위를 보면  성별 0, 1 나이 0~100, 몸무게 0~120, 자산현황 0~700,000,000, Label은 0~800,000,000의 값을 갖는다고 가정한다면,    ​</div><div class="post-footer">
+        <a href="/what_is_data_scaling/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/scaling/">scaling</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/what_is_train_test_split/">What is train_test_split()?</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-06-30">2022-06-30</time></span>&nbsp;<span class="post-category">included in <a href="/categories/ai/"><i class="far fa-folder fa-fw"></i>AI</a>&nbsp;<a href="/categories/tenserflow/"><i class="far fa-folder fa-fw"></i>tenserflow</a>&nbsp;<a href="/categories/train_test_split/"><i class="far fa-folder fa-fw"></i>train_test_split</a></span></div><div class="content">​
 What is &lsquo;train_test_split()&rsquo;?  AI 모델링을 위해 X_train, X_test, y_train, y_test로 나누는 작업은 필수적입니다. 저는 train과 test를 나누는 코드를 직접 짜서 사용했었는데 scikit learn에서 제공되는 함수가 있었습니다. &ldquo;train_test_split()&quot;이를 알아보겠습니다.
@@ -137,19 +150,6 @@ Selenium 동작대기 접근하려는 요소가 존재하지 않을 때 발생�
 1. time.sleep  python 내장 library 지정한 시간만큼 지연 (프로세스 자체를 지정한 시간동안 기다림)  사용법 1 2 3  from time import sleep sleep(3) //3초간 기다림   ​</div><div class="post-footer">
         <a href="/selenium_%EB%8F%99%EC%9E%91%EB%8C%80%EA%B8%B0/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/web/">web</a>,&nbsp;<a href="/tags/selenium/">selenium</a>,&nbsp;<a href="/tags/crawling/">crawling</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/epoch/">Epoch</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-03-18">2022-03-18</time></span></div><div class="content">​
-Epoch의 의미 1~100의 데이터가 input의 양(x_train)으로 주어졌을 때
-20 epoch를 적용한다는 의미는
-단계별로 설명하자면,
-  1번째 학습(1 epoch) 시작
-  초기화된 가중치(w)와 편향(b)을 가지고 1에 대한 계산 진행 &gt;
-  1을 대입하여 나온 가중치(w) 와 편향(b) 도출
-  2에게 1을 대입하여 나온 가중치(w) 와 편향(b)을 대입하여 새로운 가중치(w)와 편향(b)가 도출
-  3에게 2를 대입하여 나온 가중치(w) 와 편향(b)을 대입하여 새로운 가중치(w)와 편향(b)가 도출
-  &hellip;</div><div class="post-footer">
-        <a href="/epoch/">Read More</a></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>

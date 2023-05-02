@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "mermaid.min.css",
-	"sourceRoot": "C:/Users/kjong/Desktop/JG/03_Blog",
+	"sourceRoot": "C:/Users/kjong/Desktop/JG/05_Blog",
 	"sources": [
 		"themes/LoveIt/assets/lib/mermaid/mermaid.scss",
 		"themes/LoveIt/assets/lib/mermaid/themes/neutral/index.scss",

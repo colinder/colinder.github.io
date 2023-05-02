@@ -102,6 +102,20 @@
         alt="/images/jg_02.jpg"
         title="/images/jg_02.jpg" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/colinder" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="mailto:kjonggwan@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/global_css_setting/">React global_Style_관리</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-05-02">2023-05-02</time></span>&nbsp;<span class="post-category">included in <a href="/categories/react/"><i class="far fa-folder fa-fw"></i>React</a></span></div><div class="content">​
+React Style_관리  전역으로 사용할 css 설정은 어떻게 하는지 알아봅니다.
+ *기본적으로 typescript가 적용되어 있습니다.
+​
+​
+Global css 설정  전역으로 사용하고 싶은 css 설정 방법
+ ​
+폴더 구조를 보자면. (구조는 마음대로 구성하여도 됩니다. 아래는 제 마음대로 구성한 것입니다.)
+1 2 3 4 5 6  src ├── assets │ ├── Styles │ ├── common.css │ ... └── index.tsx   ​
+  global css 만들기</div><div class="post-footer">
+        <a href="/global_css_setting/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/react/">React</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/npm_npx/">npm? npx?</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-04-20">2023-04-20</time></span>&nbsp;<span class="post-category">included in <a href="/categories/web/"><i class="far fa-folder fa-fw"></i>web</a></span></div><div class="content">​
 npm Vs npx  예전부터 궁금했지만 굳이 알아볼 필요까지는 없었다가, 여드름이 터지듯 갑자기 궁금해서져 알아봤습니다.
@@ -112,7 +126,7 @@ npm Vs npx  예전부터 궁금했지만 굳이 알아볼 필요까지는 없었
         <a href="/npm_npx/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/web/">web</a>,&nbsp;<a href="/tags/npm/">npm</a>,&nbsp;<a href="/tags/npx/">npx</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/init_setting/">React_init</a>
+        <a href="/init_setting/">React Init</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-04-20">2023-04-20</time></span>&nbsp;<span class="post-category">included in <a href="/categories/react/"><i class="far fa-folder fa-fw"></i>React</a></span></div><div class="content">​
 React 시작하기  vue2 서비스가 23년 12월 31일에 종료된다&hellip; vue3는 개인적으로 실패한 프로젝트라 생각해 vue2를 고집하고 있었는데&hellip;.
 vue3로 갈 것인가. 그냥 react로 갈 것인가 고민하다. 일단 알아보자는 마음으로 정리한 내용이다.
@@ -142,18 +156,6 @@ react 시작하기  준비가 끝났으니, react 프로젝트를 생성해보�
 1  docker pull &lt;다운받을 image 이름&gt;   다운받을 image 이름 &amp; 종류는 Docker Hub Web(https://hub.</div><div class="post-footer">
         <a href="/command/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/docker/">docker</a>,&nbsp;<a href="/tags/command/">command</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/aes_django_vue/">AES django &gt; vue 적용</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-02-28">2023-02-28</time></span>&nbsp;<span class="post-category">included in <a href="/categories/security/"><i class="far fa-folder fa-fw"></i>security</a>&nbsp;<a href="/categories/aes/"><i class="far fa-folder fa-fw"></i>AES</a>&nbsp;<a href="/categories/web/"><i class="far fa-folder fa-fw"></i>web</a></span></div><div class="content">​
-​
-AES_django &gt; vue  pycryptodomex(django)에서 CryptoJS(vue)로 암호화 복호화 하는 과정을 정리
- ​
- ​
-​
-​
-✨기본 사항  django에서 6자리 숫자의 OTP를 생성해 암호화 하여 vue로 전달하는 상황을 가정. 각기 다른 시스템의 라이브러리를 사용. AES의 CBC 모드를 기본으로 가정. CBC모드를 사용하기 위해서 필수 인자 3가지  secret_key: 암호화 &amp; 복호화를 위한 메인 키 (대칭키) iv: 암호화 &amp; 복호화를 위한 서브 키 data: 암호화를 하고 싶은 데이터   💡중요  pycryptodomex 암호화  해당 라이브러리에서는 bytes type의 데이터만 인자로 받을 수 있다.</div><div class="post-footer">
-        <a href="/aes_django_vue/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/security/">security</a>,&nbsp;<a href="/tags/aes/">AES</a>,&nbsp;<a href="/tags/web/">web</a></div></div>
 </article><ul class="pagination"><li class="page-item active">
                     <span class="page-link">
                         <a href="/">1</a>
