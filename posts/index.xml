@@ -3,7 +3,21 @@
         <title>All Posts - </title>
         <link>https://colinder.github.io/posts/</link>
         <description>All Posts | </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 02 May 2023 14:32:19 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 03 May 2023 14:53:20 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>React Scoped_css</title>
+    <link>https://colinder.github.io/scoped_css/</link>
+    <pubDate>Wed, 03 May 2023 14:53:20 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/scoped_css/</guid>
+    <description><![CDATA[​
+React_Style 관리  Vue에는 .vue 파일마다 &lt;style&gt;가 있고 여기에 &lt;style scoped&gt;를 주면 해당 파일에만 적용되는 style을 구성할 수 있는데, react는 어떻게 하는지 알아봅니다.
+ ​
+​
+scoped css 설정  지역적으로 사용하고 싶은 css 설정 방법
+ ​
+폴더 구조를 보자면. (구조는 마음대로 구성하여도 됩니다. 아래는 제 마음대로 구성한 것입니다.)
+1 2 3 4 5 6 7 8 9 10 11 12  src ├── assets │ ├── Styles │ ├── common.]]></description>
+</item><item>
     <title>React global_Style_관리</title>
     <link>https://colinder.github.io/global_css_setting/</link>
     <pubDate>Tue, 02 May 2023 14:32:19 &#43;0900</pubDate>
@@ -137,17 +151,5 @@ AES는 미국 표준 기술 연구소에 의해서 연방 정보 처리 표준�
  ​
 ​
 ​]]></description>
-</item><item>
-    <title>Overfitting</title>
-    <link>https://colinder.github.io/overfitting/</link>
-    <pubDate>Wed, 28 Dec 2022 16:44:00 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/overfitting/</guid>
-    <description><![CDATA[​
-과적합(Overfitting)  잘 정리된 내용을 발견하였고 거기에 개인적인 경험을 추가하기 위해 정리하였습니다. (대부분 필사입니다.)
-인공지능 모델링을 하다보면 항상 만나게 되는 과적합을 어떻게 해결해야하는지, 방법에 대하여 정리
- ​
-인공지능에게 흔히 말하는 깊이있는 공부를 시키려면 모델의 layer을 늘리고, 노드(unit)을 늘리는 방법을 떠올린다. 그리고 그러다 보면 train data에 만 너무 적합하게, 처음 보는 test data를 집어넣었을 땐 형편없는 결과를 도출하는 모델이 된다. (이를 과적합이라 한다.)
-일반적으로 과적합은 모델 학습과정에서 valid loss가 지속적으로 감소하다가 증가하는 지점부터 발생한다고 정의된다.]]></description>
 </item></channel>
 </rss>
