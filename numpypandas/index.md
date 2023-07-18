@@ -13,6 +13,8 @@
 
 ​	
 
+​	
+
 ## What is <u>Numpy</u>(Numerical Python)?
 
 > 공식문서를 따르면,<br>
@@ -34,6 +36,8 @@
 
   <image src="/images/numpy.assets/image-20211214131438955.png" width="1000px" style="display: block;">
 
+  ​	
+  
   ​	
 
 ### 특징
@@ -122,7 +126,7 @@
 
 ​	
 
-추가로 Numpy와 비슷하지만 사용법 및 용도가 다른 Library 하나를 더 정리해보자
+👉추가로 Numpy와 비슷하지만 사용법 및 용도가 다른 Library 하나를 더 정리해보자
 
 # Pandas
 
@@ -131,6 +135,8 @@
 >역시 무지성으로 입력하고 시작하게 되는 코드이다. pandas의 용도는 무엇인지? numpy와의 차이는 무엇인지 알아보자
 
 ​			
+
+​	
 
 ## What is <u>Pandas</u>(Python data analysis)?
 
@@ -144,6 +150,8 @@
 
 - 역시 제공하는 데이터 형태를 알면 좋은데, <u>Series</u>, <u>DataFrame</u> 두 가지가 대표적.
 
+  ​	
+  
   ​	
 
 ## Series
@@ -191,9 +199,5 @@
   ​	
 
   ​	
-
-  ​	
-
-
 
 

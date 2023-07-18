@@ -3,7 +3,46 @@
         <title>All Posts - </title>
         <link>https://colinder.github.io/posts/</link>
         <description>All Posts | </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 03 May 2023 14:53:20 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 18 Jul 2023 16:51:22 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>외부 &amp; 내부 IP</title>
+    <link>https://colinder.github.io/what_is_ip/</link>
+    <pubDate>Tue, 18 Jul 2023 16:51:22 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/what_is_ip/</guid>
+    <description><![CDATA[​
+외부 &amp; 내부 IP 란?  backend 개발을 하다보면, IP에 대하여 알아야하는 순간이 온다. 그래서 알아보자.
+ ​
+​
+IP란?  인터넷 프로토콜(Internet Protocol)의 약자로, 인터넷이 통하는 네트워크에서 어떤 정보를 수신하고 송신하는 통신에 대한 규약을 의미
+ ​
+​
+IP면 IP지? 내부, 외부는 무엇인가? 우리 집을 생각해보자.
+우리는 통신사의 어떤 기기를 대여받아 인터넷 와이파이를 사용하고 있다. 여기가 포인트다.
+어떤 기기로 우리 집안에 와이파이를 뿌려주고 있고, 우리 가족은 이 기기의 와이파이로 인터넷에 접속한다!]]></description>
+</item><item>
+    <title>React Scss_setting</title>
+    <link>https://colinder.github.io/scss_setting/</link>
+    <pubDate>Thu, 04 May 2023 15:36:57 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/scss_setting/</guid>
+    <description><![CDATA[​
+React_Style 관리  전 css보다 scss가 더 좋습니다. Sassy CSS - 문법적으로 짱 멋진(Sassy) CSS이기 때문입니다.
+ ​
+​
+react에 scss 적용하기  간단히 라이브러리 하나만 설치해주고 파일명만 바꿔주면 됩니다.
+ *CRA 공식 문서에 나와있는 방법을 따릅니다.
+​
+​
+  package.json이 있는 위치에서
+1  npm install sass   ​
+  .css로 된 파일명을 .scss로 바꾸면 끝.
+  ​
+​
+​
+​
+​
+👀 많은 레퍼런스가&hellip; 1  npm install node-sass   해당 명령어로 sass를 적용하는데, 동료가 깃헙에서 npm i를 하는데 계속 오류가 났고 저도 간헐적으로 에러가 발생해 설명한 방식으로 변경하였습니다.]]></description>
+</item><item>
     <title>React Scoped_css</title>
     <link>https://colinder.github.io/scoped_css/</link>
     <pubDate>Wed, 03 May 2023 14:53:20 &#43;0900</pubDate>
@@ -123,33 +162,5 @@ AES django 적용  django에 PyCryptodomex를 설치하여 적용
   문서에 예시를 보면
 1  from Crypto.Cipher import AES   와 같이 import 하라는데, 이러면 안되고
 1  from Cryptodome.]]></description>
-</item><item>
-    <title>AES vue 적용</title>
-    <link>https://colinder.github.io/aes_vue/</link>
-    <pubDate>Mon, 20 Feb 2023 17:04:26 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/aes_vue/</guid>
-    <description><![CDATA[​
-​
-AES Vue 적용  vue.js에 CryptoJS를 설치하여 진행
- 1  npm i crypto-js    주의 사항  AES에 사용되는 parameters는 모두 bytes 타입만 사용이 가능하다. 하여 대부분 utf-8로 encoding하여 사용 (이 부분은 아직 정확하게 이해하지 못했다.)    ​
-​
-​
-암호화(encryption) 1 2 3 4 5 6 7 8 9 10  var secretKey = &#39;abcdefghijklmnopqrstuvwxyzabcdef&#39;; var iv = &#39;1234567890123456&#39;; var data = this.]]></description>
-</item><item>
-    <title>what is AES</title>
-    <link>https://colinder.github.io/what_is_aes/</link>
-    <pubDate>Mon, 20 Feb 2023 16:48:04 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/what_is_aes/</guid>
-    <description><![CDATA[​
-​
-​
-AES 보안  보안 진단을 받아보니, 생각보다 API 통신은 해킹이 쉽다.
-하여 보안에 신경써야 하는 경우, 기술들이 다양하게 있는데, 그 중 AES&lt;Advanced Encryption Standard&gt;를 간단히 알아보고 이후 적용하는 방법과 과정에 대하여 정리한다.
-AES는 미국 표준 기술 연구소에 의해서 연방 정보 처리 표준으로 지정된 암호화 방식이며 NSA에 의해 1급 비밀에 사용할 수 있도록 승인된 암호화 알고리즘 중 유일하게 공개된 알고리즘 - 출처 : 나무위키
- ​
-​
-​]]></description>
 </item></channel>
 </rss>

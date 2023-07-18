@@ -67,12 +67,12 @@ AES Vue 적용  vue.js에 CryptoJS를 설치하여 진행
     <guid>https://colinder.github.io/what_is_aes/</guid>
     <description><![CDATA[​
 ​
-​
 AES 보안  보안 진단을 받아보니, 생각보다 API 통신은 해킹이 쉽다.
 하여 보안에 신경써야 하는 경우, 기술들이 다양하게 있는데, 그 중 AES&lt;Advanced Encryption Standard&gt;를 간단히 알아보고 이후 적용하는 방법과 과정에 대하여 정리한다.
 AES는 미국 표준 기술 연구소에 의해서 연방 정보 처리 표준으로 지정된 암호화 방식이며 NSA에 의해 1급 비밀에 사용할 수 있도록 승인된 암호화 알고리즘 중 유일하게 공개된 알고리즘 - 출처 : 나무위키
  ​
 ​
-​]]></description>
+​
+환경 설정  frontend = vue.]]></description>
 </item></channel>
 </rss>

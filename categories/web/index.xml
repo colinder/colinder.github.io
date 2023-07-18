@@ -3,7 +3,23 @@
         <title>web - Category - </title>
         <link>https://colinder.github.io/categories/web/</link>
         <description>web - Category - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 20 Apr 2023 15:10:58 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/web/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 18 Jul 2023 16:51:22 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/web/" rel="self" type="application/rss+xml" /><item>
+    <title>외부 &amp; 내부 IP</title>
+    <link>https://colinder.github.io/what_is_ip/</link>
+    <pubDate>Tue, 18 Jul 2023 16:51:22 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/what_is_ip/</guid>
+    <description><![CDATA[​
+외부 &amp; 내부 IP 란?  backend 개발을 하다보면, IP에 대하여 알아야하는 순간이 온다. 그래서 알아보자.
+ ​
+​
+IP란?  인터넷 프로토콜(Internet Protocol)의 약자로, 인터넷이 통하는 네트워크에서 어떤 정보를 수신하고 송신하는 통신에 대한 규약을 의미
+ ​
+​
+IP면 IP지? 내부, 외부는 무엇인가? 우리 집을 생각해보자.
+우리는 통신사의 어떤 기기를 대여받아 인터넷 와이파이를 사용하고 있다. 여기가 포인트다.
+어떤 기기로 우리 집안에 와이파이를 뿌려주고 있고, 우리 가족은 이 기기의 와이파이로 인터넷에 접속한다!]]></description>
+</item><item>
     <title>npm? npx?</title>
     <link>https://colinder.github.io/npm_npx/</link>
     <pubDate>Thu, 20 Apr 2023 15:10:58 &#43;0900</pubDate>
@@ -79,13 +95,13 @@ AES Vue 적용  vue.js에 CryptoJS를 설치하여 진행
     <guid>https://colinder.github.io/what_is_aes/</guid>
     <description><![CDATA[​
 ​
-​
 AES 보안  보안 진단을 받아보니, 생각보다 API 통신은 해킹이 쉽다.
 하여 보안에 신경써야 하는 경우, 기술들이 다양하게 있는데, 그 중 AES&lt;Advanced Encryption Standard&gt;를 간단히 알아보고 이후 적용하는 방법과 과정에 대하여 정리한다.
 AES는 미국 표준 기술 연구소에 의해서 연방 정보 처리 표준으로 지정된 암호화 방식이며 NSA에 의해 1급 비밀에 사용할 수 있도록 승인된 암호화 알고리즘 중 유일하게 공개된 알고리즘 - 출처 : 나무위키
  ​
 ​
-​]]></description>
+​
+환경 설정  frontend = vue.]]></description>
 </item><item>
     <title>what is Axios &amp; usage for Vue</title>
     <link>https://colinder.github.io/axios/</link>
@@ -123,17 +139,5 @@ Lint를 사용하면 검증을 자동화하여 이런 문제를 예방할 수 �
  ​
 ​
 ESLint 2002년 JSON을 만든 더글라스 크락포드가 자바스크립트 린터인 JSLint를 만들었습니다.]]></description>
-</item><item>
-    <title>What is Babel?</title>
-    <link>https://colinder.github.io/what_is_babel/</link>
-    <pubDate>Tue, 15 Mar 2022 13:23:41 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/what_is_babel/</guid>
-    <description><![CDATA[​
-Babel이란?  Babel은 최신 명세(또는 ES2015 이상)의 문법을 구형 브라우저에서도 동작하는 코드로 *트랜스파일해주는 개발 도구입니다.
-만약 Babel이 없다면? 구형 브라우저에서 동작할 수 있는 방식으로 웹 개발을 하고, 최신 브라우저에서 동작할 수 있는 방식으로 다시 개발해야 하는 상황이 발생합니다. 즉 구형 브라우저의 지원이 필요한 프런트엔드 프로젝트라면 현재 Babel의 사용은 필수입니다.
- ​
-*트랜스파일러?
-ES2015 등장 이후로 javascript는 class문법, 화살표 함수, 모듈 도입 등 많은 변화가 있었습니다. 이후에도 동기, 비동기처리를 위한 async &amp; await, optional 등 다양한 문법과 편의성 높은 기술들이 추가되고 있습니다.]]></description>
 </item></channel>
 </rss>

@@ -3,7 +3,23 @@
         <title>web - Tag - </title>
         <link>https://colinder.github.io/tags/web/</link>
         <description>web - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 20 Apr 2023 15:10:58 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/web/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 18 Jul 2023 16:51:22 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/web/" rel="self" type="application/rss+xml" /><item>
+    <title>외부 &amp; 내부 IP</title>
+    <link>https://colinder.github.io/what_is_ip/</link>
+    <pubDate>Tue, 18 Jul 2023 16:51:22 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/what_is_ip/</guid>
+    <description><![CDATA[​
+외부 &amp; 내부 IP 란?  backend 개발을 하다보면, IP에 대하여 알아야하는 순간이 온다. 그래서 알아보자.
+ ​
+​
+IP란?  인터넷 프로토콜(Internet Protocol)의 약자로, 인터넷이 통하는 네트워크에서 어떤 정보를 수신하고 송신하는 통신에 대한 규약을 의미
+ ​
+​
+IP면 IP지? 내부, 외부는 무엇인가? 우리 집을 생각해보자.
+우리는 통신사의 어떤 기기를 대여받아 인터넷 와이파이를 사용하고 있다. 여기가 포인트다.
+어떤 기기로 우리 집안에 와이파이를 뿌려주고 있고, 우리 가족은 이 기기의 와이파이로 인터넷에 접속한다!]]></description>
+</item><item>
     <title>npm? npx?</title>
     <link>https://colinder.github.io/npm_npx/</link>
     <pubDate>Thu, 20 Apr 2023 15:10:58 &#43;0900</pubDate>
@@ -79,13 +95,13 @@ AES Vue 적용  vue.js에 CryptoJS를 설치하여 진행
     <guid>https://colinder.github.io/what_is_aes/</guid>
     <description><![CDATA[​
 ​
-​
 AES 보안  보안 진단을 받아보니, 생각보다 API 통신은 해킹이 쉽다.
 하여 보안에 신경써야 하는 경우, 기술들이 다양하게 있는데, 그 중 AES&lt;Advanced Encryption Standard&gt;를 간단히 알아보고 이후 적용하는 방법과 과정에 대하여 정리한다.
 AES는 미국 표준 기술 연구소에 의해서 연방 정보 처리 표준으로 지정된 암호화 방식이며 NSA에 의해 1급 비밀에 사용할 수 있도록 승인된 암호화 알고리즘 중 유일하게 공개된 알고리즘 - 출처 : 나무위키
  ​
 ​
-​]]></description>
+​
+환경 설정  frontend = vue.]]></description>
 </item><item>
     <title>what is Axios &amp; usage for Vue</title>
     <link>https://colinder.github.io/axios/</link>
@@ -126,18 +142,5 @@ Selenium 동작대기 접근하려는 요소가 존재하지 않을 때 발생�
 ​
 ​
 1. time.sleep  python 내장 library 지정한 시간만큼 지연 (프로세스 자체를 지정한 시간동안 기다림)  사용법 1 2 3  from time import sleep sleep(3) //3초간 기다림   ​]]></description>
-</item><item>
-    <title>what is Linter?</title>
-    <link>https://colinder.github.io/what_is_linter/</link>
-    <pubDate>Fri, 18 Mar 2022 13:28:48 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/what_is_linter/</guid>
-    <description><![CDATA[​
-Linter란?  Linter 혹은 Lint는 소스 코드를 분석해 오류나 오타, 잠재적인 버그를 찾아주는 도구입니다.
-javascript는 다른 언어들에 비해 유연한 문법 구조를 갖습니다. 이런 특징은 찾기 어려운 버그를 만들기도하고, 코드를 실행하기 전까지 알 수 없는 오류를 만들기도 합니다.
-Lint를 사용하면 검증을 자동화하여 이런 문제를 예방할 수 있습니다. 가장 많이 사용되는 javascript 린터로는 ESLint와 코드 포맷터인 Prettier, css 린터인 Stylelint가 있습니다.
- ​
-​
-ESLint 2002년 JSON을 만든 더글라스 크락포드가 자바스크립트 린터인 JSLint를 만들었습니다.]]></description>
 </item></channel>
 </rss>
