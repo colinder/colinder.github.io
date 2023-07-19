@@ -3,9 +3,27 @@
         <title></title>
         <link>https://colinder.github.io/</link>
         <description>Hello New World</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 18 Jul 2023 16:51:22 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 19 Jul 2023 11:05:45 &#43;0900</lastBuildDate>
             <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>How To Deploy Django on Windows server Using Apache</title>
+    <link>https://colinder.github.io/how-to-deploy-django-on-windows-server-using-apache/</link>
+    <pubDate>Wed, 19 Jul 2023 11:05:45 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/how-to-deploy-django-on-windows-server-using-apache/</guid>
+    <description><![CDATA[​
+How To Deploy Django on Windows server Using Apache  Window에 backend(django)를 배포할 일이 생겨 방법을 정리하였다. (iis를 써보려했으나 실패했다.)
+ ​
+✨단계가 꽤 된다. 
+요약    apache와 C++ 개발환경 세팅
+  django &amp; mod-wsgi 설치 및 연동
+  Apache 서버 구동
+   ​
+주의!
+ 기본적으로 python은 설치되어있다고 가정  ​
+​
+step 00. 다운 받고 환경을 만들어 보자   apache]]></description>
+</item><item>
     <title>외부 &amp; 내부 IP</title>
     <link>https://colinder.github.io/what_is_ip/</link>
     <pubDate>Tue, 18 Jul 2023 16:51:22 &#43;0900</pubDate>
@@ -149,20 +167,5 @@ AES_vue &gt; django  CryptoJS(vue) 에서 pycryptodomex(django)로 암호화 복
 ​
 ​
 ✨기본 사항  각기 다른 시스템의 라이브러리를 사용. AES의 CBC 모드를 기본으로 가정. CBC모드를 사용하기 위해서 필수 인자 3가지  secret_key: 암호화 &amp; 복호화를 위한 메인 키 (대칭키) iv: 암호화 &amp; 복호화를 위한 서브 키 data: 암호화를 하고 싶은 데이터   vue에서 object를 통째로 암호화 하여 django로 전달하는 상황을 가정.]]></description>
-</item><item>
-    <title>AES django 적용</title>
-    <link>https://colinder.github.io/aes_django/</link>
-    <pubDate>Tue, 21 Feb 2023 12:04:31 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/aes_django/</guid>
-    <description><![CDATA[​
-​
-AES django 적용  django에 PyCryptodomex를 설치하여 적용
- 1  pip install pycryptodomex     주의 사항
-  PyCryptodome is a fork of PyCrypto
-  For more information, see the homepage.를 클릭하면, pycryptodome의 문서로 이동하는데, 왜 그런건지 모르겠다. 아마 의존성?이 있어 그런건가 싶다.
-  문서에 예시를 보면
-1  from Crypto.Cipher import AES   와 같이 import 하라는데, 이러면 안되고
-1  from Cryptodome.]]></description>
 </item></channel>
 </rss>

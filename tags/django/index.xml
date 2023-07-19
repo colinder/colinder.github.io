@@ -3,7 +3,25 @@
         <title>Django - Tag - </title>
         <link>https://colinder.github.io/tags/django/</link>
         <description>Django - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 22 Dec 2021 12:16:29 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/django/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 19 Jul 2023 11:05:45 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/django/" rel="self" type="application/rss+xml" /><item>
+    <title>How To Deploy Django on Windows server Using Apache</title>
+    <link>https://colinder.github.io/how-to-deploy-django-on-windows-server-using-apache/</link>
+    <pubDate>Wed, 19 Jul 2023 11:05:45 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/how-to-deploy-django-on-windows-server-using-apache/</guid>
+    <description><![CDATA[​
+How To Deploy Django on Windows server Using Apache  Window에 backend(django)를 배포할 일이 생겨 방법을 정리하였다. (iis를 써보려했으나 실패했다.)
+ ​
+✨단계가 꽤 된다. 
+요약    apache와 C++ 개발환경 세팅
+  django &amp; mod-wsgi 설치 및 연동
+  Apache 서버 구동
+   ​
+주의!
+ 기본적으로 python은 설치되어있다고 가정  ​
+​
+step 00. 다운 받고 환경을 만들어 보자   apache]]></description>
+</item><item>
     <title>Django_11_simple_JWT</title>
     <link>https://colinder.github.io/django_11_simple_jwt/</link>
     <pubDate>Wed, 22 Dec 2021 12:16:29 &#43;0900</pubDate>
@@ -117,18 +135,5 @@ Django_form  이제 여러 html파일을 만들어 여러 화면을 돌아다닐
  ​
 👨‍💻 개발해봅시다. 기존에 만들었던 main.html을 활용해 만들어 보겠습니다.
 1. form 태그 생성 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19  &lt;!-- articles/templates/articles/main.html --&gt; &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;IE=edge&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.]]></description>
-</item><item>
-    <title>Django_02_addapp</title>
-    <link>https://colinder.github.io/django_02_addapp/</link>
-    <pubDate>Thu, 22 Apr 2021 23:17:41 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/django_02_addapp/</guid>
-    <description><![CDATA[​
-Django_app  이번에는 생성된 프로젝트에서 1. app을 추가해 등록해보고 2. 서버 접속시 첫 메인 페이지를 제작해봅시다.
- ​
-뜬금없이 CRUD를 알아보고 갑시다.  CRUD는 대부분의 컴퓨터 소프트웨어가 가지는 기본적인 데이터 처리 기능인 Create(생성), Read(읽기), Update(갱신), Delete(삭제)를 묶어서 일컫는 말입니다. 사용자 인터페이스가 갖추어야 할 기능(정보의 참조/검색/갱신 등) 중 가장 기본이라고 생각되는 기술들입니다.
- ​
-이제 이어서 개발해봅시다. ​
-1. App 생성 지난번에는 프로젝트를 생성하고 setting.py에서 기본 설정만 변경해주었습니다. 이제 app을 생성해봅시다.]]></description>
 </item></channel>
 </rss>

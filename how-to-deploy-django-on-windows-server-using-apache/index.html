@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>How To Deploy Django on Windows server Using Apache - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="How To Deploy Django on Windows server Using Apache" />
+<meta property="og:description" content="​
+How To Deploy Django on Windows server Using Apache  Window에 backend(django)를 배포할 일이 생겨 방법을 정리하였다. (iis를 써보려했으나 실패했다.)
+ ​
+✨단계가 꽤 된다. 
+요약    apache와 C&#43;&#43; 개발환경 세팅
+  django &amp; mod-wsgi 설치 및 연동
+  Apache 서버 구동
+   ​
+주의!
+ 기본적으로 python은 설치되어있다고 가정  ​
+​
+step 00. 다운 받고 환경을 만들어 보자   apache" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://colinder.github.io/how-to-deploy-django-on-windows-server-using-apache/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-07-19T11:05:45&#43;09:00" />
+<meta property="article:modified_time" content="2023-07-19T11:05:45&#43;09:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
+
+<meta name="twitter:title" content="How To Deploy Django on Windows server Using Apache"/>
+<meta name="twitter:description" content="​
+How To Deploy Django on Windows server Using Apache  Window에 backend(django)를 배포할 일이 생겨 방법을 정리하였다. (iis를 써보려했으나 실패했다.)
+ ​
+✨단계가 꽤 된다. 
+요약    apache와 C&#43;&#43; 개발환경 세팅
+  django &amp; mod-wsgi 설치 및 연동
+  Apache 서버 구동
+   ​
+주의!
+ 기본적으로 python은 설치되어있다고 가정  ​
+​
+step 00. 다운 받고 환경을 만들어 보자   apache"/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/how-to-deploy-django-on-windows-server-using-apache/" /><link rel="prev" href="https://colinder.github.io/what_is_ip/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "How To Deploy Django on Windows server Using Apache",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/colinder.github.io\/how-to-deploy-django-on-windows-server-using-apache\/"
+        },"genre": "posts","keywords": "Apache, django, deploy","wordcount":  523 ,
+        "url": "https:\/\/colinder.github.io\/how-to-deploy-django-on-windows-server-using-apache\/","datePublished": "2023-07-19T11:05:45+09:00","dateModified": "2023-07-19T11:05:45+09:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "colinder"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="">Hello New World</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="">Hello New World</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">How To Deploy Django on Windows server Using Apache</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/apache/"><i class="far fa-folder fa-fw"></i>Apache</a>&nbsp;<a href="/categories/django/"><i class="far fa-folder fa-fw"></i>Django</a>&nbsp;<a href="/categories/deploy/"><i class="far fa-folder fa-fw"></i>deploy</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-07-19">2023-07-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;523 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#요약">요약</a></li>
+        <li><a href="#step-00-다운-받고-환경을-만들어-보자">step 00. 다운 받고 환경을 만들어 보자</a></li>
+        <li><a href="#step-01-django--umod-wsgiu-설치-및-연동">step 01. django &amp; <u>mod-wsgi</u> 설치 및 연동</a></li>
+        <li><a href="#step-02-다시-서비스를-실행">step 02. 다시 서비스를 실행</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>​</p>
+<h1 id="how-to-deploy-django-on-windows-server-using-apache">How To Deploy Django on Windows server Using Apache</h1>
+<blockquote>
+<p>Window에 backend(django)를 배포할 일이 생겨 방법을 정리하였다. (iis를 써보려했으나 실패했다.)</p>
+</blockquote>
+<p>​</p>
+<p><b>✨단계가 꽤 된다. </b></p>
+<h3 id="요약">요약</h3>
+<blockquote>
+<ol>
+<li>
+<p>apache와 C++ 개발환경 세팅</p>
+</li>
+<li>
+<p>django &amp; <u>mod-wsgi</u> 설치 및 연동</p>
+</li>
+<li>
+<p>Apache 서버 구동</p>
+</li>
+</ol>
+</blockquote>
+<p>​</p>
+<p>주의!</p>
+<ul>
+<li>기본적으로 python은 설치되어있다고 가정</li>
+</ul>
+<p>​</p>
+<p>​</p>
+<h3 id="step-00-다운-받고-환경을-만들어-보자">step 00. 다운 받고 환경을 만들어 보자</h3>
+<ol>
+<li>
+<p>apache</p>
+<ul>
+<li>
+<p><a href="https://www.apachelounge.com/download/">https://www.apachelounge.com/download/</a></p>
+<a class="lightgallery" href="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718171014500.png" title="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718171014500.png" data-thumbnail="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718171014500.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718171014500.png"
+            data-srcset="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718171014500.png, /images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718171014500.png 1.5x, /images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718171014500.png 2x"
+            data-sizes="auto"
+            alt="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718171014500.png" width="1000px" />
+    </a>
+<p><span style="color: grey; float: right; font-size: 0.9em">작성일 기준 가장 최신버전으로 다운받는다.</span></p>
+<p>​</p>
+</li>
+<li>
+<p>다운된 파일의 압축을 풀면 3개의 파일이 보인다.</p>
+<a class="lightgallery" href="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718171313119.png" title="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718171313119.png" data-thumbnail="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718171313119.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718171313119.png"
+            data-srcset="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718171313119.png, /images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718171313119.png 1.5x, /images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718171313119.png 2x"
+            data-sizes="auto"
+            alt="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718171313119.png" width="1000px" />
+    </a>
+<p>이중 <b>Apache24</b> 폴더를 통째로 잘라내고  C:\ 에 붙여넣었다.</p>
+<a class="lightgallery" href="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718171529660.png" title="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718171529660.png" data-thumbnail="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718171529660.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718171529660.png"
+            data-srcset="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718171529660.png, /images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718171529660.png 1.5x, /images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718171529660.png 2x"
+            data-sizes="auto"
+            alt="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718171529660.png" width="1000px" />
+    </a>
+<p>여기를 메인으로 사용할 것이다.</p>
+<p>​</p>
+<p>​</p>
+</li>
+<li>
+<p>Apache 설치 파일을 옮겨왔으니 설치하자</p>
+<ul>
+<li>
+<p>관리자 모드로 CMD를 켠다.</p>
+<a class="lightgallery" href="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718172208634.png" title="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718172208634.png" data-thumbnail="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718172208634.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718172208634.png"
+            data-srcset="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718172208634.png, /images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718172208634.png 1.5x, /images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718172208634.png 2x"
+            data-sizes="auto"
+            alt="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718172208634.png" width="1000px" />
+    </a>
+<p>​</p>
+</li>
+<li>
+<p><code>C:\Apache24\bin</code>로 이동하자.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">cd C:\Apache24\bin
+</code></pre></td></tr></table>
+</div>
+</div><a class="lightgallery" href="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718172315520.png" title="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718172315520.png" data-thumbnail="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718172315520.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718172315520.png"
+            data-srcset="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718172315520.png, /images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718172315520.png 1.5x, /images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718172315520.png 2x"
+            data-sizes="auto"
+            alt="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718172315520.png" width="1000px" />
+    </a>
+<p>​</p>
+</li>
+<li>
+<p>이제 Apache 설치하자</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">httpd.exe -k install
+</code></pre></td></tr></table>
+</div>
+</div><p>뭔가 오류같은 내용들이 나오는데 출력된 내용 위에</p>
+<a class="lightgallery" href="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718172519238.png" title="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718172519238.png" data-thumbnail="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718172519238.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718172519238.png"
+            data-srcset="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718172519238.png, /images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718172519238.png 1.5x, /images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718172519238.png 2x"
+            data-sizes="auto"
+            alt="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718172519238.png" width="1000px" />
+    </a>
+<p>이것만 뜨면 일단 동작하는데 문제는 없는 것 같다.</p>
+<p>​</p>
+</li>
+<li>
+<p>구동도 해보자</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">httpd.exe -k start   
+</code></pre></td></tr></table>
+</div>
+</div><p>아파치 서버 실행 명령어입니다. (중요)</p>
+<p>​</p>
+</li>
+<li>
+<p>이제 설치가 잘 되었는지, 잘 구동되는지 확인할 단계</p>
+<p>인터넷 주소창에 localhost라고 입력해보면</p>
+<image src="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718172733840.png" width="1000px" style="border: 1px solid #cfcfcf">
+<p>일하고 있다. (집, 공공장소인지 물어보는 경고창이 떠서 전부 체크하고 허용버튼 눌렀다.)</p>
+<p>​</p>
+</li>
+<li>
+<p>여기까지 확인했으면, 일단 서비스를 중지해두자.</p>
+<a class="lightgallery" href="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230719092636775.png" title="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230719092636775.png" data-thumbnail="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230719092636775.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230719092636775.png"
+            data-srcset="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230719092636775.png, /images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230719092636775.png 1.5x, /images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230719092636775.png 2x"
+            data-sizes="auto"
+            alt="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230719092636775.png" width="1000px" />
+    </a>
+<p>​</p>
+</li>
+<li>
+<p>Apache24를 찾아서 <code>중지</code>해둔다.</p>
+<a class="lightgallery" href="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230719092839262.png" title="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230719092839262.png" data-thumbnail="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230719092839262.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230719092839262.png"
+            data-srcset="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230719092839262.png, /images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230719092839262.png 1.5x, /images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230719092839262.png 2x"
+            data-sizes="auto"
+            alt="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230719092839262.png" width="1000px" />
+    </a>
+<p>​</p>
+<p>​</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Dev C++</p>
+<ul>
+<li>
+<p><a href="https://visualstudio.microsoft.com/visual-cpp-build-tools/">https://visualstudio.microsoft.com/visual-cpp-build-tools/</a></p>
+<a class="lightgallery" href="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718173056957.png" title="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718173056957.png" data-thumbnail="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718173056957.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718173056957.png"
+            data-srcset="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718173056957.png, /images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718173056957.png 1.5x, /images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718173056957.png 2x"
+            data-sizes="auto"
+            alt="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718173056957.png" width="1000px" />
+    </a>
+<p>다운로드 후 실행되면,</p>
+<p>​</p>
+</li>
+<li>
+<p>C++ 이 써있는거 클릭 후 설치해준다. (빨간 박스만 클릭하고 설치하였다.)</p>
+<a class="lightgallery" href="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718173344257.png" title="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718173344257.png" data-thumbnail="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718173344257.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718173344257.png"
+            data-srcset="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718173344257.png, /images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718173344257.png 1.5x, /images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718173344257.png 2x"
+            data-sizes="auto"
+            alt="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718173344257.png" width="1000px" />
+    </a>
+</li>
+</ul>
+</li>
+</ol>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<h3 id="step-01-django--umod-wsgiu-설치-및-연동">step 01. django &amp; <u>mod-wsgi</u> 설치 및 연동</h3>
+<p>잠깐. mod-wsgi는</p>
+<blockquote>
+<p>Apache에서 Python 기반 웹 응용 프로그램을 호스팅하기 위한 WSGI 호환 인터페이스를 제공하는 Graham Dumpleton의 Apache HTTP 서버 모듈.</p>
+</blockquote>
+<p>​</p>
+<ul>
+<li>
+<p>터미널 창을 켜고</p>
+<ul>
+<li>
+<p>django 설치</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">pip install django
+</code></pre></td></tr></table>
+</div>
+</div><p>그리고 장고 프로젝트를 <code>C:\Apache24\htdocs</code>에 생성한다. (난 psgfront라는 이름으로 만들었다.)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># django 프로젝트 생성 명령어</span>
+django-admin startproject psgfront
+</code></pre></td></tr></table>
+</div>
+</div><a class="lightgallery" href="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718175113073.png" title="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718175113073.png" data-thumbnail="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718175113073.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718175113073.png"
+            data-srcset="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718175113073.png, /images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718175113073.png 1.5x, /images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718175113073.png 2x"
+            data-sizes="auto"
+            alt="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718175113073.png" width="1000px" />
+    </a>
+<p>✨ 혹시 정적파일들을 관리해야 한다면, 프로젝트 폴더로 들어가<code>(C:\Apache24\htdocs\psgfront)</code> static 이라는 폴더를 생성</p>
+<a class="lightgallery" href="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718175543845.png" title="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718175543845.png" data-thumbnail="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718175543845.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718175543845.png"
+            data-srcset="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718175543845.png, /images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718175543845.png 1.5x, /images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718175543845.png 2x"
+            data-sizes="auto"
+            alt="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718175543845.png" width="1000px" />
+    </a>
+<p>​</p>
+<p>​</p>
+</li>
+<li>
+<p>mod-wsgi 설치 &amp; 설정값 확인</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">pip install mod-wsgi
+</code></pre></td></tr></table>
+</div>
+</div><p>설치 다 됬으면,</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">mod_wsgi-express module-config  <span class="c1"># 라고 입력 후 엔터</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>이후 나오는 설정값(LoadFile, LoadModule, WSGIPythonHome 총 3개)은 등록해야 하는 값들이다.</p>
+<p>​</p>
+</li>
+</ul>
+</li>
+<li>
+<p>C:\Apache24\conf 로 이동해 httpd.conf 파일을 편집한다.</p>
+<a class="lightgallery" href="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718174603942.png" title="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718174603942.png" data-thumbnail="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718174603942.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718174603942.png"
+            data-srcset="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718174603942.png, /images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718174603942.png 1.5x, /images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718174603942.png 2x"
+            data-sizes="auto"
+            alt="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718174603942.png" width="1000px" />
+    </a>
+<p>파일을 열고 맨아래로 가 아래 코드를 붙여넣는다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Django Project</span>
+LoadFile <span class="s2">&#34;c:/python37/python37.dll&#34;</span>
+LoadModule wsgi_module <span class="s2">&#34;c:/python37/lib/site-packages/mod_wsgi/server/mod_wsgi.cp37-win_amd64.pyd&#34;</span>
+WSGIPythonHome <span class="s2">&#34;c:/python37&#34;</span>
+WSGIScriptAlias / <span class="s2">&#34;C:/Users/navar/Desktop/webproject/webproject/wsgi.py&#34;</span>
+WSGIPythonPath <span class="s2">&#34;C:/Users/navar/Desktop/webproject/&#34;</span>
+
+&lt;Directory <span class="s2">&#34;C:/Users/navar/Desktop/webproject/webproject/&#34;</span>&gt;
+    &lt;Files wsgi.py&gt;
+        Require all granted
+    &lt;/Files&gt;
+&lt;/Directory&gt;
+
+Alias /static <span class="s2">&#34;C:/Users/navar/Desktop/webproject/static/&#34;</span>
+&lt;Directory <span class="s2">&#34;C:/Users/navar/Desktop/webproject/static/&#34;</span>&gt;
+    Require all granted
+&lt;/Directory&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+</li>
+<li>
+<p>여기서 아까  <code>mod_wsgi-express module-config</code>명령어로 확인한 설정값(LoadFile, LoadModule, WSGIPythonHome 총 3개)을 각각 변경한다.</p>
+</li>
+<li>
+<p>나머지 값 확인</p>
+<ul>
+<li>
+<p>WSGIScriptAlias</p>
+<ul>
+<li>
+<p>생성한 django 프로젝트에 wsgi.py를 등록</p>
+<a class="lightgallery" href="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718175827731.png" title="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718175827731.png" data-thumbnail="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718175827731.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718175827731.png"
+            data-srcset="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718175827731.png, /images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718175827731.png 1.5x, /images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718175827731.png 2x"
+            data-sizes="auto"
+            alt="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718175827731.png" width="1000px" />
+    </a>
+<p>저의 경우 <code>&quot;C:/Apache24/htdocs/psgfront/psgfront/wsgi.py&quot;</code></p>
+<p>​</p>
+</li>
+</ul>
+</li>
+<li>
+<p>WSGIPythonPath</p>
+<ul>
+<li>
+<p>생성한 django 프로젝트의 주소를 등록</p>
+</li>
+<li>
+<p>저의 경우 <code>&quot;C:/Apache24/htdocs/psgfront/&quot;</code></p>
+<p>​</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Directory</p>
+<ul>
+<li>
+<p>생성한 django 프로젝트의 메인 app 주소를 등록</p>
+</li>
+<li>
+<p>저의 경우 <code>&quot;C:/Apache24/htdocs/psgfront/psgfront/&quot;</code></p>
+<p>​</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Alias /static &amp; Directory</p>
+<ul>
+<li>
+<p>django 프로젝트에 생성한 static 폴더 주소를 등록</p>
+</li>
+<li>
+<p>저의 경우 <code>&quot;C:/Apache24/htdocs/psgfront/static/&quot;</code></p>
+<p>​</p>
+<p>​</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>최종 결과</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">LoadFile <span class="s2">&#34;C:/Users/kjong/AppData/Local/Programs/Python/Python310/python310.dll&#34;</span>
+LoadModule wsgi_module <span class="s2">&#34;C:/Users/kjong/AppData/Local/Programs/Python/Python310/lib/site-packages/mod_wsgi/server/mod_wsgi.cp310-win_amd64.pyd&#34;</span>
+WSGIPythonHome <span class="s2">&#34;C:/Users/kjong/AppData/Local/Programs/Python/Python310&#34;</span>
+WSGIScriptAlias / <span class="s2">&#34;C:/Apache24/htdocs/psgfront/psgfront/wsgi.py&#34;</span>
+WSGIPythonPath <span class="s2">&#34;C:/Apache24/htdocs/psgfront/&#34;</span>
+
+&lt;Directory <span class="s2">&#34;C:/Apache24/htdocs/psgfront/psgfront/&#34;</span>&gt;
+    &lt;Files wsgi.py&gt;
+        Require all granted
+    &lt;/Files&gt;
+&lt;/Directory&gt;
+
+Alias /static <span class="s2">&#34;C:/Apache24/htdocs/psgfront/static/&#34;</span>
+&lt;Directory <span class="s2">&#34;C:/Apache24/htdocs/psgfront/static/&#34;</span>&gt;
+    Require all granted
+&lt;/Directory&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+</li>
+</ul>
+<p>​</p>
+<p>​</p>
+<h3 id="step-02-다시-서비스를-실행">step 02. 다시 서비스를 실행</h3>
+<p>아까 중지해두었던 서비스로 들어가 Apache2.4를 실행하면,</p>
+<a class="lightgallery" href="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230719093512105.png" title="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230719093512105.png" data-thumbnail="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230719093512105.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230719093512105.png"
+            data-srcset="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230719093512105.png, /images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230719093512105.png 1.5x, /images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230719093512105.png 2x"
+            data-sizes="auto"
+            alt="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230719093512105.png" width="1000px" />
+    </a>
+<p>잘 배포된 모습을 볼 수 있다.</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<h1 id="-마무리">👀 마무리</h1>
+<blockquote>
+<p>배포는 잘 마무리 되었지만, 아직 설정할 것이 많이 있다. 차근히 찾아보고 진행했던 단계들도 다시 한 번 천천히 살펴보며 보강하는 것이 좋을 것 같다.</p>
+<p>명령어 모음 URL : <a href="https://github.com/colinder/How_To_Deploy_Django_on_Windows_server_Using_Apache/blob/main/README.md">https://github.com/colinder/How_To_Deploy_Django_on_Windows_server_Using_Apache/blob/main/README.md</a></p>
+</blockquote>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-07-19</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/how-to-deploy-django-on-windows-server-using-apache/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/apache/">Apache</a>,&nbsp;<a href="/tags/django/">Django</a>,&nbsp;<a href="/tags/deploy/">deploy</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/what_is_ip/" class="prev" rel="prev" title="외부 &amp; 내부 IP"><i class="fas fa-angle-left fa-fw"></i>외부 &amp; 내부 IP</a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://colinder-github-io.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":-1},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
