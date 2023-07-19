@@ -2,20 +2,23 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://colinder.github.io/</loc><lastmod>2023-07-19T11:05:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://colinder.github.io/</loc><lastmod>2023-07-19T12:11:42&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://colinder.github.io/categories/</loc><lastmod>2023-07-19T12:11:42&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://colinder.github.io/posts/</loc><lastmod>2023-07-19T12:11:42&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://colinder.github.io/tags/react-native/</loc><lastmod>2023-07-19T12:11:42&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://colinder.github.io/categories/react-native/</loc><lastmod>2023-07-19T12:11:42&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://colinder.github.io/things/</loc><lastmod>2023-07-19T12:11:42&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://colinder.github.io/tags/</loc><lastmod>2023-07-19T12:11:42&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://colinder.github.io/tags/web/</loc><lastmod>2023-07-19T12:11:42&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://colinder.github.io/tags/apache/</loc><lastmod>2023-07-19T11:05:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://colinder.github.io/categories/apache/</loc><lastmod>2023-07-19T11:05:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/categories/</loc><lastmod>2023-07-19T11:05:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://colinder.github.io/tags/deploy/</loc><lastmod>2023-07-19T11:05:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://colinder.github.io/categories/deploy/</loc><lastmod>2023-07-19T11:05:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://colinder.github.io/tags/django/</loc><lastmod>2023-07-19T11:05:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://colinder.github.io/categories/django/</loc><lastmod>2023-07-19T11:05:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://colinder.github.io/how-to-deploy-django-on-windows-server-using-apache/</loc><lastmod>2023-07-19T11:05:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/posts/</loc><lastmod>2023-07-19T11:05:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/tags/</loc><lastmod>2023-07-19T11:05:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://colinder.github.io/tags/ip/</loc><lastmod>2023-07-18T16:51:22&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://colinder.github.io/categories/ip/</loc><lastmod>2023-07-18T16:51:22&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/tags/web/</loc><lastmod>2023-07-18T16:51:22&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://colinder.github.io/categories/web/</loc><lastmod>2023-07-18T16:51:22&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://colinder.github.io/what_is_ip/</loc><lastmod>2023-07-18T16:51:22&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://colinder.github.io/tags/react/</loc><lastmod>2023-05-04T15:36:57&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -76,8 +79,6 @@
             <loc>https://colinder.github.io/categories/train_test_split/</loc><lastmod>2022-06-30T13:30:53&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/what_is_train_test_split/</loc><lastmod>2022-06-30T13:30:53&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/tags/icon/</loc><lastmod>2022-06-23T14:01:21&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://colinder.github.io/tags/react-native/</loc><lastmod>2022-06-23T14:01:21&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://colinder.github.io/categories/react-native/</loc><lastmod>2022-06-23T14:01:21&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/react-native_icon_and_splash/</loc><lastmod>2022-06-23T14:01:21&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/tags/splash/</loc><lastmod>2022-06-23T14:01:21&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/tags/crawling/</loc><lastmod>2022-05-17T15:50:42&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -185,7 +186,7 @@
             <loc>https://colinder.github.io/oracle_network_connect/</loc><lastmod>2021-07-06T14:17:20&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/activation_function/</loc><lastmod>2021-06-24T15:04:29&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/09_vue3._global_variable/</loc><lastmod>2021-06-23T17:30:33&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://colinder.github.io/django-vs-node.js-%EC%A7%88%EB%AC%B8%EC%9D%84-%EB%B0%9B%EC%95%98%EC%8A%B5%EB%8B%88%EB%8B%A4/</loc><lastmod>2021-06-22T17:22:50&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/django_vs_node.js_%EC%A7%88%EB%AC%B8%EC%9D%84_%EB%B0%9B%EC%95%98%EC%8A%B5%EB%8B%88%EB%8B%A4/</loc><lastmod>2021-06-22T17:22:50&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/tags/auto-encode/</loc><lastmod>2021-06-16T15:02:22&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/categories/auto-encode/</loc><lastmod>2021-06-16T15:02:22&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/tags/collaborative-filtering/</loc><lastmod>2021-06-16T15:02:22&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>

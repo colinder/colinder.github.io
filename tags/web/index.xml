@@ -3,7 +3,23 @@
         <title>web - Tag - </title>
         <link>https://colinder.github.io/tags/web/</link>
         <description>web - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 18 Jul 2023 16:51:22 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/web/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 19 Jul 2023 12:11:42 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/web/" rel="self" type="application/rss+xml" /><item>
+    <title>react-native Things</title>
+    <link>https://colinder.github.io/things/</link>
+    <pubDate>Wed, 19 Jul 2023 12:11:42 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/things/</guid>
+    <description><![CDATA[​
+React Native 시작하기 (with Typescript)  myApp은 본인이 원하는 프로젝트 이름으로 바꾸면 됩니다. 가장 최근 버전으로 프로젝트 세팅  1  npx react-native@latest init myApp --template react-native-template-typescript   ​
+​
+​
+실행명령어 Metro 실행 명령어
+1  npx react-native start   ​
+​
+​
+절대 경로 세팅   공식문서 여기 참고하시면 좋습니다. v0.72 기준
+  저는 아래와 같은 폴더 구조로 세팅했고 이 중 src를 root로 설정하고 싶었습니다.]]></description>
+</item><item>
     <title>외부 &amp; 내부 IP</title>
     <link>https://colinder.github.io/what_is_ip/</link>
     <pubDate>Tue, 18 Jul 2023 16:51:22 &#43;0900</pubDate>
@@ -130,17 +146,5 @@ Icon 변경 방법  결론부터 정리하자면 특정 폴더안에 이미지�
 *프로젝트를 시작할 때 이름을 test로 만들어 진행하였습니다. (버전은 0.67)
 1  npx react-native init test --version 0.67.0   ​
 1. android/app/src/main/res 까지 폴더를 들어갑니다. 이미지와 같은 구조가 보인다면 잘 접근한 것입니다.]]></description>
-</item><item>
-    <title>Selenium 동작 대기 방법</title>
-    <link>https://colinder.github.io/selenium_%EB%8F%99%EC%9E%91%EB%8C%80%EA%B8%B0/</link>
-    <pubDate>Tue, 17 May 2022 15:50:42 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/selenium_%EB%8F%99%EC%9E%91%EB%8C%80%EA%B8%B0/</guid>
-    <description><![CDATA[​
-Selenium 동작대기 접근하려는 요소가 존재하지 않을 때 발생하는 NoSuchElementException error. 페이지와 서버가 통신중이거나 네트워크 지연 등으로 위의 크롤링을 원하는 요소가 html에 존재하기 전에 요소에 접근을 시도하기 때문에 발생하는 에러입니다.
-어떤 멋진 코드로 이를 해결할 수 있을까? 고민하였지만 조금 무식한? 방법인 시간 지연으로 이를 해결하였습니다.
-​
-​
-1. time.sleep  python 내장 library 지정한 시간만큼 지연 (프로세스 자체를 지정한 시간동안 기다림)  사용법 1 2 3  from time import sleep sleep(3) //3초간 기다림   ​]]></description>
 </item></channel>
 </rss>

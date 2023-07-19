@@ -3,7 +3,23 @@
         <title>All Posts - </title>
         <link>https://colinder.github.io/posts/</link>
         <description>All Posts | </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 19 Jul 2023 11:05:45 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 19 Jul 2023 12:11:42 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>react-native Things</title>
+    <link>https://colinder.github.io/things/</link>
+    <pubDate>Wed, 19 Jul 2023 12:11:42 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/things/</guid>
+    <description><![CDATA[​
+React Native 시작하기 (with Typescript)  myApp은 본인이 원하는 프로젝트 이름으로 바꾸면 됩니다. 가장 최근 버전으로 프로젝트 세팅  1  npx react-native@latest init myApp --template react-native-template-typescript   ​
+​
+​
+실행명령어 Metro 실행 명령어
+1  npx react-native start   ​
+​
+​
+절대 경로 세팅   공식문서 여기 참고하시면 좋습니다. v0.72 기준
+  저는 아래와 같은 폴더 구조로 세팅했고 이 중 src를 root로 설정하고 싶었습니다.]]></description>
+</item><item>
     <title>How To Deploy Django on Windows server Using Apache</title>
     <link>https://colinder.github.io/how-to-deploy-django-on-windows-server-using-apache/</link>
     <pubDate>Wed, 19 Jul 2023 11:05:45 &#43;0900</pubDate>
@@ -151,19 +167,5 @@ AES_django &gt; vue  pycryptodomex(django)에서 CryptoJS(vue)로 암호화 복�
 ​
 ​
 ✨기본 사항  django에서 6자리 숫자의 OTP를 생성해 암호화 하여 vue로 전달하는 상황을 가정. 각기 다른 시스템의 라이브러리를 사용. AES의 CBC 모드를 기본으로 가정. CBC모드를 사용하기 위해서 필수 인자 3가지  secret_key: 암호화 &amp; 복호화를 위한 메인 키 (대칭키) iv: 암호화 &amp; 복호화를 위한 서브 키 data: 암호화를 하고 싶은 데이터   💡중요  pycryptodomex 암호화  해당 라이브러리에서는 bytes type의 데이터만 인자로 받을 수 있다.]]></description>
-</item><item>
-    <title>AES vue &gt; django 적용</title>
-    <link>https://colinder.github.io/aes_vue_django/</link>
-    <pubDate>Fri, 24 Feb 2023 12:14:10 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/aes_vue_django/</guid>
-    <description><![CDATA[​
-​
-AES_vue &gt; django  CryptoJS(vue) 에서 pycryptodomex(django)로 암호화 복호화 하는 과정을 정리
- ​
- ​
-​
-​
-✨기본 사항  각기 다른 시스템의 라이브러리를 사용. AES의 CBC 모드를 기본으로 가정. CBC모드를 사용하기 위해서 필수 인자 3가지  secret_key: 암호화 &amp; 복호화를 위한 메인 키 (대칭키) iv: 암호화 &amp; 복호화를 위한 서브 키 data: 암호화를 하고 싶은 데이터   vue에서 object를 통째로 암호화 하여 django로 전달하는 상황을 가정.]]></description>
 </item></channel>
 </rss>
