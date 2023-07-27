@@ -235,7 +235,7 @@ django default DB Table 중 인증에 사용되는 user table 자체를 커스�
 <p>​</p>
 <p>​</p>
 <h3 id="그리고">그.리.고!</h3>
-<p>내가 <span style="color: #4f8ae8;"><b>AbstractBaseUser</b></span>를 상속받아 커스텀하여 만든 table을 사용자 인증을 하는데 사용하고 싶다면, settings.py에서 AUTH_USER_MODEL = &lsquo;accounts_myuser&rsquo;로 지정해줘야 합니다!</p>
+<p>내가 <span style="color: #4f8ae8;"><b>AbstractBaseUser</b></span>를 상속받아 커스텀하여 만든 table을 사용자 인증을 하는데 사용하고 싶다면, settings.py에서 <code>AUTH_USER_MODEL = 'accounts.테이블이름'</code>로 지정해줘야 합니다!</p>
 <h5 id="결과적으로-인증에-사용할-테이블은-span-stylecolor-redsettingspy에-auth_user_model--앱이름테이블-형태로-등록해주어-설정한다span-는-점을-이해하면-좋겠습니다">결과적으로 인증에 사용할 테이블은 <span style="color: red">settings.py에 AUTH_USER_MODEL = &ldquo;앱이름.테이블&rdquo; 형태로 등록해주어 설정한다.</span> 는 점을 이해하면 좋겠습니다.</h5>
 <p>​</p>
 <p>​</p>

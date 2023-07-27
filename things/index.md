@@ -160,9 +160,9 @@ npx react-native start
 
 Pretendard 폰트를 적용하고 싶었다. 
 
-react-native는 web 처럼 css로 글로벌하게 지정하려면 라이브러리를 사용해야 했는데,
+react-native는 css로 글로벌하게 지정하려면 라이브러리를 사용해야 했는데,
 
-그게 싫어서 <customText> 를 만들어 사용하기로 생각했다. 
+그게 싫어서 `<customText>`를 만들어 사용하기로 생각했다. 
 
 ​			
 
@@ -171,7 +171,7 @@ react-native는 web 처럼 css로 글로벌하게 지정하려면 라이브러�
 
 ​						
 
-1. 원하는 폰트 다운로드 (otf나 ttf나 상관 없다. )
+1. 원하는 폰트 다운로드 (otf나 ttf나 상관 없다.)
 
 2. 적용할 폰트를 프로젝트 안에 넣는다. 여기서 android와 ios 각각 세팅하지않고 한번에 세팅되게 한다. 
 
@@ -279,7 +279,7 @@ navigation.navigate('스크린 이름 ')
 navigation.pop();
 ```
 
- 
+ 	
 
 // 스텍의 제일 윗 페이지로 이동
 
@@ -287,7 +287,7 @@ navigation.pop();
 navigation.popToTop()
 ```
 
-
+​	
 
  // 새롭게 컴포넌트를 스텍이 쌓는다. ( 이전에 스텍에 쌓여있으면 그걸 불러온다 )
 
@@ -295,7 +295,7 @@ navigation.popToTop()
 navigation.push();
 ```
 
- 
+ 	
 
 // 스텍쌓지 않고 이동하기 ( 뒤로가기시 이전페이지로 돌아갈 수 없음 )
 
@@ -303,7 +303,7 @@ navigation.push();
 navigation.replace('스크린이름')
 ```
 
-  
+  	
 
 // 중첩된 네비게이터에서 이동
 
@@ -311,7 +311,7 @@ navigation.replace('스크린이름')
 navigation.navigate('A_Screen', { screen: 'A_1Screen' })
 ```
 
-  
+  	
 
 // 데이터 전달 
 
@@ -319,7 +319,7 @@ navigation.navigate('A_Screen', { screen: 'A_1Screen' })
 navigation.navigate('Inquiry_R',{ 키값: 데이터 })
 ```
 
-  
+  	
 
 // 뒤로가기 
 

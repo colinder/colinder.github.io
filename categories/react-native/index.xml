@@ -3,7 +3,23 @@
         <title>react-native - Category - </title>
         <link>https://colinder.github.io/categories/react-native/</link>
         <description>react-native - Category - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 23 Jun 2022 14:01:21 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/react-native/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 20 Jul 2023 21:24:52 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/react-native/" rel="self" type="application/rss+xml" /><item>
+    <title>react-native Things</title>
+    <link>https://colinder.github.io/things/</link>
+    <pubDate>Thu, 20 Jul 2023 21:24:52 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/things/</guid>
+    <description><![CDATA[​
+React Native 시작하기 (with Typescript)  myApp은 본인이 원하는 프로젝트 이름으로 바꾸면 됩니다. 가장 최근 버전으로 프로젝트 세팅  1  npx react-native@latest init myApp --template react-native-template-typescript   ​
+​
+​
+실행명령어 Metro 실행 명령어
+1  npx react-native start   ​
+​
+​
+절대 경로 세팅   공식문서 여기 참고하시면 좋습니다. v0.72 기준
+  저는 아래와 같은 폴더 구조로 세팅했고 이 중 src를 root로 설정하고 싶었습니다.]]></description>
+</item><item>
     <title>React-Native_icon_and_splash</title>
     <link>https://colinder.github.io/react-native_icon_and_splash/</link>
     <pubDate>Thu, 23 Jun 2022 14:01:21 &#43;0900</pubDate>

@@ -102,6 +102,15 @@
         alt="/images/jg_02.jpg"
         title="/images/jg_02.jpg" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/colinder" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="mailto:kjonggwan@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/boxplot/">boxplot 해석 방법</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-12-23">2021-12-23</time></span>&nbsp;<span class="post-category">included in <a href="/categories/analysis/"><i class="far fa-folder fa-fw"></i>analysis</a>&nbsp;<a href="/categories/boxplot/"><i class="far fa-folder fa-fw"></i>boxplot</a></span></div><div class="content">​
+What is Boxplot?  데이터 분석을 진행하면서 다른 분들의 분석 레퍼런스를 보며 공부하다보니 많은 분들이 boxplot을 사용하는 것을 보았습니다. 다만, 저는 그 박스가 어떤 경우에 사용하는 것인지? 어떤 의미로 그려지는 것인지? 어떻게 해석하면 좋은지? 개념이 약했기 때문에 내용을 정리해보겠습니다.
+ ​
+​
+Box Plot  최댓값, 최솟값, 중앙값, 사분편차를 사용하여 자료의 측정값들이 어떤 모양으로 분포되어 있으며, 극단값들은 어떠한지 등을 쉽게 알 수 있도록 하는 그림이다. 자료들이 비대칭으로 분포되어 있을 경우에는 상자그림을 그려 극단값의 개수, 비대칭 여부 등을 파악할 수 있으므로 측정값들의 중심위치와 산포도의 척도로 사용할 수 있다.</div><div class="post-footer">
+        <a href="/boxplot/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/analysis/">analysis</a>,&nbsp;<a href="/tags/boxplot/">boxplot</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/django_11_simple_jwt/">Django_11_simple_JWT</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-12-22">2021-12-22</time></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw"></i>Django</a>&nbsp;<a href="/categories/jwt/"><i class="far fa-folder fa-fw"></i>JWT</a></span></div><div class="content">​
 Django JWT(Json Web Token)  Django의 대표적인 jwt 패키지는 djangorestframework-jwt, djangorestframework-simplejwt가 있지만 전자는 업데이트가 더이상 진행되지 않아서 후자를 사용하는 것을 추천합니다.
@@ -137,15 +146,6 @@ MariaDB 설치를 진행하면서 등록한 password입력하면 아래와 같�
 초기 접속의 경우, DB table이 &lsquo;none&rsquo;으로 설정되어 있는데, **공유를 원하는 table로 설정을 바꿔줍니다. **</div><div class="post-footer">
         <a href="/mariadb_share/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/mariadb/">mariaDB</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/django_10_customauthuser_abstractuser/">Django_10_CustomAuthUser_AbstractUser</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-10-08">2021-10-08</time></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw"></i>Django</a>&nbsp;<a href="/categories/abstractuser/"><i class="far fa-folder fa-fw"></i>AbstractUser</a></span></div><div class="content">​
-Django AbstractUser  이전에 AbstractBaseUser를 사용한 커스텀 사용자 인증 테이블을 구성해보았습니다. 해당 내용에 이어서 AbstractUser로 커스텀 사용자 인증 테이블을 구성해보고 createsuperuser 명령어 입력시, 관리자 계정이 커스텀한 테이블에 생성되게 해보겠습니다.
- ​
-AbstractUser을 상속받아 커스텀을 진행  우선 AbstractUser는 Django에서 기본으로 제공해주는 사용자 인증 테이블의 요소를 그대로 가져와 사용하기 때문에 그 요소들은 어떤 것들이 있는지 알아보자.
-id, password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined 총 11개의 column이 존재하며 이외에 column을 추가 하고 싶을 때 코드를 추가로 작성합니다.</div><div class="post-footer">
-        <a href="/django_10_customauthuser_abstractuser/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/django/">Django</a>,&nbsp;<a href="/tags/abstractuser/">AbstractUser</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>

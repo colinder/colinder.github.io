@@ -137,7 +137,7 @@ _생성된 column들은 django에서 default로 user를 생성하면 만들어�
 
 ### 그.리.고!
 
-내가 <span style="color: #4f8ae8;"><b>AbstractBaseUser</b></span>를 상속받아 커스텀하여 만든 table을 사용자 인증을 하는데 사용하고 싶다면, settings.py에서 AUTH_USER_MODEL = 'accounts_myuser'로 지정해줘야 합니다!
+내가 <span style="color: #4f8ae8;"><b>AbstractBaseUser</b></span>를 상속받아 커스텀하여 만든 table을 사용자 인증을 하는데 사용하고 싶다면, settings.py에서 `AUTH_USER_MODEL = 'accounts.테이블이름'`로 지정해줘야 합니다!
 
 ##### 결과적으로 인증에 사용할 테이블은 <span style="color: red">settings.py에 AUTH_USER_MODEL = "앱이름.테이블" 형태로 등록해주어 설정한다.</span> 는 점을 이해하면 좋겠습니다.
 

@@ -48,7 +48,7 @@
 
 > 활성화 함수는 주로 <b>비선형 함수(곡선 그래프로 표현되는 함수)</b>를 사용합니다.
 
-<img src="https://kejdev.github.io/assets/images/data-science.jpg" style="display: block; margin: 10px auto;">
+<image src="https://kejdev.github.io/assets/images/data-science.jpg" style="display: block; margin: 10px auto;">
 
 왜 그럴까요?
 
