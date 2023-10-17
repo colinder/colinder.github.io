@@ -102,6 +102,19 @@
         alt="/images/jg_02.jpg"
         title="/images/jg_02.jpg" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/colinder" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="mailto:kjonggwan@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/03_sqld_%EC%A0%9C4-%EC%A0%88-%EA%B4%80%EA%B3%84-%EC%A0%9C5-%EC%A0%88-%EC%8B%9D%EB%B3%84%EC%9E%90/">03_SQLD_제4 절 관계 &amp; 제5 절 식별자</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-03-28">2021-03-28</time></span>&nbsp;<span class="post-category">included in <a href="/categories/sqld/"><i class="far fa-folder fa-fw"></i>SQLD</a></span></div><div class="content">​
+# SQL  제1 장 데이터 모델링의 이해  제4 절 관계(Relationship)   관계의 개념
+  관계의 정의
+&ldquo;인스턴스 사이의 논리적인 연관성으로서 존재의 형태 or 행위로서 서로에게 연관성이 부여된 상태&rdquo;
+  관계의 페어링
+&ldquo;관계는 인스턴스가 개별적으로 관계를 가지는 것(페어링)이고, 이것의 집합을 관계로 표현하는 것&rdquo;
+&ldquo;따라서 개별 인스턴스가 각각 다른 종류의 관계를 가지고 있다면, 두 엔터티 사이에 두 개 이상의 관계가 형성될 수 도 있다.&rdquo;
+​
+    관계의 분류</div><div class="post-footer">
+        <a href="/03_sqld_%EC%A0%9C4-%EC%A0%88-%EA%B4%80%EA%B3%84-%EC%A0%9C5-%EC%A0%88-%EC%8B%9D%EB%B3%84%EC%9E%90/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/sqld/">SQLD</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/git_lfslarge-file-storage/">Git_LFS</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-03-25">2021-03-25</time></span>&nbsp;<span class="post-category">included in <a href="/categories/git/"><i class="far fa-folder fa-fw"></i>git</a></span></div><div class="content">​
 Git LFS(Large File Storage) 사용법  Git은 개당 파일에 100MB의 용량 제한이 걸려 있다. (전체 용량 제한은 없다.) 다만, 프로젝트를 하다보면 대용량의 자료나 파일이 생기는 경우가 있다. 이때 용량 제한의 문제를 해소할 수 있는 방법이 LFS이다.
@@ -134,17 +147,6 @@ D3_11445_무한 사전 1 2 3 4 5 6 7 8 9 10 11 12  for T in range(int(input())):
 D3_11387_몬스터 사냥 1 2 3 4 5 6 7 8  for T in range(int(input())): D, L, N = map(int, input().split()) result = 0 for i in range(N): result += D * (1 + L*i/100) print(f&#39;#{T+1} {int(result)}&#39;)   ​</div><div class="post-footer">
         <a href="/sw_21.03.24/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/algorithm/">algorithm</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/01_sqld_%EC%A0%9C1-%EC%9E%A5-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%AA%A8%EB%8D%B8%EB%A7%81%EC%9D%98-%EC%9D%B4%ED%95%B4/">01_SQLD_제1 절 데이터 모델링의 이해</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-03-21">2021-03-21</time></span>&nbsp;<span class="post-category">included in <a href="/categories/sqld/"><i class="far fa-folder fa-fw"></i>SQLD</a></span></div><div class="content">​
-SQLD를 준비하면서 공부한 내용을 정리.
-​
-# SQL  제1 장 데이터 모델링의 이해  제1 절 데이터 모델링의 이해   모델링의 이해
-  모델링의 정의
- 복잡한 &ldquo;현실세계&quot;를 단순화(추상화)시켜 표현 사물 또는 사건에 관한 양상(Aspect)이나 관점(Perspective)을 명확하게 하는 것    특징 3가지
- 추상화 - 현실세계를 일정한 형식에 맞추어 표현하는 것 단순화 - 복잡한 현실세계를 약속된 규약에 의해 쉽게 이해할 수 있게 표현하는 것 명확화 - 누구나 이해할 수 있도록 명확하게 표기하는 것    모델링의 3가지 관점</div><div class="post-footer">
-        <a href="/01_sqld_%EC%A0%9C1-%EC%9E%A5-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%AA%A8%EB%8D%B8%EB%A7%81%EC%9D%98-%EC%9D%B4%ED%95%B4/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/sqld/">SQLD</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -175,7 +177,7 @@ SQLD를 준비하면서 공부한 내용을 정리.
                     <span class="page-link" aria-hidden="true">&hellip;</span>
                 </li><li class="page-item ">
                     <span class="page-link">
-                        <a href="/page/37/">37</a>
+                        <a href="/page/38/">38</a>
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">

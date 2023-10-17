@@ -3,9 +3,21 @@
         <title></title>
         <link>https://colinder.github.io/</link>
         <description>Hello New World</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 20 Jul 2023 21:24:52 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 17 Oct 2023 12:24:58 &#43;0900</lastBuildDate>
             <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Time Complexity 시간복잡도</title>
+    <link>https://colinder.github.io/time_complexity/</link>
+    <pubDate>Tue, 17 Oct 2023 12:24:58 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/time_complexity/</guid>
+    <description><![CDATA[​
+Time Complexity (시간 복잡도)  효율적인 알고리즘 구성을 위해 항상 신경써야하는 시간 복잡도.
+그리고 시간 복잡도를 표기하는 방법인 Big-O(빅-오) 표기법에 대해 정리합니다.
+ ​
+​
+시간 복잡도  위키백과에 따르면 시간복잡도는 계산복잡도 이론에서 문제를 해결하는데 걸리는 시간과 입력의 함수 관계를 가리킨다. 또 컴퓨터과학에서 알고리즘의 시간복잡도는 입력을 나타내는 문자열 길이의 함수로서 작동하는 알고리즘을 취해 시간을 정량화하는 것인데, 간단히 input 후 연산이 진행되고 output을 반환하는데 시간이 얼마나 걸리는가?를 계산한 값입니다. 조금 더 간단하게는 알고리즘의 수행시간입니다.]]></description>
+</item><item>
     <title>react-native Things</title>
     <link>https://colinder.github.io/things/</link>
     <pubDate>Thu, 20 Jul 2023 21:24:52 &#43;0900</pubDate>
@@ -155,19 +167,5 @@ react 시작하기  준비가 끝났으니, react 프로젝트를 생성해보�
 ​
 3. image 생성   hub에서 pull 받기
 1  docker pull &lt;다운받을 image 이름&gt;   다운받을 image 이름 &amp; 종류는 Docker Hub Web(https://hub.]]></description>
-</item><item>
-    <title>AES django &gt; vue 적용</title>
-    <link>https://colinder.github.io/aes_django_vue/</link>
-    <pubDate>Tue, 28 Feb 2023 14:09:18 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/aes_django_vue/</guid>
-    <description><![CDATA[​
-​
-AES_django &gt; vue  pycryptodomex(django)에서 CryptoJS(vue)로 암호화 복호화 하는 과정을 정리
- ​
- ​
-​
-​
-✨기본 사항  django에서 6자리 숫자의 OTP를 생성해 암호화 하여 vue로 전달하는 상황을 가정. 각기 다른 시스템의 라이브러리를 사용. AES의 CBC 모드를 기본으로 가정. CBC모드를 사용하기 위해서 필수 인자 3가지  secret_key: 암호화 &amp; 복호화를 위한 메인 키 (대칭키) iv: 암호화 &amp; 복호화를 위한 서브 키 data: 암호화를 하고 싶은 데이터   💡중요  pycryptodomex 암호화  해당 라이브러리에서는 bytes type의 데이터만 인자로 받을 수 있다.]]></description>
 </item></channel>
 </rss>
