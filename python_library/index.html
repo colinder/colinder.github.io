@@ -11,8 +11,8 @@ Python Library 😀   Idea 1 2 3 4 5 6 7 8 9 10 11 12 13  # 모두 &#39;거짓&#
   raise 예외(&lsquo;에러메시지&rsquo;) 1 2 3 4 5 6 7 8 9 10 11 12  # python에서는 의도적으로 오류를 일으킬 수 있는데 # 이를 해주는 것이 raise 메서드." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://colinder.github.io/python_library/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-03-08T22:39:31&#43;09:00" />
-<meta property="article:modified_time" content="2021-03-08T22:39:31&#43;09:00" />
+<meta property="article:published_time" content="2021-03-08T22:39:31+09:00" />
+<meta property="article:modified_time" content="2021-03-08T22:39:31+09:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
@@ -152,7 +152,7 @@ Python Library 😀   Idea 1 2 3 4 5 6 7 8 9 10 11 12 13  # 모두 &#39;거짓&#
 <h3 id="idea">Idea</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -167,15 +167,15 @@ Python Library 😀   Idea 1 2 3 4 5 6 7 8 9 10 11 12 13  # 모두 &#39;거짓&#
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 모두 &#39;거짓&#39;이 들어있는 리스트는 &#39;거짓&#39;으로 볼 수 있지 않을까?</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 모두 &#39;거짓&#39;이 들어있는 리스트는 &#39;거짓&#39;으로 볼 수 있지 않을까?</span>
 <span class="c1"># 라고 생각해봤다. </span>
 
-<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="bp">False</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="bp">False</span><span class="p">]</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
 
-<span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="bp">False</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;거짓&#34;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;거짓&#34;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;오류&#34;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;오류&#34;</span><span class="p">)</span>
 
 <span class="c1"># &gt;&gt;&gt; 오류</span>
 
@@ -188,7 +188,7 @@ Python Library 😀   Idea 1 2 3 4 5 6 7 8 9 10 11 12 13  # 모두 &#39;거짓&#
 <h3 id="raise-예외에러메시지"><strong>raise</strong> <strong>예외(&lsquo;에러메시지&rsquo;)</strong></h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -202,18 +202,18 @@ Python Library 😀   Idea 1 2 3 4 5 6 7 8 9 10 11 12 13  # 모두 &#39;거짓&#
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># python에서는 의도적으로 오류를 일으킬 수 있는데</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># python에서는 의도적으로 오류를 일으킬 수 있는데</span>
 <span class="c1"># 이를 해주는 것이 raise 메서드.</span>
 
 <span class="k">try</span><span class="p">:</span>
     <span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
     <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>                               
         <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;3의 배수가 아닙니다.&#39;</span><span class="p">)</span>  
-    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;입력된 값&#34;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;입력된 값&#34;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>                      
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;예외가 발생했습니다.&#39;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;예외가 발생했습니다.&#39;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="err">예외가</span> <span class="err">발생했습니다</span><span class="o">.</span> <span class="mi">3</span><span class="err">의</span> <span class="err">배수가</span> <span class="err">아닙니다</span><span class="o">.</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">예외가</span> <span class="n">발생했습니다</span><span class="o">.</span> <span class="mi">3</span><span class="n">의</span> <span class="n">배수가</span> <span class="n">아닙니다</span><span class="o">.</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>​</p>
@@ -222,7 +222,7 @@ Python Library 😀   Idea 1 2 3 4 5 6 7 8 9 10 11 12 13  # 모두 &#39;거짓&#
 <h3 id="filter-vs-find">filter() VS find()</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -249,7 +249,7 @@ Python Library 😀   Idea 1 2 3 4 5 6 7 8 9 10 11 12 13  # 모두 &#39;거짓&#
 </span><span class="lnt">25
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1">## filter(function, iterable)</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1">## filter(function, iterable)</span>
 <span class="c1"># 배열의 `모든 요소`에 접근하여 조건에 맞는 `값`을 찾는다.</span>
 
 <span class="c1"># ex)</span>
@@ -257,7 +257,7 @@ Python Library 😀   Idea 1 2 3 4 5 6 7 8 9 10 11 12 13  # 모두 &#39;거짓&#
     <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
       <span class="k">return</span> <span class="n">x</span>
     <span class="k">else</span><span class="p">:</span>
-      <span class="k">return</span> <span class="bp">None</span>
+      <span class="k">return</span> <span class="kc">None</span>
 
 <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">)))</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
@@ -282,7 +282,7 @@ Python Library 😀   Idea 1 2 3 4 5 6 7 8 9 10 11 12 13  # 모두 &#39;거짓&#
 <h3 id="index-vs-find">index() VS find()</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -313,7 +313,7 @@ Python Library 😀   Idea 1 2 3 4 5 6 7 8 9 10 11 12 13  # 모두 &#39;거짓&#
 </span><span class="lnt">29
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1">## 공통점</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1">## 공통점</span>
 <span class="c1"># 두 함수 모두 찾으려 하는 값의 `index`를 반환 해준다.</span>
 <span class="c1"># ex)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;oxoxoxoxox&#39;</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>  <span class="c1"># find 함수</span>
@@ -350,7 +350,7 @@ Python Library 😀   Idea 1 2 3 4 5 6 7 8 9 10 11 12 13  # 모두 &#39;거짓&#
 <h3 id="deque">deque</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -372,7 +372,7 @@ Python Library 😀   Idea 1 2 3 4 5 6 7 8 9 10 11 12 13  # 모두 &#39;거짓&#
 </span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># deque는 기본적으로 리스트를 변형(ex. pop() ...)하며 코딩할 때</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># deque는 기본적으로 리스트를 변형(ex. pop() ...)하며 코딩할 때</span>
 <span class="c1"># 속도가 빠르기 때문에 사용한다. </span>
 <span class="c1"># 주로 popleft()를 사용하지만, 유용한 기능이 더 있다. </span>
 
@@ -381,7 +381,7 @@ Python Library 😀   Idea 1 2 3 4 5 6 7 8 9 10 11 12 13  # 모두 &#39;거짓&#
 
 <span class="n">q</span> <span class="o">=</span> <span class="n">deque</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
 <span class="n">q</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>	<span class="c1"># deque([4, 5, 6, 1, 2, 3])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>	<span class="c1"># deque([4, 5, 6, 1, 2, 3])</span>
 
 <span class="c1"># 주로 리스트의 끝이 붙어 있는 원순열 문제를 해결하는데 편리하다. </span>
 <span class="c1"># 다만 속도가 어떤지는 잘 모르겠다. </span>
@@ -400,7 +400,7 @@ Python Library 😀   Idea 1 2 3 4 5 6 7 8 9 10 11 12 13  # 모두 &#39;거짓&#
 <h3 id="qlenq-1-vs-q-1-속도-비교">q[len(q)-1] VS q[-1] 속도 비교</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -411,11 +411,11 @@ Python Library 😀   Idea 1 2 3 4 5 6 7 8 9 10 11 12 13  # 모두 &#39;거짓&#
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">time</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">time</span>
 <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>  <span class="c1"># 시작 시간 저장</span>
 <span class="o">...</span>
 <span class="o">...</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&#34;time :&#34;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span>  <span class="c1"># 현재시각 - 시작시간 = 실행 시간</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;time :&#34;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span>  <span class="c1"># 현재시각 - 시작시간 = 실행 시간</span>
 
 <span class="c1"># q[len(q)-1] VS q[-1] 속도 비교</span>
 <span class="c1"># q[len(q)-1] 이 더 빠름.</span>
@@ -428,10 +428,10 @@ Python Library 😀   Idea 1 2 3 4 5 6 7 8 9 10 11 12 13  # 모두 &#39;거짓&#
 <h3 id="isalpha-isdigit">isalpha(), isdigit()</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 알파벳이냐?, 숫자형이냐? 를 참, 거짓 형태로 반환</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 알파벳이냐?, 숫자형이냐? 를 참, 거짓 형태로 반환</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>​</p>
@@ -440,12 +440,12 @@ Python Library 😀   Idea 1 2 3 4 5 6 7 8 9 10 11 12 13  # 모두 &#39;거짓&#
 <h3 id="syssetrecursionlimit최대-재귀-깊이-설정">sys.setrecursionlimit(최대 재귀 깊이 설정)</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 최대 재귀 깊이를 늘리려면 sys 모듈의 setrecursionlimit 함수를 사용</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 최대 재귀 깊이를 늘리려면 sys 모듈의 setrecursionlimit 함수를 사용</span>
 <span class="c1"># (기본값이상으로 안해주면 런타임에러로 처리된다.) ※기본값:1000 </span>
 <span class="n">sys</span><span class="o">.</span><span class="n">setrecursionlimit</span><span class="p">(</span><span class="mi">50000</span><span class="p">)</span>
 </code></pre></td></tr></table>
@@ -456,7 +456,7 @@ Python Library 😀   Idea 1 2 3 4 5 6 7 8 9 10 11 12 13  # 모두 &#39;거짓&#
 <h3 id="sorted">sorted()</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -481,29 +481,29 @@ Python Library 😀   Idea 1 2 3 4 5 6 7 8 9 10 11 12 13  # 모두 &#39;거짓&#
 </span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">sorted는</span> <span class="err">여러</span> <span class="err">그룹의</span> <span class="err">값이</span> <span class="err">주어진</span> <span class="err">경우</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">sorted는</span> <span class="n">여러</span> <span class="n">그룹의</span> <span class="n">값이</span> <span class="n">주어진</span> <span class="n">경우</span>
 
 <span class="c1">## 순차적으로 증감을 비교해 준다.</span>
 <span class="c1"># ex)</span>
 <span class="n">A</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)]</span>
 <span class="n">A</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>    <span class="c1"># [(1, 1, 2), (1, 1, 3), (1, 2, 1), (1, 2, 2, 3)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>    <span class="c1"># [(1, 1, 2), (1, 1, 3), (1, 2, 1), (1, 2, 2, 3)]</span>
 
 <span class="c1">## 만약 주어진 두번째 인자들을 기준으로 정렬하고 싶다면?</span>
 <span class="n">A</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)]</span>
 <span class="n">B</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">L</span><span class="p">:</span> <span class="n">L</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>	<span class="c1"># [(1, -1), (2, 2), (1, 2), (3, 3), (0, 4)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>	<span class="c1"># [(1, -1), (2, 2), (1, 2), (3, 3), (0, 4)]</span>
 
 <span class="c1">## 두번째 인자 우선 기준 후 첫번째 인자 기준 정렬하고 싶다면?</span>
 <span class="n">A</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)]</span>
 <span class="n">B</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">L</span><span class="p">:</span> <span class="p">(</span><span class="n">L</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
-<span class="k">print</span><span class="p">(</span><span class="n">B</span><span class="p">)</span> 	<span class="c1"># [(1, -1), (1, 2), (2, 2), (3, 3), (0, 4)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">B</span><span class="p">)</span> 	<span class="c1"># [(1, -1), (1, 2), (2, 2), (3, 3), (0, 4)]</span>
 
 <span class="c1">## set자료형을 sorted 하면 자동으로 list type으로 변환된다.</span>
 <span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;a&#34;</span><span class="p">,</span><span class="s2">&#34;b&#34;</span><span class="p">,</span><span class="s2">&#34;C&#34;</span><span class="p">}</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&#34;a의 타입: &#34;</span><span class="p">,</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>	 <span class="c1"># a의 타입:  &lt;class &#39;set&#39;&gt;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;a의 타입: &#34;</span><span class="p">,</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>	 <span class="c1"># a의 타입:  &lt;class &#39;set&#39;&gt;</span>
 <span class="n">b</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&#34;b의 타입: &#34;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>	 <span class="c1"># b의 타입:  &lt;class &#39;list&#39;&gt;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;b의 타입: &#34;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>	 <span class="c1"># b의 타입:  &lt;class &#39;list&#39;&gt;</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>​</p>
@@ -513,7 +513,7 @@ Python Library 😀   Idea 1 2 3 4 5 6 7 8 9 10 11 12 13  # 모두 &#39;거짓&#
 <p>주어지는 컨테이너<span style="font-size:.8em">(ex 리스트 자료형, string)</span>에 동일한 값의 갯수를 파악</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -521,9 +521,9 @@ Python Library 😀   Idea 1 2 3 4 5 6 7 8 9 10 11 12 13  # 모두 &#39;거짓&#
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
 <span class="n">MoResult</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">([</span><span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span><span class="o">.</span><span class="n">most_common</span><span class="p">()</span>
-<span class="k">print</span><span class="p">(</span><span class="n">MoResult</span><span class="p">)</span>		<span class="c1">#[(7, 2), (1, 2), (2, 1), (5, 1), (8, 1), (6, 1)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MoResult</span><span class="p">)</span>		<span class="c1">#[(7, 2), (1, 2), (2, 1), (5, 1), (8, 1), (6, 1)]</span>
 
 <span class="c1"># .most_common() 함수</span>
 <span class="c1"># 입력된 인자들의 &#39;순서&#39;를 존중하면서, &#39;중복 count해줌&#39;과 동시에 &#39;중복 삭제&#39;까지 진행.</span>
@@ -536,7 +536,7 @@ Python Library 😀   Idea 1 2 3 4 5 6 7 8 9 10 11 12 13  # 모두 &#39;거짓&#
 <p>빠른 속도로 입력받기 위한 라이브러리</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -549,7 +549,7 @@ Python Library 😀   Idea 1 2 3 4 5 6 7 8 9 10 11 12 13  # 모두 &#39;거짓&#
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">imput</span> <span class="n">VS</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">imput</span> <span class="n">VS</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
 
 <span class="c1"># python의 대표적인 입력 함수</span>
 <span class="n">imput</span><span class="p">()</span>
@@ -599,26 +599,26 @@ Python Library 😀   Idea 1 2 3 4 5 6 7 8 9 10 11 12 13  # 모두 &#39;거짓&#
 <h3 id="find찾을문자-찾기시작할위치---span-stylecolorred찾는-값의-인덱스를-반환span">find(찾을문자, 찾기시작할위치) - <span style="color:red">찾는 값의 인덱스를 반환</span></h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;가나다라 마바사아 자차마타 파하&#39;</span>
-<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;마&#39;</span><span class="p">))</span>				<span class="c1"># s에서 첫&#39;마&#39;의 인덱스를 반환</span>
-<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;마&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>			<span class="c1"># s[3:]부터 첫&#39;마&#39;의 인덱스를 반환 (전체 범위 기준)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;가&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>			<span class="c1"># s[2:]부터 첫&#39;가&#39;의 인덱스를 반환 (없으면 -1 반환)</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;가나다라 마바사아 자차마타 파하&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;마&#39;</span><span class="p">))</span>				<span class="c1"># s에서 첫&#39;마&#39;의 인덱스를 반환</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;마&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>			<span class="c1"># s[3:]부터 첫&#39;마&#39;의 인덱스를 반환 (전체 범위 기준)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;가&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>			<span class="c1"># s[2:]부터 첫&#39;가&#39;의 인덱스를 반환 (없으면 -1 반환)</span>
 </code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="mi">5</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="mi">5</span>
 <span class="mi">5</span>
 <span class="o">-</span><span class="mi">1</span>
 </code></pre></td></tr></table>
@@ -629,28 +629,28 @@ Python Library 😀   Idea 1 2 3 4 5 6 7 8 9 10 11 12 13  # 모두 &#39;거짓&#
 <h3 id="startswith찾을문자-찾기시작위치-찾기종료위치">startsWith(찾을문자, 찾기시작위치, 찾기종료위치)</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="nb">str</span> <span class="o">=</span> <span class="s2">&#34;this is string&#34;</span><span class="p">;</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;this&#39;</span><span class="p">))</span>			<span class="c1"># str맨앞이 &#39;this&#39;로시작하는지 검사</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;is&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>		<span class="c1"># str[2:4]에서 맨앞이 &#39;is&#39;인지 검사</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;this&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>		<span class="c1"># str[3:4]에서 맨앞이 &#39;this&#39;인지 검사</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="nb">str</span> <span class="o">=</span> <span class="s2">&#34;this is string&#34;</span><span class="p">;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;this&#39;</span><span class="p">))</span>			<span class="c1"># str맨앞이 &#39;this&#39;로시작하는지 검사</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;is&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>		<span class="c1"># str[2:4]에서 맨앞이 &#39;is&#39;인지 검사</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;this&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>		<span class="c1"># str[3:4]에서 맨앞이 &#39;this&#39;인지 검사</span>
 </code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="bp">True</span>
-<span class="bp">True</span>
-<span class="bp">False</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kc">True</span>
+<span class="kc">True</span>
+<span class="kc">False</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>​</p>
@@ -663,7 +663,7 @@ Python Library 😀   Idea 1 2 3 4 5 6 7 8 9 10 11 12 13  # 모두 &#39;거짓&#
 <p>n개의 원소를 사용해서 순서를 정하여 r개의 배열로 나타내는 것 =&gt; <strong>순열 공식 : <em>nPr = n!/(n-r)!</em></strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -674,24 +674,24 @@ Python Library 😀   Idea 1 2 3 4 5 6 7 8 9 10 11 12 13  # 모두 &#39;거짓&#
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">itertools</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">itertools</span>
 
 <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
 <span class="n">permute</span> <span class="o">=</span> <span class="n">itertools</span><span class="o">.</span><span class="n">permutations</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">permute</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">permute</span><span class="p">))</span>
 
 <span class="n">a</span> <span class="o">=</span> <span class="s2">&#34;abc&#34;</span>
 <span class="n">permute</span> <span class="o">=</span> <span class="n">itertools</span><span class="o">.</span><span class="n">permutations</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">permute</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">permute</span><span class="p">))</span>
 </code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]</span>
 <span class="p">[(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">)]</span>
 </code></pre></td></tr></table>
 </div>
@@ -702,7 +702,7 @@ Python Library 😀   Idea 1 2 3 4 5 6 7 8 9 10 11 12 13  # 모두 &#39;거짓&#
 <p>n개의 원소를 사용해서 순서의 관계없이 r개의 배열로 나타내는 것 =&gt; <strong>조합 공식 : <em>nCr=nPr/r!</em></strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -713,24 +713,24 @@ Python Library 😀   Idea 1 2 3 4 5 6 7 8 9 10 11 12 13  # 모두 &#39;거짓&#
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">itertools</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">itertools</span>
 
 <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
 <span class="n">permute</span> <span class="o">=</span> <span class="n">itertools</span><span class="o">.</span><span class="n">combinations</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">permute</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">permute</span><span class="p">))</span>
 
 <span class="n">a</span> <span class="o">=</span> <span class="s2">&#34;abc&#34;</span>
 <span class="n">permute</span> <span class="o">=</span> <span class="n">itertools</span><span class="o">.</span><span class="n">combinations</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">permute</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">permute</span><span class="p">))</span>
 </code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)]</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)]</span>
 <span class="p">[(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">)]</span>
 </code></pre></td></tr></table>
 </div>
@@ -770,8 +770,8 @@ Python Library 😀   Idea 1 2 3 4 5 6 7 8 9 10 11 12 13  # 모두 &#39;거짓&#
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 

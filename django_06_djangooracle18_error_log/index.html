@@ -16,8 +16,8 @@ Django &amp; Oracle 18 오류 일지  각종 스트레스의 원인에 대하여
  1 2  python manage." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://colinder.github.io/django_06_djangooracle18_error_log/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-09-06T11:41:44&#43;09:00" />
-<meta property="article:modified_time" content="2021-09-06T11:41:44&#43;09:00" />
+<meta property="article:published_time" content="2021-09-06T11:41:44+09:00" />
+<meta property="article:modified_time" content="2021-09-06T11:41:44+09:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
@@ -140,12 +140,12 @@ Django &amp; Oracle 18 오류 일지  각종 스트레스의 원인에 대하여
 <blockquote>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 해결법</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 해결법</span>
 <span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">makemigrations</span>
 <span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">migrate</span> <span class="o">--</span><span class="n">fake</span><span class="o">-</span><span class="n">initial</span>
 </code></pre></td></tr></table>
@@ -159,11 +159,11 @@ Django &amp; Oracle 18 오류 일지  각종 스트레스의 원인에 대하여
 <blockquote>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">migrate</span> <span class="o">--</span><span class="n">fake</span> <span class="o">&lt;</span><span class="n">appName</span><span class="o">&gt;</span> <span class="n">zero</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">migrate</span> <span class="o">--</span><span class="n">fake</span> <span class="o">&lt;</span><span class="n">appName</span><span class="o">&gt;</span> <span class="n">zero</span>
 <span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">migrate</span> <span class="o">&lt;</span><span class="n">appName</span><span class="o">&gt;</span>
 </code></pre></td></tr></table>
 </div>
@@ -184,11 +184,11 @@ Django &amp; Oracle 18 오류 일지  각종 스트레스의 원인에 대하여
 <p>object type에 dict 추가하기</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">foo</span><span class="p">[</span><span class="s1">&#39;tracker&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nx">bar</span> <span class="c1">// from this...
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">foo</span><span class="p">[</span><span class="s1">&#39;tracker&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nx">bar</span> <span class="c1">// from this...
 </span><span class="c1"></span><span class="nx">foo</span><span class="p">.</span><span class="nx">tracker</span> <span class="o">=</span> <span class="nx">bar</span><span class="p">;</span>   <span class="c1">// to this!!!!
 </span></code></pre></td></tr></table>
 </div>
@@ -198,11 +198,11 @@ Django &amp; Oracle 18 오류 일지  각종 스트레스의 원인에 대하여
 <p>localstorage는 string 타입만 담을 수 있다. 하여 보통 응답으로 JSON 타입을 반환해주지만 이를 string으로 변환하여 localstorega에 담는데</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">이를</span> <span class="nx">위해</span> 
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">이를</span> <span class="nx">위해</span> 
 <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">담을</span> <span class="nx">데이터</span><span class="p">)</span> <span class="nx">의</span> <span class="nx">형태로</span> <span class="nx">저장한다</span><span class="p">.</span>
 </code></pre></td></tr></table>
 </div>
@@ -220,7 +220,7 @@ Django &amp; Oracle 18 오류 일지  각종 스트레스의 원인에 대하여
 <p>authenticate(조건) 와 model.objects.get(조건)의 출력값은 동일</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -229,11 +229,11 @@ Django &amp; Oracle 18 오류 일지  각종 스트레스의 원인에 대하여
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">A</span> <span class="o">=</span> <span class="n">authenticate</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">old_password</span><span class="p">)</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">A</span> <span class="o">=</span> <span class="n">authenticate</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">old_password</span><span class="p">)</span>
 <span class="n">B</span> <span class="o">=</span> <span class="n">MyAuthUser</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">)</span>
 
-<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">A</span><span class="p">))</span>		<span class="c1"># &lt;class &#39;accounts.models.MyAuthUser&#39;&gt;</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">B</span><span class="p">))</span>		<span class="c1"># &lt;class &#39;accounts.models.MyAuthUser&#39;&gt;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">A</span><span class="p">))</span>		<span class="c1"># &lt;class &#39;accounts.models.MyAuthUser&#39;&gt;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">B</span><span class="p">))</span>		<span class="c1"># &lt;class &#39;accounts.models.MyAuthUser&#39;&gt;</span>
 
 <span class="n">A</span> <span class="o">==</span> <span class="n">B</span>  <span class="c1"># True</span>
 </code></pre></td></tr></table>
@@ -280,8 +280,8 @@ Django &amp; Oracle 18 오류 일지  각종 스트레스의 원인에 대하여
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 

@@ -22,8 +22,8 @@ React-Native navigation  vue는 router를 사용해 화면을 이동합니다. �
   react-native: 0." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://colinder.github.io/react-native_navigation/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-10-29T21:24:52&#43;09:00" />
-<meta property="article:modified_time" content="2020-10-29T21:24:52&#43;09:00" />
+<meta property="article:published_time" content="2020-10-29T21:24:52+09:00" />
+<meta property="article:modified_time" content="2020-10-29T21:24:52+09:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
@@ -197,10 +197,10 @@ React-Native navigation  vue는 router를 사용해 화면을 이동합니다. �
 <image src="/images/RN_navigation_00.png" width="auto" style="display: block; margin: 10px auto;">
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">npm install @react-navigation/native
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">npm install @react-navigation/native
 </code></pre></td></tr></table>
 </div>
 </div><p>​</p>
@@ -210,10 +210,10 @@ React-Native navigation  vue는 router를 사용해 화면을 이동합니다. �
 <image src="/images/RN_navigation_01.png" width="auto" style="display: block; margin: 10px auto;">
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">npm install react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">npm install react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view
 </code></pre></td></tr></table>
 </div>
 </div><p>​</p>
@@ -228,10 +228,10 @@ React-Native navigation  vue는 router를 사용해 화면을 이동합니다. �
 <p>App.js (a.k.a entry file) 최상단에 import를 등록합니다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">import <span class="s1">&#39;react-native-gesture-handler&#39;</span><span class="p">;</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">import <span class="s1">&#39;react-native-gesture-handler&#39;</span><span class="p">;</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>*기본적인 사용환경 설정은 완료되었습니다. 다만, <code>stack</code>이라는 기술을 사용할 예정이라 추가로 진행할 것이 있습니다.</p>
@@ -242,10 +242,10 @@ React-Native navigation  vue는 router를 사용해 화면을 이동합니다. �
 <image src="/images/RN_navigation_05.png" width="auto" style="display: block; margin: 10px auto;">
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">npm install @react-navigation/stack
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">npm install @react-navigation/stack
 </code></pre></td></tr></table>
 </div>
 </div><p>*이제 정말 개발 환경 설정이 완료되었습니다.</p>
@@ -268,7 +268,7 @@ React-Native navigation  vue는 router를 사용해 화면을 이동합니다. �
 <p>설치한 navigation과 stack을 import 해줍니다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -279,7 +279,7 @@ React-Native navigation  vue는 router를 사용해 화면을 이동합니다. �
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># App.js</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># App.js</span>
 
 import <span class="s1">&#39;react-native-gesture-handler&#39;</span><span class="p">;</span>
 import React from <span class="s1">&#39;react&#39;</span>
@@ -296,7 +296,7 @@ const <span class="nv">Stack</span> <span class="o">=</span> createStackNavigato
 <p>Usage</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -323,7 +323,7 @@ const <span class="nv">Stack</span> <span class="o">=</span> createStackNavigato
 </span><span class="lnt">25
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># App.js</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># App.js</span>
 
 import <span class="s1">&#39;react-native-gesture-handler&#39;</span><span class="p">;</span>
 import React from <span class="s1">&#39;react&#39;</span>
@@ -356,7 +356,7 @@ const <span class="nv">App</span> <span class="o">=</span> <span class="o">()</s
 <p>home.js와 user.js도 코딩합니다</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -379,7 +379,7 @@ const <span class="nv">App</span> <span class="o">=</span> <span class="o">()</s
 </span><span class="lnt">21
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># home.js</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># home.js</span>
 
 import <span class="s1">&#39;react-native-gesture-handler&#39;</span><span class="p">;</span>
 import React from <span class="s1">&#39;react&#39;</span>
@@ -404,7 +404,7 @@ const <span class="nv">HomeScreen</span> <span class="o">=</span> <span class="o
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -427,7 +427,7 @@ const <span class="nv">HomeScreen</span> <span class="o">=</span> <span class="o
 </span><span class="lnt">21
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># user.js</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># user.js</span>
 
 import <span class="s1">&#39;react-native-gesture-handler&#39;</span><span class="p">;</span>
 import React from <span class="s1">&#39;react&#39;</span>
@@ -464,7 +464,7 @@ const <span class="nv">HomeScreen</span> <span class="o">=</span> <span class="o
 <p>home.js에서 전달할 params를 구성합니다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -494,7 +494,7 @@ const <span class="nv">HomeScreen</span> <span class="o">=</span> <span class="o
 </span><span class="lnt">28
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># home.js</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># home.js</span>
 
 import <span class="s1">&#39;react-native-gesture-handler&#39;</span><span class="p">;</span>
 import React from <span class="s1">&#39;react&#39;</span>
@@ -530,7 +530,7 @@ const <span class="nv">HomeScreen</span> <span class="o">=</span> <span class="o
 <p>user.js에서 parmas를 받습니다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -557,7 +557,7 @@ const <span class="nv">HomeScreen</span> <span class="o">=</span> <span class="o
 </span><span class="lnt">25
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># user.js</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># user.js</span>
 
 import <span class="s1">&#39;react-native-gesture-handler&#39;</span><span class="p">;</span>
 import React from <span class="s1">&#39;react&#39;</span>
@@ -642,8 +642,8 @@ const <span class="nv">UserScreen</span> <span class="o">=</span> <span class="o
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 

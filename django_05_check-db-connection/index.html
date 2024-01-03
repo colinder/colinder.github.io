@@ -15,8 +15,8 @@ python manage.py createsuperuser 후.. default로 생기는 DB를 기준으로 �
 1 2 3 4 5 6 7  $ python manage.py shell_plus	# 모델에 접근하기 위해 shell_plus 실행 &gt; Post = get_user_model()	# 생성된 모델의 user table 불러오기 &gt; post = Post.objects.all()	# user table의 모든 값 가져오기 &gt; for i in post:	# for문으로 user table값 순환 &gt; print(i)	# user table 값 출력   하면 연결된 모델의 값을 확인할 수 있다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://colinder.github.io/django_05_check-db-connection/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-09-06T11:29:11&#43;09:00" />
-<meta property="article:modified_time" content="2021-09-06T11:29:11&#43;09:00" />
+<meta property="article:published_time" content="2021-09-06T11:29:11+09:00" />
+<meta property="article:modified_time" content="2021-09-06T11:29:11+09:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
@@ -133,11 +133,11 @@ python manage.py createsuperuser 후.. default로 생기는 DB를 기준으로 �
 <p>​</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">## setting.py</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">## setting.py</span>
 <span class="nv">AUTH_USER_MODEL</span> <span class="o">=</span> <span class="s1">&#39;auth.User&#39;</span>   <span class="c1"># default 설정.</span>
 </code></pre></td></tr></table>
 </div>
@@ -145,7 +145,7 @@ python manage.py createsuperuser 후.. default로 생기는 DB를 기준으로 �
 <p>이후 terminal에서</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -154,7 +154,7 @@ python manage.py createsuperuser 후.. default로 생기는 DB를 기준으로 �
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ python manage.py shell_plus	<span class="c1"># 모델에 접근하기 위해 shell_plus 실행</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ python manage.py shell_plus	<span class="c1"># 모델에 접근하기 위해 shell_plus 실행</span>
 
 &gt; <span class="nv">Post</span> <span class="o">=</span> get_user_model<span class="o">()</span>		<span class="c1"># 생성된 모델의 user table 불러오기</span>
 &gt; <span class="nv">post</span> <span class="o">=</span> Post.objects.all<span class="o">()</span>		<span class="c1"># user table의 모든 값 가져오기</span>
@@ -201,8 +201,8 @@ python manage.py createsuperuser 후.. default로 생기는 DB를 기준으로 �
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 

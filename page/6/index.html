@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	<meta name="generator" content="Hugo 0.83.1" />
+	<meta name="generator" content="Hugo 0.87.0" />
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
@@ -102,56 +102,52 @@
         alt="/images/jg_02.jpg"
         title="/images/jg_02.jpg" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/colinder" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="mailto:kjonggwan@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/00_license/">Software License</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-09-02">2021-09-02</time></span>&nbsp;<span class="post-category">included in <a href="/categories/license/"><i class="far fa-folder fa-fw"></i>license</a></span></div><div class="content">​
-License  실무를 담당하고 있다면, 새로운 프로젝트에 앞서 어떤 기술을 사용할 것인지 조사하는 것도 업무중의 하나입니다.
-근데 항상 고민이 되는 부분. 비용과 권한
-그리고 비용과 권한 정리되어 있는 것이 License
+        <a href="/django_07_1vsn_%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0/">Django_07_1:N 불러오기</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-09-14">2021-09-14</time></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw"></i>Django</a>&nbsp;<a href="/categories/1n/"><i class="far fa-folder fa-fw"></i>1:N</a></span></div><div class="content">​
+Django 1:N 불러오기  prefetch_related() or annotate()
  ​
-한국저작권위원회의 OLIS(오픈소스SW 라이선스 종합정보시스템)에는 라이선스에 대한 내용이 잘 정리 되어 있습니다. 많은 라이선스들이 있지만,
-접해본 라이선스 위주로, 개발을 위해 중요하게 보았던 부분을 정리합니다.
+models.py 구성
+1 2 3  class Question(models.Model): question_text = models.CharField(max_length=200) pub_date = models.DateTimeField(&#39;date published&#39;)   1 2 3 4  class Choice(models.Model): question = models.ForeignKey(Question, on_delete=models.CASCADE, related_name=&#39;choices&#39;) choice_text = models.CharField(max_length=200) votes = models.IntegerField(default=0)   ​
+​
+prefetch_related() 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  # views.py def get_context_data(): context[&#34;questions&#34;] = Question.</div><div class="post-footer">
+        <a href="/django_07_1vsn_%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/django/">Django</a>,&nbsp;<a href="/tags/1n/">1:N</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/django_06_djangooracle18_error_log/">Django_06_Django &amp; Oracle18 error LOG</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-09-06">2021-09-06</time></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw"></i>Django</a>&nbsp;<a href="/categories/oracle/"><i class="far fa-folder fa-fw"></i>oracle</a></span></div><div class="content">​
+Django &amp; Oracle 18 오류 일지  각종 스트레스의 원인에 대하여 해결방법을 정리합니다.
+ ​
+  ORA-00955: name is already used by an existing object
+ 1 2 3  # 해결법 python manage.py makemigrations python manage.py migrate --fake-initial    이미 migrate 한 내용을 수정하니 반영되지 않아 오류가 발생하였는데 위의 명령어는 migratie를 초기화해서 재설정 하는 것 같습니다.
+​
+  그리고 많은 경우에
+ 1 2  python manage.</div><div class="post-footer">
+        <a href="/django_06_djangooracle18_error_log/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/django/">Django</a>,&nbsp;<a href="/tags/oracle/">oracle</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/django_05_check-db-connection/">Django_05_Check DB connection</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-09-06">2021-09-06</time></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw"></i>Django</a></span></div><div class="content">​
+Django DB 연결 확인 ​
+python manage.py createsuperuser 후.. default로 생기는 DB를 기준으로 실행
+​
+1 2  ## setting.py AUTH_USER_MODEL = &#39;auth.User&#39; # default 설정.   ​
+이후 terminal에서
+1 2 3 4 5 6 7  $ python manage.py shell_plus	# 모델에 접근하기 위해 shell_plus 실행 &gt; Post = get_user_model()	# 생성된 모델의 user table 불러오기 &gt; post = Post.objects.all()	# user table의 모든 값 가져오기 &gt; for i in post:	# for문으로 user table값 순환 &gt; print(i)	# user table 값 출력   하면 연결된 모델의 값을 확인할 수 있다.</div><div class="post-footer">
+        <a href="/django_05_check-db-connection/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/django/">Django</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/staticvsdynamic_link/">정적(Static) 링크 Vs 동적(Dynamic) 링크</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-09-06">2021-09-06</time></span>&nbsp;<span class="post-category">included in <a href="/categories/link/"><i class="far fa-folder fa-fw"></i>Link</a></span></div><div class="content">​
+정적(Static) 링크 Vs 동적(Dynamic) 링크 ​
+정적(Static) 링크 란?  link 단계에서 라이브러리(*.lib 파일)을 실행 바이너리(컴퓨터가 이해할 수 있는 문법으로 만들어진 결과물)에 포함한다는 의미
+ *.lib 파일이란? &gt; Library 파일, 개발 코드에서 반복되는 기능들을 모아둔 파일
+  ex) *.exe 파일
+  라이브러리 관련 수정사항이 생기면 파일 전체를 다시 컴파일하여 재배포해야 한다.
 ​
 ​
-1. MIT License  아마 가장 흔하게 접하는 라이선스일 것입니다.
-&ldquo;MIT 라이선스(MIT License)는 미국 매사추세츠 공과대학교(MIT)에서 해당 대학의 소프트웨어 공학도들을 돕기 위해 개발한 라이선스다.</div><div class="post-footer">
-        <a href="/00_license/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/license/">license</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/vue_devinfo/">Vue_DevInfo</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-08-08">2021-08-08</time></span>&nbsp;<span class="post-category">included in <a href="/categories/vue/"><i class="far fa-folder fa-fw"></i>vue</a></span></div><div class="content">​
-Vue Dev_Info  Vue 개발을 하면서 알게 된(깨닫게 된) 내용을 정리해 기록합니다.
- ​
-1. Vuex 동작에 대한 고찰  개인적으로 DB의 자료를 가져오는데 5개 이상의 테이블에서 DB를 가져오고, 이를 종합해 새로운 리스트 혹은 데이터를 만들어야 한다면 무조건 vuex의 사용을 추천합니다. 다만, vuex를 사용하는데 일반적으로 알려진 단계를 지켜야 하는 이유와 방법에 대하여 정리합니다.
-  위의 그래프를 보면 .vue 파일에서 .dispatch()를 사용에 vuex의 store.js에 등록된 actions의 함수를 동작하는 신호를 보냅니다.</div><div class="post-footer">
-        <a href="/vue_devinfo/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/vue/">vue</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/oracle_network_connect/">Oracle 18C_network_connect</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-07-06">2021-07-06</time></span>&nbsp;<span class="post-category">included in <a href="/categories/oracle/"><i class="far fa-folder fa-fw"></i>oracle</a></span></div><div class="content">​
-오라클 18C_외부DB 접근(네트워크 연동) 방법  오라클 18 버전의 외부 DB 접근(네트워크 연동) 방법에 대하여 정리합니다.
-제가 네트워크 연동을 기획하면서 두 가지 관점으로 생각했습니다.
-첫째, DB를 가진 host가 있을 것이고
-둘째, DB에 연결할 guest가 있을 것이다.
-그렇다면, host가 guest의 IP를 등록해놓으면 guest가 접근하면 DB가 연결되는 걸까?
-guest가 host의 IP를 입력해 DB를 연결하는 걸까?
-아래 내용은 위의 두 가지를 다 진행하여 연결하였습니다. 
- ​
-👀주의
-각 단계 단계들이 필수적인 사항인지는 파악되지 않았습니다.</div><div class="post-footer">
-        <a href="/oracle_network_connect/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/oracle/">oracle</a>,&nbsp;<a href="/tags/network/">network</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/activation-function/">Activation_Function</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-06-24">2021-06-24</time></span>&nbsp;<span class="post-category">included in <a href="/categories/ai/"><i class="far fa-folder fa-fw"></i>AI</a>&nbsp;<a href="/categories/activation-function/"><i class="far fa-folder fa-fw"></i>Activation Function</a></span></div><div class="content">​
-Activation Function(활성화 함수)  입력 신호의 총합을 출력신호로 변환하는 함수를 일반적으로 Activation Function이라고 합니다.
- ​
-아직 잘 모르겠습니다. 하여 인공신경망에 빗대어 이해해보겠습니다.
-인공 신경망은 인간의 중추신경계(뇌)속의 뉴런들이 정보를 전달하고 학습하여 결과를 도출해내는 과정을 모방한 학습알고리즘입니다.
-여기서 의문점이 생깁니다.
-  예를 들어 지나가다 귤을 보았는데 맛이 있을지 없을지 어떻게 알 수 있을까요? 저 귤의 데이터를 수집해 봅시다.
-  타원형, 이쁜 노란색, 푸르른 꼭지 라는 데이터를 눈으로 보고 뇌속의 뉴런들이 이 정보를 분석해 맛있겠다.</div><div class="post-footer">
-        <a href="/activation-function/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/ai/">AI</a>,&nbsp;<a href="/tags/activation-function/">Activation Function</a></div></div>
+  동적(Dynamic) 링크 란?  특정 기능을 사용하고자 하는 실행 바이너리에서 필요시 사용할 수 있도록 최소한의 정보만 포함하여 링크하거나, 독립적으로 dll을 로드/사용/해제 시킨다는 의미.</div><div class="post-footer">
+        <a href="/staticvsdynamic_link/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/link/">Link</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -182,12 +178,12 @@ Activation Function(활성화 함수)  입력 신호의 총합을 출력신호�
                     <span class="page-link" aria-hidden="true">&hellip;</span>
                 </li><li class="page-item ">
                     <span class="page-link">
-                        <a href="/page/29/">29</a>
+                        <a href="/page/31/">31</a>
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 

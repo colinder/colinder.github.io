@@ -11,8 +11,8 @@
 K번째 수 1 2 3 4 5 6 7 8 9 10 11 12 13 14  array = [1, 5, 2, 6, 3, 7, 4]	commands = [[2, 5, 3], [4, 4, 1], [1, 7, 3]] def solution(array, commands): answer = [] for _ in commands: i, j, k = _ q = array[i-1: j] q." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://colinder.github.io/pg_21.04.21/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-04-21T23:42:17&#43;09:00" />
-<meta property="article:modified_time" content="2021-04-21T23:42:17&#43;09:00" />
+<meta property="article:published_time" content="2021-04-21T23:42:17+09:00" />
+<meta property="article:modified_time" content="2021-04-21T23:42:17+09:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
@@ -132,7 +132,7 @@ K번째 수 1 2 3 4 5 6 7 8 9 10 11 12 13 14  array = [1, 5, 2, 6, 3, 7, 4]	comm
 <h3 id="타겟-넘버">타겟 넘버</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -146,7 +146,7 @@ K번째 수 1 2 3 4 5 6 7 8 9 10 11 12 13 14  array = [1, 5, 2, 6, 3, 7, 4]	comm
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 <span class="n">target</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="c1"># return = 5</span>
 
@@ -154,7 +154,7 @@ K번째 수 1 2 3 4 5 6 7 8 9 10 11 12 13 14  array = [1, 5, 2, 6, 3, 7, 4]	comm
 
 <span class="n">l</span> <span class="o">=</span> <span class="p">[(</span><span class="o">-</span><span class="n">number</span><span class="p">,</span> <span class="n">number</span><span class="p">)</span><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">]</span>
 <span class="n">s</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">sum</span><span class="p">,</span> <span class="n">product</span><span class="p">(</span><span class="o">*</span><span class="n">l</span><span class="p">)))</span>
-<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">target</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">target</span><span class="p">))</span>
 
 
 <span class="c1">## 미쳤다. product()..</span>
@@ -164,7 +164,7 @@ K번째 수 1 2 3 4 5 6 7 8 9 10 11 12 13 14  array = [1, 5, 2, 6, 3, 7, 4]	comm
 <h3 id="k번째-수">K번째 수</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -180,7 +180,7 @@ K번째 수 1 2 3 4 5 6 7 8 9 10 11 12 13 14  array = [1, 5, 2, 6, 3, 7, 4]	comm
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>	
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>	
 <span class="n">commands</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span>
 
 
@@ -193,14 +193,14 @@ K번째 수 1 2 3 4 5 6 7 8 9 10 11 12 13 14  array = [1, 5, 2, 6, 3, 7, 4]	comm
         <span class="n">answer</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">q</span><span class="p">[</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
     <span class="k">return</span> <span class="n">answer</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">solution</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">commands</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">solution</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">commands</span><span class="p">))</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>​</p>
 <h3 id="다리를-지나는-트럭">다리를 지나는 트럭</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -230,7 +230,7 @@ K번째 수 1 2 3 4 5 6 7 8 9 10 11 12 13 14  array = [1, 5, 2, 6, 3, 7, 4]	comm
 </span><span class="lnt">28
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">bridge_length</span>	<span class="n">weight</span>	<span class="n">truck_weights</span>	                    <span class="k">return</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">bridge_length</span>	<span class="n">weight</span>	<span class="n">truck_weights</span>	                    <span class="k">return</span>
 <span class="mi">2</span>	            <span class="mi">10</span>	    <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>  	                            <span class="mi">8</span>
 <span class="mi">100</span>	            <span class="mi">100</span>	    <span class="p">[</span><span class="mi">10</span><span class="p">]</span>	                              <span class="mi">101</span>
 <span class="mi">100</span>	            <span class="mi">100</span>	    <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>       <span class="mi">110</span>
@@ -292,8 +292,8 @@ K번째 수 1 2 3 4 5 6 7 8 9 10 11 12 13 14  array = [1, 5, 2, 6, 3, 7, 4]	comm
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 

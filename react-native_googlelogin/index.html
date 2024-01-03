@@ -17,8 +17,8 @@ React-Native google login  서비스를 개발하다보면 로그인 기능이 �
   RN 버전 0.60이상에서 진행" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://colinder.github.io/react-native_googlelogin/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-10-29T23:13:25&#43;09:00" />
-<meta property="article:modified_time" content="2020-10-29T23:13:25&#43;09:00" />
+<meta property="article:published_time" content="2020-10-29T23:13:25+09:00" />
+<meta property="article:modified_time" content="2020-10-29T23:13:25+09:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
@@ -180,7 +180,7 @@ React-Native google login  서비스를 개발하다보면 로그인 기능이 �
 <p>index.js 에서 시작앱 변경</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -193,7 +193,7 @@ React-Native google login  서비스를 개발하다보면 로그인 기능이 �
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># index.js</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># index.js</span>
 
 /**
  * @format
@@ -212,7 +212,7 @@ AppRegistry.registerComponent<span class="o">(</span>appName, <span class="o">()
 <p>googleSignin.js 틀 잡기</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -227,7 +227,7 @@ AppRegistry.registerComponent<span class="o">(</span>appName, <span class="o">()
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># googleSignin.js</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># googleSignin.js</span>
 
 import React from <span class="s1">&#39;react&#39;</span>
 import <span class="o">{</span> View, Text <span class="o">}</span> from <span class="s1">&#39;react-native&#39;</span>
@@ -249,10 +249,10 @@ const <span class="nv">googleSignin</span> <span class="o">=</span> <span class=
 <image src="/images/RN_googleLogin_00.png" width="auto" style="display: block; margin: 10px auto; border: 1px solid grey">
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">npm install --save @react-native-community/google-signin
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">npm install --save @react-native-community/google-signin
 </code></pre></td></tr></table>
 </div>
 </div><p>​</p>
@@ -279,13 +279,13 @@ const <span class="nv">googleSignin</span> <span class="o">=</span> <span class=
 <p>sha1 추출</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># root/android/app으로 이동</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># root/android/app으로 이동</span>
 <span class="c1"># terminal</span>
 
 keytool -list -v -keystore debug.keystore -alias androiddebugkey -storepass android -keypass android
@@ -302,7 +302,7 @@ keytool -list -v -keystore debug.keystore -alias androiddebugkey -storepass andr
 <p><em>*혹시 에러 뜨면 pakage name변경 진행</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -326,7 +326,7 @@ keytool -list -v -keystore debug.keystore -alias androiddebugkey -storepass andr
 </span><span class="lnt">22
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># In: android/app/src/main/java/MY/APP/NEW_ID/MainActivity.java:</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># In: android/app/src/main/java/MY/APP/NEW_ID/MainActivity.java:</span>
 package 새로운 패키지 이름 등록<span class="p">;</span>
 
 <span class="c1"># In: android/app/src/main/java/MY/APP/NEW_ID/MainApplication.java:</span>
@@ -368,7 +368,7 @@ android_resource<span class="o">(</span>
 <p>Update <code>android/build.gradle</code> with</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -396,7 +396,7 @@ android_resource<span class="o">(</span>
 </span><span class="lnt">26
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">buildscript <span class="o">{</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">buildscript <span class="o">{</span>
     ext <span class="o">{</span>
         <span class="nv">buildToolsVersion</span> <span class="o">=</span> <span class="s2">&#34;27.0.3&#34;</span>
         <span class="nv">minSdkVersion</span> <span class="o">=</span> <span class="m">16</span>
@@ -429,7 +429,7 @@ allprojects <span class="o">{</span>
 <p>Update <code>android/app/build.gradle</code> with</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -441,7 +441,7 @@ allprojects <span class="o">{</span>
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">...
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">...
 dependencies <span class="o">{</span>
     implementation fileTree<span class="o">(</span>dir: <span class="s2">&#34;libs&#34;</span>, include: <span class="o">[</span><span class="s2">&#34;*.jar&#34;</span><span class="o">])</span>
     implementation <span class="s2">&#34;com.android.support:appcompat-v7:23.0.1&#34;</span>
@@ -467,19 +467,19 @@ apply plugin: <span class="s1">&#39;com.google.gms.google-services&#39;</span> /
 <p>GoogleSignin</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># googleSignin.js</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># googleSignin.js</span>
 
 import <span class="o">{</span> GoogleSignin, GoogleSigninButton, statusCodes <span class="o">}</span> from <span class="s1">&#39;@react-native-community/google-signin&#39;</span><span class="p">;</span>
 </code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -502,7 +502,7 @@ import <span class="o">{</span> GoogleSignin, GoogleSigninButton, statusCodes <s
 </span><span class="lnt">21
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># googleSignin.js</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># googleSignin.js</span>
 
 const <span class="nv">googleSignin</span> <span class="o">=</span> <span class="o">()</span> <span class="o">=</span>&gt; <span class="o">{</span>
   useEffect<span class="o">(()</span> <span class="o">=</span>&gt; <span class="o">{</span>
@@ -529,7 +529,7 @@ const <span class="nv">googleSignin</span> <span class="o">=</span> <span class=
 <p>이제 signin코드를 입력합시다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -552,7 +552,7 @@ const <span class="nv">googleSignin</span> <span class="o">=</span> <span class=
 </span><span class="lnt">21
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># googleSignin.js</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># googleSignin.js</span>
 
 const <span class="nv">signIn</span> <span class="o">=</span> async<span class="o">()</span> <span class="o">=</span>&gt; <span class="o">{</span>
     try <span class="o">{</span>
@@ -578,7 +578,7 @@ const <span class="nv">signIn</span> <span class="o">=</span> async<span class="
 </div><p>*완성된 코드</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -634,7 +634,7 @@ const <span class="nv">signIn</span> <span class="o">=</span> async<span class="
 </span><span class="lnt">54
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># googleSignin.js</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># googleSignin.js</span>
 
 import React, <span class="o">{</span> useState, useEffect <span class="o">}</span> from <span class="s1">&#39;react&#39;</span><span class="p">;</span>
 import <span class="o">{</span> View, Text, Image, <span class="o">}</span> from <span class="s1">&#39;react-native&#39;</span>
@@ -706,13 +706,13 @@ const <span class="nv">googleSignin</span> <span class="o">=</span> <span class=
 <h2 id="참고-했던-글">참고 했던 글</h2>
 <ul>
 <li>
-<p><a href="https://www.youtube.com/watch?v=A1Ai4sKk0jM">https://www.youtube.com/watch?v=A1Ai4sKk0jM</a></p>
+<p><a href="https://www.youtube.com/watch?v=A1Ai4sKk0jM" target="_blank" rel="noopener noreffer">https://www.youtube.com/watch?v=A1Ai4sKk0jM</a></p>
 </li>
 <li>
-<p><a href="https://medium.com/humanscape-tech/hooks-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-usestate-useeffect-811636d1035e">https://medium.com/humanscape-tech/hooks-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-usestate-useeffect-811636d1035e</a></p>
+<p><a href="https://medium.com/humanscape-tech/hooks-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-usestate-useeffect-811636d1035e" target="_blank" rel="noopener noreffer">https://medium.com/humanscape-tech/hooks-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-usestate-useeffect-811636d1035e</a></p>
 </li>
 <li>
-<p>패키지 이름 변경: <a href="https://stackoverflow.com/questions/37389905/change-package-name-for-android-in-react-native">https://stackoverflow.com/questions/37389905/change-package-name-for-android-in-react-native</a></p>
+<p>패키지 이름 변경: <a href="https://stackoverflow.com/questions/37389905/change-package-name-for-android-in-react-native" target="_blank" rel="noopener noreffer">https://stackoverflow.com/questions/37389905/change-package-name-for-android-in-react-native</a></p>
 </li>
 </ul>
 </div><div class="post-footer" id="post-footer">
@@ -747,8 +747,8 @@ const <span class="nv">googleSignin</span> <span class="o">=</span> <span class=
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 

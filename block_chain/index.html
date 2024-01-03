@@ -13,8 +13,8 @@
 이 프로그램들 중 하나인 GO 로 짜여진 Go Ethereum(줄여서, geth)을 설치해본다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://colinder.github.io/block_chain/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-09-03T22:06:15&#43;09:00" />
-<meta property="article:modified_time" content="2020-09-03T22:06:15&#43;09:00" />
+<meta property="article:published_time" content="2020-09-03T22:06:15+09:00" />
+<meta property="article:modified_time" content="2020-09-03T22:06:15+09:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
@@ -249,27 +249,27 @@
 <p>블록체인 관련 작업을 할 디렉토리 생성 후 Terminal을 열어 vagrant 관련 명령어 실행(이미 설치는 완료)</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">&gt; vagrant version      <span class="c1">#설치 여부 및 버전 확인 =&gt; 버전 넘버가 보이면 ok</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">&gt; vagrant version      <span class="c1">#설치 여부 및 버전 확인 =&gt; 버전 넘버가 보이면 ok</span>
 </code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">&gt; vagrant plugin install vagrant-scp		<span class="c1"># 호스트 &amp; 가상머신 간 연동 프로그램 설치</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">&gt; vagrant plugin install vagrant-scp		<span class="c1"># 호스트 &amp; 가상머신 간 연동 프로그램 설치</span>
 </code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">&gt; vagrant init		<span class="c1"># 블록체인 채굴을 위한 기초 세팅 시작</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">&gt; vagrant init		<span class="c1"># 블록체인 채굴을 위한 기초 세팅 시작</span>
 <span class="c1"># 해당 명령어를 입력하면 작업하는 디렉토리에 Vagrantfile이 생긴다.</span>
 </code></pre></td></tr></table>
 </div>
@@ -278,7 +278,7 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -315,7 +315,7 @@
 </span><span class="lnt">35
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Vagrantfile	=&gt;  내용을 수정한다. </span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Vagrantfile	=&gt;  내용을 수정한다. </span>
 
 <span class="c1"># -*- mode: ruby -*-</span>
 <span class="c1"># vi: set ft=ruby :</span>
@@ -354,18 +354,18 @@ end
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">&gt; vagrant up		<span class="c1"># 방금 설정한 eth0과 eth1 노드(광구)를 오픈(실행)</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">&gt; vagrant up		<span class="c1"># 방금 설정한 eth0과 eth1 노드(광구)를 오픈(실행)</span>
 </code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">&gt; vagrant status		<span class="c1"># 설정되어 있는 두 노드(광구)의 상태를 확인 runing이면 오픈한 상태</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">&gt; vagrant status		<span class="c1"># 설정되어 있는 두 노드(광구)의 상태를 확인 runing이면 오픈한 상태</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>​</p>
@@ -434,7 +434,7 @@ end
 <p><em>*Geth 설치 (Go-ethereum client)</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -451,7 +451,7 @@ end
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># vagrant@eth0:~$ 가상머신에서 수행</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># vagrant@eth0:~$ 가상머신에서 수행</span>
 
 &gt; sudo apt-get update
 &gt; sudo apt-get install software-properties-common
@@ -470,7 +470,7 @@ end
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -492,7 +492,7 @@ end
 </span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># genesis.json의 내용 등록 (예시)</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># genesis.json의 내용 등록 (예시)</span>
 i → 입력 활성화 → 아래 내용입력 후 → esc → ZZ<span class="o">(</span>저장하고 종료<span class="o">)</span>
 
 <span class="o">{</span>
@@ -516,12 +516,12 @@ i → 입력 활성화 → 아래 내용입력 후 → esc → ZZ<span class="o"
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># genesis.json 저장 후 </span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># genesis.json 저장 후 </span>
 &gt; <span class="nb">cd</span> ..
 다시 root폴더로 이동한다.
 </code></pre></td></tr></table>
@@ -532,22 +532,22 @@ i → 입력 활성화 → 아래 내용입력 후 → esc → ZZ<span class="o"
 <p>나의 최초의 블록(genesis.json)을 만들었다면 등록(초기화)해줘야 한다. =&gt; ✨geth를 사용하여 진행</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">&gt; geth init		<span class="c1">#이 명령어로 등록(초기화)을 할 수 있는데...</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">&gt; geth init		<span class="c1">#이 명령어로 등록(초기화)을 할 수 있는데...</span>
 </code></pre></td></tr></table>
 </div>
 </div><image src="/images/image-20200903104621097.png" width="100%" caption="--datadir관련 공식문서 설명">
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 위의 --datadir을 참고하여</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 위의 --datadir을 참고하여</span>
 
 &gt; geth --datadir ~/dev/eth_localdata init ~/database/genesis.json
 <span class="c1"># ~/database 위치에 있는 genesis.json을 등록(초기화)하고 등록 후 생기는 관련 자료는 ~/dev/eth_localdata에 모아놓겠다는 뜻</span>
@@ -560,21 +560,21 @@ i → 입력 활성화 → 아래 내용입력 후 → esc → ZZ<span class="o"
 <p>이제 노드(광구)를 관리할 계정(🙋‍♂️사람)도 등록해준다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">&gt; geth account new
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">&gt; geth account new
 <span class="c1"># 이 명령어를 입력하면 아이디는 자동으로 생성되고 비밀번호만 설정할 수 있게 진행된다.</span>
 </code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 계정이 잘 만들어 진 것인지 확인하기 위해서는 </span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 계정이 잘 만들어 진 것인지 확인하기 위해서는 </span>
 &gt; geth account list
 </code></pre></td></tr></table>
 </div>
@@ -588,7 +588,7 @@ i → 입력 활성화 → 아래 내용입력 후 → esc → ZZ<span class="o"
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -600,7 +600,7 @@ i → 입력 활성화 → 아래 내용입력 후 → esc → ZZ<span class="o"
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># eth0의 노드(광구) 입장 명령어</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># eth0의 노드(광구) 입장 명령어</span>
 &gt; geth console
 
 <span class="c1"># 다만 보통의 경우 아래와 같이 노드(eth0)에 다양한 주소 및 설정을 붙이고 진행한다. </span>
@@ -614,7 +614,7 @@ geth --datadir ~/dev/eth_localdata --nodiscover --nousb --networkid <span class=
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -623,7 +623,7 @@ geth --datadir ~/dev/eth_localdata --nodiscover --nousb --networkid <span class=
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 진행 도중 ERROR 모음</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 진행 도중 ERROR 모음</span>
 
 Failed to enumerate USB <span class="nv">devices</span>  <span class="o">=</span>&gt; --nousb 추가해주면 사라짐.
 <span class="c1">#if you want USB wallet support disabled. By default it&#39;s enabled.</span>
@@ -651,12 +651,12 @@ Looking <span class="k">for</span> <span class="nv">peers</span>  <span class="o
 </blockquote>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">personal.newAccount<span class="o">(</span><span class="s2">&#34;eth&#34;</span><span class="o">)</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">personal.newAccount<span class="o">(</span><span class="s2">&#34;eth&#34;</span><span class="o">)</span>
 <span class="c1">#처음 등록된 일할 사람👷‍♂️은 자동으로 저장할 곳🛒(coinbase) 으로 지정된다.</span>
 <span class="c1">#나는 계정을 2개 만들어서 진행한다.</span>
 </code></pre></td></tr></table>
@@ -685,10 +685,10 @@ Looking <span class="k">for</span> <span class="nv">peers</span>  <span class="o
 <p><strong>그럼 이제 채굴해보자</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">miner.start<span class="o">(</span>1<span class="o">)</span>		<span class="o">=</span>&gt; <span class="c1">#코인 1개 채굴할때까지 진행</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">miner.start<span class="o">(</span>1<span class="o">)</span>		<span class="o">=</span>&gt; <span class="c1">#코인 1개 채굴할때까지 진행</span>
 </code></pre></td></tr></table>
 </div>
 </div><table>
@@ -784,13 +784,13 @@ Looking <span class="k">for</span> <span class="nv">peers</span>  <span class="o
 <p>채굴이 잘 되었는지 확인해보자.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">eth.getBalance<span class="o">(</span>eth.accounts<span class="o">[</span>0<span class="o">])</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">eth.getBalance<span class="o">(</span>eth.accounts<span class="o">[</span>0<span class="o">])</span>
 eth.getBalance<span class="o">(</span>eth.accounts<span class="o">[</span>1<span class="o">])</span>
 
 <span class="c1"># 이와 같은 방법으로 EOS계정별로 확인</span>
@@ -801,11 +801,11 @@ eth.getBalance<span class="o">(</span>eth.accounts<span class="o">[</span>1<span
 <p>이를 web3을 이용해 잔고단위를 바꿔 확인해보자</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">web3.fromWei<span class="o">(</span>eth.getBalance<span class="o">(</span>eth.accounts<span class="o">[</span>0<span class="o">])</span>, <span class="s2">&#34;ether&#34;</span><span class="o">)</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">web3.fromWei<span class="o">(</span>eth.getBalance<span class="o">(</span>eth.accounts<span class="o">[</span>0<span class="o">])</span>, <span class="s2">&#34;ether&#34;</span><span class="o">)</span>
 web3.fromWei<span class="o">(</span>eth.getBalance<span class="o">(</span>eth.accounts<span class="o">[</span>1<span class="o">])</span>, <span class="s2">&#34;ether&#34;</span><span class="o">)</span>
 </code></pre></td></tr></table>
 </div>
@@ -824,7 +824,7 @@ web3.fromWei<span class="o">(</span>eth.getBalance<span class="o">(</span>eth.ac
 <p>트랜잭션을 위해서는 먼저 계정들의 잠금 해제가 필요하다. EOS계정을 만들면 기본적으로 잠금 상태인데,</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -836,7 +836,7 @@ web3.fromWei<span class="o">(</span>eth.getBalance<span class="o">(</span>eth.ac
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 잠금해제 command 로 해제가 가능하다. (이더를 보내는 EOS계정만 잠금을 풀어주면 된다.)</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 잠금해제 command 로 해제가 가능하다. (이더를 보내는 EOS계정만 잠금을 풀어주면 된다.)</span>
 
 personal.unlockAccount<span class="o">(</span>eth.accounts<span class="o">[</span>0<span class="o">])</span>
 <span class="c1">#기본적인 세팅, 입력 후 비밀번호 입력 계정 잠금 해제(잠금 해제 유효시간 기본 - 300초)</span>
@@ -856,12 +856,12 @@ personal.unlockAccount<span class="o">(</span>eth.accounts<span class="o">[</spa
 <p>이제 <strong>송금(Transaction)</strong> 해보자.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">eth.sendTransaction<span class="o">({</span>from: eth.accounts<span class="o">[</span>0<span class="o">]</span>, to: eth.accounts<span class="o">[</span>1<span class="o">]</span>, value: web3.toWei<span class="o">(</span>10, <span class="s2">&#34;ether&#34;</span><span class="o">)})</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">eth.sendTransaction<span class="o">({</span>from: eth.accounts<span class="o">[</span>0<span class="o">]</span>, to: eth.accounts<span class="o">[</span>1<span class="o">]</span>, value: web3.toWei<span class="o">(</span>10, <span class="s2">&#34;ether&#34;</span><span class="o">)})</span>
 
 <span class="c1"># eth.accounts[0]에서 eth.accounts[1]로 web3단위로 10이더를 보내겠다.는 뜻.</span>
 </code></pre></td></tr></table>
@@ -880,12 +880,12 @@ personal.unlockAccount<span class="o">(</span>eth.accounts<span class="o">[</spa
 <p><strong>✨ 간단히 트랜잭션을 등록하고 miner.start() command로 채굴을 시작하는 경우(블록 활성화?)에 트랜잭션이 반영된다!</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">&gt; miner.start<span class="o">(</span>1<span class="o">)</span>				<span class="c1"># 이걸로 잠시 채굴을 켰다가.</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">&gt; miner.start<span class="o">(</span>1<span class="o">)</span>				<span class="c1"># 이걸로 잠시 채굴을 켰다가.</span>
 &gt; miner.stop<span class="o">()</span>					<span class="c1"># 으로 채굴을 꺼주고</span>
 &gt; eth.pendingTransactions		<span class="c1"># 으로 트랜잭션 내용을 다시 확인해주면 비어있는 것을 볼 수 있다.</span>
 </code></pre></td></tr></table>
@@ -896,14 +896,14 @@ personal.unlockAccount<span class="o">(</span>eth.accounts<span class="o">[</spa
 <p>그리고</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># EOS계정(accounts[1])의 잔액을 확인해보면</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># EOS계정(accounts[1])의 잔액을 확인해보면</span>
 
 &gt; eth.getBalance<span class="o">(</span>eth.accounts<span class="o">[</span>1<span class="o">])</span>
 &gt; web3.fromWei<span class="o">(</span>eth.getBalance<span class="o">(</span>eth.accounts<span class="o">[</span>1<span class="o">])</span>, <span class="s2">&#34;ether&#34;</span><span class="o">)</span>
@@ -949,8 +949,8 @@ personal.unlockAccount<span class="o">(</span>eth.accounts<span class="o">[</spa
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 

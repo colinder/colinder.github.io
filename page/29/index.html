@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	<meta name="generator" content="Hugo 0.83.1" />
+	<meta name="generator" content="Hugo 0.87.0" />
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
@@ -102,35 +102,46 @@
         alt="/images/jg_02.jpg"
         title="/images/jg_02.jpg" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/colinder" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="mailto:kjonggwan@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/hugo_setting/">Hugo_setting stroy (feat.LoveTt 제작자)</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-06-29">2020-06-29</time></span>&nbsp;<span class="post-category">included in <a href="/categories/hugo/"><i class="far fa-folder fa-fw"></i>Hugo</a></span></div><div class="content">​
-블로그를 만들면서&hellip; 최초 기술블로그를 제작하면서 바닥부터 모든 것을 스스로 만들어 보기로 결심하고 제작을 시작하지만, 결코 쉽지 않았다. 개인적으로 꼭 원했던 기능이었던 tag기능과 categories를 구현하지 못하면서&hellip; 결국 기존에 있는 라이브러리들을 활용하기로 한다.
-​
-가장 많은 사용자가 존재하는 jekyll로 시작한다.
-​
-jekyll 기초 설정  Jekyll : Jekyll은 Ruby Gem으로 제공되며 템플릿과 템플릿의 구성요소, 인라인 코드, 마크다운과 같은 동적인 구성요소를 정적인 웹페이지로 만들어주는 파싱 엔진
+        <a href="/01_vue_basic/">01_Vue_basic (Vue란? &amp; Vue 문법1)</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-07-17">2020-07-17</time></span>&nbsp;<span class="post-category">included in <a href="/categories/vue/"><i class="far fa-folder fa-fw"></i>vue</a></span></div><div class="content">​
+Vue  Vue.js는 웹 애플리케이션의 사용자 인터페이스를 만들기 위해 사용하는 오픈 소스 프로그레시브 자바스크립트 프레임워크
+간단히, 온라인 홈페이지를 만드는 프로그램입니다.
+아래 정리할 내용들이 당장 크게 와닿지 않을 수 있습니다. 하지만 필요할 때 보면, 도움이 될 것입니다!
  ​
-jekyll 서버 구동 방법 1 2 3 4 5 6 7 8 9  # 공식 홈페이지 설명 ~$ gem install bundler jekyll	# jekyll 구동을 위한 프로그램 설치 ~$ jekyll new MYBLOG	# MYBLOG 라는 이름의 블로그 폴더 &amp; 기초틀 생성  ~$ cd MYBLOG	# MYBLOG 폴더로 이동 ~MYBLOG $ bundle exec jekyll serve	# MYBLOG 서버 구동 # 이후 명령창에 Servuer address : http://127.</div><div class="post-footer">
-        <a href="/hugo_setting/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/hugo/">Hugo</a></div></div>
+Vue의 이론적 구성 및 설명을 알아보자 1. Vue는 MVVM 패턴을 따른다.
+ MVVM(Model-View-ViewModel) 패턴?
+모델과 뷰 사이에 뷰모델이 위치하는 구조
+ ​
+2. Vue는 SPA (Single-Page Application)
+ 서버로부터 완전한 새로운 페이지를 불러오지 않고 현재의 페이지를 동적으로 다시 작성함으로써 사용자와 소통하는 웹 애플리케이션을 말한다.</div><div class="post-footer">
+        <a href="/01_vue_basic/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/vue/">vue</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/sw_20.06.25/">SW Expert Academy_D3 5948, 5789, 5688, 5549</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-06-25">2020-06-25</time></span>&nbsp;<span class="post-category">included in <a href="/categories/sw-expert-academy/"><i class="far fa-folder fa-fw"></i>SW Expert Academy</a></span></div><div class="content">​
-D3_5948_새샘이의 7-3-5 게임 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  for T in range(int(input())): N = list(map(int, input().split())) result = set() for i in range(5): for j in range(i+1, 6): for x in range(j+1, 7): result.add(N[i]+N[j]+N[x]) result = list(result) result.sort() print(&#39;#{} {}&#39;.format(T+1, result[-5])) # 3수의 합을 정리하는데 set으로 중복을 제거하는 방법으로 result set을 정리 # set은 순서가 없기 때문에 result를 다시 list로 정리하고 .</div><div class="post-footer">
-        <a href="/sw_20.06.25/">Read More</a><div class="post-tags">
+        <a href="/00_vue_setting/">00_Vue_setting</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-07-17">2020-07-17</time></span>&nbsp;<span class="post-category">included in <a href="/categories/vue/"><i class="far fa-folder fa-fw"></i>vue</a></span></div><div class="content">​
+Vue  Vue.js는 웹 애플리케이션의 사용자 인터페이스를 만들기 위해 사용하는 오픈 소스 프로그레시브 자바스크립트 프레임워크
+간단히, 온라인 홈페이지를 만드는 프로그램입니다.
+ ​
+1. 시작하기   &lsquo;Vue&rsquo; VS &lsquo;Django&rsquo;
+ 어느 정도 공부를 하면서 체득한 가장 큰 구분점은 &ldquo;Django는 App별로 응답을 구분하고, Vue는 Component별로 응답을 구분한다.&ldquo;는 것입니다.
+큰 차이가 없어보이고, 큰 의미가 없어보일 수 있으나 알아두면 좋습니다!
+ ​
+  💻 개발 환경 설정   vscode 설치</div><div class="post-footer">
+        <a href="/00_vue_setting/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/vue/">vue</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/sw_20.07.10/">SW Expert Academy_D3 4676, 4615, 4579, 4522</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-07-10">2020-07-10</time></span>&nbsp;<span class="post-category">included in <a href="/categories/sw-expert-academy/"><i class="far fa-folder fa-fw"></i>SW Expert Academy</a></span></div><div class="content">​
+D3_4676_늘어지는 소리 만들기 1 2 3 4 5 6 7 8 9 10 11 12  for T in range(int(input())): sent = list(input()) # wow H = int(input()) po = sorted(list(map(int, input().split()))) # 2 3 2 for i in range(H): a = po[i]+i sent.insert(a,&#39;-&#39;) print(&#39;#{}{}&#39;.format(T+1, &#39;&#39;.join(sent))) # 단순 산수로 해결   ​
+D3_4615_재미있는 오셀로 게임 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43  dx = [0, 1, 1, 1, 0, -1, -1, -1] dy = [1, 1, 0, -1, -1, -1, 0, 1] def dfs(x, y, i ,stone): if board[x][y] == 0: return 0 elif board[x][y] == stone: return 1 else: if dfs(x+dx[i], y+dy[i], i, stone): board[x][y] = stone return 1 else: return 0 for T in range(int(input())): N, M = map(int, input().</div><div class="post-footer">
+        <a href="/sw_20.07.10/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/algorithm/">algorithm</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/sw_20.06.23/">SW Expert Academy_D3 6190, 6057, 6019, 5986</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-06-23">2020-06-23</time></span>&nbsp;<span class="post-category">included in <a href="/categories/sw-expert-academy/"><i class="far fa-folder fa-fw"></i>SW Expert Academy</a></span></div><div class="content">​
-D3_6190_정곤이의 단조 증가하는 수 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  for T in range(int(input())): N = int(input()) L = list(map(int, input().split())) result = -1 for i in range(N-1): for j in range(i+1, N): num = str(L[i]*L[j]) if len(num) &gt; 1 and &#39;0&#39; not in num and result &lt; int(num) and list(num) == sorted(num): result = int(num) print(f&#39;#{T+1} {result}&#39;) # 단조증가하는 지를 검증하는 방법으로 sorted를 썼는데 이를 활용하기 위해서는 str형태로 변경해야 검증이 가능하다.</div><div class="post-footer">
-        <a href="/sw_20.06.23/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/algorithm/">algorithm</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/sw_20.06.20/">SW Expert Academy_D3 9700, 7675, 6692, 6485</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-06-20">2020-06-20</time></span>&nbsp;<span class="post-category">included in <a href="/categories/sw-expert-academy/"><i class="far fa-folder fa-fw"></i>SW Expert Academy</a></span></div><div class="content">​
-D3_9700_USB 꽂기의 미스터리 1 2 3 4 5 6 7 8 9 10 11  for T in range(int(input())): p, q = map(float, input().split()) s1 = (1-p)*q s2 = p*(1-q)*q if s1 &lt; s2: print(f&#39;#{T+1} YES&#39;) else: print(f&#39;#{T+1} NO&#39;) # 단순 수학을 통해 해결.   ​
-D3_7675_통역사 성경이 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25  for T in range(int(input())): N = int(input()) sent = input() sent = sent.</div><div class="post-footer">
-        <a href="/sw_20.06.20/">Read More</a><div class="post-tags">
+        <a href="/sw_20.07.08/">SW Expert Academy_D3 5162, 4789, 4751, 4698</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-07-08">2020-07-08</time></span>&nbsp;<span class="post-category">included in <a href="/categories/sw-expert-academy/"><i class="far fa-folder fa-fw"></i>SW Expert Academy</a></span></div><div class="content">​
+D3_5162_두가지 빵의 딜레마 1 2 3 4 5 6 7  for T in range(int(input())): A, B, C = map(int, input().split()) N = min(A, B) print(&#34;#{}{}&#34;.format(T+1, int(C/N))) # 단순 산수로 해결   ​
+D3_4789_성공적인 공연 기획 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19  for T in range(int(input())): P = list(map(int, map(str, input())))	need = P[0] count = 0 for i in range(1, len(P)): if need &gt;= i: need += P[i] else: count += i - need need = i + P[i] print(f&#39;#{T+1}{count}&#39;) # 문제를 이해하는 것이 Point였다.</div><div class="post-footer">
+        <a href="/sw_20.07.08/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/algorithm/">algorithm</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
@@ -150,10 +161,18 @@ D3_7675_통역사 성경이 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 2
                     <span class="page-link">
                         <a href="/page/29/">29</a>
                     </span>
+                </li><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/page/30/">30</a>
+                    </span>
+                </li><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/page/31/">31</a>
+                    </span>
                 </li></ul></div></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 

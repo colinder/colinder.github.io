@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	<meta name="generator" content="Hugo 0.83.1" />
+	<meta name="generator" content="Hugo 0.87.0" />
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
@@ -102,53 +102,49 @@
         alt="/images/jg_02.jpg"
         title="/images/jg_02.jpg" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/colinder" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="mailto:kjonggwan@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/django_09_customauthuser_abstractbaseuser/">Django_09_CustomAuthUser_AbstractBaseUser</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-10-08">2021-10-08</time></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw"></i>Django</a>&nbsp;<a href="/categories/abstractbaseuser/"><i class="far fa-folder fa-fw"></i>AbstractBaseUser</a></span></div><div class="content">​
-Django AbstractBaseUser  django는 기본적으로 username 과 password를 가지고 로그인합니다. 하지만 요즘에는 대부분의 웹사이트들이 email 과 password로 로그인(사용자를 인식 및 인증)을 합니다.
+        <a href="/boxplot/">boxplot 해석 방법</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-12-23">2021-12-23</time></span>&nbsp;<span class="post-category">included in <a href="/categories/analysis/"><i class="far fa-folder fa-fw"></i>analysis</a>&nbsp;<a href="/categories/boxplot/"><i class="far fa-folder fa-fw"></i>boxplot</a></span></div><div class="content">​
+What is Boxplot?  데이터 분석을 진행하면서 다른 분들의 분석 레퍼런스를 보며 공부하다보니 많은 분들이 boxplot을 사용하는 것을 보았습니다. 다만, 저는 그 박스가 어떤 경우에 사용하는 것인지? 어떤 의미로 그려지는 것인지? 어떻게 해석하면 좋은지? 개념이 약했기 때문에 내용을 정리해보겠습니다.
  ​
-제가 진행할 것은 django의 AbstractBaseUser을 사용해 테이블을 만들고 사용자 인증하기 입니다.
-  조건
-  email, password, nickname 및 필수 요소(is_active, is_admin)로만 인증 테이블 구성.
-  createsuperuser 명령어 입력시, 관리자 계정이 커스텀한 테이블에 생성.
 ​
-    Django 공식문서에는 models.py에서 기본적인 사용자모델을 설정하고 이를 활용해 admin.</div><div class="post-footer">
-        <a href="/django_09_customauthuser_abstractbaseuser/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/django/">Django</a>,&nbsp;<a href="/tags/abstractbaseuser/">AbstractBaseUser</a></div></div>
+Box Plot  최댓값, 최솟값, 중앙값, 사분편차를 사용하여 자료의 측정값들이 어떤 모양으로 분포되어 있으며, 극단값들은 어떠한지 등을 쉽게 알 수 있도록 하는 그림이다. 자료들이 비대칭으로 분포되어 있을 경우에는 상자그림을 그려 극단값의 개수, 비대칭 여부 등을 파악할 수 있으므로 측정값들의 중심위치와 산포도의 척도로 사용할 수 있다.</div><div class="post-footer">
+        <a href="/boxplot/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/analysis/">analysis</a>,&nbsp;<a href="/tags/boxplot/">boxplot</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/django_08_abstractbaseuservsabstractuser/">Django_08_AbstractBaseUser VS AbstractUser</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-10-07">2021-10-07</time></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw"></i>Django</a>&nbsp;<a href="/categories/abstractbaseuser/"><i class="far fa-folder fa-fw"></i>AbstractBaseUser</a>&nbsp;<a href="/categories/abstractuser/"><i class="far fa-folder fa-fw"></i>AbstractUser</a></span></div><div class="content">​
-Django AbstractBaseUser VS AbstractUser  Django로 프로젝트를 진행하면서 계정관련 내용을 등록하는 것을 가장 많이 했음에도, 아직 명확하게 차이를 알지 못하고 사용했던 것이 있었습니다.
-바로! User custom에 관한 부분이었는데요. 크게 AbstractBaseUser와 AbstractUser를 사용하는 방법이 있는데 이 둘의 차이를 꼼꼼히 알아보기 위해 해당 포스팅이 작성되었습니다.
+        <a href="/django_11_simple_jwt/">Django_11_simple_JWT</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-12-22">2021-12-22</time></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw"></i>Django</a>&nbsp;<a href="/categories/jwt/"><i class="far fa-folder fa-fw"></i>JWT</a></span></div><div class="content">​
+Django JWT(Json Web Token)  Django의 대표적인 jwt 패키지는 djangorestframework-jwt, djangorestframework-simplejwt가 있지만 전자는 업데이트가 더이상 진행되지 않아서 후자를 사용하는 것을 추천합니다.
  ​
-AbstractBaseUser VS AbstractUser  프로젝트 생성 후 accounts 라는 app을 만들고 makemigrations &amp; migrate를 하기 전
- ​
-1. Model 설정 AbstractBaseUser
-위치: accounts/models.py</div><div class="post-footer">
-        <a href="/django_08_abstractbaseuservsabstractuser/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/django/">Django</a>,&nbsp;<a href="/tags/abstractbaseuser/">AbstractBaseUser</a>,&nbsp;<a href="/tags/abstractuser/">AbstractUser</a></div></div>
+djangorestframework-simplejwt  간단한 사용법 정리
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25  def Usage(request): ## SIMPLEJWT METHOD TEST # print(&#34;================================&#34;) # a = JWTAuthentication() # b = a.</div><div class="post-footer">
+        <a href="/django_11_simple_jwt/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/django/">Django</a>,&nbsp;<a href="/tags/jwt/">JWT</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/mariadb_setting/">MariaDB 설치 방법</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-09-15">2021-09-15</time></span>&nbsp;<span class="post-category">included in <a href="/categories/mariadb/"><i class="far fa-folder fa-fw"></i>mariaDB</a></span></div><div class="content">​
-MariaDB 설치 방법 1. 설치 https://mariadb.org/download/ 에서 자동으로 확인된 버전으로 다운로드 받습니다.
+        <a href="/numpy__pandas/">Numpy &amp; Pandas</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-12-15">2021-12-15</time></span>&nbsp;<span class="post-category">included in <a href="/categories/numpy/"><i class="far fa-folder fa-fw"></i>Numpy</a>&nbsp;<a href="/categories/pandas/"><i class="far fa-folder fa-fw"></i>Pandas</a></span></div><div class="content">​
+Numpy  ML, AI 등 개발을 진행하다보면 무지성으로 import하는 library가 있다.
+import numpy as np
+python만 할 줄 안다면 어렵지 않게 사용이 가능하지만, 그래도 numpy의 개념을 알고 진행하고 싶은 마음에 내용을 정리해보자
+ ​
+What is Numpy(Numerical Python)?  공식문서를 따르면,
+NumPy is the fundamental package for scientific computing in Python. It is a Python library that provides a multidimensional array object, various derived objects (such as masked arrays and matrices), and an assortment of routines for fast operations on arrays, including mathematical, logical, shape manipulation, sorting, selecting, I/O, discrete Fourier transforms, basic linear algebra, basic statistical operations, random simulation and much more.</div><div class="post-footer">
+        <a href="/numpy__pandas/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/numpy/">Numpy</a>,&nbsp;<a href="/tags/pandas/">Pandas</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/mariadb_share/">MariaDB 외부접속 허용</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-11-03">2021-11-03</time></span>&nbsp;<span class="post-category">included in <a href="/categories/mariadb/"><i class="far fa-folder fa-fw"></i>mariaDB</a></span></div><div class="content">​
+MariaDB 외부 접속 허용  해당 MariaDB 공유는 root PC에서 진행하는 것이며, 외부에서 접속할 client는 별도로 설정할 건 없습니다.
+또한 무조건 이 방법이 맞다!라기보다는 제가 이렇게 하니 외부 접속이 되었다. 는 경험의 기록입니다.
+ ​
+MySQL Client를 실행합니다.
 ​
-Next 클릭​
-별도의 커스텀은 하지 않습니다.​
-&lsquo;root 비밀번호 설정&rsquo;과 &lsquo;UTF 변환 및 외부에서 root 접속을 허용 할 것&rsquo;인지 물어보는 데 이곳이 중요합니다.
-단순 개발용이라면 상관없을 수 있으나 개인적으로 실제 운용할 서버 or 개발 서버라도 외부에서 root에 접속하게 하는 것은 보안상 좋지 않을 것이라고 생각합니다.
-실제로 서비스를 운영 할 서버라면 절때 root를 원격지에서 사용할 수 없게 하는 것을 추천합니다.</div><div class="post-footer">
-        <a href="/mariadb_setting/">Read More</a><div class="post-tags">
+실행하면 아래와 같은 초기 화면에 진입합니다.
+​
+MariaDB 설치를 진행하면서 등록한 password입력하면 아래와 같은 화면이 나옵니다.
+​
+초기 접속의 경우, DB table이 &lsquo;none&rsquo;으로 설정되어 있는데, **공유를 원하는 table로 설정을 바꿔줍니다. **</div><div class="post-footer">
+        <a href="/mariadb_share/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/mariadb/">mariaDB</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/django_07_1vsn_%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0/">Django_07_1:N 불러오기</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-09-14">2021-09-14</time></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw"></i>Django</a>&nbsp;<a href="/categories/1n/"><i class="far fa-folder fa-fw"></i>1:N</a></span></div><div class="content">​
-Django 1:N 불러오기  prefetch_related() or annotate()
- ​
-models.py 구성
-1 2 3  class Question(models.Model): question_text = models.CharField(max_length=200) pub_date = models.DateTimeField(&#39;date published&#39;)   1 2 3 4  class Choice(models.Model): question = models.ForeignKey(Question, on_delete=models.CASCADE, related_name=&#39;choices&#39;) choice_text = models.CharField(max_length=200) votes = models.IntegerField(default=0)   ​
-​
-prefetch_related() 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  # views.py def get_context_data(): context[&#34;questions&#34;] = Question.</div><div class="post-footer">
-        <a href="/django_07_1vsn_%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/django/">Django</a>,&nbsp;<a href="/tags/1n/">1:N</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -177,12 +173,12 @@ prefetch_related() 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  # views.py def get_co
                     <span class="page-link" aria-hidden="true">&hellip;</span>
                 </li><li class="page-item ">
                     <span class="page-link">
-                        <a href="/page/29/">29</a>
+                        <a href="/page/31/">31</a>
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 

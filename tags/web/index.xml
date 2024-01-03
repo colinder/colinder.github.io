@@ -3,7 +3,18 @@
         <title>web - Tag - </title>
         <link>https://colinder.github.io/tags/web/</link>
         <description>web - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 28 Feb 2022 09:23:51 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/web/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 01 Mar 2022 09:17:44 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/web/" rel="self" type="application/rss+xml" /><item>
+    <title>What is webpack?</title>
+    <link>https://colinder.github.io/what_is_webpack/</link>
+    <pubDate>Tue, 01 Mar 2022 09:17:44 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/what_is_webpack/</guid>
+    <description><![CDATA[​
+What is webpack?  오늘나 자바스크립트 개발에서 모듈을 사용하여 개발하는 것은 선택이 아닌 필수입니다. 하지만 아직 모든 브라우저(마이크로소프트 - 앳지, 네이버 - 웨일, 구글 - 크롬 등등)가 *ES2015 모듈을 지원하지 않기 때문에 모듈 단위로 패키지를 관리할 수 없습니다. 이런 경우 전역 스코프를 공유하기 때문에 변수명이 충돌하거나 값이 덮어씌워지는 등 문제가 발생할 수 있습니다.
+이런 문제를 해결하기 위해 *번들러를 사용하는데 wabpack은 가장 많이 사용되는 번들러 중 하나입니다.
+ *번들러
+애플리케이션에 필요한 모든 종류의 파일들을 모듈 단위로 나누어 최소한의 파일 묶음(번들)으로 만들어 낸다.]]></description>
+</item><item>
     <title>What is ES2015?</title>
     <link>https://colinder.github.io/what_is_es2015/</link>
     <pubDate>Mon, 28 Feb 2022 09:23:51 &#43;0900</pubDate>
@@ -111,17 +122,5 @@ HTTP vs HTTPS  웹개발 프로젝트를 하면서 인터넷 주소창(URL)을 �
 ex) 125.209.222.141, 172.217.175.238
 ​
 도메인(domain)이란? ip는 사람이 이해하고 기억하기 어렵기 때문에 쉽게 접근할 수 있게 각 ip에 고유한 이름을 부여할 수 있게 했는데, 이것을 도메인이라고 합니다.]]></description>
-</item><item>
-    <title>Interpreter VS Compiler_Language</title>
-    <link>https://colinder.github.io/interpretervscompiler_language/</link>
-    <pubDate>Wed, 18 Nov 2020 11:54:20 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/interpretervscompiler_language/</guid>
-    <description><![CDATA[​
-Interpreter VS Compiler_Language  web 개발을 하다보면 javascript를 공부하게 되고, javascript를 공부하다보면, 어려워지죠ㅎ.
-더 어려워 지기 전에 기초적인 지식?인 인터프리터 언어와 컴파일 언어의 특징과 차이에 대하여 알아봅시다!
- ​
-뜬금없이 프로그래밍 언어란 무엇인지 우선 알아봅시다. 컴퓨터는 이진수만 이해할 수 있습니다. 즉 컴퓨터는 우리가 사용하는 언어가 아닌 &lsquo;0&rsquo;, &lsquo;1&rsquo;만 이해합니다.
-근데 이게 프로그래밍 언어랑 무슨 상관일까요? 상관이 아주 많습니다&hellip;ㅎ.. 프로그래밍 언어로 프로그램을 만들고 실행 할 때 우리는 &lsquo;0&rsquo;, &lsquo;1&rsquo; 같은 명령어로 코딩을 하지 않습니다.]]></description>
 </item></channel>
 </rss>

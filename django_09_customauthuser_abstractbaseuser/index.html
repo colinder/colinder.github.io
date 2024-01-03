@@ -17,8 +17,8 @@ Django AbstractBaseUser  django는 기본적으로 username 과 password를 가�
     Django 공식문서에는 models.py에서 기본적인 사용자모델을 설정하고 이를 활용해 admin." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://colinder.github.io/django_09_customauthuser_abstractbaseuser/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-10-08T10:17:50&#43;09:00" />
-<meta property="article:modified_time" content="2021-10-08T10:17:50&#43;09:00" />
+<meta property="article:published_time" content="2021-10-08T10:17:50+09:00" />
+<meta property="article:modified_time" content="2021-10-08T10:17:50+09:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
@@ -184,7 +184,7 @@ Django AbstractBaseUser  django는 기본적으로 username 과 password를 가�
 <p>소스 코드</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -236,13 +236,13 @@ Django AbstractBaseUser  django는 기본적으로 username 과 password를 가�
 </span><span class="lnt">50
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># accounts/models.py</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># accounts/models.py</span>
 
 <span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
 <span class="kn">from</span> <span class="nn">django.contrib.auth.models</span> <span class="kn">import</span> <span class="n">AbstractBaseUser</span><span class="p">,</span> <span class="n">BaseUserManager</span>
 
 <span class="k">class</span> <span class="nc">MyUserManager</span><span class="p">(</span><span class="n">BaseUserManager</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">create_user</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">nickname</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">create_user</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">nickname</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">email</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Users must have an email address&#39;</span><span class="p">)</span>
 
@@ -261,7 +261,7 @@ Django AbstractBaseUser  django는 기본적으로 username 과 password를 가�
             <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">,</span>
             <span class="n">nickname</span><span class="o">=</span><span class="n">nickname</span><span class="p">,</span>
         <span class="p">)</span>
-        <span class="n">user</span><span class="o">.</span><span class="n">is_admin</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="n">user</span><span class="o">.</span><span class="n">is_admin</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="n">user</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">using</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_db</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">user</span>
 
@@ -270,12 +270,12 @@ Django AbstractBaseUser  django는 기본적으로 username 과 password를 가�
     <span class="n">email</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">EmailField</span><span class="p">(</span>
         <span class="n">verbose_name</span><span class="o">=</span><span class="s1">&#39;email addresss&#39;</span><span class="p">,</span>
         <span class="n">max_length</span><span class="o">=</span><span class="mi">255</span><span class="p">,</span>
-        <span class="n">unique</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+        <span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="p">)</span>
-    <span class="n">nickname</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">default</span> <span class="o">=</span> <span class="bp">None</span><span class="p">)</span>
+    <span class="n">nickname</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">default</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
 
-    <span class="n">is_active</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">BooleanField</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-    <span class="n">is_admin</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">BooleanField</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+    <span class="n">is_active</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">BooleanField</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">is_admin</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">BooleanField</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
     <span class="n">objects</span> <span class="o">=</span> <span class="n">MyUserManager</span><span class="p">()</span>
 
@@ -292,7 +292,7 @@ Django AbstractBaseUser  django는 기본적으로 username 과 password를 가�
 <p><strong>설명이 있는</strong> 소스코드(위와 동일한 코드이나 자세한 설명이 있습니다.)</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -377,7 +377,7 @@ Django AbstractBaseUser  django는 기본적으로 username 과 password를 가�
 </span><span class="lnt">83
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># accounts/models.py</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># accounts/models.py</span>
 
 <span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
 <span class="kn">from</span> <span class="nn">django.contrib.auth.models</span> <span class="kn">import</span> <span class="n">AbstractBaseUser</span><span class="p">,</span> <span class="n">BaseUserManager</span>
@@ -385,7 +385,7 @@ Django AbstractBaseUser  django는 기본적으로 username 과 password를 가�
 <span class="c1"># 위에서 설명한 일반 유저 및 슈퍼유저의 생성 방식을 정의할 BaseUserManager를 상속받는</span>
 <span class="c1"># 나만의 사용자 매니저 모델을 생성합니다. 필수입니다.</span>
 <span class="k">class</span> <span class="nc">MyUserManager</span><span class="p">(</span><span class="n">BaseUserManager</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">create_user</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">nickname</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">create_user</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">nickname</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 		<span class="c1"># 만약 email을 입력하지 않으면 바로 에러를 뱉습니다.</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">email</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Users must have an email address&#39;</span><span class="p">)</span>
@@ -409,7 +409,7 @@ Django AbstractBaseUser  django는 기본적으로 username 과 password를 가�
             <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">,</span>
             <span class="n">nickname</span><span class="o">=</span><span class="n">nickname</span><span class="p">,</span>
         <span class="p">)</span>
-        <span class="n">user</span><span class="o">.</span><span class="n">is_admin</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="n">user</span><span class="o">.</span><span class="n">is_admin</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="n">user</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">using</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_db</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">user</span>
 
@@ -421,14 +421,14 @@ Django AbstractBaseUser  django는 기본적으로 username 과 password를 가�
     <span class="n">email</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">EmailField</span><span class="p">(</span>
         <span class="n">verbose_name</span><span class="o">=</span><span class="s1">&#39;email addresss&#39;</span><span class="p">,</span>
         <span class="n">max_length</span><span class="o">=</span><span class="mi">255</span><span class="p">,</span>
-        <span class="n">unique</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+        <span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="p">)</span>
-    <span class="n">nickname</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">default</span> <span class="o">=</span> <span class="bp">None</span><span class="p">)</span>
+    <span class="n">nickname</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">default</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
     
     <span class="c1"># 사용자 인증에 사용될 계정을 등록할 때 is_active와 is_admin도 필수값이기 때문에</span>
     <span class="c1"># 반드시 지정해주어야 합니다. (안하면 오류를 뱉습니다.)</span>
-    <span class="n">is_active</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">BooleanField</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-    <span class="n">is_admin</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">BooleanField</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+    <span class="n">is_active</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">BooleanField</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">is_admin</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">BooleanField</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 	<span class="c1"># 테이블을 생성하면 last_login 컬럼도 생성되는데 models.~~을 설정해주지 않으면 NULL값으로 입력됩니다.</span>
     
     
@@ -445,15 +445,15 @@ Django AbstractBaseUser  django는 기본적으로 username 과 password를 가�
     <span class="n">REQUIRED_FIELDS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;nickname&#39;</span><span class="p">,]</span>
 
     <span class="c1"># 이 아래는 선택사항입니다.</span>
-    <span class="k">def</span> <span class="nf">has_perm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">perm</span><span class="p">,</span> <span class="n">obj</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">has_perm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">perm</span><span class="p">,</span> <span class="n">obj</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="s2">&#34;Does the user have a specific permission?&#34;</span>
         <span class="c1"># Simplest possible answer: Yes, always</span>
-        <span class="k">return</span> <span class="bp">True</span>
+        <span class="k">return</span> <span class="kc">True</span>
 
     <span class="k">def</span> <span class="nf">has_module_perms</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">app_label</span><span class="p">):</span>
         <span class="s2">&#34;Does the user have permissions to view the app `app_label`?&#34;</span>
         <span class="c1"># Simplest possible answer: Yes, always</span>
-        <span class="k">return</span> <span class="bp">True</span>
+        <span class="k">return</span> <span class="kc">True</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">is_staff</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -467,12 +467,12 @@ Django AbstractBaseUser  django는 기본적으로 username 과 password를 가�
 <p>이후 MyUser를 settings.py에 등록.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># setting.py 아무곳에나 ex) &#39;앱이름.클래스명&#39;</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># setting.py 아무곳에나 ex) &#39;앱이름.클래스명&#39;</span>
 <span class="n">AUTH_USER_MODEL</span> <span class="o">=</span> <span class="s1">&#39;accounts.MyUser&#39;</span>
 <span class="o">...</span>
 </code></pre></td></tr></table>
@@ -501,14 +501,14 @@ Django AbstractBaseUser  django는 기본적으로 username 과 password를 가�
 <p><strong>Non-default argument follows default argument</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">django.contrib.auth.models</span> <span class="kn">import</span> <span class="n">BaseUserManager</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">django.contrib.auth.models</span> <span class="kn">import</span> <span class="n">BaseUserManager</span>
 
 <span class="k">class</span> <span class="nc">MyUserManager</span><span class="p">(</span><span class="n">BaseUserManager</span><span class="p">):</span>
 	<span class="k">def</span> <span class="nf">create_user</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="n">username</span><span class="p">)</span>  
@@ -525,12 +525,12 @@ Django AbstractBaseUser  django는 기본적으로 username 과 password를 가�
 </blockquote>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="o">&gt;</span> <span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">makemigrations</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="o">&gt;</span> <span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">makemigrations</span>
 <span class="o">&gt;</span> <span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">migrate</span>
 <span class="c1"># 명령어 입력 후 해결</span>
 </code></pre></td></tr></table>
@@ -594,8 +594,8 @@ Django AbstractBaseUser  django는 기본적으로 username 과 password를 가�
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 

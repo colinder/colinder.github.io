@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	<meta name="generator" content="Hugo 0.83.1" />
+	<meta name="generator" content="Hugo 0.87.0" />
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
@@ -102,52 +102,51 @@
         alt="/images/jg_02.jpg"
         title="/images/jg_02.jpg" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/colinder" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="mailto:kjonggwan@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/django_06_djangooracle18_error_log/">Django_06_Django &amp; Oracle18 error LOG</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-09-06">2021-09-06</time></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw"></i>Django</a>&nbsp;<a href="/categories/oracle/"><i class="far fa-folder fa-fw"></i>oracle</a></span></div><div class="content">​
-Django &amp; Oracle 18 오류 일지  각종 스트레스의 원인에 대하여 해결방법을 정리합니다.
+        <a href="/django_10_customauthuser_abstractuser/">Django_10_CustomAuthUser_AbstractUser</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-10-08">2021-10-08</time></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw"></i>Django</a>&nbsp;<a href="/categories/abstractuser/"><i class="far fa-folder fa-fw"></i>AbstractUser</a></span></div><div class="content">​
+Django AbstractUser  이전에 AbstractBaseUser를 사용한 커스텀 사용자 인증 테이블을 구성해보았습니다. 해당 내용에 이어서 AbstractUser로 커스텀 사용자 인증 테이블을 구성해보고 createsuperuser 명령어 입력시, 관리자 계정이 커스텀한 테이블에 생성되게 해보겠습니다.
  ​
-  ORA-00955: name is already used by an existing object
- 1 2 3  # 해결법 python manage.py makemigrations python manage.py migrate --fake-initial    이미 migrate 한 내용을 수정하니 반영되지 않아 오류가 발생하였는데 위의 명령어는 migratie를 초기화해서 재설정 하는 것 같습니다.
-​
-  그리고 많은 경우에
- 1 2  python manage.</div><div class="post-footer">
-        <a href="/django_06_djangooracle18_error_log/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/django/">Django</a>,&nbsp;<a href="/tags/oracle/">oracle</a></div></div>
+AbstractUser을 상속받아 커스텀을 진행  우선 AbstractUser는 Django에서 기본으로 제공해주는 사용자 인증 테이블의 요소를 그대로 가져와 사용하기 때문에 그 요소들은 어떤 것들이 있는지 알아보자.
+id, password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined 총 11개의 column이 존재하며 이외에 column을 추가 하고 싶을 때 코드를 추가로 작성합니다.</div><div class="post-footer">
+        <a href="/django_10_customauthuser_abstractuser/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/django/">Django</a>,&nbsp;<a href="/tags/abstractuser/">AbstractUser</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/django_05_check-db-connection/">Django_05_Check DB connection</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-09-06">2021-09-06</time></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw"></i>Django</a></span></div><div class="content">​
-Django DB 연결 확인 ​
-python manage.py createsuperuser 후.. default로 생기는 DB를 기준으로 실행
-​
-1 2  ## setting.py AUTH_USER_MODEL = &#39;auth.User&#39; # default 설정.   ​
-이후 terminal에서
-1 2 3 4 5 6 7  $ python manage.py shell_plus	# 모델에 접근하기 위해 shell_plus 실행 &gt; Post = get_user_model()	# 생성된 모델의 user table 불러오기 &gt; post = Post.objects.all()	# user table의 모든 값 가져오기 &gt; for i in post:	# for문으로 user table값 순환 &gt; print(i)	# user table 값 출력   하면 연결된 모델의 값을 확인할 수 있다.</div><div class="post-footer">
-        <a href="/django_05_check-db-connection/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/django/">Django</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/staticvsdynamic_link/">정적(Static) 링크 Vs 동적(Dynamic) 링크</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-09-06">2021-09-06</time></span>&nbsp;<span class="post-category">included in <a href="/categories/link/"><i class="far fa-folder fa-fw"></i>Link</a></span></div><div class="content">​
-정적(Static) 링크 Vs 동적(Dynamic) 링크 ​
-정적(Static) 링크 란?  link 단계에서 라이브러리(*.lib 파일)을 실행 바이너리(컴퓨터가 이해할 수 있는 문법으로 만들어진 결과물)에 포함한다는 의미
- *.lib 파일이란? &gt; Library 파일, 개발 코드에서 반복되는 기능들을 모아둔 파일
-  ex) *.exe 파일
-  라이브러리 관련 수정사항이 생기면 파일 전체를 다시 컴파일하여 재배포해야 한다.
-​
-​
-  동적(Dynamic) 링크 란?  특정 기능을 사용하고자 하는 실행 바이너리에서 필요시 사용할 수 있도록 최소한의 정보만 포함하여 링크하거나, 독립적으로 dll을 로드/사용/해제 시킨다는 의미.</div><div class="post-footer">
-        <a href="/staticvsdynamic_link/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/link/">Link</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/01_dutis_and_scope_at_deployment/">License 배포 시 소스코드 제공 의무와 범위</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-09-02">2021-09-02</time></span>&nbsp;<span class="post-category">included in <a href="/categories/license/"><i class="far fa-folder fa-fw"></i>license</a></span></div><div class="content">​
-License 배포 시 소스코드 제공 의무와 범위  License에 대하여 알아보다보니, 배포 시 준수해야 하는 내용이 별도로 존재하고 있어 오픈소스 SW라이선스 종합정보시스템에서 발최한 내용을 추가로 정리합니다.
+        <a href="/django_09_customauthuser_abstractbaseuser/">Django_09_CustomAuthUser_AbstractBaseUser</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-10-08">2021-10-08</time></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw"></i>Django</a>&nbsp;<a href="/categories/abstractbaseuser/"><i class="far fa-folder fa-fw"></i>AbstractBaseUser</a></span></div><div class="content">​
+Django AbstractBaseUser  django는 기본적으로 username 과 password를 가지고 로그인합니다. 하지만 요즘에는 대부분의 웹사이트들이 email 과 password로 로그인(사용자를 인식 및 인증)을 합니다.
  ​
+제가 진행할 것은 django의 AbstractBaseUser을 사용해 테이블을 만들고 사용자 인증하기 입니다.
+  조건
+  email, password, nickname 및 필수 요소(is_active, is_admin)로만 인증 테이블 구성.
+  createsuperuser 명령어 입력시, 관리자 계정이 커스텀한 테이블에 생성.
 ​
-- Work Based on the Code -제공의무: 원 저작물의 소스코드를 원본 그대로, 혹은 수정하여 새로운 SW에 포함하였을 경우 -제공범위: 원 저작물의 소스코드가 포함되어, 파생 저작물로 인정되는 범위내의 모든 소스코드 -GNU GPL, GNU AGPL 등
+    Django 공식문서에는 models.py에서 기본적인 사용자모델을 설정하고 이를 활용해 admin.</div><div class="post-footer">
+        <a href="/django_09_customauthuser_abstractbaseuser/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/django/">Django</a>,&nbsp;<a href="/tags/abstractbaseuser/">AbstractBaseUser</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/django_08_abstractbaseuservsabstractuser/">Django_08_AbstractBaseUser VS AbstractUser</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-10-07">2021-10-07</time></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw"></i>Django</a>&nbsp;<a href="/categories/abstractbaseuser/"><i class="far fa-folder fa-fw"></i>AbstractBaseUser</a>&nbsp;<a href="/categories/abstractuser/"><i class="far fa-folder fa-fw"></i>AbstractUser</a></span></div><div class="content">​
+Django AbstractBaseUser VS AbstractUser  Django로 프로젝트를 진행하면서 계정관련 내용을 등록하는 것을 가장 많이 했음에도, 아직 명확하게 차이를 알지 못하고 사용했던 것이 있었습니다.
+바로! User custom에 관한 부분이었는데요. 크게 AbstractBaseUser와 AbstractUser를 사용하는 방법이 있는데 이 둘의 차이를 꼼꼼히 알아보기 위해 해당 포스팅이 작성되었습니다.
+ ​
+AbstractBaseUser VS AbstractUser  프로젝트 생성 후 accounts 라는 app을 만들고 makemigrations &amp; migrate를 하기 전
+ ​
+1. Model 설정 AbstractBaseUser
+위치: accounts/models.py</div><div class="post-footer">
+        <a href="/django_08_abstractbaseuservsabstractuser/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/django/">Django</a>,&nbsp;<a href="/tags/abstractbaseuser/">AbstractBaseUser</a>,&nbsp;<a href="/tags/abstractuser/">AbstractUser</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/mariadb_setting/">MariaDB 설치 방법</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-09-15">2021-09-15</time></span>&nbsp;<span class="post-category">included in <a href="/categories/mariadb/"><i class="far fa-folder fa-fw"></i>mariaDB</a></span></div><div class="content">​
+MariaDB 설치 방법 1. 설치 https://mariadb.org/download/ 에서 자동으로 확인된 버전으로 다운로드 받습니다.
 ​
-- Derivative Work -제공의무: 원 저작물의 소스코드를 수정하여 사용한 경우 제공의무가 존재하며, 수정 없이 그대로 사용하였을 경우에는 소스코드를 제공하지 않아도 됨 -제공범위: 원 저작물을 사용함에 있어 수정을 거쳤다면, 원 저작물의 소스코드에서부터 존재하던 파일을 모두 공개해야 하며, 파생 저작물의 저작자가 추가적으로 생성한 부분에 대해서는 공개하지 않아도 됨 -GNU LGPL, NASA Open Source Agreement, Simple Public License 등</div><div class="post-footer">
-        <a href="/01_dutis_and_scope_at_deployment/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/license/">license</a></div></div>
+Next 클릭​
+별도의 커스텀은 하지 않습니다.​
+&lsquo;root 비밀번호 설정&rsquo;과 &lsquo;UTF 변환 및 외부에서 root 접속을 허용 할 것&rsquo;인지 물어보는 데 이곳이 중요합니다.
+단순 개발용이라면 상관없을 수 있으나 개인적으로 실제 운용할 서버 or 개발 서버라도 외부에서 root에 접속하게 하는 것은 보안상 좋지 않을 것이라고 생각합니다.
+실제로 서비스를 운영 할 서버라면 절때 root를 원격지에서 사용할 수 없게 하는 것을 추천합니다.</div><div class="post-footer">
+        <a href="/mariadb_setting/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/mariadb/">mariaDB</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -178,12 +177,12 @@ License 배포 시 소스코드 제공 의무와 범위  License에 대하여 �
                     <span class="page-link" aria-hidden="true">&hellip;</span>
                 </li><li class="page-item ">
                     <span class="page-link">
-                        <a href="/page/29/">29</a>
+                        <a href="/page/31/">31</a>
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 
