@@ -1,0 +1,25 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>deploy - Category - </title>
+        <link>https://colinder.github.io/categories/deploy/</link>
+        <description>deploy - Category - </description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 19 Jul 2023 11:05:45 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/deploy/" rel="self" type="application/rss+xml" /><item>
+    <title>How To Deploy Django on Windows server Using Apache</title>
+    <link>https://colinder.github.io/how-to-deploy-django-on-windows-server-using-apache/</link>
+    <pubDate>Wed, 19 Jul 2023 11:05:45 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/how-to-deploy-django-on-windows-server-using-apache/</guid>
+    <description><![CDATA[​
+How To Deploy Django on Windows server Using Apache  Window에 backend(django)를 배포할 일이 생겨 방법을 정리하였다. (iis를 써보려했으나 실패했다.)
+ ​
+✨단계가 꽤 된다. 
+요약    apache와 C++ 개발환경 세팅
+  django &amp; mod-wsgi 설치 및 연동
+  Apache 서버 구동
+   ​
+주의!
+ 기본적으로 python은 설치되어있다고 가정  ​
+​
+step 00. 다운 받고 환경을 만들어 보자   apache]]></description>
+</item></channel>
+</rss>

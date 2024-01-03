@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>What is Sequence_data &amp; apply AI - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="What is Sequence_data &amp; apply AI" />
+<meta property="og:description" content="​
+Sequence data 자연에는 사건이 발생하는데, 이는 대부분 시간에 따른 원인에 의한 결과로써 발생하게 된다. 예를들어
+  오전에는 맑았는데 오후에는 흐리다.
+  상반기에는 잘 팔렸는데, 하반기에는 잘 안팔린다.
+  기분이 나빴는데, 좋아졌다. 등등
+   순서(sequence)대로 하나씩 나열하여 나타낼 수 있는 데이터를 Sequence data라고 한다.
+그리고 이 데이터들은 서로 독립적이지 않다.는 특징을 가지고 있다. 즉, 원인과 결과가 무한이 이어져있다.
+  ​
+​
+Sequence data의 구조와 주로 활용되는 형태 많은 사람들이 시도해보는 주식 예측 인공지능 개발을 가정하여 설명." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://colinder.github.io/what_is_sequence_data/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-10-25T12:38:54&#43;09:00" />
+<meta property="article:modified_time" content="2022-10-25T12:38:54&#43;09:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
+
+<meta name="twitter:title" content="What is Sequence_data &amp; apply AI"/>
+<meta name="twitter:description" content="​
+Sequence data 자연에는 사건이 발생하는데, 이는 대부분 시간에 따른 원인에 의한 결과로써 발생하게 된다. 예를들어
+  오전에는 맑았는데 오후에는 흐리다.
+  상반기에는 잘 팔렸는데, 하반기에는 잘 안팔린다.
+  기분이 나빴는데, 좋아졌다. 등등
+   순서(sequence)대로 하나씩 나열하여 나타낼 수 있는 데이터를 Sequence data라고 한다.
+그리고 이 데이터들은 서로 독립적이지 않다.는 특징을 가지고 있다. 즉, 원인과 결과가 무한이 이어져있다.
+  ​
+​
+Sequence data의 구조와 주로 활용되는 형태 많은 사람들이 시도해보는 주식 예측 인공지능 개발을 가정하여 설명."/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/what_is_sequence_data/" /><link rel="prev" href="https://colinder.github.io/machine_learning_classification/" /><link rel="next" href="https://colinder.github.io/understand_of_mariadb/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "What is Sequence_data \u0026 apply AI",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/colinder.github.io\/what_is_sequence_data\/"
+        },"genre": "posts","keywords": "ai, sequence","wordcount":  537 ,
+        "url": "https:\/\/colinder.github.io\/what_is_sequence_data\/","datePublished": "2022-10-25T12:38:54+09:00","dateModified": "2022-10-25T12:38:54+09:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "colinder"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="">Hello New World</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="">Hello New World</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">What is Sequence_data &amp; apply AI</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/ai/"><i class="far fa-folder fa-fw"></i>AI</a>&nbsp;<a href="/categories/sequence/"><i class="far fa-folder fa-fw"></i>sequence</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-10-25">2022-10-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;537 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#sequence-data의-구조와-주로-활용되는-형태">Sequence data의 구조와 주로 활용되는 형태</a></li>
+        <li><a href="#apply-ai">Apply AI</a>
+          <ul>
+            <li><a href="#-여기서-알아야할-점이-있다-아래와-같은-데이터가-있다">💡 여기서 알아야할 점이 있다. 아래와 같은 데이터가 있다.</a></li>
+            <li><a href="#seq_data--filter--output">(<strong>seq_data</strong> ⦿ <strong>filter</strong> = <strong>output</strong>)</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>​</p>
+<h1 id="sequence-data">Sequence data</h1>
+<p>자연에는 사건이 발생하는데, 이는 대부분 시간에 따른 원인에 의한 결과로써 발생하게 된다. 예를들어</p>
+<ol>
+<li>
+<p>오전에는 맑았는데 오후에는 흐리다.</p>
+</li>
+<li>
+<p>상반기에는 잘 팔렸는데, 하반기에는 잘 안팔린다.</p>
+</li>
+<li>
+<p>기분이 나빴는데, 좋아졌다.  등등</p>
+</li>
+</ol>
+<blockquote>
+<p>순서(sequence)대로 하나씩 나열하여 나타낼 수 있는 데이터를 <code>Sequence data</code>라고 한다.</p>
+<p>그리고 이 <code>데이터들은 서로 독립적이지 않다.</code>는 특징을 가지고 있다.  즉,  원인과 결과가 무한이 이어져있다.</p>
+</blockquote>
+<hr>
+<p>​</p>
+<p>​</p>
+<h3 id="sequence-data의-구조와-주로-활용되는-형태">Sequence data의 구조와 주로 활용되는 형태</h3>
+<p>많은 사람들이 시도해보는 주식 예측 인공지능 개발을 가정하여 설명.</p>
+<ul>
+<li>A회사의 &lsquo;주가&rsquo;를 예측할 것이며 주식은 시간에 따라 ㄱ, ㄴ, ㄷ, ㄹ, ㅁ이라는 사건에 영향을 받는다.</li>
+<li>ㄱ, ㄴ, ㄷ, ㄹ, ㅁ은 수치화 할 수 있다.</li>
+</ul>
+<p>​</p>
+<p>A회사 주식의 변화를 표로 나다내면 아래와 같다.</p>
+<table>
+<thead>
+<tr>
+<th>날짜</th>
+<th>주가</th>
+<th>ㄱ</th>
+<th>ㄴ</th>
+<th>ㄷ</th>
+<th>ㄹ</th>
+<th>ㅁ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1900-01-01</td>
+<td>10,000</td>
+<td>45</td>
+<td>6</td>
+<td>23</td>
+<td>54</td>
+<td>3</td>
+</tr>
+<tr>
+<td>1900-01-02</td>
+<td>10,100</td>
+<td>41</td>
+<td>8</td>
+<td>28</td>
+<td>50</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1900-01-04</td>
+<td>10,200</td>
+<td>39</td>
+<td>4</td>
+<td>30</td>
+<td>47</td>
+<td>2</td>
+</tr>
+<tr>
+<td>1900-01-05</td>
+<td>10,200</td>
+<td>36</td>
+<td>4</td>
+<td>26</td>
+<td>49</td>
+<td>3</td>
+</tr>
+<tr>
+<td>1900-01-06</td>
+<td>10,500</td>
+<td>47</td>
+<td>7</td>
+<td>29</td>
+<td>46</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1900-01-07</td>
+<td>10,100</td>
+<td>50</td>
+<td>10</td>
+<td>24</td>
+<td>44</td>
+<td>2</td>
+</tr>
+<tr>
+<td>1900-01-08</td>
+<td>10,200</td>
+<td>60</td>
+<td>8</td>
+<td>25</td>
+<td>50</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p><strong>우선 간단히 데이터를 분석하자면,</strong></p>
+<ol>
+<li>1900-01-01부터 보통 1일간의 간격(sequence)으로 데이터가 수집되었다.</li>
+<li>1900-01-04 데이터는 결측되었다.</li>
+<li>데이터가 수집된 일자의 변수(feature) ㄱ, ㄴ, ㄷ, ㄹ, ㅁ의 결측은 없다.</li>
+</ol>
+<p>정도로 간단히 분석할 수 있다.</p>
+<p>​</p>
+<p>​</p>
+<h3 id="apply-ai">Apply AI</h3>
+<p><strong>이를 인공지능에 적용하기 위해서는 <code>데이터 전처리 </code>라는 과정이 필요하다.</strong></p>
+<p>데이터를 어떻게 전처리해 AI의 학습 데이터로 사용할지는</p>
+<ol>
+<li>전처리 방법의 차이</li>
+<li>학습용 데이터 구조를 어떻게 만드느냐?</li>
+<li>어떤 모델을 사용할 것이냐?</li>
+</ol>
+<p>등의 차이가 있고, 절대적인 <code>정답</code>은 없다.</p>
+<p>​</p>
+<p><strong>간단히 시퀀스 데이터 형태로 변환하자면,</strong></p>
+<p>data_set = [[45,6,23,54,3], [41,8,28,50,1], [39,4,30,47,2], [36,4,26,49,3], [47,7,29,46,1], [50,10,24,44,2], [60,8,25,50,3]]</p>
+<p>와 같이 구조화할 수 있겠다.</p>
+<hr>
+<p>​</p>
+<p>​</p>
+<h4 id="-여기서-알아야할-점이-있다-아래와-같은-데이터가-있다">💡 여기서 알아야할 점이 있다. 아래와 같은 데이터가 있다.</h4>
+<p><strong>seq_data = [0, 3, 4, 5]</strong></p>
+<p><strong>filter = [1, 2]</strong></p>
+<p><strong>seq_data</strong>에 <strong>filter</strong>를 곱해(<strong>seq_data</strong> ⦿ <strong>filter</strong>)</p>
+<image src="../images/what_is_sequence_data.assets\Screen-Shot-2017-12-21-at-17.29.53-300x251.png" style="display: block; margin: 10px auto;">
+<image src="../images/what_is_sequence_data.assets\image-20221025133232909.png" style="display: block; margin: 10px auto;">
+<p><b>output = [6, 11, 14]</b> 라는 결과가 나왔다.</p>
+<p>​</p>
+<p>*해당 과정의 흐름을 기억해야 한다.     /   <strong>seq_data</strong>에 <strong>filter</strong>를 적용해 <strong>output</strong>을 계산했다.</p>
+<h4 id="seq_data--filter--output">(<strong>seq_data</strong> ⦿ <strong>filter</strong> = <strong>output</strong>)</h4>
+<p>​</p>
+<p>위의 주식 예측 인공지능에 맞대어 생각해본다면,</p>
+<ul>
+<li>[0, 3]라는 변수가 있을 때 주가가 6이었고,</li>
+<li>[3, 4]라는 변수가 있을 때 주가가 11이었고,</li>
+<li>[4, 5]라는 변수가 있을 때 주가가 14이었다.</li>
+</ul>
+<p>​</p>
+<p>​</p>
+<p><b>그렇다면, 주식 예측 인공지능를 개발하기 위해서 진행되어야 하는 과정은</b></p>
+<p><strong>seq_data</strong>가 있고 <strong>output</strong>이 있을 때, <strong>filter</strong> 값를 찾아 <strong>향후 seq_data</strong>에 대입해 계산해보는 것이다.</p>
+<p>즉, (<strong>seq_data</strong> ⦿ <strong><span style="color:red">filter</span></strong> = <strong>output</strong>)에서 <strong><span style="color:red">filter</span></strong> 값을 찾아주는 것이 인공지능의 역할이며</p>
+<p>위의 <strong>filter</strong>라는 명칭은 인공지능에서 <b>가중치(weight)</b>라고 불리며 이를 찾아 가는 것이 인공지능의 핵심이다.</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>아까 주식 데이터에서 날짜를 고려하지 않고, 3일간의 데이터를 사용해 1일 뒤<span style="color: grey; font-size: .8em">(1900-01-09)</span>의 주가를 예측한다고 했을 때,</p>
+<table>
+<thead>
+<tr>
+<th>날짜</th>
+<th>주가</th>
+<th>ㄱ</th>
+<th>ㄴ</th>
+<th>ㄷ</th>
+<th>ㄹ</th>
+<th>ㅁ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1900-01-01</td>
+<td>10,000</td>
+<td>45</td>
+<td>6</td>
+<td>23</td>
+<td>54</td>
+<td>3</td>
+</tr>
+<tr>
+<td>1900-01-02</td>
+<td>10,100</td>
+<td>41</td>
+<td>8</td>
+<td>28</td>
+<td>50</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1900-01-04</td>
+<td>10,200</td>
+<td>39</td>
+<td>4</td>
+<td>30</td>
+<td>47</td>
+<td>2</td>
+</tr>
+<tr>
+<td>1900-01-05</td>
+<td>10,200</td>
+<td>36</td>
+<td>4</td>
+<td>26</td>
+<td>49</td>
+<td>3</td>
+</tr>
+<tr>
+<td>1900-01-06</td>
+<td>10,500</td>
+<td>47</td>
+<td>7</td>
+<td>29</td>
+<td>46</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1900-01-07</td>
+<td>10,100</td>
+<td>50</td>
+<td>10</td>
+<td>24</td>
+<td>44</td>
+<td>2</td>
+</tr>
+<tr>
+<td>1900-01-08</td>
+<td>10,200</td>
+<td>60</td>
+<td>8</td>
+<td>25</td>
+<td>50</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>01-01, 01-02 데이터는 활용하기 어렵다. (별도의 결측치 대치 전처리를 하지 않는 이상.)</p>
+<p>=&gt; 연속된 4일간의 데이터가 있어야, 주제에 맞는 인공지능 학습용 데이터 세트를 만들 수 있다.</p>
+<p>​</p>
+<p>[[39,4,30,47,2], [36,4,26,49,3], [47,7,29,46,1]] x  <b>filter(weight)</b>  = 10,100</p>
+<p>[[36,4,26,49,3], [47,7,29,46,1], [50,10,24,44,2]] x  <b>filter(weight)</b>  = 10,200</p>
+<p>[[47,7,29,46,1], [50,10,24,44,2], [60,8,25,50,3]] x  <b>filter(weight)</b>  = ?</p>
+<p>이렇게 인공지능은 <b>filter(weight)</b>를 찾아 &ldquo;예측&quot;을 하게 된다.</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>이 과정에 &ldquo;예측&quot;에 대한 많은 오점과 오류와 가정를 찾기를 바란다.</p>
+<p>이와 같은 방법이 맞을 수 있으나, 우리가 사는 세상에 적용하기에 수많은 오점과 오류가 있으며, 가정이 필요하다.</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-10-25</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/what_is_sequence_data/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/ai/">AI</a>,&nbsp;<a href="/tags/sequence/">sequence</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/machine_learning_classification/" class="prev" rel="prev" title="Machine_learning type"><i class="fas fa-angle-left fa-fw"></i>Machine_learning type</a>
+            <a href="/understand_of_mariadb/" class="next" rel="next" title="Understand_of_MariaDB">Understand_of_MariaDB<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://colinder-github-io.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":-1},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

@@ -1,0 +1,22 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>scaling - Category - </title>
+        <link>https://colinder.github.io/categories/scaling/</link>
+        <description>scaling - Category - </description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 07 Jul 2022 17:19:29 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/scaling/" rel="self" type="application/rss+xml" /><item>
+    <title>What is Data_Scaling</title>
+    <link>https://colinder.github.io/what_is_data_scaling/</link>
+    <pubDate>Thu, 07 Jul 2022 17:19:29 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/what_is_data_scaling/</guid>
+    <description><![CDATA[​
+데이터 스케일링(Data Scaling) 이란?  데이터의 값의 범위를 조정하는 것
+ ​
+​
+​
+🤔 왜 데이터 스케일링을 하는가?  데이터의 경향, feature의 영향, 상관관계 등 데이터를 분석하는데 활용할 수 있으며, 인공지능 개발 중 학습단계에서 여러 feature의 영향도를 비슷한 수준으로 맞추기 위해 범위를 조정.
+ ​
+아래 그림을 보면서 이해해보겠습니다.
+과제  여러 feature(성별, 나이, 몸무게, 자산현황)의 특성을 보고 Label을 예측하는 모델을 만든다고 가정  문제점  값의 범위를 보면  성별 0, 1 나이 0~100, 몸무게 0~120, 자산현황 0~700,000,000, Label은 0~800,000,000의 값을 갖는다고 가정한다면,    ​]]></description>
+</item></channel>
+</rss>

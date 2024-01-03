@@ -1,0 +1,78 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>security - Category - </title>
+        <link>https://colinder.github.io/categories/security/</link>
+        <description>security - Category - </description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 28 Feb 2023 14:09:18 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/security/" rel="self" type="application/rss+xml" /><item>
+    <title>AES django &gt; vue 적용</title>
+    <link>https://colinder.github.io/aes_django_vue/</link>
+    <pubDate>Tue, 28 Feb 2023 14:09:18 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/aes_django_vue/</guid>
+    <description><![CDATA[​
+​
+AES_django &gt; vue  pycryptodomex(django)에서 CryptoJS(vue)로 암호화 복호화 하는 과정을 정리
+ ​
+ ​
+​
+​
+✨기본 사항  django에서 6자리 숫자의 OTP를 생성해 암호화 하여 vue로 전달하는 상황을 가정. 각기 다른 시스템의 라이브러리를 사용. AES의 CBC 모드를 기본으로 가정. CBC모드를 사용하기 위해서 필수 인자 3가지  secret_key: 암호화 &amp; 복호화를 위한 메인 키 (대칭키) iv: 암호화 &amp; 복호화를 위한 서브 키 data: 암호화를 하고 싶은 데이터   💡중요  pycryptodomex 암호화  해당 라이브러리에서는 bytes type의 데이터만 인자로 받을 수 있다.]]></description>
+</item><item>
+    <title>AES vue &gt; django 적용</title>
+    <link>https://colinder.github.io/aes_vue_django/</link>
+    <pubDate>Fri, 24 Feb 2023 12:14:10 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/aes_vue_django/</guid>
+    <description><![CDATA[​
+​
+AES_vue &gt; django  CryptoJS(vue) 에서 pycryptodomex(django)로 암호화 복호화 하는 과정을 정리
+ ​
+ ​
+​
+​
+✨기본 사항  각기 다른 시스템의 라이브러리를 사용. AES의 CBC 모드를 기본으로 가정. CBC모드를 사용하기 위해서 필수 인자 3가지  secret_key: 암호화 &amp; 복호화를 위한 메인 키 (대칭키) iv: 암호화 &amp; 복호화를 위한 서브 키 data: 암호화를 하고 싶은 데이터   vue에서 object를 통째로 암호화 하여 django로 전달하는 상황을 가정.]]></description>
+</item><item>
+    <title>AES django 적용</title>
+    <link>https://colinder.github.io/aes_django/</link>
+    <pubDate>Tue, 21 Feb 2023 12:04:31 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/aes_django/</guid>
+    <description><![CDATA[​
+​
+AES django 적용  django에 PyCryptodomex를 설치하여 적용
+ 1  pip install pycryptodomex     주의 사항
+  PyCryptodome is a fork of PyCrypto
+  For more information, see the homepage.를 클릭하면, pycryptodome의 문서로 이동하는데, 왜 그런건지 모르겠다. 아마 의존성?이 있어 그런건가 싶다.
+  문서에 예시를 보면
+1  from Crypto.Cipher import AES   와 같이 import 하라는데, 이러면 안되고
+1  from Cryptodome.]]></description>
+</item><item>
+    <title>AES vue 적용</title>
+    <link>https://colinder.github.io/aes_vue/</link>
+    <pubDate>Mon, 20 Feb 2023 17:04:26 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/aes_vue/</guid>
+    <description><![CDATA[​
+​
+AES Vue 적용  vue.js에 CryptoJS를 설치하여 진행
+ 1  npm i crypto-js    주의 사항  AES에 사용되는 parameters는 모두 bytes 타입만 사용이 가능하다. 하여 대부분 utf-8로 encoding하여 사용 (이 부분은 아직 정확하게 이해하지 못했다.)    ​
+​
+​
+암호화(encryption) 1 2 3 4 5 6 7 8 9 10  var secretKey = &#39;abcdefghijklmnopqrstuvwxyzabcdef&#39;; var iv = &#39;1234567890123456&#39;; var data = this.]]></description>
+</item><item>
+    <title>what is AES</title>
+    <link>https://colinder.github.io/what_is_aes/</link>
+    <pubDate>Mon, 20 Feb 2023 16:48:04 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/what_is_aes/</guid>
+    <description><![CDATA[​
+​
+AES 보안  보안 진단을 받아보니, 생각보다 API 통신은 해킹이 쉽다.
+하여 보안에 신경써야 하는 경우, 기술들이 다양하게 있는데, 그 중 AES&lt;Advanced Encryption Standard&gt;를 간단히 알아보고 이후 적용하는 방법과 과정에 대하여 정리한다.
+AES는 미국 표준 기술 연구소에 의해서 연방 정보 처리 표준으로 지정된 암호화 방식이며 NSA에 의해 1급 비밀에 사용할 수 있도록 승인된 암호화 알고리즘 중 유일하게 공개된 알고리즘 - 출처 : 나무위키
+ ​
+​
+​
+환경 설정  frontend = vue.]]></description>
+</item></channel>
+</rss>

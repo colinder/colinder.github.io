@@ -1,7 +1,11 @@
 {
 	"version": 3,
 	"file": "style.min.css",
+<<<<<<< HEAD
 	"sourceRoot": "C:/WORK/03_Blog",
+=======
+	"sourceRoot": "C:/Users/kjong/Desktop/JG/05_Blog",
+>>>>>>> 9c06ef901d760bc6215aed209d8dbeac1922eeba
 	"sources": [
 		"assets/css/style.scss",
 		"assets/css/_variables.scss",

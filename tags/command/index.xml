@@ -1,0 +1,25 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>command - Tag - </title>
+        <link>https://colinder.github.io/tags/command/</link>
+        <description>command - Tag - </description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 27 Mar 2023 13:49:32 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/command/" rel="self" type="application/rss+xml" /><item>
+    <title>docker Command</title>
+    <link>https://colinder.github.io/command/</link>
+    <pubDate>Mon, 27 Mar 2023 13:49:32 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/command/</guid>
+    <description><![CDATA[​
+내가 자주 사용하는 docker 명령어 정리 ​
+​
+1. 현재 docker container 상태 확인하기 1  docker ps -a  ​
+​
+​
+2. 현재 docker image 조회 docker hub에서 받은 image와 내가 생성한 image를 보는 명령어
+1 2  docker images # 또는 docker image ls / 둘은 같은 결과를 반환하는 명령어  ​
+​
+​
+3. image 생성   hub에서 pull 받기
+1  docker pull &lt;다운받을 image 이름&gt;   다운받을 image 이름 &amp; 종류는 Docker Hub Web(https://hub.]]></description>
+</item></channel>
+</rss>

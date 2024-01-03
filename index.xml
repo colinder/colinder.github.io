@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title></title>
@@ -67,57 +68,183 @@ What is webpack?  오늘나 자바스크립트 개발에서 모듈을 사용하�
     <pubDate>Mon, 28 Feb 2022 09:23:51 &#43;0900</pubDate>
     <author>Author</author>
     <guid>https://colinder.github.io/what_is_es2015/</guid>
+=======
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title></title>
+        <link>https://colinder.github.io/</link>
+        <description>Hello New World</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 17 Oct 2023 12:24:58 &#43;0900</lastBuildDate>
+            <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>Time Complexity 시간복잡도</title>
+    <link>https://colinder.github.io/time_complexity/</link>
+    <pubDate>Tue, 17 Oct 2023 12:24:58 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/time_complexity/</guid>
+>>>>>>> 9c06ef901d760bc6215aed209d8dbeac1922eeba
     <description><![CDATA[​
-What is ES2015?  웹 개발 도구와 내용을 정리하다보면 등장하던 ES2015. 그냥 어떤 느낌의 단어인지 어렴풋이 알고만 있다가 확실하게 정리해 알아두고 싶어 내용을 정리합니다.
+Time Complexity (시간 복잡도)  효율적인 알고리즘 구성을 위해 항상 신경써야하는 시간 복잡도.
+그리고 시간 복잡도를 표기하는 방법인 Big-O(빅-오) 표기법에 대해 정리합니다.
  ​
 ​
-​
-우선 javaScript에 대하여 조금 알아봅시다.  javaScript는 프로그래밍 언어입니다. 프로그래밍 언어는 지금도 꾸준히 개선되고 발전됩니다. 계속 변화하고 있기에 특정 시기에 개발된 상태를 1.2.1과 같이 버전으로 등록해 배포합니다. 자바스크립트는 결점이 상당히 많은 언어였고, 사용자들이 직접 결점을 보완하는 방법으로 발전되어 왔는데, **ECMA(European Computer Manufacturer&rsquo;s Association)**라는 단체에서 기존의 결점을 보완한 표준 자바스크립트 버전을 매년 발표하게 됩니다.]]></description>
+시간 복잡도  위키백과에 따르면 시간복잡도는 계산복잡도 이론에서 문제를 해결하는데 걸리는 시간과 입력의 함수 관계를 가리킨다. 또 컴퓨터과학에서 알고리즘의 시간복잡도는 입력을 나타내는 문자열 길이의 함수로서 작동하는 알고리즘을 취해 시간을 정량화하는 것인데, 간단히 input 후 연산이 진행되고 output을 반환하는데 시간이 얼마나 걸리는가?를 계산한 값입니다. 조금 더 간단하게는 알고리즘의 수행시간입니다.]]></description>
 </item><item>
-    <title>What is Web Socket?</title>
-    <link>https://colinder.github.io/what_is_web_socket/</link>
-    <pubDate>Fri, 25 Feb 2022 12:20:35 &#43;0900</pubDate>
+    <title>react-native Things</title>
+    <link>https://colinder.github.io/things/</link>
+    <pubDate>Thu, 20 Jul 2023 21:24:52 &#43;0900</pubDate>
     <author>Author</author>
-    <guid>https://colinder.github.io/what_is_web_socket/</guid>
+    <guid>https://colinder.github.io/things/</guid>
     <description><![CDATA[​
-What is Web Socket?  Web 통신은 무조건 두 단계를 걸쳐 동작합니다. 요청과 응답. 간단히 어떤 요청이 있을 때만 서버와 연결되어 어떤 응답을 하게 됩니다. 이러한 방식을 HTTP라고 합니다. 예를 들어, Naver.com에 접속하는 것은 &lsquo;Naver.com&rsquo;이라는 요청을 보낸 것이고 그에 대한 응답으로 naver의 메인 화면을 보여주는 것이죠. 그런데 만약 실시간 채팅 서비스나 푸시 알람을 구현해야 한다면, 매우 잦은 요청을 보내야 하고 네트워크 상 많은 부하를 발생시킬 수 있습니다.
- HTML5이라는 웹 표준이 생긴이래로 이러한 HTTP의 단점을 보완하기 위해 웹 소켓(Web Socket)이 등장했습니다.]]></description>
+React Native 시작하기 (with Typescript)  myApp은 본인이 원하는 프로젝트 이름으로 바꾸면 됩니다. 가장 최근 버전으로 프로젝트 세팅  1  npx react-native@latest init myApp --template react-native-template-typescript   ​
+​
+​
+실행명령어 Metro 실행 명령어
+1  npx react-native start   ​
+​
+​
+절대 경로 세팅   공식문서 여기 참고하시면 좋습니다. v0.72 기준
+  저는 아래와 같은 폴더 구조로 세팅했고 이 중 src를 root로 설정하고 싶었습니다.]]></description>
 </item><item>
-    <title>localStorage vs sessionStorage</title>
-    <link>https://colinder.github.io/localvssession_storage/</link>
-    <pubDate>Wed, 23 Feb 2022 14:32:36 &#43;0900</pubDate>
+    <title>How To Deploy Django on Windows server Using Apache</title>
+    <link>https://colinder.github.io/how-to-deploy-django-on-windows-server-using-apache/</link>
+    <pubDate>Wed, 19 Jul 2023 11:05:45 &#43;0900</pubDate>
     <author>Author</author>
-    <guid>https://colinder.github.io/localvssession_storage/</guid>
+    <guid>https://colinder.github.io/how-to-deploy-django-on-windows-server-using-apache/</guid>
     <description><![CDATA[​
-Local Storage와 Session Storage의 차이 를 알아보기 전에
-​
-​
- &lsquo;Storage(web storage)&lsquo;란 무엇인지 우선 알아봅시다.  HTML5에서 등장한 웹의 데이터를 클라이언트에 저장할 수 있는 기능
- 인터넷상의 통신을 하는데 어떤 자료를 가지고 있어야 한다거나, 나의 정보(유저정보)를 관리하는 등의 데이터 관리를 위한 저장소 기능. 그리고 storage는 두 가지 종류가 존재
-​
-​
- Local Storage와 Session Storage   Local storage
-origin(요청이 시작된 서버를 나타내는 URL)이 같을 경우, 여러 탭과 브라우저 창에서 공유되는 저장소.]]></description>
-</item><item>
-    <title>폴더안에 있는 특정 파일 리스트 가져오기</title>
-    <link>https://colinder.github.io/filelistimport/</link>
-    <pubDate>Tue, 22 Feb 2022 10:37:15 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/filelistimport/</guid>
-    <description><![CDATA[​
-폴더 안에 있는 특정 파일 리스트 정리  어떤 폴더 안에 있는 특정 확장자명의 파일들의 리스트를 정리하고 싶을 때 사용합니다.
+How To Deploy Django on Windows server Using Apache  Window에 backend(django)를 배포할 일이 생겨 방법을 정리하였다. (iis를 써보려했으나 실패했다.)
  ​
-1 2 3 4 5 6 7  ## 폴더안에 있는 .csv파일 리스트 가져오기 import os path = &#39;/경로/&#39; file_lists = os.listdir(path) file_list_result = [file for file in file_lists if file.endswith(&#39;.csv&#39;)] ## 파일명 끝이 .csv인 경우   ​
-이후 pandas DataFrame에 넣을 때
-1 2 3 4 5 6  import pandas as pd df = pd.]]></description>
+✨단계가 꽤 된다. 
+요약    apache와 C++ 개발환경 세팅
+  django &amp; mod-wsgi 설치 및 연동
+  Apache 서버 구동
+   ​
+주의!
+ 기본적으로 python은 설치되어있다고 가정  ​
+​
+step 00. 다운 받고 환경을 만들어 보자   apache]]></description>
 </item><item>
-    <title>Machine VS Deep Learning</title>
-    <link>https://colinder.github.io/machine-deep/</link>
-    <pubDate>Tue, 22 Feb 2022 09:43:00 &#43;0900</pubDate>
+    <title>외부 &amp; 내부 IP</title>
+    <link>https://colinder.github.io/what_is_ip/</link>
+    <pubDate>Tue, 18 Jul 2023 16:51:22 &#43;0900</pubDate>
     <author>Author</author>
-    <guid>https://colinder.github.io/machine-deep/</guid>
+    <guid>https://colinder.github.io/what_is_ip/</guid>
     <description><![CDATA[​
+<<<<<<< HEAD
 &lsquo;머신러닝&rsquo;이란 무엇인지 우선 알아봅시다.  머신 러닝(machine learning) 또는 기계 학습(機械學習)은 경험을 통해 자동으로 개선하는 컴퓨터 알고리즘 연구 분야입니다. 이는 인공지능의 한 분야로 간주되며, 컴퓨터가 학습할 수 있도록 하는 알고리즘과 기술을 개발합니다. 예를 들어 &lsquo;이 운동화가 진품이 맞는지?&rsquo;, &lsquo;특정 시간대에 A에서 B까지 가는데 얼마나 시간이 걸리는지?&rsquo;, &lsquo;수신한 메일이 스팸메일인지?&rsquo; 등 표현(representation)과 일반화(generalization)가 핵심인 기술입니다. 표현이란 데이터의 평가이며, 일반화란 아직 알 수 없는 데이터의 처리를 의미합니다.
  인공지능 ⊃ 머신러닝 ⊃ 딥러닝]]></description>
 </item></channel>
 </rss>
+=======
+외부 &amp; 내부 IP 란?  backend 개발을 하다보면, IP에 대하여 알아야하는 순간이 온다. 그래서 알아보자.
+ ​
+​
+IP란?  인터넷 프로토콜(Internet Protocol)의 약자로, 인터넷이 통하는 네트워크에서 어떤 정보를 수신하고 송신하는 통신에 대한 규약을 의미
+ ​
+​
+IP면 IP지? 내부, 외부는 무엇인가? 우리 집을 생각해보자.
+우리는 통신사의 어떤 기기를 대여받아 인터넷 와이파이를 사용하고 있다. 여기가 포인트다.
+어떤 기기로 우리 집안에 와이파이를 뿌려주고 있고, 우리 가족은 이 기기의 와이파이로 인터넷에 접속한다!]]></description>
+</item><item>
+    <title>React Scss_setting</title>
+    <link>https://colinder.github.io/scss_setting/</link>
+    <pubDate>Thu, 04 May 2023 15:36:57 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/scss_setting/</guid>
+    <description><![CDATA[​
+React_Style 관리  전 css보다 scss가 더 좋습니다. Sassy CSS - 문법적으로 짱 멋진(Sassy) CSS이기 때문입니다.
+ ​
+​
+react에 scss 적용하기  간단히 라이브러리 하나만 설치해주고 파일명만 바꿔주면 됩니다.
+ *CRA 공식 문서에 나와있는 방법을 따릅니다.
+​
+​
+  package.json이 있는 위치에서
+1  npm install sass   ​
+  .css로 된 파일명을 .scss로 바꾸면 끝.
+  ​
+​
+​
+​
+​
+👀 많은 레퍼런스가&hellip; 1  npm install node-sass   해당 명령어로 sass를 적용하는데, 동료가 깃헙에서 npm i를 하는데 계속 오류가 났고 저도 간헐적으로 에러가 발생해 설명한 방식으로 변경하였습니다.]]></description>
+</item><item>
+    <title>React Scoped_css</title>
+    <link>https://colinder.github.io/scoped_css/</link>
+    <pubDate>Wed, 03 May 2023 14:53:20 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/scoped_css/</guid>
+    <description><![CDATA[​
+React_Style 관리  Vue에는 .vue 파일마다 &lt;style&gt;가 있고 여기에 &lt;style scoped&gt;를 주면 해당 파일에만 적용되는 style을 구성할 수 있는데, react는 어떻게 하는지 알아봅니다.
+ ​
+​
+scoped css 설정  지역적으로 사용하고 싶은 css 설정 방법
+ ​
+폴더 구조를 보자면. (구조는 마음대로 구성하여도 됩니다. 아래는 제 마음대로 구성한 것입니다.)
+1 2 3 4 5 6 7 8 9 10 11 12  src ├── assets │ ├── Styles │ ├── common.]]></description>
+</item><item>
+    <title>React global_Style_관리</title>
+    <link>https://colinder.github.io/global_css_setting/</link>
+    <pubDate>Tue, 02 May 2023 14:32:19 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/global_css_setting/</guid>
+    <description><![CDATA[​
+React Style_관리  전역으로 사용할 css 설정은 어떻게 하는지 알아봅니다.
+ *기본적으로 typescript가 적용되어 있습니다.
+​
+​
+Global css 설정  전역으로 사용하고 싶은 css 설정 방법
+ ​
+폴더 구조를 보자면. (구조는 마음대로 구성하여도 됩니다. 아래는 제 마음대로 구성한 것입니다.)
+1 2 3 4 5 6  src ├── assets │ ├── Styles │ ├── common.css │ ... └── index.tsx   ​
+  global css 만들기]]></description>
+</item><item>
+    <title>npm? npx?</title>
+    <link>https://colinder.github.io/npm_npx/</link>
+    <pubDate>Thu, 20 Apr 2023 15:10:58 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/npm_npx/</guid>
+    <description><![CDATA[​
+npm Vs npx  예전부터 궁금했지만 굳이 알아볼 필요까지는 없었다가, 여드름이 터지듯 갑자기 궁금해서져 알아봤습니다.
+ ​
+​
+가장 큰 차이는 설치를 할 것인가 아닌가   컴퓨터에 패키지 전역으로 설치하여 실행: npm 컴퓨터에 패키지 설치 없이 이번만 실행: npx     npm는 컴퓨터 전역(global)에 패키지(npm 모듈 시스템)를 설치한다는 의미입니다.
+만약 npm -g와 같이 뒤에 -g가 있다면, 전역으로 설치한다는 옵션입니다. -g 옵션이 없으면 NPM 패키지는 node_modules라는 이름의 폴더 안에 저장됩니다.]]></description>
+</item><item>
+    <title>React Init</title>
+    <link>https://colinder.github.io/init_setting/</link>
+    <pubDate>Thu, 20 Apr 2023 14:33:44 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/init_setting/</guid>
+    <description><![CDATA[​
+React 시작하기  vue2 서비스가 23년 12월 31일에 종료된다&hellip; vue3는 개인적으로 실패한 프로젝트라 생각해 vue2를 고집하고 있었는데&hellip;.
+vue3로 갈 것인가. 그냥 react로 갈 것인가 고민하다. 일단 알아보자는 마음으로 정리한 내용이다.
+ ​
+​
+react 시작하기 앞서 준비할 것  node.js 에디터(ex. vscode)  ​
+​
+react 시작하기  준비가 끝났으니, react 프로젝트를 생성해보자
+ ​
+  프로젝트 초기 세팅 명령어
+1  npx create-react-app hello-world     hello-world 라는 이름의 프로젝트를 생성]]></description>
+</item><item>
+    <title>docker Command</title>
+    <link>https://colinder.github.io/command/</link>
+    <pubDate>Mon, 27 Mar 2023 13:49:32 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/command/</guid>
+    <description><![CDATA[​
+내가 자주 사용하는 docker 명령어 정리 ​
+​
+1. 현재 docker container 상태 확인하기 1  docker ps -a  ​
+​
+​
+2. 현재 docker image 조회 docker hub에서 받은 image와 내가 생성한 image를 보는 명령어
+1 2  docker images # 또는 docker image ls / 둘은 같은 결과를 반환하는 명령어  ​
+​
+​
+3. image 생성   hub에서 pull 받기
+1  docker pull &lt;다운받을 image 이름&gt;   다운받을 image 이름 &amp; 종류는 Docker Hub Web(https://hub.]]></description>
+</item></channel>
+</rss>
+>>>>>>> 9c06ef901d760bc6215aed209d8dbeac1922eeba

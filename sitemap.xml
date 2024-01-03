@@ -2,6 +2,7 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
+<<<<<<< HEAD
             <loc>https://colinder.github.io/</loc><lastmod>2024-01-03T13:36:17&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://colinder.github.io/categories/</loc><lastmod>2024-01-03T13:36:17&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://colinder.github.io/tags/nest/</loc><lastmod>2024-01-03T13:36:17&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
@@ -21,11 +22,129 @@
             <loc>https://colinder.github.io/categories/typescript/</loc><lastmod>2024-01-03T13:23:57&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://colinder.github.io/tags/web/</loc><lastmod>2022-03-01T09:17:44&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/categories/web/</loc><lastmod>2022-03-01T09:17:44&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+=======
+            <loc>https://colinder.github.io/</loc><lastmod>2023-10-17T12:24:58&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://colinder.github.io/categories/</loc><lastmod>2023-10-17T12:24:58&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://colinder.github.io/categories/computer-science/</loc><lastmod>2023-10-17T12:24:58&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://colinder.github.io/tags/computer-science/</loc><lastmod>2023-10-17T12:24:58&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://colinder.github.io/tags/cs/</loc><lastmod>2023-10-17T12:24:58&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://colinder.github.io/posts/</loc><lastmod>2023-10-17T12:24:58&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://colinder.github.io/tags/</loc><lastmod>2023-10-17T12:24:58&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://colinder.github.io/time_complexity/</loc><lastmod>2023-10-17T12:24:58&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://colinder.github.io/tags/%EC%8B%9C%EA%B0%84%EB%B3%B5%EC%9E%A1%EB%8F%84/</loc><lastmod>2023-10-17T12:24:58&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://colinder.github.io/categories/%EC%8B%9C%EA%B0%84%EB%B3%B5%EC%9E%A1%EB%8F%84/</loc><lastmod>2023-10-17T12:24:58&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://colinder.github.io/tags/react-native/</loc><lastmod>2023-07-20T21:24:52&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/react-native/</loc><lastmod>2023-07-20T21:24:52&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/things/</loc><lastmod>2023-07-20T21:24:52&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/web/</loc><lastmod>2023-07-20T21:24:52&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/apache/</loc><lastmod>2023-07-19T11:05:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/apache/</loc><lastmod>2023-07-19T11:05:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/deploy/</loc><lastmod>2023-07-19T11:05:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/deploy/</loc><lastmod>2023-07-19T11:05:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/django/</loc><lastmod>2023-07-19T11:05:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/django/</loc><lastmod>2023-07-19T11:05:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/how-to-deploy-django-on-windows-server-using-apache/</loc><lastmod>2023-07-19T11:05:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/ip/</loc><lastmod>2023-07-18T16:51:22&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/ip/</loc><lastmod>2023-07-18T16:51:22&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/web/</loc><lastmod>2023-07-18T16:51:22&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/what_is_ip/</loc><lastmod>2023-07-18T16:51:22&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/react/</loc><lastmod>2023-05-04T15:36:57&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/react/</loc><lastmod>2023-05-04T15:36:57&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/scss_setting/</loc><lastmod>2023-05-04T15:36:57&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/scoped_css/</loc><lastmod>2023-05-03T14:53:20&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/global_css_setting/</loc><lastmod>2023-05-02T14:32:19&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/npm/</loc><lastmod>2023-04-20T15:10:58&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/npm_npx/</loc><lastmod>2023-04-20T15:10:58&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/npx/</loc><lastmod>2023-04-20T15:10:58&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/init_setting/</loc><lastmod>2023-04-20T14:33:44&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/command/</loc><lastmod>2023-03-27T13:49:32&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/docker/</loc><lastmod>2023-03-27T13:49:32&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/docker/</loc><lastmod>2023-03-27T13:49:32&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/command/</loc><lastmod>2023-03-27T13:49:32&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/aes/</loc><lastmod>2023-02-28T14:09:18&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/aes/</loc><lastmod>2023-02-28T14:09:18&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/aes_django_vue/</loc><lastmod>2023-02-28T14:09:18&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/security/</loc><lastmod>2023-02-28T14:09:18&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/security/</loc><lastmod>2023-02-28T14:09:18&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/aes_vue_django/</loc><lastmod>2023-02-24T12:14:10&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/aes_django/</loc><lastmod>2023-02-21T12:04:31&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/aes_vue/</loc><lastmod>2023-02-20T17:04:26&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/what_is_aes/</loc><lastmod>2023-02-20T16:48:04&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/ai/</loc><lastmod>2022-12-28T16:44:00&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/ai/</loc><lastmod>2022-12-28T16:44:00&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/overfitting/</loc><lastmod>2022-12-28T16:44:00&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/overfitting/</loc><lastmod>2022-12-28T16:44:00&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/overfitting/</loc><lastmod>2022-12-28T16:44:00&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/ajax/</loc><lastmod>2022-12-14T16:45:55&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/axios/</loc><lastmod>2022-12-14T16:45:55&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/vue/</loc><lastmod>2022-12-14T16:45:55&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/axios/</loc><lastmod>2022-12-14T16:45:55&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/08_vue_vuex-concept/</loc><lastmod>2022-11-29T13:01:01&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/vue/</loc><lastmod>2022-11-29T13:01:01&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/mariadb/</loc><lastmod>2022-11-11T13:20:53&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/mariadb/</loc><lastmod>2022-11-11T13:20:53&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/understand_of_mariadb/</loc><lastmod>2022-11-11T13:20:53&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/sequence/</loc><lastmod>2022-10-25T12:38:54&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/sequence/</loc><lastmod>2022-10-25T12:38:54&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/what_is_sequence_data/</loc><lastmod>2022-10-25T12:38:54&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/machine_learning/</loc><lastmod>2022-08-10T14:07:57&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/machine_learning/</loc><lastmod>2022-08-10T14:07:57&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/machine_learning_classification/</loc><lastmod>2022-08-10T14:07:57&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/ml/</loc><lastmod>2022-08-10T14:07:57&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/ml/</loc><lastmod>2022-08-10T14:07:57&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/why_transform_after_fit/</loc><lastmod>2022-07-08T14:50:36&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/fit/</loc><lastmod>2022-07-08T14:50:36&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/fit/</loc><lastmod>2022-07-08T14:50:36&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/transform/</loc><lastmod>2022-07-08T14:50:36&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/transform/</loc><lastmod>2022-07-08T14:50:36&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/scaling/</loc><lastmod>2022-07-07T17:19:29&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/scaling/</loc><lastmod>2022-07-07T17:19:29&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/what_is_data_scaling/</loc><lastmod>2022-07-07T17:19:29&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/tenserflow/</loc><lastmod>2022-06-30T13:30:53&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/tenserflow/</loc><lastmod>2022-06-30T13:30:53&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/train_test_split/</loc><lastmod>2022-06-30T13:30:53&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/train_test_split/</loc><lastmod>2022-06-30T13:30:53&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/what_is_train_test_split/</loc><lastmod>2022-06-30T13:30:53&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/icon/</loc><lastmod>2022-06-23T14:01:21&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/react-native_icon_and_splash/</loc><lastmod>2022-06-23T14:01:21&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/splash/</loc><lastmod>2022-06-23T14:01:21&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/crawling/</loc><lastmod>2022-05-17T15:50:42&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/crawling/</loc><lastmod>2022-05-17T15:50:42&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/selenium/</loc><lastmod>2022-05-17T15:50:42&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/selenium/</loc><lastmod>2022-05-17T15:50:42&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/selenium_%EB%8F%99%EC%9E%91%EB%8C%80%EA%B8%B0/</loc><lastmod>2022-05-17T15:50:42&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/epoch/</loc><lastmod>2022-03-18T14:15:59&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/optimizer/</loc><lastmod>2022-03-18T14:13:56&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/optimizer/</loc><lastmod>2022-03-18T14:13:56&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/what_is_optimizer/</loc><lastmod>2022-03-18T14:13:56&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/linter/</loc><lastmod>2022-03-18T13:28:48&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/linter/</loc><lastmod>2022-03-18T13:28:48&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/what_is_linter/</loc><lastmod>2022-03-18T13:28:48&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/what_is_roc_curve/</loc><lastmod>2022-03-18T12:42:57&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/loss/</loc><lastmod>2022-03-17T17:12:00&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/loss/</loc><lastmod>2022-03-17T17:12:00&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/nan/</loc><lastmod>2022-03-17T17:12:00&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/nan/</loc><lastmod>2022-03-17T17:12:00&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/loss_nan_solution/</loc><lastmod>2022-03-17T17:12:00&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/babel/</loc><lastmod>2022-03-15T13:23:41&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/babel/</loc><lastmod>2022-03-15T13:23:41&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/what_is_babel/</loc><lastmod>2022-03-15T13:23:41&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/bias/</loc><lastmod>2022-03-14T16:34:16&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/bias/</loc><lastmod>2022-03-14T16:34:16&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/variance/</loc><lastmod>2022-03-14T16:34:16&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/variance/</loc><lastmod>2022-03-14T16:34:16&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/biasvariance/</loc><lastmod>2022-03-14T16:34:16&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+>>>>>>> 9c06ef901d760bc6215aed209d8dbeac1922eeba
             <loc>https://colinder.github.io/tags/webpack/</loc><lastmod>2022-03-01T09:17:44&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/categories/webpack/</loc><lastmod>2022-03-01T09:17:44&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/what_is_webpack/</loc><lastmod>2022-03-01T09:17:44&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/tags/ecmascript/</loc><lastmod>2022-02-28T09:23:51&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/categories/ecmascript/</loc><lastmod>2022-02-28T09:23:51&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+<<<<<<< HEAD
+=======
+            <loc>https://colinder.github.io/tags/javascript/</loc><lastmod>2022-02-28T09:23:51&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/javascript/</loc><lastmod>2022-02-28T09:23:51&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+>>>>>>> 9c06ef901d760bc6215aed209d8dbeac1922eeba
             <loc>https://colinder.github.io/what_is_es2015/</loc><lastmod>2022-02-28T09:23:51&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/tags/web-socket/</loc><lastmod>2022-02-25T12:20:35&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/categories/web-socket/</loc><lastmod>2022-02-25T12:20:35&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -48,32 +167,39 @@
             <loc>https://colinder.github.io/categories/learning/</loc><lastmod>2022-02-22T09:43:00&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/tags/machine/</loc><lastmod>2022-02-22T09:43:00&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/categories/machine/</loc><lastmod>2022-02-22T09:43:00&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+<<<<<<< HEAD
             <loc>https://colinder.github.io/machine-deep/</loc><lastmod>2022-02-22T09:43:00&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+=======
+            <loc>https://colinder.github.io/machinedeep/</loc><lastmod>2022-02-22T09:43:00&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+>>>>>>> 9c06ef901d760bc6215aed209d8dbeac1922eeba
             <loc>https://colinder.github.io/tags/activation-function/</loc><lastmod>2022-02-21T14:35:39&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/categories/activation-function/</loc><lastmod>2022-02-21T14:35:39&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/tags/lstm/</loc><lastmod>2022-02-21T14:35:39&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/categories/lstm/</loc><lastmod>2022-02-21T14:35:39&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/tags/rnn/</loc><lastmod>2022-02-21T14:35:39&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/categories/rnn/</loc><lastmod>2022-02-21T14:35:39&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+<<<<<<< HEAD
             <loc>https://colinder.github.io/rnn__lstm/</loc><lastmod>2022-02-21T14:35:39&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/refs_error/</loc><lastmod>2022-02-16T14:35:56&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/tags/vue/</loc><lastmod>2022-02-16T14:35:56&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/categories/vue/</loc><lastmod>2022-02-16T14:35:56&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+=======
+            <loc>https://colinder.github.io/rnnlstm/</loc><lastmod>2022-02-21T14:35:39&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/typescript/</loc><lastmod>2022-02-16T14:35:56&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/typescript/</loc><lastmod>2022-02-16T14:35:56&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/refs_error/</loc><lastmod>2022-02-16T14:35:56&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+>>>>>>> 9c06ef901d760bc6215aed209d8dbeac1922eeba
             <loc>https://colinder.github.io/tags/analysis/</loc><lastmod>2021-12-23T13:53:00&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/categories/analysis/</loc><lastmod>2021-12-23T13:53:00&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/tags/boxplot/</loc><lastmod>2021-12-23T13:53:00&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/categories/boxplot/</loc><lastmod>2021-12-23T13:53:00&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/boxplot/</loc><lastmod>2021-12-23T13:53:00&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://colinder.github.io/tags/django/</loc><lastmod>2021-12-22T12:16:29&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://colinder.github.io/categories/django/</loc><lastmod>2021-12-22T12:16:29&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/django_11_simple_jwt/</loc><lastmod>2021-12-22T12:16:29&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/tags/jwt/</loc><lastmod>2021-12-22T12:16:29&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/categories/jwt/</loc><lastmod>2021-12-22T12:16:29&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/tags/numpy/</loc><lastmod>2021-12-15T14:29:31&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/categories/numpy/</loc><lastmod>2021-12-15T14:29:31&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://colinder.github.io/numpy__pandas/</loc><lastmod>2021-12-15T14:29:31&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://colinder.github.io/tags/mariadb/</loc><lastmod>2021-11-03T11:19:43&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://colinder.github.io/categories/mariadb/</loc><lastmod>2021-11-03T11:19:43&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/numpypandas/</loc><lastmod>2021-12-15T14:29:31&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/mariadb_share/</loc><lastmod>2021-11-03T11:19:43&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/tags/abstractuser/</loc><lastmod>2021-10-08T10:17:53&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/categories/abstractuser/</loc><lastmod>2021-10-08T10:17:53&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -100,16 +226,14 @@
             <loc>https://colinder.github.io/vue_devinfo/</loc><lastmod>2021-08-08T14:09:22&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/tags/network/</loc><lastmod>2021-07-06T14:17:20&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/oracle_network_connect/</loc><lastmod>2021-07-06T14:17:20&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://colinder.github.io/activation-function/</loc><lastmod>2021-06-24T15:04:29&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://colinder.github.io/tags/ai/</loc><lastmod>2021-06-24T15:04:29&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://colinder.github.io/categories/ai/</loc><lastmod>2021-06-24T15:04:29&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/activation_function/</loc><lastmod>2021-06-24T15:04:29&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/09_vue3._global_variable/</loc><lastmod>2021-06-23T17:30:33&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://colinder.github.io/django-vs-node.js-%EC%A7%88%EB%AC%B8%EC%9D%84-%EB%B0%9B%EC%95%98%EC%8A%B5%EB%8B%88%EB%8B%A4/</loc><lastmod>2021-06-22T17:22:50&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/django_vs_node.js_%EC%A7%88%EB%AC%B8%EC%9D%84_%EB%B0%9B%EC%95%98%EC%8A%B5%EB%8B%88%EB%8B%A4/</loc><lastmod>2021-06-22T17:22:50&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/tags/auto-encode/</loc><lastmod>2021-06-16T15:02:22&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/categories/auto-encode/</loc><lastmod>2021-06-16T15:02:22&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/tags/collaborative-filtering/</loc><lastmod>2021-06-16T15:02:22&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/categories/collaborative-filtering/</loc><lastmod>2021-06-16T15:02:22&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://colinder.github.io/collaborative-filtering-by-auto-encoder/</loc><lastmod>2021-06-16T15:02:22&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/collaborative_filtering_by_autoencoder/</loc><lastmod>2021-06-16T15:02:22&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/tags/form/</loc><lastmod>2021-06-10T09:06:44&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/form/</loc><lastmod>2021-06-10T09:06:44&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/tags/html/</loc><lastmod>2021-06-10T09:06:44&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -199,9 +323,6 @@
             <loc>https://colinder.github.io/tags/operators/</loc><lastmod>2020-12-09T22:04:20&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/js_type/</loc><lastmod>2020-12-09T10:23:18&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/tags/tpye/</loc><lastmod>2020-12-09T10:23:18&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://colinder.github.io/categories/computer-science/</loc><lastmod>2020-12-01T13:40:25&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://colinder.github.io/tags/computer-science/</loc><lastmod>2020-12-01T13:40:25&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://colinder.github.io/tags/cs/</loc><lastmod>2020-12-01T13:40:25&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/tags/process/</loc><lastmod>2020-12-01T13:40:25&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/processvsthread/</loc><lastmod>2020-12-01T13:40:25&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/tags/thread/</loc><lastmod>2020-12-01T13:40:25&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -209,7 +330,6 @@
             <loc>https://colinder.github.io/httpvshttps/</loc><lastmod>2020-11-24T11:28:42&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/tags/https/</loc><lastmod>2020-11-24T11:28:42&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/tags/domain/</loc><lastmod>2020-11-23T12:47:53&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://colinder.github.io/tags/ip/</loc><lastmod>2020-11-23T12:47:53&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/what_is_domain/</loc><lastmod>2020-11-23T12:47:53&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/tags/async/</loc><lastmod>2020-11-20T13:59:06&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/asynctosyncinjavascript/</loc><lastmod>2020-11-20T13:59:06&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -217,8 +337,6 @@
             <loc>https://colinder.github.io/categories/compiler/</loc><lastmod>2020-11-18T11:54:20&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/categories/interpreter/</loc><lastmod>2020-11-18T11:54:20&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/interpretervscompiler_language/</loc><lastmod>2020-11-18T11:54:20&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://colinder.github.io/tags/react-native/</loc><lastmod>2020-10-29T23:13:25&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://colinder.github.io/categories/react-native/</loc><lastmod>2020-10-29T23:13:25&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/react-native_googlelogin/</loc><lastmod>2020-10-29T23:13:25&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/react-native_navigation/</loc><lastmod>2020-10-29T21:24:52&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/tags/cookie/</loc><lastmod>2020-10-19T14:59:01&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -230,8 +348,6 @@
             <loc>https://colinder.github.io/tags/clone/</loc><lastmod>2020-10-11T21:26:25&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/tags/fork/</loc><lastmod>2020-10-11T21:26:25&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/git_fork_vs_clone/</loc><lastmod>2020-10-11T21:26:25&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://colinder.github.io/tags/ajax/</loc><lastmod>2020-10-11T21:25:51&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://colinder.github.io/tags/axios/</loc><lastmod>2020-10-11T21:25:51&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/what_is_ajaxaxios_00/</loc><lastmod>2020-10-11T21:25:51&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/git_mirroring/</loc><lastmod>2020-10-08T22:08:37&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/tags/mirroring/</loc><lastmod>2020-10-08T22:08:37&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -246,7 +362,6 @@
             <loc>https://colinder.github.io/sw_20.09.05/</loc><lastmod>2020-09-05T00:06:14&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/sw_20.09.04/</loc><lastmod>2020-09-04T00:00:59&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/block_chain/</loc><lastmod>2020-09-03T22:06:15&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://colinder.github.io/08_vue_vuex-concept/</loc><lastmod>2020-08-27T21:48:19&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/07_vue_vuex-concept/</loc><lastmod>2020-08-16T19:39:10&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/bj_20.08.06/</loc><lastmod>2020-08-05T22:11:35&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/bj_20.08.04/</loc><lastmod>2020-08-04T22:12:11&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>

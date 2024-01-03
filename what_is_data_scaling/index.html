@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>What is Data_Scaling - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="What is Data_Scaling" />
+<meta property="og:description" content="​
+데이터 스케일링(Data Scaling) 이란?  데이터의 값의 범위를 조정하는 것
+ ​
+​
+​
+🤔 왜 데이터 스케일링을 하는가?  데이터의 경향, feature의 영향, 상관관계 등 데이터를 분석하는데 활용할 수 있으며, 인공지능 개발 중 학습단계에서 여러 feature의 영향도를 비슷한 수준으로 맞추기 위해 범위를 조정.
+ ​
+아래 그림을 보면서 이해해보겠습니다.
+과제  여러 feature(성별, 나이, 몸무게, 자산현황)의 특성을 보고 Label을 예측하는 모델을 만든다고 가정  문제점  값의 범위를 보면  성별 0, 1 나이 0~100, 몸무게 0~120, 자산현황 0~700,000,000, Label은 0~800,000,000의 값을 갖는다고 가정한다면,    ​" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://colinder.github.io/what_is_data_scaling/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-07-07T17:19:29&#43;09:00" />
+<meta property="article:modified_time" content="2022-07-07T17:19:29&#43;09:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
+
+<meta name="twitter:title" content="What is Data_Scaling"/>
+<meta name="twitter:description" content="​
+데이터 스케일링(Data Scaling) 이란?  데이터의 값의 범위를 조정하는 것
+ ​
+​
+​
+🤔 왜 데이터 스케일링을 하는가?  데이터의 경향, feature의 영향, 상관관계 등 데이터를 분석하는데 활용할 수 있으며, 인공지능 개발 중 학습단계에서 여러 feature의 영향도를 비슷한 수준으로 맞추기 위해 범위를 조정.
+ ​
+아래 그림을 보면서 이해해보겠습니다.
+과제  여러 feature(성별, 나이, 몸무게, 자산현황)의 특성을 보고 Label을 예측하는 모델을 만든다고 가정  문제점  값의 범위를 보면  성별 0, 1 나이 0~100, 몸무게 0~120, 자산현황 0~700,000,000, Label은 0~800,000,000의 값을 갖는다고 가정한다면,    ​"/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/what_is_data_scaling/" /><link rel="prev" href="https://colinder.github.io/what_is_train_test_split/" /><link rel="next" href="https://colinder.github.io/why_transform_after_fit/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "What is Data_Scaling",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/colinder.github.io\/what_is_data_scaling\/"
+        },"genre": "posts","keywords": "scaling","wordcount":  763 ,
+        "url": "https:\/\/colinder.github.io\/what_is_data_scaling\/","datePublished": "2022-07-07T17:19:29+09:00","dateModified": "2022-07-07T17:19:29+09:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "colinder"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="">Hello New World</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="">Hello New World</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">What is Data_Scaling</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/scaling/"><i class="far fa-folder fa-fw"></i>scaling</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-07-07">2022-07-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;763 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#-왜-데이터-스케일링을-하는가">🤔 왜 데이터 스케일링을 하는가?</a>
+      <ul>
+        <li><a href="#과제">과제</a></li>
+        <li><a href="#문제점">문제점</a></li>
+        <li><a href="#결론">결론</a></li>
+      </ul>
+    </li>
+    <li><a href="#-스케일링-방법은-어떤-것들이-있는지">🧐 스케일링 방법은 어떤 것들이 있는지?</a>
+      <ul>
+        <li><a href="#minmaxscaler-normalization">MinMaxScaler (Normalization)</a></li>
+        <li><a href="#maxabsscaler">MaxAbsScaler</a></li>
+        <li><a href="#standardscale-standardization">StandardScale (Standardization)</a></li>
+        <li><a href="#robustscale">RobustScale</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>​</p>
+<h1 id="데이터-스케일링data-scaling-이란">데이터 스케일링(Data Scaling) 이란?</h1>
+<blockquote>
+<p><strong>데이터</strong>의 값의 범위를 조정하는 것</p>
+</blockquote>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<h2 id="-왜-데이터-스케일링을-하는가">🤔 왜 데이터 스케일링을 하는가?</h2>
+<blockquote>
+<p>데이터의 경향, feature의 영향, 상관관계 등 데이터를 분석하는데 활용할 수 있으며, 인공지능 개발 중 학습단계에서 여러 feature의 영향도를 비슷한 수준으로 맞추기 위해 범위를 조정.</p>
+</blockquote>
+<p>​</p>
+<p>아래 그림을 보면서 이해해보겠습니다.</p>
+<image src="/images/Data_Scaling.assets/image-20220406172937054.png" width="100%" style="display: block; margin: 20px auto">
+<h3 id="과제">과제</h3>
+<ul>
+<li>여러 feature(성별, 나이, 몸무게, 자산현황)의 특성을 보고 <span style="color: red">Label</span>을 예측하는 모델을 만든다고 가정</li>
+</ul>
+<h3 id="문제점">문제점</h3>
+<ul>
+<li>값의 범위를 보면
+<ul>
+<li>성별 0, 1</li>
+<li>나이 0~100,</li>
+<li>몸무게 0~120,</li>
+<li>자산현황 0~700,000,000,</li>
+<li><span style="color: red">Label은 0~800,000,000의 값을 갖는다고 가정</span>한다면,</li>
+</ul>
+</li>
+</ul>
+<p>​</p>
+<p><b>성별, 나이, 몸무게</b>는 <span style="color: red">Label</span>를 예측하는데 큰 영향이 없는 형태로 학습될 수 있습니다.</p>
+<p>아마도 <strong>자산현황</strong>이 <span style="color: red">Label</span>을 예측하는데 가장 큰 영향을 미친다고 판단하며 학습될 것 같습니다.</p>
+<p>(feature들 간, 값의 규모의 차이가 너무 크기 때문)</p>
+<p><span style="color:grey; font-size:0.8em">또, 데이터의 값이 <b>너무 크거나 혹은 작은 경우</b>에 모델 학습과정에서 <b>0으로 수렴하거나 무한으로 발산</b>할 수 있습니다.</span></p>
+<p>​</p>
+<h3 id="결론">결론</h3>
+<blockquote>
+<p>feature별 데이터의 규모(scale)이 다르다면, 논리적인 인공지능 학습이 이루어지지 않을 수 있습니다.</p>
+<p><b>따라서, 데이터 스케일링 작업을 통해, 모든 feature의 범위(또는 분포)를 유사하게 만들어 주는 것이 모델 학습에 좋은 영향을 주게 됩니다.</b></p>
+</blockquote>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<h2 id="-스케일링-방법은-어떤-것들이-있는지">🧐 스케일링 방법은 어떤 것들이 있는지?</h2>
+<blockquote>
+<p>데이터 스케일링은 <code>데이터 값의 규모</code>를 <code>비슷한 수준으로 맞추어 주는 것</code>입니다. 그리고 <code>비슷한 수준으로 맞추어 주는 방법</code>은 주로 통계적인 기법을 사용해 진행합니다.</p>
+</blockquote>
+<p><span style="color: grey; font-size:.8em; float:right">* scikit-learn에서 제공되는 라이브러리 기준으로 정리</span></p>
+<p>​</p>
+<p>​</p>
+<p><code>scikit-learn</code>에서는 <code>MinMaxScaler</code>, <code>MaxAbsScaler</code>, <code>StandardScaler</code>, <code>RobustScaler</code> <br>총 4가지의 스케일링 방법을 제공합니다.</p>
+<ul>
+<li><code>MinMaxScaler</code> : 데이터 값을 0 ~ 1 사이로 스케일링 <b>(정규화 <em>Normalization</em>)</b></li>
+<li><code>MaxAbsScaler</code> : 데이터 값을 -1 ~ 1 사이로 스케일링</li>
+<li><code>StandardScaler</code> : 데이터의 평균 = 0, 분산 = 1이 되도록 스케일링 <b>(표준화 <em>Standardization</em>)</b></li>
+<li><code>RobustScaler</code> : 데이터의 중앙값 = 0, IQE = 1이 되도록 스케일링</li>
+</ul>
+<p>​</p>
+<p>​</p>
+<h3 id="minmaxscaler-normalization">MinMaxScaler (Normalization)</h3>
+<blockquote>
+<p>최대 최소값을 기준으로 스케일링</p>
+</blockquote>
+<ul>
+<li>
+<image src="/images/Data_Scaling.assets/image-20220411093738903.png" width="300px" style="display: block; margin: 20px auto">
+</li>
+<li>
+<p>데이터를 0 ~ 1 사이의 값으로 스케일링. (모든 스케일링은 열 기준으로 적용 <span style="color: grey; font-size:0.8em">( 성별, 나이, 몸무게, 자산현황 별로 계산 )</span> 됩니다.)</p>
+</li>
+<li>
+<p>데이터의 최소값과 최대값을 알 때 사용합니다. 왜냐하면</p>
+</li>
+<li>
+<p>이상치가 존재할 경우 스케일링 결과가 매우 좁은 범위로 압축될 수 있기 때문입니다.</p>
+<ul>
+<li>최대값과 최소값의 차이를 기준으로 설정하기 때문에, <code>최소값이 매우 작거나, 최대값이 매우 큰 이상치가 있을 때 특이점이 발생할</code> 수 있습니다.</li>
+</ul>
+</li>
+<li>
+<p>분류보다 <code>회귀에 유용</code>합니다.</p>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">MinMaxScaler</span>
+
+<span class="c1"># minmax scaler 선언 및 학습</span>
+<span class="n">minmaxScaler</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+
+<span class="c1"># train셋 내 feature들에 대하여 minmax scaling 수행</span>
+<span class="n">X_train_minmax</span> <span class="o">=</span> <span class="n">minmaxScaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span> 
+
+<span class="c1"># test셋 내 feature들에 대하여 minmax scaling 수행</span>
+<span class="n">X_test_minmax</span> <span class="o">=</span> <span class="n">minmaxScaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="c1"># 스케일링 된 결과 값으로 본래 값을 구할 수도 있다.</span>
+<span class="c1"># X_origin = minmaxScaler.inverse_transform(X_train_minmax)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><image src="/images/Data_Scaling.assets/image-20220411141427818.png" width="250px" style="display: block; margin: 20px auto"><image src="/images/Data_Scaling.assets/image-20220411141537572.png" width="250px" style="display: block; margin: 20px auto;"></p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<h3 id="maxabsscaler">MaxAbsScaler</h3>
+<blockquote>
+<p>value 절대값 기준, 최대 절대값을 100%로 두고 스케일링 (음수 표현 가능)</p>
+</blockquote>
+<ul>
+<li>데이터가 -1 ~ 1 사이에 위치하도록 스케일링.</li>
+<li>절대값의 최소값 = 0, 절대값의 최대값 = 1이 되도록 스케일링 합니다.</li>
+<li>데이터의 값이 양수만 존재할 경우 <code>MinMaxScaler</code>와 유사하게 동작합니다.</li>
+<li>이상치에 매우 민감합니다. (value의 범위가 큰 쪽에 존재할 경우 매우 민감)</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">MaxAbsScaler</span>
+
+<span class="c1"># MaxAbsScaler 선언 및 학습</span>
+<span class="n">maxabsScaler</span> <span class="o">=</span> <span class="n">MaxAbsScaler</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+
+<span class="c1"># train셋 내 feature들에 대하여 maxabs scaling 수행</span>
+<span class="n">X_train_maxabs</span> <span class="o">=</span> <span class="n">maxabsScaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+
+<span class="c1"># test셋 내 feature들에 대하여 maxabs scaling 수행</span>
+<span class="n">X_test_maxabs</span> <span class="o">=</span> <span class="n">maxabsScaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="c1"># 스케일링 된 결과 값으로 본래 값을 구할 수도 있다.</span>
+<span class="c1"># X_origin = maxabsScaler.inverse_transform(X_train_maxabs)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><image src="/images/Data_Scaling.assets/image-20220411141427818.png" width="250px" style="display: block; margin: 20px auto"><image src="/images/Data_Scaling.assets/image-20220411141508494.png" width="650px" style="display: block; margin: 20px auto;"></p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<h3 id="standardscale-standardization">StandardScale (Standardization)</h3>
+<blockquote>
+<p>정규분포를 따르게 스케일링</p>
+</blockquote>
+<ul>
+<li>
+<image src="/images/Data_Scaling.assets/image-20220411093753724.png" width="200px" style="display: block; margin: 20px auto">
+</li>
+<li>데이터의 평균 = 0, 분산 = 1이 되도록, 즉 데이터가 표준 정규 분포(standard normal distribution)를 따르도록 스케일링.
+<ul>
+<li>(x - x의 평균) / (x의 표준편차)</li>
+</ul>
+</li>
+<li>데이터의 최소값과 최대값을 모를 때 사용합니다.</li>
+<li>평균(mean)과 분산(variance)을 사용합니다.</li>
+<li>모든 feature들이 같은 스케일을 갖게 됩니다.</li>
+<li>평균과 표준편차가 이상치로부터 영향을 많이 받는다는 점에서 이상치에 민감합니다.</li>
+<li>회귀보다 <code>분류</code>에 유용합니다.</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
+
+<span class="c1"># standard scaler 선언 및 학습</span>
+<span class="n">standardScaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+
+<span class="c1"># train셋 내 feature들에 대하여 standard scaling 수행</span>
+<span class="n">X_train_standard</span> <span class="o">=</span> <span class="n">standardScaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+
+<span class="c1"># test셋 내 feature들에 대하여 standard scaling 수행</span>
+<span class="n">X_test_standard</span> <span class="o">=</span> <span class="n">standardScaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="c1"># 스케일링 된 결과 값으로 본래 값을 구할 수도 있다.</span>
+<span class="c1"># X_origin = standardScaler.inverse_transform(X_train_standard)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><image src="/images/Data_Scaling.assets/image-20220411141427818.png" width="250px" style="display: block; margin: 20px auto"><image src="/images/Data_Scaling.assets/image-20220411141642215.png" width="650px" style="display: block; margin: 20px auto;"></p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<h3 id="robustscale">RobustScale</h3>
+<ul>
+<li>
+<p>데이터의 중앙값 = 0, IQE(사분위값) = 1이 되도록 스케일링 합니다.</p>
+<ul>
+<li>IQE(사분위값, 1/4, 3/4에 위치한 값) =  IQR = Q3 - Q1 : 즉, 25%과 75%의 값</li>
+</ul>
+</li>
+<li>
+<p>중앙값(median)과 IQR(interquartile range)을 사용합니다.</p>
+<ul>
+<li><code>RobustScaler</code>를 사용할 경우 <code>StandardScaler</code>에 비해 스케일링 결과가 더 넓은 범위로 분포합니다.</li>
+<li>양수만 가진 데이터의 경우 <code>StandardScaler</code>와 동일한 결과를 도출합니다.</li>
+</ul>
+</li>
+<li>
+<p>모든 feature들이 같은 스케일을 갖게 됩니다.</p>
+</li>
+<li>
+<p>이상치의 영향을 최소화(거의 영향을 받지 않음) 합니다.</p>
+<ul>
+<li>사분위 값을 사용하기 때문에 양극값은 제외됨.</li>
+</ul>
+</li>
+<li>
+<p>회귀분석에 조금 더 유용합니다.</p>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">RobustScaler</span>
+
+<span class="c1"># RobustScaler 선언 및 학습</span>
+<span class="n">robustScaler</span> <span class="o">=</span> <span class="n">RobustScaler</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+
+<span class="c1"># train셋 내 feature들에 대하여 robust scaling 수행</span>
+<span class="n">X_train_robust</span> <span class="o">=</span> <span class="n">robustScaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+
+<span class="c1"># test셋 내 feature들에 대하여 robust scaling 수행</span>
+<span class="n">X_test_robust</span> <span class="o">=</span> <span class="n">robustScaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="c1"># 스케일링 된 결과 값으로 본래 값을 구할 수도 있다.</span>
+<span class="c1"># X_origin = robustScaler.inverse_transform(X_train_robust)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><image src="/images/Data_Scaling.assets/image-20220411141427818.png" width="250px" style="display: block; margin: 20px auto"><image src="/images/Data_Scaling.assets/image-20220411143252151.png" width="600px" style="display: block; margin: 20px auto;"></p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-07-07</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/what_is_data_scaling/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/scaling/">scaling</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/what_is_train_test_split/" class="prev" rel="prev" title="What is train_test_split()?"><i class="fas fa-angle-left fa-fw"></i>What is train_test_split()?</a>
+            <a href="/why_transform_after_fit/" class="next" rel="next" title="AI학습 때 왜 .fit() 한 뒤에 train, test data를 .transform()할까?">AI학습 때 왜 .fit() 한 뒤에 train, test data를 .transform()할까?<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://colinder-github-io.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":-1},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

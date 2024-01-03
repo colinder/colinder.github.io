@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Understand_of_MariaDB - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="Understand_of_MariaDB" />
+<meta property="og:description" content="​
+MariaDB  mysql, mariaDB를 계속해서 사용하고 있지만, 계정과 데이터베이스 연결 관계 등 정확한 개념과 이해는 하지 않은 채 시간이 흘러가고 있어, 이번에 정리하고 기록합니다.
+전체적인 용어와 개념이 틀렸을 수도 있습니다. 제가 이해하기 쉬운 언어와 그림으로 정리하였습니다. 잘못된 부분이 있다면 꼭. 피드백을 부탁드립니다.
+ ​
+​
+진행과정  &ldquo;계정생성&rdquo; &gt; &ldquo;database생성&rdquo;&gt; &ldquo;권한부여&rdquo; &gt; &ldquo;하이디에서 확인&rdquo;
+ 과정을 진행해보며 mariaDB의 구조와 흐름을 이해.
+​
+​
+MariaDB를 설치한 후 MySQL Client에서 우선 진행." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://colinder.github.io/understand_of_mariadb/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-11-11T13:20:53&#43;09:00" />
+<meta property="article:modified_time" content="2022-11-11T13:20:53&#43;09:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
+
+<meta name="twitter:title" content="Understand_of_MariaDB"/>
+<meta name="twitter:description" content="​
+MariaDB  mysql, mariaDB를 계속해서 사용하고 있지만, 계정과 데이터베이스 연결 관계 등 정확한 개념과 이해는 하지 않은 채 시간이 흘러가고 있어, 이번에 정리하고 기록합니다.
+전체적인 용어와 개념이 틀렸을 수도 있습니다. 제가 이해하기 쉬운 언어와 그림으로 정리하였습니다. 잘못된 부분이 있다면 꼭. 피드백을 부탁드립니다.
+ ​
+​
+진행과정  &ldquo;계정생성&rdquo; &gt; &ldquo;database생성&rdquo;&gt; &ldquo;권한부여&rdquo; &gt; &ldquo;하이디에서 확인&rdquo;
+ 과정을 진행해보며 mariaDB의 구조와 흐름을 이해.
+​
+​
+MariaDB를 설치한 후 MySQL Client에서 우선 진행."/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/understand_of_mariadb/" /><link rel="prev" href="https://colinder.github.io/what_is_sequence_data/" /><link rel="next" href="https://colinder.github.io/08_vue_vuex-concept/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Understand_of_MariaDB",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/colinder.github.io\/understand_of_mariadb\/"
+        },"genre": "posts","keywords": "mariaDB","wordcount":  801 ,
+        "url": "https:\/\/colinder.github.io\/understand_of_mariadb\/","datePublished": "2022-11-11T13:20:53+09:00","dateModified": "2022-11-11T13:20:53+09:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "colinder"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="">Hello New World</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="">Hello New World</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Understand_of_MariaDB</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/mariadb/"><i class="far fa-folder fa-fw"></i>mariaDB</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-11-11">2022-11-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;801 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#진행과정">진행과정</a></li>
+    <li><a href="#mariadb-기본-정보">MariaDB 기본 정보</a>
+      <ul>
+        <li><a href="#default-database-확인">Default database 확인</a></li>
+        <li><a href="#여기서-잠깐">여기서 잠깐💡</a></li>
+        <li><a href="#default-생성-계정-확인">Default 생성 계정 확인</a></li>
+      </ul>
+    </li>
+    <li><a href="#계정-생성">계정 생성</a></li>
+    <li><a href="#계정-삭제">계정 삭제</a></li>
+    <li><a href="#권한-부여">권한 부여</a></li>
+    <li><a href="#하이디mariadb-gui-시스템으로-확인">하이디(MariaDB GUI 시스템)으로 확인</a></li>
+    <li><a href="#간단히-정리하자면">간단히 정리하자면,</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>​</p>
+<h1 id="mariadb">MariaDB</h1>
+<blockquote>
+<p>mysql, mariaDB를 계속해서 사용하고 있지만, 계정과 데이터베이스 연결 관계 등 정확한 개념과 이해는 하지 않은 채 시간이 흘러가고 있어, 이번에 정리하고 기록합니다.</p>
+<p><span style="font-size: .8em">전체적인 용어와 개념이 틀렸을 수도 있습니다. 제가 이해하기 쉬운 언어와 그림으로 정리하였습니다. 잘못된 부분이 있다면 꼭. 피드백을 부탁드립니다.</span></p>
+</blockquote>
+<p>​</p>
+<p>​</p>
+<h2 id="진행과정">진행과정</h2>
+<blockquote>
+<p>&ldquo;계정생성&rdquo; &gt; &ldquo;database생성&rdquo;&gt; &ldquo;권한부여&rdquo; &gt; &ldquo;하이디에서 확인&rdquo;</p>
+</blockquote>
+<p>과정을 진행해보며 mariaDB의 구조와 흐름을 이해.</p>
+<p>​</p>
+<p>​</p>
+<p>MariaDB를 설치한 후 MySQL Client에서 우선 진행.</p>
+<image src="/images/understand_of_MariaDB.assets\image-20221110164326372.png" width="1000px" style="display: block;">
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<h2 id="mariadb-기본-정보">MariaDB 기본 정보</h2>
+<p>MariaDB를 설치하고 MySql Client로 접속을 시도하면</p>
+<image src="/images/understand_of_MariaDB.assets\image-20221111125510218.png" width="1000px" style="display: block;">
+<p>비밀번호를 입력하라는 메세지를 볼 수 있다.</p>
+<p>이는 프로그램을 설치할 때 root라는 계정의 비밀번호를 생성하는데 그떄 비밀번호를 입력하면 된다.</p>
+<p><b>이 행위는 root라는 admin 계정으로 MariaDB 시스템에 접속하는 과정임을 알아야 한다. </b></p>
+<p>​</p>
+<p>비밀번호를 입력하면</p>
+<image src="/images/understand_of_MariaDB.assets\image-20221111125355174.png" width="1000px" style="display: block;">
+<p>mariaDB 시스템에 접속하게 된다.</p>
+<p>​</p>
+<h3 id="default-database-확인">Default database 확인</h3>
+<p>mariaDB는 설치하게 되면 default로 세팅이 되는데. 데이터베이스를 보자면,</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">show</span><span class="w"> </span><span class="n">databases</span><span class="p">;</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><image src="/images/understand_of_MariaDB.assets\image-20221110164817113.png" width="1000px" style="display: block;">
+<p>4개의 데이터 베이스가 생성되어 있다.</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<h3 id="여기서-잠깐">여기서 잠깐💡</h3>
+<p>mariaDB는 &lsquo;작업공간&rsquo;이라는 개념이 있다.</p>
+<image src="/images/understand_of_MariaDB.assets\image-20221111093740029.png" width="1000px" style="display: block;">
+<p>현재는 mariaDB의 어떤 데이터베이스(작업공간)도 선택되지 않은 상태이다.</p>
+<p>​</p>
+<p>아래와 같은 명령어로 테이터베이스(작업공간)으로 접속할 수 있다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="n">use</span><span class="w"> </span><span class="n">mysql</span><span class="p">;</span><span class="w">     </span><span class="cm">/* mysql이라는 데이터베이스(작업공간)을 사용하겠다.*/</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><image src="/images/understand_of_MariaDB.assets\image-20221111093908545.png" width="1000px" style="display: block;">
+<p>잘 변경되었다면, MariaDB [<span style="color: red">mysql</span>] 과 같이 데이터베이스(작업공간)에 들어와 있는 것을 알 수 있다.</p>
+<p>​</p>
+<p>명령어를 입력하는데 내가 의도한 작업공간이 아닌 경우 에러가 날 수 있으니, <br><b>내가 의도한 작업공간안에 들어와서 명령어를 입력한다.</b> 는 개념을 가지고 있어야 한다.</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<h3 id="default-생성-계정-확인">Default 생성 계정 확인</h3>
+<p>또한 계정이 생성되는데 생성되는 계정은 <b>mysql 데이터베이스</b>안에 <b>user라는 테이블에 생성</b>된다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="cm">/* mysql의 user라는 곳에서 user와 host를 선택한다.*/</span><span class="w">
+</span><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="k">user</span><span class="p">,</span><span class="w"> </span><span class="k">host</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">mysql</span><span class="p">.</span><span class="k">user</span><span class="p">;</span><span class="w">         
+</span><span class="w">
+</span><span class="w"></span><span class="cm">/* 만약 mysql이라는 작업공간으로 접속해 명령어를 입력한다면, */</span><span class="w">
+</span><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="k">user</span><span class="p">,</span><span class="w"> </span><span class="k">host</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="k">user</span><span class="p">;</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><image src="/images/understand_of_MariaDB.assets\image-20221110165054886.png" width="1000px" style="display: block;">
+<p>mariaDB라는 시스템에 등록된 계정이 여기에 쌓이게 되는 것이다.</p>
+<p>​</p>
+<p>이외의 데이터베이스에는 user라는 테이블도 없다.</p>
+<image src="/images/understand_of_MariaDB.assets\image-20221110165203311.png" width="1000px" style="display: block;">
+<p>​</p>
+<p>참고로 mysql에 default로 생성된 테이블은 아래와 같다.</p>
+<image src="/images/understand_of_MariaDB.assets\image-20221110165611402.png" width="1000px" style="display: block;">
+<p>​</p>
+<image src="/images/understand_of_MariaDB.assets\image-20221110170150110.png" width="1000px" style="display: block;">
+<p>information_schema는 총 79개의 테이블</p>
+<p>​</p>
+<image src="/images/understand_of_MariaDB.assets\image-20221110170315180.png" width="1000px" style="display: block;">
+<p>sys는 총 101개의 테이블</p>
+<p>​</p>
+<image src="/images/understand_of_MariaDB.assets\image-20221110170550097.png" width="1000px" style="display: block;">
+<p>performance_schema는 총 81개의 테이블이 있다.</p>
+<p>​</p>
+<p>​</p>
+<p>즉, mariaDB라는 시스템을 설치하면, 기본적으로 4개의 데이터베이스 생성되고</p>
+<image src="/images/understand_of_MariaDB.assets\image-20221110172248277.png" width="700px" style="display: block; margin:10px auto">
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>시스템에 등록되는 계정은 <b>mysql이라는 데이터베이스</b>의 <b>user라는 테이블에서 관리</b>된다.</p>
+<image src="/images/understand_of_MariaDB.assets\image-20221110174713613.png" width="700px" style="display: block; margin:10px auto">
+<p>그리고 user 테이블에는 기본적으로 5개의 계정이 있고 이들이 어떤 역할을 하는지는 여기서 다루지는 않겠다. (실은 잘 모른다.)</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>여기까지 MariaDB를 설치하면 생기는 기본적인 세팅에 대하여 살펴보았고,<br>지금부터 <b>&ldquo;계정생성&rdquo; &gt; &ldquo;database생성&rdquo;&gt; &ldquo;권한부여&rdquo; &gt; &ldquo;하이디에서 확인&rdquo;</b>의 과정을 진행.</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<h2 id="계정-생성">계정 생성</h2>
+<p>이제 계정을 생성한다.</p>
+<image src="/images/understand_of_MariaDB.assets\image-20221111092602836.png" width="1000px" style="display: block;">
+<p>처음 mariaDB에 접속하면 &ldquo;none으로 어떤 데이터베이스도 선택되지 않았음&quot;을 알 수 있다.</p>
+<p>​</p>
+<p>어떤 데이터베이스도 선택하지 않고 테스트 계정을 만들어 보면,</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">create</span><span class="w"> </span><span class="k">user</span><span class="w"> </span><span class="s1">&#39;none_database_user&#39;</span><span class="o">@</span><span class="s1">&#39;%&#39;</span><span class="w"> </span><span class="n">identified</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="s1">&#39;1234&#39;</span><span class="p">;</span><span class="w">  
+</span><span class="w"></span><span class="cm">/* 어디서든 접속할수있는(%) none_database_user라는 계정을 만들고 비밀번호는 1234 */</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><image src="/images/understand_of_MariaDB.assets\image-20221111093143864.png" width="1000px" style="display: block;">
+<p>그 계정은 위에서 말한 mysql 데이터베이스에 user 테이블에 생성됨을 알 수 있다.</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<h2 id="계정-삭제">계정 삭제</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">delete</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">mysql</span><span class="p">.</span><span class="k">user</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="k">user</span><span class="o">=</span><span class="s1">&#39;삭제할계정이름&#39;</span><span class="p">;</span><span class="w">	</span><span class="cm">/* user테이블에서 삭제 */</span><span class="w">
+</span><span class="w"></span><span class="k">delete</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">mysql</span><span class="p">.</span><span class="n">db</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="k">user</span><span class="o">=</span><span class="s1">&#39;삭제할계정이름&#39;</span><span class="p">;</span><span class="w">		</span><span class="cm">/* 계정DB에 반영 */</span><span class="w">
+</span><span class="w"></span><span class="n">flush</span><span class="w"> </span><span class="k">privileges</span><span class="p">;</span><span class="w">	</span><span class="cm">/* 시스템 반영 */</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><image src="/images/understand_of_MariaDB.assets\image-20221111094238203.png" width="1000px" style="display: block;">
+<p>위에서 설명했듯 <strong>mysql 데이터베이스</strong>에 <strong>user라는 테이블</strong>에 <strong>계정이 생성</strong>되는데,<br>계정을 삭제하는 위치(from)을 구체적으로 명시하지 않으면 정상적으로 동작 하지 않는다.</p>
+<blockquote>
+<p>delete from <span style="color:red">user</span> where user=&lsquo;none_database_user&rsquo;;<br>
+delete from <span style="color:red">mysql.user</span> where user=&lsquo;none_database_user&rsquo;;</p>
+<p><em>이 둘의 차이를 알아여하며, 내가 작업하고 있는 공간이 어디인지를 계속 생각해야 한다.</em></p>
+</blockquote>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<h2 id="권한-부여">권한 부여</h2>
+<blockquote>
+<p>계정을 생성하면 기본적으로 information_schema 테이블이 생긴다.</p>
+<p><strong>INFORMATION_SCHEMA란</strong> MySQL 서버 내에 존재하는 DB의 메타 정보(테이블, 칼럼, 인덱스 등의 스키마 정보)를 모아둔 DB다. INFORMATION_SCHEMA 데이터베이스 내의 모든 테이블은 읽기 전용이며, 단순히 조회만 가능하다. 즉, 읽기전용(Read-only)으로 사용자가 직접 수정하거나 관여할 수는 없다.</p>
+<p>진행해야 할 것은 <b>내가 사용할 데이터 베이스를 만들고 특정 계정에 그 데이터 베이스를 관리하라는 권한을 주어야 한다.</b></p>
+</blockquote>
+<p>​</p>
+<p><b>계정은 &ldquo;human&rdquo;</b>으로 만들고, <b>데이터베이스는 &ldquo;box&rdquo;</b>로 만들어보겠다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="cm">/* 계정 생성 */</span><span class="w">
+</span><span class="w"></span><span class="k">create</span><span class="w"> </span><span class="k">user</span><span class="w"> </span><span class="s1">&#39;human&#39;</span><span class="o">@</span><span class="s1">&#39;%&#39;</span><span class="w"> </span><span class="n">identified</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="s1">&#39;1234&#39;</span><span class="p">;</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="cm">/* 데이터베이스 생성 */</span><span class="w">
+</span><span class="w"></span><span class="k">create</span><span class="w"> </span><span class="k">database</span><span class="w"> </span><span class="n">box</span><span class="p">;</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><image src="/images/understand_of_MariaDB.assets\image-20221111105536810.png" width="1000px" style="display: block;">
+<p>​</p>
+<ul>
+<li>계정 생성 확인</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">select</span><span class="w"> </span><span class="k">user</span><span class="p">,</span><span class="w"> </span><span class="k">host</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">mysql</span><span class="p">.</span><span class="k">user</span><span class="p">;</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><image src="/images/understand_of_MariaDB.assets\image-20221111105724005.png" width="1000px" style="display: block;">
+<p>​</p>
+<ul>
+<li>데이터베이스 생성 확인</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">show</span><span class="w"> </span><span class="n">databases</span><span class="p">;</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><image src="/images/understand_of_MariaDB.assets\image-20221111105845749.png" width="1000px" style="display: block;">
+<p>​</p>
+<p>​</p>
+<p>생성한 human의 초기 권한을 확인해보면,</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">show</span><span class="w"> </span><span class="n">grants</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="s1">&#39;human&#39;</span><span class="o">@</span><span class="s1">&#39;%&#39;</span><span class="p">;</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><image src="/images/understand_of_MariaDB.assets\image-20221111111534592.png" width="1000px" style="display: block;">
+<p>무슨 말인지 모르겠습니다.</p>
+<p>​</p>
+<p>​</p>
+<p><strong>human 계정</strong>에 <strong>box 데이터베이스의 모든 권한을 주고</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">grant</span><span class="w"> </span><span class="k">all</span><span class="w"> </span><span class="k">privileges</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">box</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="s1">&#39;human&#39;</span><span class="o">@</span><span class="s1">&#39;%&#39;</span><span class="p">;</span><span class="w">
+</span><span class="w"></span><span class="cm">/* 모든(all) 권한을 box데이터베이스하위 모든 곳(box.*)에 human계정에게 부여한다. */</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><image src="/images/understand_of_MariaDB.assets\image-20221111111937918.png" width="1000px" style="display: block;">
+<p>​</p>
+<p>​</p>
+<p>이후 다시 human의 권한을 확인해보면,</p>
+<image src="/images/understand_of_MariaDB.assets\image-20221111112237534.png" width="1000px" style="display: block;">
+<blockquote>
+<p>나름의 해석</p>
+<ol>
+<li>USAGE ON <em>*.</em>* 의 의미는 모든 데이터베이스에 대하여 <b>접근</b>할 수 있다. 정도인 것 같습니다.</li>
+<li>box에 모든 권한을 받은 것을 확인</li>
+</ol>
+</blockquote>
+<p>​</p>
+<p>​</p>
+<p>여기까지 진행한 사항을 DB에 반영하기 위해서는</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="n">flush</span><span class="w"> </span><span class="k">privileges</span><span class="p">;</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><image src="/images/understand_of_MariaDB.assets\image-20221111122650811.png" width="1000px" style="display: block;">
+<p>를 입력</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<h2 id="하이디mariadb-gui-시스템으로-확인">하이디(MariaDB GUI 시스템)으로 확인</h2>
+<blockquote>
+<p>하이디에서는 <b>계정</b> 별로 할당된 데이터베이스를 보는 시스템임을 알아 두어야 합니다.</p>
+</blockquote>
+<p>​</p>
+<p>프로그램 시작 후 초기 모습</p>
+<image src="/images/understand_of_MariaDB.assets\image-20221111122837120.png" width="1000px" style="display: block;">
+<p>아무런 정보도 보이지 않음.</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p><strong><span style="font-size: 1.6em">우선 root 계정에 대하여 확인해보겠습니다.</span></strong></p>
+<blockquote>
+<p>신규 &gt; 세션이름 변경(root) &gt; 사용자/암호 입력 &gt; 열기</p>
+</blockquote>
+<image src="/images/understand_of_MariaDB.assets\image-20221111123054722.png" width="1000px" style="display: block;">
+<p><span style="color:grey; font-size:.8em; display:flex; float:right">*세션 이름은 아무렇게나 설정해도 됩니다.</span></p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>위에서 만들었던 &ldquo;box&rdquo; 데이터베이스를 비롯, 기본으로 생기는 4개의 데이터베이스를 root계정으로 확인할 수 있음을 알 수 있다.</p>
+<image src="/images/understand_of_MariaDB.assets\image-20221111123119651.png" width="1000px" style="display: block;">
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p><strong><span style="font-size: 1.6em">human 계정으로 접근한다면?</span></strong></p>
+<blockquote>
+<p>신규 &gt; 세션이름 변경(human) &gt; 사용자/암호 입력 &gt; 열기</p>
+</blockquote>
+<image src="/images/understand_of_MariaDB.assets\image-20221111123347245.png" width="1000px" style="display: block;">
+<p><span style="color:grey; font-size:.8em; display:flex; float:right">*세션 이름은 아무렇게나 설정해도 됩니다.</span></p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<image src="/images/understand_of_MariaDB.assets\image-20221111123441387.png" width="1000px" style="display: block;">
+<p>아까 권한을 준 <strong>box 데이터베이스</strong>와 default로 생성되는 <strong>information_schema 데이터베이스만 접근이 가능</strong>한 것을 알 수 있습니다.</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>위의 상황을 이미지로 표현한다면,</p>
+<p><strong><span style="font-size: 1.6em">root 계정으로 접속한다면?</span></strong></p>
+<image src="/images/understand_of_MariaDB.assets\image-20221111131706389.png" width="1000px" style="display: block;">
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p><strong><span style="font-size: 1.6em">human 계정으로 접속한다면?</span></strong></p>
+<image src="/images/understand_of_MariaDB.assets\image-20221111131803916.png" width="1000px" style="display: block;">
+<p>이와 같이 표현할 수 있습니다.</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<h2 id="간단히-정리하자면">간단히 정리하자면,</h2>
+<ol>
+<li>마리아디비에 등록된 계정마다</li>
+<li>데이터베이스 (접근)권한을 부여하고</li>
+<li>권한에 따라 접근할 수 있는 데이터베이스가 다르다.</li>
+<li>또한 데이터베이스마다 시스템<span style="color:grey; font-size: 0.8em">(ex. backend)</span>을 연결하여 개발을 한다.</li>
+</ol>
+<p>​</p>
+<p>​</p>
+<p>계정과 데이터베이스의 관계 그리고 데이터베이스를 다른 시스템<span style="color:grey; font-size: 0.8em">(ex. backend)</span>에 연결하여서 사용한다고 했을 때,</p>
+<ul>
+<li>
+<p>DB 계정과 backend에서 생서한 계정의 차이.</p>
+</li>
+<li>
+<p>DB 계정이 관리할 수 있는 내용와 한계 등을 이해하는데 도움이 되었으면 합니다.</p>
+</li>
+</ul>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-11-11</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/understand_of_mariadb/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/mariadb/">mariaDB</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/what_is_sequence_data/" class="prev" rel="prev" title="What is Sequence_data &amp; apply AI"><i class="fas fa-angle-left fa-fw"></i>What is Sequence_data &amp; apply AI</a>
+            <a href="/08_vue_vuex-concept/" class="next" rel="next" title="08_Vue_Vuex Concept...">08_Vue_Vuex Concept...<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://colinder-github-io.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":-1},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

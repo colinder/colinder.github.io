@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>RNN &amp; LSTM - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="RNN &amp; LSTM" />
+<meta property="og:description" content="​
+RNN &amp; LSTM  감정분석을 위한 프로젝트를 기획하면서 RNN과 LSTM이라는 신경망 분석에 대하여 알게 되었습니다. 신경망 분석은 기계학습과 인지과학에서 영감을 얻어 설계된 통계학적 학습 알고리즘인데요. 이 둘의 개념를 알아보겠습니다.
+ ​
+​
+RNN(Recurrent Neural Network) 순환 신경망  시퀀스(Sequence)라는 것이 있습니다.
+시퀀스는 간단히 &lsquo;문맥이 있는 데이터&rsquo; 입니다. 문장은 단어들의 시퀀스, 음악은 음계들의 시퀀스, 동영상은 이미지의 시퀀스라고 할 수 있습니다. 그런데 시퀀스의 길이는 가변적입니다. 기존의 뉴럴 네트워크 알고리즘은 이미지처럼 고정된 크기의 입력을 다루는 데는 탁월하지만, 가변적인 크기의 데이터를 모델링하기에는 적합하지 않았습니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://colinder.github.io/rnnlstm/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-02-21T14:35:39&#43;09:00" />
+<meta property="article:modified_time" content="2022-02-21T14:35:39&#43;09:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
+
+<meta name="twitter:title" content="RNN &amp; LSTM"/>
+<meta name="twitter:description" content="​
+RNN &amp; LSTM  감정분석을 위한 프로젝트를 기획하면서 RNN과 LSTM이라는 신경망 분석에 대하여 알게 되었습니다. 신경망 분석은 기계학습과 인지과학에서 영감을 얻어 설계된 통계학적 학습 알고리즘인데요. 이 둘의 개념를 알아보겠습니다.
+ ​
+​
+RNN(Recurrent Neural Network) 순환 신경망  시퀀스(Sequence)라는 것이 있습니다.
+시퀀스는 간단히 &lsquo;문맥이 있는 데이터&rsquo; 입니다. 문장은 단어들의 시퀀스, 음악은 음계들의 시퀀스, 동영상은 이미지의 시퀀스라고 할 수 있습니다. 그런데 시퀀스의 길이는 가변적입니다. 기존의 뉴럴 네트워크 알고리즘은 이미지처럼 고정된 크기의 입력을 다루는 데는 탁월하지만, 가변적인 크기의 데이터를 모델링하기에는 적합하지 않았습니다."/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/rnnlstm/" /><link rel="prev" href="https://colinder.github.io/refs_error/" /><link rel="next" href="https://colinder.github.io/machinedeep/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "RNN \u0026 LSTM",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/colinder.github.io\/rnnlstm\/"
+        },"genre": "posts","keywords": "RNN, LSTM, Activation Function","wordcount":  692 ,
+        "url": "https:\/\/colinder.github.io\/rnnlstm\/","datePublished": "2022-02-21T14:35:39+09:00","dateModified": "2022-02-21T14:35:39+09:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "colinder"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="">Hello New World</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="">Hello New World</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">RNN &amp; LSTM</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/rnn/"><i class="far fa-folder fa-fw"></i>RNN</a>&nbsp;<a href="/categories/lstm/"><i class="far fa-folder fa-fw"></i>LSTM</a>&nbsp;<a href="/categories/activation-function/"><i class="far fa-folder fa-fw"></i>Activation Function</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-02-21">2022-02-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;692 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#span-stylecolor01df3arnnspanrecurrent-neural-network-순환-신경망"><span style="color:#01DF3A">RNN</span>(Recurrent Neural Network) 순환 신경망</a></li>
+    <li><a href="#span-stylecolor01df3arnnspan-학습-방법"><span style="color:#01DF3A">RNN</span> 학습 방법</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#다만">🤔다만,</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#span-stylecolore3a437lstmspanlong-short-term-memory-장단기-메모리"><span style="color:#E3A437">LSTM</span>(Long Short-Term Memory) 장,단기 메모리</a>
+      <ul>
+        <li><a href="#1-망각게이트forget-gate">1. 망각게이트(Forget gate)</a></li>
+        <li><a href="#2-입력게이트input-gate">2. 입력게이트(Input gate)</a></li>
+        <li><a href="#3-update">3. Update</a></li>
+        <li><a href="#4-출력게이트output-gate--hidden-state">4. 출력게이트(Output gate == hidden state)</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#참고-했던-글">참고 했던 글</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>​</p>
+<h1 id="span-stylecolor01df3arnnspan--span-stylecolore3a437lstmspan"><span style="color:#01DF3A">RNN</span> &amp; <span style="color:#E3A437">LSTM</span></h1>
+<blockquote>
+<p>감정분석을 위한 프로젝트를 기획하면서 RNN과 LSTM이라는 신경망 분석에 대하여 알게 되었습니다. 신경망 분석은 기계학습과 인지과학에서 영감을 얻어 설계된 통계학적 학습 알고리즘인데요. 이 둘의 개념를 알아보겠습니다.</p>
+</blockquote>
+<p>​</p>
+<p>​</p>
+<h2 id="span-stylecolor01df3arnnspanrecurrent-neural-network-순환-신경망"><span style="color:#01DF3A">RNN</span>(Recurrent Neural Network) 순환 신경망</h2>
+<blockquote>
+<p>시퀀스(Sequence)라는 것이 있습니다.</p>
+<p><b>시퀀스는 간단히 &lsquo;문맥이 있는 데이터&rsquo; 입니다.</b> 문장은 단어들의 시퀀스, 음악은 음계들의 시퀀스, 동영상은 이미지의 시퀀스라고 할 수 있습니다. 그런데 시퀀스의 길이는 가변적입니다. 기존의 뉴럴 네트워크 알고리즘은 이미지처럼 고정된 크기의 입력을 다루는 데는 탁월하지만, 가변적인 크기의 데이터를 모델링하기에는 적합하지 않았습니다.</p>
+<p>그리고 이런 시퀀스 테이터를 처리하기 위해 고안된 모델을 <b>시퀀스 모델</b>이라고 하고, 그 중에서도 <span style="color:#01DF3A">RNN</span>은 Deep Learning에 있어 가장 기본적인 모델입니다. <span style="color:#01DF3A">RNN</span>이 기존의 뉴럴 네트워크와 다른 점은 ‘기억’(다른 말로 hidden state[은닉층])을 갖고 있다는 점입니다.</p>
+<p>새로운 입력이 들어올때마다 네트워크는 자신의 기억을 조금씩 수정합니다. 결국 입력을 모두 처리하고 난 후 네트워크에게 남겨진 기억(hidden state)은 시퀀스 전체를 요약하는 정보가 됩니다. 이 과정은 새로운 단어마다 계속해서 반복되기 때문에 RNN에는 Recurrent, 즉 순환적이라는 이름이 붙었으며, 이런 반복을 통해 긴 시퀀스를 처리할 수 있는 것입니다.</p>
+</blockquote>
+<p>아직 이해가 어렵습니다. 동작하는 모습을 보며, 더 알아보겠습니다.</p>
+<image src="https://t1.daumcdn.net/cfile/tistory/99E349505BD1987801" style="display: block; margin: 10px auto">
+<p><span style="color:#01DF3A">RNN</span>은 입력(input)을 받아 출력(Output)를 만들고, 이 <b><span style="color:#EE863A">출력을 다시 입력으로 받</span></b>습니다. 일반적으로 RNN을 그림으로 나타낼 때는 위의 그림처럼 하나로 나타내지 않고, 아래의 그림처럼 각 <strong>타임 스텝</strong>(time step) <code>t</code>마다 <strong>순환 뉴런</strong>을 펼쳐서 타임스텝 별 입력과 출력을 나타냅니다.</p>
+<image src="https://t1.daumcdn.net/cfile/tistory/997C79465BD1989C14" style="display: block; margin: 30px auto" width="1000px">
+<p>​</p>
+<h2 id="span-stylecolor01df3arnnspan-학습-방법"><span style="color:#01DF3A">RNN</span> 학습 방법</h2>
+<p><span style="color:#01DF3A">RNN</span>은 순환 구조이므로 <strong>hidden state<span style="font-size:0.8em">(layer)</span>의 데이터를 저장</strong>하고 있습니다. 일반적인 인공신경망과 비슷하게 <strong>Gradient Descent</strong>와 <strong>backpropagation</strong>을 이용해 학습을 하는데, 시간의 흐름에 따른 작업이기 때문에 backpropagation을 확장한 <b>BPTT(Back-Propagation Through Time, 역전파)</b>을 사용해서 학습을 합니다.</p>
+<p style="text-align:right; font-size:0.9em; color:grey; font-style:italic">*Gradient Descent(경사 하강법) : 최적해를 구하는 알고리즘. <br>기본 개념은 함수의 기울기를 구하고 경사의 절대값이 낮은 쪽으로 계속 이동시켜 극값에 이를 때 까지 반복시키는 것.</p>
+<p>즉, <b><span style="color:#01DF3A">RNN</span>은 스스로를 반복하면서 과거 자신의 정보(가중치)를 기억하고 이를 학습에 반영합니다.</b></p>
+<p>​</p>
+<h4 id="다만">🤔다만,</h4>
+<p><span style="color:#01DF3A">RNN</span>이 시간을 거슬러 올라가면서 학습을 하는데 <strong>과거로 올라가면 올라갈수록 gradient값이 계산이 잘 되지 않습니다.</strong> 그리고 Vanishing Gradients Problem이 발생합니다. gradient는 곱연산으로 이루어져 있는데, <strong>미분값 즉 변화량이 매우 작다면, 데이터를 효과적으로 학습시키지 못하</strong>고, error rate가 미쳐 다 낮아지지 못한채 수렴해버리는 문제가 발생합니다.</p>
+<p><em>간단히, <strong>길이가 긴 Sequence data 의미를 잘 파악하지 못하며, 짧은 Sequence 데이터만 의미있는 학습이 진행됩니다. == 기억력이 좋지 못한 모델</strong></em></p>
+<p>​</p>
+<p>그리고 이를 해결하기 위해 LSTM이 등장했습니다.</p>
+<h2 id="span-stylecolore3a437lstmspanlong-short-term-memory-장단기-메모리"><span style="color:#E3A437">LSTM</span>(Long Short-Term Memory) 장,단기 메모리</h2>
+<p>잠깐 <span style="color:#01DF3A">RNN</span>의 동작원리를 다시 살펴보면, 아래와 같습니다.</p>
+<image src="/images/RNN_04.png">
+<p>위 그림은 싱글 레이어(단일 tanh 레이어)를 가지고 반복되는 <span style="color:#01DF3A">simple RNN</span> 모듈을 표현하고 있습니다.</p>
+<p>그럼 <span style="color:#E3A437">LSTM</span>네트워크는 어떻게 생겼을까요?</p>
+<p><image src="/images/LSTM_00.png" width="800px" style="display: block; margin: 10px auto" ></p>
+<p>Cell의 내부는</p>
+<p><image src="/images/LSTM_01.png" width="600px" style="display: block; margin: 10px auto" ></p>
+<p>RNN에 비해 복잡한 구조를 가지고 있습니다. 차근히 알아보겠습니다.</p>
+<p>​</p>
+<p>위의 그림에서 <image src="/images/LSTM_cell_state.png" height="25px"> 이 <strong>(cell) state</strong> / <image src="/images/LSTM_hidden_state.png" height="25px">이 <strong>hidden state</strong>입니다.</p>
+<ul>
+<li>
+<p><i><b>Cell state</b></i></p>
+<p>(cell) state는 컨베이어 벨트 처럼 담겨있는 정보(state)를 계속 흐르게 하는 부분입니다. (cell) state에는 뭔가를 더하거나 없앨 수 있는데 이는 gate라는 곳에서 제어됩니다.</p>
+</li>
+<li>
+<p><i><b>Hidden state</b></i></p>
+<p>hidden state는 &lsquo;<strong>이전 출력물(previous output)</strong>&lsquo;입니다. RNN에서 확인했던 <b><span style="color:#EE863A">출력을 다시 입력으로 받</span></b>는 부분입니다.</p>
+<p>​</p>
+</li>
+</ul>
+<p><span style="color:#E3A437">LSTM</span>의 내부에는 &lsquo;3가지 gate&rsquo;와 &lsquo;1번의 업데이트&rsquo;가 진행됩니다.</p>
+<ul>
+<li>
+<p>망각게이트(forget gate) : 장기기억에서 필요없는 정보를 <strong>삭제</strong>하는 게이트</p>
+</li>
+<li>
+<p>입력게이트(input gate) : 장기기억에 저장할 정보를 <strong>입력</strong>하는 게이트</p>
+</li>
+<li>
+<p>Update :  forget gate에서 삭제할 정보를, input gate에서 저장할 정보를 결정했고 이를 <strong>더해</strong>주는 단계</p>
+</li>
+<li>
+<p>출력게이트(output gate) : <strong>다음 시점으로 전달할 state(단기상태)를 결정</strong>하는 게이트</p>
+<p>​</p>
+</li>
+</ul>
+<p>단계별로 확인해보겠습니다.</p>
+<h3 id="1-망각게이트forget-gate">1. 망각게이트(Forget gate)</h3>
+<image src="/images/LSTM_forget_gate.png" width="1000px" style="display: block; margin: 20px auto">
+<p>[이전 output, 현재 input]를 종합해 cell state으로 전달되는 &lsquo;어떤 값&rsquo;을 계산합니다. / 다만 이 계산의 활성함수가 σ(<a href="https://ko.wikipedia.org/wiki/%EC%8B%9C%EA%B7%B8%EB%AA%A8%EC%9D%B4%EB%93%9C_%ED%95%A8%EC%88%98" target="_blank" rel="noopener noreffer">시그모이드</a>)로 진행되기 때문에 전달되는 값은 &lsquo;0 ~ 1&rsquo;이 됩니다.</p>
+<p>​	&gt; &lsquo;0&rsquo;일 경우, 이전의 cell state값은 모두 &lsquo;0&rsquo;이 되어 미래의 결과에 아무런 영향을 주지 않음<br>
+​	&gt; &lsquo;1&rsquo;일 경우, 미래의 예측 결과에 영향을 주도록 이전의 cell state 값(Ct-1)을 그대로 보내 완전히 유지함</p>
+<blockquote>
+<p>즉, Forget Gate는 [현재 입력과 이전 출력]을 고려해서, cell state의 어떤 값을 버릴지/지워버릴지(&lsquo;0&rsquo;이 출력되면 날려버림) 결정하는 역할을 합니다.</p>
+</blockquote>
+<p>​</p>
+<p>​</p>
+<h3 id="2-입력게이트input-gate">2. 입력게이트(Input gate)</h3>
+<image src="/images/LSTM_input_gate.png" width="1000px" style="display: block; margin: 20px auto">
+<p>input gate는 현재 정보를 기억하기 위한 게이트입니다. forget gate와 동일하게 [이전 output, 현재 input]를 종합해 <image src="/images/LSTM_input_00.png" height="25px"> 라는 필터를 만들고 <image src="/images/LSTM_input_01.png" height="25px"> 을 cell state에 얼마나 등록할지 결정하는 부분입니다.</p>
+<p>​</p>
+<p>​</p>
+<h3 id="3-update">3. Update</h3>
+<image src="/images/LSTM_Update.png" width="1000px" style="display: block; margin: 20px auto">
+<p>Update는 지난 두 과정[forget gate, input gate]을 통해 cell state에 반영하는 과정입니다.</p>
+<p>​</p>
+<p>​</p>
+<h3 id="4-출력게이트output-gate--hidden-state">4. 출력게이트(Output gate == hidden state)</h3>
+<image src="/images/LSTM_output_gate.png" width="1000px" style="display: block; margin: 20px auto">
+<p>최종적으로 cell state에 반영된 값을 얼마나 출력할지? 결정하는 구간입니다.</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<h1 id="요약">👀요약</h1>
+<blockquote>
+<p>딥러닝에 있어 가장 기본적인 모델이라는 <span style="color:#01DF3A">RNN</span>과 <span style="color:#E3A437">LSTM</span>에 대하여 정리하였습니다. <br>기술을 사용하는 것은 이론을 학습하는 것보단 난이도가 낮다는 평가가 지배적입니다. 즉 그냥 가져다 쓸 수는 있지만, 개념적으로 어떤 분석이 되고 어떤 학습이 되는지 이해하고 사용하는 것과 아닌 것과는 분명 차이가 있을 것입니다. 간단하게라도 어떤 프로세스로 진행되는 지 알아보면 좋을 것 같습니다.</p>
+</blockquote>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<h2 id="참고-했던-글">참고 했던 글</h2>
+<ul>
+<li>
+<p><a href="https://www.jksmer.or.kr/articles/xml/x2eO/">https://www.jksmer.or.kr/articles/xml/x2eO/</a></p>
+</li>
+<li>
+<p><a href="https://dreamgonfly.github.io/blog/understanding-rnn/">https://dreamgonfly.github.io/blog/understanding-rnn/</a></p>
+</li>
+<li>
+<p><a href="https://brunch.co.kr/@gdhan/2">https://brunch.co.kr/@gdhan/2</a></p>
+</li>
+<li>
+<p><a href="https://ratsgo.github.io/natural%20language%20processing/2017/03/09/rnnlstm/">https://ratsgo.github.io/natural%20language%20processing/2017/03/09/rnnlstm/</a></p>
+</li>
+<li>
+<p><a href="https://m.blog.naver.com/PostView.nhn?blogId=magnking&amp;logNo=221311273459&amp;proxyReferer=https:%2F%2Fwww.google.com%2F">https://m.blog.naver.com/PostView.nhn?blogId=magnking&amp;logNo=221311273459&amp;proxyReferer=https:%2F%2Fwww.google.com%2F</a></p>
+</li>
+<li>
+<p><a href="https://www.edwith.org/deeplearningchoi/lecture/15840?isDesc=false">https://www.edwith.org/deeplearningchoi/lecture/15840?isDesc=false</a></p>
+</li>
+<li>
+<p><a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">http://colah.github.io/posts/2015-08-Understanding-LSTMs/</a></p>
+</li>
+<li>
+<p><a href="https://excelsior-cjh.tistory.com/183">https://excelsior-cjh.tistory.com/183</a></p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+</li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-02-21</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/rnnlstm/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/rnn/">RNN</a>,&nbsp;<a href="/tags/lstm/">LSTM</a>,&nbsp;<a href="/tags/activation-function/">Activation Function</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/refs_error/" class="prev" rel="prev" title="typescript Refs_error"><i class="fas fa-angle-left fa-fw"></i>typescript Refs_error</a>
+            <a href="/machinedeep/" class="next" rel="next" title="Machine VS Deep Learning">Machine VS Deep Learning<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://colinder-github-io.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":-1},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

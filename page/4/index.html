@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+<<<<<<< HEAD
 	<meta name="generator" content="Hugo 0.87.0" />
+=======
+	<meta name="generator" content="Hugo 0.83.1" />
+>>>>>>> 9c06ef901d760bc6215aed209d8dbeac1922eeba
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
@@ -102,6 +106,7 @@
         alt="/images/jg_02.jpg"
         title="/images/jg_02.jpg" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/colinder" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="mailto:kjonggwan@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+<<<<<<< HEAD
         <a href="/boxplot/">boxplot 해석 방법</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-12-23">2021-12-23</time></span>&nbsp;<span class="post-category">included in <a href="/categories/analysis/"><i class="far fa-folder fa-fw"></i>analysis</a>&nbsp;<a href="/categories/boxplot/"><i class="far fa-folder fa-fw"></i>boxplot</a></span></div><div class="content">​
 What is Boxplot?  데이터 분석을 진행하면서 다른 분들의 분석 레퍼런스를 보며 공부하다보니 많은 분들이 boxplot을 사용하는 것을 보았습니다. 다만, 저는 그 박스가 어떤 경우에 사용하는 것인지? 어떤 의미로 그려지는 것인지? 어떻게 해석하면 좋은지? 개념이 약했기 때문에 내용을 정리해보겠습니다.
@@ -145,6 +150,53 @@ MariaDB 설치를 진행하면서 등록한 password입력하면 아래와 같�
 초기 접속의 경우, DB table이 &lsquo;none&rsquo;으로 설정되어 있는데, **공유를 원하는 table로 설정을 바꿔줍니다. **</div><div class="post-footer">
         <a href="/mariadb_share/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/mariadb/">mariaDB</a></div></div>
+=======
+        <a href="/aes_django/">AES django 적용</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-02-21">2023-02-21</time></span>&nbsp;<span class="post-category">included in <a href="/categories/security/"><i class="far fa-folder fa-fw"></i>security</a>&nbsp;<a href="/categories/aes/"><i class="far fa-folder fa-fw"></i>AES</a>&nbsp;<a href="/categories/web/"><i class="far fa-folder fa-fw"></i>web</a></span></div><div class="content">​
+​
+AES django 적용  django에 PyCryptodomex를 설치하여 적용
+ 1  pip install pycryptodomex     주의 사항
+  PyCryptodome is a fork of PyCrypto
+  For more information, see the homepage.를 클릭하면, pycryptodome의 문서로 이동하는데, 왜 그런건지 모르겠다. 아마 의존성?이 있어 그런건가 싶다.
+  문서에 예시를 보면
+1  from Crypto.Cipher import AES   와 같이 import 하라는데, 이러면 안되고
+1  from Cryptodome.</div><div class="post-footer">
+        <a href="/aes_django/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/security/">security</a>,&nbsp;<a href="/tags/aes/">AES</a>,&nbsp;<a href="/tags/web/">web</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/aes_vue/">AES vue 적용</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-02-20">2023-02-20</time></span>&nbsp;<span class="post-category">included in <a href="/categories/security/"><i class="far fa-folder fa-fw"></i>security</a>&nbsp;<a href="/categories/aes/"><i class="far fa-folder fa-fw"></i>AES</a>&nbsp;<a href="/categories/web/"><i class="far fa-folder fa-fw"></i>web</a></span></div><div class="content">​
+​
+AES Vue 적용  vue.js에 CryptoJS를 설치하여 진행
+ 1  npm i crypto-js    주의 사항  AES에 사용되는 parameters는 모두 bytes 타입만 사용이 가능하다. 하여 대부분 utf-8로 encoding하여 사용 (이 부분은 아직 정확하게 이해하지 못했다.)    ​
+​
+​
+암호화(encryption) 1 2 3 4 5 6 7 8 9 10  var secretKey = &#39;abcdefghijklmnopqrstuvwxyzabcdef&#39;; var iv = &#39;1234567890123456&#39;; var data = this.</div><div class="post-footer">
+        <a href="/aes_vue/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/security/">security</a>,&nbsp;<a href="/tags/aes/">AES</a>,&nbsp;<a href="/tags/web/">web</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/what_is_aes/">what is AES</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-02-20">2023-02-20</time></span>&nbsp;<span class="post-category">included in <a href="/categories/security/"><i class="far fa-folder fa-fw"></i>security</a>&nbsp;<a href="/categories/aes/"><i class="far fa-folder fa-fw"></i>AES</a>&nbsp;<a href="/categories/web/"><i class="far fa-folder fa-fw"></i>web</a></span></div><div class="content">​
+​
+AES 보안  보안 진단을 받아보니, 생각보다 API 통신은 해킹이 쉽다.
+하여 보안에 신경써야 하는 경우, 기술들이 다양하게 있는데, 그 중 AES&lt;Advanced Encryption Standard&gt;를 간단히 알아보고 이후 적용하는 방법과 과정에 대하여 정리한다.
+AES는 미국 표준 기술 연구소에 의해서 연방 정보 처리 표준으로 지정된 암호화 방식이며 NSA에 의해 1급 비밀에 사용할 수 있도록 승인된 암호화 알고리즘 중 유일하게 공개된 알고리즘 - 출처 : 나무위키
+ ​
+​
+​
+환경 설정  frontend = vue.</div><div class="post-footer">
+        <a href="/what_is_aes/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/security/">security</a>,&nbsp;<a href="/tags/aes/">AES</a>,&nbsp;<a href="/tags/web/">web</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/overfitting/">Overfitting</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-12-28">2022-12-28</time></span>&nbsp;<span class="post-category">included in <a href="/categories/ai/"><i class="far fa-folder fa-fw"></i>AI</a>&nbsp;<a href="/categories/overfitting/"><i class="far fa-folder fa-fw"></i>Overfitting</a></span></div><div class="content">​
+과적합(Overfitting)  잘 정리된 내용을 발견하였고 거기에 개인적인 경험을 추가하기 위해 정리하였습니다. (대부분 필사입니다.)
+인공지능 모델링을 하다보면 항상 만나게 되는 과적합을 어떻게 해결해야하는지, 방법에 대하여 정리
+ 인공지능에게 흔히 말하는 깊이있는 공부를 시키려면 모델의 layer을 늘리고, 노드(unit)을 늘리는 방법을 떠올린다. 그리고 그러다 보면 train data에 만 너무 적합하게, 처음 보는 test data를 집어넣었을 땐 형편없는 결과를 도출하는 모델이 된다. (이를 과적합이라 한다.)
+일반적으로 과적합은 모델 학습과정에서 valid loss가 지속적으로 감소하다가 증가하는 지점부터 발생한다고 정의된다.</div><div class="post-footer">
+        <a href="/overfitting/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/ai/">AI</a>,&nbsp;<a href="/tags/overfitting/">Overfitting</a></div></div>
+>>>>>>> 9c06ef901d760bc6215aed209d8dbeac1922eeba
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -173,12 +225,21 @@ MariaDB 설치를 진행하면서 등록한 password입력하면 아래와 같�
                     <span class="page-link" aria-hidden="true">&hellip;</span>
                 </li><li class="page-item ">
                     <span class="page-link">
+<<<<<<< HEAD
                         <a href="/page/31/">31</a>
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+=======
+                        <a href="/page/38/">38</a>
+                    </span>
+                </li></ul></div></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+>>>>>>> 9c06ef901d760bc6215aed209d8dbeac1922eeba
         </div>
     </footer></div>
 
@@ -187,5 +248,9 @@ MariaDB 설치를 진행하면서 등록한 password입력하면 아래와 같�
             </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
                 <i class="fas fa-comment fa-fw"></i>
             </a>
+<<<<<<< HEAD
         </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"id-1":"\u003cb\u003e느리더라도 정확히, 바쁘지만 조급하지 않게, 무엇보다 포기하지 않는\u003c/b\u003e"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+=======
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":-1},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"id-1":"\u003cb\u003e느리더라도 정확히, 바쁘지만 조급하지 않게, 무엇보다 포기하지 않는\u003c/b\u003e"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+>>>>>>> 9c06ef901d760bc6215aed209d8dbeac1922eeba
 </html>

@@ -3,7 +3,39 @@
         <title>react-native - Tag - </title>
         <link>https://colinder.github.io/tags/react-native/</link>
         <description>react-native - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 29 Oct 2020 23:13:25 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/react-native/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 20 Jul 2023 21:24:52 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/react-native/" rel="self" type="application/rss+xml" /><item>
+    <title>react-native Things</title>
+    <link>https://colinder.github.io/things/</link>
+    <pubDate>Thu, 20 Jul 2023 21:24:52 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/things/</guid>
+    <description><![CDATA[​
+React Native 시작하기 (with Typescript)  myApp은 본인이 원하는 프로젝트 이름으로 바꾸면 됩니다. 가장 최근 버전으로 프로젝트 세팅  1  npx react-native@latest init myApp --template react-native-template-typescript   ​
+​
+​
+실행명령어 Metro 실행 명령어
+1  npx react-native start   ​
+​
+​
+절대 경로 세팅   공식문서 여기 참고하시면 좋습니다. v0.72 기준
+  저는 아래와 같은 폴더 구조로 세팅했고 이 중 src를 root로 설정하고 싶었습니다.]]></description>
+</item><item>
+    <title>React-Native_icon_and_splash</title>
+    <link>https://colinder.github.io/react-native_icon_and_splash/</link>
+    <pubDate>Thu, 23 Jun 2022 14:01:21 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/react-native_icon_and_splash/</guid>
+    <description><![CDATA[​
+React-native (android)  icon 변경과 splash를 적용해보겠습니다.
+ icon: 핸드폰에서 어플 접속시 보이는 모습을 의미.
+splash: 어플 실행시 잠시 노출되는 화면을 의미.​
+​
+Icon 변경 방법  결론부터 정리하자면 특정 폴더안에 이미지만 넣으면 됩니다.
+ ​
+*프로젝트를 시작할 때 이름을 test로 만들어 진행하였습니다. (버전은 0.67)
+1  npx react-native init test --version 0.67.0   ​
+1. android/app/src/main/res 까지 폴더를 들어갑니다. 이미지와 같은 구조가 보인다면 잘 접근한 것입니다.]]></description>
+</item><item>
     <title>React-Native_google login</title>
     <link>https://colinder.github.io/react-native_googlelogin/</link>
     <pubDate>Thu, 29 Oct 2020 23:13:25 &#43;0900</pubDate>

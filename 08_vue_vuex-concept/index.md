@@ -1,11 +1,23 @@
 # 08_Vue_Vuex Concept...
 
 
-​	
+​		
 
 # Vuex 핵심컨셉(getters, mutations, actions, modules)
 
 ---
+
+​	
+
+## 🤔여기까지 왔다면, 이 흐름을 보자.
+
+<image src="/images/vuex.png" caption="흐름을 보자" width="100%">
+
+이제 다시 컨셉들을 보자
+
+​	
+
+​	
 
 ## 3. Actions 
 

@@ -1,0 +1,23 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>ip - Category - </title>
+        <link>https://colinder.github.io/categories/ip/</link>
+        <description>ip - Category - </description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 18 Jul 2023 16:51:22 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/ip/" rel="self" type="application/rss+xml" /><item>
+    <title>외부 &amp; 내부 IP</title>
+    <link>https://colinder.github.io/what_is_ip/</link>
+    <pubDate>Tue, 18 Jul 2023 16:51:22 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/what_is_ip/</guid>
+    <description><![CDATA[​
+외부 &amp; 내부 IP 란?  backend 개발을 하다보면, IP에 대하여 알아야하는 순간이 온다. 그래서 알아보자.
+ ​
+​
+IP란?  인터넷 프로토콜(Internet Protocol)의 약자로, 인터넷이 통하는 네트워크에서 어떤 정보를 수신하고 송신하는 통신에 대한 규약을 의미
+ ​
+​
+IP면 IP지? 내부, 외부는 무엇인가? 우리 집을 생각해보자.
+우리는 통신사의 어떤 기기를 대여받아 인터넷 와이파이를 사용하고 있다. 여기가 포인트다.
+어떤 기기로 우리 집안에 와이파이를 뿌려주고 있고, 우리 가족은 이 기기의 와이파이로 인터넷에 접속한다!]]></description>
+</item></channel>
+</rss>

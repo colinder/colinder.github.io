@@ -3,12 +3,101 @@
         <title>AI - Tag - </title>
         <link>https://colinder.github.io/tags/ai/</link>
         <description>AI - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 24 Jun 2021 15:04:29 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/ai/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 28 Dec 2022 16:44:00 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/ai/" rel="self" type="application/rss+xml" /><item>
+    <title>Overfitting</title>
+    <link>https://colinder.github.io/overfitting/</link>
+    <pubDate>Wed, 28 Dec 2022 16:44:00 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/overfitting/</guid>
+    <description><![CDATA[​
+과적합(Overfitting)  잘 정리된 내용을 발견하였고 거기에 개인적인 경험을 추가하기 위해 정리하였습니다. (대부분 필사입니다.)
+인공지능 모델링을 하다보면 항상 만나게 되는 과적합을 어떻게 해결해야하는지, 방법에 대하여 정리
+ 인공지능에게 흔히 말하는 깊이있는 공부를 시키려면 모델의 layer을 늘리고, 노드(unit)을 늘리는 방법을 떠올린다. 그리고 그러다 보면 train data에 만 너무 적합하게, 처음 보는 test data를 집어넣었을 땐 형편없는 결과를 도출하는 모델이 된다. (이를 과적합이라 한다.)
+일반적으로 과적합은 모델 학습과정에서 valid loss가 지속적으로 감소하다가 증가하는 지점부터 발생한다고 정의된다.]]></description>
+</item><item>
+    <title>What is Sequence_data &amp; apply AI</title>
+    <link>https://colinder.github.io/what_is_sequence_data/</link>
+    <pubDate>Tue, 25 Oct 2022 12:38:54 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/what_is_sequence_data/</guid>
+    <description><![CDATA[​
+Sequence data 자연에는 사건이 발생하는데, 이는 대부분 시간에 따른 원인에 의한 결과로써 발생하게 된다. 예를들어
+  오전에는 맑았는데 오후에는 흐리다.
+  상반기에는 잘 팔렸는데, 하반기에는 잘 안팔린다.
+  기분이 나빴는데, 좋아졌다. 등등
+   순서(sequence)대로 하나씩 나열하여 나타낼 수 있는 데이터를 Sequence data라고 한다.
+그리고 이 데이터들은 서로 독립적이지 않다.는 특징을 가지고 있다. 즉, 원인과 결과가 무한이 이어져있다.
+  ​
+​
+Sequence data의 구조와 주로 활용되는 형태 많은 사람들이 시도해보는 주식 예측 인공지능 개발을 가정하여 설명.]]></description>
+</item><item>
+    <title>What is train_test_split()?</title>
+    <link>https://colinder.github.io/what_is_train_test_split/</link>
+    <pubDate>Thu, 30 Jun 2022 13:30:53 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/what_is_train_test_split/</guid>
+    <description><![CDATA[​
+What is &lsquo;train_test_split()&rsquo;?  AI 모델링을 위해 X_train, X_test, y_train, y_test로 나누는 작업은 필수적입니다. 저는 train과 test를 나누는 코드를 직접 짜서 사용했었는데 scikit learn에서 제공되는 함수가 있었습니다. &ldquo;train_test_split()&quot;이를 알아보겠습니다.
+ ​
+​
+직접 사용되는 모습을 보며 이해해보겠습니다.
+1 2 3 4  import numpy as np from sklearn.model_selection import train_test_split X_train, X_test, y_train, y_test = train_test_split(data, label, test_size=0.3, random_state=29)   ​
+​
+train_test_split() 함수안에 사용되는 인자에 대하여 하나씩 알아보겠습니다.]]></description>
+</item><item>
+    <title>what is optimizer</title>
+    <link>https://colinder.github.io/what_is_optimizer/</link>
+    <pubDate>Fri, 18 Mar 2022 14:13:56 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/what_is_optimizer/</guid>
+    <description><![CDATA[​
+​
+​
+옵티마이저의 목적  옵티마이저는 학습 데이터(Train data)셋을 이용하여 모델을 학습 할 때 데이터의 실제 결과와 모델이 예측한 결과를 기반으로 오차를 잘 줄일 수 있게 만들어주는 역할입니다.
+ ​
+따라서 최적화(Optimization)은 손실 함수(Loss Function)의 결과값을 최소화하는 모델의 파라미터(가중치)를 찾는 것을 의미합니다.
+​
+​
+​
+옵티마이저 리스트  경사 하강법(Gradient Descent) 확률적 경사 하강법(Stochastic Gradient Descent, SGD) Momentum Nesterov Accelerated Gradient (NAG) Adam AdaGrad RMSProp AdaMax Nadam  참고 https://keras.]]></description>
+</item><item>
+    <title>모델 학습 시 loss가 Nan으로 나올 때 해결법</title>
+    <link>https://colinder.github.io/loss_nan_solution/</link>
+    <pubDate>Thu, 17 Mar 2022 17:12:00 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/loss_nan_solution/</guid>
+    <description><![CDATA[​
+모델 학습 시 loss 값이 Nan으로 나올 때 해결 방법   if df == pandas.DataFrame() df.isnull().any()로 데이터셋에 NaN이나 inf 값이 들어있는지 확인한다.
+  다른 optimizer들을 사용해본다. (ex. sgd, adam, nadam)
+  다른 activation function을 사용해본다.
+ 사용하는 모델마다 적합한 activation function이 있습니다. 즉. 모델에 대하여 공부해야하고, 적합한 activation function을 찾아 학습해야 합니다.    learning rate(학습률)을 낮춰본다.
+  learnin rate는 batch_size와 연관이 있습니다.
+  러닝레이트 줄이기 vs 배치사이즈 키우기]]></description>
+</item><item>
+    <title>편향(Bias) &amp; 분산(Variance)</title>
+    <link>https://colinder.github.io/biasvariance/</link>
+    <pubDate>Mon, 14 Mar 2022 16:34:16 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/biasvariance/</guid>
+    <description><![CDATA[​
+편향(Bias)과 분산(Variance)  인공지능 모델링을 하면 정답을 맞추기 위해 컴퓨터는 여러 번의 예측값을 내놓는데, 컴퓨터가 내놓은 예측값의 동태를 묘사하는 표현이 &lsquo;편향&rsquo;과 &lsquo;분산&rsquo;입니다.
+ ​
+​
+​
+🤔결론부터 말하자면 예측값들과 정답이 대체로 멀리 떨어져 있으면 편향이 놓다고 말하고,
+예측값들이 서로 멀리 흩어져 있으면 분산이 높다고 말합니다.
+​
+​
+​
+아래 그림을 보면 왼쪽 상단 과녁은
+예측값들이 대체로 정답 근방에서 왔다갔다 합니다. &gt; 편향이 낮습니다.
+예측값들끼리 서로 몰려 있습니다. &gt; 분산이 낮습니다.]]></description>
+</item><item>
     <title>Activation_Function</title>
-    <link>https://colinder.github.io/activation-function/</link>
+    <link>https://colinder.github.io/activation_function/</link>
     <pubDate>Thu, 24 Jun 2021 15:04:29 &#43;0900</pubDate>
     <author>Author</author>
-    <guid>https://colinder.github.io/activation-function/</guid>
+    <guid>https://colinder.github.io/activation_function/</guid>
     <description><![CDATA[​
 Activation Function(활성화 함수)  입력 신호의 총합을 출력신호로 변환하는 함수를 일반적으로 Activation Function이라고 합니다.
  ​
@@ -19,10 +108,10 @@ Activation Function(활성화 함수)  입력 신호의 총합을 출력신호�
   타원형, 이쁜 노란색, 푸르른 꼭지 라는 데이터를 눈으로 보고 뇌속의 뉴런들이 이 정보를 분석해 맛있겠다.]]></description>
 </item><item>
     <title>Collaborative filtering by auto Encoder</title>
-    <link>https://colinder.github.io/collaborative-filtering-by-auto-encoder/</link>
+    <link>https://colinder.github.io/collaborative_filtering_by_autoencoder/</link>
     <pubDate>Wed, 16 Jun 2021 15:02:22 &#43;0900</pubDate>
     <author>Author</author>
-    <guid>https://colinder.github.io/collaborative-filtering-by-auto-encoder/</guid>
+    <guid>https://colinder.github.io/collaborative_filtering_by_autoencoder/</guid>
     <description><![CDATA[​
 Collaborative filtering by auto Encoder  협업필터링을 딥러닝 방식의 하나인 오토 인코더로 구현하는데 알아두어야 할 배경지식에 대하여 정리
  ​
