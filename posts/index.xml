@@ -28,27 +28,6 @@ Nest는 이러한 일반적인 Node.js 프레임워크(Express/Fastify) 이상�
 프로그래밍에서 추상화는 여러 수준에서 발생할 수 있습니다:
  데이터 추상화: 데이터를 간소화하거나 숨기는 것으로, 특정 데이터 유형의 세부 정보를 숨기고 핵심 데이터만 표시하는 것을 의미합니다.]]></description>
 </item><item>
-    <title>What is static &amp; dynamic type?</title>
-    <link>https://colinder.github.io/staticdynamictype/</link>
-    <pubDate>Wed, 03 Jan 2024 13:29:10 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/staticdynamictype/</guid>
-    <description><![CDATA[정적(Static) &amp; 동적(Dynamic) Type  정적 타입과 동적 타입은 프로그래밍 언어에서 변수나 값의 타입에 대한 접근 방식을 나타내는 두 가지 주요 패러다임.
- ​
-정적 타입 (Static Typing):  타입 선언: 정적 타입 언어에서는 변수의 타입을 컴파일 시점에 명시적으로 선언합니다. 변수가 어떤 타입을 가질지 사전에 정의해야 합니다. 컴파일 시 타입 체크: 코드를 실행하기 전에 컴파일러가 변수의 타입을 검사합니다. 이로 인해 컴파일러는 타입과 일치하지 않는 연산이나 잘못된 타입의 변수 사용을 사전에 감지할 수 있습니다.]]></description>
-</item><item>
-    <title>JS(TS) 함수선언방식과 차이</title>
-    <link>https://colinder.github.io/js_method/</link>
-    <pubDate>Wed, 03 Jan 2024 13:23:57 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/js_method/</guid>
-    <description><![CDATA[​
-Javascript(TS) 함수 선언 방식과 차이 TypeScript는 JavaScript를 기반으로 하는 언어이기 때문에 JavaScript의 함수 선언 방식을 따르면서 몇 가지 추가적인 기능을 제공합니다. 주요 함수 선언 방식은 다음과 같습니다.
-​
-  함수 선언문 (Function Declaration):
-1 2 3  function add(a: number, b: number): number { return a + b; }     TypeScript에서도 JavaScript와 마찬가지로 함수 선언문을 사용할 수 있습니다.
-  함수 선언문은 function 키워드로 시작하며, 함수 이름이 바로 뒤에 나옵니다.]]></description>
-</item><item>
     <title>Time Complexity 시간복잡도</title>
     <link>https://colinder.github.io/time_complexity/</link>
     <pubDate>Tue, 17 Oct 2023 12:24:58 &#43;0900</pubDate>
@@ -147,5 +126,33 @@ scoped css 설정  지역적으로 사용하고 싶은 css 설정 방법
  ​
 폴더 구조를 보자면. (구조는 마음대로 구성하여도 됩니다. 아래는 제 마음대로 구성한 것입니다.)
 1 2 3 4 5 6 7 8 9 10 11 12  src ├── assets │ ├── Styles │ ├── common.]]></description>
+</item><item>
+    <title>React global_Style_관리</title>
+    <link>https://colinder.github.io/global_css_setting/</link>
+    <pubDate>Tue, 02 May 2023 14:32:19 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/global_css_setting/</guid>
+    <description><![CDATA[​
+React Style_관리  전역으로 사용할 css 설정은 어떻게 하는지 알아봅니다.
+ *기본적으로 typescript가 적용되어 있습니다.
+​
+​
+Global css 설정  전역으로 사용하고 싶은 css 설정 방법
+ ​
+폴더 구조를 보자면. (구조는 마음대로 구성하여도 됩니다. 아래는 제 마음대로 구성한 것입니다.)
+1 2 3 4 5 6  src ├── assets │ ├── Styles │ ├── common.css │ ... └── index.tsx   ​
+  global css 만들기]]></description>
+</item><item>
+    <title>npm? npx?</title>
+    <link>https://colinder.github.io/npm_npx/</link>
+    <pubDate>Thu, 20 Apr 2023 15:10:58 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/npm_npx/</guid>
+    <description><![CDATA[​
+npm Vs npx  예전부터 궁금했지만 굳이 알아볼 필요까지는 없었다가, 여드름이 터지듯 갑자기 궁금해서져 알아봤습니다.
+ ​
+​
+가장 큰 차이는 설치를 할 것인가 아닌가   컴퓨터에 패키지 전역으로 설치하여 실행: npm 컴퓨터에 패키지 설치 없이 이번만 실행: npx     npm는 컴퓨터 전역(global)에 패키지(npm 모듈 시스템)를 설치한다는 의미입니다.
+만약 npm -g와 같이 뒤에 -g가 있다면, 전역으로 설치한다는 옵션입니다. -g 옵션이 없으면 NPM 패키지는 node_modules라는 이름의 폴더 안에 저장됩니다.]]></description>
 </item></channel>
 </rss>

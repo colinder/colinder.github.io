@@ -102,39 +102,6 @@
         alt="/images/jg_02.jpg"
         title="/images/jg_02.jpg" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/colinder" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="mailto:kjonggwan@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/scss_setting/">React Scss_setting</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-05-04">2023-05-04</time></span>&nbsp;<span class="post-category">included in <a href="/categories/react/"><i class="far fa-folder fa-fw"></i>React</a></span></div><div class="content">​
-React_Style 관리  전 css보다 scss가 더 좋습니다. Sassy CSS - 문법적으로 짱 멋진(Sassy) CSS이기 때문입니다.
- ​
-​
-react에 scss 적용하기  간단히 라이브러리 하나만 설치해주고 파일명만 바꿔주면 됩니다.
- *CRA 공식 문서에 나와있는 방법을 따릅니다.
-​
-​
-  package.json이 있는 위치에서
-1  npm install sass   ​
-  .css로 된 파일명을 .scss로 바꾸면 끝.
-  ​
-​
-​
-​
-​
-👀 많은 레퍼런스가&hellip; 1  npm install node-sass   해당 명령어로 sass를 적용하는데, 동료가 깃헙에서 npm i를 하는데 계속 오류가 났고 저도 간헐적으로 에러가 발생해 설명한 방식으로 변경하였습니다.</div><div class="post-footer">
-        <a href="/scss_setting/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/react/">React</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/scoped_css/">React Scoped_css</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-05-03">2023-05-03</time></span>&nbsp;<span class="post-category">included in <a href="/categories/react/"><i class="far fa-folder fa-fw"></i>React</a></span></div><div class="content">​
-React_Style 관리  Vue에는 .vue 파일마다 &lt;style&gt;가 있고 여기에 &lt;style scoped&gt;를 주면 해당 파일에만 적용되는 style을 구성할 수 있는데, react는 어떻게 하는지 알아봅니다.
- ​
-​
-scoped css 설정  지역적으로 사용하고 싶은 css 설정 방법
- ​
-폴더 구조를 보자면. (구조는 마음대로 구성하여도 됩니다. 아래는 제 마음대로 구성한 것입니다.)
-1 2 3 4 5 6 7 8 9 10 11 12  src ├── assets │ ├── Styles │ ├── common.</div><div class="post-footer">
-        <a href="/scoped_css/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/react/">React</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/global_css_setting/">React global_Style_관리</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-05-02">2023-05-02</time></span>&nbsp;<span class="post-category">included in <a href="/categories/react/"><i class="far fa-folder fa-fw"></i>React</a></span></div><div class="content">​
 React Style_관리  전역으로 사용할 css 설정은 어떻게 하는지 알아봅니다.
@@ -158,6 +125,37 @@ npm Vs npx  예전부터 궁금했지만 굳이 알아볼 필요까지는 없었
 만약 npm -g와 같이 뒤에 -g가 있다면, 전역으로 설치한다는 옵션입니다. -g 옵션이 없으면 NPM 패키지는 node_modules라는 이름의 폴더 안에 저장됩니다.</div><div class="post-footer">
         <a href="/npm_npx/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/web/">web</a>,&nbsp;<a href="/tags/npm/">npm</a>,&nbsp;<a href="/tags/npx/">npx</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/init_setting/">React Init</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-04-20">2023-04-20</time></span>&nbsp;<span class="post-category">included in <a href="/categories/react/"><i class="far fa-folder fa-fw"></i>React</a></span></div><div class="content">​
+React 시작하기  vue2 서비스가 23년 12월 31일에 종료된다&hellip; vue3는 개인적으로 실패한 프로젝트라 생각해 vue2를 고집하고 있었는데&hellip;.
+vue3로 갈 것인가. 그냥 react로 갈 것인가 고민하다. 일단 알아보자는 마음으로 정리한 내용이다.
+ ​
+​
+react 시작하기 앞서 준비할 것  node.js 에디터(ex. vscode)  ​
+​
+react 시작하기  준비가 끝났으니, react 프로젝트를 생성해보자
+ ​
+  프로젝트 초기 세팅 명령어
+1  npx create-react-app hello-world     hello-world 라는 이름의 프로젝트를 생성</div><div class="post-footer">
+        <a href="/init_setting/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/react/">React</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/command/">docker Command</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-03-27">2023-03-27</time></span>&nbsp;<span class="post-category">included in <a href="/categories/docker/"><i class="far fa-folder fa-fw"></i>docker</a></span></div><div class="content">​
+내가 자주 사용하는 docker 명령어 정리 ​
+​
+1. 현재 docker container 상태 확인하기 1  docker ps -a  ​
+​
+​
+2. 현재 docker image 조회 docker hub에서 받은 image와 내가 생성한 image를 보는 명령어
+1 2  docker images # 또는 docker image ls / 둘은 같은 결과를 반환하는 명령어  ​
+​
+​
+3. image 생성   hub에서 pull 받기
+1  docker pull &lt;다운받을 image 이름&gt;   다운받을 image 이름 &amp; 종류는 Docker Hub Web(https://hub.</div><div class="post-footer">
+        <a href="/command/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/docker/">docker</a>,&nbsp;<a href="/tags/command/">command</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -182,7 +180,7 @@ npm Vs npx  예전부터 궁금했지만 굳이 알아볼 필요까지는 없었
                     <span class="page-link" aria-hidden="true">&hellip;</span>
                 </li><li class="page-item ">
                     <span class="page-link">
-                        <a href="/page/39/">39</a>
+                        <a href="/page/38/">38</a>
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">
