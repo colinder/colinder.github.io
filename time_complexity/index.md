@@ -3,7 +3,7 @@
 
 ​	
 
-#  Time Complexity (시간 복잡도)
+#  Time Complexity (시간 복잡도)   
 
 > 효율적인 알고리즘 구성을 위해 항상 신경써야하는 __시간 복잡도__. 
 >

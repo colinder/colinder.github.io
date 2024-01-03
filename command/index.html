@@ -20,8 +20,8 @@
 1  docker pull &lt;다운받을 image 이름&gt;   다운받을 image 이름 &amp; 종류는 Docker Hub Web(https://hub." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://colinder.github.io/command/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-03-27T13:49:32&#43;09:00" />
-<meta property="article:modified_time" content="2023-03-27T13:49:32&#43;09:00" />
+<meta property="article:published_time" content="2023-03-27T13:49:32+09:00" />
+<meta property="article:modified_time" content="2023-03-27T13:49:32+09:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
@@ -160,10 +160,10 @@
 <h3 id="1-현재-docker-container-상태-확인하기">1. 현재 docker container 상태 확인하기</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dockerfile" data-lang="dockerfile">docker ps -a<span class="err">
+<pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile">docker ps -a<span class="err">
 </span></code></pre></td></tr></table>
 </div>
 </div><p>​</p>
@@ -173,11 +173,11 @@
 <p>docker hub에서 받은 image와 내가 생성한 image를 보는 명령어</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dockerfile" data-lang="dockerfile">docker images <span class="err">
+<pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile">docker images <span class="err">
 </span><span class="err"></span><span class="c"># 또는 docker image ls   /   둘은 같은 결과를 반환하는 명령어</span><span class="err">
 </span></code></pre></td></tr></table>
 </div>
@@ -190,14 +190,14 @@
 <p>hub에서 pull 받기</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dockerfile" data-lang="dockerfile">docker pull &lt;다운받을 image 이름&gt;<span class="err">
+<pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile">docker pull &lt;다운받을 image 이름&gt;<span class="err">
 </span></code></pre></td></tr></table>
 </div>
 </div><ul>
-<li>다운받을 image 이름 &amp; 종류는 Docker Hub Web(<a href="https://hub.docker.com/">https://hub.docker.com/</a>)에서 검색 후 존재를 확인하고 다운 받는다.</li>
+<li>다운받을 image 이름 &amp; 종류는 Docker Hub Web(<a href="https://hub.docker.com/" target="_blank" rel="noopener noreffer">https://hub.docker.com/</a>)에서 검색 후 존재를 확인하고 다운 받는다.</li>
 </ul>
 </li>
 <li>
@@ -205,11 +205,11 @@
 <p>dockerfile을 만들었다고 가정한 후</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dockerfile" data-lang="dockerfile">docker build -t &lt;내가 정하는image 이름&gt; .<span class="err">
+<pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile">docker build -t &lt;내가 정하는image 이름&gt; .<span class="err">
 </span><span class="err"></span><span class="c"># ex) docker build -t mydocker/nginx .</span><span class="err">
 </span></code></pre></td></tr></table>
 </div>
@@ -222,11 +222,11 @@
 <p><b>r</b>e<b>m</b>ove <b>i</b>mage</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dockerfile" data-lang="dockerfile">docker rmi &lt;image ID&gt;<span class="err">
+<pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile">docker rmi &lt;image ID&gt;<span class="err">
 </span><span class="err"></span><span class="c"># ex) docker rmi 3e1b601d0fa6</span><span class="err">
 </span></code></pre></td></tr></table>
 </div>
@@ -239,11 +239,11 @@
 <p>강제로 삭제해야 하기 때문에 -f 옵션을 준다. <b>해당 경우 container도 삭제된다.</b></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dockerfile" data-lang="dockerfile">docker rmi -f &lt;image ID&gt;<span class="err">
+<pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile">docker rmi -f &lt;image ID&gt;<span class="err">
 </span><span class="err"></span><span class="c"># ex) docker rmi -f 3e1b601d0fa6</span><span class="err">
 </span></code></pre></td></tr></table>
 </div>
@@ -252,11 +252,11 @@
 <p>none 으로 등록된 image 삭제 방법</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dockerfile" data-lang="dockerfile">docker rmi <span class="k">$(</span>docker images -f <span class="s2">&#34;dangling=true&#34;</span> -q<span class="k">)</span><span class="err">
+<pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile">docker rmi <span class="k">$(</span>docker images -f <span class="s2">&#34;dangling=true&#34;</span> -q<span class="k">)</span><span class="err">
 </span><span class="err"></span><span class="c"># 또는 docker rmi -f $(docker images -f &#34;dangling=true&#34; -q)</span><span class="err">
 </span></code></pre></td></tr></table>
 </div>
@@ -268,10 +268,10 @@
 <h3 id="5-container-접속">5. container 접속</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dockerfile" data-lang="dockerfile">docker <span class="nb">exec</span> -it &lt;컨테이너이름&gt; /bin/bash<span class="err">
+<pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile">docker <span class="nb">exec</span> -it &lt;컨테이너이름&gt; /bin/bash<span class="err">
 </span></code></pre></td></tr></table>
 </div>
 </div><p>​</p>
@@ -283,10 +283,10 @@
 <p>실행 &gt; image를 만들고 해당 image로 컨테이너를 실행한다.(최초)</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dockerfile" data-lang="dockerfile">docker run &lt;image ID&gt;<span class="err">
+<pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile">docker run &lt;image ID&gt;<span class="err">
 </span></code></pre></td></tr></table>
 </div>
 </div></li>
@@ -294,10 +294,10 @@
 <p>재실행 &gt; 멈춰 있는 container를 다시 실행한다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dockerfile" data-lang="dockerfile">docker start &lt;containder NAME or containder ID&gt;<span class="err">
+<pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile">docker start &lt;containder NAME or containder ID&gt;<span class="err">
 </span></code></pre></td></tr></table>
 </div>
 </div></li>
@@ -308,10 +308,10 @@
 <h3 id="6-1-container-종료">6-1. container 종료</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dockerfile" data-lang="dockerfile">docker stop &lt;containder NAME or containder ID&gt;<span class="err">
+<pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile">docker stop &lt;containder NAME or containder ID&gt;<span class="err">
 </span></code></pre></td></tr></table>
 </div>
 </div><p>​</p>
@@ -323,10 +323,10 @@
 <p>none으로 생긴 container 삭제 방법</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dockerfile" data-lang="dockerfile">docker rm <span class="k">$(</span>docker ps --filter <span class="nv">status</span><span class="o">=</span>exited -q<span class="k">)</span><span class="err">
+<pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile">docker rm <span class="k">$(</span>docker ps --filter <span class="nv">status</span><span class="o">=</span>exited -q<span class="k">)</span><span class="err">
 </span></code></pre></td></tr></table>
 </div>
 </div></li>
@@ -334,11 +334,11 @@
 <p>일반 삭제 방법</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dockerfile" data-lang="dockerfile">docker rm &lt;container ID&gt; &lt;...&gt; &lt;...&gt;<span class="err">
+<pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile">docker rm &lt;container ID&gt; &lt;...&gt; &lt;...&gt;<span class="err">
 </span><span class="err"></span><span class="c"># ex) docker rm 3e1b601d0fa6 / 여러개인 경우 띄어쓰기로 구분 후 계속 입력</span><span class="err">
 </span></code></pre></td></tr></table>
 </div>
@@ -353,11 +353,11 @@
 <p>실행중인 container의 이름을 변경하더라도 상태를 유지한다. <b>즉, 구동상태에 영향을 주지 않는다.</b></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dockerfile" data-lang="dockerfile">docker rename &lt;기존이름&gt; &lt;변경하고싶은이름&gt;<span class="err">
+<pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile">docker rename &lt;기존이름&gt; &lt;변경하고싶은이름&gt;<span class="err">
 </span><span class="err"></span><span class="c"># ex) docker rename originalName changeName</span><span class="err">
 </span></code></pre></td></tr></table>
 </div>
@@ -402,8 +402,8 @@
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 

@@ -1,19 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-<<<<<<< HEAD
 	<meta name="generator" content="Hugo 0.87.0" />
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-=======
-	<meta name="generator" content="Hugo 0.83.1" />
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="robots" content="noodp" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
->>>>>>> 9c06ef901d760bc6215aed209d8dbeac1922eeba
         <title></title><meta name="Description" content="Hello New World"><meta property="og:title" content="" />
 <meta property="og:description" content="Hello New World" />
 <meta property="og:type" content="website" />
@@ -24,7 +16,6 @@
 
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="Hello New World"/>
-<<<<<<< HEAD
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -111,43 +102,47 @@
         alt="/images/jg_02.jpg"
         title="/images/jg_02.jpg" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/colinder" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="mailto:kjonggwan@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/form/">form 태그</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-06-10">2021-06-10</time></span>&nbsp;<span class="post-category">included in <a href="/categories/web/"><i class="far fa-folder fa-fw"></i>web</a></span></div><div class="content">​
-form 태그의 고찰   form tag의 inline 요소 중 **&lsquo;action&rsquo;**과 &lsquo;onsubmit&rsquo;
-1 2 3 4 5 6 7 8  &lt;form action=&#34;/oh my god&#34; onsubmit=&#34;return test()&#34;&gt; &lt;input type=&#34;submit&#34; value=&#34;hahaha&#34;&gt; &lt;/form&gt; &lt;script&gt; function test(){ console.log(&#39;HHHI&#39;) } &lt;/script&gt;     submit 형태의 input을 클릭하게 되면, submit이 동작하면서 form의 &lsquo;onsubmit&rsquo;이 실행
-  이후 에 form 태그의 &lsquo;action&rsquo;이 실행
-즉, 두가지의 행동이 실행됩니다.
-​
-  비효율적이지만, 만약 위와 같은 코드에서 나중에 실행되는 action은 동작하지 않게 하고 싶다면.</div><div class="post-footer">
-        <a href="/form/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/html/">html</a>,&nbsp;<a href="/tags/web/">web</a>,&nbsp;<a href="/tags/form/">form</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/naver_hyperclova/">&#39;NAVER AI NOW&#39; HyperCLOVA_NLP</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-05-31">2021-05-31</time></span>&nbsp;<span class="post-category">included in <a href="/categories/nlp/"><i class="far fa-folder fa-fw"></i>NLP</a></span></div><div class="content">&lsquo;NAVER&rsquo; HyperCLOVA의 한국어 모델  2021.05.25 NAVER AI NOW reference 내용 중 HyperCLOVA의 자연어 전처리 과정의 토근화 방법에 대하여 정리
+        <a href="/what_is_linter/">what is Linter?</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-03-18">2022-03-18</time></span>&nbsp;<span class="post-category">included in <a href="/categories/web/"><i class="far fa-folder fa-fw"></i>web</a>&nbsp;<a href="/categories/linter/"><i class="far fa-folder fa-fw"></i>linter</a></span></div><div class="content">​
+Linter란?  Linter 혹은 Lint는 소스 코드를 분석해 오류나 오타, 잠재적인 버그를 찾아주는 도구입니다.
+javascript는 다른 언어들에 비해 유연한 문법 구조를 갖습니다. 이런 특징은 찾기 어려운 버그를 만들기도하고, 코드를 실행하기 전까지 알 수 없는 오류를 만들기도 합니다.
+Lint를 사용하면 검증을 자동화하여 이런 문제를 예방할 수 있습니다. 가장 많이 사용되는 javascript 린터로는 ESLint와 코드 포맷터인 Prettier, css 린터인 Stylelint가 있습니다.
  ​
-데이터 토큰화 자연어 처리를 위한 문장 데이터 토큰화에 대한 NAVER의 처리 방법을 정리해보겠습니다.
-  말뭉치를 어떻게 구성하고 나눌 것인가에 대한 고민 → 서브워드 토크나이저를 활용. 서브워드는 어떤방식으로 진행할 것인가? → Byte-Pair Encoding (BPE)를 사용 그 중에서도 Morpheme-Aware Byte-Level BPE (형태소 단위 분리)을 사용 Morpheme-Aware Byte-Level BPE는 많은 메모리를 필요로 하여 말뭉치 데이터의 크기를 최적화하는 것이 필요함.</div><div class="post-footer">
-        <a href="/naver_hyperclova/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/nlp/">NLP</a>,&nbsp;<a href="/tags/naver/">naver</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/what_is_jquery/">What is jQuery($)?</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-04-29">2021-04-29</time></span>&nbsp;<span class="post-category">included in <a href="/categories/web/"><i class="far fa-folder fa-fw"></i>web</a></span></div><div class="content">​
-웹 개발을 위해 인터넷의 레퍼런스들을 참고하다보면, 눈에 띄는 기호가 있습니다. $ 이게 뭘까요.? 검색해보니 제이쿼리라는데 많이 쓰이는 것 같습니다. 이에 알아봅시다!
 ​
-jQuery란?  jQuery(제이쿼리)는 HTML의 클라이언트 사이드 조작(ex. 사용자가 어떤 버튼을 누른다. 사용자가 드랍박스에 선택지를 고른다.)을 단순화 하도록 설계된 크로스 플랫폼(여러 종류의 컴퓨터 플랫폼에서 동작할 수 있다는 것)의 자바스크립트 라이브러리다. 존 레식이 2006년 뉴욕 시 바캠프(Barcamp NYC)에서 공식적으로 소개하였다. 출처: 위키백과
-최대한 구체적으로 알아보았는데요. 이 내용이 이해되었다면 다음으로 넘어갑시다.</div><div class="post-footer">
-        <a href="/what_is_jquery/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/web/">web</a></div></div>
+ESLint 2002년 JSON을 만든 더글라스 크락포드가 자바스크립트 린터인 JSLint를 만들었습니다.</div><div class="post-footer">
+        <a href="/what_is_linter/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/web/">web</a>,&nbsp;<a href="/tags/linter/">linter</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/django_03_overridingtemplates/">Django_03_overriding templates</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-04-27">2021-04-27</time></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw"></i>Django</a></span></div><div class="content">​
-Django Overriding Templates  웹개발을 하다보면 재활용되어야 하는 부분. 즉, 변경되지 않아야 하는 부분과, 변해야 하는 부분이 있습니다. (대표적으로 navbar) 그리고 이런 개발의 편의성을 위해 Django는 Overriding 이라는 기술을 제공합니다.
+        <a href="/what_is_roc_curve/">ROC and AUC</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-03-18">2022-03-18</time></span></div><div class="content">​
+ROC 곡선이란?  Receiver operating characteristic 수신기동작특성? 번역하기에 어려운 용어같습니다. 다만 인공지능의 성능을 파악하는데 자주 사용되기 때문에 어떤 개념이고 어떤 의미인지, 어떻게 해석해야 하는지 정리합니다.
+ROC(Receiver Operating Characteristic) = 모든 임계값에서 분류 모델의 성능을 보여주는 그래프
  ​
-지난 &ldquo;app&quot;에 이어 진행
-변경되지 않아야 하는 부분은 그림의 &lsquo;배경&rsquo;이고, 변해야 하는 부분은 그림의 &lsquo;디테일 요소&rsquo;라고 생각하면 이해가 쉽습니다. / 그럼 변경되지 않아야 하는 부분을 먼저 제작해봅시다.
-1. 변경 하지 않을 부분 == 배경 제작 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  &lt;!</div><div class="post-footer">
-        <a href="/django_03_overridingtemplates/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/django/">Django</a></div></div>
+​
+🤔 결론부터 정리하면  주로 분류로 결과를 확인하는 인공지능 성능 평가 방법으로 자주 쓰임. 그래프로 보자면 좌상단(파란 점)에 가까울수록 좋은 성능을 보이는 모델.  ​
+또 그래프의 x축, y축을 보면 &ldquo;FALSE POSITIVE RATE&rdquo;, &ldquo;TRUE POSITIVE RATE&ldquo;라고 적혀 있는데요.</div><div class="post-footer">
+        <a href="/what_is_roc_curve/">Read More</a></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/loss_nan_solution/">모델 학습 시 loss가 Nan으로 나올 때 해결법</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-03-17">2022-03-17</time></span>&nbsp;<span class="post-category">included in <a href="/categories/ai/"><i class="far fa-folder fa-fw"></i>AI</a>&nbsp;<a href="/categories/loss/"><i class="far fa-folder fa-fw"></i>loss</a>&nbsp;<a href="/categories/nan/"><i class="far fa-folder fa-fw"></i>Nan</a></span></div><div class="content">​
+모델 학습 시 loss 값이 Nan으로 나올 때 해결 방법   if df == pandas.DataFrame() df.isnull().any()로 데이터셋에 NaN이나 inf 값이 들어있는지 확인한다.
+  다른 optimizer들을 사용해본다. (ex. sgd, adam, nadam)
+  다른 activation function을 사용해본다.
+ 사용하는 모델마다 적합한 activation function이 있습니다. 즉. 모델에 대하여 공부해야하고, 적합한 activation function을 찾아 학습해야 합니다.    learning rate(학습률)을 낮춰본다.
+  learnin rate는 batch_size와 연관이 있습니다.
+  러닝레이트 줄이기 vs 배치사이즈 키우기</div><div class="post-footer">
+        <a href="/loss_nan_solution/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/ai/">AI</a>,&nbsp;<a href="/tags/loss/">loss</a>,&nbsp;<a href="/tags/nan/">Nan</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/what_is_babel/">What is Babel?</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-03-15">2022-03-15</time></span>&nbsp;<span class="post-category">included in <a href="/categories/web/"><i class="far fa-folder fa-fw"></i>web</a>&nbsp;<a href="/categories/babel/"><i class="far fa-folder fa-fw"></i>babel</a></span></div><div class="content">​
+Babel이란?  Babel은 최신 명세(또는 ES2015 이상)의 문법을 구형 브라우저에서도 동작하는 코드로 *트랜스파일해주는 개발 도구입니다.
+만약 Babel이 없다면? 구형 브라우저에서 동작할 수 있는 방식으로 웹 개발을 하고, 최신 브라우저에서 동작할 수 있는 방식으로 다시 개발해야 하는 상황이 발생합니다. 즉 구형 브라우저의 지원이 필요한 프런트엔드 프로젝트라면 현재 Babel의 사용은 필수입니다.
+ ​
+*트랜스파일러?
+ES2015 등장 이후로 javascript는 class문법, 화살표 함수, 모듈 도입 등 많은 변화가 있었습니다. 이후에도 동기, 비동기처리를 위한 async &amp; await, optional 등 다양한 문법과 편의성 높은 기술들이 추가되고 있습니다.</div><div class="post-footer">
+        <a href="/what_is_babel/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/web/">web</a>,&nbsp;<a href="/tags/babel/">babel</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -178,7 +173,7 @@ Django Overriding Templates  웹개발을 하다보면 재활용되어야 하는
                     <span class="page-link" aria-hidden="true">&hellip;</span>
                 </li><li class="page-item ">
                     <span class="page-link">
-                        <a href="/page/31/">31</a>
+                        <a href="/page/39/">39</a>
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">
@@ -192,181 +187,5 @@ Django Overriding Templates  웹개발을 하다보면 재활용되어야 하는
             </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
                 <i class="fas fa-comment fa-fw"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"id-1":"\u003cb\u003e느리더라도 정확히, 바쁘지만 조급하지 않게, 무엇보다 포기하지 않는\u003c/b\u003e"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
-</html>
-=======
-<meta name="application-name" content="LoveIt">
-<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/" /><link rel="alternate" href="/index.xml" type="application/rss+xml" title="">
-    <link rel="feed" href="/index.xml" type="application/rss+xml" title=""><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "WebSite",
-        "url": "https:\/\/colinder.github.io\/","inLanguage": "en","author": {
-                "@type": "Person",
-                "name": "colinder"
-            },"description": "Hello New World","name": ""
-    }
-    </script></head>
-    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
-
-        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
-    <div class="header-wrapper">
-        <div class="header-title">
-            <a href="/" title="">Hello New World</a>
-        </div>
-        <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
-                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
-                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
-                            <i class="fas fa-search fa-fw"></i>
-                        </a>
-                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
-                            <i class="fas fa-times-circle fa-fw"></i>
-                        </a>
-                        <span class="search-button search-loading" id="search-loading-desktop">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
-                        </span>
-                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
-                    <i class="fas fa-adjust fa-fw"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-</header><header class="mobile" id="header-mobile">
-    <div class="header-container">
-        <div class="header-wrapper">
-            <div class="header-title">
-                <a href="/" title="">Hello New World</a>
-            </div>
-            <div class="menu-toggle" id="menu-toggle-mobile">
-                <span></span><span></span><span></span>
-            </div>
-        </div>
-        <div class="menu" id="menu-mobile"><div class="search-wrapper">
-                    <div class="search mobile" id="search-mobile">
-                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
-                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
-                            <i class="fas fa-search fa-fw"></i>
-                        </a>
-                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
-                            <i class="fas fa-times-circle fa-fw"></i>
-                        </a>
-                        <span class="search-button search-loading" id="search-loading-mobile">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
-                        </span>
-                    </div>
-                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
-                        Cancel
-                    </a>
-                </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
-                <i class="fas fa-adjust fa-fw"></i>
-            </a></div>
-    </div>
-</header>
-<div class="search-dropdown desktop">
-    <div id="search-dropdown-desktop"></div>
-</div>
-<div class="search-dropdown mobile">
-    <div id="search-dropdown-mobile"></div>
-</div>
-<main class="main">
-                <div class="container"><div class="page home" posts><div class="home-profile"><div class="home-avatar"><a href="/categories/" title="대분류"><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="/images/jg_02.jpg"
-        data-srcset="/images/jg_02.jpg, /images/jg_02.jpg 1.5x, /images/jg_02.jpg 2x"
-        data-sizes="auto"
-        alt="/images/jg_02.jpg"
-        title="/images/jg_02.jpg" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/colinder" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="mailto:kjonggwan@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
-<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/biasvariance/">편향(Bias) &amp; 분산(Variance)</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-03-14">2022-03-14</time></span>&nbsp;<span class="post-category">included in <a href="/categories/ai/"><i class="far fa-folder fa-fw"></i>AI</a>&nbsp;<a href="/categories/bias/"><i class="far fa-folder fa-fw"></i>bias</a>&nbsp;<a href="/categories/variance/"><i class="far fa-folder fa-fw"></i>variance</a></span></div><div class="content">​
-편향(Bias)과 분산(Variance)  인공지능 모델링을 하면 정답을 맞추기 위해 컴퓨터는 여러 번의 예측값을 내놓는데, 컴퓨터가 내놓은 예측값의 동태를 묘사하는 표현이 &lsquo;편향&rsquo;과 &lsquo;분산&rsquo;입니다.
- ​
-​
-​
-🤔결론부터 말하자면 예측값들과 정답이 대체로 멀리 떨어져 있으면 편향이 놓다고 말하고,
-예측값들이 서로 멀리 흩어져 있으면 분산이 높다고 말합니다.
-​
-​
-​
-아래 그림을 보면 왼쪽 상단 과녁은
-예측값들이 대체로 정답 근방에서 왔다갔다 합니다. &gt; 편향이 낮습니다.
-예측값들끼리 서로 몰려 있습니다. &gt; 분산이 낮습니다.</div><div class="post-footer">
-        <a href="/biasvariance/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/ai/">AI</a>,&nbsp;<a href="/tags/bias/">bias</a>,&nbsp;<a href="/tags/variance/">variance</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/what_is_webpack/">What is webpack?</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-03-01">2022-03-01</time></span>&nbsp;<span class="post-category">included in <a href="/categories/web/"><i class="far fa-folder fa-fw"></i>web</a>&nbsp;<a href="/categories/webpack/"><i class="far fa-folder fa-fw"></i>webpack</a></span></div><div class="content">​
-What is webpack?  오늘나 자바스크립트 개발에서 모듈을 사용하여 개발하는 것은 선택이 아닌 필수입니다. 하지만 아직 모든 브라우저(마이크로소프트 - 앳지, 네이버 - 웨일, 구글 - 크롬 등등)가 *ES2015 모듈을 지원하지 않기 때문에 모듈 단위로 패키지를 관리할 수 없습니다. 이런 경우 전역 스코프를 공유하기 때문에 변수명이 충돌하거나 값이 덮어씌워지는 등 문제가 발생할 수 있습니다.
-이런 문제를 해결하기 위해 *번들러를 사용하는데 wabpack은 가장 많이 사용되는 번들러 중 하나입니다.
- *번들러
-애플리케이션에 필요한 모든 종류의 파일들을 모듈 단위로 나누어 최소한의 파일 묶음(번들)으로 만들어 낸다.</div><div class="post-footer">
-        <a href="/what_is_webpack/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/web/">web</a>,&nbsp;<a href="/tags/webpack/">webpack</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/what_is_es2015/">What is ES2015?</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-02-28">2022-02-28</time></span>&nbsp;<span class="post-category">included in <a href="/categories/web/"><i class="far fa-folder fa-fw"></i>web</a>&nbsp;<a href="/categories/javascript/"><i class="far fa-folder fa-fw"></i>Javascript</a>&nbsp;<a href="/categories/ecmascript/"><i class="far fa-folder fa-fw"></i>ECMAScript</a></span></div><div class="content">​
-What is ES2015?  웹 개발 도구와 내용을 정리하다보면 등장하던 ES2015. 그냥 어떤 느낌의 단어인지 어렴풋이 알고만 있다가 확실하게 정리해 알아두고 싶어 내용을 정리합니다.
- ​
-​
-​
-우선 javaScript에 대하여 조금 알아봅시다.  javaScript는 프로그래밍 언어입니다. 프로그래밍 언어는 지금도 꾸준히 개선되고 발전됩니다. 계속 변화하고 있기에 특정 시기에 개발된 상태를 1.2.1과 같이 버전으로 등록해 배포합니다. 자바스크립트는 결점이 상당히 많은 언어였고, 사용자들이 직접 결점을 보완하는 방법으로 발전되어 왔는데, **ECMA(European Computer Manufacturer&rsquo;s Association)**라는 단체에서 기존의 결점을 보완한 표준 자바스크립트 버전을 매년 발표하게 됩니다.</div><div class="post-footer">
-        <a href="/what_is_es2015/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/web/">web</a>,&nbsp;<a href="/tags/javascript/">Javascript</a>,&nbsp;<a href="/tags/ecmascript/">ECMAScript</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/what_is_web_socket/">What is Web Socket?</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-02-25">2022-02-25</time></span>&nbsp;<span class="post-category">included in <a href="/categories/web/"><i class="far fa-folder fa-fw"></i>web</a>&nbsp;<a href="/categories/web-socket/"><i class="far fa-folder fa-fw"></i>Web Socket</a></span></div><div class="content">​
-What is Web Socket?  Web 통신은 무조건 두 단계를 걸쳐 동작합니다. 요청과 응답. 간단히 어떤 요청이 있을 때만 서버와 연결되어 어떤 응답을 하게 됩니다. 이러한 방식을 HTTP라고 합니다. 예를 들어, Naver.com에 접속하는 것은 &lsquo;Naver.com&rsquo;이라는 요청을 보낸 것이고 그에 대한 응답으로 naver의 메인 화면을 보여주는 것이죠. 그런데 만약 실시간 채팅 서비스나 푸시 알람을 구현해야 한다면, 매우 잦은 요청을 보내야 하고 네트워크 상 많은 부하를 발생시킬 수 있습니다.
- HTML5이라는 웹 표준이 생긴이래로 이러한 HTTP의 단점을 보완하기 위해 웹 소켓(Web Socket)이 등장했습니다.</div><div class="post-footer">
-        <a href="/what_is_web_socket/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/web/">web</a>,&nbsp;<a href="/tags/web-socket/">Web Socket</a></div></div>
-</article><ul class="pagination"><li class="page-item ">
-                    <span class="page-link">
-                        <a href="/">1</a>
-                    </span>
-                </li><li class="page-item ">
-                    <span class="page-link" aria-hidden="true">&hellip;</span>
-                </li><li class="page-item ">
-                    <span class="page-link">
-                        <a href="/page/7/">7</a>
-                    </span>
-                </li><li class="page-item ">
-                    <span class="page-link">
-                        <a href="/page/8/">8</a>
-                    </span>
-                </li><li class="page-item active">
-                    <span class="page-link">
-                        <a href="/page/9/">9</a>
-                    </span>
-                </li><li class="page-item ">
-                    <span class="page-link">
-                        <a href="/page/10/">10</a>
-                    </span>
-                </li><li class="page-item ">
-                    <span class="page-link">
-                        <a href="/page/11/">11</a>
-                    </span>
-                </li><li class="page-item ">
-                    <span class="page-link" aria-hidden="true">&hellip;</span>
-                </li><li class="page-item ">
-                    <span class="page-link">
-                        <a href="/page/38/">38</a>
-                    </span>
-                </li></ul></div></div>
-            </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
-        </div>
-    </footer></div>
-
-        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
-                <i class="fas fa-arrow-up fa-fw"></i>
-            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
-                <i class="fas fa-comment fa-fw"></i>
-            </a>
         </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":-1},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"id-1":"\u003cb\u003e느리더라도 정확히, 바쁘지만 조급하지 않게, 무엇보다 포기하지 않는\u003c/b\u003e"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>
->>>>>>> 9c06ef901d760bc6215aed209d8dbeac1922eeba

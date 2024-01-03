@@ -18,8 +18,8 @@ React Native 시작하기 (with Typescript)  myApp은 본인이 원하는 프로
   저는 아래와 같은 폴더 구조로 세팅했고 이 중 src를 root로 설정하고 싶었습니다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://colinder.github.io/things/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-07-20T21:24:52&#43;09:00" />
-<meta property="article:modified_time" content="2023-07-20T21:24:52&#43;09:00" />
+<meta property="article:published_time" content="2023-07-20T21:24:52+09:00" />
+<meta property="article:modified_time" content="2023-07-20T21:24:52+09:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
@@ -151,10 +151,10 @@ React Native 시작하기 (with Typescript)  myApp은 본인이 원하는 프로
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">npx react-native@latest init myApp --template react-native-template-typescript
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">npx react-native@latest init myApp --template react-native-template-typescript
 </code></pre></td></tr></table>
 </div>
 </div><p>​</p>
@@ -164,10 +164,10 @@ React Native 시작하기 (with Typescript)  myApp은 본인이 원하는 프로
 <p>Metro 실행 명령어</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">npx react-native start
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">npx react-native start
 </code></pre></td></tr></table>
 </div>
 </div><p>​</p>
@@ -185,7 +185,7 @@ React Native 시작하기 (with Typescript)  myApp은 본인이 원하는 프로
 <p>또 @로 root 주소를 불러오고 싶습니다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -210,7 +210,7 @@ React Native 시작하기 (with Typescript)  myApp은 본인이 원하는 프로
 </span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">├─.bundle
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">├─.bundle
 ├─android
 ├─ios
 ├─node_modules
@@ -244,10 +244,10 @@ React Native 시작하기 (with Typescript)  myApp은 본인이 원하는 프로
 <p>babel-plugin-module-resolver 설치하기</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">npm i babel-plugin-module-resolver
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">npm i babel-plugin-module-resolver
 </code></pre></td></tr></table>
 </div>
 </div></li>
@@ -260,12 +260,12 @@ React Native 시작하기 (with Typescript)  myApp은 본인이 원하는 프로
 <p>프로젝트를 생성하면 기본적으로 아래와 같이 설정되어 있습니다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">module.exports <span class="o">=</span> <span class="o">{</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">module.exports <span class="o">=</span> <span class="o">{</span>
   presets: <span class="o">[</span><span class="s1">&#39;module:metro-react-native-babel-preset&#39;</span><span class="o">]</span>,
 <span class="o">}</span><span class="p">;</span>		
 </code></pre></td></tr></table>
@@ -274,7 +274,7 @@ React Native 시작하기 (with Typescript)  myApp은 본인이 원하는 프로
 <p>이렇게 바꿔 줍니다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -301,7 +301,7 @@ React Native 시작하기 (with Typescript)  myApp은 본인이 원하는 프로
 </span><span class="lnt">25
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">module.exports <span class="o">=</span> <span class="o">{</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">module.exports <span class="o">=</span> <span class="o">{</span>
   presets: <span class="o">[</span><span class="s1">&#39;module:metro-react-native-babel-preset&#39;</span><span class="o">]</span>,
   plugins: <span class="o">[</span>
     <span class="o">[</span>
@@ -335,12 +335,12 @@ React Native 시작하기 (with Typescript)  myApp은 본인이 원하는 프로
 <p>defualt</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">{</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="o">{</span>
   <span class="s2">&#34;extends&#34;</span>: <span class="s2">&#34;@tsconfig/react-native/tsconfig.json&#34;</span>,
 <span class="o">}</span>
 </code></pre></td></tr></table>
@@ -349,7 +349,7 @@ React Native 시작하기 (with Typescript)  myApp은 본인이 원하는 프로
 <p>아래와 같이 변경</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -360,7 +360,7 @@ React Native 시작하기 (with Typescript)  myApp은 본인이 원하는 프로
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">{</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="o">{</span>
   <span class="s2">&#34;extends&#34;</span>: <span class="s2">&#34;@tsconfig/react-native/tsconfig.json&#34;</span>,
   <span class="s2">&#34;compilerOptions&#34;</span>: <span class="o">{</span>
     <span class="s2">&#34;baseUrl&#34;</span>: <span class="s2">&#34;./src&#34;</span>,
@@ -426,7 +426,7 @@ React Native 시작하기 (with Typescript)  myApp은 본인이 원하는 프로
     </a>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -435,7 +435,7 @@ React Native 시작하기 (with Typescript)  myApp은 본인이 원하는 프로
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">module.exports <span class="o">=</span> <span class="o">{</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">module.exports <span class="o">=</span> <span class="o">{</span>
   project: <span class="o">{</span>
     ios: <span class="o">{}</span>,
     android: <span class="o">{}</span>, 
@@ -451,10 +451,10 @@ React Native 시작하기 (with Typescript)  myApp은 본인이 원하는 프로
 <p>명령어를 입력해 ios, android 폴더에 폰트를 반영시킨다!</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">npx react-native-asset
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">npx react-native-asset
 </code></pre></td></tr></table>
 </div>
 </div><p>잘 되었는지 확인!</p>
@@ -478,7 +478,7 @@ React Native 시작하기 (with Typescript)  myApp은 본인이 원하는 프로
 <p>이제 적용해보자</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -505,7 +505,7 @@ React Native 시작하기 (with Typescript)  myApp은 본인이 원하는 프로
 </span><span class="lnt">25
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">//App.tsx
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">//App.tsx
 
 import React from <span class="s1">&#39;react&#39;</span><span class="p">;</span>
 
@@ -554,71 +554,71 @@ const <span class="nv">styles</span> <span class="o">=</span> StyleSheet.create<
 <p>// 스텍에 쌓고 이동하기 ( 뒤로가기시 페이지로 돌아옴 )</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">navigation.navigate<span class="o">(</span><span class="s1">&#39;스크린 이름 &#39;</span><span class="o">)</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">navigation.navigate<span class="o">(</span><span class="s1">&#39;스크린 이름 &#39;</span><span class="o">)</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>// 이전페이지로 돌아가기 ( 위의 navigate 를 이용하여 이동한 경우 가능 payLoad 가 2개 이상인 경우에 가능 하다 )</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">navigation.pop<span class="o">()</span><span class="p">;</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">navigation.pop<span class="o">()</span><span class="p">;</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>// 스텍의 제일 윗 페이지로 이동</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">navigation.popToTop<span class="o">()</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">navigation.popToTop<span class="o">()</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>​</p>
 <p>// 새롭게 컴포넌트를 스텍이 쌓는다. ( 이전에 스텍에 쌓여있으면 그걸 불러온다 )</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">navigation.push<span class="o">()</span><span class="p">;</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">navigation.push<span class="o">()</span><span class="p">;</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>// 스텍쌓지 않고 이동하기 ( 뒤로가기시 이전페이지로 돌아갈 수 없음 )</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">navigation.replace<span class="o">(</span><span class="s1">&#39;스크린이름&#39;</span><span class="o">)</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">navigation.replace<span class="o">(</span><span class="s1">&#39;스크린이름&#39;</span><span class="o">)</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>// 중첩된 네비게이터에서 이동</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">navigation.navigate<span class="o">(</span><span class="s1">&#39;A_Screen&#39;</span>, <span class="o">{</span> screen: <span class="s1">&#39;A_1Screen&#39;</span> <span class="o">})</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">navigation.navigate<span class="o">(</span><span class="s1">&#39;A_Screen&#39;</span>, <span class="o">{</span> screen: <span class="s1">&#39;A_1Screen&#39;</span> <span class="o">})</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>// 데이터 전달</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">navigation.navigate<span class="o">(</span><span class="s1">&#39;Inquiry_R&#39;</span>,<span class="o">{</span> 키값: 데이터 <span class="o">})</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">navigation.navigate<span class="o">(</span><span class="s1">&#39;Inquiry_R&#39;</span>,<span class="o">{</span> 키값: 데이터 <span class="o">})</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>// 뒤로가기</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -627,7 +627,7 @@ const <span class="nv">styles</span> <span class="o">=</span> StyleSheet.create<
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">import <span class="o">{</span> CommonActions <span class="o">}</span> from <span class="s2">&#34;@react-navigation/native&#34;</span><span class="p">;</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">import <span class="o">{</span> CommonActions <span class="o">}</span> from <span class="s2">&#34;@react-navigation/native&#34;</span><span class="p">;</span>
 
 navigation.dispatch<span class="o">(</span>CommonActions.goBack<span class="o">())</span><span class="p">;</span>
 
@@ -672,8 +672,8 @@ navigation.goBack<span class="o">()</span>
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 

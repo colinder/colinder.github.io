@@ -20,8 +20,8 @@ How To Deploy Django on Windows server Using Apache  Window에 backend(django)�
 step 00. 다운 받고 환경을 만들어 보자   apache" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://colinder.github.io/how-to-deploy-django-on-windows-server-using-apache/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-07-19T11:05:45&#43;09:00" />
-<meta property="article:modified_time" content="2023-07-19T11:05:45&#43;09:00" />
+<meta property="article:published_time" content="2023-07-19T11:05:45+09:00" />
+<meta property="article:modified_time" content="2023-07-19T11:05:45+09:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
@@ -181,7 +181,7 @@ step 00. 다운 받고 환경을 만들어 보자   apache"/>
 <p>apache</p>
 <ul>
 <li>
-<p><a href="https://www.apachelounge.com/download/">https://www.apachelounge.com/download/</a></p>
+<p><a href="https://www.apachelounge.com/download/" target="_blank" rel="noopener noreffer">https://www.apachelounge.com/download/</a></p>
 <a class="lightgallery" href="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718171014500.png" title="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718171014500.png" data-thumbnail="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718171014500.png">
         <img
             class="lazyload"
@@ -239,10 +239,10 @@ step 00. 다운 받고 환경을 만들어 보자   apache"/>
 <p><code>C:\Apache24\bin</code>로 이동하자.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">cd C:\Apache24\bin
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">cd C:\Apache24\bin
 </code></pre></td></tr></table>
 </div>
 </div><a class="lightgallery" href="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718172315520.png" title="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718172315520.png" data-thumbnail="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718172315520.png">
@@ -260,10 +260,10 @@ step 00. 다운 받고 환경을 만들어 보자   apache"/>
 <p>이제 Apache 설치하자</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">httpd.exe -k install
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">httpd.exe -k install
 </code></pre></td></tr></table>
 </div>
 </div><p>뭔가 오류같은 내용들이 나오는데 출력된 내용 위에</p>
@@ -283,10 +283,10 @@ step 00. 다운 받고 환경을 만들어 보자   apache"/>
 <p>구동도 해보자</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">httpd.exe -k start   
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">httpd.exe -k start   
 </code></pre></td></tr></table>
 </div>
 </div><p>아파치 서버 실행 명령어입니다. (중요)</p>
@@ -334,7 +334,7 @@ step 00. 다운 받고 환경을 만들어 보자   apache"/>
 <p>Dev C++</p>
 <ul>
 <li>
-<p><a href="https://visualstudio.microsoft.com/visual-cpp-build-tools/">https://visualstudio.microsoft.com/visual-cpp-build-tools/</a></p>
+<p><a href="https://visualstudio.microsoft.com/visual-cpp-build-tools/" target="_blank" rel="noopener noreffer">https://visualstudio.microsoft.com/visual-cpp-build-tools/</a></p>
 <a class="lightgallery" href="/images/How%20To%20Deploy%20Django%20on%20Windows%20server%20Using%20Apache.assets/image-20230718173056957.png" title="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718173056957.png" data-thumbnail="/images/How To Deploy Django on Windows server Using Apache.assets/image-20230718173056957.png">
         <img
             class="lazyload"
@@ -379,20 +379,20 @@ step 00. 다운 받고 환경을 만들어 보자   apache"/>
 <p>django 설치</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pip install django
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pip install django
 </code></pre></td></tr></table>
 </div>
 </div><p>그리고 장고 프로젝트를 <code>C:\Apache24\htdocs</code>에 생성한다. (난 psgfront라는 이름으로 만들었다.)</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># django 프로젝트 생성 명령어</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># django 프로젝트 생성 명령어</span>
 django-admin startproject psgfront
 </code></pre></td></tr></table>
 </div>
@@ -422,19 +422,19 @@ django-admin startproject psgfront
 <p>mod-wsgi 설치 &amp; 설정값 확인</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pip install mod-wsgi
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pip install mod-wsgi
 </code></pre></td></tr></table>
 </div>
 </div><p>설치 다 됬으면,</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">mod_wsgi-express module-config  <span class="c1"># 라고 입력 후 엔터</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">mod_wsgi-express module-config  <span class="c1"># 라고 입력 후 엔터</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>이후 나오는 설정값(LoadFile, LoadModule, WSGIPythonHome 총 3개)은 등록해야 하는 값들이다.</p>
@@ -456,7 +456,7 @@ django-admin startproject psgfront
 <p>파일을 열고 맨아래로 가 아래 코드를 붙여넣는다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -475,7 +475,7 @@ django-admin startproject psgfront
 </span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Django Project</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Django Project</span>
 LoadFile <span class="s2">&#34;c:/python37/python37.dll&#34;</span>
 LoadModule wsgi_module <span class="s2">&#34;c:/python37/lib/site-packages/mod_wsgi/server/mod_wsgi.cp37-win_amd64.pyd&#34;</span>
 WSGIPythonHome <span class="s2">&#34;c:/python37&#34;</span>
@@ -564,7 +564,7 @@ Alias /static <span class="s2">&#34;C:/Users/navar/Desktop/webproject/static/&#3
 <p>최종 결과</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -582,7 +582,7 @@ Alias /static <span class="s2">&#34;C:/Users/navar/Desktop/webproject/static/&#3
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">LoadFile <span class="s2">&#34;C:/Users/kjong/AppData/Local/Programs/Python/Python310/python310.dll&#34;</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">LoadFile <span class="s2">&#34;C:/Users/kjong/AppData/Local/Programs/Python/Python310/python310.dll&#34;</span>
 LoadModule wsgi_module <span class="s2">&#34;C:/Users/kjong/AppData/Local/Programs/Python/Python310/lib/site-packages/mod_wsgi/server/mod_wsgi.cp310-win_amd64.pyd&#34;</span>
 WSGIPythonHome <span class="s2">&#34;C:/Users/kjong/AppData/Local/Programs/Python/Python310&#34;</span>
 WSGIScriptAlias / <span class="s2">&#34;C:/Apache24/htdocs/psgfront/psgfront/wsgi.py&#34;</span>
@@ -624,7 +624,7 @@ Alias /static <span class="s2">&#34;C:/Apache24/htdocs/psgfront/static/&#34;</sp
 <h1 id="-마무리">👀 마무리</h1>
 <blockquote>
 <p>배포는 잘 마무리 되었지만, 아직 설정할 것이 많이 있다. 차근히 찾아보고 진행했던 단계들도 다시 한 번 천천히 살펴보며 보강하는 것이 좋을 것 같다.</p>
-<p>명령어 모음 URL : <a href="https://github.com/colinder/How_To_Deploy_Django_on_Windows_server_Using_Apache/blob/main/README.md">https://github.com/colinder/How_To_Deploy_Django_on_Windows_server_Using_Apache/blob/main/README.md</a></p>
+<p>명령어 모음 URL : <a href="https://github.com/colinder/How_To_Deploy_Django_on_Windows_server_Using_Apache/blob/main/README.md" target="_blank" rel="noopener noreffer">https://github.com/colinder/How_To_Deploy_Django_on_Windows_server_Using_Apache/blob/main/README.md</a></p>
 </blockquote>
 <p>​</p>
 <p>​</p>
@@ -662,8 +662,8 @@ Alias /static <span class="s2">&#34;C:/Apache24/htdocs/psgfront/static/&#34;</sp
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 

@@ -14,8 +14,8 @@ Selenium 동작대기 접근하려는 요소가 존재하지 않을 때 발생�
 1. time.sleep  python 내장 library 지정한 시간만큼 지연 (프로세스 자체를 지정한 시간동안 기다림)  사용법 1 2 3  from time import sleep sleep(3) //3초간 기다림   ​" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://colinder.github.io/selenium_%EB%8F%99%EC%9E%91%EB%8C%80%EA%B8%B0/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-05-17T15:50:42&#43;09:00" />
-<meta property="article:modified_time" content="2022-05-17T15:50:42&#43;09:00" />
+<meta property="article:published_time" content="2022-05-17T15:50:42+09:00" />
+<meta property="article:modified_time" content="2022-05-17T15:50:42+09:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
@@ -157,12 +157,12 @@ Selenium 동작대기 접근하려는 요소가 존재하지 않을 때 발생�
 <h3 id="사용법">사용법</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">from</span> <span class="nx">time</span> <span class="kr">import</span> <span class="nx">sleep</span>
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">from</span> <span class="nx">time</span> <span class="kr">import</span> <span class="nx">sleep</span>
 
 <span class="nx">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1">//3초간 기다림
 </span></code></pre></td></tr></table>
@@ -178,13 +178,13 @@ Selenium 동작대기 접근하려는 요소가 존재하지 않을 때 발생�
 <h3 id="사용법-1">사용법</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">from</span> <span class="nx">selenium</span> <span class="kr">import</span> <span class="nx">webdriver</span>
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">from</span> <span class="nx">selenium</span> <span class="kr">import</span> <span class="nx">webdriver</span>
 
 <span class="nx">driver</span> <span class="o">=</span> <span class="nx">webdriver</span><span class="p">.</span><span class="nx">Chrome</span><span class="p">(</span><span class="s1">&#39;chromedriver.exe&#39;</span><span class="p">)</span>
 <span class="nx">driver</span><span class="p">.</span><span class="nx">implicitly_wait</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>  <span class="c1">//10초간 기다림
@@ -202,7 +202,7 @@ Selenium 동작대기 접근하려는 요소가 존재하지 않을 때 발생�
 <h3 id="사용법-2">사용법</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -212,7 +212,7 @@ Selenium 동작대기 접근하려는 요소가 존재하지 않을 때 발생�
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">from</span> <span class="nx">selenium</span> <span class="kr">import</span> <span class="nx">webdriver</span>
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">from</span> <span class="nx">selenium</span> <span class="kr">import</span> <span class="nx">webdriver</span>
 <span class="nx">from</span> <span class="nx">selenium</span><span class="p">.</span><span class="nx">webdriver</span><span class="p">.</span><span class="nx">support</span><span class="p">.</span><span class="nx">ui</span> <span class="kr">import</span> <span class="nx">WebDriverWait</span>
 <span class="nx">from</span> <span class="nx">selenium</span><span class="p">.</span><span class="nx">webdriver</span><span class="p">.</span><span class="nx">support</span> <span class="kr">import</span> <span class="nx">expected_conditions</span> <span class="nx">as</span> <span class="nx">EC</span>
 
@@ -258,8 +258,8 @@ Selenium 동작대기 접근하려는 요소가 존재하지 않을 때 발생�
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 

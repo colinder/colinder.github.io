@@ -16,8 +16,8 @@ scoped css 설정  지역적으로 사용하고 싶은 css 설정 방법
 1 2 3 4 5 6 7 8 9 10 11 12  src ├── assets │ ├── Styles │ ├── common." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://colinder.github.io/scoped_css/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-05-03T14:53:20&#43;09:00" />
-<meta property="article:modified_time" content="2023-05-03T14:53:20&#43;09:00" />
+<meta property="article:published_time" content="2023-05-03T14:53:20+09:00" />
+<meta property="article:modified_time" content="2023-05-03T14:53:20+09:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
@@ -152,7 +152,7 @@ react는 어떻게 하는지 알아봅니다.</p>
 <p>폴더 구조를 보자면. (구조는 마음대로 구성하여도 됩니다. 아래는 제 마음대로 구성한 것입니다.)</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -166,7 +166,7 @@ react는 어떻게 하는지 알아봅니다.</p>
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">src
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">src
 ├── assets
 │    ├── Styles
 │        ├── common.css
@@ -190,7 +190,7 @@ react는 어떻게 하는지 알아봅니다.</p>
 <p>CRA(Create-React-App) 공식문서를 따르면 CRA로 프로젝트를 생성했을 때, 별도의 설정없어 <code>[name].module.css</code>가 적용된다고 <a href="https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/" target="_blank" rel="noopener noreffer">하는데</a> 저는 붉은 경고창을 보았습니다. 그래서 등록해줬습니다. <a href="https://velog.io/@towozy/tsx%EC%97%90%EC%84%9C-.module.scss-import-%EB%AA%BB%ED%95%A0-%EB%95%8C" target="_blank" rel="noopener noreffer">참고</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -200,7 +200,7 @@ react는 어떻게 하는지 알아봅니다.</p>
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-react" data-lang="react"><span class="nx">declare</span> <span class="nx">module</span> <span class="s2">&#34;*.module.css&#34;</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-react" data-lang="react"><span class="nx">declare</span> <span class="nx">module</span> <span class="s2">&#34;*.module.css&#34;</span> <span class="p">{</span>
   <span class="kr">const</span> <span class="nx">classes</span><span class="o">:</span> <span class="p">{</span> <span class="p">[</span><span class="nx">className</span><span class="o">:</span> <span class="nx">string</span><span class="p">]</span><span class="o">:</span> <span class="nx">string</span> <span class="p">};</span>
   <span class="kr">export</span> <span class="k">default</span> <span class="nx">classes</span><span class="p">;</span>
 <span class="p">}</span>
@@ -216,13 +216,13 @@ react는 어떻게 하는지 알아봅니다.</p>
 <p>types를 선언해줬기 때문에 이를 default로 참고하라고 <code>tsconfig.json</code>에 등록해줍니다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
   <span class="nt">&#34;compilerOptions&#34;</span><span class="p">:</span> <span class="p">{</span>
     <span class="nt">&#34;typeRoots&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;./node_modules/@types&#34;</span><span class="p">,</span> <span class="s2">&#34;types&#34;</span><span class="p">],</span>  <span class="err">//</span> <span class="err">👈👈👈</span>
 <span class="p">}</span>
@@ -234,7 +234,7 @@ react는 어떻게 하는지 알아봅니다.</p>
 <p>우선 <code>pages &gt; test.tsx</code>에 기본 구조를 만들고</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -246,7 +246,7 @@ react는 어떻게 하는지 알아봅니다.</p>
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-react" data-lang="react"><span class="kd">function</span> <span class="nx">test</span><span class="p">()</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-react" data-lang="react"><span class="kd">function</span> <span class="nx">test</span><span class="p">()</span> <span class="p">{</span>
   <span class="k">return</span> <span class="p">(</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span><span class="nx">test</span> <span class="nx">메인</span> <span class="nx">페이지</span><span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>      
@@ -264,12 +264,12 @@ react는 어떻게 하는지 알아봅니다.</p>
 <p><code>pages &gt; test.module.css</code>에 test.tsx에만 적용할(지역적으로) css를 구성합니다. 간단하게 배경색을 주고</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-react" data-lang="react"><span class="p">.</span><span class="nx">Box</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-react" data-lang="react"><span class="p">.</span><span class="nx">Box</span> <span class="p">{</span>
   <span class="nx">background</span><span class="o">-</span><span class="nx">color</span><span class="o">:</span> <span class="nx">aqua</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></td></tr></table>
@@ -280,7 +280,7 @@ react는 어떻게 하는지 알아봅니다.</p>
 <p><code>pages &gt; test.tsx</code>에 반영하면 됩니다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -294,7 +294,7 @@ react는 어떻게 하는지 알아봅니다.</p>
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-react" data-lang="react"><span class="kr">import</span> <span class="nx">styles</span> <span class="nx">from</span> <span class="s2">&#34;./test.module.css&#34;</span><span class="p">;</span>		 <span class="c1">// 👈👈👈
+<pre tabindex="0" class="chroma"><code class="language-react" data-lang="react"><span class="kr">import</span> <span class="nx">styles</span> <span class="nx">from</span> <span class="s2">&#34;./test.module.css&#34;</span><span class="p">;</span>		 <span class="c1">// 👈👈👈
 </span><span class="c1"></span>
 <span class="kd">function</span> <span class="nx">test</span><span class="p">()</span> <span class="p">{</span>
   <span class="k">return</span> <span class="p">(</span>
@@ -361,8 +361,8 @@ react는 어떻게 하는지 알아봅니다.</p>
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 

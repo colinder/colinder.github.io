@@ -3,28 +3,10 @@
         <title>web - Category - </title>
         <link>https://colinder.github.io/categories/web/</link>
         <description>web - Category - </description>
-<<<<<<< HEAD
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 01 Mar 2022 09:17:44 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/web/" rel="self" type="application/rss+xml" /><item>
-    <title>What is webpack?</title>
-    <link>https://colinder.github.io/what_is_webpack/</link>
-    <pubDate>Tue, 01 Mar 2022 09:17:44 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/what_is_webpack/</guid>
-    <description><![CDATA[​
-What is webpack?  오늘나 자바스크립트 개발에서 모듈을 사용하여 개발하는 것은 선택이 아닌 필수입니다. 하지만 아직 모든 브라우저(마이크로소프트 - 앳지, 네이버 - 웨일, 구글 - 크롬 등등)가 *ES2015 모듈을 지원하지 않기 때문에 모듈 단위로 패키지를 관리할 수 없습니다. 이런 경우 전역 스코프를 공유하기 때문에 변수명이 충돌하거나 값이 덮어씌워지는 등 문제가 발생할 수 있습니다.
-이런 문제를 해결하기 위해 *번들러를 사용하는데 wabpack은 가장 많이 사용되는 번들러 중 하나입니다.
- *번들러
-애플리케이션에 필요한 모든 종류의 파일들을 모듈 단위로 나누어 최소한의 파일 묶음(번들)으로 만들어 낸다.]]></description>
-</item><item>
-    <title>What is ES2015?</title>
-    <link>https://colinder.github.io/what_is_es2015/</link>
-    <pubDate>Mon, 28 Feb 2022 09:23:51 &#43;0900</pubDate>
-=======
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 18 Jul 2023 16:51:22 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/web/" rel="self" type="application/rss+xml" /><item>
     <title>외부 &amp; 내부 IP</title>
     <link>https://colinder.github.io/what_is_ip/</link>
     <pubDate>Tue, 18 Jul 2023 16:51:22 &#43;0900</pubDate>
->>>>>>> 9c06ef901d760bc6215aed209d8dbeac1922eeba
     <author>Author</author>
     <guid>https://colinder.github.io/what_is_ip/</guid>
     <description><![CDATA[​
@@ -131,10 +113,6 @@ axios 설치 및 전역변수 설정 방법 front와 back간의 통신에 자주
 먼저, axios의 특징은
   구형 브라우저를 지원한다. 응답 시간 초과를 설정하는 방법이 있다. JSON 데이터 자동변환이 가능하다. node.js에서의 사용이 가능하다. request aborting(요청 취소)가 가능하다. catch에 걸렸을 때, .then을 실행하지 않고, console창에 해당 에러 로그를 보여준다.   설치부터 진행해보겠습니다. 테스트는 Vue를 활용하여 진행하였습니다.
 ​
-<<<<<<< HEAD
-HTTP 프로토콜의 특징 HTTP는 Connectionless(비연결성)하고, Stateless하다고 합니다.
-Connectionless란, 클라이언트가 행위를 통해 서비스를 제공받기 위해 서버에 request(요청)를 하면 서버는 클라이언트의 요청값에 따라 클라이언트에게 response(응답)하게 됩니다. 이렇게 한번의 request — response의 결과로 클라이언트는 어플리케이션이 제공하는 서비스를 받게되면서, 서로의 접속을 끊게 된다는 특성입니다.]]></description>
-=======
 1. axios 설치 1 2  // Terminal에 npm install axios	👈 axios 설치   ​]]></description>
 </item><item>
     <title>Selenium 동작 대기 방법</title>
@@ -161,6 +139,5 @@ Lint를 사용하면 검증을 자동화하여 이런 문제를 예방할 수 �
  ​
 ​
 ESLint 2002년 JSON을 만든 더글라스 크락포드가 자바스크립트 린터인 JSLint를 만들었습니다.]]></description>
->>>>>>> 9c06ef901d760bc6215aed209d8dbeac1922eeba
 </item></channel>
 </rss>

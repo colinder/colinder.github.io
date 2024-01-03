@@ -18,8 +18,8 @@ MariaDB  mysql, mariaDB를 계속해서 사용하고 있지만, 계정과 데이
 MariaDB를 설치한 후 MySQL Client에서 우선 진행." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://colinder.github.io/understand_of_mariadb/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-11-11T13:20:53&#43;09:00" />
-<meta property="article:modified_time" content="2022-11-11T13:20:53&#43;09:00" />
+<meta property="article:published_time" content="2022-11-11T13:20:53+09:00" />
+<meta property="article:modified_time" content="2022-11-11T13:20:53+09:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
@@ -184,10 +184,10 @@ MariaDB를 설치한 후 MySQL Client에서 우선 진행."/>
 <p>mariaDB는 설치하게 되면 default로 세팅이 되는데. 데이터베이스를 보자면,</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">show</span><span class="w"> </span><span class="n">databases</span><span class="p">;</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="k">show</span><span class="w"> </span><span class="n">databases</span><span class="p">;</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
 </div><image src="/images/understand_of_MariaDB.assets\image-20221110164817113.png" width="1000px" style="display: block;">
@@ -203,10 +203,10 @@ MariaDB를 설치한 후 MySQL Client에서 우선 진행."/>
 <p>아래와 같은 명령어로 테이터베이스(작업공간)으로 접속할 수 있다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="n">use</span><span class="w"> </span><span class="n">mysql</span><span class="p">;</span><span class="w">     </span><span class="cm">/* mysql이라는 데이터베이스(작업공간)을 사용하겠다.*/</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="n">use</span><span class="w"> </span><span class="n">mysql</span><span class="p">;</span><span class="w">     </span><span class="cm">/* mysql이라는 데이터베이스(작업공간)을 사용하겠다.*/</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
 </div><image src="/images/understand_of_MariaDB.assets\image-20221111093908545.png" width="1000px" style="display: block;">
@@ -221,14 +221,14 @@ MariaDB를 설치한 후 MySQL Client에서 우선 진행."/>
 <p>또한 계정이 생성되는데 생성되는 계정은 <b>mysql 데이터베이스</b>안에 <b>user라는 테이블에 생성</b>된다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="cm">/* mysql의 user라는 곳에서 user와 host를 선택한다.*/</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="cm">/* mysql의 user라는 곳에서 user와 host를 선택한다.*/</span><span class="w">
 </span><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="k">user</span><span class="p">,</span><span class="w"> </span><span class="k">host</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">mysql</span><span class="p">.</span><span class="k">user</span><span class="p">;</span><span class="w">         
 </span><span class="w">
 </span><span class="w"></span><span class="cm">/* 만약 mysql이라는 작업공간으로 접속해 명령어를 입력한다면, */</span><span class="w">
@@ -277,11 +277,11 @@ MariaDB를 설치한 후 MySQL Client에서 우선 진행."/>
 <p>어떤 데이터베이스도 선택하지 않고 테스트 계정을 만들어 보면,</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">create</span><span class="w"> </span><span class="k">user</span><span class="w"> </span><span class="s1">&#39;none_database_user&#39;</span><span class="o">@</span><span class="s1">&#39;%&#39;</span><span class="w"> </span><span class="n">identified</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="s1">&#39;1234&#39;</span><span class="p">;</span><span class="w">  
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="k">create</span><span class="w"> </span><span class="k">user</span><span class="w"> </span><span class="s1">&#39;none_database_user&#39;</span><span class="o">@</span><span class="s1">&#39;%&#39;</span><span class="w"> </span><span class="n">identified</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="s1">&#39;1234&#39;</span><span class="p">;</span><span class="w">  
 </span><span class="w"></span><span class="cm">/* 어디서든 접속할수있는(%) none_database_user라는 계정을 만들고 비밀번호는 1234 */</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
@@ -293,12 +293,12 @@ MariaDB를 설치한 후 MySQL Client에서 우선 진행."/>
 <h2 id="계정-삭제">계정 삭제</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">delete</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">mysql</span><span class="p">.</span><span class="k">user</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="k">user</span><span class="o">=</span><span class="s1">&#39;삭제할계정이름&#39;</span><span class="p">;</span><span class="w">	</span><span class="cm">/* user테이블에서 삭제 */</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="k">delete</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">mysql</span><span class="p">.</span><span class="k">user</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="k">user</span><span class="o">=</span><span class="s1">&#39;삭제할계정이름&#39;</span><span class="p">;</span><span class="w">	</span><span class="cm">/* user테이블에서 삭제 */</span><span class="w">
 </span><span class="w"></span><span class="k">delete</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">mysql</span><span class="p">.</span><span class="n">db</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="k">user</span><span class="o">=</span><span class="s1">&#39;삭제할계정이름&#39;</span><span class="p">;</span><span class="w">		</span><span class="cm">/* 계정DB에 반영 */</span><span class="w">
 </span><span class="w"></span><span class="n">flush</span><span class="w"> </span><span class="k">privileges</span><span class="p">;</span><span class="w">	</span><span class="cm">/* 시스템 반영 */</span><span class="w">
 </span></code></pre></td></tr></table>
@@ -323,14 +323,14 @@ delete from <span style="color:red">mysql.user</span> where user=&lsquo;none_dat
 <p><b>계정은 &ldquo;human&rdquo;</b>으로 만들고, <b>데이터베이스는 &ldquo;box&rdquo;</b>로 만들어보겠다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="cm">/* 계정 생성 */</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="cm">/* 계정 생성 */</span><span class="w">
 </span><span class="w"></span><span class="k">create</span><span class="w"> </span><span class="k">user</span><span class="w"> </span><span class="s1">&#39;human&#39;</span><span class="o">@</span><span class="s1">&#39;%&#39;</span><span class="w"> </span><span class="n">identified</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="s1">&#39;1234&#39;</span><span class="p">;</span><span class="w">
 </span><span class="w">
 </span><span class="w"></span><span class="cm">/* 데이터베이스 생성 */</span><span class="w">
@@ -344,10 +344,10 @@ delete from <span style="color:red">mysql.user</span> where user=&lsquo;none_dat
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">select</span><span class="w"> </span><span class="k">user</span><span class="p">,</span><span class="w"> </span><span class="k">host</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">mysql</span><span class="p">.</span><span class="k">user</span><span class="p">;</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="k">select</span><span class="w"> </span><span class="k">user</span><span class="p">,</span><span class="w"> </span><span class="k">host</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">mysql</span><span class="p">.</span><span class="k">user</span><span class="p">;</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
 </div><image src="/images/understand_of_MariaDB.assets\image-20221111105724005.png" width="1000px" style="display: block;">
@@ -357,10 +357,10 @@ delete from <span style="color:red">mysql.user</span> where user=&lsquo;none_dat
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">show</span><span class="w"> </span><span class="n">databases</span><span class="p">;</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="k">show</span><span class="w"> </span><span class="n">databases</span><span class="p">;</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
 </div><image src="/images/understand_of_MariaDB.assets\image-20221111105845749.png" width="1000px" style="display: block;">
@@ -369,10 +369,10 @@ delete from <span style="color:red">mysql.user</span> where user=&lsquo;none_dat
 <p>생성한 human의 초기 권한을 확인해보면,</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">show</span><span class="w"> </span><span class="n">grants</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="s1">&#39;human&#39;</span><span class="o">@</span><span class="s1">&#39;%&#39;</span><span class="p">;</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="k">show</span><span class="w"> </span><span class="n">grants</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="s1">&#39;human&#39;</span><span class="o">@</span><span class="s1">&#39;%&#39;</span><span class="p">;</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
 </div><image src="/images/understand_of_MariaDB.assets\image-20221111111534592.png" width="1000px" style="display: block;">
@@ -382,11 +382,11 @@ delete from <span style="color:red">mysql.user</span> where user=&lsquo;none_dat
 <p><strong>human 계정</strong>에 <strong>box 데이터베이스의 모든 권한을 주고</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">grant</span><span class="w"> </span><span class="k">all</span><span class="w"> </span><span class="k">privileges</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">box</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="s1">&#39;human&#39;</span><span class="o">@</span><span class="s1">&#39;%&#39;</span><span class="p">;</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="k">grant</span><span class="w"> </span><span class="k">all</span><span class="w"> </span><span class="k">privileges</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">box</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="s1">&#39;human&#39;</span><span class="o">@</span><span class="s1">&#39;%&#39;</span><span class="p">;</span><span class="w">
 </span><span class="w"></span><span class="cm">/* 모든(all) 권한을 box데이터베이스하위 모든 곳(box.*)에 human계정에게 부여한다. */</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
@@ -407,10 +407,10 @@ delete from <span style="color:red">mysql.user</span> where user=&lsquo;none_dat
 <p>여기까지 진행한 사항을 DB에 반영하기 위해서는</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="n">flush</span><span class="w"> </span><span class="k">privileges</span><span class="p">;</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="n">flush</span><span class="w"> </span><span class="k">privileges</span><span class="p">;</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
 </div><image src="/images/understand_of_MariaDB.assets\image-20221111122650811.png" width="1000px" style="display: block;">
@@ -528,8 +528,8 @@ delete from <span style="color:red">mysql.user</span> where user=&lsquo;none_dat
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 
