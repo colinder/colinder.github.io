@@ -1,4 +1,4 @@
-# What is Abstraction(추상화)?
+# what is Abstraction(추상화)?
 
 
 ​	

@@ -1,9 +1,9 @@
-# JS(TS) 함수선언방식과 차이
+# Typesciprt(JS)_함수선언방법과 차이
 
 
 ​	
 
-# Javascript(TS) 함수 선언 방식과 차이
+# Typescript(JS) 함수 선언 방식과 차이
 
 TypeScript는 JavaScript를 기반으로 하는 언어이기 때문에 JavaScript의 함수 선언 방식을 따르면서 몇 가지 추가적인 기능을 제공합니다. 주요 함수 선언 방식은 다음과 같습니다.
 
@@ -25,7 +25,7 @@ TypeScript는 JavaScript를 기반으로 하는 언어이기 때문에 JavaScrip
 
    - 함수의 매개변수와 반환값에 타입을 명시할 수 있습니다.
 
-     ​		
+     ​			
 
 2. **함수 표현식 (Function Expression):**
 
@@ -43,7 +43,7 @@ TypeScript는 JavaScript를 기반으로 하는 언어이기 때문에 JavaScrip
 
    - 변수에 함수를 할당하고 타입을 명시할 수 있습니다.
 
-     ​	
+     ​		
 
 3. **화살표 함수 (Arrow Function):**
 
@@ -59,7 +59,7 @@ TypeScript는 JavaScript를 기반으로 하는 언어이기 때문에 JavaScrip
 
    - 함수 내부의 `this`는 화살표 함수를 감싸고 있는 가장 가까운 함수의 `this`를 가져옵니다.
 
-     ​	
+     ​			
 
 4. **메서드 (Method):**
 
@@ -75,7 +75,7 @@ TypeScript는 JavaScript를 기반으로 하는 언어이기 때문에 JavaScrip
 
    - 메서드는 클래스에 속하며, 인스턴스 또는 클래스 자체에 호출할 수 있습니다.
 
-     ​			
+     ​		
 
 5. **생성자 함수 (Constructor Function):**
 
@@ -95,12 +95,10 @@ TypeScript는 JavaScript를 기반으로 하는 언어이기 때문에 JavaScrip
 
    - 생성된 객체의 프로토타입은 해당 생성자 함수의 프로토타입과 연결됩니다.
 
-     ​	
+     ​		
 
 
 TypeScript의 주요 특징은 정적 타입 검사를 통한 안정성을 제공하는 것이므로, 함수의 매개변수와 반환값에 명시적으로 타입을 지정하여 코드의 가독성과 유지보수성을 향상시킬 수 있습니다.
-
-​	
 
 ​	
 
