@@ -3,7 +3,26 @@
         <title>All Posts - </title>
         <link>https://colinder.github.io/posts/</link>
         <description>All Posts | </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 03 Jan 2024 14:26:13 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 14 Jan 2024 09:14:13 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Nest Official_03_(Guards, Interceptors, Custom_decorators)</title>
+    <link>https://colinder.github.io/nest-official_03_guards-interceptors-custom_decorators/</link>
+    <pubDate>Sun, 14 Jan 2024 09:14:13 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/nest-official_03_guards-interceptors-custom_decorators/</guid>
+    <description><![CDATA[​
+Guards  가드(Guard)는 라우트 핸들러 메서드의 실행 여부를 결정하는 역할을 합니다. 특히, 가드는 특정 조건이 충족되지 않으면 요청을 처리하기 전에 실행을 막습니다. 이는 권한 검사, 인증, 혹은 다양한 비즈니스 규칙을 적용할 때 유용합니다.
+간단한 예로, 사용자의 권한을 확인하는 가드를 상상해볼 수 있습니다. 특정 엔드포인트에 접근하려는 사용자의 역할이나 권한이 충족되지 않으면 가드가 요청을 차단할 수 있습니다. 이를 통해 요청이 핸들러 메서드에 도달하기 전에 필요한 조건을 검사하고 처리할 수 있습니다.
+ 가드는 @Injectable() 데코레이터로 주석이 달린 클래스로, CanActivate 인터페이스를 구현합니다.]]></description>
+</item><item>
+    <title>Nest Official_02_(Modules, Middleware, Exception_filters, Pipes)</title>
+    <link>https://colinder.github.io/nest-official_02_modules-middleware-exception_filters-pipes/</link>
+    <pubDate>Sun, 14 Jan 2024 09:14:10 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/nest-official_02_modules-middleware-exception_filters-pipes/</guid>
+    <description><![CDATA[​
+Modules 모듈은 @Module() 데코레이터로 주석이 달린 클래스입니다. @Module() 데코레이터는 Nest가 애플리케이션 구조를 구성하는 데 사용하는 메타데이터를 제공합니다.
+각 어플리케이션은 최소한 하나의 모듈, 루트 모듈을 가지고 있습니다. 루트 모듈은 Nest가 어플리케이션 그래프를 구축하는데 사용하는 시작점입니다. 어플리케이션 그래프는 Nest가 Modules 및 Providers 간의 관계와 의존성을 해결하는 데 사용하는 내부 데이터 구조입니다. 매우 작은 애플리케이션의 경우 이론적으로 루트 모듈만을 가질 수 있지만, 이는 일반적인 경우가 아닙니다. 모듈은 구성 요소를 효과적으로 구성하는 데 강력하게 권장되는 방법이며, 대부분의 애플리케이션에서는 각각이 밀접한 관련성을 가진 일련의 기능을 캡슐화하는 여러 모듈을 사용하는 결과로서의 아키텍처가 형성됩니다.]]></description>
+</item><item>
     <title>what is 정적(static) &amp; 동적(dynamic) Type</title>
     <link>https://colinder.github.io/staticdynamictype/</link>
     <pubDate>Wed, 03 Jan 2024 14:26:13 &#43;0900</pubDate>
@@ -33,10 +52,10 @@ Typescript(JS) 함수 선언 방식과 차이 TypeScript는 JavaScript를 기반
     <author>Author</author>
     <guid>https://colinder.github.io/nest-official_01_introduction-first-steps-controllers-providers/</guid>
     <description><![CDATA[​
-Introduction Nest.js 는 효율적이고 확장가능한 node.js SSR을 구축하기 위한 프레임워크.
-Nest.js는 progressive(점진적인) JavaScript를 사용하며.(progressive JavaScript; 웹과 네이티브 엡을 모두 대응하는 등 점진적인 방법론을 javascript를 통해 개발하는 개념.) TypeScript를 지원(javascript로 개발도 가능) 그리고 OOP(객체 지향 프로그래밍), FP(기능적 프로그래밍), FRP(기능적 반응 프로그래밍)의 요소들을 결합합니다.
+Introduction  Nest.js 는 효율적이고 확장가능한 node.js SSR을 구축하기 위한 프레임워크.
+ Nest.js는 *progressive(점진적인) JavaScript를 사용하며. TypeScript를 지원(javascript로 개발도 가능) 그리고 OOP(객체 지향 프로그래밍), FP(기능적 프로그래밍), FRP(기능적 반응 프로그래밍)의 요소들을 결합합니다.
 후드 아래에서 Nest는 Express(기본값)와 같은 강력한 HTTP 서버 프레임워크를 사용하며 Fastify를 사용하도록 구성할 수도 있습니다!
-Nest는 이러한 일반적인 Node.js 프레임워크(Express/Fastify) 이상의 추상화 수준을 제공하지만 개발자에게 API를 직접 노출시킵니다.]]></description>
+Nest는 이러한 일반적인 Node.js 프레임워크(Express/Fastify) 이상의 추상화 수준을 제공하지만 개발자에게 API를 직접 노출시킵니다. 이를 통해 개발자는 기본 플랫폼에 수많은 타사 모듈을 사용할 수 있습니다.]]></description>
 </item><item>
     <title>what is Abstraction(추상화)?</title>
     <link>https://colinder.github.io/abstraction/</link>
@@ -112,42 +131,5 @@ IP란?  인터넷 프로토콜(Internet Protocol)의 약자로, 인터넷이 통
 IP면 IP지? 내부, 외부는 무엇인가? 우리 집을 생각해보자.
 우리는 통신사의 어떤 기기를 대여받아 인터넷 와이파이를 사용하고 있다. 여기가 포인트다.
 어떤 기기로 우리 집안에 와이파이를 뿌려주고 있고, 우리 가족은 이 기기의 와이파이로 인터넷에 접속한다!]]></description>
-</item><item>
-    <title>React Scss_setting</title>
-    <link>https://colinder.github.io/scss_setting/</link>
-    <pubDate>Thu, 04 May 2023 15:36:57 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/scss_setting/</guid>
-    <description><![CDATA[​
-React_Style 관리  전 css보다 scss가 더 좋습니다. Sassy CSS - 문법적으로 짱 멋진(Sassy) CSS이기 때문입니다.
- ​
-​
-react에 scss 적용하기  간단히 라이브러리 하나만 설치해주고 파일명만 바꿔주면 됩니다.
- *CRA 공식 문서에 나와있는 방법을 따릅니다.
-​
-​
-  package.json이 있는 위치에서
-1  npm install sass   ​
-  .css로 된 파일명을 .scss로 바꾸면 끝.
-  ​
-​
-​
-​
-​
-👀 많은 레퍼런스가&hellip; 1  npm install node-sass   해당 명령어로 sass를 적용하는데, 동료가 깃헙에서 npm i를 하는데 계속 오류가 났고 저도 간헐적으로 에러가 발생해 설명한 방식으로 변경하였습니다.]]></description>
-</item><item>
-    <title>React Scoped_css</title>
-    <link>https://colinder.github.io/scoped_css/</link>
-    <pubDate>Wed, 03 May 2023 14:53:20 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/scoped_css/</guid>
-    <description><![CDATA[​
-React_Style 관리  Vue에는 .vue 파일마다 &lt;style&gt;가 있고 여기에 &lt;style scoped&gt;를 주면 해당 파일에만 적용되는 style을 구성할 수 있는데, react는 어떻게 하는지 알아봅니다.
- ​
-​
-scoped css 설정  지역적으로 사용하고 싶은 css 설정 방법
- ​
-폴더 구조를 보자면. (구조는 마음대로 구성하여도 됩니다. 아래는 제 마음대로 구성한 것입니다.)
-1 2 3 4 5 6 7 8 9 10 11 12  src ├── assets │ ├── Styles │ ├── common.]]></description>
 </item></channel>
 </rss>

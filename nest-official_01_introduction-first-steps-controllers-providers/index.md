@@ -5,23 +5,33 @@
 
 # Introduction
 
-Nest.js 는 효율적이고 확장가능한 node.js SSR을 구축하기 위한 프레임워크.
+> Nest.js 는 효율적이고 확장가능한 node.js SSR을 구축하기 위한 프레임워크.
 
-Nest.js는 progressive(점진적인) JavaScript를 사용하며.<span style="font-size: 0.8em; color: gray"> (progressive JavaScript; 웹과 네이티브 엡을 모두 대응하는 등 점진적인 방법론을 javascript를 통해 개발하는 개념.)</span> TypeScript를 지원(javascript로 개발도 가능) 그리고 OOP(객체 지향 프로그래밍), FP(기능적 프로그래밍), FRP(기능적 반응 프로그래밍)의 요소들을 결합합니다.
+Nest.js는 *progressive(점진적인) JavaScript를 사용하며. TypeScript를 지원(javascript로 개발도 가능) 그리고 OOP(객체 지향 프로그래밍), FP(기능적 프로그래밍), FRP(기능적 반응 프로그래밍)의 요소들을 결합합니다.
 
 후드 아래에서 Nest는 Express(기본값)와 같은 강력한 HTTP 서버 프레임워크를 사용하며 Fastify를 사용하도록 구성할 수도 있습니다!
 
-Nest는 이러한 일반적인 Node.js 프레임워크(Express/Fastify) 이상의 추상화 수준을 제공하지만 개발자에게 API를 직접 노출시킵니다. 이를 통해 개발자는 기본 플랫폼에 사용할 수 있는 수많은 타사 모듈을 사용할 수 있습니다.
+Nest는 이러한 일반적인 Node.js 프레임워크(Express/Fastify) 이상의 추상화 수준을 제공하지만 개발자에게 API를 직접 노출시킵니다. 이를 통해 개발자는 기본 플랫폼에 수많은 타사 모듈을 사용할 수 있습니다.
 
-​		
+<span style="font-size: 0.8em; color: gray; float: right"> *progressive JavaScript: 웹과 네이티브 엡을 모두 대응하는 등 점진적인 방법론을 javascript를 통해 개발하는 개념.</span>
+
+​			
+
+​	
 
 ## Philosophy
 
-최근 몇년, node.js 덕분에 javascript는 프론트와 백엔드 애플리케이션 모두의 “lingua franca”가 되었습니다. <span style="font-size: 0.8em; color: gray">(lingua franca: 서로 다른 모어를 사용하는 화자들이 의사소통을 하기 위해 국제어)</span> 이것은 개발자의 생산성을 향상시키고 빠르고 테스트 가능하며 확장 가능한 프론트엔드 애플리케이션의 생성을 가능하게 하는 Angular, React 및 Vue와 같은 멋진 프로젝트를 탄생시켰습니다. 그러나 Node(그리고 서버측 자바스크립트)를 위한 훌륭한 라이브러리, 도우미 및 도구는 많이 존재하지만, 그 중 어느 것도 아키텍처의 주요 문제를 효과적으로 해결하지는 못합니다.
+최근 몇년, node.js 덕분에 javascript는 프론트와 백엔드 애플리케이션 모두의 *lingua franca가 되었습니다.  이것은 개발자의 생산성을 향상시키고 빠르고 테스트 가능하며 확장 가능한 프론트엔드 애플리케이션의 생성을 가능하게 하는 Angular, React 및 Vue와 같은 멋진 프로젝트를 탄생시켰습니다. 그러나 Node(그리고 서버측 자바스크립트)를 위한 훌륭한 라이브러리, 도우미 및 도구는 많이 존재하지만, 그 중 어느 것도 아키텍처의 주요 문제를 효과적으로 해결하지는 못합니다.
 
-Nest는 Out-of-the-box <span style="font-size: 0.8em; color: gray">(Out-of-the-box: 해당 제품이나 서비스를 추가적인 구성이나 변경 없이도 바로 사용할 수 있는 상태)</span> 애플리케이션 아키텍처를 제공하여 개발자와 팀이 고도로 테스트 가능하고 확장 가능하며 느슨하게 결합되고 쉽게 유지 관리할 수 있는 애플리케이션을 만들 수 있습니다. 이 아키텍처는 Angular에서 많은 영감을 받았습니다.
+Nest는 *Out-of-the-box  애플리케이션 아키텍처를 제공하여 개발자와 팀이 고도로 테스트 가능하고 확장 가능하며 느슨하게 결합되고 쉽게 유지 관리할 수 있는 애플리케이션을 만들 수 있습니다. 이 아키텍처는 Angular에서 많은 영감을 받았습니다.
 
-​	
+<span style="font-size: 0.8em; color: gray; float: right">*lingua franca: 서로 다른 모어를 사용하는 화자들이 의사소통을 하기 위해 국제어</span>
+
+<span style="font-size: 0.8em; color: gray; float: right">*Out-of-the-box: 해당 제품이나 서비스를 추가적인 구성이나 변경 없이도 바로 사용할 수 있는 상태)</span>
+
+​		
+
+​		
 
 ​	
 
@@ -39,6 +49,7 @@ $ nest new project-name
 ```
 
 > **HINT**
+>
 > To create a new project with TypeScript's [stricter](https://www.typescriptlang.org/tsconfig#strict) feature set, pass the `--strict` flag to the `nest new` command.
 
 
@@ -56,13 +67,13 @@ src</br>
 
 다음은 이러한 핵심 파일에 대한 간략한 개요입니다:
 
-|                          |                                                              |
-| ------------------------ | ------------------------------------------------------------ |
-| `app.controller.ts`      | A basic controller with a single route.                      |
-| `app.controller.spec.ts` | The unit tests for the controller.                           |
-| `app.module.ts`          | The root module of the application.                          |
-| `app.service.ts`         | A basic service with a single method.                        |
-| `main.ts`                | The entry file of the application which uses the core function `NestFactory` to create a Nest application instance. |
+|                        |                                                              |
+| ---------------------- | ------------------------------------------------------------ |
+| app.controller.ts      | A basic controller with a single route.                      |
+| app.controller.spec.ts | The unit tests for the controller.                           |
+| app.module.ts          | The root module of the application.                          |
+| app.service.ts         | A basic service with a single method.                        |
+| main.ts                | The entry file of the application which uses the core function `NestFactory` to create a Nest application instance. |
 
 ​		
 
@@ -98,6 +109,7 @@ $ npm run start
 ```
 
 >  **HINT**
+>
 >  To speed up the development process (x20 times faster builds), you can use the [SWC builder](https://docs.nestjs.com/recipes/swc) by passing the `-b swc` flag to the `start` script, as follows `npm run start -- -b swc`.
 
 
@@ -114,10 +126,11 @@ $ npm run start:dev
 
 ### Linting and formatting
 
-CLI는 최선을 다해 규모에 따라 신뢰할 수 있는 개발 워크플로우의 기틀을 제공합니다. 
-따라서, 생성된 Nest 프로젝트는 코드 라이너와 포맷터(각각 에슬린트와 더 예쁜)가 미리 설치되어 있습니다.
+[CLI](https://docs.nestjs.com/cli/overview)는 최선을 다해 규모에 따라 신뢰할 수 있는 개발 워크플로우의 기틀을 제공합니다. 
+따라서, 생성된 Nest 프로젝트는 코드 라이너와 포맷터(respectively [eslint](https://eslint.org/) and [prettier](https://prettier.io/))가 미리 설치되어 있습니다.
 
 > **HINT**
+>
 > Not sure about the role of formatters vs linters? Learn the difference [here](https://prettier.io/docs/en/comparison.html).
 
 최대한의 안정성과 확장성을 보장하기 위해 기본 에슬린트와 더 예쁜 클리 패키지를 사용합니다. 이 설정을 통해 디자인에 의한 공식 확장 기능과 깔끔한 IDE 통합이 가능합니다.
@@ -164,6 +177,7 @@ export class CatsController {
 ```
 
 > **HINT**
+>
 > CLI를 사용해서 컨드롤러를 생성하려 한다면, 간단히 `$ nest g controller [name]` 명령어를 실행하면 됩니다.
 
 findAll() 메서드 앞에 있는 `@Get()` HTTP request method decorator는 Nest에게 HTTP request에 대한 특정 엔드포인트에 대한 핸들러를 작성하도록 지시합니다.
@@ -209,6 +223,7 @@ export class CatsController {
 | Library-specific       | 우리는 method handler signature 기술인 `@Res() 데코레이터`를 사용하여 라이브러리별 (e.g., Express) 응답 객체를 사용할 수도 있습니다. (e.g., findAll(@Res() response))<br />이 방법을 사용하면 해당 객체에서 노출된 기본 응답 처리 메서드를 사용할 수 있습니다. 예를 들어 Express를 사용하면 response.status(200).send()와 같은 코드를 사용하여 응답을 구성할 수 있습니다. |
 
 > **WARNING**
+>
 > Nest detects when the handler is using either `@Res()` or `@Next()`, indicating you have chosen the library-specific option. If both approaches are used at the same time, the `Standard approach is automatically disabled` for this single route and will no longer work as expected. To use both approaches at the same time (for example, by injecting the response object to only set cookies/headers but still leave the rest to the framework), you must set the `passthrough` option to `true` in the `@Res({ passthrough: true })` decorator.
 
 ​		
@@ -232,6 +247,7 @@ export class CatsController {
 ```
 
 > **HINT**
+>
 > In order to take advantage of `express` typings (as in the `request: Request` parameter example above), install `@types/express` package.
 
 요청 개체는 HTTP 요청을 나타내며 요청 쿼리 문자열, 매개 변수, HTTP 헤더 및 본문에 대한 속성을 가집니다(read more [here](https://expressjs.com/en/api.html#req)). 대부분의 경우, 이런 속성들을 수동적으로 확인하는 것은 필요하지 않습니다. 우리는 특정 데코레이터를 사용할 수 있습니다. 예를 들어  `@Body()` or `@Query()`, 같은 것들을 별도의 설치 없이(out of the box) 사용할 수 있습니다. 아래 리스트들은 Nest에서 제공하는 데코레이터이며, 간단하게 사용 가능한 것들 입니다.
@@ -254,6 +270,7 @@ HTTP 플랫폼(e.g., Express and Fastify) 간의 typings 호환성을 위해, Ne
 `@Res()` 또는 `@Response()`를 메서드 핸들러에 주입할 때는 해당 핸들러에 대해 Nest를 라이브러리별 모드로 전환하고 응답을 관리하는 책임이 당신에게 있음을 주의하세요. 이렇게 할 때는 'response' 개체(e.g., `res.json(...)` or `res.send(...)`)를 호출하여 어떤 종류의 응답을 발행해야 합니다. 그렇지 않으면 HTTP 서버가 중단됩니다.
 
 > **HINT**
+>
 > To learn how to create your own custom decorators, visit [this](https://docs.nestjs.com/custom-decorators) chapter.
 
 ​		
@@ -283,7 +300,7 @@ export class CatsController {
 
 간단하죠. Nest는 모든 기본 HTTP 메서드를 위한 데코레이터를 제공합니다. `@Get()`, `@Post()`, `@Put()`, `@Delete()`, `@Patch()`, `@Options()`, and `@Head()`. 또 `@All()`은 이 모든 데코레이터를 처리하는 엔드포인트 입니다.
 
-> 예를 들어 
+> 예를 들어 <br>
 > /cats 에 대하여 @Get(), @Post() 두 메서드만 정의했고 @All()을 추가로 정의한 경우, 
 > /cats으로 `@Put()`, `@Delete()`, `@Patch()`, `@Options()`, and `@Head()` 요청을 보내면 `@All()`메서드가 응답합니다.
 
@@ -291,7 +308,7 @@ export class CatsController {
 
 ### Route wildcards[#](https://docs.nestjs.com/controllers#route-wildcards)
 
-패턴에 기반한 routes도 지원합니다. 예를 들어 asterisk(*)는 와일드카드로 사용되며 모든 문자 조합과 일치합니다.
+패턴에 기반한 routes도 지원합니다. 예로 asterisk(*)는 와일드카드로 사용되며 모든 문자 조합과 매칭됩니다.
 
 ```typescript
 @Get('ab*cd')
@@ -303,6 +320,7 @@ findAll() {
 `'ab*cd'` route path는 `abcd`, `ab_cd`, `abecd` 등과 연결됩니다. `?`, `+`, `*` 및 `()` 문자는 route path에 사용될 수 있으며 정규식 대응의 하위 집합입니다. 하이픈(`-`)과 점(`.`)은 문자열 기반 경로로 문자 그대로 해석됩니다.
 
 > **WARNING**
+>
 > A wildcard in the middle of the route is only supported by express.
 
 ​			
@@ -322,9 +340,11 @@ create() {
 ```
 
 > **HINT**
+>
 > Import `HttpCode` from the `@nestjs/common` package.
 
 > **WARNING**
+>
 > `@All()` 이후 `@Post()`를 작성하면 호이스팅이 되지 않는다!  우선 순위를 고려하면 개발해야함.
 
 ​			
@@ -357,6 +377,7 @@ create() {
 ```
 
 > **HINT**
+>
 > 가끔씩 동적으로 HTTP 상태 코드나 리디렉션 URL을 보내고 싶을 때가 있을 것입니다. 이럴 땐, (@nestjs/common의) HttpRedirectResponse 인터페이스를 따르는 객체를 반환하면 됩니다.
 
 메서드가 return 값(e.g, URL)을 반환하면, 이 값은 데코레이터에 전달된 기존의 인수를 오버라이드(덮어쓰기)한다. 예를 들어
@@ -380,6 +401,7 @@ getDocs() {
 `@Get()`데코레이터안에 route 매개변수 token를 사용한 아래의 예시를 봅시다. route 매개변수가 아래와 같이 선언되었다면, `@Param()` 데코레이터를 사용해서 접근하고 사용할 수 있습니다. 
 
 > **HINT**
+>
 > route 매개변수를 사용할 때, 매개변수가 포함된 route는 정적 path를 선언한 후에 작성되어야 한다. 
 > 이렇게 하면, 정적 path의 트래픽이 매개변수가 담긴 path에 의해 방해받는 것을 방지할 수 있다.
 >
@@ -390,7 +412,6 @@ import { Get, Param } from '@nestjs/common';
 
 @Get(':id')
 findOne(@Param() params: any): string {
-  console.log(params.id);
   return `This action returns a #${params.id} cat`;
 }
 ```
@@ -437,6 +458,7 @@ export class AdminController {
 ```
 
 > **WARNING**
+>
 > Since **Fastify** lacks support for nested routers, when using sub-domain routing, the (default) Express adapter should be used instead.
 
 route path와 마찬가지로 `hosts` 옵션은 토큰을 사용하여 호스트 이름에서 해당 위치의 동적 값을 캡처할 수 있습니다. 아래 `@Controller()` 데코레이터 예제의 호스트 매개변수 토큰은 이 사용법을 보여줍니다. 이런 방법으로 선언된 호스트 매개변수는 `@HostParam()` 데코레이터를 사용하여 접근할 수 있으며, 이 데코레이터는 메서드 시그니처에 추가되어야 합니다.
@@ -501,11 +523,12 @@ Nest에서는 거의 모든 것이 들어오는 요청 간에 공유된다. 예�
 우리는 최신 JavaScript를 사랑하며 데이터 추출이 대부분 **비동기식**이라는 것을 알고 있습니다. 그렇기 때문에 Nest는 **비동기** 함수를 지원하고 잘 작동합니다.
 
 >**HINT**
+>
 >Learn more about `async / await` feature [here](https://kamilmysliwiec.com/typescript-2-1-introduction-async-await)
 
 ​				
 
-모든 비동기 함수는 `프로미스` 타입을 반환해야 합니다. 이것은 Nest가 스스로 해결할 수 있는 연기된(deferred) 값을 반환할 수 있다는 것을 의미합니다. 이에 대한 예시를 살펴보겠습니다.
+모든 비동기 함수는 `promise` 타입을 반환해야 합니다. 이것은 Nest가 스스로 해결할 수 있는 연기된(deferred) 값을 반환할 수 있다는 것을 의미합니다. 이에 대한 예시를 살펴보겠습니다.
 
 ```typescript
 @Get()
@@ -534,7 +557,7 @@ Observable은 데이터나 이벤트의 스트림을 나타내는데, 이 스트
 
 이전에 예를 보면 POST 요청의 처리에서 클라이언트 데이터를 받지 못했습니다. 여기에 `@Body()`데코레이터를 추가해 수정해보겠습니다.
 
-그런데 먼저 (당신이 typescript를 사용한다면) 우리는 DTO(Data Transfer Object) 스키마를 결정해야 합니다. DTO는 데이터가 네트워크를 통해 전송되는 방식을 정의하는 개체입니다. TypeScript 인터페이스를 사용하거나 간단한 클래스를 사용하여 DTO 스키마를 결정할 수 있습니다. 흥미롭게도 여기서는 **클래스를 사용하는 것을 권장합니다. 왜인가요? **클래스는 자바스크립트 ES6 표준의 일부이므로 컴파일된 자바스크립트에서 실제 엔티티로 보존됩니다. 반면에 TypeScript 인터페이스는 컴파일 중에 제거되므로 Nest는 실행중일 때 해당 인터페이스를 참조할 수 없습니다. <u>*Pipes</u>와 같은 기능이 런타임에 변수의 메타타입에 액세스할 수 있을 때 추가적인 가능성을 지원하기 때문에 중요합니다.
+그런데 먼저 (당신이 typescript를 사용한다면) 우리는 DTO(Data Transfer Object) 스키마를 결정해야 합니다. DTO는 데이터가 네트워크를 통해 전송되는 방식을 정의하는 개체입니다. TypeScript 인터페이스를 사용하거나 간단한 클래스를 사용하여 DTO 스키마를 결정할 수 있습니다. 흥미롭게도 여기서는 **클래스를 사용하는 것을 권장합니다. 왜인가요?** 클래스는 자바스크립트 ES6 표준의 일부이므로 컴파일된 자바스크립트에서 실제 엔티티로 보존됩니다. 반면에 TypeScript 인터페이스는 컴파일 중에 제거되므로 Nest는 실행중일 때 해당 인터페이스를 참조할 수 없습니다. <u>*Pipes</u>와 같은 기능이 런타임에 변수의 메타타입에 액세스할 수 있을 때 추가적인 가능성을 지원하기 때문에 중요합니다.
 
 <span style="font-size: 0.8em; color: gray">*Nest.js의 Pipes는 입력 데이터의 변환 또는 유효성 검사와 같은 특정 작업을 수행하는데 사용됩니다. Pipes는 메타데이터(metatype)에 접근할 수 있어야 하는 경우가 있는데, 이는 런타임(runtime)에서 변수의 유형 및 다른 정보를 알아내는 것을 의미합니다. 메타데이터를 사용하면 Pipes가 동적으로 동작하고 입력 데이터에 대해 적절한 작업을 수행할 수 있습니다. 예를 들어, 데이터 유효성 검사를 수행하는 Pipe는 입력 데이터의 유형이나 기타 속성을 알아야 합니다. 이를 위해 Pipes는 런타임에서 변수의 메타데이터를 확인할 수 있어야 합니다.</span>
 
@@ -560,7 +583,9 @@ async create(@Body() createCatDto: CreateCatDto) {
 ```
 
 > **HINT**
+>
 > Our `ValidationPipe`는 메서드 핸들러가 수신해서는 안 되는 속성을 필터링할 수 있다. 이 경우 허용되는 속성을 화이트리스트에 추가할 수 있으며, 화이트리스트에 포함되지 않은 속성은 결과 개체에서 자동으로 제거된다. In the `CreateCatDto` example, our whitelist is the `name`, `age`, and `breed` properties. Learn more [here](https://docs.nestjs.com/techniques/validation#stripping-properties).
+>
 
 ​		
 
@@ -608,6 +633,7 @@ export class CatsController {
 ```
 
 > **HINT**
+>
 > Nest CLI는 모든 보일러 플레이트 코드를 자동으로 생성하는 발전기(도형)를 제공하여 이 모든 것을 방지하고 개발자가 훨씬 쉽게 경험할 수 있도록 도와줍니다. 이 기능에 대한 자세한 내용은  [here](https://docs.nestjs.com/recipes/crud-generator)에서 확인하십시오.
 
 ​			
@@ -685,6 +711,7 @@ findAll(@Res({ passthrough: true }) res: Response) {
 이전 장에서 우리는 간단한 CatsController를 만들었습니다. 컨트롤러는 HTTP 요청을 처리하고 더 복잡한 작업을 프로바이더에게 위임해야 합니다. 프로바이더는 모듈에서 프로바이더로 선언된 일반적인 JavaScript 클래스입니다.
 
 > **HINT**
+>
 > Nest는 의존성을 더 객체지향적인 방식으로 설계하고 구성할 수 있는 기능을 제공하므로, [SOLID](https://en.wikipedia.org/wiki/SOLID) 원칙을 따르는 것을 강력히 권장합니다.
 
 SOLID 원칙은 다음과 같습니다.
@@ -722,20 +749,21 @@ export class CatsService {
 ```
 
 > **HINT**
+>
 > To create a service using the CLI, simply execute the `$ nest g service cats` command.
 
 우리의 `CatsService`는 하나의 속성과 두 개의 메서드를 가진 기본적인 클래스입니다. 유일하게 새로운 기능은 `@Injectable()` 데코레이터를 사용한다는 것입니다. `@Injectable()` 데코레이터는 `CatsService`가 Nest <u>*IoC</u> 컨테이너에서 관리될 수 있는 클래스임을 선언하는 메타데이터를 첨부합니다. 이 예제에서는 아마도 다음과 같이 보이는 `Cat` 인터페이스도 사용하고 있습니다.
 
 ​			
 
-*IoC는 "Inversion of Control"의 약어로, 한국어로는 "제어의 역전"이라고 번역됩니다. IoC는 소프트웨어 디자인에서 중요한 개념 중 하나로, 일반적으로 의존성 주입(Dependency Injection)과 관련이 있습니다.
-
-기존에는 개발자가 코드의 제어 흐름을 직접 제어하고 구성했습니다. 그러나 IoC에서는 제어의 주도권이 프레임워크나 컨테이너로 넘어가게 됩니다. 이는 개발자가 코드를 작성할 때 일부 제어를 외부에서 받아들이는 개념입니다. 
-
-일반적으로 IoC는 다음과 같은 특징을 포함합니다:
-
-1. **의존성 주입(Dependency Injection):** 객체가 필요로 하는 의존성을 직접 생성하는 대신, 외부에서 의존성을 주입받는 방식입니다. 이를 통해 코드의 결합도를 낮추고 유연성을 높일 수 있습니다.
-2. **제어의 역전:** 개발자가 코드의 제어 흐름을 직접 제어하는 것이 아니라 외부에서 제어 흐름이 주어지는 것을 의미합니다. 일반적으로는 컨테이너나 프레임워크가 코드의 실행을 주도하는 구조를 말합니다.
+> *IoC는 "Inversion of Control"의 약어로, 한국어로는 "제어의 역전"이라고 번역됩니다. IoC는 소프트웨어 디자인에서 중요한 개념 중 하나로, 일반적으로 의존성 주입(Dependency Injection)과 관련이 있습니다.
+>
+> 기존에는 개발자가 코드의 제어 흐름을 직접 제어하고 구성했습니다. 그러나 IoC에서는 제어의 주도권이 프레임워크나 컨테이너로 넘어가게 됩니다. 이는 개발자가 코드를 작성할 때 일부 제어를 외부에서 받아들이는 개념입니다. 
+>
+> 일반적으로 IoC는 다음과 같은 특징을 포함합니다:
+>
+> 1. **의존성 주입(Dependency Injection):** 객체가 필요로 하는 의존성을 직접 생성하는 대신, 외부에서 의존성을 주입받는 방식입니다. 이를 통해 코드의 결합도를 낮추고 유연성을 높일 수 있습니다.
+> 2. **제어의 역전:** 개발자가 코드의 제어 흐름을 직접 제어하는 것이 아니라 외부에서 제어 흐름이 주어지는 것을 의미합니다. 일반적으로는 컨테이너나 프레임워크가 코드의 실행을 주도하는 구조를 말합니다.
 
 ```typescript
 // interfaces/cat.interface.ts
@@ -835,6 +863,7 @@ export class HttpService<T> {
 ```
 
 > **WARNING**
+>
 > If your class doesn't extend another class, you should always prefer using **constructor-based** injection.
 
 ​	

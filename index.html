@@ -102,6 +102,21 @@
         alt="/images/jg_02.jpg"
         title="/images/jg_02.jpg" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/colinder" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="mailto:kjonggwan@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/nest-official_03_guards-interceptors-custom_decorators/">Nest Official_03_(Guards, Interceptors, Custom_decorators)</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2024-01-14">2024-01-14</time></span>&nbsp;<span class="post-category">included in <a href="/categories/nest/"><i class="far fa-folder fa-fw"></i>Nest</a></span></div><div class="content">​
+Guards  가드(Guard)는 라우트 핸들러 메서드의 실행 여부를 결정하는 역할을 합니다. 특히, 가드는 특정 조건이 충족되지 않으면 요청을 처리하기 전에 실행을 막습니다. 이는 권한 검사, 인증, 혹은 다양한 비즈니스 규칙을 적용할 때 유용합니다.
+간단한 예로, 사용자의 권한을 확인하는 가드를 상상해볼 수 있습니다. 특정 엔드포인트에 접근하려는 사용자의 역할이나 권한이 충족되지 않으면 가드가 요청을 차단할 수 있습니다. 이를 통해 요청이 핸들러 메서드에 도달하기 전에 필요한 조건을 검사하고 처리할 수 있습니다.
+ 가드는 @Injectable() 데코레이터로 주석이 달린 클래스로, CanActivate 인터페이스를 구현합니다.</div><div class="post-footer">
+        <a href="/nest-official_03_guards-interceptors-custom_decorators/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/nest/">Nest</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/nest-official_02_modules-middleware-exception_filters-pipes/">Nest Official_02_(Modules, Middleware, Exception_filters, Pipes)</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2024-01-14">2024-01-14</time></span>&nbsp;<span class="post-category">included in <a href="/categories/nest/"><i class="far fa-folder fa-fw"></i>Nest</a></span></div><div class="content">​
+Modules 모듈은 @Module() 데코레이터로 주석이 달린 클래스입니다. @Module() 데코레이터는 Nest가 애플리케이션 구조를 구성하는 데 사용하는 메타데이터를 제공합니다.
+각 어플리케이션은 최소한 하나의 모듈, 루트 모듈을 가지고 있습니다. 루트 모듈은 Nest가 어플리케이션 그래프를 구축하는데 사용하는 시작점입니다. 어플리케이션 그래프는 Nest가 Modules 및 Providers 간의 관계와 의존성을 해결하는 데 사용하는 내부 데이터 구조입니다. 매우 작은 애플리케이션의 경우 이론적으로 루트 모듈만을 가질 수 있지만, 이는 일반적인 경우가 아닙니다. 모듈은 구성 요소를 효과적으로 구성하는 데 강력하게 권장되는 방법이며, 대부분의 애플리케이션에서는 각각이 밀접한 관련성을 가진 일련의 기능을 캡슐화하는 여러 모듈을 사용하는 결과로서의 아키텍처가 형성됩니다.</div><div class="post-footer">
+        <a href="/nest-official_02_modules-middleware-exception_filters-pipes/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/nest/">Nest</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/staticdynamictype/">what is 정적(static) &amp; 동적(dynamic) Type</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2024-01-03">2024-01-03</time></span>&nbsp;<span class="post-category">included in <a href="/categories/static-type/"><i class="far fa-folder fa-fw"></i>static type</a>&nbsp;<a href="/categories/dynamic-type/"><i class="far fa-folder fa-fw"></i>dynamic type</a></span></div><div class="content">​
 정의  정적 타입과 동적 타입은 프로그래밍 언어에서 변수나 값의 타입에 대한 접근 방식을 나타내는 두 가지 주요 패러다임.
@@ -120,26 +135,6 @@ Typescript(JS) 함수 선언 방식과 차이 TypeScript는 JavaScript를 기반
   함수 선언문은 function 키워드로 시작하며, 함수 이름이 바로 뒤에 나옵니다.</div><div class="post-footer">
         <a href="/js_method/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/typescript/">typescript</a>,&nbsp;<a href="/tags/javascript/">Javascript</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/nest-official_01_introduction-first-steps-controllers-providers/">Nest Official_01_(Introduction, First steps, Controllers, Providers)</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2024-01-03">2024-01-03</time></span>&nbsp;<span class="post-category">included in <a href="/categories/nest/"><i class="far fa-folder fa-fw"></i>Nest</a></span></div><div class="content">​
-Introduction Nest.js 는 효율적이고 확장가능한 node.js SSR을 구축하기 위한 프레임워크.
-Nest.js는 progressive(점진적인) JavaScript를 사용하며.(progressive JavaScript; 웹과 네이티브 엡을 모두 대응하는 등 점진적인 방법론을 javascript를 통해 개발하는 개념.) TypeScript를 지원(javascript로 개발도 가능) 그리고 OOP(객체 지향 프로그래밍), FP(기능적 프로그래밍), FRP(기능적 반응 프로그래밍)의 요소들을 결합합니다.
-후드 아래에서 Nest는 Express(기본값)와 같은 강력한 HTTP 서버 프레임워크를 사용하며 Fastify를 사용하도록 구성할 수도 있습니다!
-Nest는 이러한 일반적인 Node.js 프레임워크(Express/Fastify) 이상의 추상화 수준을 제공하지만 개발자에게 API를 직접 노출시킵니다.</div><div class="post-footer">
-        <a href="/nest-official_01_introduction-first-steps-controllers-providers/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/nest/">Nest</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/abstraction/">what is Abstraction(추상화)?</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2024-01-03">2024-01-03</time></span></div><div class="content">​
-추상화 &amp; 구체화  개발 미팅을 하다보면 자주 듣게 되었는데, 정확한 정의와 의미를 알기 위해 정리합니다.
- ​
-​
-추상화 추상화는 복잡한 시스템, 객체 또는 개념을 단순화하여 핵심 기능에 집중하고 불필요한 세부 사항을 숨기는 프로세스입니다. 이는 문제를 이해하기 쉽게 만들고, 핵심 개념에 집중하여 설계를 간소화하며, 재사용성을 높이는 데 도움이 됩니다.
-프로그래밍에서 추상화는 여러 수준에서 발생할 수 있습니다:
- 데이터 추상화: 데이터를 간소화하거나 숨기는 것으로, 특정 데이터 유형의 세부 정보를 숨기고 핵심 데이터만 표시하는 것을 의미합니다.</div><div class="post-footer">
-        <a href="/abstraction/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/abstraction/">abstraction</a></div></div>
 </article><ul class="pagination"><li class="page-item active">
                     <span class="page-link">
                         <a href="/">1</a>

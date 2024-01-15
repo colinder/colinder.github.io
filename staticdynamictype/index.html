@@ -28,7 +28,7 @@
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/staticdynamictype/" /><link rel="prev" href="https://colinder.github.io/js_method/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/staticdynamictype/" /><link rel="prev" href="https://colinder.github.io/js_method/" /><link rel="next" href="https://colinder.github.io/nest-official_02_modules-middleware-exception_filters-pipes/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -37,7 +37,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/staticdynamictype\/"
-        },"genre": "posts","keywords": "static type, dynamic type","wordcount":  311 ,
+        },"genre": "posts","keywords": "static type, dynamic type","wordcount":  375 ,
         "url": "https:\/\/colinder.github.io\/staticdynamictype\/","datePublished": "2024-01-03T14:26:13+09:00","dateModified": "2024-01-03T14:26:13+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -114,7 +114,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">what is 정적(static) &amp; 동적(dynamic) Type</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/static-type/"><i class="far fa-folder fa-fw"></i>static type</a>&nbsp;<a href="/categories/dynamic-type/"><i class="far fa-folder fa-fw"></i>dynamic type</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-01-03">2024-01-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;311 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-01-03">2024-01-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;375 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -148,12 +148,22 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="nx">typescriptCopy</span> <span class="nx">code</span><span class="c1">// TypeScript에서의 정적 타입 예시
-</span><span class="c1"></span><span class="kd">let</span> <span class="nx">age</span>: <span class="kt">number</span> <span class="o">=</span> <span class="mi">25</span><span class="p">;</span>
-<span class="kd">let</span> <span class="nx">name</span>: <span class="kt">string</span> <span class="o">=</span> <span class="s2">&#34;John&#34;</span><span class="p">;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">// TypeScript에서의 정적 타입 예시
+</span><span class="c1">// 정적 타입 (TypeScript)
+</span><span class="c1"></span><span class="kd">let</span> <span class="kt">number</span><span class="o">:</span> <span class="kt">number</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span> <span class="c1">// 숫자 타입 명시
+</span><span class="c1"></span><span class="kd">let</span> <span class="nx">text</span>: <span class="kt">string</span> <span class="o">=</span> <span class="s2">&#34;Hello, TypeScript&#34;</span><span class="p">;</span> <span class="c1">// 문자열 타입 명시
+</span><span class="c1"></span>
+<span class="c1">// 컴파일러가 타입 오류를 감지할 수 있음
+</span><span class="c1">// 아래 코드는 오류를 발생시킴
+</span><span class="c1">// number = &#34;42&#34;; // 에러: 숫자 타입에 문자열 할당 불가
+</span></code></pre></td></tr></table>
 </div>
 </div><p>​</p>
 <h2 id="동적-타입-dynamic-typing">동적 타입 (Dynamic Typing):</h2>
@@ -168,12 +178,20 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">javascriptCopy</span> <span class="nx">code</span><span class="c1">// JavaScript에서의 동적 타입 예시
-</span><span class="c1"></span><span class="kd">let</span> <span class="nx">age</span> <span class="o">=</span> <span class="mi">25</span><span class="p">;</span>
-<span class="kd">let</span> <span class="nx">name</span> <span class="o">=</span> <span class="s2">&#34;John&#34;</span><span class="p">;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// JavaScript에서의 동적 타입 예시
+</span><span class="c1">// 동적 타입 (JavaScript)
+</span><span class="c1"></span><span class="kd">let</span> <span class="nx">number</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span> <span class="c1">// 숫자
+</span><span class="c1"></span><span class="kd">let</span> <span class="nx">text</span> <span class="o">=</span> <span class="s2">&#34;Hello, JavaScript&#34;</span><span class="p">;</span> <span class="c1">// 문자열
+</span><span class="c1"></span>
+<span class="c1">// 자유로운 타입 변경
+</span><span class="c1"></span><span class="nx">number</span> <span class="o">=</span> <span class="s2">&#34;42&#34;</span><span class="p">;</span> <span class="c1">// 동적으로 타입이 문자열로 변경
+</span></code></pre></td></tr></table>
 </div>
 </div><p>​</p>
 <p>​</p>
@@ -220,7 +238,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/js_method/" class="prev" rel="prev" title="Typesciprt(JS)_함수선언방법과 차이"><i class="fas fa-angle-left fa-fw"></i>Typesciprt(JS)_함수선언방법과 차이</a></div>
+    <div class="post-nav"><a href="/js_method/" class="prev" rel="prev" title="Typesciprt(JS)_함수선언방법과 차이"><i class="fas fa-angle-left fa-fw"></i>Typesciprt(JS)_함수선언방법과 차이</a>
+            <a href="/nest-official_02_modules-middleware-exception_filters-pipes/" class="next" rel="next" title="Nest Official_02_(Modules, Middleware, Exception_filters, Pipes)">Nest Official_02_(Modules, Middleware, Exception_filters, Pipes)<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.

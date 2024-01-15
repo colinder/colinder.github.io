@@ -7,10 +7,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <title>Nest Official_01_(Introduction, First steps, Controllers, Providers) - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="Nest Official_01_(Introduction, First steps, Controllers, Providers)" />
 <meta property="og:description" content="​
-Introduction Nest.js 는 효율적이고 확장가능한 node.js SSR을 구축하기 위한 프레임워크.
-Nest.js는 progressive(점진적인) JavaScript를 사용하며.(progressive JavaScript; 웹과 네이티브 엡을 모두 대응하는 등 점진적인 방법론을 javascript를 통해 개발하는 개념.) TypeScript를 지원(javascript로 개발도 가능) 그리고 OOP(객체 지향 프로그래밍), FP(기능적 프로그래밍), FRP(기능적 반응 프로그래밍)의 요소들을 결합합니다.
+Introduction  Nest.js 는 효율적이고 확장가능한 node.js SSR을 구축하기 위한 프레임워크.
+ Nest.js는 *progressive(점진적인) JavaScript를 사용하며. TypeScript를 지원(javascript로 개발도 가능) 그리고 OOP(객체 지향 프로그래밍), FP(기능적 프로그래밍), FRP(기능적 반응 프로그래밍)의 요소들을 결합합니다.
 후드 아래에서 Nest는 Express(기본값)와 같은 강력한 HTTP 서버 프레임워크를 사용하며 Fastify를 사용하도록 구성할 수도 있습니다!
-Nest는 이러한 일반적인 Node.js 프레임워크(Express/Fastify) 이상의 추상화 수준을 제공하지만 개발자에게 API를 직접 노출시킵니다." />
+Nest는 이러한 일반적인 Node.js 프레임워크(Express/Fastify) 이상의 추상화 수준을 제공하지만 개발자에게 API를 직접 노출시킵니다. 이를 통해 개발자는 기본 플랫폼에 수많은 타사 모듈을 사용할 수 있습니다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://colinder.github.io/nest-official_01_introduction-first-steps-controllers-providers/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-01-03T13:36:17+09:00" />
@@ -21,10 +21,10 @@ Nest는 이러한 일반적인 Node.js 프레임워크(Express/Fastify) 이상�
 
 <meta name="twitter:title" content="Nest Official_01_(Introduction, First steps, Controllers, Providers)"/>
 <meta name="twitter:description" content="​
-Introduction Nest.js 는 효율적이고 확장가능한 node.js SSR을 구축하기 위한 프레임워크.
-Nest.js는 progressive(점진적인) JavaScript를 사용하며.(progressive JavaScript; 웹과 네이티브 엡을 모두 대응하는 등 점진적인 방법론을 javascript를 통해 개발하는 개념.) TypeScript를 지원(javascript로 개발도 가능) 그리고 OOP(객체 지향 프로그래밍), FP(기능적 프로그래밍), FRP(기능적 반응 프로그래밍)의 요소들을 결합합니다.
+Introduction  Nest.js 는 효율적이고 확장가능한 node.js SSR을 구축하기 위한 프레임워크.
+ Nest.js는 *progressive(점진적인) JavaScript를 사용하며. TypeScript를 지원(javascript로 개발도 가능) 그리고 OOP(객체 지향 프로그래밍), FP(기능적 프로그래밍), FRP(기능적 반응 프로그래밍)의 요소들을 결합합니다.
 후드 아래에서 Nest는 Express(기본값)와 같은 강력한 HTTP 서버 프레임워크를 사용하며 Fastify를 사용하도록 구성할 수도 있습니다!
-Nest는 이러한 일반적인 Node.js 프레임워크(Express/Fastify) 이상의 추상화 수준을 제공하지만 개발자에게 API를 직접 노출시킵니다."/>
+Nest는 이러한 일반적인 Node.js 프레임워크(Express/Fastify) 이상의 추상화 수준을 제공하지만 개발자에게 API를 직접 노출시킵니다. 이를 통해 개발자는 기본 플랫폼에 수많은 타사 모듈을 사용할 수 있습니다."/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -37,7 +37,7 @@ Nest는 이러한 일반적인 Node.js 프레임워크(Express/Fastify) 이상�
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/nest-official_01_introduction-first-steps-controllers-providers\/"
-        },"genre": "posts","keywords": "Nest","wordcount":  4646 ,
+        },"genre": "posts","keywords": "Nest","wordcount":  4643 ,
         "url": "https:\/\/colinder.github.io\/nest-official_01_introduction-first-steps-controllers-providers\/","datePublished": "2024-01-03T13:36:17+09:00","dateModified": "2024-01-03T13:36:17+09:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -114,7 +114,7 @@ Nest는 이러한 일반적인 Node.js 프레임워크(Express/Fastify) 이상�
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Nest Official_01_(Introduction, First steps, Controllers, Providers)</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/nest/"><i class="far fa-folder fa-fw"></i>Nest</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-01-03">2024-01-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;4646 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-01-03">2024-01-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;4643 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;22 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -170,14 +170,21 @@ Nest는 이러한 일반적인 Node.js 프레임워크(Express/Fastify) 이상�
 </nav></div>
             </div><div class="content" id="content"><p>​</p>
 <h1 id="introduction">Introduction</h1>
+<blockquote>
 <p>Nest.js 는 효율적이고 확장가능한 node.js SSR을 구축하기 위한 프레임워크.</p>
-<p>Nest.js는 progressive(점진적인) JavaScript를 사용하며.<span style="font-size: 0.8em; color: gray"> (progressive JavaScript; 웹과 네이티브 엡을 모두 대응하는 등 점진적인 방법론을 javascript를 통해 개발하는 개념.)</span> TypeScript를 지원(javascript로 개발도 가능) 그리고 OOP(객체 지향 프로그래밍), FP(기능적 프로그래밍), FRP(기능적 반응 프로그래밍)의 요소들을 결합합니다.</p>
+</blockquote>
+<p>Nest.js는 *progressive(점진적인) JavaScript를 사용하며. TypeScript를 지원(javascript로 개발도 가능) 그리고 OOP(객체 지향 프로그래밍), FP(기능적 프로그래밍), FRP(기능적 반응 프로그래밍)의 요소들을 결합합니다.</p>
 <p>후드 아래에서 Nest는 Express(기본값)와 같은 강력한 HTTP 서버 프레임워크를 사용하며 Fastify를 사용하도록 구성할 수도 있습니다!</p>
-<p>Nest는 이러한 일반적인 Node.js 프레임워크(Express/Fastify) 이상의 추상화 수준을 제공하지만 개발자에게 API를 직접 노출시킵니다. 이를 통해 개발자는 기본 플랫폼에 사용할 수 있는 수많은 타사 모듈을 사용할 수 있습니다.</p>
+<p>Nest는 이러한 일반적인 Node.js 프레임워크(Express/Fastify) 이상의 추상화 수준을 제공하지만 개발자에게 API를 직접 노출시킵니다. 이를 통해 개발자는 기본 플랫폼에 수많은 타사 모듈을 사용할 수 있습니다.</p>
+<p><span style="font-size: 0.8em; color: gray; float: right"> *progressive JavaScript: 웹과 네이티브 엡을 모두 대응하는 등 점진적인 방법론을 javascript를 통해 개발하는 개념.</span></p>
+<p>​</p>
 <p>​</p>
 <h2 id="philosophy">Philosophy</h2>
-<p>최근 몇년, node.js 덕분에 javascript는 프론트와 백엔드 애플리케이션 모두의 “lingua franca”가 되었습니다. <span style="font-size: 0.8em; color: gray">(lingua franca: 서로 다른 모어를 사용하는 화자들이 의사소통을 하기 위해 국제어)</span> 이것은 개발자의 생산성을 향상시키고 빠르고 테스트 가능하며 확장 가능한 프론트엔드 애플리케이션의 생성을 가능하게 하는 Angular, React 및 Vue와 같은 멋진 프로젝트를 탄생시켰습니다. 그러나 Node(그리고 서버측 자바스크립트)를 위한 훌륭한 라이브러리, 도우미 및 도구는 많이 존재하지만, 그 중 어느 것도 아키텍처의 주요 문제를 효과적으로 해결하지는 못합니다.</p>
-<p>Nest는 Out-of-the-box <span style="font-size: 0.8em; color: gray">(Out-of-the-box: 해당 제품이나 서비스를 추가적인 구성이나 변경 없이도 바로 사용할 수 있는 상태)</span> 애플리케이션 아키텍처를 제공하여 개발자와 팀이 고도로 테스트 가능하고 확장 가능하며 느슨하게 결합되고 쉽게 유지 관리할 수 있는 애플리케이션을 만들 수 있습니다. 이 아키텍처는 Angular에서 많은 영감을 받았습니다.</p>
+<p>최근 몇년, node.js 덕분에 javascript는 프론트와 백엔드 애플리케이션 모두의 *lingua franca가 되었습니다.  이것은 개발자의 생산성을 향상시키고 빠르고 테스트 가능하며 확장 가능한 프론트엔드 애플리케이션의 생성을 가능하게 하는 Angular, React 및 Vue와 같은 멋진 프로젝트를 탄생시켰습니다. 그러나 Node(그리고 서버측 자바스크립트)를 위한 훌륭한 라이브러리, 도우미 및 도구는 많이 존재하지만, 그 중 어느 것도 아키텍처의 주요 문제를 효과적으로 해결하지는 못합니다.</p>
+<p>Nest는 *Out-of-the-box  애플리케이션 아키텍처를 제공하여 개발자와 팀이 고도로 테스트 가능하고 확장 가능하며 느슨하게 결합되고 쉽게 유지 관리할 수 있는 애플리케이션을 만들 수 있습니다. 이 아키텍처는 Angular에서 많은 영감을 받았습니다.</p>
+<p><span style="font-size: 0.8em; color: gray; float: right">*lingua franca: 서로 다른 모어를 사용하는 화자들이 의사소통을 하기 위해 국제어</span></p>
+<p><span style="font-size: 0.8em; color: gray; float: right">*Out-of-the-box: 해당 제품이나 서비스를 추가적인 구성이나 변경 없이도 바로 사용할 수 있는 상태)</span></p>
+<p>​</p>
 <p>​</p>
 <p>​</p>
 <h1 id="overview">Overview</h1>
@@ -195,8 +202,8 @@ $ nest new project-name
 </code></pre></td></tr></table>
 </div>
 </div><blockquote>
-<p><strong>HINT</strong>
-To create a new project with TypeScript&rsquo;s <a href="https://www.typescriptlang.org/tsconfig#strict" target="_blank" rel="noopener noreffer">stricter</a> feature set, pass the <code>--strict</code> flag to the <code>nest new</code> command.</p>
+<p><strong>HINT</strong></p>
+<p>To create a new project with TypeScript&rsquo;s <a href="https://www.typescriptlang.org/tsconfig#strict" target="_blank" rel="noopener noreffer">stricter</a> feature set, pass the <code>--strict</code> flag to the <code>nest new</code> command.</p>
 </blockquote>
 <p>&lsquo;project-name&rsquo; 디렉토리가 생성되고, 노드 모듈 및 기타 몇 개의 보일러 플레이트 파일이 설치되며, &lsquo;src/&rsquo; 디렉토리가 생성되고 여러 개의 코어 파일로 채워집니다.</p>
 <p>src</br>
@@ -216,23 +223,23 @@ To create a new project with TypeScript&rsquo;s <a href="https://www.typescriptl
 </thead>
 <tbody>
 <tr>
-<td><code>app.controller.ts</code></td>
+<td>app.controller.ts</td>
 <td>A basic controller with a single route.</td>
 </tr>
 <tr>
-<td><code>app.controller.spec.ts</code></td>
+<td>app.controller.spec.ts</td>
 <td>The unit tests for the controller.</td>
 </tr>
 <tr>
-<td><code>app.module.ts</code></td>
+<td>app.module.ts</td>
 <td>The root module of the application.</td>
 </tr>
 <tr>
-<td><code>app.service.ts</code></td>
+<td>app.service.ts</td>
 <td>A basic service with a single method.</td>
 </tr>
 <tr>
-<td><code>main.ts</code></td>
+<td>main.ts</td>
 <td>The entry file of the application which uses the core function <code>NestFactory</code> to create a Nest application instance.</td>
 </tr>
 </tbody>
@@ -280,8 +287,8 @@ To create a new project with TypeScript&rsquo;s <a href="https://www.typescriptl
 </code></pre></td></tr></table>
 </div>
 </div><blockquote>
-<p><strong>HINT</strong>
-To speed up the development process (x20 times faster builds), you can use the <a href="https://docs.nestjs.com/recipes/swc" target="_blank" rel="noopener noreffer">SWC builder</a> by passing the <code>-b swc</code> flag to the <code>start</code> script, as follows <code>npm run start -- -b swc</code>.</p>
+<p><strong>HINT</strong></p>
+<p>To speed up the development process (x20 times faster builds), you can use the <a href="https://docs.nestjs.com/recipes/swc" target="_blank" rel="noopener noreffer">SWC builder</a> by passing the <code>-b swc</code> flag to the <code>start</code> script, as follows <code>npm run start -- -b swc</code>.</p>
 </blockquote>
 <p>여러분의 파일이 변경되는 것을 바로 확인하고 싶다면, 아래 명령어로 실행하세요</p>
 <div class="highlight"><div class="chroma">
@@ -295,11 +302,11 @@ To speed up the development process (x20 times faster builds), you can use the <
 </div><p>이 명령어는 파일의 변화를 추적할 것이며, 서버를 자동으로 재컴파일하고, 다시 실행 합니다.</p>
 <p>​</p>
 <h3 id="linting-and-formatting">Linting and formatting</h3>
-<p>CLI는 최선을 다해 규모에 따라 신뢰할 수 있는 개발 워크플로우의 기틀을 제공합니다. 
-따라서, 생성된 Nest 프로젝트는 코드 라이너와 포맷터(각각 에슬린트와 더 예쁜)가 미리 설치되어 있습니다.</p>
+<p><a href="https://docs.nestjs.com/cli/overview" target="_blank" rel="noopener noreffer">CLI</a>는 최선을 다해 규모에 따라 신뢰할 수 있는 개발 워크플로우의 기틀을 제공합니다. 
+따라서, 생성된 Nest 프로젝트는 코드 라이너와 포맷터(respectively <a href="https://eslint.org/" target="_blank" rel="noopener noreffer">eslint</a> and <a href="https://prettier.io/" target="_blank" rel="noopener noreffer">prettier</a>)가 미리 설치되어 있습니다.</p>
 <blockquote>
-<p><strong>HINT</strong>
-Not sure about the role of formatters vs linters? Learn the difference <a href="https://prettier.io/docs/en/comparison.html" target="_blank" rel="noopener noreffer">here</a>.</p>
+<p><strong>HINT</strong></p>
+<p>Not sure about the role of formatters vs linters? Learn the difference <a href="https://prettier.io/docs/en/comparison.html" target="_blank" rel="noopener noreffer">here</a>.</p>
 </blockquote>
 <p>최대한의 안정성과 확장성을 보장하기 위해 기본 에슬린트와 더 예쁜 클리 패키지를 사용합니다. 이 설정을 통해 디자인에 의한 공식 확장 기능과 깔끔한 IDE 통합이 가능합니다.</p>
 <p>IDE와 관련이 없는 헤드리스 환경(Continuous Integration, Git hook 등)의 경우 Nest 프로젝트는 즉시 사용할 수 있는 스크립트와 함께 제공됩니다.</p>
@@ -356,8 +363,8 @@ Not sure about the role of formatters vs linters? Learn the difference <a href="
 </code></pre></td></tr></table>
 </div>
 </div><blockquote>
-<p><strong>HINT</strong>
-CLI를 사용해서 컨드롤러를 생성하려 한다면, 간단히 <code>$ nest g controller [name]</code> 명령어를 실행하면 됩니다.</p>
+<p><strong>HINT</strong></p>
+<p>CLI를 사용해서 컨드롤러를 생성하려 한다면, 간단히 <code>$ nest g controller [name]</code> 명령어를 실행하면 됩니다.</p>
 </blockquote>
 <p>findAll() 메서드 앞에 있는 <code>@Get()</code> HTTP request method decorator는 Nest에게 HTTP request에 대한 특정 엔드포인트에 대한 핸들러를 작성하도록 지시합니다.
 엔드포인트는 HTTP 요청 방식(이 경우 GET) 및 <code>route path</code>에 해당합니다.</p>
@@ -421,8 +428,8 @@ CLI를 사용해서 컨드롤러를 생성하려 한다면, 간단히 <code>$ ne
 </tbody>
 </table>
 <blockquote>
-<p><strong>WARNING</strong>
-Nest detects when the handler is using either <code>@Res()</code> or <code>@Next()</code>, indicating you have chosen the library-specific option. If both approaches are used at the same time, the <code>Standard approach is automatically disabled</code> for this single route and will no longer work as expected. To use both approaches at the same time (for example, by injecting the response object to only set cookies/headers but still leave the rest to the framework), you must set the <code>passthrough</code> option to <code>true</code> in the <code>@Res({ passthrough: true })</code> decorator.</p>
+<p><strong>WARNING</strong></p>
+<p>Nest detects when the handler is using either <code>@Res()</code> or <code>@Next()</code>, indicating you have chosen the library-specific option. If both approaches are used at the same time, the <code>Standard approach is automatically disabled</code> for this single route and will no longer work as expected. To use both approaches at the same time (for example, by injecting the response object to only set cookies/headers but still leave the rest to the framework), you must set the <code>passthrough</code> option to <code>true</code> in the <code>@Res({ passthrough: true })</code> decorator.</p>
 </blockquote>
 <p>​</p>
 <h3 id="request-object">Request object</h3>
@@ -456,8 +463,8 @@ Nest detects when the handler is using either <code>@Res()</code> or <code>@Next
 </code></pre></td></tr></table>
 </div>
 </div><blockquote>
-<p><strong>HINT</strong>
-In order to take advantage of <code>express</code> typings (as in the <code>request: Request</code> parameter example above), install <code>@types/express</code> package.</p>
+<p><strong>HINT</strong></p>
+<p>In order to take advantage of <code>express</code> typings (as in the <code>request: Request</code> parameter example above), install <code>@types/express</code> package.</p>
 </blockquote>
 <p>요청 개체는 HTTP 요청을 나타내며 요청 쿼리 문자열, 매개 변수, HTTP 헤더 및 본문에 대한 속성을 가집니다(read more <a href="https://expressjs.com/en/api.html#req" target="_blank" rel="noopener noreffer">here</a>). 대부분의 경우, 이런 속성들을 수동적으로 확인하는 것은 필요하지 않습니다. 우리는 특정 데코레이터를 사용할 수 있습니다. 예를 들어  <code>@Body()</code> or <code>@Query()</code>, 같은 것들을 별도의 설치 없이(out of the box) 사용할 수 있습니다. 아래 리스트들은 Nest에서 제공하는 데코레이터이며, 간단하게 사용 가능한 것들 입니다.</p>
 <table>
@@ -513,8 +520,8 @@ In order to take advantage of <code>express</code> typings (as in the <code>requ
 <p>HTTP 플랫폼(e.g., Express and Fastify) 간의 typings 호환성을 위해, Nest는 <code>@Res()</code> and <code>@Response()</code> 데코레이터를 제공합니다. <code>@Res()</code>는 <code>@Response()</code>의 별칭일 뿐입니다. 이 두 데코레이터는 개발자에게 HTTP 플랫폼의 기본 응답 객체에 직접 접근할 수 있게 해줍니다. 이것들을 사용할 때 모든 이점을 얻기 위해서는 당신은 라이브러리를 import해서 사용해야 합니다.</p>
 <p><code>@Res()</code> 또는 <code>@Response()</code>를 메서드 핸들러에 주입할 때는 해당 핸들러에 대해 Nest를 라이브러리별 모드로 전환하고 응답을 관리하는 책임이 당신에게 있음을 주의하세요. 이렇게 할 때는 &lsquo;response&rsquo; 개체(e.g., <code>res.json(...)</code> or <code>res.send(...)</code>)를 호출하여 어떤 종류의 응답을 발행해야 합니다. 그렇지 않으면 HTTP 서버가 중단됩니다.</p>
 <blockquote>
-<p><strong>HINT</strong>
-To learn how to create your own custom decorators, visit <a href="https://docs.nestjs.com/custom-decorators" target="_blank" rel="noopener noreffer">this</a> chapter.</p>
+<p><strong>HINT</strong></p>
+<p>To learn how to create your own custom decorators, visit <a href="https://docs.nestjs.com/custom-decorators" target="_blank" rel="noopener noreffer">this</a> chapter.</p>
 </blockquote>
 <p>​</p>
 <h3 id="resources">Resources</h3>
@@ -559,13 +566,13 @@ To learn how to create your own custom decorators, visit <a href="https://docs.n
 </div>
 </div><p>간단하죠. Nest는 모든 기본 HTTP 메서드를 위한 데코레이터를 제공합니다. <code>@Get()</code>, <code>@Post()</code>, <code>@Put()</code>, <code>@Delete()</code>, <code>@Patch()</code>, <code>@Options()</code>, and <code>@Head()</code>. 또 <code>@All()</code>은 이 모든 데코레이터를 처리하는 엔드포인트 입니다.</p>
 <blockquote>
-<p>예를 들어 
+<p>예를 들어 <br>
 /cats 에 대하여 @Get(), @Post() 두 메서드만 정의했고 @All()을 추가로 정의한 경우, 
 /cats으로 <code>@Put()</code>, <code>@Delete()</code>, <code>@Patch()</code>, <code>@Options()</code>, and <code>@Head()</code> 요청을 보내면 <code>@All()</code>메서드가 응답합니다.</p>
 </blockquote>
 <p>​</p>
 <h3 id="route-wildcardshttpsdocsnestjscomcontrollersroute-wildcards">Route wildcards<a href="https://docs.nestjs.com/controllers#route-wildcards" target="_blank" rel="noopener noreffer">#</a></h3>
-<p>패턴에 기반한 routes도 지원합니다. 예를 들어 asterisk(*)는 와일드카드로 사용되며 모든 문자 조합과 일치합니다.</p>
+<p>패턴에 기반한 routes도 지원합니다. 예로 asterisk(*)는 와일드카드로 사용되며 모든 문자 조합과 매칭됩니다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -582,8 +589,8 @@ To learn how to create your own custom decorators, visit <a href="https://docs.n
 </div>
 </div><p><code>'ab*cd'</code> route path는 <code>abcd</code>, <code>ab_cd</code>, <code>abecd</code> 등과 연결됩니다. <code>?</code>, <code>+</code>, <code>*</code> 및 <code>()</code> 문자는 route path에 사용될 수 있으며 정규식 대응의 하위 집합입니다. 하이픈(<code>-</code>)과 점(<code>.</code>)은 문자열 기반 경로로 문자 그대로 해석됩니다.</p>
 <blockquote>
-<p><strong>WARNING</strong>
-A wildcard in the middle of the route is only supported by express.</p>
+<p><strong>WARNING</strong></p>
+<p>A wildcard in the middle of the route is only supported by express.</p>
 </blockquote>
 <p>​</p>
 <h3 id="status-codehttpsdocsnestjscomcontrollersstatus-code">Status code<a href="https://docs.nestjs.com/controllers#status-code" target="_blank" rel="noopener noreffer">#</a></h3>
@@ -609,12 +616,12 @@ A wildcard in the middle of the route is only supported by express.</p>
 </code></pre></td></tr></table>
 </div>
 </div><blockquote>
-<p><strong>HINT</strong>
-Import <code>HttpCode</code> from the <code>@nestjs/common</code> package.</p>
+<p><strong>HINT</strong></p>
+<p>Import <code>HttpCode</code> from the <code>@nestjs/common</code> package.</p>
 </blockquote>
 <blockquote>
-<p><strong>WARNING</strong>
-<code>@All()</code> 이후 <code>@Post()</code>를 작성하면 호이스팅이 되지 않는다!  우선 순위를 고려하면 개발해야함.</p>
+<p><strong>WARNING</strong></p>
+<p><code>@All()</code> 이후 <code>@Post()</code>를 작성하면 호이스팅이 되지 않는다!  우선 순위를 고려하면 개발해야함.</p>
 </blockquote>
 <p>​</p>
 <h3 id="headershttpsdocsnestjscomcontrollersheaders">Headers<a href="https://docs.nestjs.com/controllers#headers" target="_blank" rel="noopener noreffer">#</a></h3>
@@ -654,8 +661,8 @@ Import <code>HttpCode</code> from the <code>@nestjs/common</code> package.</p>
 </code></pre></td></tr></table>
 </div>
 </div><blockquote>
-<p><strong>HINT</strong>
-가끔씩 동적으로 HTTP 상태 코드나 리디렉션 URL을 보내고 싶을 때가 있을 것입니다. 이럴 땐, (@nestjs/common의) HttpRedirectResponse 인터페이스를 따르는 객체를 반환하면 됩니다.</p>
+<p><strong>HINT</strong></p>
+<p>가끔씩 동적으로 HTTP 상태 코드나 리디렉션 URL을 보내고 싶을 때가 있을 것입니다. 이럴 땐, (@nestjs/common의) HttpRedirectResponse 인터페이스를 따르는 객체를 반환하면 됩니다.</p>
 </blockquote>
 <p>메서드가 return 값(e.g, URL)을 반환하면, 이 값은 데코레이터에 전달된 기존의 인수를 오버라이드(덮어쓰기)한다. 예를 들어</p>
 <div class="highlight"><div class="chroma">
@@ -680,8 +687,8 @@ Import <code>HttpCode</code> from the <code>@nestjs/common</code> package.</p>
 <p>요청의 일부로 동적 데이터를 수신할 필요가 있을 때,정적  path의 routes는 동작하지 않습니다. (e.g., <code>GET /cats/1</code> to get cat with id <code>1</code>). 매개변수가 있는 routes를 정의하기 위해, routes에 매개변수 <code>tokens</code>을 추가하여 요청 URL의 해당 위치에서 동적값을 활용할 수 있습니다.</p>
 <p><code>@Get()</code>데코레이터안에 route 매개변수 token를 사용한 아래의 예시를 봅시다. route 매개변수가 아래와 같이 선언되었다면, <code>@Param()</code> 데코레이터를 사용해서 접근하고 사용할 수 있습니다.</p>
 <blockquote>
-<p><strong>HINT</strong>
-route 매개변수를 사용할 때, 매개변수가 포함된 route는 정적 path를 선언한 후에 작성되어야 한다. 
+<p><strong>HINT</strong></p>
+<p>route 매개변수를 사용할 때, 매개변수가 포함된 route는 정적 path를 선언한 후에 작성되어야 한다. 
 이렇게 하면, 정적 path의 트래픽이 매개변수가 담긴 path에 의해 방해받는 것을 방지할 수 있다.</p>
 <p>예를 들어 /users/profile, /users/:id 두개의 라우트가 선언 되어 있을 때 &lsquo;/users/profile&rsquo; 먼저 선언되어 있어야한다. 그렇지 않으면, :id 파라미터가 &ldquo;profile&quot;이라는 값을 캡쳐하게 되어, 의도하지 않은 동작을 유발할 수 있다.</p>
 </blockquote>
@@ -693,14 +700,12 @@ route 매개변수를 사용할 때, 매개변수가 포함된 route는 정적 p
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span><span class="lnt">6
-</span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Get</span><span class="p">,</span> <span class="nx">Param</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/common&#39;</span><span class="p">;</span>
 
 <span class="kd">@Get</span><span class="p">(</span><span class="s1">&#39;:id&#39;</span><span class="p">)</span>
 <span class="nx">findOne</span><span class="p">(</span><span class="kd">@Param</span><span class="p">()</span> <span class="nx">params</span>: <span class="kt">any</span><span class="p">)</span><span class="o">:</span> <span class="kt">string</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">params</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
   <span class="k">return</span> <span class="sb">`This action returns a #</span><span class="si">${</span><span class="nx">params</span><span class="p">.</span><span class="nx">id</span><span class="si">}</span><span class="sb"> cat`</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></td></tr></table>
@@ -770,8 +775,8 @@ route 매개변수를 사용할 때, 매개변수가 포함된 route는 정적 p
 </code></pre></td></tr></table>
 </div>
 </div><blockquote>
-<p><strong>WARNING</strong>
-Since <strong>Fastify</strong> lacks support for nested routers, when using sub-domain routing, the (default) Express adapter should be used instead.</p>
+<p><strong>WARNING</strong></p>
+<p>Since <strong>Fastify</strong> lacks support for nested routers, when using sub-domain routing, the (default) Express adapter should be used instead.</p>
 </blockquote>
 <p>route path와 마찬가지로 <code>hosts</code> 옵션은 토큰을 사용하여 호스트 이름에서 해당 위치의 동적 값을 캡처할 수 있습니다. 아래 <code>@Controller()</code> 데코레이터 예제의 호스트 매개변수 토큰은 이 사용법을 보여줍니다. 이런 방법으로 선언된 호스트 매개변수는 <code>@HostParam()</code> 데코레이터를 사용하여 접근할 수 있으며, 이 데코레이터는 메서드 시그니처에 추가되어야 합니다.</p>
 <div class="highlight"><div class="chroma">
@@ -871,11 +876,11 @@ Since <strong>Fastify</strong> lacks support for nested routers, when using sub-
 <h3 id="asynchronicityhttpsdocsnestjscomcontrollersasynchronicity-비동기성">Asynchronicity<a href="https://docs.nestjs.com/controllers#asynchronicity" target="_blank" rel="noopener noreffer">#</a> (비동기성)</h3>
 <p>우리는 최신 JavaScript를 사랑하며 데이터 추출이 대부분 <strong>비동기식</strong>이라는 것을 알고 있습니다. 그렇기 때문에 Nest는 <strong>비동기</strong> 함수를 지원하고 잘 작동합니다.</p>
 <blockquote>
-<p><strong>HINT</strong>
-Learn more about <code>async / await</code> feature <a href="https://kamilmysliwiec.com/typescript-2-1-introduction-async-await" target="_blank" rel="noopener noreffer">here</a></p>
+<p><strong>HINT</strong></p>
+<p>Learn more about <code>async / await</code> feature <a href="https://kamilmysliwiec.com/typescript-2-1-introduction-async-await" target="_blank" rel="noopener noreffer">here</a></p>
 </blockquote>
 <p>​</p>
-<p>모든 비동기 함수는 <code>프로미스</code> 타입을 반환해야 합니다. 이것은 Nest가 스스로 해결할 수 있는 연기된(deferred) 값을 반환할 수 있다는 것을 의미합니다. 이에 대한 예시를 살펴보겠습니다.</p>
+<p>모든 비동기 함수는 <code>promise</code> 타입을 반환해야 합니다. 이것은 Nest가 스스로 해결할 수 있는 연기된(deferred) 값을 반환할 수 있다는 것을 의미합니다. 이에 대한 예시를 살펴보겠습니다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -911,7 +916,7 @@ Observable은 데이터나 이벤트의 스트림을 나타내는데, 이 스트
 <p>​</p>
 <h3 id="request-payloadshttpsdocsnestjscomcontrollersrequest-payloads">Request payloads<a href="https://docs.nestjs.com/controllers#request-payloads" target="_blank" rel="noopener noreffer">#</a></h3>
 <p>이전에 예를 보면 POST 요청의 처리에서 클라이언트 데이터를 받지 못했습니다. 여기에 <code>@Body()</code>데코레이터를 추가해 수정해보겠습니다.</p>
-<p>그런데 먼저 (당신이 typescript를 사용한다면) 우리는 DTO(Data Transfer Object) 스키마를 결정해야 합니다. DTO는 데이터가 네트워크를 통해 전송되는 방식을 정의하는 개체입니다. TypeScript 인터페이스를 사용하거나 간단한 클래스를 사용하여 DTO 스키마를 결정할 수 있습니다. 흥미롭게도 여기서는 **클래스를 사용하는 것을 권장합니다. 왜인가요? **클래스는 자바스크립트 ES6 표준의 일부이므로 컴파일된 자바스크립트에서 실제 엔티티로 보존됩니다. 반면에 TypeScript 인터페이스는 컴파일 중에 제거되므로 Nest는 실행중일 때 해당 인터페이스를 참조할 수 없습니다. <u>*Pipes</u>와 같은 기능이 런타임에 변수의 메타타입에 액세스할 수 있을 때 추가적인 가능성을 지원하기 때문에 중요합니다.</p>
+<p>그런데 먼저 (당신이 typescript를 사용한다면) 우리는 DTO(Data Transfer Object) 스키마를 결정해야 합니다. DTO는 데이터가 네트워크를 통해 전송되는 방식을 정의하는 개체입니다. TypeScript 인터페이스를 사용하거나 간단한 클래스를 사용하여 DTO 스키마를 결정할 수 있습니다. 흥미롭게도 여기서는 <strong>클래스를 사용하는 것을 권장합니다. 왜인가요?</strong> 클래스는 자바스크립트 ES6 표준의 일부이므로 컴파일된 자바스크립트에서 실제 엔티티로 보존됩니다. 반면에 TypeScript 인터페이스는 컴파일 중에 제거되므로 Nest는 실행중일 때 해당 인터페이스를 참조할 수 없습니다. <u>*Pipes</u>와 같은 기능이 런타임에 변수의 메타타입에 액세스할 수 있을 때 추가적인 가능성을 지원하기 때문에 중요합니다.</p>
 <p><span style="font-size: 0.8em; color: gray">*Nest.js의 Pipes는 입력 데이터의 변환 또는 유효성 검사와 같은 특정 작업을 수행하는데 사용됩니다. Pipes는 메타데이터(metatype)에 접근할 수 있어야 하는 경우가 있는데, 이는 런타임(runtime)에서 변수의 유형 및 다른 정보를 알아내는 것을 의미합니다. 메타데이터를 사용하면 Pipes가 동적으로 동작하고 입력 데이터에 대해 적절한 작업을 수행할 수 있습니다. 예를 들어, 데이터 유효성 검사를 수행하는 Pipe는 입력 데이터의 유형이나 기타 속성을 알아야 합니다. 이를 위해 Pipes는 런타임에서 변수의 메타데이터를 확인할 수 있어야 합니다.</span></p>
 <p>Let&rsquo;s create the <code>CreateCatDto</code> class:</p>
 <div class="highlight"><div class="chroma">
@@ -947,8 +952,8 @@ Observable은 데이터나 이벤트의 스트림을 나타내는데, 이 스트
 </code></pre></td></tr></table>
 </div>
 </div><blockquote>
-<p><strong>HINT</strong>
-Our <code>ValidationPipe</code>는 메서드 핸들러가 수신해서는 안 되는 속성을 필터링할 수 있다. 이 경우 허용되는 속성을 화이트리스트에 추가할 수 있으며, 화이트리스트에 포함되지 않은 속성은 결과 개체에서 자동으로 제거된다. In the <code>CreateCatDto</code> example, our whitelist is the <code>name</code>, <code>age</code>, and <code>breed</code> properties. Learn more <a href="https://docs.nestjs.com/techniques/validation#stripping-properties" target="_blank" rel="noopener noreffer">here</a>.</p>
+<p><strong>HINT</strong></p>
+<p>Our <code>ValidationPipe</code>는 메서드 핸들러가 수신해서는 안 되는 속성을 필터링할 수 있다. 이 경우 허용되는 속성을 화이트리스트에 추가할 수 있으며, 화이트리스트에 포함되지 않은 속성은 결과 개체에서 자동으로 제거된다. In the <code>CreateCatDto</code> example, our whitelist is the <code>name</code>, <code>age</code>, and <code>breed</code> properties. Learn more <a href="https://docs.nestjs.com/techniques/validation#stripping-properties" target="_blank" rel="noopener noreffer">here</a>.</p>
 </blockquote>
 <p>​</p>
 <h3 id="handling-errorshttpsdocsnestjscomcontrollershandling-errors">Handling errors<a href="https://docs.nestjs.com/controllers#handling-errors" target="_blank" rel="noopener noreffer">#</a></h3>
@@ -1023,8 +1028,8 @@ Our <code>ValidationPipe</code>는 메서드 핸들러가 수신해서는 안 �
 </code></pre></td></tr></table>
 </div>
 </div><blockquote>
-<p><strong>HINT</strong>
-Nest CLI는 모든 보일러 플레이트 코드를 자동으로 생성하는 발전기(도형)를 제공하여 이 모든 것을 방지하고 개발자가 훨씬 쉽게 경험할 수 있도록 도와줍니다. 이 기능에 대한 자세한 내용은  <a href="https://docs.nestjs.com/recipes/crud-generator" target="_blank" rel="noopener noreffer">here</a>에서 확인하십시오.</p>
+<p><strong>HINT</strong></p>
+<p>Nest CLI는 모든 보일러 플레이트 코드를 자동으로 생성하는 발전기(도형)를 제공하여 이 모든 것을 방지하고 개발자가 훨씬 쉽게 경험할 수 있도록 도와줍니다. 이 기능에 대한 자세한 내용은  <a href="https://docs.nestjs.com/recipes/crud-generator" target="_blank" rel="noopener noreffer">here</a>에서 확인하십시오.</p>
 </blockquote>
 <p>​</p>
 <h3 id="getting-up-and-runninghttpsdocsnestjscomcontrollersgetting-up-and-running">Getting up and running<a href="https://docs.nestjs.com/controllers#getting-up-and-running" target="_blank" rel="noopener noreffer">#</a></h3>
@@ -1121,8 +1126,8 @@ Nest CLI는 모든 보일러 플레이트 코드를 자동으로 생성하는 �
 <p>프로바이더는 Nest에서의 기본적인 개념 중 하나입니다. 많은 기본 Nest 클래스는 프로바이더로 취급될 수 있습니다 - 서비스, 리포지토리, 팩토리, 헬퍼 등입니다. 프로바이더의 주요 아이디어는 이를 의존성으로 주입할 수 있다는 것입니다. 이는 객체들이 서로 다양한 관계를 생성할 수 있고, 이러한 객체들을 &lsquo;연결&rsquo;하는 기능을 대부분 Nest 런타임 시스템에 위임할 수 있다는 것을 의미합니다.</p>
 <p>이전 장에서 우리는 간단한 CatsController를 만들었습니다. 컨트롤러는 HTTP 요청을 처리하고 더 복잡한 작업을 프로바이더에게 위임해야 합니다. 프로바이더는 모듈에서 프로바이더로 선언된 일반적인 JavaScript 클래스입니다.</p>
 <blockquote>
-<p><strong>HINT</strong>
-Nest는 의존성을 더 객체지향적인 방식으로 설계하고 구성할 수 있는 기능을 제공하므로, <a href="https://en.wikipedia.org/wiki/SOLID" target="_blank" rel="noopener noreffer">SOLID</a> 원칙을 따르는 것을 강력히 권장합니다.</p>
+<p><strong>HINT</strong></p>
+<p>Nest는 의존성을 더 객체지향적인 방식으로 설계하고 구성할 수 있는 기능을 제공하므로, <a href="https://en.wikipedia.org/wiki/SOLID" target="_blank" rel="noopener noreffer">SOLID</a> 원칙을 따르는 것을 강력히 권장합니다.</p>
 </blockquote>
 <p>SOLID 원칙은 다음과 같습니다.</p>
 <ol>
@@ -1176,11 +1181,12 @@ Nest는 의존성을 더 객체지향적인 방식으로 설계하고 구성할 
 </code></pre></td></tr></table>
 </div>
 </div><blockquote>
-<p><strong>HINT</strong>
-To create a service using the CLI, simply execute the <code>$ nest g service cats</code> command.</p>
+<p><strong>HINT</strong></p>
+<p>To create a service using the CLI, simply execute the <code>$ nest g service cats</code> command.</p>
 </blockquote>
 <p>우리의 <code>CatsService</code>는 하나의 속성과 두 개의 메서드를 가진 기본적인 클래스입니다. 유일하게 새로운 기능은 <code>@Injectable()</code> 데코레이터를 사용한다는 것입니다. <code>@Injectable()</code> 데코레이터는 <code>CatsService</code>가 Nest <u>*IoC</u> 컨테이너에서 관리될 수 있는 클래스임을 선언하는 메타데이터를 첨부합니다. 이 예제에서는 아마도 다음과 같이 보이는 <code>Cat</code> 인터페이스도 사용하고 있습니다.</p>
 <p>​</p>
+<blockquote>
 <p>*IoC는 &ldquo;Inversion of Control&quot;의 약어로, 한국어로는 &ldquo;제어의 역전&quot;이라고 번역됩니다. IoC는 소프트웨어 디자인에서 중요한 개념 중 하나로, 일반적으로 의존성 주입(Dependency Injection)과 관련이 있습니다.</p>
 <p>기존에는 개발자가 코드의 제어 흐름을 직접 제어하고 구성했습니다. 그러나 IoC에서는 제어의 주도권이 프레임워크나 컨테이너로 넘어가게 됩니다. 이는 개발자가 코드를 작성할 때 일부 제어를 외부에서 받아들이는 개념입니다.</p>
 <p>일반적으로 IoC는 다음과 같은 특징을 포함합니다:</p>
@@ -1188,6 +1194,7 @@ To create a service using the CLI, simply execute the <code>$ nest g service cat
 <li><strong>의존성 주입(Dependency Injection):</strong> 객체가 필요로 하는 의존성을 직접 생성하는 대신, 외부에서 의존성을 주입받는 방식입니다. 이를 통해 코드의 결합도를 낮추고 유연성을 높일 수 있습니다.</li>
 <li><strong>제어의 역전:</strong> 개발자가 코드의 제어 흐름을 직접 제어하는 것이 아니라 외부에서 제어 흐름이 주어지는 것을 의미합니다. 일반적으로는 컨테이너나 프레임워크가 코드의 실행을 주도하는 구조를 말합니다.</li>
 </ol>
+</blockquote>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -1323,8 +1330,8 @@ To create a service using the CLI, simply execute the <code>$ nest g service cat
 </code></pre></td></tr></table>
 </div>
 </div><blockquote>
-<p><strong>WARNING</strong>
-If your class doesn&rsquo;t extend another class, you should always prefer using <strong>constructor-based</strong> injection.</p>
+<p><strong>WARNING</strong></p>
+<p>If your class doesn&rsquo;t extend another class, you should always prefer using <strong>constructor-based</strong> injection.</p>
 </blockquote>
 <p>​</p>
 <h3 id="provider-registrationhttpsdocsnestjscomprovidersprovider-registration">Provider registration<a href="https://docs.nestjs.com/providers#provider-registration" target="_blank" rel="noopener noreffer">#</a></h3>

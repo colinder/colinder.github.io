@@ -19,9 +19,14 @@
 4. **예시 언어:** Java, C++, TypeScript
 
 ```typescript
-typescriptCopy code// TypeScript에서의 정적 타입 예시
-let age: number = 25;
-let name: string = "John";
+// TypeScript에서의 정적 타입 예시
+// 정적 타입 (TypeScript)
+let number: number = 42; // 숫자 타입 명시
+let text: string = "Hello, TypeScript"; // 문자열 타입 명시
+
+// 컴파일러가 타입 오류를 감지할 수 있음
+// 아래 코드는 오류를 발생시킴
+// number = "42"; // 에러: 숫자 타입에 문자열 할당 불가
 ```
 
 ​			
@@ -34,9 +39,13 @@ let name: string = "John";
 4. **예시 언어:** JavaScript, Python, Ruby
 
 ```javascript
-javascriptCopy code// JavaScript에서의 동적 타입 예시
-let age = 25;
-let name = "John";
+// JavaScript에서의 동적 타입 예시
+// 동적 타입 (JavaScript)
+let number = 42; // 숫자
+let text = "Hello, JavaScript"; // 문자열
+
+// 자유로운 타입 변경
+number = "42"; // 동적으로 타입이 문자열로 변경
 ```
 
 ​		

@@ -1,0 +1,2153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Nest Official_02_(Modules, Middleware, Exception_filters, Pipes) - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="Nest Official_02_(Modules, Middleware, Exception_filters, Pipes)" />
+<meta property="og:description" content="​
+Modules 모듈은 @Module() 데코레이터로 주석이 달린 클래스입니다. @Module() 데코레이터는 Nest가 애플리케이션 구조를 구성하는 데 사용하는 메타데이터를 제공합니다.
+각 어플리케이션은 최소한 하나의 모듈, 루트 모듈을 가지고 있습니다. 루트 모듈은 Nest가 어플리케이션 그래프를 구축하는데 사용하는 시작점입니다. 어플리케이션 그래프는 Nest가 Modules 및 Providers 간의 관계와 의존성을 해결하는 데 사용하는 내부 데이터 구조입니다. 매우 작은 애플리케이션의 경우 이론적으로 루트 모듈만을 가질 수 있지만, 이는 일반적인 경우가 아닙니다. 모듈은 구성 요소를 효과적으로 구성하는 데 강력하게 권장되는 방법이며, 대부분의 애플리케이션에서는 각각이 밀접한 관련성을 가진 일련의 기능을 캡슐화하는 여러 모듈을 사용하는 결과로서의 아키텍처가 형성됩니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://colinder.github.io/nest-official_02_modules-middleware-exception_filters-pipes/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-01-14T09:14:10+09:00" />
+<meta property="article:modified_time" content="2024-01-14T09:14:10+09:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
+
+<meta name="twitter:title" content="Nest Official_02_(Modules, Middleware, Exception_filters, Pipes)"/>
+<meta name="twitter:description" content="​
+Modules 모듈은 @Module() 데코레이터로 주석이 달린 클래스입니다. @Module() 데코레이터는 Nest가 애플리케이션 구조를 구성하는 데 사용하는 메타데이터를 제공합니다.
+각 어플리케이션은 최소한 하나의 모듈, 루트 모듈을 가지고 있습니다. 루트 모듈은 Nest가 어플리케이션 그래프를 구축하는데 사용하는 시작점입니다. 어플리케이션 그래프는 Nest가 Modules 및 Providers 간의 관계와 의존성을 해결하는 데 사용하는 내부 데이터 구조입니다. 매우 작은 애플리케이션의 경우 이론적으로 루트 모듈만을 가질 수 있지만, 이는 일반적인 경우가 아닙니다. 모듈은 구성 요소를 효과적으로 구성하는 데 강력하게 권장되는 방법이며, 대부분의 애플리케이션에서는 각각이 밀접한 관련성을 가진 일련의 기능을 캡슐화하는 여러 모듈을 사용하는 결과로서의 아키텍처가 형성됩니다."/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/nest-official_02_modules-middleware-exception_filters-pipes/" /><link rel="prev" href="https://colinder.github.io/staticdynamictype/" /><link rel="next" href="https://colinder.github.io/nest-official_03_guards-interceptors-custom_decorators/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Nest Official_02_(Modules, Middleware, Exception_filters, Pipes)",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/colinder.github.io\/nest-official_02_modules-middleware-exception_filters-pipes\/"
+        },"genre": "posts","keywords": "Nest","wordcount":  6845 ,
+        "url": "https:\/\/colinder.github.io\/nest-official_02_modules-middleware-exception_filters-pipes\/","datePublished": "2024-01-14T09:14:10+09:00","dateModified": "2024-01-14T09:14:10+09:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "colinder"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="">Hello New World</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="">Hello New World</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Nest Official_02_(Modules, Middleware, Exception_filters, Pipes)</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/nest/"><i class="far fa-folder fa-fw"></i>Nest</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-01-14">2024-01-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;6845 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;33 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#modules">Modules</a>
+      <ul>
+        <li><a href="#feature-moduleshttpsdocsnestjscommodulesfeature-modules">Feature modules<a href="https://docs.nestjs.com/modules#feature-modules">#</a></a></li>
+        <li><a href="#shared-moduleshttpsdocsnestjscommodulesshared-modules">Shared modules<a href="https://docs.nestjs.com/modules#shared-modules">#</a></a></li>
+        <li><a href="#module-re-exportinghttpsdocsnestjscommodulesmodule-re-exporting">Module re-exporting<a href="https://docs.nestjs.com/modules#module-re-exporting">#</a></a></li>
+        <li><a href="#dependency-injectionhttpsdocsnestjscommodulesdependency-injection">Dependency injection<a href="https://docs.nestjs.com/modules#dependency-injection">#</a></a></li>
+        <li><a href="#global-moduleshttpsdocsnestjscommodulesglobal-modules">Global modules<a href="https://docs.nestjs.com/modules#global-modules">#</a></a></li>
+        <li><a href="#dynamic-moduleshttpsdocsnestjscommodulesdynamic-modules">Dynamic modules<a href="https://docs.nestjs.com/modules#dynamic-modules">#</a></a></li>
+      </ul>
+    </li>
+    <li><a href="#middleware">Middleware</a>
+      <ul>
+        <li><a href="#dependency-injectionhttpsdocsnestjscommiddlewaredependency-injection">Dependency injection<a href="https://docs.nestjs.com/middleware#dependency-injection">#</a></a></li>
+        <li><a href="#applying-middlewarehttpsdocsnestjscommiddlewareapplying-middleware">Applying middleware<a href="https://docs.nestjs.com/middleware#applying-middleware">#</a></a></li>
+        <li><a href="#route-wildcardshttpsdocsnestjscommiddlewareroute-wildcards">Route wildcards<a href="https://docs.nestjs.com/middleware#route-wildcards">#</a></a></li>
+        <li><a href="#middleware-consumerhttpsdocsnestjscommiddlewaremiddleware-consumer">Middleware consumer<a href="https://docs.nestjs.com/middleware#middleware-consumer">#</a></a></li>
+        <li><a href="#excluding-routeshttpsdocsnestjscommiddlewareexcluding-routes">Excluding routes<a href="https://docs.nestjs.com/middleware#excluding-routes">#</a></a></li>
+        <li><a href="#functional-middlewarehttpsdocsnestjscommiddlewarefunctional-middleware">Functional middleware<a href="https://docs.nestjs.com/middleware#functional-middleware">#</a></a></li>
+        <li><a href="#multiple-middlewarehttpsdocsnestjscommiddlewaremultiple-middleware">Multiple middleware<a href="https://docs.nestjs.com/middleware#multiple-middleware">#</a></a></li>
+        <li><a href="#global-middlewarehttpsdocsnestjscommiddlewareglobal-middleware">Global middleware<a href="https://docs.nestjs.com/middleware#global-middleware">#</a></a></li>
+      </ul>
+    </li>
+    <li><a href="#exception-filters">Exception filters</a>
+      <ul>
+        <li><a href="#throwing-standard-exceptionshttpsdocsnestjscomexception-filtersthrowing-standard-exceptions">Throwing standard exceptions<a href="https://docs.nestjs.com/exception-filters#throwing-standard-exceptions">#</a></a></li>
+        <li><a href="#custom-exceptionshttpsdocsnestjscomexception-filterscustom-exceptions">Custom exceptions<a href="https://docs.nestjs.com/exception-filters#custom-exceptions">#</a></a></li>
+        <li><a href="#built-in-http-exceptionshttpsdocsnestjscomexception-filtersbuilt-in-http-exceptions">Built-in HTTP exceptions<a href="https://docs.nestjs.com/exception-filters#built-in-http-exceptions">#</a></a></li>
+        <li><a href="#exception-filtershttpsdocsnestjscomexception-filtersexception-filters-1">Exception filters<a href="https://docs.nestjs.com/exception-filters#exception-filters-1">#</a></a></li>
+        <li><a href="#arguments-hosthttpsdocsnestjscomexception-filtersarguments-host">Arguments host<a href="https://docs.nestjs.com/exception-filters#arguments-host">#</a></a></li>
+        <li><a href="#binding-filtershttpsdocsnestjscomexception-filtersbinding-filters">Binding filters<a href="https://docs.nestjs.com/exception-filters#binding-filters">#</a></a></li>
+        <li><a href="#catch-everythinghttpsdocsnestjscomexception-filterscatch-everything">Catch everything<a href="https://docs.nestjs.com/exception-filters#catch-everything">#</a></a></li>
+        <li><a href="#inheritance상속httpsdocsnestjscomexception-filtersinheritance">Inheritance(상속)<a href="https://docs.nestjs.com/exception-filters#inheritance">#</a></a></li>
+      </ul>
+    </li>
+    <li><a href="#pipes">Pipes</a>
+      <ul>
+        <li><a href="#built-in-pipeshttpsdocsnestjscompipesbuilt-in-pipes">Built-in pipes<a href="https://docs.nestjs.com/pipes#built-in-pipes">#</a></a></li>
+        <li><a href="#binding-pipeshttpsdocsnestjscompipesbinding-pipes">Binding pipes<a href="https://docs.nestjs.com/pipes#binding-pipes">#</a></a></li>
+        <li><a href="#custom-pipeshttpsdocsnestjscompipescustom-pipes">Custom pipes<a href="https://docs.nestjs.com/pipes#custom-pipes">#</a></a></li>
+        <li><a href="#schema-based-validationhttpsdocsnestjscompipesschema-based-validation">Schema based validation<a href="https://docs.nestjs.com/pipes#schema-based-validation">#</a></a></li>
+        <li><a href="#object-schema-validationhttpsdocsnestjscompipesobject-schema-validation">Object schema validation<a href="https://docs.nestjs.com/pipes#object-schema-validation">#</a></a></li>
+        <li><a href="#binding-validation-pipeshttpsdocsnestjscompipesbinding-validation-pipes">Binding validation pipes<a href="https://docs.nestjs.com/pipes#binding-validation-pipes">#</a></a></li>
+        <li><a href="#class-validatorhttpsdocsnestjscompipesclass-validator">Class validator<a href="https://docs.nestjs.com/pipes#class-validator">#</a></a></li>
+        <li><a href="#global-scoped-pipeshttpsdocsnestjscompipesglobal-scoped-pipes">Global scoped pipes<a href="https://docs.nestjs.com/pipes#global-scoped-pipes">#</a></a></li>
+        <li><a href="#the-built-in-validationpipehttpsdocsnestjscompipesthe-built-in-validationpipe">The built-in ValidationPipe<a href="https://docs.nestjs.com/pipes#the-built-in-validationpipe">#</a></a></li>
+        <li><a href="#transformation-use-casehttpsdocsnestjscompipestransformation-use-case">Transformation use case<a href="https://docs.nestjs.com/pipes#transformation-use-case">#</a></a></li>
+        <li><a href="#providing-defaultshttpsdocsnestjscompipesproviding-defaults">Providing defaults<a href="https://docs.nestjs.com/pipes#providing-defaults">#</a></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>​</p>
+<h2 id="modules">Modules</h2>
+<p>모듈은 <code>@Module()</code> 데코레이터로 주석이 달린 클래스입니다. <code>@Module()</code> 데코레이터는 Nest가 애플리케이션 구조를 구성하는 데 사용하는 메타데이터를 제공합니다.</p>
+<p>각 어플리케이션은 최소한 하나의 모듈, <strong>루트 모듈</strong>을 가지고 있습니다. <strong>루트 모듈</strong>은 Nest가 어플리케이션 그래프를 구축하는데 사용하는 시작점입니다. <strong>어플리케이션 그래프</strong>는 Nest가 Modules 및 Providers 간의 관계와 의존성을 해결하는 데 사용하는 내부 데이터 구조입니다. 매우 작은 애플리케이션의 경우 이론적으로 루트 모듈만을 가질 수 있지만, 이는 일반적인 경우가 아닙니다. 모듈은 구성 요소를 효과적으로 구성하는 데 강력하게 권장되는 방법이며, 대부분의 애플리케이션에서는 각각이 밀접한 관련성을 가진 일련의 기능을 캡슐화하는 여러 모듈을 사용하는 결과로서의 아키텍처가 형성됩니다.</p>
+<p><code>@Module()</code> 데코레이터는 모듈을 설명하는 속성들이 담긴 단일 객체를 인자로 받습니다.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>providers</td>
+<td style="text-align:left">the providers that will be instantiated by the Nest injector and that may be shared at least across this module</td>
+</tr>
+<tr>
+<td>controllers</td>
+<td style="text-align:left">the set of controllers defined in this module which have to be instantiated</td>
+</tr>
+<tr>
+<td>imports</td>
+<td style="text-align:left">the list of imported modules that export the providers which are required in this module</td>
+</tr>
+<tr>
+<td>exports</td>
+<td style="text-align:left">the subset of <code>providers</code> that are provided by this module and should be available in other modules which import this module. You can use either the provider itself or just its token (<code>provide</code> value)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>기본적으로 모듈은 프로바이더를 캡슐화합니다.</strong> <strong>이는 현재 모듈에 직접 속하지 않거나 가져온 모듈에서 내보내지지 않은 프로바이더를 주입하는 것이 불가능하다는 것을 의미</strong>합니다. 따라서 모듈에서 내보내는 프로바이더를 모듈의 공개 인터페이스 또는 API로 간주할 수 있습니다.</p>
+<p>​</p>
+<h3 id="feature-moduleshttpsdocsnestjscommodulesfeature-modules">Feature modules<a href="https://docs.nestjs.com/modules#feature-modules" target="_blank" rel="noopener noreffer">#</a></h3>
+<p><code>CatsController</code>와 <code>CatsService</code>는 동일한 애플리케이션 도메인에 속합니다. 서로 밀접하게 관련되어 있기 때문에 이들을 <strong>feature module</strong>로 이동하는 것이 합리적입니다. <strong>feature module</strong>은 단순히 특정 기능에 관련된 코드를 조직하는 역할을 합니다. 코드를 조직하고 명확한 경계를 정의함으로써 복잡성을 관리하고 애플리케이션 또는 팀의 규모가 커짐에 따라 SOLID 원칙에 따라 개발하는 데 도움이 됩니다.</p>
+<p>이를 구현하기 위해  <code>CatsModule</code>을 만듭니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">//cats/cats.module.ts
+</span><span class="c1"></span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">Module</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/common&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">CatsController</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;./cats.controller&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">CatsService</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;./cats.service&#39;</span><span class="p">;</span>
+
+<span class="kd">@Module</span><span class="p">({</span>
+  <span class="nx">controllers</span><span class="o">:</span> <span class="p">[</span><span class="nx">CatsController</span><span class="p">],</span>
+  <span class="nx">providers</span><span class="o">:</span> <span class="p">[</span><span class="nx">CatsService</span><span class="p">],</span>
+<span class="p">})</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">CatsModule</span> <span class="p">{}</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p><strong>HINT</strong></p>
+<p>To create a module using the CLI, simply execute the <code>$ nest g module cats</code> command.</p>
+</blockquote>
+<p>위에 우리는  <code>cats.module.ts</code>파일 안에  <code>CatsModule</code>을 정의하고, 이 모듈과 관련된 모든 것을 <code>cats</code> 디렉토리로 이동했습니다. 마지막으로 해야 할 일은 이 모듈을 루트 모듈(<code>app.module.ts</code> 파일에서 정의된 <code>AppModule</code>)에 가져오는 것입니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">// app.module.ts
+</span><span class="c1"></span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">Module</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/common&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">CatsModule</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;./cats/cats.module&#39;</span><span class="p">;</span>
+
+<span class="kd">@Module</span><span class="p">({</span>
+  <span class="nx">imports</span><span class="o">:</span> <span class="p">[</span><span class="nx">CatsModule</span><span class="p">],</span>
+<span class="p">})</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">AppModule</span> <span class="p">{}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>이제 우리 폴더 구조는 아래와 같습니다.</p>
+<blockquote>
+<p>src</p>
+<p>└ cats</p>
+<p>    └ dto</p>
+<p>        └ create-cat.dto.ts</p>
+<p>    └ interfaces</p>
+<p>        └ cat.interface.ts</p>
+<p>    └ cats.controller.ts</p>
+<p>    └ cats.module.ts  👈</p>
+<p>    └ cats.service.ts</p>
+<p>app.module.ts</p>
+<p>main.ts</p>
+</blockquote>
+<p>​</p>
+<h3 id="shared-moduleshttpsdocsnestjscommodulesshared-modules">Shared modules<a href="https://docs.nestjs.com/modules#shared-modules" target="_blank" rel="noopener noreffer">#</a></h3>
+<p>Nest에서는 모듈이 기본적으로 <strong>싱글톤</strong>이며, 따라서 동일한 프로바이더 인스턴스를 여러 모듈 간에 손쉽게 공유할 수 있습니다.</p>
+<p>모든 모듈은 자동적으로 공유된 모듈입니다. 한 번 생성되면 어떤 모듈안에서든지 재사용이 가능합니다. 여러 다른 모듈 간에 <code>CatsService</code>의 인스턴스를 공유하고자 한다면, 먼저 해당 모듈의 <code>exports</code> 배열에 <code>CatsService</code> 프로바이더를 추가하여 내보내야 합니다. 아래와 같이 작성됩니다:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">//cats.module.ts
+</span><span class="c1"></span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">Module</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/common&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">CatsController</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;./cats.controller&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">CatsService</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;./cats.service&#39;</span><span class="p">;</span>
+
+<span class="kd">@Module</span><span class="p">({</span>
+  <span class="nx">controllers</span><span class="o">:</span> <span class="p">[</span><span class="nx">CatsController</span><span class="p">],</span>
+  <span class="nx">providers</span><span class="o">:</span> <span class="p">[</span><span class="nx">CatsService</span><span class="p">],</span>
+  <span class="nx">exports</span><span class="o">:</span> <span class="p">[</span><span class="nx">CatsService</span><span class="p">]</span>  <span class="err">👈</span>
+<span class="p">})</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">CatsModule</span> <span class="p">{}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>이제 <code>CatsModule</code>을 가져오는 모든 모듈은 <code>CatsService</code>에 접근할 수 있으며, 이를 가져오는 다른 모든 모듈과 동일한 인스턴스를 공유합니다.</p>
+<p>​</p>
+<h3 id="module-re-exportinghttpsdocsnestjscommodulesmodule-re-exporting">Module re-exporting<a href="https://docs.nestjs.com/modules#module-re-exporting" target="_blank" rel="noopener noreffer">#</a></h3>
+<p>위에서 볼 수 있듯이 모듈은 내부 프로바이더를 내보낼 수 있습니다. 또한, 가져온 모듈을 다시 내보낼 수도 있습니다. 아래 예시에서는 <code>CommonModule</code>이 <code>CoreModule</code>에 가져와지고 동시에 내보내져서, 이를 가져오는 다른 모듈에서 사용할 수 있게 됩니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kd">@Module</span><span class="p">({</span>
+  <span class="nx">imports</span><span class="o">:</span> <span class="p">[</span><span class="nx">CommonModule</span><span class="p">],</span>
+  <span class="nx">exports</span><span class="o">:</span> <span class="p">[</span><span class="nx">CommonM</span> <span class="nx">odule</span><span class="p">],</span>
+<span class="p">})</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">CoreModule</span> <span class="p">{}</span>
+
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<h3 id="dependency-injectionhttpsdocsnestjscommodulesdependency-injection">Dependency injection<a href="https://docs.nestjs.com/modules#dependency-injection" target="_blank" rel="noopener noreffer">#</a></h3>
+<p>모듈 클래스는 providers에게 주입할 수 있습니다.(e.g., for configuration purposes):</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">// cats.module.ts
+</span><span class="c1"></span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">Module</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/common&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">CatsController</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;./cats.controller&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">CatsService</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;./cats.service&#39;</span><span class="p">;</span>
+
+<span class="kd">@Module</span><span class="p">({</span>
+  <span class="nx">controllers</span><span class="o">:</span> <span class="p">[</span><span class="nx">CatsController</span><span class="p">],</span>
+  <span class="nx">providers</span><span class="o">:</span> <span class="p">[</span><span class="nx">CatsService</span><span class="p">],</span>
+<span class="p">})</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">CatsModule</span> <span class="p">{</span>
+  <span class="kr">constructor</span><span class="p">(</span><span class="kr">private</span> <span class="nx">catsService</span>: <span class="kt">CatsService</span><span class="p">)</span> <span class="p">{}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>그러나 모듈 클래스 자체는 원형 의존성(<a href="https://docs.nestjs.com/fundamentals/circular-dependency" target="_blank" rel="noopener noreffer">circular dependency</a>)으로 인해 프로바이더로 주입될 수 없습니다</p>
+<p>​</p>
+<h3 id="global-moduleshttpsdocsnestjscommodulesglobal-modules">Global modules<a href="https://docs.nestjs.com/modules#global-modules" target="_blank" rel="noopener noreffer">#</a></h3>
+<p>만약 항상 동일한 모듈 세트를 어디서나 가져와야 하는 경우 번거로워질 수 있습니다. Nest에서 Angular와 달리 <code>providers</code>는 전역 범위에 등록되지 않습니다. 한 번 정의되면 해당 providers는 어디에서나 사용 가능합니다. 그러나 Nest는 providers를 모듈 스코프 내에 캡슐화합니다. 캡슐화된 모듈을 가져오지 않고는 해당 모듈의 providers를 다른 곳에서 사용할 수 없습니다.</p>
+<p>만약 어디서나 사용 가능한 프로바이더 집합을 제공하려면 (예: 헬퍼, 데이터베이스 연결 등) 모듈에 <code>@Global()</code> 데코레이터를 사용하여 <strong>전역</strong>으로 설정하세요.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Module</span><span class="p">,</span> <span class="nx">Global</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/common&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">CatsController</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;./cats.controller&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">CatsService</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;./cats.service&#39;</span><span class="p">;</span>
+
+<span class="kd">@Global</span><span class="p">()</span>  <span class="err">👈</span>
+<span class="kd">@Module</span><span class="p">({</span>
+  <span class="nx">controllers</span><span class="o">:</span> <span class="p">[</span><span class="nx">CatsController</span><span class="p">],</span>
+  <span class="nx">providers</span><span class="o">:</span> <span class="p">[</span><span class="nx">CatsService</span><span class="p">],</span>
+  <span class="nx">exports</span><span class="o">:</span> <span class="p">[</span><span class="nx">CatsService</span><span class="p">],</span>
+<span class="p">})</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">CatsModule</span> <span class="p">{}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><code>@Global()</code> 데코레이터는 모듈을 전역 범위로 설정합니다. 전역 모듈은 일반적으로 루트 또는 코어 모듈에서 한 번만 등록되어야 합니다. 위의 예제에서 <code>CatsService</code> providers는 어디서나 사용 가능하며, <strong>서비스를 주입하려는 모듈은 imports 배열에 <code>CatsModule</code>을 가져오지 않아도 될 것입니다.</strong></p>
+<blockquote>
+<p><strong>HINT</strong></p>
+<p>Making everything global is not a good design decision. Global modules are available to reduce the amount of necessary boilerplate. The <code>imports</code> array is generally the preferred way to make the module&rsquo;s API available to consumers.</p>
+</blockquote>
+<p>​</p>
+<h3 id="dynamic-moduleshttpsdocsnestjscommodulesdynamic-modules">Dynamic modules<a href="https://docs.nestjs.com/modules#dynamic-modules" target="_blank" rel="noopener noreffer">#</a></h3>
+<p>Nest 모듈 시스템에는 <strong>동적 모듈</strong>이라는 강력한 기능이 포함되어 있습니다. 이 기능을 사용하면 동적으로 프로바이더를 등록하고 구성할 수 있는 사용자 정의 가능한 모듈을 쉽게 만들 수 있습니다. 동적 모듈은  <a href="https://docs.nestjs.com/fundamentals/dynamic-modules" target="_blank" rel="noopener noreffer">here</a>에서 자세하게 다루어져 있습니다. 이 장에서는 모듈 소개를 완료하기 위해 간략한 개요를 제공합니다.</p>
+<p>다음은 <code>DatabaseModule</code>의 동적 모듈 정의 예시입니다:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Module</span><span class="p">,</span> <span class="nx">DynamicModule</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/common&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">createDatabaseProviders</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;./database.providers&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">Connection</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;./connection.provider&#39;</span><span class="p">;</span>
+
+<span class="kd">@Module</span><span class="p">({</span>
+  <span class="nx">providers</span><span class="o">:</span> <span class="p">[</span><span class="nx">Connection</span><span class="p">],</span>
+<span class="p">})</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">DatabaseModule</span> <span class="p">{</span>
+  <span class="kr">static</span> <span class="nx">forRoot</span><span class="p">(</span><span class="nx">entities</span> <span class="o">=</span> <span class="p">[],</span> <span class="nx">options</span><span class="o">?</span><span class="p">)</span><span class="o">:</span> <span class="nx">DynamicModule</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">providers</span> <span class="o">=</span> <span class="nx">createDatabaseProviders</span><span class="p">(</span><span class="nx">options</span><span class="p">,</span> <span class="nx">entities</span><span class="p">);</span>
+    <span class="k">return</span> <span class="p">{</span>
+      <span class="nx">module</span>: <span class="kt">DatabaseModule</span><span class="p">,</span>
+      <span class="nx">providers</span>: <span class="kt">providers</span><span class="p">,</span>
+      <span class="nx">exports</span>: <span class="kt">providers</span><span class="p">,</span>
+    <span class="p">};</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p><strong>HINT</strong></p>
+<p><code>forRoot()</code> 메서드는 동기적으로 또는 비동기적으로(즉, Promise를 통해) 동적 모듈을 반환할 수 있습니다.</p>
+</blockquote>
+<p>이 모듈은 기본적으로 <code>Connection</code> provider를 정의하지만(<code>@Module()</code> 데코레이터 메타데이터에서), 추가로 <code>forRoot()</code> 메서드에 전달된 <code>entities</code> 및 <code>options</code> 객체에 따라 provider 컬렉션을 노출합니다.(예를 들면 리포지토리들) 동적 모듈에서 반환된 속성은 <code>@Module()</code> 데코레이터에서 정의된 기본 모듈 메타데이터를 확장(override가 아닌)하는 것에 주목하세요. 이것이 정적으로 선언된 <code>Connection</code> provider와 동적으로 생성된 리포지토리 provider가 모듈에서 내보내지는 방식입니다.</p>
+<p>동적 모듈을 전역 범위에서 등록하려면 <code>global</code> 속성을 <code>true</code>로 설정하세요.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="p">{</span>
+  <span class="kr">global</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nx">module</span>: <span class="kt">DatabaseModule</span><span class="p">,</span>
+  <span class="nx">providers</span>: <span class="kt">providers</span><span class="p">,</span>
+  <span class="nx">exports</span>: <span class="kt">providers</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p><strong>WARNING</strong></p>
+<p>As mentioned above, making everything global <strong>is not a good design decision</strong>.</p>
+</blockquote>
+<p><code>DatabaseModule</code>은 다음과 같은 방식으로 가져와 구성될 수 있습니다:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Module</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/common&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">DatabaseModule</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;./database/database.module&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">User</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;./users/entities/user.entity&#39;</span><span class="p">;</span>
+
+<span class="kd">@Module</span><span class="p">({</span>
+  <span class="nx">imports</span><span class="o">:</span> <span class="p">[</span><span class="nx">DatabaseModule</span><span class="p">.</span><span class="nx">forRoot</span><span class="p">([</span><span class="nx">User</span><span class="p">])],</span>
+<span class="p">})</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">AppModule</span> <span class="p">{}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>만약 동적 모듈을 다시 내보내려면, exports 배열에서 <code>forRoot()</code> 메서드 호출을 생략할 수 있습니다:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Module</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/common&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">DatabaseModule</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;./database/database.module&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">User</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;./users/entities/user.entity&#39;</span><span class="p">;</span>
+
+<span class="kd">@Module</span><span class="p">({</span>
+  <span class="nx">imports</span><span class="o">:</span> <span class="p">[</span><span class="nx">DatabaseModule</span><span class="p">.</span><span class="nx">forRoot</span><span class="p">([</span><span class="nx">User</span><span class="p">])],</span>
+  <span class="nx">exports</span><span class="o">:</span> <span class="p">[</span><span class="nx">DatabaseModule</span><span class="p">],</span>
+<span class="p">})</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">AppModule</span> <span class="p">{}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>The <a href="https://docs.nestjs.com/fundamentals/dynamic-modules" target="_blank" rel="noopener noreffer">Dynamic modules</a> chapter covers this topic in greater detail, and includes a <a href="https://github.com/nestjs/nest/tree/master/sample/25-dynamic-modules" target="_blank" rel="noopener noreffer">working example</a>.</p>
+<blockquote>
+<p><strong>HINT</strong></p>
+<p>Learn how to build highly customizable dynamic modules with the use of <code>ConfigurableModuleBuilder</code> here in <a href="https://docs.nestjs.com/fundamentals/dynamic-modules#configurable-module-builder" target="_blank" rel="noopener noreffer">this chapter</a>.</p>
+</blockquote>
+<p>​</p>
+<p>​</p>
+<h2 id="middleware">Middleware</h2>
+<p>미들웨어는 라우트 핸들러 이전에 호출되는 함수입니다. 미들웨어 함수는 <code>요청</code> 및 <code>응답</code> 객체에 액세스할 수 있으며, 애플리케이션의 요청-응답 주기에서 <code>next()</code> 미들웨어 함수에 액세스할 수 있습니다. 다음 미들웨어 함수는 일반적으로 <code>next</code>라는 변수로 표시됩니다.</p>
+<p>Nest 미들웨어는 기본적으로 express 미들웨어와 동등합니다. 다음은 공식 express 문서에서 가져온 미들웨어의 기능에 대한 설명입니다:</p>
+<blockquote>
+<p>Middleware functions can perform the following tasks:</p>
+<ul>
+<li>execute any code.</li>
+<li>make changes to the request and the response objects.</li>
+<li>end the request-response cycle.</li>
+<li>call the next middleware function in the stack.</li>
+<li>if the current middleware function does not end the request-response cycle, it must call <code>next()</code> to pass control to the next middleware function. Otherwise, the request will be left hanging. (현재의 미들웨어 함수가 요청-응답 주기를 종료하지 않으면 next()를 호출하여 제어를 다음 미들웨어 함수로 전달해야 합니다. 그렇지 않으면 요청이 미해결 상태로 남게 됩니다.)</li>
+</ul>
+</blockquote>
+<p>Nest 미들웨어는 함수로도, 또는 <code>@Injectable()</code> 데코레이터를 사용한 클래스로 구현할 수 있습니다. 클래스는 <code>NestMiddleware</code> 인터페이스를 구현해야 하며, 함수는 특별한 요구사항이 없습니다. 간단한 미들웨어 기능을 클래스 방법을 사용하여 구현하는 것으로 시작해보겠습니다.</p>
+<blockquote>
+<p><strong>WARNING</strong></p>
+<p><code>Express</code> and <code>fastify</code> handle middleware differently and provide different method signatures, read more <a href="https://docs.nestjs.com/techniques/performance#middleware" target="_blank" rel="noopener noreffer">here</a>.</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">//logger.middleware.ts
+</span><span class="c1"></span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">Injectable</span><span class="p">,</span> <span class="nx">NestMiddleware</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/common&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">Request</span><span class="p">,</span> <span class="nx">Response</span><span class="p">,</span> <span class="nx">NextFunction</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;express&#39;</span><span class="p">;</span>
+
+<span class="kd">@Injectable</span><span class="p">()</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">LoggerMiddleware</span> <span class="kr">implements</span> <span class="nx">NestMiddleware</span> <span class="p">{</span>
+  <span class="nx">use</span><span class="p">(</span><span class="nx">req</span>: <span class="kt">Request</span><span class="p">,</span> <span class="nx">res</span>: <span class="kt">Response</span><span class="p">,</span> <span class="nx">next</span>: <span class="kt">NextFunction</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Request...&#39;</span><span class="p">);</span>
+    <span class="nx">next</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<h3 id="dependency-injectionhttpsdocsnestjscommiddlewaredependency-injection">Dependency injection<a href="https://docs.nestjs.com/middleware#dependency-injection" target="_blank" rel="noopener noreffer">#</a></h3>
+<p>Nest 미들웨어는 완전히 의존성 주입(Dependency Injection)을 지원합니다. 마치 프로바이더(Providers)와 컨트롤러(Controllers)와 마찬가지로, 미들웨어도 동일한 모듈 내에서 사용 가능한 의존성을 주입할 수 있습니다. 전통적으로 이는 생성자(Constructor)를 통해 이루어집니다.</p>
+<p>​</p>
+<h3 id="applying-middlewarehttpsdocsnestjscommiddlewareapplying-middleware">Applying middleware<a href="https://docs.nestjs.com/middleware#applying-middleware" target="_blank" rel="noopener noreffer">#</a></h3>
+<p>Nest.js에서는 <code>@Module()</code> 데코레이터에 미들웨어를 직접 설정할 수 있는 장소가 없습니다. 대신, 모듈 클래스의 <code>configure()</code> 메서드를 사용하여 미들웨어를 설정합니다. 미들웨어를 포함하는 모듈은 <code>NestModule</code> 인터페이스를 구현해야 합니다. <code>AppModule</code> 수준에서 <code>LoggerMiddleware</code>를 설정해 보겠습니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">//app.module.ts
+</span><span class="c1"></span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">Module</span><span class="p">,</span> <span class="nx">NestModule</span><span class="p">,</span> <span class="nx">MiddlewareConsumer</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/common&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">LoggerMiddleware</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;./common/middleware/logger.middleware&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">CatsModule</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;./cats/cats.module&#39;</span><span class="p">;</span>
+
+<span class="kd">@Module</span><span class="p">({</span>
+  <span class="nx">imports</span><span class="o">:</span> <span class="p">[</span><span class="nx">CatsModule</span><span class="p">],</span>
+<span class="p">})</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">AppModule</span> <span class="kr">implements</span> <span class="nx">NestModule</span> <span class="p">{</span>
+  <span class="nx">configure</span><span class="p">(</span><span class="nx">consumer</span>: <span class="kt">MiddlewareConsumer</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">consumer</span>
+      <span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">LoggerMiddleware</span><span class="p">)</span>
+      <span class="p">.</span><span class="nx">forRoutes</span><span class="p">(</span><span class="s1">&#39;cats&#39;</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>위의 예제에서는 이전에 <code>CatsController</code> 내에서 정의된 <code>/cats</code> 라우트 핸들러에 대해 <code>LoggerMiddleware</code>를 설정했습니다. 또한, 미들웨어를 특정 요청 메서드로 제한할 수 있으며, 이는 미들웨어를 구성할 때 <code>forRoutes()</code> 메서드에 라우트 경로와 요청 메서드를 포함하는 객체를 전달하여 수행할 수 있습니다.</p>
+<p>아래 예제에서는 원하는 요청 메서드 유형을 참조하기 위해 <code>RequestMethod</code>열거형을 가져오는 것에 주목하세요.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">//app.module.ts
+</span><span class="c1"></span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">Module</span><span class="p">,</span> <span class="nx">NestModule</span><span class="p">,</span> <span class="nx">RequestMethod</span><span class="p">,</span> <span class="nx">MiddlewareConsumer</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/common&#39;</span><span class="p">;</span> <span class="err">👈</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">LoggerMiddleware</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;./common/middleware/logger.middleware&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">CatsModule</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;./cats/cats.module&#39;</span><span class="p">;</span>
+
+<span class="kd">@Module</span><span class="p">({</span>
+  <span class="nx">imports</span><span class="o">:</span> <span class="p">[</span><span class="nx">CatsModule</span><span class="p">],</span>
+<span class="p">})</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">AppModule</span> <span class="kr">implements</span> <span class="nx">NestModule</span> <span class="p">{</span>
+  <span class="nx">configure</span><span class="p">(</span><span class="nx">consumer</span>: <span class="kt">MiddlewareConsumer</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">consumer</span>
+      <span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">LoggerMiddleware</span><span class="p">)</span>
+      <span class="p">.</span><span class="nx">forRoutes</span><span class="p">({</span> <span class="nx">path</span><span class="o">:</span> <span class="s1">&#39;cats&#39;</span><span class="p">,</span> <span class="nx">method</span>: <span class="kt">RequestMethod.GET</span> <span class="p">});</span>  <span class="err">👈</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p><strong>HINT</strong></p>
+<p><code>configure()</code> 메서드는 <code>async/await</code>를 사용하여 비동기적으로 만들 수 있습니다. 즉, <code>configure()</code> 메서드 본문 내에서 비동기 작업의 완료를 <code>await</code>할 수 있습니다.</p>
+</blockquote>
+<blockquote>
+<p><strong>WARNING</strong></p>
+<p><code>express</code> 어댑터를 사용할 때, NestJS 앱은 기본적으로 <code>body-parser</code> 패키지에서 제공하는 <code>json</code> 및 <code>urlencoded</code> 미들웨어를 등록합니다. 따라서 <code>MiddlewareConsumer</code>를 통해 이 미들웨어를 사용자 정의하려면 <code>NestFactory.create()</code>로 애플리케이션을 생성할 때 <code>bodyParser</code> 플래그를 <code>false</code>로 설정하여 전역 미들웨어를 비활성화해야 합니다.</p>
+</blockquote>
+<p>​</p>
+<h3 id="route-wildcardshttpsdocsnestjscommiddlewareroute-wildcards">Route wildcards<a href="https://docs.nestjs.com/middleware#route-wildcards" target="_blank" rel="noopener noreffer">#</a></h3>
+<p>패턴 기반 라우트도 지원됩니다. 예를 들어, 별표(*)는 와일드카드로 사용되며 어떠한 문자 조합이든 일치합니다:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="nx">forRoutes</span><span class="p">({</span> <span class="nx">path</span><span class="o">:</span> <span class="s1">&#39;ab*cd&#39;</span><span class="p">,</span> <span class="nx">method</span>: <span class="kt">RequestMethod.ALL</span> <span class="p">});</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><code>'ab*cd'</code> 라우트 경로는 <code>abcd</code>, <code>ab_cd</code>, <code>abecd</code> 등과 일치합니다. 라우트 경로에는 <code>?</code> , <code>+</code> , <code>*</code> 및 <code>()</code>와 같은 문자가 사용될 수 있으며, 이들은 정규 표현식과 관련된 부분 집합입니다. 하이픈(<code>-</code>)과 점(<code>.</code>)은 문자열 기반 경로에서 글자 그대로 해석됩니다.</p>
+<blockquote>
+<p><strong>WARNING</strong></p>
+<p>The <code>fastify</code> package uses the latest version of the <code>path-to-regexp</code> package, which no longer supports wildcard asterisks <code>*</code>. Instead, you must use parameters (e.g., <code>(.*)</code>, <code>:splat*</code>).</p>
+</blockquote>
+<p>​</p>
+<h3 id="middleware-consumerhttpsdocsnestjscommiddlewaremiddleware-consumer">Middleware consumer<a href="https://docs.nestjs.com/middleware#middleware-consumer" target="_blank" rel="noopener noreffer">#</a></h3>
+<p><code>MiddlewareConsumer</code>은 도우미 클래스로, 미들웨어를 관리하기 위한 여러 내장 메서드를 제공합니다. 이들은 모두 간편하게 <a href="https://en.wikipedia.org/wiki/Fluent_interface" target="_blank" rel="noopener noreffer">fluent style</a>로 연결될 수 있습니다. <code>forRoutes()</code> 메서드는 단일 문자열, 여러 문자열, <code>RouteInfo</code> 객체, 컨트롤러 클래스, 심지어 여러 컨트롤러 클래스를 인수로 받을 수 있습니다. 대부분의 경우 쉼표로 구분된 컨트롤러 목록을 전달할 것입니다. 아래는 단일 컨트롤러를 사용한 예제입니다:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">//app.moduls.ts
+</span><span class="c1"></span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">Module</span><span class="p">,</span> <span class="nx">NestModule</span><span class="p">,</span> <span class="nx">MiddlewareConsumer</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/common&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">LoggerMiddleware</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;./common/middleware/logger.middleware&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">CatsModule</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;./cats/cats.module&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">CatsController</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;./cats/cats.controller&#39;</span><span class="p">;</span>
+
+<span class="kd">@Module</span><span class="p">({</span>
+  <span class="nx">imports</span><span class="o">:</span> <span class="p">[</span><span class="nx">CatsModule</span><span class="p">],</span>
+<span class="p">})</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">AppModule</span> <span class="kr">implements</span> <span class="nx">NestModule</span> <span class="p">{</span>
+  <span class="nx">configure</span><span class="p">(</span><span class="nx">consumer</span>: <span class="kt">MiddlewareConsumer</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">consumer</span>
+      <span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">LoggerMiddleware</span><span class="p">)</span>
+      <span class="p">.</span><span class="nx">forRoutes</span><span class="p">(</span><span class="nx">CatsController</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p><strong>HINT</strong></p>
+<p><code>apply()</code> 메서드는 단일 미들웨어를 취할 수도 있고, <a href="https://docs.nestjs.com/middleware#multiple-middleware" target="_blank" rel="noopener noreffer">다중 미들웨어를 지정</a>하기 위해 여러 인수를 취할 수도 있습니다.</p>
+</blockquote>
+<p>​</p>
+<h3 id="excluding-routeshttpsdocsnestjscommiddlewareexcluding-routes">Excluding routes<a href="https://docs.nestjs.com/middleware#excluding-routes" target="_blank" rel="noopener noreffer">#</a></h3>
+<p>때로는 특정 라우트에서 미들웨어를 <strong>적용하지 않도록</strong> 하고 싶을 때가 있습니다. <code>exclude()</code> 메서드를 사용하여 특정 라우트를 쉽게 제외할 수 있습니다. 이 메서드는 제외할 라우트를 식별하는 단일 문자열, 여러 문자열 또는 <code>RouteInfo</code> 객체를 인수로 받을 수 있습니다. 아래는 예시입니다:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="nx">consumer</span>
+  <span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">LoggerMiddleware</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">exclude</span><span class="p">(</span>
+    <span class="p">{</span> <span class="nx">path</span><span class="o">:</span> <span class="s1">&#39;cats&#39;</span><span class="p">,</span> <span class="nx">method</span>: <span class="kt">RequestMethod.GET</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="nx">path</span><span class="o">:</span> <span class="s1">&#39;cats&#39;</span><span class="p">,</span> <span class="nx">method</span>: <span class="kt">RequestMethod.POST</span> <span class="p">},</span>
+    <span class="s1">&#39;cats/(.*)&#39;</span><span class="p">,</span>
+  <span class="p">)</span>
+  <span class="p">.</span><span class="nx">forRoutes</span><span class="p">(</span><span class="nx">CatsController</span><span class="p">);</span>
+
+<span class="c1">// forRoutes 뒤에 exclude를 사용하면 에러발생
+</span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p><strong>HINT</strong></p>
+<p>The <code>exclude()</code> method supports wildcard parameters using the <a href="https://github.com/pillarjs/path-to-regexp#parameters" target="_blank" rel="noopener noreffer">path-to-regexp</a> package.</p>
+</blockquote>
+<p>위의 예제에서는 <code>LoggerMiddleware</code>가 <code>CatsController</code> 내에서 정의된 모든 라우트에 바인딩되지만, <code>exclude()</code> 메서드에 전달된 세 개의 라우트를 제외한 나머지 라우트에 적용될 것입니다.</p>
+<p>​</p>
+<h3 id="functional-middlewarehttpsdocsnestjscommiddlewarefunctional-middleware">Functional middleware<a href="https://docs.nestjs.com/middleware#functional-middleware" target="_blank" rel="noopener noreffer">#</a></h3>
+<p>우리가 사용한 <code>LoggerMiddleware</code> 클래스는 매우 간단합니다. 멤버나 추가적인 메서드, 의존성이 없습니다. 왜 클래스 대신에 간단한 함수로 정의할 수 없을까요? 사실, 가능합니다. 이러한 유형의 미들웨어를 <strong>함수형 미들웨어</strong>라고 합니다. 클래스 기반의 <code>LoggerMiddleware</code>를 함수형 미들웨어로 변환해보겠습니다. 그러면 두 방식의 차이점을 이해할 수 있습니다:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Request</span><span class="p">,</span> <span class="nx">Response</span><span class="p">,</span> <span class="nx">NextFunction</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;express&#39;</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="kd">function</span> <span class="nx">logger</span><span class="p">(</span><span class="nx">req</span>: <span class="kt">Request</span><span class="p">,</span> <span class="nx">res</span>: <span class="kt">Response</span><span class="p">,</span> <span class="nx">next</span>: <span class="kt">NextFunction</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Request...`</span><span class="p">);</span>
+  <span class="nx">next</span><span class="p">();</span>
+<span class="p">};</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p><strong>HINT</strong></p>
+<p>당신의 미들웨어가 어떠한 의존성도 필요로하지 않을 때에는, 더 간단한 대안인 <strong>함수형 미들웨어</strong> 사용을 고려하세요.</p>
+</blockquote>
+<p>​</p>
+<h3 id="multiple-middlewarehttpsdocsnestjscommiddlewaremultiple-middleware">Multiple middleware<a href="https://docs.nestjs.com/middleware#multiple-middleware" target="_blank" rel="noopener noreffer">#</a></h3>
+<p>위에서 언급한대로 여러 미들웨어를 순차적으로 실행하려면, <code>apply()</code> 메서드 내부에 쉼표로 구분된 목록을 제공하면 됩니다:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="nx">consumer</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">cors</span><span class="p">(),</span> <span class="nx">helmet</span><span class="p">(),</span> <span class="nx">logger</span><span class="p">).</span><span class="nx">forRoutes</span><span class="p">(</span><span class="nx">CatsController</span><span class="p">);</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<h3 id="global-middlewarehttpsdocsnestjscommiddlewareglobal-middleware">Global middleware<a href="https://docs.nestjs.com/middleware#global-middleware" target="_blank" rel="noopener noreffer">#</a></h3>
+<p>만약 모든 등록된 라우트에 미들웨어를 한 번에 바인딩하려면, <code>INestApplication</code>인스턴스에서 제공하는 <code>use()</code> 메서드를 사용할 수 있습니다:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">//main.ts
+</span><span class="c1"></span>
+<span class="kr">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">NestFactory</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">AppModule</span><span class="p">);</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">logger</span><span class="p">);</span>
+<span class="k">await</span> <span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p><strong>HINT</strong></p>
+<p>전역 미들웨어에서 <u>*DI container</u>에 접근하는 것은 불가능합니다. <code>app.use()</code>를 사용할 때는 대신 <a href="https://docs.nestjs.com/middleware#functional-middleware" target="_blank" rel="noopener noreffer">함수형 미들웨어</a>를 사용할 수 있습니다. 또는 클래스 미들웨어를 사용하고 <code>AppModule</code> (또는 다른 모듈) 내에서 <code>.forRoutes('*')</code>를 사용하여 소비할 수 있습니다.</p>
+</blockquote>
+<p><span style='color: gray; font-size: 0.8em'>*DI container : DI(Dependency Injection) 컨테이너는 의존성 주입을 관리하고 제공하는 메커니즘입니다. NestJS에서는 내장된 DI 컨테이너를 사용하여 애플리케이션의 여러 부분 간에 의존성을 주입하고 관리합니다. <br>DI는 코드를 더 모듈화하고 재사용 가능하게 만들며, 테스트와 같은 측면에서도 이점을 제공합니다.DI 컨테이너는 클래스 인스턴스를 생성하고, 클래스의 생성자에 필요한 의존성을 해결하여 객체 간의 의존성을 자동으로 처리합니다. 이를 통해 코드는 느슨한 결합을 유지하고, 유연성과 테스트 용이성을 증가시킵니다. <br>간단히 말해, DI 컨테이너는 애플리케이션에서 사용되는 다양한 서비스, 컴포넌트, 및 의존성들을 효율적으로 관리하는 역할을 합니다. NestJS에서는 이 DI 컨테이너를 통해 의존성을 주입하고 모듈을 효과적으로 조직화할 수 있습니다.</span></p>
+<p>​</p>
+<p>​</p>
+<h2 id="exception-filters">Exception filters</h2>
+<p>Nest는 애플리케이션 전반에 걸쳐 모든 처리되지 않은 예외를 처리하는 내장 예외 레이어를 제공합니다. 애플리케이션 코드에서 처리되지 않은 예외가 발생하면 이 레이어에 의해 잡히며, 자동으로 적절한 사용자 친화적인 응답을 전송합니다.</p>
+<p>기본적으로 이 동작은 내장된 전역 예외 필터에 의해 수행됩니다. 이 예외 필터는 HttpException 형식의 예외 (그 하위 클래스 포함)를 처리합니다. 예외가 인식되지 않을 때 (HttpException이나 HttpException에서 상속되지 않은 클래스), 내장된 예외 필터는 다음과 같은 기본 JSON 응답을 생성합니다:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;statusCode&#34;</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span>
+  <span class="nt">&#34;message&#34;</span><span class="p">:</span> <span class="s2">&#34;Internal server error&#34;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p><strong>HINT</strong></p>
+<p>전역 예외 필터는 <code>http-errors</code> 라이브러리를 일부 지원합니다. 기본적으로 <code>statusCode</code> 및 <code>message</code> 속성을 포함하는 모든 발생한 예외는 적절하게 채워져 응답으로 반환됩니다 (인식되지 않은 예외에 대한 기본 <code>InternalServerErrorException</code> 대신).</p>
+</blockquote>
+<p>​</p>
+<h3 id="throwing-standard-exceptionshttpsdocsnestjscomexception-filtersthrowing-standard-exceptions">Throwing standard exceptions<a href="https://docs.nestjs.com/exception-filters#throwing-standard-exceptions" target="_blank" rel="noopener noreffer">#</a></h3>
+<p>Nest는 <code>@nestjs/common</code> 패키지에서 노출되는 내장 <code>HttpException</code> 클래스를 제공합니다. 전형적인 HTTP REST/GraphQL API 기반 애플리케이션에서는 특정 오류 조건이 발생할 때 표준 HTTP 응답 객체를 보내는 것이 좋은 관행입니다.</p>
+<p>예를 들어, <code>CatsController</code>에는 <code>findAll()</code> 메서드(한 <code>GET</code> 라우트 핸들러)가 있습니다. 이 라우트 핸들러가 어떤 이유로든 예외를 throw한다고 가정해 봅시다. 이를 시연하기 위해 다음과 같이 하드 코딩해 보겠습니다:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">//cats.controller.ts
+</span><span class="c1"></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">Controller</span><span class="p">,</span> <span class="nx">Get</span><span class="p">,</span> <span class="nx">HttpException</span><span class="p">,</span> <span class="nx">HttpStatus</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/common&#39;</span><span class="p">;</span>
+
+<span class="kd">@Get</span><span class="p">()</span>
+<span class="kr">async</span> <span class="nx">findAll() {</span>
+  <span class="k">throw</span> <span class="k">new</span> <span class="nx">HttpException</span><span class="p">(</span><span class="s1">&#39;Forbidden&#39;</span><span class="p">,</span> <span class="nx">HttpStatus</span><span class="p">.</span><span class="nx">FORBIDDEN</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p><strong>HINT</strong></p>
+<p>We used the <code>HttpStatus</code> here. This is a helper enum imported from the <code>@nestjs/common</code> package.</p>
+</blockquote>
+<p>클라이언트가 이 엔드포인트를 호출하면 응답은 다음과 같을 것입니다:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;statusCode&#34;</span><span class="p">:</span> <span class="mi">403</span><span class="p">,</span>
+  <span class="nt">&#34;message&#34;</span><span class="p">:</span> <span class="s2">&#34;Forbidden&#34;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>HttpException 생성자는 응답을 결정하는 두 가지 필수 인수를 받습니다:</p>
+<ul>
+<li>
+<p>response 인수는 JSON 응답 본문을 정의합니다. 아래에 설명된대로 문자열 또는 객체가 될 수 있습니다.</p>
+</li>
+<li>
+<p>status 인수는 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status" target="_blank" rel="noopener noreffer">HTTP status code</a>를 정의합니다.</p>
+</li>
+</ul>
+<p>기본적으로 JSON 응답 본문은 두 가지 속성을 포함합니다:</p>
+<ul>
+<li><code>statusCode</code>: status 인수에서 제공된 HTTP 상태 코드로 기본 설정됩니다.</li>
+<li><code>message</code>: status를 기반으로 한 HTTP 오류에 대한 간단한 설명</li>
+</ul>
+<p>JSON <code>응답</code> 본문의 메시지 부분만 덮어쓰려면 response 인수에 문자열을 제공하면 됩니다. 전체 JSON 응답 본문을 덮어쓰려면 <code>response</code> 인수에 객체를 전달하면 됩니다. Nest는 객체를 직렬화하고 이를 JSON 응답 본문으로 반환합니다.</p>
+<p>두 번째 생성자 인수인 <code>status</code>는 유효한 HTTP 상태 코드여야 합니다. 관례적으로 <code>@nestjs/common</code>에서 가져온 <code>HttpStatus</code> 열거형을 사용하는 것이 좋습니다.</p>
+<p><strong>세 번째</strong> 생성자 인수 (선택적) options는 오류  <a href="https://nodejs.org/en/blog/release/v16.9.0/#error-cause" target="_blank" rel="noopener noreffer">cause</a>을 제공하는 데 사용할 수 있습니다. 이 <code>원인</code> 객체는 응답 객체로 직렬화되지 않지만 <code>HttpException</code>이 throw되는 데 원인이 된 내부 오류에 대한 유용한 정보를 제공하는 데 유용할 수 있습니다.</p>
+<p>전체 응답 본문을 덮어쓰고 오류 원인을 제공하는 예시입니다:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">//cats.controller.ts
+</span><span class="c1"></span>
+<span class="kd">@Get</span><span class="p">()</span>
+<span class="kr">async</span> <span class="nx">findAll() {</span>
+  <span class="k">try</span> <span class="p">{</span>
+    <span class="k">await</span> <span class="k">this</span><span class="p">.</span><span class="nx">service</span><span class="p">.</span><span class="nx">findAll</span><span class="p">()</span>
+  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span> 
+    <span class="k">throw</span> <span class="k">new</span> <span class="nx">HttpException</span><span class="p">({</span>
+      <span class="nx">status</span>: <span class="kt">HttpStatus.FORBIDDEN</span><span class="p">,</span>
+      <span class="nx">error</span><span class="o">:</span> <span class="s1">&#39;This is a custom message&#39;</span><span class="p">,</span>
+    <span class="p">},</span> <span class="nx">HttpStatus</span><span class="p">.</span><span class="nx">FORBIDDEN</span><span class="p">,</span> <span class="p">{</span>
+      <span class="nx">cause</span>: <span class="kt">error</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Using the above, this is how the response would look:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;status&#34;</span><span class="p">:</span> <span class="mi">403</span><span class="p">,</span>
+  <span class="nt">&#34;error&#34;</span><span class="p">:</span> <span class="s2">&#34;This is a custom message&#34;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<h3 id="custom-exceptionshttpsdocsnestjscomexception-filterscustom-exceptions">Custom exceptions<a href="https://docs.nestjs.com/exception-filters#custom-exceptions" target="_blank" rel="noopener noreffer">#</a></h3>
+<p>대부분의 경우 사용자 정의 예외를 작성할 필요가 없으며, 다음 섹션에서 설명하는대로 내장된 Nest HTTP 예외를 사용할 수 있습니다. 사용자 정의 예외를 만들어야 하는 경우에는 사용자 정의 예외를 기본 <code>HttpException</code> 클래스에서 상속하는 예외 계층을 만드는 것이 좋은 관행입니다. 이 접근 방식을 사용하면 Nest가 사용자 정의 예외를 인식하고 오류 응답을 자동으로 처리할 것입니다. 이러한 사용자 정의 예외를 구현해 보겠습니다:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">//forbidden.exception.ts
+</span><span class="c1"></span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">ForbiddenException</span> <span class="kr">extends</span> <span class="nx">HttpException</span> <span class="p">{</span>
+  <span class="kr">constructor</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kr">super</span><span class="p">(</span><span class="s1">&#39;Forbidden&#39;</span><span class="p">,</span> <span class="nx">HttpStatus</span><span class="p">.</span><span class="nx">FORBIDDEN</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><code>ForbiddenException</code>이 기본 <code>HttpException</code>을 확장하므로 내장된 예외 처리기와 원활하게 작동하며, 따라서 <code>findAll()</code> 메서드 내에서 사용할 수 있습니다.</p>
+<p>​</p>
+<h3 id="built-in-http-exceptionshttpsdocsnestjscomexception-filtersbuilt-in-http-exceptions">Built-in HTTP exceptions<a href="https://docs.nestjs.com/exception-filters#built-in-http-exceptions" target="_blank" rel="noopener noreffer">#</a></h3>
+<p>Nest는 기본 <code>HttpException</code>을 상속하는 일련의 표준 예외를 제공합니다. 이 예외들은 <code>@nestjs/common</code> 패키지에서 노출되며, 가장 일반적인 HTTP 예외 중 많은 것들을 나타냅니다:</p>
+<ul>
+<li><code>BadRequestException</code></li>
+<li><code>UnauthorizedException</code></li>
+<li><code>NotFoundException</code></li>
+<li><code>ForbiddenException</code></li>
+<li><code>NotAcceptableException</code></li>
+<li><code>RequestTimeoutException</code></li>
+<li><code>ConflictException</code></li>
+<li><code>GoneException</code></li>
+<li><code>HttpVersionNotSupportedException</code></li>
+<li><code>PayloadTooLargeException</code></li>
+<li><code>UnsupportedMediaTypeException</code></li>
+<li><code>UnprocessableEntityException</code></li>
+<li><code>InternalServerErrorException</code></li>
+<li><code>NotImplementedException</code></li>
+<li><code>ImATeapotException</code></li>
+<li><code>MethodNotAllowedException</code></li>
+<li><code>BadGatewayException</code></li>
+<li><code>ServiceUnavailableException</code></li>
+<li><code>GatewayTimeoutException</code></li>
+<li><code>PreconditionFailedException</code></li>
+</ul>
+<p>내장 예외들은 options 매개변수를 사용하여 오류 원인과 오류 설명을 모두 제공할 수도 있습니다:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">throw</span> <span class="k">new</span> <span class="nx">BadRequestException</span><span class="p">(</span><span class="s1">&#39;Something bad happened&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">cause</span>: <span class="kt">new</span> <span class="nb">Error</span><span class="p">(),</span> <span class="nx">description</span><span class="o">:</span> <span class="s1">&#39;Some error description&#39;</span> <span class="p">})</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>위의 내용을 사용하면 응답은 다음과 같이 보일 것입니다:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;message&#34;</span><span class="p">:</span> <span class="s2">&#34;Something bad happened&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;error&#34;</span><span class="p">:</span> <span class="s2">&#34;Some error description&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;statusCode&#34;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<h3 id="exception-filtershttpsdocsnestjscomexception-filtersexception-filters-1">Exception filters<a href="https://docs.nestjs.com/exception-filters#exception-filters-1" target="_blank" rel="noopener noreffer">#</a></h3>
+<p>기본(내장) 예외 필터는 많은 경우를 자동으로 처리할 수 있지만 예외 레이어에 대한 완전한 제어가 필요한 경우가 있습니다. 예를 들어 로깅을 추가하거나 어떤 동적 요소를 기반으로 다른 JSON 스키마를 사용하고 싶을 수 있습니다. 예외 필터는 정확히 이러한 목적으로 설계되었습니다. 이를 사용하면 흐름 제어와 클라이언트로 보내는 응답의 내용을 정확하게 제어할 수 있습니다.</p>
+<p>HttpException 클래스의 인스턴스인 예외를 catch하고 해당 예외에 대해 사용자 정의 응답 로직을 구현하는 예외 필터를 만들어 보겠습니다. 이를 위해 기본 플랫폼 Request 및 Response 객체에 액세스해야 합니다. 원본 url을 가져와 로깅 정보에 포함시키기 위해 Request 객체에 액세스합니다. response.json() 메서드를 사용하여 직접 전송되는 응답을 제어하기 위해 Response 객체를 사용할 것입니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">//http-exception.filter.ts
+</span><span class="c1"></span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">ExceptionFilter</span><span class="p">,</span> <span class="nx">Catch</span><span class="p">,</span> <span class="nx">ArgumentsHost</span><span class="p">,</span> <span class="nx">HttpException</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/common&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">Request</span><span class="p">,</span> <span class="nx">Response</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;express&#39;</span><span class="p">;</span>
+
+<span class="kd">@Catch</span><span class="p">(</span><span class="nx">HttpException</span><span class="p">)</span>   <span class="c1">//1️⃣
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">class</span> <span class="nx">HttpExceptionFilter</span> <span class="kr">implements</span> <span class="nx">ExceptionFilter</span> <span class="p">{</span>
+  <span class="k">catch</span><span class="p">(</span><span class="nx">exception</span>: <span class="kt">HttpException</span><span class="p">,</span> <span class="nx">host</span>: <span class="kt">ArgumentsHost</span><span class="p">)</span> <span class="p">{</span>     <span class="c1">//2️⃣ 
+</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">ctx</span> <span class="o">=</span> <span class="nx">host</span><span class="p">.</span><span class="nx">switchToHttp</span><span class="p">();</span>
+    <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">ctx</span><span class="p">.</span><span class="nx">getResponse</span><span class="p">&lt;</span><span class="nt">Response</span><span class="p">&gt;();</span>
+    <span class="kr">const</span> <span class="nx">request</span> <span class="o">=</span> <span class="nx">ctx</span><span class="p">.</span><span class="nx">getRequest</span><span class="p">&lt;</span><span class="nt">Request</span><span class="p">&gt;();</span>
+    <span class="kr">const</span> <span class="nx">status</span> <span class="o">=</span> <span class="nx">exception</span><span class="p">.</span><span class="nx">getStatus</span><span class="p">();</span>
+
+    <span class="nx">response</span>
+      <span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="nx">status</span><span class="p">)</span>
+      <span class="p">.</span><span class="nx">json</span><span class="p">({</span>
+        <span class="nx">statusCode</span>: <span class="kt">status</span><span class="p">,</span>
+        <span class="nx">timestamp</span>: <span class="kt">new</span> <span class="nb">Date</span><span class="p">().</span><span class="nx">toISOString</span><span class="p">(),</span>
+        <span class="nx">path</span>: <span class="kt">request.url</span><span class="p">,</span>
+      <span class="p">});</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p><strong>HINT</strong></p>
+<p>모든 예외 필터는 일반적인 <code>ExceptionFilter&lt;T&gt;</code> 인터페이스를 구현해야 합니다. 이것은 <code>catch(exception: T, host: ArgumentsHost)</code> 메서드를 해당 시그니처와 함께 제공해야 한다는 것을 요구합니다. <code>T</code>는 예외의 유형을 나타냅니다.</p>
+</blockquote>
+<blockquote>
+<p><strong>WARNING</strong></p>
+<p>If you are using <code>@nestjs/platform-fastify</code> you can use <code>response.send()</code> instead of <code>response.json()</code>. Don&rsquo;t forget to import the correct types from <code>fastify</code>.</p>
+</blockquote>
+<p>1️⃣<code>@Catch(HttpException)</code> 데코레이터는 예외 필터에 필요한 메타데이터를 바인딩하며, 이를 통해 Nest에게 이 특정 필터가 HttpException 유형의 예외를 찾고 있으며 다른 유형의 예외는 찾지 않는다고 알려줍니다. <code>@Catch()</code> 데코레이터는 단일 매개변수 또는 쉼표로 구분된 목록을 허용할 수 있습니다. 이를 통해 한 번에 여러 유형의 예외에 대한 필터를 설정할 수 있습니다.</p>
+<p>​</p>
+<h3 id="arguments-hosthttpsdocsnestjscomexception-filtersarguments-host">Arguments host<a href="https://docs.nestjs.com/exception-filters#arguments-host" target="_blank" rel="noopener noreffer">#</a></h3>
+<p>2️⃣ <code>catch()</code> 메서드의 매개변수를 살펴보겠습니다. <code>exception</code> 매개변수는 현재 처리 중인 예외 객체입니다. <code>host</code> 매개변수는 <code>ArgumentsHost</code> 객체입니다. <code>ArgumentsHost</code>는 <a href="https://docs.nestjs.com/fundamentals/execution-context" target="_blank" rel="noopener noreffer"><u>*실행 컨텍스트 장</u></a>에서 자세히 살펴볼 강력한 유틸리티 객체입니다. 이 코드 샘플에서는 <code>ArgumentsHost</code>에 대한 참조를 사용하여 원본 요청 핸들러에 전달되는 <code>Request</code> 및 <code>Response</code> 객체에 대한 참조를 얻습니다(예외가 발생한 컨트롤러에서). 이 코드 샘플에서는 <code>ArgumentsHost</code>의 몇 가지 도우미 메서드를 사용하여 원하는 <code>Request</code> 및 <code>Response</code> 객체를 가져왔습니다. <code>ArgumentsHost</code>에 대해 더 알아보려면 <a href="https://docs.nestjs.com/fundamentals/execution-context" target="_blank" rel="noopener noreffer">여기</a>를 참조하세요.</p>
+<p><span style="color: gray; font-size: 0.8em">*이 추상화 수준의 이유는 &lsquo;ArgumentsHost&rsquo;가 모든 컨텍스트에서 기능하기 때문입니다(예를 들어 현재 작업 중인 HTTP 서버 컨텍스트 뿐만 아니라 Microservices 및 WebSockets도 포함됨). 실행 컨텍스트 장에서는 <code>ArgumentsHost</code> 및 해당 도우미 함수의 강력함을 활용하여 <strong>모든</strong> 실행 컨텍스트에 대한 <a href="https://docs.nestjs.com/fundamentals/execution-context#host-methods" target="_blank" rel="noopener noreffer">기본 인수에 액세스</a>하는 방법을 살펴볼 것입니다. 이를 통해 모든 컨텍스트에서 작동하는 일반적인 예외 필터를 작성할 수 있게 됩니다.</span></p>
+<p>​</p>
+<h3 id="binding-filtershttpsdocsnestjscomexception-filtersbinding-filters">Binding filters<a href="https://docs.nestjs.com/exception-filters#binding-filters" target="_blank" rel="noopener noreffer">#</a></h3>
+<p>새로운 <code>HttpExceptionFilter</code>를 <code>CatsController</code>의 <code>create()</code> 메서드에 연결해 보겠습니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">//cats.controller.ts
+</span><span class="c1"></span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">Controller</span><span class="p">,</span> <span class="nx">Post</span><span class="p">,</span> <span class="nx">UseFilters</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/common&#39;</span><span class="p">;</span>
+
+<span class="kd">@Post</span><span class="p">()</span>
+<span class="kd">@UseFilters</span><span class="p">(</span><span class="k">new</span> <span class="nx">HttpExceptionFilter</span><span class="p">())</span>
+<span class="kr">async</span> <span class="nx">create</span><span class="p">(</span><span class="kd">@Body</span><span class="p">()</span> <span class="nx">createCatDto</span>: <span class="kt">CreateCatDto</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">throw</span> <span class="k">new</span> <span class="nx">ForbiddenException</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p><strong>HINT</strong></p>
+<p>The <code>@UseFilters()</code> decorator is imported from the <code>@nestjs/common</code> package.</p>
+</blockquote>
+<p>여기서 <code>@UseFilters()</code> 데코레이터를 사용했습니다. <code>@Catch()</code> 데코레이터와 유사하게 단일 필터 인스턴스 또는 필터 인스턴스의 쉼표로 구분된 목록을 사용할 수 있습니다. 여기서는 <code>HttpExceptionFilter</code>의 인스턴스를 생성했습니다. 또는 클래스를 전달하고 (인스턴스 대신) 프레임워크에 인스턴스화 책임을 남기고 <strong>의존성 주입</strong>을 활성화할 수 있습니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">//cats.controller.ts
+</span><span class="c1"></span>
+<span class="kd">@Post</span><span class="p">()</span>
+<span class="kd">@UseFilters</span><span class="p">(</span><span class="nx">HttpExceptionFilter</span><span class="p">)</span>
+<span class="kr">async</span> <span class="nx">create</span><span class="p">(</span><span class="kd">@Body</span><span class="p">()</span> <span class="nx">createCatDto</span>: <span class="kt">CreateCatDto</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">throw</span> <span class="k">new</span> <span class="nx">ForbiddenException</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p><strong>HINT</strong></p>
+<p>가능하면 인스턴스 대신 클래스를 사용하여 필터를 적용하는 것이 좋습니다. 이렇게 하면 Nest가 동일한 클래스의 인스턴스를 모듈 전체에서 쉽게 재사용할 수 있어 <strong>메모리 사용량이 감소</strong>합니다.</p>
+</blockquote>
+<p>위의 예제에서는 HttpExceptionFilter가 단일 create() 라우트 핸들러에만 적용되어 메서드 범위로 설정되었습니다. 예외 필터는 메서드 범위의 컨트롤러/리졸버/게이트웨이, 컨트롤러 범위, 또는 전역 범위에서 범위를 설정할 수 있습니다. 예를 들어 필터를 컨트롤러 범위로 설정하려면 다음과 같이 할 수 있습니다:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">//cats.controller.ts
+</span><span class="c1"></span>
+<span class="kd">@UseFilters</span><span class="p">(</span><span class="k">new</span> <span class="nx">HttpExceptionFilter</span><span class="p">())</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">CatsController</span> <span class="p">{}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>이 구성은 <code>CatsController</code> 내에서 정의된 모든 라우트 핸들러에 대해 <code>HttpExceptionFilter</code>를 설정합니다.</p>
+<p>글로벌 범위의 필터를 만들려면 다음을 수행합니다:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">//main.ts
+</span><span class="c1"></span>
+<span class="kr">async</span> <span class="kd">function</span> <span class="nx">bootstrap() {</span>
+  <span class="kr">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">NestFactory</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">AppModule</span><span class="p">);</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">useGlobalFilters</span><span class="p">(</span><span class="k">new</span> <span class="nx">HttpExceptionFilter</span><span class="p">());</span>
+  <span class="k">await</span> <span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nx">bootstrap</span><span class="p">();</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p><strong>WARNING</strong></p>
+<p>The <code>useGlobalFilters()</code> method does not set up filters for gateways or hybrid applications.</p>
+</blockquote>
+<p>글로벌 범위의 필터는 모든 컨트롤러 및 모든 라우트 핸들러에 걸쳐 전체 애플리케이션에서 사용됩니다. 의존성 주입 측면에서 모듈의 컨텍스트 외부에서 등록된 글로벌 필터 (위의 예제와 같이 <code>useGlobalFilters()</code>를 사용함)는 모듈의 컨텍스트 외부에서 수행되므로 종속성을 주입할 수 없습니다. 이 문제를 해결하려면 다음 구성을 사용하여 <strong>어떤 모듈에서든 직접</strong> 글로벌 범위의 필터를 등록할 수 있습니다:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">//app.module.ts
+</span><span class="c1"></span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">Module</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/common&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">APP_FILTER</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/core&#39;</span><span class="p">;</span>
+
+<span class="kd">@Module</span><span class="p">({</span>
+  <span class="nx">providers</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nx">provide</span>: <span class="kt">APP_FILTER</span><span class="p">,</span>
+      <span class="nx">useClass</span>: <span class="kt">HttpExceptionFilter</span><span class="p">,</span>
+    <span class="p">},</span>
+  <span class="p">],</span>
+<span class="p">})</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">AppModule</span> <span class="p">{}</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p><strong>HINT</strong></p>
+<p>이 방법을 사용하여 필터에 대한 종속성 주입을 수행할 때 이 구조가 사용되는 모듈에 관계없이 필터는 사실상 전역적입니다. 이 작업은 어디에서 수행해야 할까요? 필터(위 예제의 <code>HttpExceptionFilter</code>)가 정의된 모듈을 사용(Choose)하십시오. 또한 <code>useClass</code>가 사용자 지정 공급자 등록을 처리하는 유일한 방법은 아닙니다. 자세한 내용은 <a href="https://docs.nestjs.com/fundamentals/custom-providers" target="_blank" rel="noopener noreffer">여기</a>를 참조하십시오.</p>
+</blockquote>
+<p>이 기술을 사용하여 필요한 만큼 많은 필터를 추가할 수 있습니다. 각각을 providers 배열에 추가하면 됩니다.</p>
+<p>​</p>
+<h3 id="catch-everythinghttpsdocsnestjscomexception-filterscatch-everything">Catch everything<a href="https://docs.nestjs.com/exception-filters#catch-everything" target="_blank" rel="noopener noreffer">#</a></h3>
+<p>관리하지 않은 모든 예외를 잡기 위해서는 (예외 유형과 관계없이) <code>@Catch()</code>데코레이터의 매개변수 목록을 비워둡니다. 예: <code>@Catch()</code></p>
+<p>아래 예제에서는 <a href="https://docs.nestjs.com/faq/http-adapter" target="_blank" rel="noopener noreffer">HTTP adapter</a>를 사용하여 응답을 전달하며 플랫폼에 구애받지 않는 코드입니다. 또한 플랫폼별 객체 (<code>Request</code> 및 <code>Response</code>)를 직접 사용하지 않습니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="p">{</span>
+  <span class="nx">ExceptionFilter</span><span class="p">,</span>
+  <span class="nx">Catch</span><span class="p">,</span>
+  <span class="nx">ArgumentsHost</span><span class="p">,</span>
+  <span class="nx">HttpException</span><span class="p">,</span>
+  <span class="nx">HttpStatus</span><span class="p">,</span>
+<span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/common&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">HttpAdapterHost</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/core&#39;</span><span class="p">;</span>
+
+<span class="kd">@Catch</span><span class="p">()</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">AllExceptionsFilter</span> <span class="kr">implements</span> <span class="nx">ExceptionFilter</span> <span class="p">{</span>
+  <span class="kr">constructor</span><span class="p">(</span><span class="kr">private</span> <span class="kr">readonly</span> <span class="nx">httpAdapterHost</span>: <span class="kt">HttpAdapterHost</span><span class="p">)</span> <span class="p">{}</span>
+
+  <span class="k">catch</span><span class="p">(</span><span class="nx">exception</span>: <span class="kt">unknown</span><span class="p">,</span> <span class="nx">host</span>: <span class="kt">ArgumentsHost</span><span class="p">)</span><span class="o">:</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="c1">// In certain situations `httpAdapter` might not be available in the
+</span><span class="c1"></span>    <span class="c1">// constructor method, thus we should resolve it here.
+</span><span class="c1"></span>    <span class="kr">const</span> <span class="p">{</span> <span class="nx">httpAdapter</span> <span class="p">}</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">httpAdapterHost</span><span class="p">;</span>
+
+    <span class="kr">const</span> <span class="nx">ctx</span> <span class="o">=</span> <span class="nx">host</span><span class="p">.</span><span class="nx">switchToHttp</span><span class="p">();</span>
+
+    <span class="kr">const</span> <span class="nx">httpStatus</span> <span class="o">=</span>
+      <span class="nx">exception</span> <span class="k">instanceof</span> <span class="nx">HttpException</span>
+        <span class="o">?</span> <span class="nx">exception</span><span class="p">.</span><span class="nx">getStatus</span><span class="p">()</span>
+        <span class="o">:</span> <span class="nx">HttpStatus</span><span class="p">.</span><span class="nx">INTERNAL_SERVER_ERROR</span><span class="p">;</span>
+
+    <span class="kr">const</span> <span class="nx">responseBody</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="nx">statusCode</span>: <span class="kt">httpStatus</span><span class="p">,</span>
+      <span class="nx">timestamp</span>: <span class="kt">new</span> <span class="nb">Date</span><span class="p">().</span><span class="nx">toISOString</span><span class="p">(),</span>
+      <span class="nx">path</span>: <span class="kt">httpAdapter.getRequestUrl</span><span class="p">(</span><span class="nx">ctx</span><span class="p">.</span><span class="nx">getRequest</span><span class="p">()),</span>
+    <span class="p">};</span>
+
+    <span class="nx">httpAdapter</span><span class="p">.</span><span class="nx">reply</span><span class="p">(</span><span class="nx">ctx</span><span class="p">.</span><span class="nx">getResponse</span><span class="p">(),</span> <span class="nx">responseBody</span><span class="p">,</span> <span class="nx">httpStatus</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p><strong>WARNING</strong></p>
+<p>When combining an exception filter that catches everything with a filter that is bound to a specific type, the &ldquo;Catch anything&rdquo; filter <strong>should be declared</strong> first to allow the specific filter to correctly handle the bound type.</p>
+</blockquote>
+<p>​</p>
+<h3 id="inheritance상속httpsdocsnestjscomexception-filtersinheritance">Inheritance(상속)<a href="https://docs.nestjs.com/exception-filters#inheritance" target="_blank" rel="noopener noreffer">#</a></h3>
+<p>일반적으로 애플리케이션 요구 사항을 충족하는 데 사용되는 완전히 사용자 정의된 예외 필터를 만들 것입니다. 그러나 특정 요소를 기반으로 내용을 덮어쓰기 위해 내장된 기본 글로벌 예외 필터를 확장하기를 원하는 경우가 있을 수 있습니다.</p>
+<p>예외 처리를 기본 필터에 위임하려면 <code>BaseExceptionFilter</code>를 확장하고 상속된 <code>catch()</code>메서드를 호출해야 합니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">//all-exceptions.filter.ts
+</span><span class="c1"></span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">Catch</span><span class="p">,</span> <span class="nx">ArgumentsHost</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/common&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">BaseExceptionFilter</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/core&#39;</span><span class="p">;</span>
+
+<span class="kd">@Catch</span><span class="p">()</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">AllExceptionsFilter</span> <span class="kr">extends</span> <span class="nx">BaseExceptionFilter</span> <span class="p">{</span>
+  <span class="k">catch</span><span class="p">(</span><span class="nx">exception</span>: <span class="kt">unknown</span><span class="p">,</span> <span class="nx">host</span>: <span class="kt">ArgumentsHost</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">super</span><span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">exception</span><span class="p">,</span> <span class="nx">host</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p><strong>WARNING</strong></p>
+<p><code>BaseExceptionFilter</code>를 확장하는 메서드 및 컨트롤러 범위 필터는 <code>new</code>로 인스턴스화해서는 안됩니다. 대신 프레임워크가 자동으로 인스턴스화하도록 해야 합니다.</p>
+</blockquote>
+<p>위의 구현은 접근 방식을 보여주는 뼈대일 뿐입니다. 확장된 예외 필터의 실제 구현에는 특정한 <strong>비즈니스</strong> 로직이 포함됩니다(예: 여러 조건을 처리).</p>
+<p>전역 필터는 기본 필터를 확장<strong>할 수 있습</strong>니다. 이는 두 가지 방법 중 하나로 수행될 수 있습니다.</p>
+<p>첫 번째 방법은 사용자 정의 전역 필터를 인스턴스화할 때 <code>HttpAdapter</code> 참조를 주입하는 것입니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">async</span> <span class="kd">function</span> <span class="nx">bootstrap() {</span>
+  <span class="kr">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">NestFactory</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">AppModule</span><span class="p">);</span>
+
+  <span class="kr">const</span> <span class="p">{</span> <span class="nx">httpAdapter</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">app</span><span class="p">.</span><span class="kr">get</span><span class="p">(</span><span class="nx">HttpAdapterHost</span><span class="p">);</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">useGlobalFilters</span><span class="p">(</span><span class="k">new</span> <span class="nx">AllExceptionsFilter</span><span class="p">(</span><span class="nx">httpAdapter</span><span class="p">));</span>
+
+  <span class="k">await</span> <span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nx">bootstrap</span><span class="p">();</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>두 번째 방법은 APP_FILTER 토큰을 사용하는 것입니다. <a href="https://docs.nestjs.com/exception-filters#binding-filters" target="_blank" rel="noopener noreffer">as shown here</a>.</p>
+<p>​</p>
+<p>​</p>
+<h2 id="pipes">Pipes</h2>
+<blockquote>
+<p><strong>클라이언트로부터 받은 데이터를 애플리케이션에서 사용할 수 있는 형식으로 변환하거나, 유효성 검사, 가공 등의 작업을 수행하는데 사용되는 중간 레이어</strong></p>
+</blockquote>
+<p>파이프는 <code>@Injectable()</code> 데코레이터로 주석이 달린 클래스로, <code>PipeTransform</code> 인터페이스를 구현합니다.</p>
+<p>&ldquo;Pipes&quot;는 주로 두 가지 사용 사례가 있습니다:</p>
+<ol>
+<li><strong>변환 (Transformation):</strong> 입력 데이터를 원하는 형식으로 변환하는 역할을 합니다. 예를 들어, 문자열에서 정수로 변환하거나, 날짜 형식을 변경하는 등의 작업이 여기에 해당됩니다.</li>
+<li><strong>유효성 검사 (Validation):</strong> 입력 데이터를 평가하고 유효한 경우에는 변경 없이 그대로 전달하며, 그렇지 않으면 예외를 발생시킵니다. 입력 데이터의 유효성을 확인하는 역할을 수행합니다.</li>
+</ol>
+<p>두 경우 모두 파이프는 <a href="https://docs.nestjs.com/controllers#route-parameters" target="_blank" rel="noopener noreffer">컨트롤러 라우트 핸들러</a>에서 처리되는 <code>인수</code>에 작용합니다. Nest는 메서드가 호출되기 직전에 파이프를 삽입하고, 파이프는 해당 메서드에 전달되는 인수에서 작동합니다. 변환 또는 유효성 검사 작업은 그때 수행되며, 이후 라우트 핸들러는 (가능한 경우) 변환된 인수로 호출됩니다.</p>
+<p>Nest에는 즉시 사용할 수 있는 여러 내장 파이프가 제공됩니다. 또한 사용자 정의 파이프를 만들 수도 있습니다. 이 장에서는 내장 파이프를 소개하고 이를 라우트 핸들러에 바인딩하는 방법을 보여줄 것입니다. 그런 다음 몇 가지 처음부터 파이프를 만드는 방법을 살펴보겠습니다.</p>
+<blockquote>
+<p><strong>HINT</strong></p>
+<p>파이프는 예외 영역 내에서 실행됩니다. 즉, 파이프에서 예외가 발생하면 예외 레이어 (전역 예외 필터 및 현재 컨텍스트에 적용된 모든 <a href="https://docs.nestjs.com/exception-filters" target="_blank" rel="noopener noreffer">예외 필터</a>)에서 처리됩니다. 위의 내용을 고려하면 파이프에서 예외가 발생하면 후속으로 컨트롤러 메서드가 실행되지 않음을 명확히 알 수 있습니다. 이는 외부 소스에서 애플리케이션으로 들어오는 데이터를 시스템 경계에서 유효성 검사하는 데 사용되는 최선의 실천 기법을 제공합니다.</p>
+</blockquote>
+<p>​</p>
+<h3 id="built-in-pipeshttpsdocsnestjscompipesbuilt-in-pipes">Built-in pipes<a href="https://docs.nestjs.com/pipes#built-in-pipes" target="_blank" rel="noopener noreffer">#</a></h3>
+<p>Nest는 기본적으로 아래 9개의 파이프를 제공합니다:</p>
+<ol>
+<li><strong>ValidationPipe:</strong> 기본적인 형식 유효성 검사를 제공합니다. 유효성 검사 실패 시 예외를 throw합니다.</li>
+<li><strong>ParseIntPipe:</strong> 전달된 값이 유효한 정수인지 확인하고, 정수로 변환합니다. 실패 시 예외를 throw합니다.</li>
+<li><strong>ParseFloatPipe:</strong> 전달된 값이 유효한 부동 소수점 숫자인지 확인하고, 부동 소수점으로 변환합니다. 실패 시 예외를 throw합니다.</li>
+<li><strong>ParseBoolPipe:</strong> 전달된 값이 유효한 부울 값인지 확인하고, 부울 값으로 변환합니다. 실패 시 예외를 throw합니다.</li>
+<li><strong>ParseUUIDPipe:</strong> 전달된 값이 UUID 형식인지 확인하고, UUID로 변환합니다. 실패 시 예외를 throw합니다.</li>
+<li><strong>DefaultValuePipe:</strong> 기본값을 지정할 수 있습니다. 값이 주어지지 않은 경우, 지정된 기본값을 사용합니다.</li>
+<li><strong>TransformPipe:</strong> 사용자 정의 변환 함수를 적용하여 값을 변환합니다.</li>
+<li><strong>ValidationPipe:</strong> 전달된 값이 유효한 DTO(Data Transfer Object)인지 확인하고, 실패 시 예외를 throw합니다.</li>
+<li><strong>ValidationPipe:</strong> DTO의 생성자에서 자동으로 타입 유효성을 검사합니다. 실패 시 예외를 throw합니다.</li>
+</ol>
+<p>They&rsquo;re exported from the <code>@nestjs/common</code> package.</p>
+<p>Let&rsquo;s take a quick look at using <code>ParseIntPipe</code>. This is an example of the <strong>transformation</strong> use case, where the pipe ensures that a method handler parameter is converted to a JavaScript integer (or throws an exception if the conversion fails). Later in this chapter, we&rsquo;ll show a simple custom implementation for a <code>ParseIntPipe</code>. The example techniques below also apply to the other built-in transformation pipes (<code>ParseBoolPipe</code>, <code>ParseFloatPipe</code>, <code>ParseEnumPipe</code>, <code>ParseArrayPipe</code> and <code>ParseUUIDPipe</code>, which we&rsquo;ll refer to as the <code>Parse*</code> pipes in this chapter).</p>
+<p><code>ParseIntPipe</code>를 사용하는 간단한 예제를 살펴보겠습니다. 이는 <strong>변환</strong>(use case)의 예시로, 파이프는 메서드 핸들러의 매개변수를 JavaScript 정수로 변환하는 것을 보장하거나(변환이 실패하면 예외를 throw), 나중에 이 장에서는 <code>ParseIntPipe</code>에 대한 간단한 사용자 정의 구현을 보여줄 것입니다. 아래의 예제 기법은 이 장에서 다루는 다른 내장 변환 파이프(<code>ParseBoolPipe</code>, <code>ParseFloatPipe</code>, <code>ParseEnumPipe</code>, <code>ParseArrayPipe</code> 및 <code>ParseUUIDPipe</code>, 여기서는 <code>Parse*</code> 파이프로 참조합니다)에도 적용됩니다.</p>
+<p>​</p>
+<h3 id="binding-pipeshttpsdocsnestjscompipesbinding-pipes">Binding pipes<a href="https://docs.nestjs.com/pipes#binding-pipes" target="_blank" rel="noopener noreffer">#</a></h3>
+<p>파이프를 사용하려면 파이프 클래스의 인스턴스를 적절한 컨텍스트에 연결(바인딩)해야 합니다. <code>ParseIntPipe</code> 예제에서는 파이프를 특정 라우트 핸들러 메서드와 연관시키고, 해당 메서드가 호출되기 전에 파이프가 실행되도록 하려고 합니다. 이를 메서드 매개변수 레벨에서 파이프를 바인딩한다고 표현하겠습니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kd">@Get</span><span class="p">(</span><span class="s1">&#39;:id&#39;</span><span class="p">)</span>
+<span class="kr">async</span> <span class="nx">findOne</span><span class="p">(</span><span class="kd">@Param</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="nx">ParseIntPipe</span><span class="p">)</span> <span class="nx">id</span>: <span class="kt">number</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">catsService</span><span class="p">.</span><span class="nx">findOne</span><span class="p">(</span><span class="nx">id</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>이러면 두 조건 중 하나가 참이라는 것을 보장합니다. <code>findOne()</code> 메서드에서 받는 매개변수가 숫자이거나(as expected in our call to <code>this.catsService.findOne()</code>), 라우터 핸들러에서 예외를 전달했거나.</p>
+<p>예를 들어, 다음과 같이 라우트가 호출된다고 가정해보겠습니다:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-http" data-lang="http"><span class="err">GET localhost:3000/abc
+</span></code></pre></td></tr></table>
+</div>
+</div><p>Nest는 아래와 같은 예외를 줄 것입니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;statusCode&#34;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span>
+  <span class="nt">&#34;message&#34;</span><span class="p">:</span> <span class="s2">&#34;Validation failed (numeric string is expected)&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;error&#34;</span><span class="p">:</span> <span class="s2">&#34;Bad Request&#34;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>예외는  <code>findOne()</code>메서드의 본문 실행을 방지할 것입니다.</p>
+<p>위의 예제에서는 클래스(<code>ParseIntPipe</code>)를 인스턴스로 전달하는 것이 아니라 프레임워크에 인스턴스화 책임을 맡겨 의존성 주입을 가능하게 합니다. 파이프와 가드와 마찬가지로 대신 in-place instance를 전달할 수 있습니다. in-place instance를 전달하는 것은 옵션을 전달하여 내장 파이프의 동작을 사용자 정의하고 싶을 때 유용합니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kd">@Get</span><span class="p">(</span><span class="s1">&#39;:id&#39;</span><span class="p">)</span>
+<span class="kr">async</span> <span class="nx">findOne</span><span class="p">(</span>
+  <span class="kd">@Param</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="k">new</span> <span class="nx">ParseIntPipe</span><span class="p">({</span> <span class="nx">errorHttpStatusCode</span>: <span class="kt">HttpStatus.NOT_ACCEPTABLE</span> <span class="p">}))</span>
+  <span class="nx">id</span>: <span class="kt">number</span><span class="p">,</span>
+<span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">catsService</span><span class="p">.</span><span class="nx">findOne</span><span class="p">(</span><span class="nx">id</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>다른 변환 파이프들 (<strong>Parse</strong>* 파이프들)을 바인딩하는 방법도 유사합니다. 이러한 파이프들은 모두 라우트 매개변수, 쿼리 문자열 매개변수 및 요청 본문 값의 유효성을 검사하는 맥락에서 작동합니다.</p>
+<p>예를 들어 쿼리 문자열 매개변수와 함께 사용할 때:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kd">@Get</span><span class="p">()</span>
+<span class="kr">async</span> <span class="nx">findOne</span><span class="p">(</span><span class="kd">@Query</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="nx">ParseIntPipe</span><span class="p">)</span> <span class="nx">id</span>: <span class="kt">number</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">catsService</span><span class="p">.</span><span class="nx">findOne</span><span class="p">(</span><span class="nx">id</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>여기에서는 <code>ParseUUIDPipe</code>를 사용하여 문자열 매개변수를 구문 분석하고 해당 값이 UUID인지 유효성을 검사하는 예제입니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kd">@Get</span><span class="p">(</span><span class="s1">&#39;:uuid&#39;</span><span class="p">)</span>
+<span class="kr">async</span> <span class="nx">findOne</span><span class="p">(</span><span class="kd">@Param</span><span class="p">(</span><span class="s1">&#39;uuid&#39;</span><span class="p">,</span> <span class="k">new</span> <span class="nx">ParseUUIDPipe</span><span class="p">())</span> <span class="nx">uuid</span>: <span class="kt">string</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">catsService</span><span class="p">.</span><span class="nx">findOne</span><span class="p">(</span><span class="nx">uuid</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p><strong>HINT</strong></p>
+<p>When using <code>ParseUUIDPipe()</code> you are parsing UUID in version 3, 4 or 5, if you only require a specific version of UUID you can pass a version in the pipe options.</p>
+</blockquote>
+<p>위에서는 다양한 내장 파이프인 __Parse*__ 패밀리를 바인딩하는 예제를 살펴보았습니다. 유효성 검사 파이프를 바인딩하는 것은 조금 다릅니다. 다음 섹션에서 이에 대해 논의하겠습니다.</p>
+<blockquote>
+<p><strong>HINT</strong></p>
+<p><a href="https://docs.nestjs.com/techniques/validation" target="_blank" rel="noopener noreffer">Validation techniques</a> 섹션에서는 유효성 검사 파이프에 대한 포괄적인 예제를 자세히 살펴볼 수 있습니다.</p>
+</blockquote>
+<p>​</p>
+<h3 id="custom-pipeshttpsdocsnestjscompipescustom-pipes">Custom pipes<a href="https://docs.nestjs.com/pipes#custom-pipes" target="_blank" rel="noopener noreffer">#</a></h3>
+<p>언급한대로 사용자 정의 파이프를 만들 수 있습니다. Nest는 강력한 내장 <code>ParseIntPipe</code>와 <code>ValidationPipe</code>를 제공하지만, 각각을 처음부터 간단한 사용자 정의 버전으로 만들어보면 어떻게 사용자 정의 파이프가 구성되는지 확인할 수 있습니다.</p>
+<p>먼저 간단한 <code>ValidationPipe</code>부터 시작하겠습니다. 처음에는 입력 값을 받아들이고 즉시 동일한 값을 반환하는 식별 함수처럼 동작하도록 만들어 보겠습니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">//validation.pipe.ts
+</span><span class="c1"></span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">PipeTransform</span><span class="p">,</span> <span class="nx">Injectable</span><span class="p">,</span> <span class="nx">ArgumentMetadata</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/common&#39;</span><span class="p">;</span>
+
+<span class="kd">@Injectable</span><span class="p">()</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">ValidationPipe</span> <span class="kr">implements</span> <span class="nx">PipeTransform</span> <span class="p">{</span>
+  <span class="nx">transform</span><span class="p">(</span><span class="nx">value</span>: <span class="kt">any</span><span class="p">,</span> <span class="nx">metadata</span>: <span class="kt">ArgumentMetadata</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">value</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p><strong>HINT</strong></p>
+<p><code>PipeTransform&lt;T, R&gt;</code>은 어떠한 파이프든 반드시 구현해야 하는 제네릭 인터페이스입니다. 이 제네릭 인터페이스는 변환 로직을 정의하기 위한 구조를 제공합니다. 제네릭 타입 <code>T</code>는 입력 <code>value</code>의 타입을 나타내고, <code>R</code>은 <code>transform()</code> 메서드의 반환 타입을 나타냅니다.</p>
+</blockquote>
+<p>각 파이프는 <code>PipeTransform</code> 인터페이스 계약을 충족시키기 위해 <code>transform()</code> 메서드를 구현해야 합니다. 이 메서드는 두 개의 매개변수를 갖습니다:</p>
+<ul>
+<li>
+<p><code>value</code></p>
+</li>
+<li>
+<p><code>metadata</code></p>
+</li>
+</ul>
+<p><code>value</code> 매개변수는 현재 처리 중인 메서드 인자(argument)를 나타내며(라우트 처리 메서드에서 수신되기 전), <code>metadata</code>는 현재 처리 중인 메서드 인자(argument)의 메타데이터를 나타냅니다. 메타데이터 객체에는 다음과 같은 속성들이 있습니다:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">export</span> <span class="kr">interface</span> <span class="nx">ArgumentMetadata</span> <span class="p">{</span>
+  <span class="kr">type</span><span class="o">:</span> <span class="s1">&#39;body&#39;</span> <span class="o">|</span> <span class="s1">&#39;query&#39;</span> <span class="o">|</span> <span class="s1">&#39;param&#39;</span> <span class="o">|</span> <span class="s1">&#39;custom&#39;</span><span class="p">;</span>
+  <span class="nx">metatype?</span>: <span class="kt">Type</span><span class="p">&lt;</span><span class="nt">unknown</span><span class="p">&gt;;</span>
+  <span class="nx">data?</span>: <span class="kt">string</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>이러한 속성들은 현재 처리 중인 인자(argument)를 설명합니다.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>해당 속성은 현재 처리 중인 매개변수가 body <code>@Body()</code>, query <code>@Query()</code>, param <code>@Param()</code> 또는 사용자 정의 매개변수인지 여부를 나타냅니다. (자세한 내용은 <a href="https://docs.nestjs.com/custom-decorators" target="_blank" rel="noopener noreffer">여기</a>에서 확인하세요.)</td>
+</tr>
+<tr>
+<td>metatype</td>
+<td>이 속성은 인자(argument)의 메타타입을 제공합니다. 예를 들어 <code>String</code>일 수 있습니다. <br />주의: 라우트 핸들러 메서드 시그니처에서 타입 선언을 생략하거나 일반 JavaScript를 사용한 경우 값은 <code>undefined</code>입니다.</td>
+</tr>
+<tr>
+<td>data</td>
+<td>데코레이터에 전달된 문자열, 예를 들면 <code>@Body('string')</code>에서의 <code>'string'</code>입니다. 데코레이터 괄호를 비워 둔 경우 <code>undefined</code>입니다.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>WARNING</strong></p>
+<p>TypeScript 인터페이스는 트랜스파일 중에 사라집니다. 따라서 메서드 매개변수의 타입이 클래스 대신 인터페이스로 선언된 경우 <code>metatype</code> 값은 <code>Object</code>가 될 것입니다.</p>
+</blockquote>
+<p>​</p>
+<h3 id="schema-based-validationhttpsdocsnestjscompipesschema-based-validation">Schema based validation<a href="https://docs.nestjs.com/pipes#schema-based-validation" target="_blank" rel="noopener noreffer">#</a></h3>
+<p>우리의 유효성 검사 파이프를 좀 더 유용하게 만들어 봅시다. 아마도 <code>CatsController</code>의 <code>create()</code> 메서드를 자세히 살펴보면, 서비스 메서드를 실행하기 전에 게시 본문 객체가 유효한지 확인하고 싶을 것입니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kd">@Post</span><span class="p">()</span>
+<span class="kr">async</span> <span class="nx">create</span><span class="p">(</span><span class="kd">@Body</span><span class="p">()</span> <span class="nx">createCatDto</span>: <span class="kt">CreateCatDto</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">catsService</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">createCatDto</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Let&rsquo;s focus in on the <code>createCatDto</code> body parameter. Its type is <code>CreateCatDto</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">//create-cat.dto.ts
+</span><span class="c1"></span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">CreateCatDto</span> <span class="p">{</span>
+  <span class="nx">name</span>: <span class="kt">string</span><span class="p">;</span>
+  <span class="nx">age</span>: <span class="kt">number</span><span class="p">;</span>
+  <span class="nx">breed</span>: <span class="kt">string</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>우리는 create 메서드로 들어오는 모든 요청이 유효한 body를 포함하고있다고 보장하고자 합니다. 따라서 <code>createCatDto</code> 객체의 세 멤버를 검증해야 합니다. 이 작업을 라우트 핸들러 메서드 내부에서 수행할 수 있지만, 이렇게 하는 것은 단일 책임 원칙(<strong>single responsibility principle</strong> (SRP))을 깨뜨리게 됩니다.</p>
+<p>또 다른 접근 방법은 <strong>validator class</strong>를 만들고 해당 작업을 거기에 위임하는 것입니다. 이 방법은 각 메서드의 시작 부분에서이 유효성 검사기를 호출하는 것을 기억해야 한다는 단점이 있습니다.</p>
+<p>유효성 검사 미들웨어를 생성하는 것은 어떨까요? 이는 작동할 수 있지만 유감스럽게도 애플리케이션 전체에서 모든 컨텍스트에서 사용할 수 있는 <strong>generic middleware</strong>를 생성하는 것은 불가능합니다. 이는 미들웨어가 <strong>execution context</strong>, 호출될 핸들러 및 해당 매개변수 등에 대해 알지 못하기 때문입니다.</p>
+<p>물론 이런 상황이 파이프가 설계된 정확한 사용 사례입니다. 그러니 이제 우리의 유효성 검사 파이프를 더 정교하게 만들어 봅시다.</p>
+<p>​</p>
+<h3 id="object-schema-validationhttpsdocsnestjscompipesobject-schema-validation">Object schema validation<a href="https://docs.nestjs.com/pipes#object-schema-validation" target="_blank" rel="noopener noreffer">#</a></h3>
+<p>객체 유효성 검사를 깨끗하고 DRY(Don&rsquo;t Repeat Yourself)한 방식으로 수행하는 여러 가지 접근 방법이 있습니다. 일반적인 접근 방법 중 하나는 스키마 기반 유효성 검사를 사용하는 것입니다. 이 접근 방법을 시도해 보겠습니다.</p>
+<p>Zod 라이브러리를 사용하면 읽기 쉬운 API로 간단하게 스키마를 생성할 수 있습니다. Zod 기반 스키마를 활용하는 유효성 검사 파이프를 만들어 보겠습니다.</p>
+<p>먼저 필요한 패키지를 설치하겠습니다:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd">$ npm install --save zod
+</code></pre></td></tr></table>
+</div>
+</div><p>아래의 코드 샘플에서는 스키마를 <code>constructor</code> 인자로 받는 간단한 클래스를 만듭니다. 그런 다음 스키마를 통해 들어오는 인수를 검증하는 <code>schema.parse()</code> 메서드를 적용합니다.</p>
+<p>앞서 언급한 대로 <strong>validation pipe</strong> 파이프는 값이 변경되지 않거나 예외를 throw하는 두 가지 동작 중 하나를 수행합니다.</p>
+<p>다음 섹션에서는 <code>@UsePipes()</code> 데코레이터를 사용하여 특정 컨트롤러 메서드에 적절한 스키마를 제공하는 방법을 볼 것입니다. 이를 통해 목표로한 대로 유효성 검사 파이프를 다양한 컨텍스트에서 재사용할 수 있게 됩니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="p">{</span> <span class="nx">PipeTransform</span><span class="p">,</span> <span class="nx">ArgumentMetadata</span><span class="p">,</span> <span class="nx">BadRequestException</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/common&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">ZodSchema</span>  <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;zod&#39;</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">ZodValidationPipe</span> <span class="kr">implements</span> <span class="nx">PipeTransform</span> <span class="p">{</span>
+  <span class="kr">constructor</span><span class="p">(</span><span class="kr">private</span> <span class="nx">schema</span>: <span class="kt">ZodSchema</span><span class="p">)</span> <span class="p">{}</span>
+
+  <span class="nx">transform</span><span class="p">(</span><span class="nx">value</span>: <span class="kt">unknown</span><span class="p">,</span> <span class="nx">metadata</span>: <span class="kt">ArgumentMetadata</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">try</span> <span class="p">{</span>
+      <span class="kr">const</span> <span class="nx">parsedValue</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">schema</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
+      <span class="k">return</span> <span class="nx">parsedValue</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">throw</span> <span class="k">new</span> <span class="nx">BadRequestException</span><span class="p">(</span><span class="s1">&#39;Validation failed&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<h3 id="binding-validation-pipeshttpsdocsnestjscompipesbinding-validation-pipes">Binding validation pipes<a href="https://docs.nestjs.com/pipes#binding-validation-pipes" target="_blank" rel="noopener noreffer">#</a></h3>
+<p>이전에는 변환 파이프(<code>ParseIntPipe</code> 및 나머지 <code>Parse*</code> 파이프와 같은)를 바인딩하는 방법을 살펴보았습니다.</p>
+<p>유효성 검사 파이프를 바인딩하는 것도 매우 간단합니다.</p>
+<p>이 경우에는 메서드 호출 수준에서 파이프를 바인딩하고자 합니다. 현재 예제에서 <code>ZodValidationPipe</code>를 사용하려면 다음과 같은 작업을 수행해야 합니다:</p>
+<ul>
+<li>
+<p>ZodValidationPipe의 인스턴스 생성</p>
+</li>
+<li>
+<p>파이프의 클래스 생성자에서 컨텍스트별 Zod 스키마 전달</p>
+</li>
+<li>
+<p>파이프를 메서드에 바인딩</p>
+</li>
+</ul>
+<p>Zod 스키마 예제:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="p">{</span> <span class="nx">z</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;zod&#39;</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">createCatSchema</span> <span class="o">=</span> <span class="nx">z</span>
+  <span class="p">.</span><span class="kt">object</span><span class="p">({</span>
+    <span class="nx">name</span>: <span class="kt">z.string</span><span class="p">(),</span>
+    <span class="nx">age</span>: <span class="kt">z.number</span><span class="p">(),</span>
+    <span class="nx">breed</span>: <span class="kt">z.string</span><span class="p">(),</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="nx">required</span><span class="p">();</span>
+
+<span class="kr">export</span> <span class="kr">type</span> <span class="nx">CreateCatDto</span> <span class="o">=</span> <span class="nx">z</span><span class="p">.</span><span class="k">infer</span><span class="p">&lt;</span><span class="nt">typeof</span> <span class="na">createCatSchema</span><span class="p">&gt;;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>We do that using the <code>@UsePipes()</code> decorator as shown below:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">//cats.controller.ts
+</span><span class="c1"></span>
+<span class="kd">@Post</span><span class="p">()</span>
+<span class="kd">@UsePipes</span><span class="p">(</span><span class="k">new</span> <span class="nx">ZodValidationPipe</span><span class="p">(</span><span class="nx">createCatSchema</span><span class="p">))</span>
+<span class="kr">async</span> <span class="nx">create</span><span class="p">(</span><span class="kd">@Body</span><span class="p">()</span> <span class="nx">createCatDto</span>: <span class="kt">CreateCatDto</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">catsService</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">createCatDto</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p><strong>HINT</strong></p>
+<p>The <code>@UsePipes()</code> decorator is imported from the <code>@nestjs/common</code> package.</p>
+</blockquote>
+<blockquote>
+<p><strong>WARNING</strong></p>
+<p><code>zod</code> 라이브러리를 사용하려면 <code>tsconfig.json</code> 파일에서 <code>strictNullChecks</code> 구성이 활성화되어 있어야 합니다.</p>
+</blockquote>
+<p>​</p>
+<h3 id="class-validatorhttpsdocsnestjscompipesclass-validator">Class validator<a href="https://docs.nestjs.com/pipes#class-validator" target="_blank" rel="noopener noreffer">#</a></h3>
+<blockquote>
+<p><strong>WARNING</strong></p>
+<p>The techniques in this section require TypeScript and are not available if your app is written using vanilla JavaScript.</p>
+</blockquote>
+<p>우리의 유효성 검사 기술에 대한 대안적인 구현을 살펴봅시다.</p>
+<p>Nest는 <a href="https://github.com/typestack/class-validator" target="_blank" rel="noopener noreffer">class-validator</a> 라이브러리와 잘 동작합니다. 이 강력한 라이브러리를 사용하면 데코레이터 기반 유효성 검사를 수행할 수 있습니다. 데코레이터 기반 유효성 검사는 특히 Nest의 <strong>Pipe</strong>기능과 결합될 때 매우 강력합니다. 왜냐하면 우리는 처리된 프로퍼티의 <code>메타타입</code>에 접근할 수 있기 때문입니다. 시작하기 전에 필요한 패키지를 설치해야 합니다:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd">$ npm i --save class-validator class-transformer
+</code></pre></td></tr></table>
+</div>
+</div><p>이러한 패키지를 설치한 후에는 <code>CreateCatDto</code> 클래스에 몇 가지 데코레이터를 추가할 수 있습니다. 이 기술의 중요한 장점 중 하나는 <code>CreateCatDto</code> 클래스가 Post 본문 객체의 단일 진실의 소스로 유지된다는 것입니다 (별도의 유효성 검사 클래스를 만들 필요가 없습니다).</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">//create-cat.dto.ts
+</span><span class="c1"></span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">IsString</span><span class="p">,</span> <span class="nx">IsInt</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;class-validator&#39;</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">CreateCatDto</span> <span class="p">{</span>
+  <span class="kd">@IsString</span><span class="p">()</span>
+  <span class="nx">name</span>: <span class="kt">string</span><span class="p">;</span>
+
+  <span class="kd">@IsInt</span><span class="p">()</span>
+  <span class="nx">age</span>: <span class="kt">number</span><span class="p">;</span>
+
+  <span class="kd">@IsString</span><span class="p">()</span>
+  <span class="nx">breed</span>: <span class="kt">string</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p><strong>HINT</strong></p>
+<p>Read more about the class-validator decorators <a href="https://github.com/typestack/class-validator#usage" target="_blank" rel="noopener noreffer">here</a>.</p>
+</blockquote>
+<p>Now we can create a <code>ValidationPipe</code> class that uses these annotations.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">//validation.pipe.ts
+</span><span class="c1"></span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">PipeTransform</span><span class="p">,</span> <span class="nx">Injectable</span><span class="p">,</span> <span class="nx">ArgumentMetadata</span><span class="p">,</span> <span class="nx">BadRequestException</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/common&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">validate</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;class-validator&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">plainToInstance</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;class-transformer&#39;</span><span class="p">;</span>
+
+<span class="kd">@Injectable</span><span class="p">()</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">ValidationPipe</span> <span class="kr">implements</span> <span class="nx">PipeTransform</span><span class="p">&lt;</span><span class="nt">any</span><span class="p">&gt;</span> <span class="p">{</span>
+  <span class="kr">async</span> <span class="nx">transform</span><span class="p">(</span><span class="nx">value</span>: <span class="kt">any</span><span class="p">,</span> <span class="p">{</span> <span class="nx">metatype</span> <span class="p">}</span><span class="o">:</span> <span class="nx">ArgumentMetadata</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">metatype</span> <span class="o">||</span> <span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">toValidate</span><span class="p">(</span><span class="nx">metatype</span><span class="p">))</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nx">value</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kr">const</span> <span class="kt">object</span> <span class="o">=</span> <span class="nx">plainToInstance</span><span class="p">(</span><span class="nx">metatype</span><span class="p">,</span> <span class="nx">value</span><span class="p">);</span>
+    <span class="kr">const</span> <span class="nx">errors</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">validate</span><span class="p">(</span><span class="kt">object</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">errors</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">throw</span> <span class="k">new</span> <span class="nx">BadRequestException</span><span class="p">(</span><span class="s1">&#39;Validation failed&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">value</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="kr">private</span> <span class="nx">toValidate</span><span class="p">(</span><span class="nx">metatype</span>: <span class="kt">Function</span><span class="p">)</span><span class="o">:</span> <span class="kr">boolean</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">types</span>: <span class="kt">Function</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[</span><span class="nb">String</span><span class="p">,</span> <span class="nb">Boolean</span><span class="p">,</span> <span class="nb">Number</span><span class="p">,</span> <span class="nb">Array</span><span class="p">,</span> <span class="nb">Object</span><span class="p">];</span>
+    <span class="k">return</span> <span class="o">!</span><span class="nx">types</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">metatype</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p><strong>HINT</strong></p>
+<p><code>ValidationPipe</code>은 Nest에서 기본적으로 제공되기 때문에 사용자 정의 유효성 검사 파이프를 직접 작성할 필요는 없습니다. 내장된 <code>ValidationPipe</code>에는 이 장에서 만든 샘플보다 더 많은 옵션이 제공되며, 이 샘플은 사용자 정의 파이프의 메커니즘을 설명하기 위해 기본적으로 유지되었습니다. 자세한 내용 및 다양한 예제는 <a href="https://docs.nestjs.com/techniques/validation" target="_blank" rel="noopener noreffer">여기</a>에서 확인할 수 있습니다.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTICE</strong></p>
+<p>We used the <a href="https://github.com/typestack/class-transformer" target="_blank" rel="noopener noreffer">class-transformer</a> library above which is made by the same author as the <strong>class-validator</strong> library, and as a result, they play very well together.</p>
+</blockquote>
+<p>이 코드를 살펴보겠습니다. 먼저, <code>transform()</code> 메서드가 <code>async</code>로 표시되어 있습니다. 이는 Nest가 동기적 및 비동기적 파이프를 모두 지원하기 때문에 가능합니다. 이 메서드를 <code>async</code>로 만든 이유는 class-validator의 일부 검증이 <a href="https://github.com/typestack/class-validator#custom-validation-classes" target="_blank" rel="noopener noreffer">비동기일 수 있기 때문</a>입니다 (Promises를 사용합니다).</p>
+<p>다음으로 destructuring을 사용하여 <code>metatype</code> 필드를 (<code>ArgumentMetadata</code>에서 이 멤버만 추출하여) <code>metatype</code> 매개변수로 할당하고 있습니다. 이는 <code>ArgumentMetadata</code> 전체를 얻는 대신 추가 문을 추가하여 <code>metatype</code> 변수를 할당하는 단축 표기법일 뿐입니다.</p>
+<p>다음으로 <code>toValidate()</code>라는 도우미 함수에 주목하세요. 이 함수는 현재 처리 중인 인수가 기본 JavaScript 타입인 경우 (이들에는 유효성 검사 데코레이터가 연결될 수 없으므로 유효성 검사 단계를 실행할 필요가 없습니다) 검증 단계를 우회하는 역할을 합니다.</p>
+<p>다음으로 <code>plainToInstance()</code> 함수를 사용하여 일반 JavaScript 인수 객체를 타입이 지정된 객체로 변환하여 유효성을 적용합니다. 이를 수행해야 하는 이유는 네트워크 요청에서 역직렬화된 들어오는 post body 객체에는 <strong>어떤 타입 정보도 없기 때문</strong>입니다 (이는 Express와 같은 기본 플랫폼의 동작 방식입니다). Class-validator는 앞서 DTO에 정의한 유효성 데코레이터를 사용해야 하므로 이 변환을 수행하여 들어오는 본문을 적절히 데코레이트된 객체로 처리해야 합니다.</p>
+<p>마지막으로 앞서 언급했듯이 이는 <strong>유효성 검사 파이프</strong>이기 때문에 값이 변경되지 않거나 예외를 throw하는 두 가지 동작 중 하나를 수행합니다.</p>
+<p>마지막 단계는 <code>ValidationPipe</code>를 바인딩하는 것입니다. 파이프는 매개변수 스코프, 메서드 스코프, 컨트롤러 스코프 또는 글로벌 스코프로 바인딩될 수 있습니다. 앞서 Zod 기반의 유효성 검사 파이프에서 메서드 레벨에서 파이프를 바인딩하는 예제를 보았습니다. 아래의 예제에서는 파이프 인스턴스를 라우트 핸들러의 <code>@Body()</code> 데코레이터에 바인딩하여 파이프가 호출되어 post body를 유효성 검사하도록 만듭니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">//cats.controller.ts
+</span><span class="c1"></span>
+<span class="kd">@Post</span><span class="p">()</span>
+<span class="kr">async</span> <span class="nx">create</span><span class="p">(</span>
+  <span class="kd">@Body</span><span class="p">(</span><span class="k">new</span> <span class="nx">ValidationPipe</span><span class="p">())</span> <span class="nx">createCatDto</span>: <span class="kt">CreateCatDto</span><span class="p">,</span>
+<span class="p">)</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">catsService</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">createCatDto</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>매개변수 스코프 파이프는 유효성 검사 로직이 특정 매개변수에만 관련된 경우 유용합니다.</p>
+<p>​</p>
+<h3 id="global-scoped-pipeshttpsdocsnestjscompipesglobal-scoped-pipes">Global scoped pipes<a href="https://docs.nestjs.com/pipes#global-scoped-pipes" target="_blank" rel="noopener noreffer">#</a></h3>
+<p><code>ValidationPipe</code>은 가능한 한 일반적으로 만들어졌기 때문에 <strong>전역 스코프</strong> 파이프로 설정하여 전체 애플리케이션에서 모든 라우트 핸들러에 적용할 수 있습니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">//main.ts
+</span><span class="c1"></span>
+<span class="kr">async</span> <span class="kd">function</span> <span class="nx">bootstrap() {</span>
+  <span class="kr">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">NestFactory</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">AppModule</span><span class="p">);</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">useGlobalPipes</span><span class="p">(</span><span class="k">new</span> <span class="nx">ValidationPipe</span><span class="p">());</span>
+  <span class="k">await</span> <span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nx">bootstrap</span><span class="p">();</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p><strong>NOTICE</strong></p>
+<p><a href="https://docs.nestjs.com/faq/hybrid-application" target="_blank" rel="noopener noreffer">hybrid apps</a>의 경우 <code>useGlobalPipes()</code> 메서드는 게이트웨이 및 마이크로서비스를 위한 파이프를 설정하지 않습니다. &ldquo;표준&rdquo; (비하이브리드) 마이크로서비스 앱의 경우 <code>useGlobalPipes()</code>는 파이프를 전역으로 마운트합니다.</p>
+</blockquote>
+<p>전역 파이프는 전체 애플리케이션, 모든 컨트롤러 및 모든 라우트 핸들러에서 사용됩니다.</p>
+<p>의존성 주입 관점에서 주의할 점은 모듈 외부에서 등록된 전역 파이프(<code>useGlobalPipes()</code>를 사용한 경우와 같이)는 모듈의 컨텍스트 외부에서 바인딩되었기 때문에 의존성을 주입할 수 없습니다. 이 문제를 해결하기 위해 이 구성을 사용하여 <strong>어떤 모듈에서든 직접</strong> 전역 파이프를 설정할 수 있습니다:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">//app.module.ts
+</span><span class="c1"></span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">Module</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/common&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">APP_PIPE</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/core&#39;</span><span class="p">;</span>
+
+<span class="kd">@Module</span><span class="p">({</span>
+  <span class="nx">providers</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nx">provide</span>: <span class="kt">APP_PIPE</span><span class="p">,</span>
+      <span class="nx">useClass</span>: <span class="kt">ValidationPipe</span><span class="p">,</span>
+    <span class="p">},</span>
+  <span class="p">],</span>
+<span class="p">})</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">AppModule</span> <span class="p">{}</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p><strong>HINT</strong></p>
+<p>파이프에 대한 의존성 주입을 수행하기 위해이 접근 방식을 사용할 때, 이 구성이 사용된 모듈에 관계없이 파이프는 사실상 전역입니다. 이를 어디에 설정해야 할까요? 파이프(위의 예제에서는 <code>ValidationPipe</code>)가 정의된 모듈을 선택하세요. 또한 <code>useClass</code>는 사용자 지정 프로바이더 등록을 다루는 유일한 방법이 아닙니다. 여기에서 더 알아보세요.</p>
+</blockquote>
+<p>​</p>
+<h3 id="the-built-in-validationpipehttpsdocsnestjscompipesthe-built-in-validationpipe">The built-in ValidationPipe<a href="https://docs.nestjs.com/pipes#the-built-in-validationpipe" target="_blank" rel="noopener noreffer">#</a></h3>
+<p>기억하세요. <code>ValidationPipe</code>은 Nest에서 기본적으로 제공되기 때문에 사용자 정의 유효성 검사 파이프를 직접 작성할 필요는 없습니다. 내장된 <code>ValidationPipe</code>은 이 장에서 만든 샘플보다 더 많은 옵션을 제공하며, 이 샘플은 사용자 정의 파이프의 메커니즘을 설명하기 위해 기본으로 유지되었습니다. 자세한 내용과 다양한 예제는 <a href="https://docs.nestjs.com/techniques/validation" target="_blank" rel="noopener noreffer">여기</a>에서 확인할 수 있습니다.</p>
+<p>​</p>
+<h3 id="transformation-use-casehttpsdocsnestjscompipestransformation-use-case">Transformation use case<a href="https://docs.nestjs.com/pipes#transformation-use-case" target="_blank" rel="noopener noreffer">#</a></h3>
+<p>유효성 검사는 사용자 정의 파이프의 유일한 사용 사례가 아닙니다. 이 장의 시작에서 파이프가 입력 데이터를 원하는 형식으로 <strong>변환</strong>할 수도 있다고 언급했습니다. 이는 <code>transform</code> 함수에서 반환된 값이 인수의 이전 값 전체를 완전히 대체할 수 있기 때문에 가능합니다.</p>
+<p>이것이 유용한 경우는 언제일까요? 때로는 클라이언트에서 전달된 데이터가 라우트 핸들러 메서드에서 적절하게 처리되기 전에 어떠한 변경을 거쳐야 하는 경우가 있습니다. 예를 들어 문자열을 정수로 변환해야 할 수 있습니다. 또한 일부 필수 데이터 필드가 누락된 경우 기본값을 적용하고 싶을 수 있습니다. <strong>변환 파이프</strong>는 이러한 기능을 수행할 수 있으며 클라이언트 요청과 요청 핸들러 사이에 처리 함수를 끼워넣어 작동합니다.</p>
+<p>다음은 문자열을 정수 값으로 파싱하는 역할을 담당하는 간단한 <code>ParseIntPipe</code>의 예제입니다. (앞서 언급한 대로 Nest에는 더 정교한 내장 <code>ParseIntPipe</code>가 있습니다. 이것은 사용자 정의 변환 파이프의 간단한 예로 포함되어 있습니다).</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">//parse-int.pipe.ts
+</span><span class="c1"></span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">PipeTransform</span><span class="p">,</span> <span class="nx">Injectable</span><span class="p">,</span> <span class="nx">ArgumentMetadata</span><span class="p">,</span> <span class="nx">BadRequestException</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/common&#39;</span><span class="p">;</span>
+
+<span class="kd">@Injectable</span><span class="p">()</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">ParseIntPipe</span> <span class="kr">implements</span> <span class="nx">PipeTransform</span><span class="p">&lt;</span><span class="nt">string</span><span class="err">,</span> <span class="na">number</span><span class="p">&gt;</span> <span class="p">{</span>
+  <span class="nx">transform</span><span class="p">(</span><span class="nx">value</span>: <span class="kt">string</span><span class="p">,</span> <span class="nx">metadata</span>: <span class="kt">ArgumentMetadata</span><span class="p">)</span><span class="o">:</span> <span class="kt">number</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">val</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">value</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nb">isNaN</span><span class="p">(</span><span class="nx">val</span><span class="p">))</span> <span class="p">{</span>
+      <span class="k">throw</span> <span class="k">new</span> <span class="nx">BadRequestException</span><span class="p">(</span><span class="s1">&#39;Validation failed&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">val</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>We can then bind this pipe to the selected param as shown below:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kd">@Get</span><span class="p">(</span><span class="s1">&#39;:id&#39;</span><span class="p">)</span>
+<span class="kr">async</span> <span class="nx">findOne</span><span class="p">(</span><span class="kd">@Param</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="k">new</span> <span class="nx">ParseIntPipe</span><span class="p">())</span> <span class="nx">id</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">catsService</span><span class="p">.</span><span class="nx">findOne</span><span class="p">(</span><span class="nx">id</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>또 다른 유용한 변환 사례는 요청에서 제공된 ID를 사용하여 데이터베이스에서 <strong>기존 사용자</strong> 엔터티를 선택하는 것일 수 있습니다:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kd">@Get</span><span class="p">(</span><span class="s1">&#39;:id&#39;</span><span class="p">)</span>
+<span class="nx">findOne</span><span class="p">(</span><span class="kd">@Param</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="nx">UserByIdPipe</span><span class="p">)</span> <span class="nx">userEntity</span>: <span class="kt">UserEntity</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">userEntity</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>이 파이프의 구현은 독자에게 맡겨둡니다. 그러나 다른 모든 변환 파이프와 마찬가지로 이는 입력 값(<code>id</code>)을 받아 출력 값(<code>UserEntity</code> 객체)을 반환합니다. 이렇게 하면 공통 파이프로 핸들러에서의 반복 코드를 추상화하여 코드를 더 선언적이고 <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" target="_blank" rel="noopener noreffer">DRY</a>하게 만들 수 있습니다.</p>
+<p>​</p>
+<h3 id="providing-defaultshttpsdocsnestjscompipesproviding-defaults">Providing defaults<a href="https://docs.nestjs.com/pipes#providing-defaults" target="_blank" rel="noopener noreffer">#</a></h3>
+<p><code>Parse*</code> 파이프들은 매개변수의 값을 정의되어 있다고 기대합니다. <code>null</code> 또는 <code>undefined</code> 값을 받으면 예외를 throw합니다. 쿼리 문자열 매개변수 값이 누락된 경우에 대비해 엔드포인트가 이를 처리하도록 하려면 <code>Parse*</code> 파이프가 이러한 값을 처리하기 전에 주입될 기본값을 제공해야 합니다. 이를 위해 <code>DefaultValuePipe</code>가 사용됩니다. 간단히 아래와 같이 관련된 <code>Parse*</code> 파이프 앞에 <code>@Query()</code> 데코레이터에서 <code>DefaultValuePipe</code>를 인스턴스화하면 됩니다:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kd">@Get</span><span class="p">()</span>
+<span class="kr">async</span> <span class="nx">findAll</span><span class="p">(</span>
+  <span class="kd">@Query</span><span class="p">(</span><span class="s1">&#39;activeOnly&#39;</span><span class="p">,</span> <span class="k">new</span> <span class="nx">DefaultValuePipe</span><span class="p">(</span><span class="kc">false</span><span class="p">),</span> <span class="nx">ParseBoolPipe</span><span class="p">)</span> <span class="nx">activeOnly</span>: <span class="kt">boolean</span><span class="p">,</span>
+  <span class="kd">@Query</span><span class="p">(</span><span class="s1">&#39;page&#39;</span><span class="p">,</span> <span class="k">new</span> <span class="nx">DefaultValuePipe</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="nx">ParseIntPipe</span><span class="p">)</span> <span class="nx">page</span>: <span class="kt">number</span><span class="p">,</span>
+<span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">catsService</span><span class="p">.</span><span class="nx">findAll</span><span class="p">({</span> <span class="nx">activeOnly</span><span class="p">,</span> <span class="nx">page</span> <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2024-01-14</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/nest-official_02_modules-middleware-exception_filters-pipes/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/nest/">Nest</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/staticdynamictype/" class="prev" rel="prev" title="what is 정적(static) &amp; 동적(dynamic) Type"><i class="fas fa-angle-left fa-fw"></i>what is 정적(static) &amp; 동적(dynamic) Type</a>
+            <a href="/nest-official_03_guards-interceptors-custom_decorators/" class="next" rel="next" title="Nest Official_03_(Guards, Interceptors, Custom_decorators)">Nest Official_03_(Guards, Interceptors, Custom_decorators)<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://colinder-github-io.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":-1},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
