@@ -3,9 +3,32 @@
         <title></title>
         <link>https://colinder.github.io/</link>
         <description>Hello New World</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 14 Jan 2024 09:14:13 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 31 Jan 2024 09:48:40 &#43;0900</lastBuildDate>
             <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>what is REST api?</title>
+    <link>https://colinder.github.io/restapi/</link>
+    <pubDate>Wed, 31 Jan 2024 09:48:40 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/restapi/</guid>
+    <description><![CDATA[​
+REST ful API RESTful API는 Representational State Transfer(표현 상태 전이)를 기반으로 하는 웹 서비스의 설계 원칙을 따르는 API입니다. REST는 분산 시스템에서 리소스 간 상태 전이를 위한 아키텍처 스타일로, 간결하고 확장 가능한 디자인을 제공합니다. RESTful API는 HTTP를 통해 자원을 나타내고 상호 작용하는 방식을 규정하며, REST의 기본 원칙을 따라야 합니다.
+​
+RESTful API의 주요 특징과 원칙은 다음과 같습니다:
+  자원 (Resource): 모든 것을 리소스로 표현합니다. 각 리소스는 고유한 식별자(URI)를 가지며, 이를 통해 리소스에 접근합니다.]]></description>
+</item><item>
+    <title>why use a decorator? And what&#39;s the benefit?</title>
+    <link>https://colinder.github.io/decorator/</link>
+    <pubDate>Wed, 31 Jan 2024 09:48:31 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://colinder.github.io/decorator/</guid>
+    <description><![CDATA[​
+데코레이터를 사용하는 이유와 장점 데코레이터는 코드에 메타데이터를 첨부하고, 이를 기반으로 코드를 변형하거나 행동을 추가하는 강력한 도구입니다.
+​
+여러 이유로 데코레이터를 사용할 수 있지만 주된 이점은 다음과 같습니다:
+  메타프로그래밍(Metaprogramming): 데코레이터를 사용하면 코드에 대한 정보를 주석(annotation)으로 첨부할 수 있습니다. 이 메타데이터를 기반으로 코드를 동적으로 변형하거나 특정 동작을 추가할 수 있습니다.
+  가독성과 모듈성 향상: 데코레이터를 사용하면 코드를 더 읽기 쉽게 만들 수 있습니다. 특히 프레임워크나 라이브러리에서 자주 사용되는 패턴이나 행동을 명시적으로 표현할 수 있습니다.]]></description>
+</item><item>
     <title>Nest Official_03_(Guards, Interceptors, Custom_decorators)</title>
     <link>https://colinder.github.io/nest-official_03_guards-interceptors-custom_decorators/</link>
     <pubDate>Sun, 14 Jan 2024 09:14:13 &#43;0900</pubDate>
@@ -99,39 +122,5 @@ React Native 시작하기 (with Typescript)  myApp은 본인이 원하는 프로
 ​
 절대 경로 세팅   공식문서 여기 참고하시면 좋습니다. v0.72 기준
   저는 아래와 같은 폴더 구조로 세팅했고 이 중 src를 root로 설정하고 싶었습니다.]]></description>
-</item><item>
-    <title>How To Deploy Django on Windows server Using Apache</title>
-    <link>https://colinder.github.io/how-to-deploy-django-on-windows-server-using-apache/</link>
-    <pubDate>Wed, 19 Jul 2023 11:05:45 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/how-to-deploy-django-on-windows-server-using-apache/</guid>
-    <description><![CDATA[​
-How To Deploy Django on Windows server Using Apache  Window에 backend(django)를 배포할 일이 생겨 방법을 정리하였다. (iis를 써보려했으나 실패했다.)
- ​
-✨단계가 꽤 된다. 
-요약    apache와 C++ 개발환경 세팅
-  django &amp; mod-wsgi 설치 및 연동
-  Apache 서버 구동
-   ​
-주의!
- 기본적으로 python은 설치되어있다고 가정  ​
-​
-step 00. 다운 받고 환경을 만들어 보자   apache]]></description>
-</item><item>
-    <title>외부 &amp; 내부 IP</title>
-    <link>https://colinder.github.io/what_is_ip/</link>
-    <pubDate>Tue, 18 Jul 2023 16:51:22 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/what_is_ip/</guid>
-    <description><![CDATA[​
-외부 &amp; 내부 IP 란?  backend 개발을 하다보면, IP에 대하여 알아야하는 순간이 온다. 그래서 알아보자.
- ​
-​
-IP란?  인터넷 프로토콜(Internet Protocol)의 약자로, 인터넷이 통하는 네트워크에서 어떤 정보를 수신하고 송신하는 통신에 대한 규약을 의미
- ​
-​
-IP면 IP지? 내부, 외부는 무엇인가? 우리 집을 생각해보자.
-우리는 통신사의 어떤 기기를 대여받아 인터넷 와이파이를 사용하고 있다. 여기가 포인트다.
-어떤 기기로 우리 집안에 와이파이를 뿌려주고 있고, 우리 가족은 이 기기의 와이파이로 인터넷에 접속한다!]]></description>
 </item></channel>
 </rss>

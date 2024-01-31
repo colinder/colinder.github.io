@@ -102,6 +102,23 @@
         alt="/images/jg_02.jpg"
         title="/images/jg_02.jpg" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/colinder" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="mailto:kjonggwan@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/django_00_whatisdjango/">Django_00_basic</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-04-22">2021-04-22</time></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw"></i>Django</a></span></div><div class="content">​
+Web ?  월드 와이드 웹(World Wide Web)이란 인터넷에 연결된 사용자들이 서로의 정보를 공유할 수 있는 공간을 의미하며, 줄여서 WWW나 W3라고도 부르며, 간단히 웹(Web)이라고 가장 많이 불린다.
+인터넷과 같은 의미로 많이 사용되고 있지만, 정확히 말해 웹은 인터넷상의 인기 있는 하나의 서비스일 뿐.
+Web의 작동방식을 간단히 설명하자면, 요청과 응답.
+사용자는 서버에 어떠한 요구사항을 요청하고 서버는 이에 따라 처리결과를 응답한다.
+예를들어 사용자가 Login 버튼을 누른 행위는 user가 서버에 로그인 하고 싶다고 요청한 것이며, 서버는 로그인 창을 띄움으로서 user가 로그인할 수 있게 응답한 것입니다.</div><div class="post-footer">
+        <a href="/django_00_whatisdjango/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/django/">Django</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/pg_21.04.21/">programmers_21.04.21</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-04-21">2021-04-21</time></span>&nbsp;<span class="post-category">included in <a href="/categories/programmers/"><i class="far fa-folder fa-fw"></i>programmers</a></span></div><div class="content">​
+타겟 넘버 1 2 3 4 5 6 7 8 9 10 11 12  numbers = [1, 1, 1, 1, 1] target = 3 # return = 5 from itertools import product l = [(-number, number)for number in numbers] s = list(map(sum, product(*l))) print(s.count(target)) ## 미쳤다. product()..   ​
+K번째 수 1 2 3 4 5 6 7 8 9 10 11 12 13 14  array = [1, 5, 2, 6, 3, 7, 4]	commands = [[2, 5, 3], [4, 4, 1], [1, 7, 3]] def solution(array, commands): answer = [] for _ in commands: i, j, k = _ q = array[i-1: j] q.</div><div class="post-footer">
+        <a href="/pg_21.04.21/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/programmers/">programmers</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/sw_21.04.04/">SW Expert Academy_D4 11316</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-04-04">2021-04-04</time></span>&nbsp;<span class="post-category">included in <a href="/categories/sw-expert-academy/"><i class="far fa-folder fa-fw"></i>SW Expert Academy</a></span></div><div class="content">​
 D4_11316_주기 찾기 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27  for T in range(int(input())): s, p, q, m = map(int, input().split()) V = s visited = [0]*m i = 1 while True: V = (p*V + q) % m i += 1 if visited[V] != 0: result = i - visited[V] break visited[V] = i print(f&#39;#{T+1}{result}&#39;) # 한 번 나왔던 숫자의 &#39;위치 정보(i)&#39;를  # visited에 저장해 두었다가 # 한 번이라도 방문했던 숫자가 나왔을 때 # 저장해주었던 &#39;위치 정보&#39;의 차리를 계산해 준다.</div><div class="post-footer">
@@ -116,32 +133,6 @@ D4_11316_주기 찾기 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 
  데이터 모델 구조에 의해 성능 저하 데이터가 대용량이 됨으로 인해 성능 저하 인덱스 특성을 고려하지 않고 생성해 성능 저하    즉, 어떤 작업 유형에 따라 성능향상을 도모해야 하는지 목표를 분명하게 해야 정확한 성능향상 모델링을 할 수 있다.</div><div class="post-footer">
         <a href="/04_sqld_%EC%A0%9C2-%EC%9E%A5-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%AA%A8%EB%8D%B8%EA%B3%BC-%EC%84%B1%EB%8A%A5/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/sqld/">SQLD</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/03_sqld_%EC%A0%9C4-%EC%A0%88-%EA%B4%80%EA%B3%84-%EC%A0%9C5-%EC%A0%88-%EC%8B%9D%EB%B3%84%EC%9E%90/">03_SQLD_제4 절 관계 &amp; 제5 절 식별자</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-03-28">2021-03-28</time></span>&nbsp;<span class="post-category">included in <a href="/categories/sqld/"><i class="far fa-folder fa-fw"></i>SQLD</a></span></div><div class="content">​
-# SQL  제1 장 데이터 모델링의 이해  제4 절 관계(Relationship)   관계의 개념
-  관계의 정의
-&ldquo;인스턴스 사이의 논리적인 연관성으로서 존재의 형태 or 행위로서 서로에게 연관성이 부여된 상태&rdquo;
-  관계의 페어링
-&ldquo;관계는 인스턴스가 개별적으로 관계를 가지는 것(페어링)이고, 이것의 집합을 관계로 표현하는 것&rdquo;
-&ldquo;따라서 개별 인스턴스가 각각 다른 종류의 관계를 가지고 있다면, 두 엔터티 사이에 두 개 이상의 관계가 형성될 수 도 있다.&rdquo;
-​
-    관계의 분류</div><div class="post-footer">
-        <a href="/03_sqld_%EC%A0%9C4-%EC%A0%88-%EA%B4%80%EA%B3%84-%EC%A0%9C5-%EC%A0%88-%EC%8B%9D%EB%B3%84%EC%9E%90/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/sqld/">SQLD</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/git_lfslarge-file-storage/">Git_LFS</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-03-25">2021-03-25</time></span>&nbsp;<span class="post-category">included in <a href="/categories/git/"><i class="far fa-folder fa-fw"></i>git</a></span></div><div class="content">​
-Git LFS(Large File Storage) 사용법  Git은 개당 파일에 100MB의 용량 제한이 걸려 있다. (전체 용량 제한은 없다.) 다만, 프로젝트를 하다보면 대용량의 자료나 파일이 생기는 경우가 있다. 이때 용량 제한의 문제를 해소할 수 있는 방법이 LFS이다.
-LFS는 별도로 설치하여 사용하면 되며, 방법을 정리한다.
- *주소: https://git-lfs.github.com
-​
-  git LFS을 다운을 받고 설치 합니다.
-​
-  git LFS를 적용할 폴더로 이동해 다음 명령어를 입력합니다.
-1  $ git lfs install   ​</div><div class="post-footer">
-        <a href="/git_lfslarge-file-storage/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/git/">git</a>,&nbsp;<a href="/tags/lfs/">LFS</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -172,7 +163,7 @@ LFS는 별도로 설치하여 사용하면 되며, 방법을 정리한다.
                     <span class="page-link" aria-hidden="true">&hellip;</span>
                 </li><li class="page-item ">
                     <span class="page-link">
-                        <a href="/page/39/">39</a>
+                        <a href="/page/40/">40</a>
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">
