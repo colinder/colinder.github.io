@@ -2,34 +2,36 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://colinder.github.io/</loc><lastmod>2024-01-31T09:48:40&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/tags/api/</loc><lastmod>2024-01-31T09:48:40&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/categories/api/</loc><lastmod>2024-01-31T09:48:40&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/categories/</loc><lastmod>2024-01-31T09:48:40&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/posts/</loc><lastmod>2024-01-31T09:48:40&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/tags/rest/</loc><lastmod>2024-01-31T09:48:40&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/categories/rest/</loc><lastmod>2024-01-31T09:48:40&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/tags/</loc><lastmod>2024-01-31T09:48:40&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/restapi/</loc><lastmod>2024-01-31T09:48:40&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/tags/decorator/</loc><lastmod>2024-01-31T09:48:31&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/decorator/</loc><lastmod>2024-01-31T09:48:31&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/tags/nest/</loc><lastmod>2024-01-14T09:14:13&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://colinder.github.io/categories/nest/</loc><lastmod>2024-01-14T09:14:13&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://colinder.github.io/nest-official_03_guards-interceptors-custom_decorators/</loc><lastmod>2024-01-14T09:14:13&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://colinder.github.io/nest-official_02_modules-middleware-exception_filters-pipes/</loc><lastmod>2024-01-14T09:14:10&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://colinder.github.io/tags/dynamic-type/</loc><lastmod>2024-01-03T14:26:13&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
-            <loc>https://colinder.github.io/categories/dynamic-type/</loc><lastmod>2024-01-03T14:26:13&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
-            <loc>https://colinder.github.io/tags/static-type/</loc><lastmod>2024-01-03T14:26:13&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
-            <loc>https://colinder.github.io/categories/static-type/</loc><lastmod>2024-01-03T14:26:13&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
-            <loc>https://colinder.github.io/staticdynamictype/</loc><lastmod>2024-01-03T14:26:13&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
-            <loc>https://colinder.github.io/tags/javascript/</loc><lastmod>2024-01-03T14:23:13&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
-            <loc>https://colinder.github.io/categories/javascript/</loc><lastmod>2024-01-03T14:23:13&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
-            <loc>https://colinder.github.io/js_method/</loc><lastmod>2024-01-03T14:23:13&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
-            <loc>https://colinder.github.io/tags/typescript/</loc><lastmod>2024-01-03T14:23:13&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
-            <loc>https://colinder.github.io/categories/typescript/</loc><lastmod>2024-01-03T14:23:13&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
-            <loc>https://colinder.github.io/nest-official_01_introduction-first-steps-controllers-providers/</loc><lastmod>2024-01-03T13:36:17&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
-            <loc>https://colinder.github.io/tags/abstraction/</loc><lastmod>2024-01-03T13:32:55&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
-            <loc>https://colinder.github.io/abstraction/</loc><lastmod>2024-01-03T13:32:55&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
+            <loc>https://colinder.github.io/</loc><lastmod>2024-01-31T09:48:40&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
+            <loc>https://colinder.github.io/tags/api/</loc><lastmod>2024-01-31T09:48:40&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
+            <loc>https://colinder.github.io/categories/api/</loc><lastmod>2024-01-31T09:48:40&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
+            <loc>https://colinder.github.io/categories/</loc><lastmod>2024-01-31T09:48:40&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
+            <loc>https://colinder.github.io/posts/</loc><lastmod>2024-01-31T09:48:40&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
+            <loc>https://colinder.github.io/tags/rest/</loc><lastmod>2024-01-31T09:48:40&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
+            <loc>https://colinder.github.io/categories/rest/</loc><lastmod>2024-01-31T09:48:40&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
+            <loc>https://colinder.github.io/tags/</loc><lastmod>2024-01-31T09:48:40&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
+            <loc>https://colinder.github.io/restapi/</loc><lastmod>2024-01-31T09:48:40&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
+            <loc>https://colinder.github.io/categories/%EB%A9%B4%EC%A0%91%EB%8C%80%EB%B9%84/</loc><lastmod>2024-01-31T09:48:40&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
+            <loc>https://colinder.github.io/tags/decorator/</loc><lastmod>2024-01-31T09:48:31&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
+            <loc>https://colinder.github.io/decorator/</loc><lastmod>2024-01-31T09:48:31&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
+            <loc>https://colinder.github.io/tags/nest/</loc><lastmod>2024-01-14T09:14:13&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/nest/</loc><lastmod>2024-01-14T09:14:13&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/nest-official_03_guards-interceptors-custom_decorators/</loc><lastmod>2024-01-14T09:14:13&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/nest-official_02_modules-middleware-exception_filters-pipes/</loc><lastmod>2024-01-14T09:14:10&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/dynamic-type/</loc><lastmod>2024-01-03T14:26:13&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/dynamic-type/</loc><lastmod>2024-01-03T14:26:13&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/static-type/</loc><lastmod>2024-01-03T14:26:13&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/static-type/</loc><lastmod>2024-01-03T14:26:13&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/staticdynamictype/</loc><lastmod>2024-01-03T14:26:13&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/javascript/</loc><lastmod>2024-01-03T14:23:13&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/javascript/</loc><lastmod>2024-01-03T14:23:13&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/js_method/</loc><lastmod>2024-01-03T14:23:13&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/typescript/</loc><lastmod>2024-01-03T14:23:13&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/categories/typescript/</loc><lastmod>2024-01-03T14:23:13&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/nest-official_01_introduction-first-steps-controllers-providers/</loc><lastmod>2024-01-03T13:36:17&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/abstraction/</loc><lastmod>2024-01-03T13:32:55&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/abstraction/</loc><lastmod>2024-01-03T13:32:55&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://colinder.github.io/tags/%EB%A9%B4%EC%A0%91%EB%8C%80%EB%B9%84/</loc><lastmod>2024-01-03T13:32:55&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/categories/computer-science/</loc><lastmod>2023-10-17T12:24:58&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/tags/computer-science/</loc><lastmod>2023-10-17T12:24:58&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/tags/cs/</loc><lastmod>2023-10-17T12:24:58&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
