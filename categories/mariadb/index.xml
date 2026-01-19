@@ -10,10 +10,7 @@
     <pubDate>Fri, 11 Nov 2022 13:20:53 &#43;0900</pubDate>
     <author>colinder</author>
     <guid>https://colinder.github.io/understand_of_mariadb/</guid>
-    <description><![CDATA[<p>​</p>
-<h1 id="mariadb">MariaDB</h1>
-<blockquote>
-<p>mysql, mariaDB를 계속해서 사용하고 있지만, 계정과 데이터베이스 연결 관계 등 정확한 개념과 이해는 하지 않은 채 시간이 흘러가고 있어, 이번에 정리하고 기록합니다.</p>]]></description>
+    <description><![CDATA[MariaDB에 대하여 이해해 보겠습니다.]]></description>
 </item>
 <item>
     <title>MariaDB 외부접속 허용</title>
@@ -21,11 +18,7 @@
     <pubDate>Wed, 03 Nov 2021 11:19:43 &#43;0900</pubDate>
     <author>colinder</author>
     <guid>https://colinder.github.io/mariadb_share/</guid>
-    <description><![CDATA[<p>​</p>
-<h1 id="mariadb-외부-접속-허용">MariaDB 외부 접속 허용</h1>
-<blockquote>
-<p>해당 MariaDB 공유는 <strong>root PC에서 진행</strong>하는 것이며, 외부에서 접속할 client는 별도로 설정할 건 없습니다.<br>
-또한 무조건 이 방법이 맞다!라기보다는 제가 이렇게 하니 외부 접속이 되었다. 는 경험의 기록입니다.</p>]]></description>
+    <description><![CDATA[MariaDB 외부접속 허용 방법을 정리합니다.]]></description>
 </item>
 <item>
     <title>MariaDB 설치 방법</title>
@@ -33,19 +26,7 @@
     <pubDate>Wed, 15 Sep 2021 10:44:21 &#43;0900</pubDate>
     <author>colinder</author>
     <guid>https://colinder.github.io/mariadb_setting/</guid>
-    <description><![CDATA[<p>​</p>
-<h1 id="mariadb-설치-방법">MariaDB 설치 방법</h1>
-<h2 id="1-설치">1. 설치</h2>
-<p><a href="https://mariadb.org/download/" target="_blank" rel="noopener noreffer ">https://mariadb.org/download/</a> 에서 자동으로 확인된 버전으로 다운로드 받습니다.</p>
-<p>​</p>
-<image src="/images/MariaDB_setting_00.png" width="500px" style="display: block; margin: 5px auto">
-<center>Next 클릭</center>
-<p>​</p>
-<image src="/images/MariaDB_setting_01.png" width="500px" style="display: block; margin: 5px auto">
-<center>별도의 커스텀은 하지 않습니다.</center>
-<p>​</p>
-<image src="/images/MariaDB_setting_02.png" width="500px" style="display: block; margin: 5px auto">
-<p>&lsquo;root 비밀번호 설정&rsquo;과 &lsquo;UTF 변환 및 외부에서 root 접속을 허용 할 것&rsquo;인지 물어보는 데 이곳이 중요합니다.</p>]]></description>
+    <description><![CDATA[MariaDB 설치 방법을 정리합니다.]]></description>
 </item>
 </channel>
 </rss>
