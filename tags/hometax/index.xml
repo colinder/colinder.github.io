@@ -4,7 +4,15 @@
         <link>https://colinder.github.io/tags/hometax/</link>
         <description>Hometax - Tag - colinder&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Mon, 19 Jan 2026 11:10:00 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/hometax/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Mon, 19 Jan 2026 22:22:32 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/hometax/" rel="self" type="application/rss+xml" /><item>
+    <title>전자(세금)계산서 발급 기능 개발기 part.2</title>
+    <link>https://colinder.github.io/etax_process_02/</link>
+    <pubDate>Mon, 19 Jan 2026 22:22:32 &#43;0900</pubDate>
+    <author>colinder</author>
+    <guid>https://colinder.github.io/etax_process_02/</guid>
+    <description><![CDATA[전자(세금)계산서를 개발하기 위한 과정과 소스코드에 대하여 정리합니다.]]></description>
+</item>
+<item>
     <title>전자(세금)계산서 발급 기능 개발기 part.1</title>
     <link>https://colinder.github.io/etax_process_01/</link>
     <pubDate>Mon, 19 Jan 2026 11:10:00 &#43;0900</pubDate>
