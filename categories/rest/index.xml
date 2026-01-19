@@ -1,18 +1,16 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>REST - Category - </title>
+        <title>REST - Category - colinder&#39;s blog</title>
         <link>https://colinder.github.io/categories/rest/</link>
-        <description>REST - Category - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 31 Jan 2024 09:48:40 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/rest/" rel="self" type="application/rss+xml" /><item>
+        <description>REST - Category - colinder&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Wed, 31 Jan 2024 09:48:40 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/rest/" rel="self" type="application/rss+xml" /><item>
     <title>what is REST api?</title>
     <link>https://colinder.github.io/restapi/</link>
     <pubDate>Wed, 31 Jan 2024 09:48:40 &#43;0900</pubDate>
-    <author>Author</author>
+    <author>colinder</author>
     <guid>https://colinder.github.io/restapi/</guid>
-    <description><![CDATA[​
-REST ful API RESTful API는 Representational State Transfer(표현 상태 전이)를 기반으로 하는 웹 서비스의 설계 원칙을 따르는 API입니다. REST는 분산 시스템에서 리소스 간 상태 전이를 위한 아키텍처 스타일로, 간결하고 확장 가능한 디자인을 제공합니다. RESTful API는 HTTP를 통해 자원을 나타내고 상호 작용하는 방식을 규정하며, REST의 기본 원칙을 따라야 합니다.
-​
-RESTful API의 주요 특징과 원칙은 다음과 같습니다:
-  자원 (Resource): 모든 것을 리소스로 표현합니다. 각 리소스는 고유한 식별자(URI)를 가지며, 이를 통해 리소스에 접근합니다.]]></description>
-</item></channel>
+    <description><![CDATA[RESTful API는 Representational State Transfer(표현 상태 전이)를 기반으로 하는 웹 서비스의 설계 원칙을 따르는 API입니다. REST는 분산 시스템에서 리소스 간 상태 전이를 위한 아키텍처]]></description>
+</item>
+</channel>
 </rss>

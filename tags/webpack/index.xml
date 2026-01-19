@@ -1,18 +1,16 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>webpack - Tag - </title>
+        <title>Webpack - Tag - colinder&#39;s blog</title>
         <link>https://colinder.github.io/tags/webpack/</link>
-        <description>webpack - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 01 Mar 2022 09:17:44 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/webpack/" rel="self" type="application/rss+xml" /><item>
+        <description>Webpack - Tag - colinder&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Tue, 01 Mar 2022 09:17:44 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/webpack/" rel="self" type="application/rss+xml" /><item>
     <title>What is webpack?</title>
     <link>https://colinder.github.io/what_is_webpack/</link>
     <pubDate>Tue, 01 Mar 2022 09:17:44 &#43;0900</pubDate>
-    <author>Author</author>
+    <author>colinder</author>
     <guid>https://colinder.github.io/what_is_webpack/</guid>
-    <description><![CDATA[​
-What is webpack?  오늘나 자바스크립트 개발에서 모듈을 사용하여 개발하는 것은 선택이 아닌 필수입니다. 하지만 아직 모든 브라우저(마이크로소프트 - 앳지, 네이버 - 웨일, 구글 - 크롬 등등)가 *ES2015 모듈을 지원하지 않기 때문에 모듈 단위로 패키지를 관리할 수 없습니다. 이런 경우 전역 스코프를 공유하기 때문에 변수명이 충돌하거나 값이 덮어씌워지는 등 문제가 발생할 수 있습니다.
-이런 문제를 해결하기 위해 *번들러를 사용하는데 wabpack은 가장 많이 사용되는 번들러 중 하나입니다.
- *번들러
-애플리케이션에 필요한 모든 종류의 파일들을 모듈 단위로 나누어 최소한의 파일 묶음(번들)으로 만들어 낸다.]]></description>
-</item></channel>
+    <description><![CDATA[webpack이 무엇인지 정리합니다.]]></description>
+</item>
+</channel>
 </rss>

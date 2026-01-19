@@ -1,19 +1,16 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>babel - Category - </title>
+        <title>Babel - Category - colinder&#39;s blog</title>
         <link>https://colinder.github.io/categories/babel/</link>
-        <description>babel - Category - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 15 Mar 2022 13:23:41 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/babel/" rel="self" type="application/rss+xml" /><item>
+        <description>Babel - Category - colinder&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Tue, 15 Mar 2022 13:23:41 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/babel/" rel="self" type="application/rss+xml" /><item>
     <title>What is Babel?</title>
     <link>https://colinder.github.io/what_is_babel/</link>
     <pubDate>Tue, 15 Mar 2022 13:23:41 &#43;0900</pubDate>
-    <author>Author</author>
+    <author>colinder</author>
     <guid>https://colinder.github.io/what_is_babel/</guid>
-    <description><![CDATA[​
-Babel이란?  Babel은 최신 명세(또는 ES2015 이상)의 문법을 구형 브라우저에서도 동작하는 코드로 *트랜스파일해주는 개발 도구입니다.
-만약 Babel이 없다면? 구형 브라우저에서 동작할 수 있는 방식으로 웹 개발을 하고, 최신 브라우저에서 동작할 수 있는 방식으로 다시 개발해야 하는 상황이 발생합니다. 즉 구형 브라우저의 지원이 필요한 프런트엔드 프로젝트라면 현재 Babel의 사용은 필수입니다.
- ​
-*트랜스파일러?
-ES2015 등장 이후로 javascript는 class문법, 화살표 함수, 모듈 도입 등 많은 변화가 있었습니다. 이후에도 동기, 비동기처리를 위한 async &amp; await, optional 등 다양한 문법과 편의성 높은 기술들이 추가되고 있습니다.]]></description>
-</item></channel>
+    <description><![CDATA[Babel이 무엇인지 정리합니다.]]></description>
+</item>
+</channel>
 </rss>

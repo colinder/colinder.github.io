@@ -4,33 +4,31 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Time Complexity 시간복잡도 - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="Time Complexity 시간복잡도" />
-<meta property="og:description" content="​
-Time Complexity (시간 복잡도)  효율적인 알고리즘 구성을 위해 항상 신경써야하는 시간 복잡도.
-그리고 시간 복잡도를 표기하는 방법인 Big-O(빅-오) 표기법에 대해 정리합니다.
- ​
-​
-시간 복잡도  위키백과에 따르면 시간복잡도는 계산복잡도 이론에서 문제를 해결하는데 걸리는 시간과 입력의 함수 관계를 가리킨다. 또 컴퓨터과학에서 알고리즘의 시간복잡도는 입력을 나타내는 문자열 길이의 함수로서 작동하는 알고리즘을 취해 시간을 정량화하는 것인데, 간단히 input 후 연산이 진행되고 output을 반환하는데 시간이 얼마나 걸리는가?를 계산한 값입니다. 조금 더 간단하게는 알고리즘의 수행시간입니다." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://colinder.github.io/time_complexity/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-10-17T12:24:58+09:00" />
-<meta property="article:modified_time" content="2023-10-17T12:24:58+09:00" />
+        <title>Time Complexity 시간복잡도 - colinder&#39;s blog</title><meta name="Description" content="Hello New World"><meta property="og:url" content="https://colinder.github.io/time_complexity/">
+  <meta property="og:site_name" content="colinder&#39;s blog">
+  <meta property="og:title" content="Time Complexity 시간복잡도">
+  <meta property="og:description" content="Time Complexity에 대하여 빅오 표기법과 함꼐 정리합니다.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-10-17T12:24:58+09:00">
+    <meta property="article:modified_time" content="2023-10-17T12:24:58+09:00">
+    <meta property="article:tag" content="CS">
+    <meta property="article:tag" content="시간복잡도">
+    <meta property="article:tag" content="Computer Science">
+    <meta property="article:tag" content="면접대비">
+    <meta property="og:image" content="https://colinder.github.io/logo.png">
 
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
-
-<meta name="twitter:title" content="Time Complexity 시간복잡도"/>
-<meta name="twitter:description" content="​
-Time Complexity (시간 복잡도)  효율적인 알고리즘 구성을 위해 항상 신경써야하는 시간 복잡도.
-그리고 시간 복잡도를 표기하는 방법인 Big-O(빅-오) 표기법에 대해 정리합니다.
- ​
-​
-시간 복잡도  위키백과에 따르면 시간복잡도는 계산복잡도 이론에서 문제를 해결하는데 걸리는 시간과 입력의 함수 관계를 가리킨다. 또 컴퓨터과학에서 알고리즘의 시간복잡도는 입력을 나타내는 문자열 길이의 함수로서 작동하는 알고리즘을 취해 시간을 정량화하는 것인데, 간단히 input 후 연산이 진행되고 output을 반환하는데 시간이 얼마나 걸리는가?를 계산한 값입니다. 조금 더 간단하게는 알고리즘의 수행시간입니다."/>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://colinder.github.io/logo.png">
+  <meta name="twitter:title" content="Time Complexity 시간복잡도">
+  <meta name="twitter:description" content="Time Complexity에 대하여 빅오 표기법과 함꼐 정리합니다.">
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/time_complexity/" /><link rel="prev" href="https://colinder.github.io/things/" /><link rel="next" href="https://colinder.github.io/abstraction/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/time_complexity/" /><link rel="prev" href="https://colinder.github.io/things/" /><link rel="next" href="https://colinder.github.io/abstraction/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -39,8 +37,8 @@ Time Complexity (시간 복잡도)  효율적인 알고리즘 구성을 위해 �
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/time_complexity\/"
-        },"genre": "posts","keywords": "CS, 시간복잡도, computer science, 면접대비","wordcount":  1094 ,
-        "url": "https:\/\/colinder.github.io\/time_complexity\/","datePublished": "2023-10-17T12:24:58+09:00","dateModified": "2023-10-17T12:24:58+09:00","publisher": {
+        },"genre": "posts","keywords": "CS, 시간복잡도, computer science, 면접대비","wordcount":  2853 ,
+        "url": "https:\/\/colinder.github.io\/time_complexity\/","datePublished": "2023-10-17T12:24:58+09:00","dateModified": "2023-10-17T12:24:58+09:00","license": "colinder","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -48,36 +46,35 @@ Time Complexity (시간 복잡도)  효율적인 알고리즘 구성을 위해 �
             },"description": ""
     }
     </script></head>
-    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body data-header-desktop="auto" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="">Hello New World</a>
+            <a href="/" title="colinder&#39;s blog">Hello New World</a>
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
-                            <i class="fas fa-search fa-fw"></i>
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
                         </a>
                         <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
-                            <i class="fas fa-times-circle fa-fw"></i>
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-desktop">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
                         </span>
                     </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
-                    <i class="fas fa-adjust fa-fw"></i>
-                </a>
-            </div>
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
         </div>
     </div>
 </header><header class="mobile" id="header-mobile">
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="">Hello New World</a>
+                <a href="/" title="colinder&#39;s blog">Hello New World</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
@@ -87,41 +84,39 @@ Time Complexity (시간 복잡도)  효율적인 알고리즘 구성을 위해 �
                     <div class="search mobile" id="search-mobile">
                         <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
-                            <i class="fas fa-search fa-fw"></i>
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
                         </a>
                         <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
-                            <i class="fas fa-times-circle fa-fw"></i>
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-mobile">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
                         </span>
                     </div>
                     <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
                         Cancel
                     </a>
                 </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
-                <i class="fas fa-adjust fa-fw"></i>
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
             </a></div>
     </div>
-</header>
-<div class="search-dropdown desktop">
-    <div id="search-dropdown-desktop"></div>
-</div>
-<div class="search-dropdown mobile">
-    <div id="search-dropdown-mobile"></div>
-</div>
-<main class="main">
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Time Complexity 시간복잡도</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/computer-science/"><i class="far fa-folder fa-fw"></i>Computer Science</a>&nbsp;<a href="/categories/%EC%8B%9C%EA%B0%84%EB%B3%B5%EC%9E%A1%EB%8F%84/"><i class="far fa-folder fa-fw"></i>시간복잡도</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-10-17">2023-10-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1094 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;6 minutes&nbsp;</div>
-        </div><div class="details toc" id="toc-static"  kept="true">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Time Complexity 시간복잡도</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/computer-science/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Computer Science</a>&nbsp;<a href="/categories/%EC%8B%9C%EA%B0%84%EB%B3%B5%EC%9E%A1%EB%8F%84/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>시간복잡도</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-10-17">2023-10-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2853 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;6 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="true">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
-                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
@@ -153,8 +148,7 @@ Time Complexity (시간 복잡도)  효율적인 알고리즘 구성을 위해 �
 <h1 id="time-complexity-시간-복잡도">Time Complexity (시간 복잡도)</h1>
 <blockquote>
 <p>효율적인 알고리즘 구성을 위해 항상 신경써야하는 <strong>시간 복잡도</strong>.</p>
-<p>그리고 시간 복잡도를 표기하는 방법인 Big-O(빅-오) 표기법에 대해 정리합니다.</p>
-</blockquote>
+<p>그리고 시간 복잡도를 표기하는 방법인 Big-O(빅-오) 표기법에 대해 정리합니다.</p></blockquote>
 <p>​</p>
 <p>​</p>
 <h2 id="시간-복잡도">시간 복잡도</h2>
@@ -230,8 +224,7 @@ Time Complexity (시간 복잡도)  효율적인 알고리즘 구성을 위해 �
 <p>​</p>
 <h4 id="o1">O(1)</h4>
 <blockquote>
-<p>O(1)는 일정한 복잡도(<b>constant</b> complexity)라고 하며, 입력값이 증가하더라도 시간이 늘어나지 않는다.</p>
-</blockquote>
+<p>O(1)는 일정한 복잡도(<b>constant</b> complexity)라고 하며, 입력값이 증가하더라도 시간이 늘어나지 않는다.</p></blockquote>
 <p>입력값의 크기와 관계없이, 즉시 출력값을 반환하는 알고리즘을 의미한다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -248,26 +241,25 @@ Time Complexity (시간 복잡도)  효율적인 알고리즘 구성을 위해 �
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1">## example 1</span>
-<span class="k">def</span> <span class="nf">hello_world</span><span class="p">():</span>
-    <span class="k">return</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;hello_world&#34;</span><span class="p">)</span>
-
-<span class="c1">## example 2</span>
-<span class="k">def</span> <span class="nf">O1_algo</span><span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
-    <span class="k">return</span> <span class="nb">print</span><span class="p">(</span><span class="n">li</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
-
-<span class="n">li</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
-<span class="n">idx</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">O1_algo</span><span class="p">(</span><span class="n">li</span><span class="p">,</span> <span class="n">idx</span><span class="p">)</span> <span class="c1"># li의 길이가 아무리 길어도 idx가 1로 고정임으로 항상, 즉시 출력값을 얻을 수 있다.</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">## example 1</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">hello_world</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;hello_world&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## example 2</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">O1_algo</span><span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">print</span><span class="p">(</span><span class="n">li</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">li</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">idx</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="n">O1_algo</span><span class="p">(</span><span class="n">li</span><span class="p">,</span> <span class="n">idx</span><span class="p">)</span> <span class="c1"># li의 길이가 아무리 길어도 idx가 1로 고정임으로 항상, 즉시 출력값을 얻을 수 있다.</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>​</p>
 <p>​</p>
 <p>​</p>
 <h4 id="olog-n">O(log n)</h4>
 <blockquote>
-<p>O(log n)은 로그 복잡도(<b>logarithmic</b> complexity)라고 부르며, Big-O표기법중 O(1) 다음으로 빠른 시간 복잡도를 가진다.</p>
-</blockquote>
+<p>O(log n)은 로그 복잡도(<b>logarithmic</b> complexity)라고 부르며, Big-O표기법중 O(1) 다음으로 빠른 시간 복잡도를 가진다.</p></blockquote>
 <p>log n은 보통 log의 밑이 2인 경우를 상정합니다. == $\log_{2}{n}$</p>
 <p>이는 *이진탐색의 로직과 거의 유사합니다. 예를 들어서 이야기 해보죠.</p>
 <ul>
@@ -317,8 +309,7 @@ Time Complexity (시간 복잡도)  효율적인 알고리즘 구성을 위해 �
 <p>​</p>
 <h4 id="on">O(n)</h4>
 <blockquote>
-<p>O(n)은 선형 복잡도(<b>linear</b> complexity)라고 부르며, 입력값이 증가함에 따라 시간 또한 <code>같은 비율</code>로 증가하는 것을 의미한다.</p>
-</blockquote>
+<p>O(n)은 선형 복잡도(<b>linear</b> complexity)라고 부르며, 입력값이 증가함에 따라 시간 또한 <code>같은 비율</code>로 증가하는 것을 의미한다.</p></blockquote>
 <p>데이터가 늘어날 때 <b>정확히 그 데이터에 비례해 단계 수가 증가</b>하는 알고리즘이다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -330,21 +321,20 @@ Time Complexity (시간 복잡도)  효율적인 알고리즘 구성을 위해 �
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1">## example  -  li의 길이에 따라 단계 수가 증가</span>
-<span class="k">def</span> <span class="nf">On_algo</span><span class="p">(</span><span class="n">li</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">li</span><span class="p">:</span>
-        <span class="k">return</span> <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-    
-<span class="n">li</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">## example  -  li의 길이에 따라 단계 수가 증가</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">On_algo</span><span class="p">(</span><span class="n">li</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">li</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl"><span class="n">li</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>​</p>
 <p>​</p>
 <p>​</p>
 <h4 id="on--log-n">O(n * log n)</h4>
 <blockquote>
-<p>일반적으로 최적화된 알고리즘의 경우 해당 시간복잡도를 가진다.</p>
-</blockquote>
+<p>일반적으로 최적화된 알고리즘의 경우 해당 시간복잡도를 가진다.</p></blockquote>
 <p>linear한 단일 컬렉션에 logarithmic한 수행을 반영한 알고리즘이다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -370,35 +360,34 @@ Time Complexity (시간 복잡도)  효율적인 알고리즘 구성을 위해 �
 </span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1">## example  -  퀵 정렬(Quick Sort)</span>
-<span class="k">def</span> <span class="nf">quick_sort</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">arr</span>
-    
-    <span class="n">pivot</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">]</span>
-    <span class="n">left</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">arr</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">pivot</span><span class="p">]</span>
-    <span class="n">middle</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">arr</span> <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="n">pivot</span><span class="p">]</span>
-    <span class="n">right</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">arr</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">pivot</span><span class="p">]</span>
-    
-    <span class="k">return</span> <span class="n">quick_sort</span><span class="p">(</span><span class="n">left</span><span class="p">)</span> <span class="o">+</span> <span class="n">middle</span> <span class="o">+</span> <span class="n">quick_sort</span><span class="p">(</span><span class="n">right</span><span class="p">)</span>
-
-<span class="c1"># 예시 리스트</span>
-<span class="n">example_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">38</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
-
-<span class="c1"># 퀵 정렬 수행</span>
-<span class="n">sorted_list</span> <span class="o">=</span> <span class="n">quick_sort</span><span class="p">(</span><span class="n">example_list</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;정렬 전:&#34;</span><span class="p">,</span> <span class="n">example_list</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;정렬 후:&#34;</span><span class="p">,</span> <span class="n">sorted_list</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">## example  -  퀵 정렬(Quick Sort)</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">quick_sort</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">arr</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">pivot</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">left</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">arr</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">pivot</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">middle</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">arr</span> <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="n">pivot</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">right</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">arr</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">pivot</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">quick_sort</span><span class="p">(</span><span class="n">left</span><span class="p">)</span> <span class="o">+</span> <span class="n">middle</span> <span class="o">+</span> <span class="n">quick_sort</span><span class="p">(</span><span class="n">right</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 예시 리스트</span>
+</span></span><span class="line"><span class="cl"><span class="n">example_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">38</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 퀵 정렬 수행</span>
+</span></span><span class="line"><span class="cl"><span class="n">sorted_list</span> <span class="o">=</span> <span class="n">quick_sort</span><span class="p">(</span><span class="n">example_list</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;정렬 전:&#34;</span><span class="p">,</span> <span class="n">example_list</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;정렬 후:&#34;</span><span class="p">,</span> <span class="n">sorted_list</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>​</p>
 <p>​</p>
 <p>​</p>
 <h4 id="on2">O(n^2)</h4>
 <blockquote>
-<p>O(n^2)은 2차 복잡도(<b>quadratic</b> complexity)라고 부르며, 입력값이 증가함에 따라 시간이 n의 제곱수의 비율로 증가하는 것을 의미한다.</p>
-</blockquote>
+<p>O(n^2)은 2차 복잡도(<b>quadratic</b> complexity)라고 부르며, 입력값이 증가함에 따라 시간이 n의 제곱수의 비율로 증가하는 것을 의미한다.</p></blockquote>
 <p>입력값이 1일 경우 1초가 걸리던 알고리즘에 5라는 값을 주었더니 25초가 걸리게 된다면, 이 알고리즘의 시간 복잡도는 O(n^2)라고 표현한다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -409,12 +398,12 @@ Time Complexity (시간 복잡도)  효율적인 알고리즘 구성을 위해 �
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1">## example 1</span>
-<span class="k">def</span> <span class="nf">O_quadratic</span><span class="p">():</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">):</span>
-            <span class="k">return</span> <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>     
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">## example 1</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">O_quadratic</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>     
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>간단히 2중 중복문의 경우에 해당합니다.</p>
 <p>3중, 10중 중복문의 경우에도 <b>O(n^2)</b>라고 표현합니다.</p>
@@ -423,8 +412,7 @@ Time Complexity (시간 복잡도)  효율적인 알고리즘 구성을 위해 �
 <p>​</p>
 <h4 id="o2n">O(2^n)</h4>
 <blockquote>
-<p>O(2^n)은 기하급수적 복잡도(exponential complexity)라고 부르며, Big-O 표기법 중 가장 느린 시간 복잡도를 가진다.</p>
-</blockquote>
+<p>O(2^n)은 기하급수적 복잡도(exponential complexity)라고 부르며, Big-O 표기법 중 가장 느린 시간 복잡도를 가진다.</p></blockquote>
 <p>대표적인 예가 피노나치의 수열인데,</p>
 <p><strong>피보나치 수</strong>는 첫째 및 둘째 항이 1이며 그 뒤의 모든 항은 바로 앞 두 항의 합인 수열입니다.</p>
 <ul>
@@ -438,11 +426,11 @@ Time Complexity (시간 복잡도)  효율적인 알고리즘 구성을 위해 �
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>많은 기술 블로그들이 이렇게 코드 짤꺼면 그냥 하지마라. 고 말하곤 합니다.ㅎ</p>
 <p>​</p>
@@ -450,52 +438,52 @@ Time Complexity (시간 복잡도)  효율적인 알고리즘 구성을 위해 �
 <p>​</p>
 <h3 id="복잡도-정량화-비교">복잡도 정량화 비교</h3>
 <table>
-<thead>
-<tr>
-<th>Complexity</th>
-<th>1</th>
-<th>10</th>
-<th>100</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>O(1)</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-</tr>
-<tr>
-<td>O(log n)</td>
-<td>0</td>
-<td>2</td>
-<td>5</td>
-</tr>
-<tr>
-<td>O(n)</td>
-<td>1</td>
-<td>10</td>
-<td>100</td>
-</tr>
-<tr>
-<td>O(n log n)</td>
-<td>0</td>
-<td>20</td>
-<td>461</td>
-</tr>
-<tr>
-<td>O(n^2)</td>
-<td>1</td>
-<td>100</td>
-<td>10000</td>
-</tr>
-<tr>
-<td>O(2^n)</td>
-<td>1</td>
-<td>1024</td>
-<td>1267650600228229401496703205376</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>Complexity</th>
+          <th>1</th>
+          <th>10</th>
+          <th>100</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>O(1)</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+      </tr>
+      <tr>
+          <td>O(log n)</td>
+          <td>0</td>
+          <td>2</td>
+          <td>5</td>
+      </tr>
+      <tr>
+          <td>O(n)</td>
+          <td>1</td>
+          <td>10</td>
+          <td>100</td>
+      </tr>
+      <tr>
+          <td>O(n log n)</td>
+          <td>0</td>
+          <td>20</td>
+          <td>461</td>
+      </tr>
+      <tr>
+          <td>O(n^2)</td>
+          <td>1</td>
+          <td>100</td>
+          <td>10000</td>
+      </tr>
+      <tr>
+          <td>O(2^n)</td>
+          <td>1</td>
+          <td>1024</td>
+          <td>1267650600228229401496703205376</td>
+      </tr>
+  </tbody>
 </table>
 <p>​</p>
 <p>​</p>
@@ -532,9 +520,7 @@ Time Complexity (시간 복잡도)  효율적인 알고리즘 구성을 위해 �
         <div class="post-info-line">
             <div class="post-info-mod">
                 <span>Updated on 2023-10-17</span>
-            </div>
-            <div class="post-info-license"></div>
-        </div>
+            </div></div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
                             <a class="link-to-markdown" href="/time_complexity/index.md" target="_blank">Read Markdown</a>
@@ -546,28 +532,28 @@ Time Complexity (시간 복잡도)  효율적인 알고리즘 구성을 위해 �
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/cs/">CS</a>,&nbsp;<a href="/tags/%EC%8B%9C%EA%B0%84%EB%B3%B5%EC%9E%A1%EB%8F%84/">시간복잡도</a>,&nbsp;<a href="/tags/computer-science/">computer science</a>,&nbsp;<a href="/tags/%EB%A9%B4%EC%A0%91%EB%8C%80%EB%B9%84/">면접대비</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/cs/">CS</a>,&nbsp;<a href="/tags/%EC%8B%9C%EA%B0%84%EB%B3%B5%EC%9E%A1%EB%8F%84/">시간복잡도</a>,&nbsp;<a href="/tags/computer-science/">Computer Science</a>,&nbsp;<a href="/tags/%EB%A9%B4%EC%A0%91%EB%8C%80%EB%B9%84/">면접대비</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/things/" class="prev" rel="prev" title="react-native Things"><i class="fas fa-angle-left fa-fw"></i>react-native Things</a>
-            <a href="/abstraction/" class="next" rel="next" title="what is Abstraction(추상화)?">what is Abstraction(추상화)?<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/things/" class="prev" rel="prev" title="react-native Things"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>react-native Things</a>
+            <a href="/abstraction/" class="next" rel="next" title="what is Abstraction(추상화)?">what is Abstraction(추상화)?<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 <div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.143.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 
         <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
-                <i class="fas fa-arrow-up fa-fw"></i>
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
             </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
-                <i class="fas fa-comment fa-fw"></i>
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://colinder-github-io.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":-1},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><link rel="stylesheet" href="/css/_custom.scss"><script type="text/javascript" src="https://colinder-github-io.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":200},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

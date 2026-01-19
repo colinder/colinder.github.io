@@ -1,17 +1,16 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>operators - Tag - </title>
+        <title>Operators - Tag - colinder&#39;s blog</title>
         <link>https://colinder.github.io/tags/operators/</link>
-        <description>operators - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 09 Dec 2020 22:04:20 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/operators/" rel="self" type="application/rss+xml" /><item>
+        <description>Operators - Tag - colinder&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Wed, 09 Dec 2020 22:04:20 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/operators/" rel="self" type="application/rss+xml" /><item>
     <title>JavaScript Operators</title>
     <link>https://colinder.github.io/js_operators/</link>
     <pubDate>Wed, 09 Dec 2020 22:04:20 &#43;0900</pubDate>
-    <author>Author</author>
+    <author>colinder</author>
     <guid>https://colinder.github.io/js_operators/</guid>
-    <description><![CDATA[​
-JavaScript Operators  Javascript의 연산자를 알아 봅시다. 종류가 많이 있어 많이 사용하는 것들 중심으로 먼저 알아보겠습니다.
- ​
-1. 할당 연산자 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  // 할당 연산자 let numder = 0 numder += 10 console.log(numder) // 10  numder -= 8 console.log(numder) // 2  numder *= 10 console.log(numder) // 20  numder ++ // 1을 더한다.]]></description>
-</item></channel>
+    <description><![CDATA[JavaScript Operators에 대하여 정리합니다.]]></description>
+</item>
+</channel>
 </rss>

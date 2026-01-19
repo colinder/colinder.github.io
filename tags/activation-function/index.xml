@@ -1,33 +1,32 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Activation Function - Tag - </title>
+        <title>Activation Function - Tag - colinder&#39;s blog</title>
         <link>https://colinder.github.io/tags/activation-function/</link>
-        <description>Activation Function - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 21 Feb 2022 14:35:39 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/activation-function/" rel="self" type="application/rss+xml" /><item>
+        <description>Activation Function - Tag - colinder&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Mon, 21 Feb 2022 14:35:39 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/activation-function/" rel="self" type="application/rss+xml" /><item>
     <title>RNN &amp; LSTM</title>
     <link>https://colinder.github.io/rnnlstm/</link>
     <pubDate>Mon, 21 Feb 2022 14:35:39 &#43;0900</pubDate>
-    <author>Author</author>
+    <author>colinder</author>
     <guid>https://colinder.github.io/rnnlstm/</guid>
-    <description><![CDATA[​
-RNN &amp; LSTM  감정분석을 위한 프로젝트를 기획하면서 RNN과 LSTM이라는 신경망 분석에 대하여 알게 되었습니다. 신경망 분석은 기계학습과 인지과학에서 영감을 얻어 설계된 통계학적 학습 알고리즘인데요. 이 둘의 개념를 알아보겠습니다.
- ​
-​
-RNN(Recurrent Neural Network) 순환 신경망  시퀀스(Sequence)라는 것이 있습니다.
-시퀀스는 간단히 &lsquo;문맥이 있는 데이터&rsquo; 입니다. 문장은 단어들의 시퀀스, 음악은 음계들의 시퀀스, 동영상은 이미지의 시퀀스라고 할 수 있습니다. 그런데 시퀀스의 길이는 가변적입니다. 기존의 뉴럴 네트워크 알고리즘은 이미지처럼 고정된 크기의 입력을 다루는 데는 탁월하지만, 가변적인 크기의 데이터를 모델링하기에는 적합하지 않았습니다.]]></description>
-</item><item>
+    <description><![CDATA[<p>​</p>
+<h1 id="span-stylecolor01df3arnnspan--span-stylecolore3a437lstmspan"><span style="color:#01DF3A">RNN</span> &amp; <span style="color:#E3A437">LSTM</span></h1>
+<blockquote>
+<p>감정분석을 위한 프로젝트를 기획하면서 RNN과 LSTM이라는 신경망 분석에 대하여 알게 되었습니다. 신경망 분석은 기계학습과 인지과학에서 영감을 얻어 설계된 통계학적 학습 알고리즘인데요. 이 둘의 개념를 알아보겠습니다.</p>]]></description>
+</item>
+<item>
     <title>Activation_Function</title>
     <link>https://colinder.github.io/activation_function/</link>
     <pubDate>Thu, 24 Jun 2021 15:04:29 &#43;0900</pubDate>
-    <author>Author</author>
+    <author>colinder</author>
     <guid>https://colinder.github.io/activation_function/</guid>
-    <description><![CDATA[​
-Activation Function(활성화 함수)  입력 신호의 총합을 출력신호로 변환하는 함수를 일반적으로 Activation Function이라고 합니다.
- ​
-아직 잘 모르겠습니다. 하여 인공신경망에 빗대어 이해해보겠습니다.
-인공 신경망은 인간의 중추신경계(뇌)속의 뉴런들이 정보를 전달하고 학습하여 결과를 도출해내는 과정을 모방한 학습알고리즘입니다.
-여기서 의문점이 생깁니다.
-  예를 들어 지나가다 귤을 보았는데 맛이 있을지 없을지 어떻게 알 수 있을까요? 저 귤의 데이터를 수집해 봅시다.
-  타원형, 이쁜 노란색, 푸르른 꼭지 라는 데이터를 눈으로 보고 뇌속의 뉴런들이 이 정보를 분석해 맛있겠다.]]></description>
-</item></channel>
+    <description><![CDATA[<p>​</p>
+<h1 id="activation-function활성화-함수">Activation Function(활성화 함수)</h1>
+<blockquote>
+<p>입력 신호의 총합을 출력신호로 변환하는 함수를 일반적으로 Activation Function이라고 합니다.</p></blockquote>
+<p>​</p>
+<p>아직 잘 모르겠습니다. 하여 인공신경망에 빗대어 이해해보겠습니다.</p>]]></description>
+</item>
+</channel>
 </rss>

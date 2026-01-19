@@ -1,19 +1,16 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Hoisting - Tag - </title>
+        <title>Hoisting - Tag - colinder&#39;s blog</title>
         <link>https://colinder.github.io/tags/hoisting/</link>
-        <description>Hoisting - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 11 Dec 2020 11:16:09 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/hoisting/" rel="self" type="application/rss+xml" /><item>
+        <description>Hoisting - Tag - colinder&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Fri, 11 Dec 2020 11:16:09 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/hoisting/" rel="self" type="application/rss+xml" /><item>
     <title>JavaScript Hoisting</title>
     <link>https://colinder.github.io/js_hoisting/</link>
     <pubDate>Fri, 11 Dec 2020 11:16:09 &#43;0900</pubDate>
-    <author>Author</author>
+    <author>colinder</author>
     <guid>https://colinder.github.io/js_hoisting/</guid>
-    <description><![CDATA[​
-JavaScript Hoisting  web 개발을 하면서 여러 레퍼런스들을 확인하고 공부하게 되는데, 문득 똑같아 보이나 왜 이건 되고? 왜 이건 안되지?하는 부분이 있었습니다.
-그 차이는 Hoisting에 대한 내용이었는데요. 알아두면 쓸모있기에 정리해봅시다.
- ​
-호이스팅(Hoisting)이란? 호이스팅을 한 줄로 설명하자면, 선언문을 유효 범위의 최상단으로 끌어올리는 행위라고 할 수 있습니다.
-최상단이라는 표현이 중요한데요. 인터프리터 언어인 자바스크립트가 한 줄씩 순서대로 코딩을 실행하는 것이 아니라, 임의로 특정 내용을 최상단으로 끌어 올려서 우선 실행하는 것을 호이스팅이라고 합니다.]]></description>
-</item></channel>
+    <description><![CDATA[Hoisting에 대하여 정리합니다.]]></description>
+</item>
+</channel>
 </rss>

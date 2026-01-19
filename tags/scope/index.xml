@@ -1,18 +1,16 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Scope - Tag - </title>
+        <title>Scope - Tag - colinder&#39;s blog</title>
         <link>https://colinder.github.io/tags/scope/</link>
-        <description>Scope - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 10 Dec 2020 17:03:25 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/scope/" rel="self" type="application/rss+xml" /><item>
+        <description>Scope - Tag - colinder&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Thu, 10 Dec 2020 17:03:25 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/scope/" rel="self" type="application/rss+xml" /><item>
     <title>JavaScript Scope</title>
     <link>https://colinder.github.io/js_scope/</link>
     <pubDate>Thu, 10 Dec 2020 17:03:25 &#43;0900</pubDate>
-    <author>Author</author>
+    <author>colinder</author>
     <guid>https://colinder.github.io/js_scope/</guid>
-    <description><![CDATA[​
-JavaScript Scope란?  Scope [ skoʊp ]1 (무엇을 하거나 이룰 수 있는) 기회[여지/능력] (=potential)2 (주제조직활동 등이 다루는) 범위3 샅샅이[자세히] 살피다.
-스코프는 &ldquo;유효 범위&quot;로써 번수에 매개변수가 어디까지 유효한지를 나타냅니다.
-자바스크립트에선 스코프는 2가지 타입이 있습니다. 바로 Global(전역)과 Local(지역)인데요. 함수 안에서 선언된 변수(Local 변수)는 함수 블록 안에서만 접근이 가능합니다.전역 변수는 어디서든 접근이 가능합니다.
- 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21  // global 변수 선언 var a = 10; console.]]></description>
-</item></channel>
+    <description><![CDATA[JavaScript Scope에 대하여 정리합니다.]]></description>
+</item>
+</channel>
 </rss>

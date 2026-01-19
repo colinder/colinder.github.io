@@ -1,37 +1,32 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Nest - Tag - </title>
+        <title>Nest - Tag - colinder&#39;s blog</title>
         <link>https://colinder.github.io/tags/nest/</link>
-        <description>Nest - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 14 Jan 2024 09:14:13 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/nest/" rel="self" type="application/rss+xml" /><item>
+        <description>Nest - Tag - colinder&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Sun, 14 Jan 2024 09:14:13 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/nest/" rel="self" type="application/rss+xml" /><item>
     <title>Nest Official_03_(Guards, Interceptors, Custom_decorators)</title>
     <link>https://colinder.github.io/nest-official_03_guards-interceptors-custom_decorators/</link>
     <pubDate>Sun, 14 Jan 2024 09:14:13 &#43;0900</pubDate>
-    <author>Author</author>
+    <author>colinder</author>
     <guid>https://colinder.github.io/nest-official_03_guards-interceptors-custom_decorators/</guid>
-    <description><![CDATA[​
-Guards  가드(Guard)는 라우트 핸들러 메서드의 실행 여부를 결정하는 역할을 합니다. 특히, 가드는 특정 조건이 충족되지 않으면 요청을 처리하기 전에 실행을 막습니다. 이는 권한 검사, 인증, 혹은 다양한 비즈니스 규칙을 적용할 때 유용합니다.
-간단한 예로, 사용자의 권한을 확인하는 가드를 상상해볼 수 있습니다. 특정 엔드포인트에 접근하려는 사용자의 역할이나 권한이 충족되지 않으면 가드가 요청을 차단할 수 있습니다. 이를 통해 요청이 핸들러 메서드에 도달하기 전에 필요한 조건을 검사하고 처리할 수 있습니다.
- 가드는 @Injectable() 데코레이터로 주석이 달린 클래스로, CanActivate 인터페이스를 구현합니다.]]></description>
-</item><item>
+    <description><![CDATA[NEST의 공식 문서의 내용을 한글로 번역하며 이해하기 쉽게 정리합니다._(Guards, Interceptors, Custom_decorators)]]></description>
+</item>
+<item>
     <title>Nest Official_02_(Modules, Middleware, Exception_filters, Pipes)</title>
     <link>https://colinder.github.io/nest-official_02_modules-middleware-exception_filters-pipes/</link>
     <pubDate>Sun, 14 Jan 2024 09:14:10 &#43;0900</pubDate>
-    <author>Author</author>
+    <author>colinder</author>
     <guid>https://colinder.github.io/nest-official_02_modules-middleware-exception_filters-pipes/</guid>
-    <description><![CDATA[​
-Modules 모듈은 @Module() 데코레이터로 주석이 달린 클래스입니다. @Module() 데코레이터는 Nest가 애플리케이션 구조를 구성하는 데 사용하는 메타데이터를 제공합니다.
-각 어플리케이션은 최소한 하나의 모듈, 루트 모듈을 가지고 있습니다. 루트 모듈은 Nest가 어플리케이션 그래프를 구축하는데 사용하는 시작점입니다. 어플리케이션 그래프는 Nest가 Modules 및 Providers 간의 관계와 의존성을 해결하는 데 사용하는 내부 데이터 구조입니다. 매우 작은 애플리케이션의 경우 이론적으로 루트 모듈만을 가질 수 있지만, 이는 일반적인 경우가 아닙니다. 모듈은 구성 요소를 효과적으로 구성하는 데 강력하게 권장되는 방법이며, 대부분의 애플리케이션에서는 각각이 밀접한 관련성을 가진 일련의 기능을 캡슐화하는 여러 모듈을 사용하는 결과로서의 아키텍처가 형성됩니다.]]></description>
-</item><item>
+    <description><![CDATA[NEST의 공식 문서의 내용을 한글로 번역하며 이해하기 쉽게 정리합니다._(Modules, Middleware, Exception_filters, Pipes)]]></description>
+</item>
+<item>
     <title>Nest Official_01_(Introduction, First steps, Controllers, Providers)</title>
     <link>https://colinder.github.io/nest-official_01_introduction-first-steps-controllers-providers/</link>
     <pubDate>Wed, 03 Jan 2024 13:36:17 &#43;0900</pubDate>
-    <author>Author</author>
+    <author>colinder</author>
     <guid>https://colinder.github.io/nest-official_01_introduction-first-steps-controllers-providers/</guid>
-    <description><![CDATA[​
-Introduction  Nest.js 는 효율적이고 확장가능한 node.js SSR을 구축하기 위한 프레임워크.
- Nest.js는 *progressive(점진적인) JavaScript를 사용하며. TypeScript를 지원(javascript로 개발도 가능) 그리고 OOP(객체 지향 프로그래밍), FP(기능적 프로그래밍), FRP(기능적 반응 프로그래밍)의 요소들을 결합합니다.
-후드 아래에서 Nest는 Express(기본값)와 같은 강력한 HTTP 서버 프레임워크를 사용하며 Fastify를 사용하도록 구성할 수도 있습니다!
-Nest는 이러한 일반적인 Node.js 프레임워크(Express/Fastify) 이상의 추상화 수준을 제공하지만 개발자에게 API를 직접 노출시킵니다. 이를 통해 개발자는 기본 플랫폼에 수많은 타사 모듈을 사용할 수 있습니다.]]></description>
-</item></channel>
+    <description><![CDATA[NEST의 공식 문서의 내용을 한글로 번역하며 이해하기 쉽게 정리합니다._(Introduction, First steps, Controllers, Providers)]]></description>
+</item>
+</channel>
 </rss>

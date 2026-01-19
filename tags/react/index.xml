@@ -1,77 +1,64 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>React - Tag - </title>
+        <title>React - Tag - colinder&#39;s blog</title>
         <link>https://colinder.github.io/tags/react/</link>
-        <description>React - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 04 May 2023 15:36:57 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/react/" rel="self" type="application/rss+xml" /><item>
+        <description>React - Tag - colinder&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Thu, 04 May 2023 15:36:57 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/react/" rel="self" type="application/rss+xml" /><item>
     <title>React Scss_setting</title>
     <link>https://colinder.github.io/scss_setting/</link>
     <pubDate>Thu, 04 May 2023 15:36:57 &#43;0900</pubDate>
-    <author>Author</author>
+    <author>colinder</author>
     <guid>https://colinder.github.io/scss_setting/</guid>
-    <description><![CDATA[​
-React_Style 관리  전 css보다 scss가 더 좋습니다. Sassy CSS - 문법적으로 짱 멋진(Sassy) CSS이기 때문입니다.
- ​
-​
-react에 scss 적용하기  간단히 라이브러리 하나만 설치해주고 파일명만 바꿔주면 됩니다.
- *CRA 공식 문서에 나와있는 방법을 따릅니다.
-​
-​
-  package.json이 있는 위치에서
-1  npm install sass   ​
-  .css로 된 파일명을 .scss로 바꾸면 끝.
-  ​
-​
-​
-​
-​
-👀 많은 레퍼런스가&hellip; 1  npm install node-sass   해당 명령어로 sass를 적용하는데, 동료가 깃헙에서 npm i를 하는데 계속 오류가 났고 저도 간헐적으로 에러가 발생해 설명한 방식으로 변경하였습니다.]]></description>
-</item><item>
+    <description><![CDATA[<p>​</p>
+<h1 id="react_style-관리">React_Style 관리</h1>
+<blockquote>
+<p>전 css보다 scss가 더 좋습니다. <strong>Sassy CSS - 문법적으로 짱 멋진(Sassy) CSS</strong>이기 때문입니다.</p></blockquote>
+<p>​</p>
+<p>​</p>
+<h2 id="react에-scss-적용하기">react에 scss 적용하기</h2>
+<blockquote>
+<p>간단히 라이브러리 하나만 설치해주고 파일명만 바꿔주면 됩니다.</p>]]></description>
+</item>
+<item>
     <title>React Scoped_css</title>
     <link>https://colinder.github.io/scoped_css/</link>
     <pubDate>Wed, 03 May 2023 14:53:20 &#43;0900</pubDate>
-    <author>Author</author>
+    <author>colinder</author>
     <guid>https://colinder.github.io/scoped_css/</guid>
-    <description><![CDATA[​
-React_Style 관리  Vue에는 .vue 파일마다 &lt;style&gt;가 있고 여기에 &lt;style scoped&gt;를 주면 해당 파일에만 적용되는 style을 구성할 수 있는데, react는 어떻게 하는지 알아봅니다.
- ​
-​
-scoped css 설정  지역적으로 사용하고 싶은 css 설정 방법
- ​
-폴더 구조를 보자면. (구조는 마음대로 구성하여도 됩니다. 아래는 제 마음대로 구성한 것입니다.)
-1 2 3 4 5 6 7 8 9 10 11 12  src ├── assets │ ├── Styles │ ├── common.]]></description>
-</item><item>
+    <description><![CDATA[<p>​</p>
+<h1 id="react_style-관리">React_Style 관리</h1>
+<blockquote>
+<p>Vue에는 .vue 파일마다 <code>&lt;style&gt;</code>가 있고 여기에 <code>&lt;style scoped&gt;</code>를 주면 해당 파일에만 적용되는 style을 구성할 수 있는데,
+react는 어떻게 하는지 알아봅니다.</p>]]></description>
+</item>
+<item>
     <title>React global_Style_관리</title>
     <link>https://colinder.github.io/global_css_setting/</link>
     <pubDate>Tue, 02 May 2023 14:32:19 &#43;0900</pubDate>
-    <author>Author</author>
+    <author>colinder</author>
     <guid>https://colinder.github.io/global_css_setting/</guid>
-    <description><![CDATA[​
-React Style_관리  전역으로 사용할 css 설정은 어떻게 하는지 알아봅니다.
- *기본적으로 typescript가 적용되어 있습니다.
-​
-​
-Global css 설정  전역으로 사용하고 싶은 css 설정 방법
- ​
-폴더 구조를 보자면. (구조는 마음대로 구성하여도 됩니다. 아래는 제 마음대로 구성한 것입니다.)
-1 2 3 4 5 6  src ├── assets │ ├── Styles │ ├── common.css │ ... └── index.tsx   ​
-  global css 만들기]]></description>
-</item><item>
+    <description><![CDATA[<p>​</p>
+<h1 id="react-style_관리">React Style_관리</h1>
+<blockquote>
+<p>전역으로 사용할 css 설정은 어떻게 하는지 알아봅니다.</p></blockquote>
+<p>*기본적으로 typescript가 적용되어 있습니다.</p>
+<p>​</p>
+<p>​</p>
+<h2 id="global-css-설정">Global css 설정</h2>
+<blockquote>
+<p>전역으로 사용하고 싶은 css 설정 방법</p>]]></description>
+</item>
+<item>
     <title>React Init</title>
     <link>https://colinder.github.io/init_setting/</link>
     <pubDate>Thu, 20 Apr 2023 14:33:44 &#43;0900</pubDate>
-    <author>Author</author>
+    <author>colinder</author>
     <guid>https://colinder.github.io/init_setting/</guid>
-    <description><![CDATA[​
-React 시작하기  vue2 서비스가 23년 12월 31일에 종료된다&hellip; vue3는 개인적으로 실패한 프로젝트라 생각해 vue2를 고집하고 있었는데&hellip;.
-vue3로 갈 것인가. 그냥 react로 갈 것인가 고민하다. 일단 알아보자는 마음으로 정리한 내용이다.
- ​
-​
-react 시작하기 앞서 준비할 것  node.js 에디터(ex. vscode)  ​
-​
-react 시작하기  준비가 끝났으니, react 프로젝트를 생성해보자
- ​
-  프로젝트 초기 세팅 명령어
-1  npx create-react-app hello-world     hello-world 라는 이름의 프로젝트를 생성]]></description>
-</item></channel>
+    <description><![CDATA[<p>​</p>
+<h1 id="react-시작하기">React 시작하기</h1>
+<blockquote>
+<p>vue2 서비스가 23년 12월 31일에 종료된다&hellip; vue3는 개인적으로 실패한 프로젝트라 생각해 vue2를 고집하고 있었는데&hellip;.</p>]]></description>
+</item>
+</channel>
 </rss>

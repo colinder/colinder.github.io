@@ -1,16 +1,53 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Python - Tag - </title>
+        <title>Python - Tag - colinder&#39;s blog</title>
         <link>https://colinder.github.io/tags/python/</link>
-        <description>Python - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 08 Mar 2021 22:39:31 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/python/" rel="self" type="application/rss+xml" /><item>
+        <description>Python - Tag - colinder&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Mon, 08 Mar 2021 22:39:31 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/python/" rel="self" type="application/rss+xml" /><item>
     <title>Python_Library</title>
     <link>https://colinder.github.io/python_library/</link>
     <pubDate>Mon, 08 Mar 2021 22:39:31 &#43;0900</pubDate>
-    <author>Author</author>
+    <author>colinder</author>
     <guid>https://colinder.github.io/python_library/</guid>
-    <description><![CDATA[​
-Python Library 😀   Idea 1 2 3 4 5 6 7 8 9 10 11 12 13  # 모두 &#39;거짓&#39;이 들어있는 리스트는 &#39;거짓&#39;으로 볼 수 있지 않을까? # 라고 생각해봤다.  a = [False, False, False] if a == False: print(&#34;거짓&#34;) else: print(&#34;오류&#34;) # &gt;&gt;&gt; 오류 # 안된다. 생각을 말아라..ㅎㅎ   ​
-  raise 예외(&lsquo;에러메시지&rsquo;) 1 2 3 4 5 6 7 8 9 10 11 12  # python에서는 의도적으로 오류를 일으킬 수 있는데 # 이를 해주는 것이 raise 메서드.]]></description>
-</item></channel>
+    <description><![CDATA[<p>​</p>
+<h1 id="python-library-">Python Library 😀</h1>
+<ul>
+<li>
+<h3 id="idea">Idea</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 모두 &#39;거짓&#39;이 들어있는 리스트는 &#39;거짓&#39;으로 볼 수 있지 않을까?</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 라고 생각해봤다. </span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;거짓&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;오류&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># &gt;&gt;&gt; 오류</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 안된다. 생각을 말아라..ㅎㅎ</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>​</p>]]></description>
+</item>
+</channel>
 </rss>

@@ -1,19 +1,16 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>selenium - Category - </title>
+        <title>Selenium - Category - colinder&#39;s blog</title>
         <link>https://colinder.github.io/categories/selenium/</link>
-        <description>selenium - Category - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 17 May 2022 15:50:42 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/selenium/" rel="self" type="application/rss+xml" /><item>
+        <description>Selenium - Category - colinder&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Tue, 17 May 2022 15:50:42 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/selenium/" rel="self" type="application/rss+xml" /><item>
     <title>Selenium 동작 대기 방법</title>
     <link>https://colinder.github.io/selenium_%EB%8F%99%EC%9E%91%EB%8C%80%EA%B8%B0/</link>
     <pubDate>Tue, 17 May 2022 15:50:42 &#43;0900</pubDate>
-    <author>Author</author>
+    <author>colinder</author>
     <guid>https://colinder.github.io/selenium_%EB%8F%99%EC%9E%91%EB%8C%80%EA%B8%B0/</guid>
-    <description><![CDATA[​
-Selenium 동작대기 접근하려는 요소가 존재하지 않을 때 발생하는 NoSuchElementException error. 페이지와 서버가 통신중이거나 네트워크 지연 등으로 위의 크롤링을 원하는 요소가 html에 존재하기 전에 요소에 접근을 시도하기 때문에 발생하는 에러입니다.
-어떤 멋진 코드로 이를 해결할 수 있을까? 고민하였지만 조금 무식한? 방법인 시간 지연으로 이를 해결하였습니다.
-​
-​
-1. time.sleep  python 내장 library 지정한 시간만큼 지연 (프로세스 자체를 지정한 시간동안 기다림)  사용법 1 2 3  from time import sleep sleep(3) //3초간 기다림   ​]]></description>
-</item></channel>
+    <description><![CDATA[Selenium 동작대기하는 방법에 대하여 정리합니다.]]></description>
+</item>
+</channel>
 </rss>

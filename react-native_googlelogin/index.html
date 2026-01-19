@@ -4,39 +4,29 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>React-Native_google login - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="React-Native_google login" />
-<meta property="og:description" content="​
-React-Native google login  서비스를 개발하다보면 로그인 기능이 새삼 대단해보입니다. 신경쓸 것도 많고, 하지만 이런 수고를 sns로그인 기능으로 대신한다면 편의성이 많이 높아집니다. 하여 해보겠습니다.
- *google login을 하기 위해 firebase(모바일 및 웹 애플리케이션 개발 플랫폼)을 사용합니다.
-  개발환경
-  npm으로 진행
-  react-native_cli (✨expo로 진행하지 않습니다.)
-  android 기준
-  함수형 컴포넌트로 진행 (✨ 클래스 컴포넌트로 진행하지 않습니다.)
-  RN 버전 0.60이상에서 진행" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://colinder.github.io/react-native_googlelogin/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-10-29T23:13:25+09:00" />
-<meta property="article:modified_time" content="2020-10-29T23:13:25+09:00" />
+        <title>React-Native_google login - colinder&#39;s blog</title><meta name="Description" content="Hello New World"><meta property="og:url" content="https://colinder.github.io/react-native_googlelogin/">
+  <meta property="og:site_name" content="colinder&#39;s blog">
+  <meta property="og:title" content="React-Native_google login">
+  <meta property="og:description" content="React-Native 개발에 대한 정리를 합니다.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-10-29T23:13:25+09:00">
+    <meta property="article:modified_time" content="2020-10-29T23:13:25+09:00">
+    <meta property="article:tag" content="React-Native">
+    <meta property="article:tag" content="Web">
+    <meta property="og:image" content="https://colinder.github.io/logo.png">
 
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
-
-<meta name="twitter:title" content="React-Native_google login"/>
-<meta name="twitter:description" content="​
-React-Native google login  서비스를 개발하다보면 로그인 기능이 새삼 대단해보입니다. 신경쓸 것도 많고, 하지만 이런 수고를 sns로그인 기능으로 대신한다면 편의성이 많이 높아집니다. 하여 해보겠습니다.
- *google login을 하기 위해 firebase(모바일 및 웹 애플리케이션 개발 플랫폼)을 사용합니다.
-  개발환경
-  npm으로 진행
-  react-native_cli (✨expo로 진행하지 않습니다.)
-  android 기준
-  함수형 컴포넌트로 진행 (✨ 클래스 컴포넌트로 진행하지 않습니다.)
-  RN 버전 0.60이상에서 진행"/>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://colinder.github.io/logo.png">
+  <meta name="twitter:title" content="React-Native_google login">
+  <meta name="twitter:description" content="React-Native 개발에 대한 정리를 합니다.">
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/react-native_googlelogin/" /><link rel="prev" href="https://colinder.github.io/react-native_navigation/" /><link rel="next" href="https://colinder.github.io/interpretervscompiler_language/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/react-native_googlelogin/" /><link rel="prev" href="https://colinder.github.io/react-native_navigation/" /><link rel="next" href="https://colinder.github.io/interpretervscompiler_language/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -45,8 +35,8 @@ React-Native google login  서비스를 개발하다보면 로그인 기능이 �
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/react-native_googlelogin\/"
-        },"genre": "posts","keywords": "react-native, web","wordcount":  1260 ,
-        "url": "https:\/\/colinder.github.io\/react-native_googlelogin\/","datePublished": "2020-10-29T23:13:25+09:00","dateModified": "2020-10-29T23:13:25+09:00","publisher": {
+        },"genre": "posts","keywords": "react-native, web","wordcount":  2073 ,
+        "url": "https:\/\/colinder.github.io\/react-native_googlelogin\/","datePublished": "2020-10-29T23:13:25+09:00","dateModified": "2020-10-29T23:13:25+09:00","license": "colinder","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -54,36 +44,35 @@ React-Native google login  서비스를 개발하다보면 로그인 기능이 �
             },"description": ""
     }
     </script></head>
-    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body data-header-desktop="auto" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="">Hello New World</a>
+            <a href="/" title="colinder&#39;s blog">Hello New World</a>
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
-                            <i class="fas fa-search fa-fw"></i>
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
                         </a>
                         <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
-                            <i class="fas fa-times-circle fa-fw"></i>
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-desktop">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
                         </span>
                     </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
-                    <i class="fas fa-adjust fa-fw"></i>
-                </a>
-            </div>
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
         </div>
     </div>
 </header><header class="mobile" id="header-mobile">
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="">Hello New World</a>
+                <a href="/" title="colinder&#39;s blog">Hello New World</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
@@ -93,41 +82,39 @@ React-Native google login  서비스를 개발하다보면 로그인 기능이 �
                     <div class="search mobile" id="search-mobile">
                         <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
-                            <i class="fas fa-search fa-fw"></i>
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
                         </a>
                         <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
-                            <i class="fas fa-times-circle fa-fw"></i>
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-mobile">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
                         </span>
                     </div>
                     <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
                         Cancel
                     </a>
                 </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
-                <i class="fas fa-adjust fa-fw"></i>
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
             </a></div>
     </div>
-</header>
-<div class="search-dropdown desktop">
-    <div id="search-dropdown-desktop"></div>
-</div>
-<div class="search-dropdown mobile">
-    <div id="search-dropdown-mobile"></div>
-</div>
-<main class="main">
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">React-Native_google login</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/react-native/"><i class="far fa-folder fa-fw"></i>react-native</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-10-29">2020-10-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1260 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;6 minutes&nbsp;</div>
-        </div><div class="details toc" id="toc-static"  kept="true">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">React-Native_google login</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/react-native/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>React-Native</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2020-10-29">2020-10-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2073 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="true">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
-                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
@@ -137,8 +124,7 @@ React-Native google login  서비스를 개발하다보면 로그인 기능이 �
             </div><div class="content" id="content"><p>​</p>
 <h1 id="react-native-google-login">React-Native google login</h1>
 <blockquote>
-<p>서비스를 개발하다보면 로그인 기능이 새삼 대단해보입니다. 신경쓸 것도 많고, 하지만 이런 수고를 sns로그인 기능으로 대신한다면 편의성이 많이 높아집니다. 하여 해보겠습니다.</p>
-</blockquote>
+<p>서비스를 개발하다보면 로그인 기능이 새삼 대단해보입니다. 신경쓸 것도 많고, 하지만 이런 수고를 sns로그인 기능으로 대신한다면 편의성이 많이 높아집니다. 하여 해보겠습니다.</p></blockquote>
 <p><em>*google login을 하기 위해 firebase(모바일 및 웹 애플리케이션 개발 플랫폼)을 사용합니다.</em></p>
 <ul>
 <li>
@@ -193,18 +179,18 @@ React-Native google login  서비스를 개발하다보면 로그인 기능이 �
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># index.js</span>
-
-/**
- * @format
- */
-
-import <span class="o">{</span>AppRegistry<span class="o">}</span> from <span class="s1">&#39;react-native&#39;</span><span class="p">;</span>
-import App from <span class="s1">&#39;./googleSignin&#39;</span><span class="p">;</span>			// 변경
-import <span class="o">{</span>name as appName<span class="o">}</span> from <span class="s1">&#39;./app.json&#39;</span><span class="p">;</span>
-
-AppRegistry.registerComponent<span class="o">(</span>appName, <span class="o">()</span> <span class="o">=</span>&gt; App<span class="o">)</span><span class="p">;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># index.js</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">/**
+</span></span><span class="line"><span class="cl"> * @format
+</span></span><span class="line"><span class="cl"> */
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">import <span class="o">{</span>AppRegistry<span class="o">}</span> from <span class="s1">&#39;react-native&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">import App from <span class="s1">&#39;./googleSignin&#39;</span><span class="p">;</span>			// 변경
+</span></span><span class="line"><span class="cl">import <span class="o">{</span>name as appName<span class="o">}</span> from <span class="s1">&#39;./app.json&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">AppRegistry.registerComponent<span class="o">(</span>appName, <span class="o">()</span> <span class="o">=</span>&gt; App<span class="o">)</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>​</p>
 </li>
@@ -227,44 +213,44 @@ AppRegistry.registerComponent<span class="o">(</span>appName, <span class="o">()
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># googleSignin.js</span>
-
-import React from <span class="s1">&#39;react&#39;</span>
-import <span class="o">{</span> View, Text <span class="o">}</span> from <span class="s1">&#39;react-native&#39;</span>
-
-const <span class="nv">googleSignin</span> <span class="o">=</span> <span class="o">()</span> <span class="o">=</span>&gt; <span class="o">{</span>
-  <span class="k">return</span> <span class="o">(</span>
-    &lt;View&gt;
-      &lt;Text&gt;google Sign in&lt;/Text&gt;
-    &lt;/View&gt;
-  <span class="o">)</span>
-<span class="o">}</span>
-<span class="nb">export</span> default googleSignin
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># googleSignin.js</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">import React from <span class="s1">&#39;react&#39;</span>
+</span></span><span class="line"><span class="cl">import <span class="o">{</span> View, Text <span class="o">}</span> from <span class="s1">&#39;react-native&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">const <span class="nv">googleSignin</span> <span class="o">=</span> <span class="o">()</span> <span class="o">=</span>&gt; <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="o">(</span>
+</span></span><span class="line"><span class="cl">    &lt;View&gt;
+</span></span><span class="line"><span class="cl">      &lt;Text&gt;google Sign in&lt;/Text&gt;
+</span></span><span class="line"><span class="cl">    &lt;/View&gt;
+</span></span><span class="line"><span class="cl">  <span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> default googleSignin
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>​</p>
 </li>
 <li>
-<p><a href="https://github.com/react-native-google-signin/google-signin" target="_blank" rel="noopener noreffer">react native google login github</a> 이동 후 root폴더 에서 google-signin 설치</p>
+<p><a href="https://github.com/react-native-google-signin/google-signin" target="_blank" rel="noopener noreffer ">react native google login github</a> 이동 후 root폴더 에서 google-signin 설치</p>
 <image src="/images/RN_googleLogin_00.png" width="auto" style="display: block; margin: 10px auto; border: 1px solid grey">
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">npm install --save @react-native-community/google-signin
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm install --save @react-native-community/google-signin
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>​</p>
 </li>
 <li>
-<p><a href="https://github.com/react-native-google-signin/google-signin/blob/master/docs/android-guide.md" target="_blank" rel="noopener noreffer">Andriod guide</a>로 이동</p>
+<p><a href="https://github.com/react-native-google-signin/google-signin/blob/master/docs/android-guide.md" target="_blank" rel="noopener noreffer ">Andriod guide</a>로 이동</p>
 <image src="/images/RN_googleLogin_02.png" width="auto" style="display: block; margin: 10px auto; border: 1px solid grey">
 <p><code>google-services.json</code> 파일을 generate해야 한다고 합니다. 이걸 위해 <code>firebase</code>에 등록하러 갑시다.</p>
 <p>​</p>
 </li>
 <li>
-<p><a href="https://console.firebase.google.com/u/0/" target="_blank" rel="noopener noreffer">firebase</a> 이동</p>
+<p><a href="https://console.firebase.google.com/u/0/" target="_blank" rel="noopener noreffer ">firebase</a> 이동</p>
 <ol>
 <li>
 <p>프로젝트 추가 (+)</p>
@@ -285,11 +271,11 @@ const <span class="nv">googleSignin</span> <span class="o">=</span> <span class=
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># root/android/app으로 이동</span>
-<span class="c1"># terminal</span>
-
-keytool -list -v -keystore debug.keystore -alias androiddebugkey -storepass android -keypass android
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># root/android/app으로 이동</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># terminal</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">keytool -list -v -keystore debug.keystore -alias androiddebugkey -storepass android -keypass android
+</span></span></code></pre></td></tr></table>
 </div>
 </div><image src="/images/RN_googleLogin_04.png" width="auto" style="display: block; margin: 10px auto;">
 </li>
@@ -326,29 +312,29 @@ keytool -list -v -keystore debug.keystore -alias androiddebugkey -storepass andr
 </span><span class="lnt">22
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># In: android/app/src/main/java/MY/APP/NEW_ID/MainActivity.java:</span>
-package 새로운 패키지 이름 등록<span class="p">;</span>
-
-<span class="c1"># In: android/app/src/main/java/MY/APP/NEW_ID/MainApplication.java:</span>
-package 새로운 패키지 이름 등록<span class="p">;</span>
-
-<span class="c1"># In: android/app/src/main/AndroidManifest.xml:</span>
-<span class="nv">package</span><span class="o">=</span><span class="s2">&#34;새로운 패키지 이름 등록&#34;</span>
-
-<span class="c1"># And in android/app/build.gradle:</span>
-applicationId <span class="s2">&#34;새로운 패키지 이름 등록&#34;</span>
-
-<span class="c1"># In: android/app/BUCK:</span>
-android_build_config<span class="o">(</span>
-  <span class="nv">package</span><span class="o">=</span><span class="s2">&#34;새로운 패키지 이름 등록&#34;</span>
-<span class="o">)</span>
-android_resource<span class="o">(</span>
-  <span class="nv">package</span><span class="o">=</span><span class="s2">&#34;새로운 패키지 이름 등록&#34;</span>
-<span class="o">)</span>
-
-<span class="c1"># Gradle&#39; cleaning in the end (in /android folder):</span>
-./gradlew clean
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># In: android/app/src/main/java/MY/APP/NEW_ID/MainActivity.java:</span>
+</span></span><span class="line"><span class="cl">package 새로운 패키지 이름 등록<span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># In: android/app/src/main/java/MY/APP/NEW_ID/MainApplication.java:</span>
+</span></span><span class="line"><span class="cl">package 새로운 패키지 이름 등록<span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># In: android/app/src/main/AndroidManifest.xml:</span>
+</span></span><span class="line"><span class="cl"><span class="nv">package</span><span class="o">=</span><span class="s2">&#34;새로운 패키지 이름 등록&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># And in android/app/build.gradle:</span>
+</span></span><span class="line"><span class="cl">applicationId <span class="s2">&#34;새로운 패키지 이름 등록&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># In: android/app/BUCK:</span>
+</span></span><span class="line"><span class="cl">android_build_config<span class="o">(</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">package</span><span class="o">=</span><span class="s2">&#34;새로운 패키지 이름 등록&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">)</span>
+</span></span><span class="line"><span class="cl">android_resource<span class="o">(</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">package</span><span class="o">=</span><span class="s2">&#34;새로운 패키지 이름 등록&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Gradle&#39; cleaning in the end (in /android folder):</span>
+</span></span><span class="line"><span class="cl">./gradlew clean
+</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 <li>
@@ -359,7 +345,7 @@ android_resource<span class="o">(</span>
 </ol>
 </li>
 <li>
-<p>다시 <a href="https://github.com/react-native-google-signin/google-signin/blob/master/docs/android-guide.md" target="_blank" rel="noopener noreffer">Andriod guide</a>로 돌아와서 <code>2. Installation</code> 진행</p>
+<p>다시 <a href="https://github.com/react-native-google-signin/google-signin/blob/master/docs/android-guide.md" target="_blank" rel="noopener noreffer ">Andriod guide</a>로 돌아와서 <code>2. Installation</code> 진행</p>
 <ol>
 <li>
 <p>link the native module (난 RN &gt;= 0.60니까 pass)</p>
@@ -396,33 +382,33 @@ android_resource<span class="o">(</span>
 </span><span class="lnt">26
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">buildscript <span class="o">{</span>
-    ext <span class="o">{</span>
-        <span class="nv">buildToolsVersion</span> <span class="o">=</span> <span class="s2">&#34;27.0.3&#34;</span>
-        <span class="nv">minSdkVersion</span> <span class="o">=</span> <span class="m">16</span>
-        <span class="nv">compileSdkVersion</span> <span class="o">=</span> <span class="m">27</span>
-        <span class="nv">targetSdkVersion</span> <span class="o">=</span> <span class="m">26</span>
-        <span class="nv">supportLibVersion</span> <span class="o">=</span> <span class="s2">&#34;27.1.1&#34;</span>
-        <span class="nv">googlePlayServicesAuthVersion</span> <span class="o">=</span> <span class="s2">&#34;16.0.1&#34;</span> // &lt;--- use this version or newer	👈<span class="o">(</span>추가<span class="o">)</span>
-    <span class="o">}</span>
-...
-    dependencies <span class="o">{</span>
-        classpath <span class="s1">&#39;com.android.tools.build:gradle:3.1.2&#39;</span> // &lt;--- use this version or newer	👈<span class="o">(</span>default로 입력되어 있었음<span class="o">)</span>
-        classpath <span class="s1">&#39;com.google.gms:google-services:4.1.0&#39;</span> // &lt;--- use this version or newer	👈<span class="o">(</span>추가<span class="o">)</span>
-    <span class="o">}</span>
-...
-allprojects <span class="o">{</span>
-    repositories <span class="o">{</span>
-        mavenLocal<span class="o">()</span>
-        google<span class="o">()</span> // &lt;--- make sure this is included	👈<span class="o">(</span>default로 입력되어 있었음<span class="o">)</span>
-        jcenter<span class="o">()</span>
-        maven <span class="o">{</span>
-            // All of React Native <span class="o">(</span>JS, Obj-C sources, Android binaries<span class="o">)</span> is installed from npm
-            url <span class="s2">&#34;</span><span class="nv">$rootDir</span><span class="s2">/../node_modules/react-native/android&#34;</span>
-        <span class="o">}</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">buildscript <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    ext <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">buildToolsVersion</span> <span class="o">=</span> <span class="s2">&#34;27.0.3&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">minSdkVersion</span> <span class="o">=</span> <span class="m">16</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">compileSdkVersion</span> <span class="o">=</span> <span class="m">27</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">targetSdkVersion</span> <span class="o">=</span> <span class="m">26</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">supportLibVersion</span> <span class="o">=</span> <span class="s2">&#34;27.1.1&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">googlePlayServicesAuthVersion</span> <span class="o">=</span> <span class="s2">&#34;16.0.1&#34;</span> // &lt;--- use this version or newer	👈<span class="o">(</span>추가<span class="o">)</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">    dependencies <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        classpath <span class="s1">&#39;com.android.tools.build:gradle:3.1.2&#39;</span> // &lt;--- use this version or newer	👈<span class="o">(</span>default로 입력되어 있었음<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        classpath <span class="s1">&#39;com.google.gms:google-services:4.1.0&#39;</span> // &lt;--- use this version or newer	👈<span class="o">(</span>추가<span class="o">)</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">allprojects <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    repositories <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        mavenLocal<span class="o">()</span>
+</span></span><span class="line"><span class="cl">        google<span class="o">()</span> // &lt;--- make sure this is included	👈<span class="o">(</span>default로 입력되어 있었음<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        jcenter<span class="o">()</span>
+</span></span><span class="line"><span class="cl">        maven <span class="o">{</span>
+</span></span><span class="line"><span class="cl">            // All of React Native <span class="o">(</span>JS, Obj-C sources, Android binaries<span class="o">)</span> is installed from npm
+</span></span><span class="line"><span class="cl">            url <span class="s2">&#34;</span><span class="nv">$rootDir</span><span class="s2">/../node_modules/react-native/android&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 <li>
@@ -441,17 +427,17 @@ allprojects <span class="o">{</span>
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">...
-dependencies <span class="o">{</span>
-    implementation fileTree<span class="o">(</span>dir: <span class="s2">&#34;libs&#34;</span>, include: <span class="o">[</span><span class="s2">&#34;*.jar&#34;</span><span class="o">])</span>
-    implementation <span class="s2">&#34;com.android.support:appcompat-v7:23.0.1&#34;</span>
-    implementation <span class="s2">&#34;com.facebook.react:react-native:+&#34;</span>
-    implementation <span class="s1">&#39;androidx.swiperefreshlayout:swiperefreshlayout:1.0.0&#39;</span> // &lt;-- add this<span class="p">;</span> newer versions should work too 👈<span class="o">(</span>default로 입력되어 있었음<span class="o">)</span>
-<span class="o">}</span>
-...
-...
-apply plugin: <span class="s1">&#39;com.google.gms.google-services&#39;</span> // &lt;--- 👈 this should be the last line
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">dependencies <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    implementation fileTree<span class="o">(</span>dir: <span class="s2">&#34;libs&#34;</span>, include: <span class="o">[</span><span class="s2">&#34;*.jar&#34;</span><span class="o">])</span>
+</span></span><span class="line"><span class="cl">    implementation <span class="s2">&#34;com.android.support:appcompat-v7:23.0.1&#34;</span>
+</span></span><span class="line"><span class="cl">    implementation <span class="s2">&#34;com.facebook.react:react-native:+&#34;</span>
+</span></span><span class="line"><span class="cl">    implementation <span class="s1">&#39;androidx.swiperefreshlayout:swiperefreshlayout:1.0.0&#39;</span> // &lt;-- add this<span class="p">;</span> newer versions should work too 👈<span class="o">(</span>default로 입력되어 있었음<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">apply plugin: <span class="s1">&#39;com.google.gms.google-services&#39;</span> // &lt;--- 👈 this should be the last line
+</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 <li>
@@ -461,7 +447,7 @@ apply plugin: <span class="s1">&#39;com.google.gms.google-services&#39;</span> /
 </ol>
 </li>
 <li>
-<p>다시 <a href="https://github.com/react-native-google-signin/google-signin" target="_blank" rel="noopener noreffer">react native google login github</a>을 참고하며 진행</p>
+<p>다시 <a href="https://github.com/react-native-google-signin/google-signin" target="_blank" rel="noopener noreffer ">react native google login github</a>을 참고하며 진행</p>
 <ol>
 <li>
 <p>GoogleSignin</p>
@@ -472,10 +458,10 @@ apply plugin: <span class="s1">&#39;com.google.gms.google-services&#39;</span> /
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># googleSignin.js</span>
-
-import <span class="o">{</span> GoogleSignin, GoogleSigninButton, statusCodes <span class="o">}</span> from <span class="s1">&#39;@react-native-community/google-signin&#39;</span><span class="p">;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># googleSignin.js</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">import <span class="o">{</span> GoogleSignin, GoogleSigninButton, statusCodes <span class="o">}</span> from <span class="s1">&#39;@react-native-community/google-signin&#39;</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -502,28 +488,28 @@ import <span class="o">{</span> GoogleSignin, GoogleSigninButton, statusCodes <s
 </span><span class="lnt">21
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># googleSignin.js</span>
-
-const <span class="nv">googleSignin</span> <span class="o">=</span> <span class="o">()</span> <span class="o">=</span>&gt; <span class="o">{</span>
-  useEffect<span class="o">(()</span> <span class="o">=</span>&gt; <span class="o">{</span>
-    GoogleSignin.configure<span class="o">({</span>
-      scopes: <span class="o">[</span><span class="s1">&#39;https://www.googleapis.com/auth/drive.readonly&#39;</span><span class="o">]</span>, // what API you want to access on behalf of the user, default is email and profile
-      webClientId: <span class="s1">&#39;&lt;요기는 firebase를 참고해서 입력합니다.&gt;&#39;</span>, // client ID of <span class="nb">type</span> WEB <span class="k">for</span> your server <span class="o">(</span>needed to verify user ID and offline access<span class="o">)</span>
-      offlineAccess: true, // <span class="k">if</span> you want to access Google API on behalf of the user FROM YOUR SERVER
-      // hostedDomain: <span class="s1">&#39;&#39;</span>, // specifies a hosted domain restriction
-      // loginHint: <span class="s1">&#39;&#39;</span>, // <span class="o">[</span>iOS<span class="o">]</span> The user<span class="s1">&#39;s ID, or email address, to be prefilled in the authentication UI if possible. [See docs here](https://developers.google.com/identity/sign-in/ios/api/interface_g_i_d_sign_in.html#a0a68c7504c31ab0b728432565f6e33fd)
-</span><span class="s1">      forceCodeForRefreshToken: true, // [Android] related to `serverAuthCode`, read the docs link below *.
-</span><span class="s1">      // accountName: &#39;&#39;, // [Android] specifies an account name on the device that should be used
-</span><span class="s1">      // iosClientId: &#39;</span>&lt;FROM DEVELOPER CONSOLE&gt;<span class="err">&#39;</span>, // <span class="o">[</span>iOS<span class="o">]</span> optional, <span class="k">if</span> you want to specify the client ID of <span class="nb">type</span> iOS <span class="o">(</span>otherwise, it is taken from GoogleService-Info.plist<span class="o">)</span>
-    <span class="o">})</span><span class="p">;</span>
-  <span class="o">}</span>, <span class="o">[])</span>
-<span class="o">}</span>
-
-<span class="nb">export</span> default googleSignin
-
-<span class="c1"># 필요없는 항목들은 주석해줍니다.다만 webClientId는 firebase에서 확인하고 등록합니다.</span>
-<span class="c1"># useEffect: 리액트 컴포넌트가 렌더링 될 때마다 특정 작업을 수행하도록 설정 할 수 있는 Hook 입니다. 클래스형 컴포넌트의 componentDidMount 와 componentDidUpdate 를 합친 형태로 보아도 무방합니다.</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># googleSignin.js</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">const <span class="nv">googleSignin</span> <span class="o">=</span> <span class="o">()</span> <span class="o">=</span>&gt; <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  useEffect<span class="o">(()</span> <span class="o">=</span>&gt; <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    GoogleSignin.configure<span class="o">({</span>
+</span></span><span class="line"><span class="cl">      scopes: <span class="o">[</span><span class="s1">&#39;https://www.googleapis.com/auth/drive.readonly&#39;</span><span class="o">]</span>, // what API you want to access on behalf of the user, default is email and profile
+</span></span><span class="line"><span class="cl">      webClientId: <span class="s1">&#39;&lt;요기는 firebase를 참고해서 입력합니다.&gt;&#39;</span>, // client ID of <span class="nb">type</span> WEB <span class="k">for</span> your server <span class="o">(</span>needed to verify user ID and offline access<span class="o">)</span>
+</span></span><span class="line"><span class="cl">      offlineAccess: true, // <span class="k">if</span> you want to access Google API on behalf of the user FROM YOUR SERVER
+</span></span><span class="line"><span class="cl">      // hostedDomain: <span class="s1">&#39;&#39;</span>, // specifies a hosted domain restriction
+</span></span><span class="line"><span class="cl">      // loginHint: <span class="s1">&#39;&#39;</span>, // <span class="o">[</span>iOS<span class="o">]</span> The user<span class="s1">&#39;s ID, or email address, to be prefilled in the authentication UI if possible. [See docs here](https://developers.google.com/identity/sign-in/ios/api/interface_g_i_d_sign_in.html#a0a68c7504c31ab0b728432565f6e33fd)
+</span></span></span><span class="line"><span class="cl"><span class="s1">      forceCodeForRefreshToken: true, // [Android] related to `serverAuthCode`, read the docs link below *.
+</span></span></span><span class="line"><span class="cl"><span class="s1">      // accountName: &#39;&#39;, // [Android] specifies an account name on the device that should be used
+</span></span></span><span class="line"><span class="cl"><span class="s1">      // iosClientId: &#39;</span>&lt;FROM DEVELOPER CONSOLE&gt;<span class="err">&#39;</span>, // <span class="o">[</span>iOS<span class="o">]</span> optional, <span class="k">if</span> you want to specify the client ID of <span class="nb">type</span> iOS <span class="o">(</span>otherwise, it is taken from GoogleService-Info.plist<span class="o">)</span>
+</span></span><span class="line"><span class="cl">    <span class="o">})</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>, <span class="o">[])</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> default googleSignin
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 필요없는 항목들은 주석해줍니다.다만 webClientId는 firebase에서 확인하고 등록합니다.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># useEffect: 리액트 컴포넌트가 렌더링 될 때마다 특정 작업을 수행하도록 설정 할 수 있는 Hook 입니다. 클래스형 컴포넌트의 componentDidMount 와 componentDidUpdate 를 합친 형태로 보아도 무방합니다.</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><image src="/images/RN_googleLogin_07.png" width="auto" style="display: block; margin: 10px auto;">
 <p>이제 signin코드를 입력합시다.</p>
@@ -552,28 +538,28 @@ const <span class="nv">googleSignin</span> <span class="o">=</span> <span class=
 </span><span class="lnt">21
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># googleSignin.js</span>
-
-const <span class="nv">signIn</span> <span class="o">=</span> async<span class="o">()</span> <span class="o">=</span>&gt; <span class="o">{</span>
-    try <span class="o">{</span>
-      await GoogleSignin.hasPlayServices<span class="o">()</span><span class="p">;</span>
-      const <span class="nv">userInfo</span> <span class="o">=</span> await GoogleSignin.signIn<span class="o">()</span><span class="p">;</span>
-      console.log<span class="o">(</span>userInfo<span class="o">)</span>					//👈콘솔로 로그인 정보 찍어보자
-      // this.setState<span class="o">({</span> userInfo <span class="o">})</span><span class="p">;</span>		//👈함수형으로 개발하여 이건 불필요
-    <span class="o">}</span> catch <span class="o">(</span>error<span class="o">)</span> <span class="o">{</span>
-      <span class="k">if</span> <span class="o">(</span>error.code <span class="o">===</span> statusCodes.SIGN_IN_CANCELLED<span class="o">)</span> <span class="o">{</span>
-        // user cancelled the login flow
-      <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span>error.code <span class="o">===</span> statusCodes.IN_PROGRESS<span class="o">)</span> <span class="o">{</span>
-        // operation <span class="o">(</span>e.g. sign in<span class="o">)</span> is in progress already
-      <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span>error.code <span class="o">===</span> statusCodes.PLAY_SERVICES_NOT_AVAILABLE<span class="o">)</span> <span class="o">{</span>
-        // play services not available or outdated
-      <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-        // some other error happened
-      <span class="o">}</span>
-      console.log<span class="o">(</span>error<span class="o">)</span>					//👈콘솔로 에러내용 찍어보자
-    <span class="o">}</span>
-  <span class="o">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># googleSignin.js</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">const <span class="nv">signIn</span> <span class="o">=</span> async<span class="o">()</span> <span class="o">=</span>&gt; <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    try <span class="o">{</span>
+</span></span><span class="line"><span class="cl">      await GoogleSignin.hasPlayServices<span class="o">()</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      const <span class="nv">userInfo</span> <span class="o">=</span> await GoogleSignin.signIn<span class="o">()</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      console.log<span class="o">(</span>userInfo<span class="o">)</span>					//👈콘솔로 로그인 정보 찍어보자
+</span></span><span class="line"><span class="cl">      // this.setState<span class="o">({</span> userInfo <span class="o">})</span><span class="p">;</span>		//👈함수형으로 개발하여 이건 불필요
+</span></span><span class="line"><span class="cl">    <span class="o">}</span> catch <span class="o">(</span>error<span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="o">(</span>error.code <span class="o">===</span> statusCodes.SIGN_IN_CANCELLED<span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        // user cancelled the login flow
+</span></span><span class="line"><span class="cl">      <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span>error.code <span class="o">===</span> statusCodes.IN_PROGRESS<span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        // operation <span class="o">(</span>e.g. sign in<span class="o">)</span> is in progress already
+</span></span><span class="line"><span class="cl">      <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span>error.code <span class="o">===</span> statusCodes.PLAY_SERVICES_NOT_AVAILABLE<span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        // play services not available or outdated
+</span></span><span class="line"><span class="cl">      <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        // some other error happened
+</span></span><span class="line"><span class="cl">      <span class="o">}</span>
+</span></span><span class="line"><span class="cl">      console.log<span class="o">(</span>error<span class="o">)</span>					//👈콘솔로 에러내용 찍어보자
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>*완성된 코드</p>
 <div class="highlight"><div class="chroma">
@@ -634,61 +620,61 @@ const <span class="nv">signIn</span> <span class="o">=</span> async<span class="
 </span><span class="lnt">54
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># googleSignin.js</span>
-
-import React, <span class="o">{</span> useState, useEffect <span class="o">}</span> from <span class="s1">&#39;react&#39;</span><span class="p">;</span>
-import <span class="o">{</span> View, Text, Image, <span class="o">}</span> from <span class="s1">&#39;react-native&#39;</span>
-import <span class="o">{</span> GoogleSignin, GoogleSigninButton, statusCodes <span class="o">}</span> from <span class="s1">&#39;@react-native-community/google-signin&#39;</span><span class="p">;</span>
-
-
-const <span class="nv">googleSignin</span> <span class="o">=</span> <span class="o">()</span> <span class="o">=</span>&gt; <span class="o">{</span>
-  useEffect<span class="o">(()</span> <span class="o">=</span>&gt; <span class="o">{</span>
-    GoogleSignin.configure<span class="o">({</span>
-      scopes: <span class="o">[</span><span class="s1">&#39;https://www.googleapis.com/auth/drive.readonly&#39;</span><span class="o">]</span>, // what API you want to access on behalf of the user, default is email and profile
-      webClientId: <span class="s1">&#39;&lt;요기는 firebase를 참고해서 입력합니다.&gt;&#39;</span>, // client ID of <span class="nb">type</span> WEB <span class="k">for</span> your server <span class="o">(</span>needed to verify user ID and offline access<span class="o">)</span>
-      offlineAccess: true, // <span class="k">if</span> you want to access Google API on behalf of the user FROM YOUR SERVER
-      // hostedDomain: <span class="s1">&#39;&#39;</span>, // specifies a hosted domain restriction
-      // loginHint: <span class="s1">&#39;&#39;</span>, // <span class="o">[</span>iOS<span class="o">]</span> The user<span class="s1">&#39;s ID, or email address, to be prefilled in the authentication UI if possible. [See docs here](https://developers.google.com/identity/sign-in/ios/api/interface_g_i_d_sign_in.html#a0a68c7504c31ab0b728432565f6e33fd)
-</span><span class="s1">      forceCodeForRefreshToken: true, // [Android] related to `serverAuthCode`, read the docs link below *.
-</span><span class="s1">      // accountName: &#39;&#39;, // [Android] specifies an account name on the device that should be used
-</span><span class="s1">      // iosClientId: &#39;</span>&lt;FROM DEVELOPER CONSOLE&gt;<span class="err">&#39;</span>, // <span class="o">[</span>iOS<span class="o">]</span> optional, <span class="k">if</span> you want to specify the client ID of <span class="nb">type</span> iOS <span class="o">(</span>otherwise, it is taken from GoogleService-Info.plist<span class="o">)</span>
-    <span class="o">})</span><span class="p">;</span>
-  <span class="o">}</span>, <span class="o">[])</span>
-
-  const <span class="nv">signIn</span> <span class="o">=</span> async<span class="o">()</span> <span class="o">=</span>&gt; <span class="o">{</span>
-    try <span class="o">{</span>
-      await GoogleSignin.hasPlayServices<span class="o">()</span><span class="p">;</span>
-      const <span class="nv">userInfo</span> <span class="o">=</span> await GoogleSignin.signIn<span class="o">()</span><span class="p">;</span>
-      console.log<span class="o">(</span>userInfo<span class="o">)</span>
-      // this.setState<span class="o">({</span> userInfo <span class="o">})</span><span class="p">;</span>
-    <span class="o">}</span> catch <span class="o">(</span>error<span class="o">)</span> <span class="o">{</span>
-      <span class="k">if</span> <span class="o">(</span>error.code <span class="o">===</span> statusCodes.SIGN_IN_CANCELLED<span class="o">)</span> <span class="o">{</span>
-        // user cancelled the login flow
-      <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span>error.code <span class="o">===</span> statusCodes.IN_PROGRESS<span class="o">)</span> <span class="o">{</span>
-        // operation <span class="o">(</span>e.g. sign in<span class="o">)</span> is in progress already
-      <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span>error.code <span class="o">===</span> statusCodes.PLAY_SERVICES_NOT_AVAILABLE<span class="o">)</span> <span class="o">{</span>
-        // play services not available or outdated
-      <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-        // some other error happened
-      <span class="o">}</span>
-      console.log<span class="o">(</span>error<span class="o">)</span>
-    <span class="o">}</span>
-  <span class="o">}</span>
-  <span class="k">return</span> <span class="o">(</span>
-    &lt;View&gt;
-      &lt;Text&gt;google Sign in&lt;/Text&gt;
-      &lt;GoogleSigninButton
-        <span class="nv">style</span><span class="o">={{</span> width: 192, height: <span class="m">48</span> <span class="o">}}</span>
-        <span class="nv">size</span><span class="o">={</span>GoogleSigninButton.Size.Wide<span class="o">}</span>
-        <span class="nv">color</span><span class="o">={</span>GoogleSigninButton.Color.Dark<span class="o">}</span>
-        <span class="nv">onPress</span><span class="o">={</span>signIn<span class="o">}</span>
-        /&gt;
-    &lt;/View&gt;
-  <span class="o">)</span>
-<span class="o">}</span>
-
-<span class="nb">export</span> default googleSignin
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># googleSignin.js</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">import React, <span class="o">{</span> useState, useEffect <span class="o">}</span> from <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">import <span class="o">{</span> View, Text, Image, <span class="o">}</span> from <span class="s1">&#39;react-native&#39;</span>
+</span></span><span class="line"><span class="cl">import <span class="o">{</span> GoogleSignin, GoogleSigninButton, statusCodes <span class="o">}</span> from <span class="s1">&#39;@react-native-community/google-signin&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">const <span class="nv">googleSignin</span> <span class="o">=</span> <span class="o">()</span> <span class="o">=</span>&gt; <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  useEffect<span class="o">(()</span> <span class="o">=</span>&gt; <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    GoogleSignin.configure<span class="o">({</span>
+</span></span><span class="line"><span class="cl">      scopes: <span class="o">[</span><span class="s1">&#39;https://www.googleapis.com/auth/drive.readonly&#39;</span><span class="o">]</span>, // what API you want to access on behalf of the user, default is email and profile
+</span></span><span class="line"><span class="cl">      webClientId: <span class="s1">&#39;&lt;요기는 firebase를 참고해서 입력합니다.&gt;&#39;</span>, // client ID of <span class="nb">type</span> WEB <span class="k">for</span> your server <span class="o">(</span>needed to verify user ID and offline access<span class="o">)</span>
+</span></span><span class="line"><span class="cl">      offlineAccess: true, // <span class="k">if</span> you want to access Google API on behalf of the user FROM YOUR SERVER
+</span></span><span class="line"><span class="cl">      // hostedDomain: <span class="s1">&#39;&#39;</span>, // specifies a hosted domain restriction
+</span></span><span class="line"><span class="cl">      // loginHint: <span class="s1">&#39;&#39;</span>, // <span class="o">[</span>iOS<span class="o">]</span> The user<span class="s1">&#39;s ID, or email address, to be prefilled in the authentication UI if possible. [See docs here](https://developers.google.com/identity/sign-in/ios/api/interface_g_i_d_sign_in.html#a0a68c7504c31ab0b728432565f6e33fd)
+</span></span></span><span class="line"><span class="cl"><span class="s1">      forceCodeForRefreshToken: true, // [Android] related to `serverAuthCode`, read the docs link below *.
+</span></span></span><span class="line"><span class="cl"><span class="s1">      // accountName: &#39;&#39;, // [Android] specifies an account name on the device that should be used
+</span></span></span><span class="line"><span class="cl"><span class="s1">      // iosClientId: &#39;</span>&lt;FROM DEVELOPER CONSOLE&gt;<span class="err">&#39;</span>, // <span class="o">[</span>iOS<span class="o">]</span> optional, <span class="k">if</span> you want to specify the client ID of <span class="nb">type</span> iOS <span class="o">(</span>otherwise, it is taken from GoogleService-Info.plist<span class="o">)</span>
+</span></span><span class="line"><span class="cl">    <span class="o">})</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>, <span class="o">[])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  const <span class="nv">signIn</span> <span class="o">=</span> async<span class="o">()</span> <span class="o">=</span>&gt; <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    try <span class="o">{</span>
+</span></span><span class="line"><span class="cl">      await GoogleSignin.hasPlayServices<span class="o">()</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      const <span class="nv">userInfo</span> <span class="o">=</span> await GoogleSignin.signIn<span class="o">()</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      console.log<span class="o">(</span>userInfo<span class="o">)</span>
+</span></span><span class="line"><span class="cl">      // this.setState<span class="o">({</span> userInfo <span class="o">})</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span> catch <span class="o">(</span>error<span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="o">(</span>error.code <span class="o">===</span> statusCodes.SIGN_IN_CANCELLED<span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        // user cancelled the login flow
+</span></span><span class="line"><span class="cl">      <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span>error.code <span class="o">===</span> statusCodes.IN_PROGRESS<span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        // operation <span class="o">(</span>e.g. sign in<span class="o">)</span> is in progress already
+</span></span><span class="line"><span class="cl">      <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span>error.code <span class="o">===</span> statusCodes.PLAY_SERVICES_NOT_AVAILABLE<span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        // play services not available or outdated
+</span></span><span class="line"><span class="cl">      <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        // some other error happened
+</span></span><span class="line"><span class="cl">      <span class="o">}</span>
+</span></span><span class="line"><span class="cl">      console.log<span class="o">(</span>error<span class="o">)</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="o">(</span>
+</span></span><span class="line"><span class="cl">    &lt;View&gt;
+</span></span><span class="line"><span class="cl">      &lt;Text&gt;google Sign in&lt;/Text&gt;
+</span></span><span class="line"><span class="cl">      &lt;GoogleSigninButton
+</span></span><span class="line"><span class="cl">        <span class="nv">style</span><span class="o">={{</span> width: 192, height: <span class="m">48</span> <span class="o">}}</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">size</span><span class="o">={</span>GoogleSigninButton.Size.Wide<span class="o">}</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">color</span><span class="o">={</span>GoogleSigninButton.Color.Dark<span class="o">}</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">onPress</span><span class="o">={</span>signIn<span class="o">}</span>
+</span></span><span class="line"><span class="cl">        /&gt;
+</span></span><span class="line"><span class="cl">    &lt;/View&gt;
+</span></span><span class="line"><span class="cl">  <span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> default googleSignin
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>​</p>
 <p>​</p>
@@ -699,20 +685,19 @@ const <span class="nv">googleSignin</span> <span class="o">=</span> <span class=
 <h1 id="요약">👀요약</h1>
 <blockquote>
 <p>google login을 위해서는 firebase를 사용하는 것이 간편한 방법입니다.</p>
-<p>저는 구글로그인을 진행하면서 useState도 같이 공부하였는데 해당 내용은 제외하였습니다. 하지만, 같이 공부하게 되실 겁니다.ㅎ</p>
-</blockquote>
+<p>저는 구글로그인을 진행하면서 useState도 같이 공부하였는데 해당 내용은 제외하였습니다. 하지만, 같이 공부하게 되실 겁니다.ㅎ</p></blockquote>
 <p>​</p>
 <p>​</p>
 <h2 id="참고-했던-글">참고 했던 글</h2>
 <ul>
 <li>
-<p><a href="https://www.youtube.com/watch?v=A1Ai4sKk0jM" target="_blank" rel="noopener noreffer">https://www.youtube.com/watch?v=A1Ai4sKk0jM</a></p>
+<p><a href="https://www.youtube.com/watch?v=A1Ai4sKk0jM" target="_blank" rel="noopener noreffer ">https://www.youtube.com/watch?v=A1Ai4sKk0jM</a></p>
 </li>
 <li>
-<p><a href="https://medium.com/humanscape-tech/hooks-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-usestate-useeffect-811636d1035e" target="_blank" rel="noopener noreffer">https://medium.com/humanscape-tech/hooks-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-usestate-useeffect-811636d1035e</a></p>
+<p><a href="https://medium.com/humanscape-tech/hooks-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-usestate-useeffect-811636d1035e" target="_blank" rel="noopener noreffer ">https://medium.com/humanscape-tech/hooks-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-usestate-useeffect-811636d1035e</a></p>
 </li>
 <li>
-<p>패키지 이름 변경: <a href="https://stackoverflow.com/questions/37389905/change-package-name-for-android-in-react-native" target="_blank" rel="noopener noreffer">https://stackoverflow.com/questions/37389905/change-package-name-for-android-in-react-native</a></p>
+<p>패키지 이름 변경: <a href="https://stackoverflow.com/questions/37389905/change-package-name-for-android-in-react-native" target="_blank" rel="noopener noreffer ">https://stackoverflow.com/questions/37389905/change-package-name-for-android-in-react-native</a></p>
 </li>
 </ul>
 </div><div class="post-footer" id="post-footer">
@@ -720,9 +705,7 @@ const <span class="nv">googleSignin</span> <span class="o">=</span> <span class=
         <div class="post-info-line">
             <div class="post-info-mod">
                 <span>Updated on 2020-10-29</span>
-            </div>
-            <div class="post-info-license"></div>
-        </div>
+            </div></div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
                             <a class="link-to-markdown" href="/react-native_googlelogin/index.md" target="_blank">Read Markdown</a>
@@ -734,28 +717,28 @@ const <span class="nv">googleSignin</span> <span class="o">=</span> <span class=
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/react-native/">react-native</a>,&nbsp;<a href="/tags/web/">web</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/react-native/">React-Native</a>,&nbsp;<a href="/tags/web/">Web</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/react-native_navigation/" class="prev" rel="prev" title="React-Native_navigation"><i class="fas fa-angle-left fa-fw"></i>React-Native_navigation</a>
-            <a href="/interpretervscompiler_language/" class="next" rel="next" title="Interpreter VS Compiler_Language">Interpreter VS Compiler_Language<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/react-native_navigation/" class="prev" rel="prev" title="React-Native_navigation"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>React-Native_navigation</a>
+            <a href="/interpretervscompiler_language/" class="next" rel="next" title="Interpreter VS Compiler_Language">Interpreter VS Compiler_Language<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 <div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.143.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 
         <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
-                <i class="fas fa-arrow-up fa-fw"></i>
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
             </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
-                <i class="fas fa-comment fa-fw"></i>
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://colinder-github-io.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":-1},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><link rel="stylesheet" href="/css/_custom.scss"><script type="text/javascript" src="https://colinder-github-io.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":200},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

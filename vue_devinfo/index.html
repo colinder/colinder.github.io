@@ -4,31 +4,28 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Vue_DevInfo - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="Vue_DevInfo" />
-<meta property="og:description" content="​
-Vue Dev_Info  Vue 개발을 하면서 알게 된(깨닫게 된) 내용을 정리해 기록합니다.
- ​
-1. Vuex 동작에 대한 고찰  개인적으로 DB의 자료를 가져오는데 5개 이상의 테이블에서 DB를 가져오고, 이를 종합해 새로운 리스트 혹은 데이터를 만들어야 한다면 무조건 vuex의 사용을 추천합니다. 다만, vuex를 사용하는데 일반적으로 알려진 단계를 지켜야 하는 이유와 방법에 대하여 정리합니다.
-  위의 그래프를 보면 .vue 파일에서 .dispatch()를 사용에 vuex의 store.js에 등록된 actions의 함수를 동작하는 신호를 보냅니다." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://colinder.github.io/vue_devinfo/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-08-08T14:09:22+09:00" />
-<meta property="article:modified_time" content="2021-08-08T14:09:22+09:00" />
+        <title>Vue_DevInfo - colinder&#39;s blog</title><meta name="Description" content="Hello New World"><meta property="og:url" content="https://colinder.github.io/vue_devinfo/">
+  <meta property="og:site_name" content="colinder&#39;s blog">
+  <meta property="og:title" content="Vue_DevInfo">
+  <meta property="og:description" content="Vue 개발을 하면서 알게 된(깨닫게 된) 내용을 정리해 기록합니다.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2021-08-08T14:09:22+09:00">
+    <meta property="article:modified_time" content="2021-08-08T14:09:22+09:00">
+    <meta property="article:tag" content="Vue">
+    <meta property="og:image" content="https://colinder.github.io/logo.png">
 
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
-
-<meta name="twitter:title" content="Vue_DevInfo"/>
-<meta name="twitter:description" content="​
-Vue Dev_Info  Vue 개발을 하면서 알게 된(깨닫게 된) 내용을 정리해 기록합니다.
- ​
-1. Vuex 동작에 대한 고찰  개인적으로 DB의 자료를 가져오는데 5개 이상의 테이블에서 DB를 가져오고, 이를 종합해 새로운 리스트 혹은 데이터를 만들어야 한다면 무조건 vuex의 사용을 추천합니다. 다만, vuex를 사용하는데 일반적으로 알려진 단계를 지켜야 하는 이유와 방법에 대하여 정리합니다.
-  위의 그래프를 보면 .vue 파일에서 .dispatch()를 사용에 vuex의 store.js에 등록된 actions의 함수를 동작하는 신호를 보냅니다."/>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://colinder.github.io/logo.png">
+  <meta name="twitter:title" content="Vue_DevInfo">
+  <meta name="twitter:description" content="Vue 개발을 하면서 알게 된(깨닫게 된) 내용을 정리해 기록합니다.">
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/vue_devinfo/" /><link rel="prev" href="https://colinder.github.io/oracle_network_connect/" /><link rel="next" href="https://colinder.github.io/00_license/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/vue_devinfo/" /><link rel="prev" href="https://colinder.github.io/oracle_network_connect/" /><link rel="next" href="https://colinder.github.io/00_license/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -37,8 +34,8 @@ Vue Dev_Info  Vue 개발을 하면서 알게 된(깨닫게 된) 내용을 정리
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/vue_devinfo\/"
-        },"genre": "posts","keywords": "Vue","wordcount":  589 ,
-        "url": "https:\/\/colinder.github.io\/vue_devinfo\/","datePublished": "2021-08-08T14:09:22+09:00","dateModified": "2021-08-08T14:09:22+09:00","publisher": {
+        },"genre": "posts","keywords": "Vue","wordcount":  2073 ,
+        "url": "https:\/\/colinder.github.io\/vue_devinfo\/","datePublished": "2021-08-08T14:09:22+09:00","dateModified": "2021-08-08T14:09:22+09:00","license": "colinder","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -46,36 +43,35 @@ Vue Dev_Info  Vue 개발을 하면서 알게 된(깨닫게 된) 내용을 정리
             },"description": ""
     }
     </script></head>
-    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body data-header-desktop="auto" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="">Hello New World</a>
+            <a href="/" title="colinder&#39;s blog">Hello New World</a>
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
-                            <i class="fas fa-search fa-fw"></i>
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
                         </a>
                         <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
-                            <i class="fas fa-times-circle fa-fw"></i>
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-desktop">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
                         </span>
                     </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
-                    <i class="fas fa-adjust fa-fw"></i>
-                </a>
-            </div>
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
         </div>
     </div>
 </header><header class="mobile" id="header-mobile">
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="">Hello New World</a>
+                <a href="/" title="colinder&#39;s blog">Hello New World</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
@@ -85,41 +81,39 @@ Vue Dev_Info  Vue 개발을 하면서 알게 된(깨닫게 된) 내용을 정리
                     <div class="search mobile" id="search-mobile">
                         <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
-                            <i class="fas fa-search fa-fw"></i>
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
                         </a>
                         <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
-                            <i class="fas fa-times-circle fa-fw"></i>
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-mobile">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
                         </span>
                     </div>
                     <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
                         Cancel
                     </a>
                 </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
-                <i class="fas fa-adjust fa-fw"></i>
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
             </a></div>
     </div>
-</header>
-<div class="search-dropdown desktop">
-    <div id="search-dropdown-desktop"></div>
-</div>
-<div class="search-dropdown mobile">
-    <div id="search-dropdown-mobile"></div>
-</div>
-<main class="main">
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Vue_DevInfo</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/vue/"><i class="far fa-folder fa-fw"></i>vue</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-08-08">2021-08-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;589 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
-        </div><div class="details toc" id="toc-static"  kept="true">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Vue_DevInfo</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/vue/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Vue</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2021-08-08">2021-08-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2073 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="true">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
-                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
@@ -140,14 +134,12 @@ Vue Dev_Info  Vue 개발을 하면서 알게 된(깨닫게 된) 내용을 정리
             </div><div class="content" id="content"><p>​</p>
 <h1 id="vue-dev_info">Vue Dev_Info</h1>
 <blockquote>
-<p>Vue 개발을 하면서 알게 된(깨닫게 된) 내용을 정리해 기록합니다.</p>
-</blockquote>
+<p>Vue 개발을 하면서 알게 된(깨닫게 된) 내용을 정리해 기록합니다.</p></blockquote>
 <p>​</p>
 <h2 id="1-vuex-동작에-대한-고찰">1. Vuex 동작에 대한 고찰</h2>
 <blockquote>
-<p>개인적으로 DB의 자료를 가져오는데 5개 이상의 테이블에서 DB를 가져오고, 이를 종합해 새로운 리스트 혹은 데이터를 만들어야 한다면 무조건 <code>vuex의 사용</code>을 추천합니다. 
-다만, vuex를 사용하는데 일반적으로 알려진 단계를 지켜야 하는 이유와 방법에 대하여 정리합니다.</p>
-</blockquote>
+<p>개인적으로 DB의 자료를 가져오는데 5개 이상의 테이블에서 DB를 가져오고, 이를 종합해 새로운 리스트 혹은 데이터를 만들어야 한다면 무조건 <code>vuex의 사용</code>을 추천합니다.
+다만, vuex를 사용하는데 일반적으로 알려진 단계를 지켜야 하는 이유와 방법에 대하여 정리합니다.</p></blockquote>
 <div class="mermaid" id="id-1"></div>
 <p>위의 그래프를 보면 <code>.vue 파일</code>에서 <code>.dispatch()</code>를 사용에 vuex의 store.js에 등록된 <code>actions</code>의 함수를 동작하는 신호를 보냅니다.</p>
 <p>이어서 <code>actions</code>에서는 <code>.commit()</code>함수로 <code>mutations</code>를 동작하는 신호를 보냅니다.</p>
@@ -157,15 +149,14 @@ Vue Dev_Info  Vue 개발을 하면서 알게 된(깨닫게 된) 내용을 정리
 <p>그런데 <span style="color:green"><b>actions는 비동기</b></span>적 처리를 하며 <span style="color:blue"><b>mutatinos는 동기</b></span>적으로 처리합니다.</p>
 <p>이렇게 단계가 나누어져 있는 것에 이유는 1. 일단  <span style="color:green">사용자들의 요청(actions)는 접수받고(쌓아두고)</span> 2. 이를 반영하는  <span style="color:blue">처리(mutations)는 동기(순차)적으로 처리</span>하여 3. 데이터의 무결성을 유지하기 위함이라고 생각합니다.</p>
 <p>간단히 선착순의 개념을 떠올려 접수는 일단 쌓아두고 내 능력에 따라 처리하는 사람과 비슷한 모양새의 일처리 방식입니다.</p>
-<p>공식문서를 확인해보면 <a href="https://vuex.vuejs.org/kr/guide/actions.html" target="_blank" rel="noopener noreffer">actions도 동기적으로 사용</a>할 수 있습니다. 다만, 굳이 필요하지 않다면, vue 개발자가 의도한 흐름대로 사용하는 것을 권장하고 싶습니다. (동기적인 actions를 실제 프로젝트에 적용해보려했으나 쉽지 않았습니다&hellip;)</p>
+<p>공식문서를 확인해보면 <a href="https://vuex.vuejs.org/kr/guide/actions.html" target="_blank" rel="noopener noreffer ">actions도 동기적으로 사용</a>할 수 있습니다. 다만, 굳이 필요하지 않다면, vue 개발자가 의도한 흐름대로 사용하는 것을 권장하고 싶습니다. (동기적인 actions를 실제 프로젝트에 적용해보려했으나 쉽지 않았습니다&hellip;)</p>
 <p>​</p>
 <p>​</p>
 <h2 id="2-eventbus-사용시-주의사항">2. EventBus 사용시 주의사항</h2>
 <blockquote>
 <p>EventBus 사용 로직을 생각해보자</p>
 <p>어떤 동작(method)을 하여 신호나 데이터를 보내려는 파일(A)이 존재할 것이고,
-그 신호나 데이터를 받는 파일(B)이 존재한다.</p>
-</blockquote>
+그 신호나 데이터를 받는 파일(B)이 존재한다.</p></blockquote>
 <div class="mermaid" id="id-2"></div>
 <p>보통 A에서는 어떤 동작과 함께 신호나 데이터를 보내려는 동작(<code>EventBus.$emit()</code>)을 method에 등록하고,<br>
 B에서는 신호나 동작을 받는 것(<code>EventBus.$on()</code>)을 created나 mounted에 등록합니다.</p>
@@ -193,27 +184,27 @@ B에서는 신호나 동작을 받는 것(<code>EventBus.$on()</code>)을 create
 </span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">//// 이벤트버스 생성
-</span><span class="c1"></span><span class="kd">var</span> <span class="nx">EventBus</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">()</span>
-
-<span class="c1">//// 이벤트 발행
-</span><span class="c1">// 신호 or 데이터를 보내려는 .vue파일 안에서
-</span><span class="c1"></span><span class="nx">EventBus</span><span class="p">.</span><span class="nx">$emit</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">,</span> <span class="s1">&#39;hello world&#39;</span><span class="p">);</span>	<span class="c1">// message라는 이름의 신호에 &#39;hello world&#39;를 데이터로 보냄
-</span><span class="c1"></span>
-<span class="c1">//// 이벤트 수신(구독)
-</span><span class="c1">// 신호 or 데이터를 받으려는 .vue파일 안에서
-</span><span class="c1"></span><span class="nx">EventBus</span><span class="p">.</span><span class="nx">$on</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">text</span><span class="p">)</span> <span class="p">{</span>	<span class="c1">// message라는 신호를 수신하고 전달받은 인자(text)를
-</span><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span>						<span class="c1">// console에 찍어본다.
-</span><span class="c1"></span><span class="p">});</span>
-
-<span class="c1">//// 이벤트 한번 만 수신
-</span><span class="c1"></span><span class="nx">EventBus</span><span class="p">.</span><span class="nx">$once</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">text</span><span class="p">)</span> <span class="p">{</span> 	<span class="c1">// message라는 신호를 단 한번 만 수신한다.
-</span><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span>
-<span class="p">});</span>
-
-<span class="c1">//// 이벤트 제거
-</span><span class="c1"></span><span class="nx">EventBus</span><span class="p">.</span><span class="nx">$off</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">)</span>	<span class="c1">// message라는 신호를 제거(보통 beforeDestroy()에 등록)
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">//// 이벤트버스 생성
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">EventBus</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//// 이벤트 발행
+</span></span></span><span class="line"><span class="cl"><span class="c1">// 신호 or 데이터를 보내려는 .vue파일 안에서
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">EventBus</span><span class="p">.</span><span class="nx">$emit</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">,</span> <span class="s1">&#39;hello world&#39;</span><span class="p">);</span>	<span class="c1">// message라는 이름의 신호에 &#39;hello world&#39;를 데이터로 보냄
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">//// 이벤트 수신(구독)
+</span></span></span><span class="line"><span class="cl"><span class="c1">// 신호 or 데이터를 받으려는 .vue파일 안에서
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">EventBus</span><span class="p">.</span><span class="nx">$on</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">text</span><span class="p">)</span> <span class="p">{</span>	<span class="c1">// message라는 신호를 수신하고 전달받은 인자(text)를
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span>						<span class="c1">// console에 찍어본다.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//// 이벤트 한번 만 수신
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">EventBus</span><span class="p">.</span><span class="nx">$once</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">text</span><span class="p">)</span> <span class="p">{</span> 	<span class="c1">// message라는 신호를 단 한번 만 수신한다.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//// 이벤트 제거
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">EventBus</span><span class="p">.</span><span class="nx">$off</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">)</span>	<span class="c1">// message라는 신호를 제거(보통 beforeDestroy()에 등록)
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>개인적으로 <code>EventBus.$off()</code> 를 잘 사용하는 것이 중요하다고 생각합니다. <br>
 <b>이벤트 버스는 객체가 계속 쌓이기 때문에 <code>$off()</code>를 해주지 않으면 첫 번째 신호에서는 1번 동작, 두 번째 신호에서는 2번 동작, 세 번째 신호에서는 3번이 동작되어 누적된 신호를 수신하게 됩니다.</b></p>
@@ -225,33 +216,28 @@ B에서는 신호나 동작을 받는 것(<code>EventBus.$on()</code>)을 create
 Back은 DB 자료를 넘겨주기만 하고 Front 중심으로 개발을 해보았습니다.</p>
 <p>그러지 맙시다ㅎ.</p>
 <p>DB를 최대한 정교하게 설정하고 Backend에서 최대한 필요한 형태로 자료를 변환하여 Front로 넘겨주는 것이 가장 이상적인 방법이라는 생각이 들었습니다. Front에서 데이터 형태를 변환하여 사용하것도 좋지만, <code>.vue 파일</code>과 <code>.js 파일</code>과 <code>vuex</code>간의 데이터 연동되는 속도에 이슈가 발생할 가능성이 매우 높습니다. lifecycle에 능통하지않고, 참조하는 파일이 많은 경우에는 최대한 back에서 처리를 한다음 front로 데이터를 넘겨줄 수 있게 기획하는 것을 권장합니다.</p>
-<p>추가로 axios통신을 하는데 당연히 DB에 적제된 순서대로 데이터가 Front로 넘어오겠지 했는데, sort를 해주지 않으면 데이터가 무작위 순서로 전달되었습니다. sort하여 데이터를 넘겨주는 것을 권장합니다.</p>
-</blockquote>
+<p>추가로 axios통신을 하는데 당연히 DB에 적제된 순서대로 데이터가 Front로 넘어오겠지 했는데, sort를 해주지 않으면 데이터가 무작위 순서로 전달되었습니다. sort하여 데이터를 넘겨주는 것을 권장합니다.</p></blockquote>
 <p>​</p>
 <p>​</p>
 <h2 id="4-vuex---actionsasync-await">4. Vuex - actions(async await)</h2>
 <blockquote>
-<p>동기화 처리를 위해 async await을 사용하려 했습니다. 
+<p>동기화 처리를 위해 async await을 사용하려 했습니다.
 다만 원하는 대로 개발은 되지 않았습니다. 많은 레퍼런스를 찾아보았고 방법을 찾았지만 적용하는 것은 어려웠습니다.</p>
 <p>원인 1.  actions에서 axios</p>
-<p>.vue  → (.dispatch()) → actions → (.commit()) → mutations → axios 의 로직으로 개발하였습니다. 
+<p>.vue  → (.dispatch()) → actions → (.commit()) → mutations → axios 의 로직으로 개발하였습니다.
 하지만 제가 확인한 레퍼런스들 중 API 통신을 actions에서 axios를 사용하는 형태의 async await 구현이 많았습니다.
-또 저는 actions에서  여러개의 .commit()을 날려 여러개의 mutations동작을 원했고 이미 개발된 형태에서 변경하는데 시간이 많이 소요될 것으로 예상해 acitions에서 API통신 하는 방식으로 개발하지 못했습니다.</p>
-</blockquote>
+또 저는 actions에서  여러개의 .commit()을 날려 여러개의 mutations동작을 원했고 이미 개발된 형태에서 변경하는데 시간이 많이 소요될 것으로 예상해 acitions에서 API통신 하는 방식으로 개발하지 못했습니다.</p></blockquote>
 <h4 id="의도한-개발-흐름">😂의도한 개발 흐름</h4>
 <div class="mermaid" id="id-3"></div>
 <blockquote>
-<p>혹시 1개의 actions에서 여러개의 .commit()을 날리는데 async await을 구현하는 레퍼런스 혹은 방법을 알고있다면 조언 부탁드립니다.</p>
-</blockquote>
+<p>혹시 1개의 actions에서 여러개의 .commit()을 날리는데 async await을 구현하는 레퍼런스 혹은 방법을 알고있다면 조언 부탁드립니다.</p></blockquote>
 <p>​</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
                 <span>Updated on 2021-08-08</span>
-            </div>
-            <div class="post-info-license"></div>
-        </div>
+            </div></div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
                             <a class="link-to-markdown" href="/vue_devinfo/index.md" target="_blank">Read Markdown</a>
@@ -263,28 +249,28 @@ Back은 DB 자료를 넘겨주기만 하고 Front 중심으로 개발을 해보�
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/vue/">vue</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/vue/">Vue</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/oracle_network_connect/" class="prev" rel="prev" title="Oracle 18C_network_connect"><i class="fas fa-angle-left fa-fw"></i>Oracle 18C_network_connect</a>
-            <a href="/00_license/" class="next" rel="next" title="Software License">Software License<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/oracle_network_connect/" class="prev" rel="prev" title="Oracle 18C_network_connect"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Oracle 18C_network_connect</a>
+            <a href="/00_license/" class="next" rel="next" title="Software License">Software License<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 <div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.143.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 
         <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
-                <i class="fas fa-arrow-up fa-fw"></i>
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
             </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
-                <i class="fas fa-comment fa-fw"></i>
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/mermaid/mermaid.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://colinder-github-io.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/mermaid/mermaid.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":-1},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"id-1":"\r\ngraph LR;\r\n    A[.vue 파일] --\u003e|\".dispatch()\"| B(actions)\r\n    B --\u003e |\".commit()\"|C(mutations)\r","id-2":"\r\ngraph LR;\r\n    A(A.vue `EventBus.$emit`) --\u003e B(B.vue `EventBus.$on`)\r","id-3":"\r\ngraph LR;\r\n    A[.vue 파일] --\u003e|\".dispatch()\"| B(actions)\r\n    B --\u003e |\".commit()\"|C(mutation 1)\r\n    C --\u003e |\"axios\"|D[backend]\r\n    D --\u003e |\"response\"|C\r\n    C --\u003e |\"완료\"|B\r\n    B --\u003e |\".commit()\"|E(mutation 2)\r\n    E --\u003e |\"axios\"|F[backend]\r\n    F --\u003e |\"response\"|E\r\n    E --\u003e |\"완료\"|B\r\n    B --\u003e |\"next commit()...\"|G(mutation 3)\r"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><link rel="stylesheet" href="/css/_custom.scss"><script type="text/javascript" src="https://colinder-github-io.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript" src="/lib/mermaid/mermaid.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":200},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"id-1":"\r\ngraph LR;\r\n    A[.vue 파일] --\u003e|\".dispatch()\"| B(actions)\r\n    B --\u003e |\".commit()\"|C(mutations)\r","id-2":"\r\ngraph LR;\r\n    A(A.vue `EventBus.$emit`) --\u003e B(B.vue `EventBus.$on`)\r","id-3":"\r\ngraph LR;\r\n    A[.vue 파일] --\u003e|\".dispatch()\"| B(actions)\r\n    B --\u003e |\".commit()\"|C(mutation 1)\r\n    C --\u003e |\"axios\"|D[backend]\r\n    D --\u003e |\"response\"|C\r\n    C --\u003e |\"완료\"|B\r\n    B --\u003e |\".commit()\"|E(mutation 2)\r\n    E --\u003e |\"axios\"|F[backend]\r\n    F --\u003e |\"response\"|E\r\n    E --\u003e |\"완료\"|B\r\n    B --\u003e |\"next commit()...\"|G(mutation 3)\r"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

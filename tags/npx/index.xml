@@ -1,19 +1,16 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>npx - Tag - </title>
+        <title>Npx - Tag - colinder&#39;s blog</title>
         <link>https://colinder.github.io/tags/npx/</link>
-        <description>npx - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 20 Apr 2023 15:10:58 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/npx/" rel="self" type="application/rss+xml" /><item>
+        <description>Npx - Tag - colinder&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Thu, 20 Apr 2023 15:10:58 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/npx/" rel="self" type="application/rss+xml" /><item>
     <title>npm? npx?</title>
     <link>https://colinder.github.io/npm_npx/</link>
     <pubDate>Thu, 20 Apr 2023 15:10:58 &#43;0900</pubDate>
-    <author>Author</author>
+    <author>colinder</author>
     <guid>https://colinder.github.io/npm_npx/</guid>
-    <description><![CDATA[​
-npm Vs npx  예전부터 궁금했지만 굳이 알아볼 필요까지는 없었다가, 여드름이 터지듯 갑자기 궁금해서져 알아봤습니다.
- ​
-​
-가장 큰 차이는 설치를 할 것인가 아닌가   컴퓨터에 패키지 전역으로 설치하여 실행: npm 컴퓨터에 패키지 설치 없이 이번만 실행: npx     npm는 컴퓨터 전역(global)에 패키지(npm 모듈 시스템)를 설치한다는 의미입니다.
-만약 npm -g와 같이 뒤에 -g가 있다면, 전역으로 설치한다는 옵션입니다. -g 옵션이 없으면 NPM 패키지는 node_modules라는 이름의 폴더 안에 저장됩니다.]]></description>
-</item></channel>
+    <description><![CDATA[npm과 npx에 대하여 정리합니다.]]></description>
+</item>
+</channel>
 </rss>

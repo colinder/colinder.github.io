@@ -1,0 +1,88 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tags - Tag - colinder&#39;s blog</title>
+        <link>https://colinder.github.io/tags/</link>
+        <description>Tags - Tag - colinder&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Mon, 19 Jan 2026 11:10:00 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>Etax</title>
+    <link>https://colinder.github.io/tags/etax/</link>
+    <pubDate>Mon, 19 Jan 2026 11:10:00 &#43;0900</pubDate>
+    <author>colinder</author>
+    <guid>https://colinder.github.io/tags/etax/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Hometax</title>
+    <link>https://colinder.github.io/tags/hometax/</link>
+    <pubDate>Mon, 19 Jan 2026 11:10:00 &#43;0900</pubDate>
+    <author>colinder</author>
+    <guid>https://colinder.github.io/tags/hometax/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Api</title>
+    <link>https://colinder.github.io/tags/api/</link>
+    <pubDate>Wed, 31 Jan 2024 09:48:40 &#43;0900</pubDate>
+    <author>colinder</author>
+    <guid>https://colinder.github.io/tags/api/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>REST</title>
+    <link>https://colinder.github.io/tags/rest/</link>
+    <pubDate>Wed, 31 Jan 2024 09:48:40 &#43;0900</pubDate>
+    <author>colinder</author>
+    <guid>https://colinder.github.io/tags/rest/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Decorator</title>
+    <link>https://colinder.github.io/tags/decorator/</link>
+    <pubDate>Wed, 31 Jan 2024 09:48:31 &#43;0900</pubDate>
+    <author>colinder</author>
+    <guid>https://colinder.github.io/tags/decorator/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Nest</title>
+    <link>https://colinder.github.io/tags/nest/</link>
+    <pubDate>Sun, 14 Jan 2024 09:14:13 &#43;0900</pubDate>
+    <author>colinder</author>
+    <guid>https://colinder.github.io/tags/nest/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Dynamic Type</title>
+    <link>https://colinder.github.io/tags/dynamic-type/</link>
+    <pubDate>Wed, 03 Jan 2024 14:26:13 &#43;0900</pubDate>
+    <author>colinder</author>
+    <guid>https://colinder.github.io/tags/dynamic-type/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Static Type</title>
+    <link>https://colinder.github.io/tags/static-type/</link>
+    <pubDate>Wed, 03 Jan 2024 14:26:13 &#43;0900</pubDate>
+    <author>colinder</author>
+    <guid>https://colinder.github.io/tags/static-type/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>JavaScript</title>
+    <link>https://colinder.github.io/tags/javascript/</link>
+    <pubDate>Wed, 03 Jan 2024 14:23:13 &#43;0900</pubDate>
+    <author>colinder</author>
+    <guid>https://colinder.github.io/tags/javascript/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Typescript</title>
+    <link>https://colinder.github.io/tags/typescript/</link>
+    <pubDate>Wed, 03 Jan 2024 14:23:13 &#43;0900</pubDate>
+    <author>colinder</author>
+    <guid>https://colinder.github.io/tags/typescript/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
+</rss>

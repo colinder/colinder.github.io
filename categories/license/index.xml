@@ -1,37 +1,32 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>license - Category - </title>
+        <title>License - Category - colinder&#39;s blog</title>
         <link>https://colinder.github.io/categories/license/</link>
-        <description>license - Category - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 02 Sep 2021 16:37:00 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/license/" rel="self" type="application/rss+xml" /><item>
+        <description>License - Category - colinder&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Thu, 02 Sep 2021 16:37:00 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/license/" rel="self" type="application/rss+xml" /><item>
     <title>License 배포 시 소스코드 제공 의무와 범위</title>
     <link>https://colinder.github.io/01_dutis_and_scope_at_deployment/</link>
     <pubDate>Thu, 02 Sep 2021 16:37:00 &#43;0900</pubDate>
-    <author>Author</author>
+    <author>colinder</author>
     <guid>https://colinder.github.io/01_dutis_and_scope_at_deployment/</guid>
-    <description><![CDATA[​
-License 배포 시 소스코드 제공 의무와 범위  License에 대하여 알아보다보니, 배포 시 준수해야 하는 내용이 별도로 존재하고 있어 오픈소스 SW라이선스 종합정보시스템에서 발최한 내용을 추가로 정리합니다.
- ​
-​
-- Work Based on the Code -제공의무: 원 저작물의 소스코드를 원본 그대로, 혹은 수정하여 새로운 SW에 포함하였을 경우 -제공범위: 원 저작물의 소스코드가 포함되어, 파생 저작물로 인정되는 범위내의 모든 소스코드 -GNU GPL, GNU AGPL 등
-​
-- Derivative Work -제공의무: 원 저작물의 소스코드를 수정하여 사용한 경우 제공의무가 존재하며, 수정 없이 그대로 사용하였을 경우에는 소스코드를 제공하지 않아도 됨 -제공범위: 원 저작물을 사용함에 있어 수정을 거쳤다면, 원 저작물의 소스코드에서부터 존재하던 파일을 모두 공개해야 하며, 파생 저작물의 저작자가 추가적으로 생성한 부분에 대해서는 공개하지 않아도 됨 -GNU LGPL, NASA Open Source Agreement, Simple Public License 등]]></description>
-</item><item>
+    <description><![CDATA[<p>​</p>
+<h1 id="license-배포-시-span-stylecolor-ff9ca7소스코드-제공-의무와-범위span">License 배포 시 <span style="color: #ff9ca7">소스코드 제공 의무와 범위</span></h1>
+<blockquote>
+<p>License에 대하여 알아보다보니, 배포 시 준수해야 하는 내용이 별도로 존재하고 있어 <strong>오픈소스 SW라이선스 종합정보시스템</strong>에서 발최한 내용을 추가로 정리합니다.</p>]]></description>
+</item>
+<item>
     <title>Software License</title>
     <link>https://colinder.github.io/00_license/</link>
     <pubDate>Thu, 02 Sep 2021 09:54:00 &#43;0900</pubDate>
-    <author>Author</author>
+    <author>colinder</author>
     <guid>https://colinder.github.io/00_license/</guid>
-    <description><![CDATA[​
-License  실무를 담당하고 있다면, 새로운 프로젝트에 앞서 어떤 기술을 사용할 것인지 조사하는 것도 업무중의 하나입니다.
-근데 항상 고민이 되는 부분. 비용과 권한
-그리고 비용과 권한 정리되어 있는 것이 License
- ​
-한국저작권위원회의 OLIS(오픈소스SW 라이선스 종합정보시스템)에는 라이선스에 대한 내용이 잘 정리 되어 있습니다. 많은 라이선스들이 있지만,
-접해본 라이선스 위주로, 개발을 위해 중요하게 보았던 부분을 정리합니다.
-​
-​
-1. MIT License  아마 가장 흔하게 접하는 라이선스일 것입니다.
-&ldquo;MIT 라이선스(MIT License)는 미국 매사추세츠 공과대학교(MIT)에서 해당 대학의 소프트웨어 공학도들을 돕기 위해 개발한 라이선스다.]]></description>
-</item></channel>
+    <description><![CDATA[<p>​</p>
+<h1 id="license">License</h1>
+<blockquote>
+<p>실무를 담당하고 있다면, 새로운 프로젝트에 앞서 어떤 기술을 사용할 것인지 조사하는 것도 업무중의 하나입니다.</p>
+<p>근데 항상 고민이 되는 부분. <strong>비용</strong>과 <strong>권한</strong></p>
+<p>그리고 비용과 권한 정리되어 있는 것이 <strong>License</strong></p>]]></description>
+</item>
+</channel>
 </rss>

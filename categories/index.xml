@@ -1,0 +1,88 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Categories - Category - colinder&#39;s blog</title>
+        <link>https://colinder.github.io/categories/</link>
+        <description>Categories - Category - colinder&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Wed, 31 Jan 2024 09:48:40 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>Api</title>
+    <link>https://colinder.github.io/categories/api/</link>
+    <pubDate>Wed, 31 Jan 2024 09:48:40 &#43;0900</pubDate>
+    <author>colinder</author>
+    <guid>https://colinder.github.io/categories/api/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>REST</title>
+    <link>https://colinder.github.io/categories/rest/</link>
+    <pubDate>Wed, 31 Jan 2024 09:48:40 &#43;0900</pubDate>
+    <author>colinder</author>
+    <guid>https://colinder.github.io/categories/rest/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>면접대비</title>
+    <link>https://colinder.github.io/categories/%EB%A9%B4%EC%A0%91%EB%8C%80%EB%B9%84/</link>
+    <pubDate>Wed, 31 Jan 2024 09:48:40 &#43;0900</pubDate>
+    <author>colinder</author>
+    <guid>https://colinder.github.io/categories/%EB%A9%B4%EC%A0%91%EB%8C%80%EB%B9%84/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Nest</title>
+    <link>https://colinder.github.io/categories/nest/</link>
+    <pubDate>Sun, 14 Jan 2024 09:14:13 &#43;0900</pubDate>
+    <author>colinder</author>
+    <guid>https://colinder.github.io/categories/nest/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Dynamic Type</title>
+    <link>https://colinder.github.io/categories/dynamic-type/</link>
+    <pubDate>Wed, 03 Jan 2024 14:26:13 &#43;0900</pubDate>
+    <author>colinder</author>
+    <guid>https://colinder.github.io/categories/dynamic-type/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Static Type</title>
+    <link>https://colinder.github.io/categories/static-type/</link>
+    <pubDate>Wed, 03 Jan 2024 14:26:13 &#43;0900</pubDate>
+    <author>colinder</author>
+    <guid>https://colinder.github.io/categories/static-type/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>JavaScript</title>
+    <link>https://colinder.github.io/categories/javascript/</link>
+    <pubDate>Wed, 03 Jan 2024 14:23:13 &#43;0900</pubDate>
+    <author>colinder</author>
+    <guid>https://colinder.github.io/categories/javascript/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Typescript</title>
+    <link>https://colinder.github.io/categories/typescript/</link>
+    <pubDate>Wed, 03 Jan 2024 14:23:13 &#43;0900</pubDate>
+    <author>colinder</author>
+    <guid>https://colinder.github.io/categories/typescript/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Computer Science</title>
+    <link>https://colinder.github.io/categories/computer-science/</link>
+    <pubDate>Tue, 17 Oct 2023 12:24:58 &#43;0900</pubDate>
+    <author>colinder</author>
+    <guid>https://colinder.github.io/categories/computer-science/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>시간복잡도</title>
+    <link>https://colinder.github.io/categories/%EC%8B%9C%EA%B0%84%EB%B3%B5%EC%9E%A1%EB%8F%84/</link>
+    <pubDate>Tue, 17 Oct 2023 12:24:58 &#43;0900</pubDate>
+    <author>colinder</author>
+    <guid>https://colinder.github.io/categories/%EC%8B%9C%EA%B0%84%EB%B3%B5%EC%9E%A1%EB%8F%84/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
+</rss>

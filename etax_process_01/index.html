@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>전자(세금)계산서 발급 기능 개발기 part.1 - colinder&#39;s blog</title><meta name="Description" content="Hello New World"><meta property="og:url" content="https://colinder.github.io/etax_process_01/">
+  <meta property="og:site_name" content="colinder&#39;s blog">
+  <meta property="og:title" content="전자(세금)계산서 발급 기능 개발기 part.1">
+  <meta property="og:description" content="전자(세금)계산서를 개발하기 위한 과정과 소스코드에 대하여 정리합니다.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-01-19T11:10:00+09:00">
+    <meta property="article:modified_time" content="2026-01-19T11:10:00+09:00">
+    <meta property="article:tag" content="Etax">
+    <meta property="article:tag" content="Hometax">
+    <meta property="og:image" content="https://colinder.github.io/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://colinder.github.io/logo.png">
+  <meta name="twitter:title" content="전자(세금)계산서 발급 기능 개발기 part.1">
+  <meta name="twitter:description" content="전자(세금)계산서를 개발하기 위한 과정과 소스코드에 대하여 정리합니다.">
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/etax_process_01/" /><link rel="prev" href="https://colinder.github.io/restapi/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "전자(세금)계산서 발급 기능 개발기 part.1",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/colinder.github.io\/etax_process_01\/"
+        },"genre": "posts","keywords": "etax, hometax","wordcount":  2468 ,
+        "url": "https:\/\/colinder.github.io\/etax_process_01\/","datePublished": "2026-01-19T11:10:00+09:00","dateModified": "2026-01-19T11:10:00+09:00","license": "colinder","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "colinder"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="auto" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="colinder&#39;s blog">Hello New World</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="colinder&#39;s blog">Hello New World</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">전자(세금)계산서 발급 기능 개발기 part.1</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>colinder</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-01-19">2026-01-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2468 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#전체-프로세스">전체 프로세스</a>
+      <ul>
+        <li><a href="#1-국세청에-부서사용자-신청하기">1. 국세청에 부서사용자 신청하기</a></li>
+        <li><a href="#2-부서사용자에서-지원하는-표준인증검증-통과하기">2. 부서사용자에서 지원하는 표준인증검증 통과하기</a>
+          <ul>
+            <li><a href="#2-1-xml-전자세금계산서-제작">2-1 XML 전자세금계산서 제작</a></li>
+            <li><a href="#2-2-xml-전자서명">2-2 XML 전자서명</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#뒤에-계속">뒤에 계속</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>​</p>
+<h1 id="국세청-전자세금계산서-발급_part1">국세청 전자세금계산서 발급_part.1</h1>
+<blockquote>
+<p>국세청의 전자세금계산서 발급 기능을 혼자 개발하면서 확인한 프로세스, 문서 및 개인적인 노하우 등을 정리한다.</p>
+<p>또한 이 기능을 개발하는데 <a href="https://github.com/ruseel/kr-etax-sample" target="_blank" rel="noopener noreffer ">https://github.com/ruseel/kr-etax-sample</a> 안내가 도움이 되었다.</p></blockquote>
+<p>​</p>
+<h2 id="전체-프로세스">전체 프로세스</h2>
+<ol>
+<li>국세청에 부서사용자 신청하기</li>
+<li>부서사용자에서 지원하는 표준인증검증 통과하기</li>
+<li>실사기술검증 통과하기</li>
+<li>등기로 국세청 실서버에 대한 정보 수신하기</li>
+<li>실서비스 운영</li>
+</ol>
+<p>​</p>
+<p>국세청 전자세금계산서 발급기능의 개발 및 연동을 위해서는 우선 국세청에 해당 기능을 개발 및 사용하겠다는 신청을 해야 한다. 그 시작이 부서사용자 신청이다. 세금계산서 발급을 지원해주는 경우는 <strong>두 가지</strong>가 있다.</p>
+<ol>
+<li>자체 시스템을 보유한 경우 (A)</li>
+<li>ASP(Application Service Provider, 전자세금계산서 발급 기능을 제공하는 업체)를 사용하는 경우 (B)</li>
+</ol>
+<p>이 둘의 흐름을 간략히 표현하자면 아래와 같다.</p>
+<ul>
+<li>
+<p>(A) 의 경우</p>
+<div class="mermaid" id="id-1"></div>
+<p>​</p>
+</li>
+<li>
+<p>(B) 의 경우</p>
+<div class="mermaid" id="id-2"></div>
+</li>
+</ul>
+<p>해당 문서는 이 중 (B), 즉 <strong>ASP</strong>의 개발을 설명한다.</p>
+<p>​</p>
+<h3 id="1-국세청에-부서사용자-신청하기">1. 국세청에 부서사용자 신청하기</h3>
+<blockquote>
+<p>국세청 전자세금계산서 발급기능을 개발하겠다고 국세청에게 신고하는 단계</p></blockquote>
+<p>(신청에 따른 행정 절차는 생략한다.) 이때 참고해야 하는 문서는 <strong>표준전자세금계산서개발지침(17년8월).pdf</strong>이다. 작성된지 매우 오래된 문서이고 간간히 잘못기재된 내용, 잘못된 내용이 섞여있어, 참과 거짓을 분석하며 봐야 한다. 국세청에서도 현재 기준(25년 12월) 관리되고 있지 않아, 의문점을 문의해도 해답을 받을 수 없었다.</p>
+<p>하지만 전자세금계산서를 발급하기 위한 유일한 가이드 문서라 이를 무시할 수도 없다. 달달 외울 정도로 봐야 한다.</p>
+<p>​</p>
+<h3 id="2-부서사용자에서-지원하는-표준인증검증-통과하기">2. 부서사용자에서 지원하는 표준인증검증 통과하기</h3>
+<blockquote>
+<p>국세청 전자세금계산서 발급기능의 개발 및 연동을 위해서 <strong>단위 기능 테스트</strong>하는 단계</p></blockquote>
+<p>필자는 python이 주 언어라, fastapi를 써서 개발했으며, xml 파일을 다루어야 하는데 이는 java의 라이브러리들을 활용했다. python 라이브러리에도 &ldquo;signxml&rdquo; 등을 써봤으나 여러 문제들이 발생했고, 오랬동안 문제없이 사용되었던 java 라이브러리들을 사용해 개발하는게 믿을 수 있고 속도감있게 개발이 가능했다. (&ldquo;signxml&quot;을 쓰면 안된다 라기보다, 필자가 깊이있게 써보지 않아서 이게 되는지 안되는지 모르겠다.) 하지만, java 라이브러리를 python에 호환해서 사용하려면 배포시 docker 파일이 복잡해지는 등 어려움이 있지만, 이를 감수하고 그냥 사용했다.</p>
+<p><strong>여기서부터 헬이었다.</strong> 혼자 해당 기능을 개발해야 하는 상황이어서, 국세청 담당자랑도 통화를 많이하고, 혼자 표준지침 문서를 달달 외울 정로도 봤다.</p>
+<p>​</p>
+<p>필작 생각하기에 표준인증검증은 크게 4가지 파트인 것 같다.</p>
+<ol>
+<li>전자세금계산서 제작</li>
+<li>전자세금계산서 암호화</li>
+<li>전자세금계산서 패키징</li>
+<li>국세청에게 전송 및 응답</li>
+</ol>
+<p>​</p>
+<p>또한 발급 프로세스를 도식화하면 아래와 같다.</p>
+<div class="mermaid" id="id-3"></div>
+<p>​</p>
+<h4 id="2-1-xml-전자세금계산서-제작">2-1 XML 전자세금계산서 제작</h4>
+<blockquote>
+<p><strong>XML</strong>(e<strong>X</strong>tensible <strong>M</strong>arkup <strong>L</strong>anguage(확장 가능한 마크업 언어)) 매우 낯선 언어였다. 필자가 이해한 건 그냥 데이터를 주고 받는 과거의 표준?정도의 느낌이다. 현재 테이터 통신을 위한 구조로 JSON이 사실상 표준인 상황에서 xml을 조금 알아두면 표준지침을 이해하는데 도움이 된다.</p></blockquote>
+<p>먼저 세금계산서를 제작하기 위해서 python의 lxml 라이브러리를 사용했다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">lxml</span> <span class="kn">import</span> <span class="n">etree</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">TAX_NS</span> <span class="o">=</span> <span class="s2">&#34;urn:kr:or:kec:standard:Tax:ReusableAggregateBusinessInformationEntitySchemaModule:1:0&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">XSI_NS</span> <span class="o">=</span> <span class="s2">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 일부러 둘의 순서를 뒤틈 &gt; 정규화함수가 정상적으로 동작하는지 확인하기 위함.</span>
+</span></span><span class="line"><span class="cl"><span class="n">NSMAP</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;xsi&#34;</span><span class="p">:</span> <span class="n">XSI_NS</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="kc">None</span><span class="p">:</span> <span class="n">TAX_NS</span><span class="p">,</span>  <span class="c1"># 기본 네임스페이스</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># root 생성</span>
+</span></span><span class="line"><span class="cl"><span class="n">tax_invoice</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">Element</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;TaxInvoice&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">nsmap</span><span class="o">=</span><span class="n">NSMAP</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">attrib</span><span class="o">=</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;{</span><span class="si">%s</span><span class="s2">}schemaLocation&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">%</span> <span class="n">XSI_NS</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">TAX_NS</span><span class="si">}</span><span class="s2"> http://www.kec.or.kr/standard/Tax/TaxInvoiceSchemaModule_1.0.xsd&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">### [element 순서 중요]</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## &lt;ExchangedDocument&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">exchanged_doc</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">SubElement</span><span class="p">(</span><span class="n">tax_invoice</span><span class="p">,</span> <span class="s2">&#34;ExchangedDocument&#34;</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>이후 정규화를 해야 한다. 필자는 함수를 만들어서 사용했다. 정규화 방식은 표준지침에 명시되어있고 그 방법대로 해야 한다.</p>
+<p>​</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">lxml</span> <span class="kn">import</span> <span class="n">etree</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">canonicalize</span><span class="p">(</span><span class="n">xml_str</span><span class="p">,</span> <span class="n">input_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bytes</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">parser</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">XMLParser</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">root</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">fromstring</span><span class="p">(</span><span class="n">xml_str</span><span class="p">,</span> <span class="n">parser</span><span class="o">=</span><span class="n">parser</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">c14n_bytes</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">tostring</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">root</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">method</span><span class="o">=</span><span class="s2">&#34;c14n&#34;</span><span class="p">,</span>  <span class="c1"># Canonical XML</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">c14n_bytes</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<h4 id="2-2-xml-전자서명">2-2 XML 전자서명</h4>
+<blockquote>
+<p>여기서부터는 java 라이브러리들을 사용한다.</p></blockquote>
+<p>python의 구조를 먼저 보자면,</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># import </span>
+</span></span><span class="line"><span class="cl"><span class="n">SignXML</span> <span class="o">=</span> <span class="n">jpype</span><span class="o">.</span><span class="n">JClass</span><span class="p">(</span><span class="s2">&#34;com.barostudio.eTaxInvoice.SignXML&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 03. 서명된 XML 생성</span>
+</span></span><span class="line"><span class="cl"><span class="n">signed_bytes</span> <span class="o">=</span> <span class="n">SignXML</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">bytearray</span><span class="p">(</span><span class="n">canonicalized_etax</span><span class="p">),</span>  <span class="c1"># XML bytes</span>
+</span></span><span class="line"><span class="cl">    <span class="n">seller_private_key_java</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">seller_x509_certificate_cert_java</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>여기서. seller_private_key_java와 seller_x509_certificate_cert_java는 <strong>공급한 자</strong>의 인증서 정보를 넣으면 된다. 공급한 자의 인증서 정보를 추출함에 있어 front와 back 두 곳에서 추출해야 했기에 javascript와 python 둘 다 인증서를 열어보는 코드를 만들었다. 인증서에서 pem 키들은 상대적으로 쉽게 꺼낼 수 있는데, <strong>Rvalue</strong>는 생각보다 애먹었다. python은 subprocess를 써서, javascript는 node-forge를 써서 찾을 수 있었다.</p>
+<p>이후 암호화를 하는데 서명하는 것은 java를 사용했다. (사실 이 부분은 단일 언어로도 할 수 있었을 것 같다.)</p>
+<ul>
+<li>
+<p>SignXML.java</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">package</span><span class="w"> </span><span class="nn">com.barostudio.eTaxInvoice</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.ByteArrayInputStream</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.ByteArrayOutputStream</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.FileInputStream</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.FileOutputStream</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.InputStream</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.OutputStream</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.security.KeyStore</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.security.PrivateKey</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.security.Security</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.security.Signature</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.security.cert.X509Certificate</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Enumeration</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">javax.xml.crypto.dsig.DigestMethod</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">javax.xml.parsers.DocumentBuilder</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">javax.xml.parsers.DocumentBuilderFactory</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.apache.xml.security.signature.XMLSignature</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.apache.xml.security.transforms.Transforms</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.apache.xml.security.utils.Constants</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.apache.xml.security.utils.XMLUtils</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.apache.xpath.XPathAPI</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.bouncycastle.jce.provider.BouncyCastleProvider</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.w3c.dom.Document</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.w3c.dom.Element</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.w3c.dom.Node</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.apache.xml.security.c14n.Canonicalizer</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SignXML</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">byte</span><span class="o">[]</span><span class="w"> </span><span class="nf">sign</span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="kt">byte</span><span class="o">[]</span><span class="w"> </span><span class="n">unsignedXmlBytes</span><span class="p">,</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">PrivateKey</span><span class="w"> </span><span class="n">privateKey</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">X509Certificate</span><span class="w"> </span><span class="n">cert</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 메모리 기반 처리</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">InputStream</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ByteArrayInputStream</span><span class="p">(</span><span class="n">unsignedXmlBytes</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">             </span><span class="n">ByteArrayOutputStream</span><span class="w"> </span><span class="n">os</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ByteArrayOutputStream</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c1">// 서명 수행</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">signn</span><span class="p">(</span><span class="n">privateKey</span><span class="p">,</span><span class="w"> </span><span class="n">cert</span><span class="p">,</span><span class="w"> </span><span class="n">is</span><span class="p">,</span><span class="w"> </span><span class="n">os</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">os</span><span class="p">.</span><span class="na">toByteArray</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">signn</span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">PrivateKey</span><span class="w"> </span><span class="n">privateKey</span><span class="p">,</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">X509Certificate</span><span class="w"> </span><span class="n">cert</span><span class="p">,</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">InputStream</span><span class="w"> </span><span class="n">is</span><span class="p">,</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">OutputStream</span><span class="w"> </span><span class="n">os</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">org</span><span class="p">.</span><span class="na">apache</span><span class="p">.</span><span class="na">xml</span><span class="p">.</span><span class="na">security</span><span class="p">.</span><span class="na">Init</span><span class="p">.</span><span class="na">init</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="c1">// Document</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="c1">// 입력 스트림에서 XML을 읽어 DOM(Document Object Model) 객체로 파싱</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">DocumentBuilderFactory</span><span class="w"> </span><span class="n">dbf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DocumentBuilderFactory</span><span class="p">.</span><span class="na">newInstance</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">dbf</span><span class="p">.</span><span class="na">setNamespaceAware</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">DocumentBuilder</span><span class="w"> </span><span class="n">db</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dbf</span><span class="p">.</span><span class="na">newDocumentBuilder</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">Document</span><span class="w"> </span><span class="n">doc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="na">parse</span><span class="p">(</span><span class="n">is</span><span class="p">);</span><span class="w"> </span><span class="c1">// unsign XML 문서</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="c1">// XMLSignature</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="c1">// SHA256을 사용하는 RSA 서명 객체 생성</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">String</span><span class="w"> </span><span class="n">BaseURI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">XMLSignature</span><span class="w"> </span><span class="n">sig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">XMLSignature</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span><span class="w"> </span><span class="n">BaseURI</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">											</span><span class="n">XMLSignature</span><span class="p">.</span><span class="na">ALGO_ID_SIGNATURE_RSA_SHA256</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="c1">// W3C Element DOM</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="c1">// XPath로 &lt;TaxInvoiceDocument&gt; 요소를 찾음</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="c1">// 그 앞에 서명(Signature) 엘리먼트를 삽입</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">			</span><span class="n">Element</span><span class="w"> </span><span class="n">ctx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">doc</span><span class="p">.</span><span class="na">createElementNS</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;namespaceContext&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">			</span><span class="n">ctx</span><span class="p">.</span><span class="na">setAttributeNS</span><span class="p">(</span><span class="n">Constants</span><span class="p">.</span><span class="na">NamespaceSpecNS</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;xmlns:tax&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;urn:kr:or:kec:standard:Tax:ReusableAggregateBusinessInformationEntitySchemaModule:1:0&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">			</span><span class="n">Node</span><span class="w"> </span><span class="n">pivot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">XPathAPI</span><span class="p">.</span><span class="na">selectSingleNode</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;//tax:TaxInvoiceDocument&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">ctx</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">			</span><span class="n">pivot</span><span class="p">.</span><span class="na">getParentNode</span><span class="p">().</span><span class="na">insertBefore</span><span class="p">(</span><span class="n">sig</span><span class="p">.</span><span class="na">getElement</span><span class="p">(),</span><span class="w"> </span><span class="n">pivot</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="c1">// 서명 대상 범위(Transforms) 및 XPath 지정</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="c1">// 서명 대상 XML을 주석 없는 정규화(C14N)로 변환</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="c1">// XPath로 서명에서 제외할 노드(예: Signature, TaxInvoice, ExchangedDocument)를 지정</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">			</span><span class="n">Transforms</span><span class="w"> </span><span class="n">transforms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Transforms</span><span class="p">(</span><span class="n">doc</span><span class="p">);</span><span class="w"> </span><span class="c1">// unsign XML 문서 변환 목록 생성</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">			</span><span class="n">transforms</span><span class="p">.</span><span class="na">addTransform</span><span class="p">(</span><span class="n">Transforms</span><span class="p">.</span><span class="na">TRANSFORM_C14N_OMIT_COMMENTS</span><span class="p">);</span><span class="w"> </span><span class="c1">// c14n 정규화 실행</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">			</span><span class="n">Element</span><span class="w"> </span><span class="n">xpathElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">doc</span><span class="p">.</span><span class="na">createElementNS</span><span class="p">(</span><span class="s">&#34;http://www.w3.org/2000/09/xmldsig#&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;ds:XPath&#34;</span><span class="p">);</span><span class="w"> </span><span class="c1">// XPath 엘라먼트 생성</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">			</span><span class="n">xpathElement</span><span class="p">.</span><span class="na">appendChild</span><span class="p">(</span><span class="n">doc</span><span class="p">.</span><span class="na">createTextNode</span><span class="p">(</span><span class="s">&#34;not(self::*[name() = &#39;TaxInvoice&#39;] | ancestor-or-self::*[name() = &#39;ExchangedDocument&#39;] | ancestor-or-self::ds:Signature)&#34;</span><span class="p">));</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">			</span><span class="n">transforms</span><span class="p">.</span><span class="na">addTransform</span><span class="p">(</span><span class="n">Transforms</span><span class="p">.</span><span class="na">TRANSFORM_XPATH</span><span class="p">,</span><span class="w"> </span><span class="n">xpathElement</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">			</span><span class="n">sig</span><span class="p">.</span><span class="na">addDocument</span><span class="p">(</span><span class="s">&#34;&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">transforms</span><span class="p">,</span><span class="w"> </span><span class="n">DigestMethod</span><span class="p">.</span><span class="na">SHA256</span><span class="p">);</span><span class="w">			
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="c1">// XMLSignature</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">sig</span><span class="p">.</span><span class="na">addKeyInfo</span><span class="p">(</span><span class="n">cert</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">sig</span><span class="p">.</span><span class="na">sign</span><span class="p">(</span><span class="n">privateKey</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="c1">// // OutputStream (정규화, 주석 없음)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">Canonicalizer</span><span class="w"> </span><span class="n">canon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Canonicalizer</span><span class="p">.</span><span class="na">getInstance</span><span class="p">(</span><span class="n">Canonicalizer</span><span class="p">.</span><span class="na">ALGO_ID_C14N_OMIT_COMMENTS</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">canon</span><span class="p">.</span><span class="na">canonicalizeSubtree</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span><span class="w"> </span><span class="n">os</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="c1">// OutputStream (정규화, 주석 포함)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="c1">// XMLUtils.outputDOMc14nWithComments(doc, os);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+</li>
+</ul>
+<p>​</p>
+<p>​</p>
+<h2 id="뒤에-계속">뒤에 계속</h2>
+<p>혼자 여기까지 오는데 꽤 오랜 시간이 걸렸다. 다양한 사유가 있지만, 인증서 정보 추출, python과 java를 같이 사용하다보니 타입의 변환에도 신경쓸 것이 많았고, 표준지침에 있는 예시의 구조를 세심히 봐야 하는 점.. 등이 어려웠다. 하지만 개발이 그러하듯 성공하고 보면 별거 아닌 것 같다.</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2026-01-19</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/etax_process_01/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/etax/">Etax</a>,&nbsp;<a href="/tags/hometax/">Hometax</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/restapi/" class="prev" rel="prev" title="what is REST api?"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>what is REST api?</a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.143.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><link rel="stylesheet" href="/css/_custom.scss"><script type="text/javascript" src="https://colinder-github-io.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript" src="/lib/mermaid/mermaid.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":200},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"id-1":"\r\n  flowchart TB\r\n      subgraph INTERNAL[\"내부 시스템\"]\r\n          U[내부 사용자] --\u003e ERP[경영정보시스템 / ERP]\r\n          ERP --\u003e A(세금계산서 발급)\r\n          A --\u003e ERP\r\n      end\r\n\r\n  %% 스타일 정의\r\n  style A fill:#ffffff,stroke:#ff0000,stroke-width:3px\r\n  ","id-2":"\r\n  flowchart LR\r\n      U[사용자]\r\n      U --\u003e ASP[ASP 서비스 접속]\r\n      subgraph INTERNAL[\"외부 시스템\"]\r\n          ASP --\u003e A(세금계산서 발급)\r\n          A --\u003e ASP\r\n  \t\tend\r\n      %% 스타일 정의\r\n      style A fill:#ffffff,stroke:#ff0000,stroke-width:3px\r\n  ","id-3":"\r\nflowchart TB\r\n    subgraph INTERNAL[\"ASP\"]\r\n        res[응답확인]\r\n        xml[XML 전자세금계산서 제작] --\u003e sign[XML 전자서명]\r\n        sign --\u003e decrp[암호화]\r\n        decrp --\u003e soap[soap 패키징]\r\n        soap --\u003e mime[MIME 패키징]\r\n    end\r\n    subgraph NTS[\"국세청\"]\r\n        mime --\u003e|전송|nts[서버]\r\n    end\r\n    nts --\u003e |응답|res\r"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

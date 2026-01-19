@@ -1,0 +1,31 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Machine_learning  - Tag - colinder&#39;s blog</title>
+        <link>https://colinder.github.io/tags/machine_learning-/</link>
+        <description>Machine_learning  - Tag - colinder&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Wed, 10 Aug 2022 14:07:57 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/machine_learning-/" rel="self" type="application/rss+xml" /><item>
+    <title>Machine_learning type</title>
+    <link>https://colinder.github.io/machine_learning_classification/</link>
+    <pubDate>Wed, 10 Aug 2022 14:07:57 &#43;0900</pubDate>
+    <author>colinder</author>
+    <guid>https://colinder.github.io/machine_learning_classification/</guid>
+    <description><![CDATA[<p>​</p>
+<h1 id="machine-learning-ml">Machine learning (ML)</h1>
+<blockquote>
+<p>머신러닝을 활용하기에 좋은 분야에 대하여 알아보겠습니다.</p></blockquote>
+<p>​</p>
+<ol>
+<li>
+<p>분류(classification)</p>
+<blockquote>
+<p>정해진 카테고리 중 어디에 속하는지 알아내는 경우</p></blockquote>
+<ul>
+<li>
+<p>종류</p>
+<ol>
+<li>
+<p>KNN(k-nearest neighbor)</p>]]></description>
+</item>
+</channel>
+</rss>

@@ -1,18 +1,19 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>analysis - Tag - </title>
+        <title>Analysis - Tag - colinder&#39;s blog</title>
         <link>https://colinder.github.io/tags/analysis/</link>
-        <description>analysis - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 23 Dec 2021 13:53:00 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/analysis/" rel="self" type="application/rss+xml" /><item>
+        <description>Analysis - Tag - colinder&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Thu, 23 Dec 2021 13:53:00 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/analysis/" rel="self" type="application/rss+xml" /><item>
     <title>boxplot 해석 방법</title>
     <link>https://colinder.github.io/boxplot/</link>
     <pubDate>Thu, 23 Dec 2021 13:53:00 &#43;0900</pubDate>
-    <author>Author</author>
+    <author>colinder</author>
     <guid>https://colinder.github.io/boxplot/</guid>
-    <description><![CDATA[​
-What is Boxplot?  데이터 분석을 진행하면서 다른 분들의 분석 레퍼런스를 보며 공부하다보니 많은 분들이 boxplot을 사용하는 것을 보았습니다. 다만, 저는 그 박스가 어떤 경우에 사용하는 것인지? 어떤 의미로 그려지는 것인지? 어떻게 해석하면 좋은지? 개념이 약했기 때문에 내용을 정리해보겠습니다.
- ​
-​
-Box Plot  최댓값, 최솟값, 중앙값, 사분편차를 사용하여 자료의 측정값들이 어떤 모양으로 분포되어 있으며, 극단값들은 어떠한지 등을 쉽게 알 수 있도록 하는 그림이다. 자료들이 비대칭으로 분포되어 있을 경우에는 상자그림을 그려 극단값의 개수, 비대칭 여부 등을 파악할 수 있으므로 측정값들의 중심위치와 산포도의 척도로 사용할 수 있다.]]></description>
-</item></channel>
+    <description><![CDATA[<p>​</p>
+<h1 id="what-is-boxplot">What is Boxplot?</h1>
+<blockquote>
+<p>데이터 분석을 진행하면서 다른 분들의 분석 레퍼런스를 보며 공부하다보니 많은 분들이 boxplot을 사용하는 것을 보았습니다. 다만, 저는 그 박스가 어떤 경우에 사용하는 것인지? 어떤 의미로 그려지는 것인지? 어떻게 해석하면 좋은지? 개념이 약했기 때문에 내용을 정리해보겠습니다.</p>]]></description>
+</item>
+</channel>
 </rss>

@@ -1,31 +1,24 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>computer science - Tag - </title>
+        <title>Computer Science - Tag - colinder&#39;s blog</title>
         <link>https://colinder.github.io/tags/computer-science/</link>
-        <description>computer science - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 17 Oct 2023 12:24:58 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/computer-science/" rel="self" type="application/rss+xml" /><item>
+        <description>Computer Science - Tag - colinder&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Tue, 17 Oct 2023 12:24:58 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/computer-science/" rel="self" type="application/rss+xml" /><item>
     <title>Time Complexity 시간복잡도</title>
     <link>https://colinder.github.io/time_complexity/</link>
     <pubDate>Tue, 17 Oct 2023 12:24:58 &#43;0900</pubDate>
-    <author>Author</author>
+    <author>colinder</author>
     <guid>https://colinder.github.io/time_complexity/</guid>
-    <description><![CDATA[​
-Time Complexity (시간 복잡도)  효율적인 알고리즘 구성을 위해 항상 신경써야하는 시간 복잡도.
-그리고 시간 복잡도를 표기하는 방법인 Big-O(빅-오) 표기법에 대해 정리합니다.
- ​
-​
-시간 복잡도  위키백과에 따르면 시간복잡도는 계산복잡도 이론에서 문제를 해결하는데 걸리는 시간과 입력의 함수 관계를 가리킨다. 또 컴퓨터과학에서 알고리즘의 시간복잡도는 입력을 나타내는 문자열 길이의 함수로서 작동하는 알고리즘을 취해 시간을 정량화하는 것인데, 간단히 input 후 연산이 진행되고 output을 반환하는데 시간이 얼마나 걸리는가?를 계산한 값입니다. 조금 더 간단하게는 알고리즘의 수행시간입니다.]]></description>
-</item><item>
+    <description><![CDATA[Time Complexity에 대하여 빅오 표기법과 함꼐 정리합니다.]]></description>
+</item>
+<item>
     <title>Process VS Thread</title>
     <link>https://colinder.github.io/processvsthread/</link>
     <pubDate>Tue, 01 Dec 2020 13:40:25 &#43;0900</pubDate>
-    <author>Author</author>
+    <author>colinder</author>
     <guid>https://colinder.github.io/processvsthread/</guid>
-    <description><![CDATA[​
-Process VS Thread  면접 질문에서 가장 많이 들어본 이야기라고 친구들이 이야기 해줬습니다. 근데 전 아직 자신있게 설명할 정도로 알지 못하기에 알아봅시다!
- ​
-​
-프로그램(Program)란 무엇인지 우선 알아봅시다. 소프트웨어의 한가지로, 어떤 문제를 해결하기 위하여 그 처리 방법과 순서(a.k.a ALGORITHM)를 기술하여 컴퓨터에 주어지는 일련의 명령문 집합체를 뜻합니다. 쉽게 말해, “어떤 작업을 위해 실행할 수 있는 파일”을 뜻합니다. 그리고 그 프로그램을 실행 시키는 주체를 인스턴스라고도 표현합니다.
-예들 들어, Excel.exe, kakaotalk.exe 등과 같이 어떤 작업을 위해 실행할 수 있는 (설치 등)파일을 생각해 볼 수 있습니다.]]></description>
-</item></channel>
+    <description><![CDATA[Process VS Thread에 대하여 정리합니다.]]></description>
+</item>
+</channel>
 </rss>

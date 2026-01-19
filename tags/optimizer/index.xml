@@ -1,23 +1,22 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>optimizer - Tag - </title>
+        <title>Optimizer - Tag - colinder&#39;s blog</title>
         <link>https://colinder.github.io/tags/optimizer/</link>
-        <description>optimizer - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 18 Mar 2022 14:13:56 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/optimizer/" rel="self" type="application/rss+xml" /><item>
+        <description>Optimizer - Tag - colinder&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Fri, 18 Mar 2022 14:13:56 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/optimizer/" rel="self" type="application/rss+xml" /><item>
     <title>what is optimizer</title>
     <link>https://colinder.github.io/what_is_optimizer/</link>
     <pubDate>Fri, 18 Mar 2022 14:13:56 &#43;0900</pubDate>
-    <author>Author</author>
+    <author>colinder</author>
     <guid>https://colinder.github.io/what_is_optimizer/</guid>
-    <description><![CDATA[​
-​
-​
-옵티마이저의 목적  옵티마이저는 학습 데이터(Train data)셋을 이용하여 모델을 학습 할 때 데이터의 실제 결과와 모델이 예측한 결과를 기반으로 오차를 잘 줄일 수 있게 만들어주는 역할입니다.
- ​
-따라서 최적화(Optimization)은 손실 함수(Loss Function)의 결과값을 최소화하는 모델의 파라미터(가중치)를 찾는 것을 의미합니다.
-​
-​
-​
-옵티마이저 리스트  경사 하강법(Gradient Descent) 확률적 경사 하강법(Stochastic Gradient Descent, SGD) Momentum Nesterov Accelerated Gradient (NAG) Adam AdaGrad RMSProp AdaMax Nadam  참고 https://keras.]]></description>
-</item></channel>
+    <description><![CDATA[<p>​</p>
+<image src="/images/what_is_optimizer.assets/img.png" width="1000px" style="display: block; margin: 20px auto">
+<p>​</p>
+<p>​</p>
+<h2 id="옵티마이저의-목적">옵티마이저의 목적</h2>
+<blockquote>
+<p>옵티마이저는 학습 데이터(Train data)셋을 이용하여 모델을 학습 할 때 <b>데이터의 실제 결과</b>와 <b>모델이 예측한 결과</b>를 기반으로 <b>오차를 잘 줄일 수 있게</b> 만들어주는 역할입니다.</p>]]></description>
+</item>
+</channel>
 </rss>

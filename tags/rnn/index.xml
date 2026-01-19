@@ -1,19 +1,19 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>RNN - Tag - </title>
+        <title>RNN - Tag - colinder&#39;s blog</title>
         <link>https://colinder.github.io/tags/rnn/</link>
-        <description>RNN - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 21 Feb 2022 14:35:39 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/rnn/" rel="self" type="application/rss+xml" /><item>
+        <description>RNN - Tag - colinder&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Mon, 21 Feb 2022 14:35:39 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/rnn/" rel="self" type="application/rss+xml" /><item>
     <title>RNN &amp; LSTM</title>
     <link>https://colinder.github.io/rnnlstm/</link>
     <pubDate>Mon, 21 Feb 2022 14:35:39 &#43;0900</pubDate>
-    <author>Author</author>
+    <author>colinder</author>
     <guid>https://colinder.github.io/rnnlstm/</guid>
-    <description><![CDATA[​
-RNN &amp; LSTM  감정분석을 위한 프로젝트를 기획하면서 RNN과 LSTM이라는 신경망 분석에 대하여 알게 되었습니다. 신경망 분석은 기계학습과 인지과학에서 영감을 얻어 설계된 통계학적 학습 알고리즘인데요. 이 둘의 개념를 알아보겠습니다.
- ​
-​
-RNN(Recurrent Neural Network) 순환 신경망  시퀀스(Sequence)라는 것이 있습니다.
-시퀀스는 간단히 &lsquo;문맥이 있는 데이터&rsquo; 입니다. 문장은 단어들의 시퀀스, 음악은 음계들의 시퀀스, 동영상은 이미지의 시퀀스라고 할 수 있습니다. 그런데 시퀀스의 길이는 가변적입니다. 기존의 뉴럴 네트워크 알고리즘은 이미지처럼 고정된 크기의 입력을 다루는 데는 탁월하지만, 가변적인 크기의 데이터를 모델링하기에는 적합하지 않았습니다.]]></description>
-</item></channel>
+    <description><![CDATA[<p>​</p>
+<h1 id="span-stylecolor01df3arnnspan--span-stylecolore3a437lstmspan"><span style="color:#01DF3A">RNN</span> &amp; <span style="color:#E3A437">LSTM</span></h1>
+<blockquote>
+<p>감정분석을 위한 프로젝트를 기획하면서 RNN과 LSTM이라는 신경망 분석에 대하여 알게 되었습니다. 신경망 분석은 기계학습과 인지과학에서 영감을 얻어 설계된 통계학적 학습 알고리즘인데요. 이 둘의 개념를 알아보겠습니다.</p>]]></description>
+</item>
+</channel>
 </rss>

@@ -1,33 +1,37 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>axios - Tag - </title>
+        <title>Axios - Tag - colinder&#39;s blog</title>
         <link>https://colinder.github.io/tags/axios/</link>
-        <description>axios - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 14 Dec 2022 16:45:55 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/axios/" rel="self" type="application/rss+xml" /><item>
+        <description>Axios - Tag - colinder&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Wed, 14 Dec 2022 16:45:55 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/axios/" rel="self" type="application/rss+xml" /><item>
     <title>what is Axios &amp; usage for Vue</title>
     <link>https://colinder.github.io/axios/</link>
     <pubDate>Wed, 14 Dec 2022 16:45:55 &#43;0900</pubDate>
-    <author>Author</author>
+    <author>colinder</author>
     <guid>https://colinder.github.io/axios/</guid>
-    <description><![CDATA[​
-axios 설치 및 전역변수 설정 방법 front와 back간의 통신에 자주 사용하는 axios의 설치 및 전역 변수 설정 방법을 기록합니다.
-먼저, axios의 특징은
-  구형 브라우저를 지원한다. 응답 시간 초과를 설정하는 방법이 있다. JSON 데이터 자동변환이 가능하다. node.js에서의 사용이 가능하다. request aborting(요청 취소)가 가능하다. catch에 걸렸을 때, .then을 실행하지 않고, console창에 해당 에러 로그를 보여준다.   설치부터 진행해보겠습니다. 테스트는 Vue를 활용하여 진행하였습니다.
-​
-1. axios 설치 1 2  // Terminal에 npm install axios	👈 axios 설치   ​]]></description>
-</item><item>
+    <description><![CDATA[<p>​</p>
+<h1 id="axios-설치-및-전역변수-설정-방법">axios 설치 및 전역변수 설정 방법</h1>
+<p>front와 back간의 통신에 자주 사용하는 axios의 설치 및 전역 변수 설정 방법을 기록합니다.</p>
+<p>먼저, axios의 특징은</p>
+<blockquote>
+<ul>
+<li>구형 브라우저를 지원한다.</li>
+<li>응답 시간 초과를 설정하는 방법이 있다.</li>
+<li>JSON 데이터 자동변환이 가능하다.</li>
+<li>node.js에서의 사용이 가능하다.</li>
+<li>request aborting(요청 취소)가 가능하다.</li>
+<li>catch에 걸렸을 때, .then을 실행하지 않고, console창에 해당 에러 로그를 보여준다.</li>
+</ul></blockquote>
+<p>설치부터 진행해보겠습니다. 테스트는 Vue를 활용하여 진행하였습니다.</p>]]></description>
+</item>
+<item>
     <title>what is AJAX(axios)?</title>
     <link>https://colinder.github.io/what_is_ajaxaxios_00/</link>
     <pubDate>Sun, 11 Oct 2020 21:25:51 &#43;0900</pubDate>
-    <author>Author</author>
+    <author>colinder</author>
     <guid>https://colinder.github.io/what_is_ajaxaxios_00/</guid>
-    <description><![CDATA[​
-AJAX  세상에는 다양한 web서버가 있다.
-그리고 모든 web은 &ldquo;요청&rdquo;과 &ldquo;응답&rdquo;으로 통신한다. 예를 들어..
- 요청: &ldquo;이미지를 보여줘&rdquo;
-응답: &ldquo;오키&rdquo; or &ldquo;싫어&rdquo;
- 그렇다면, 이 web서버들과 통신 하려면 어떻게 해야 할까?
-  대표적인 통신 방법을 AJAX라 한다. 이는 JavaScript의 라이브러리중 하나이며 Asynchronous Javascript And Xml(비동기식 자바스크립트와 xml)의 약자며, 자체가 하나의 특정한 기술을 말하는 것이 아니며, 함께 사용하는 기술의 묶음을 지칭하는 용어이다.
-브라우저가 가지고있는 XMLHttpRequest 객체를 이용해서 전체 페이지를 새로 고치지 않고도 페이지의 일부만을 위한 데이터를 로드하는 기법 이며 Ajax를 한마디로 정의하자면 JavaScript를 사용한 비동기 통신, 클라이언트와 서버간에 XML 데이터를 주고받는 기술이라고 할 수 있겠습니다.]]></description>
-</item></channel>
+    <description><![CDATA[AJAX(axios)가 무엇인지 정리합니다.]]></description>
+</item>
+</channel>
 </rss>

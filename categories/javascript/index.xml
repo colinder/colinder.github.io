@@ -1,91 +1,64 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Javascript - Category - </title>
+        <title>JavaScript - Category - colinder&#39;s blog</title>
         <link>https://colinder.github.io/categories/javascript/</link>
-        <description>Javascript - Category - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 03 Jan 2024 14:23:13 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/javascript/" rel="self" type="application/rss+xml" /><item>
+        <description>JavaScript - Category - colinder&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Wed, 03 Jan 2024 14:23:13 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/javascript/" rel="self" type="application/rss+xml" /><item>
     <title>Typesciprt(JS)_함수선언방법과 차이</title>
     <link>https://colinder.github.io/js_method/</link>
     <pubDate>Wed, 03 Jan 2024 14:23:13 &#43;0900</pubDate>
-    <author>Author</author>
+    <author>colinder</author>
     <guid>https://colinder.github.io/js_method/</guid>
-    <description><![CDATA[​
-Typescript(JS) 함수 선언 방식과 차이 TypeScript는 JavaScript를 기반으로 하는 언어이기 때문에 JavaScript의 함수 선언 방식을 따르면서 몇 가지 추가적인 기능을 제공합니다. 주요 함수 선언 방식은 다음과 같습니다.
-​
-  함수 선언문 (Function Declaration):
-1 2 3  function add(a: number, b: number): number { return a + b; }     TypeScript에서도 JavaScript와 마찬가지로 함수 선언문을 사용할 수 있습니다.
-  함수 선언문은 function 키워드로 시작하며, 함수 이름이 바로 뒤에 나옵니다.]]></description>
-</item><item>
+    <description><![CDATA[Typescript(JS) 함수 선언 방식과 차이에 대하여 정리합니다.]]></description>
+</item>
+<item>
     <title>What is ES2015?</title>
     <link>https://colinder.github.io/what_is_es2015/</link>
     <pubDate>Mon, 28 Feb 2022 09:23:51 &#43;0900</pubDate>
-    <author>Author</author>
+    <author>colinder</author>
     <guid>https://colinder.github.io/what_is_es2015/</guid>
-    <description><![CDATA[​
-What is ES2015?  웹 개발 도구와 내용을 정리하다보면 등장하던 ES2015. 그냥 어떤 느낌의 단어인지 어렴풋이 알고만 있다가 확실하게 정리해 알아두고 싶어 내용을 정리합니다.
- ​
-​
-​
-우선 javaScript에 대하여 조금 알아봅시다.  javaScript는 프로그래밍 언어입니다. 프로그래밍 언어는 지금도 꾸준히 개선되고 발전됩니다. 계속 변화하고 있기에 특정 시기에 개발된 상태를 1.2.1과 같이 버전으로 등록해 배포합니다. 자바스크립트는 결점이 상당히 많은 언어였고, 사용자들이 직접 결점을 보완하는 방법으로 발전되어 왔는데, **ECMA(European Computer Manufacturer&rsquo;s Association)**라는 단체에서 기존의 결점을 보완한 표준 자바스크립트 버전을 매년 발표하게 됩니다.]]></description>
-</item><item>
+    <description><![CDATA[ES2015가 무엇인지 정리합니다.]]></description>
+</item>
+<item>
     <title>JavaScript Hoisting</title>
     <link>https://colinder.github.io/js_hoisting/</link>
     <pubDate>Fri, 11 Dec 2020 11:16:09 &#43;0900</pubDate>
-    <author>Author</author>
+    <author>colinder</author>
     <guid>https://colinder.github.io/js_hoisting/</guid>
-    <description><![CDATA[​
-JavaScript Hoisting  web 개발을 하면서 여러 레퍼런스들을 확인하고 공부하게 되는데, 문득 똑같아 보이나 왜 이건 되고? 왜 이건 안되지?하는 부분이 있었습니다.
-그 차이는 Hoisting에 대한 내용이었는데요. 알아두면 쓸모있기에 정리해봅시다.
- ​
-호이스팅(Hoisting)이란? 호이스팅을 한 줄로 설명하자면, 선언문을 유효 범위의 최상단으로 끌어올리는 행위라고 할 수 있습니다.
-최상단이라는 표현이 중요한데요. 인터프리터 언어인 자바스크립트가 한 줄씩 순서대로 코딩을 실행하는 것이 아니라, 임의로 특정 내용을 최상단으로 끌어 올려서 우선 실행하는 것을 호이스팅이라고 합니다.]]></description>
-</item><item>
+    <description><![CDATA[Hoisting에 대하여 정리합니다.]]></description>
+</item>
+<item>
     <title>JavaScript Scope</title>
     <link>https://colinder.github.io/js_scope/</link>
     <pubDate>Thu, 10 Dec 2020 17:03:25 &#43;0900</pubDate>
-    <author>Author</author>
+    <author>colinder</author>
     <guid>https://colinder.github.io/js_scope/</guid>
-    <description><![CDATA[​
-JavaScript Scope란?  Scope [ skoʊp ]1 (무엇을 하거나 이룰 수 있는) 기회[여지/능력] (=potential)2 (주제조직활동 등이 다루는) 범위3 샅샅이[자세히] 살피다.
-스코프는 &ldquo;유효 범위&quot;로써 번수에 매개변수가 어디까지 유효한지를 나타냅니다.
-자바스크립트에선 스코프는 2가지 타입이 있습니다. 바로 Global(전역)과 Local(지역)인데요. 함수 안에서 선언된 변수(Local 변수)는 함수 블록 안에서만 접근이 가능합니다.전역 변수는 어디서든 접근이 가능합니다.
- 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21  // global 변수 선언 var a = 10; console.]]></description>
-</item><item>
+    <description><![CDATA[JavaScript Scope에 대하여 정리합니다.]]></description>
+</item>
+<item>
     <title>JavaScript Operators</title>
     <link>https://colinder.github.io/js_operators/</link>
     <pubDate>Wed, 09 Dec 2020 22:04:20 &#43;0900</pubDate>
-    <author>Author</author>
+    <author>colinder</author>
     <guid>https://colinder.github.io/js_operators/</guid>
-    <description><![CDATA[​
-JavaScript Operators  Javascript의 연산자를 알아 봅시다. 종류가 많이 있어 많이 사용하는 것들 중심으로 먼저 알아보겠습니다.
- ​
-1. 할당 연산자 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  // 할당 연산자 let numder = 0 numder += 10 console.log(numder) // 10  numder -= 8 console.log(numder) // 2  numder *= 10 console.log(numder) // 20  numder ++ // 1을 더한다.]]></description>
-</item><item>
+    <description><![CDATA[JavaScript Operators에 대하여 정리합니다.]]></description>
+</item>
+<item>
     <title>JavaScript Type</title>
     <link>https://colinder.github.io/js_type/</link>
     <pubDate>Wed, 09 Dec 2020 10:23:18 &#43;0900</pubDate>
-    <author>Author</author>
+    <author>colinder</author>
     <guid>https://colinder.github.io/js_type/</guid>
-    <description><![CDATA[​
-JavaScript Type은?  제 생각에 개발 언어를 공부하면서 가장 먼저 알아야 알 것은 그리고 가장 중요한 것은 형식입니다.
-때마침 Javascript를 공부하고 있는데, 가장 먼저 Type에 대해 정리해보겠습니다.
- ​
-그 전에 먼저 변수를 선언하는 방법을 알아봅시다. 1 2 3 4 5 6 7 8  // 변수를 선언 하는 방법  // function scope var a = 10 // 일반적인 변수 선언 방법  // block scope {} 안에서만 존재하는 변수 let b = 20 // 재할당 가능 [최근에는 사용률이 낮아지고 있다고 합니다.]]></description>
-</item><item>
+    <description><![CDATA[JavaScript Type에 대하여 정리합니다.]]></description>
+</item>
+<item>
     <title>Async To Sync in Javascript</title>
     <link>https://colinder.github.io/asynctosyncinjavascript/</link>
     <pubDate>Fri, 20 Nov 2020 13:59:06 &#43;0900</pubDate>
-    <author>Author</author>
+    <author>colinder</author>
     <guid>https://colinder.github.io/asynctosyncinjavascript/</guid>
-    <description><![CDATA[​
-Async to Sync in JavaScript  누구나 웹개발을 하다보면 HTTP 통신을 통해 데이터를 가져오고 가공하고 사용하게됩니다. 그리고 동기, 비동기 처리 때문에 골치가 아파집니다. (만약 골치가 아프지 않다면.. 부럽습니다..) 더 이상 골치아프기 싫어서 정리해봅시다.👍
- *동기, 비동기 설명은 이전 포스팅으로 갈음합니다.
-​
-Async(비동기) to Sync(동기) 방법 자바스크립트에서의 비동기를 동기로 동작시키는 대표적인 3가지의 방법을 알아보겠습니다.
-  Callback
-  Promise
-  Async / Await
-  ​
-1. Callback  개발자들 마다 정의가 조금씩 다르겠지만, 저는 어떤 이벤트가 발생한 후, 수행될 함수로 정의해보겠습니다.]]></description>
-</item></channel>
+    <description><![CDATA[동기, 비동기에 대하여 정리합니다.]]></description>
+</item>
+</channel>
 </rss>

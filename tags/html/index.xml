@@ -1,20 +1,45 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>html - Tag - </title>
+        <title>Html - Tag - colinder&#39;s blog</title>
         <link>https://colinder.github.io/tags/html/</link>
-        <description>html - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 10 Jun 2021 09:06:44 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/html/" rel="self" type="application/rss+xml" /><item>
+        <description>Html - Tag - colinder&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Thu, 10 Jun 2021 09:06:44 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/html/" rel="self" type="application/rss+xml" /><item>
     <title>form 태그</title>
     <link>https://colinder.github.io/form/</link>
     <pubDate>Thu, 10 Jun 2021 09:06:44 &#43;0900</pubDate>
-    <author>Author</author>
+    <author>colinder</author>
     <guid>https://colinder.github.io/form/</guid>
-    <description><![CDATA[​
-form 태그의 고찰   form tag의 inline 요소 중 **&lsquo;action&rsquo;**과 &lsquo;onsubmit&rsquo;
-1 2 3 4 5 6 7 8  &lt;form action=&#34;https://colinder.github.io/oh my god&#34; onsubmit=&#34;return test()&#34;&gt; &lt;input type=&#34;submit&#34; value=&#34;hahaha&#34;&gt; &lt;/form&gt; &lt;script&gt; function test(){ console.log(&#39;HHHI&#39;) } &lt;/script&gt;     submit 형태의 input을 클릭하게 되면, submit이 동작하면서 form의 &lsquo;onsubmit&rsquo;이 실행
-  이후 에 form 태그의 &lsquo;action&rsquo;이 실행
-즉, 두가지의 행동이 실행됩니다.
-​
-  비효율적이지만, 만약 위와 같은 코드에서 나중에 실행되는 action은 동작하지 않게 하고 싶다면.]]></description>
-</item></channel>
+    <description><![CDATA[<p>​</p>
+<h1 id="form-태그의-고찰">form 태그의 고찰</h1>
+<ol>
+<li>
+<p>form tag의 inline 요소 중 **&lsquo;action&rsquo;**과 <strong>&lsquo;onsubmit&rsquo;</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;/oh my god&#34;</span> <span class="na">onsubmit</span><span class="o">=</span><span class="s">&#34;return test()&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;hahaha&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="kd">function</span> <span class="nx">test</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;HHHI&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p>submit 형태의 input을 클릭하게 되면, submit이 동작하면서 form의 &lsquo;onsubmit&rsquo;이 실행</p>]]></description>
+</item>
+</channel>
 </rss>

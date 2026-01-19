@@ -1,32 +1,31 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>AbstractUser - Tag - </title>
+        <title>AbstractUser - Tag - colinder&#39;s blog</title>
         <link>https://colinder.github.io/tags/abstractuser/</link>
-        <description>AbstractUser - Tag - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 08 Oct 2021 10:17:53 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/abstractuser/" rel="self" type="application/rss+xml" /><item>
+        <description>AbstractUser - Tag - colinder&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Fri, 08 Oct 2021 10:17:53 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/abstractuser/" rel="self" type="application/rss+xml" /><item>
     <title>Django_10_CustomAuthUser_AbstractUser</title>
     <link>https://colinder.github.io/django_10_customauthuser_abstractuser/</link>
     <pubDate>Fri, 08 Oct 2021 10:17:53 &#43;0900</pubDate>
-    <author>Author</author>
+    <author>colinder</author>
     <guid>https://colinder.github.io/django_10_customauthuser_abstractuser/</guid>
-    <description><![CDATA[​
-Django AbstractUser  이전에 AbstractBaseUser를 사용한 커스텀 사용자 인증 테이블을 구성해보았습니다. 해당 내용에 이어서 AbstractUser로 커스텀 사용자 인증 테이블을 구성해보고 createsuperuser 명령어 입력시, 관리자 계정이 커스텀한 테이블에 생성되게 해보겠습니다.
- ​
-AbstractUser을 상속받아 커스텀을 진행  우선 AbstractUser는 Django에서 기본으로 제공해주는 사용자 인증 테이블의 요소를 그대로 가져와 사용하기 때문에 그 요소들은 어떤 것들이 있는지 알아보자.
-id, password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined 총 11개의 column이 존재하며 이외에 column을 추가 하고 싶을 때 코드를 추가로 작성합니다.]]></description>
-</item><item>
+    <description><![CDATA[<p>​</p>
+<h1 id="django-span-stylecolor-f2b141babstractuserbspan">Django <span style="color: #f2b141"><b>AbstractUser</b></span></h1>
+<blockquote>
+<p>이전에 <span style="color: #4f8ae8">AbstractBaseUser</span>를 사용한 커스텀 사용자 인증 테이블을 구성해보았습니다. 해당 내용에 이어서 <span style="color: #f2b141"><b>AbstractUser</b></span>로 커스텀 사용자 인증 테이블을 구성해보고 createsuperuser 명령어 입력시, 관리자 계정이 커스텀한 테이블에 생성되게 해보겠습니다.</p>]]></description>
+</item>
+<item>
     <title>Django_08_AbstractBaseUser VS AbstractUser</title>
     <link>https://colinder.github.io/django_08_abstractbaseuservsabstractuser/</link>
     <pubDate>Thu, 07 Oct 2021 10:17:20 &#43;0900</pubDate>
-    <author>Author</author>
+    <author>colinder</author>
     <guid>https://colinder.github.io/django_08_abstractbaseuservsabstractuser/</guid>
-    <description><![CDATA[​
-Django AbstractBaseUser VS AbstractUser  Django로 프로젝트를 진행하면서 계정관련 내용을 등록하는 것을 가장 많이 했음에도, 아직 명확하게 차이를 알지 못하고 사용했던 것이 있었습니다.
-바로! User custom에 관한 부분이었는데요. 크게 AbstractBaseUser와 AbstractUser를 사용하는 방법이 있는데 이 둘의 차이를 꼼꼼히 알아보기 위해 해당 포스팅이 작성되었습니다.
- ​
-AbstractBaseUser VS AbstractUser  프로젝트 생성 후 accounts 라는 app을 만들고 makemigrations &amp; migrate를 하기 전
- ​
-1. Model 설정 AbstractBaseUser
-위치: accounts/models.py]]></description>
-</item></channel>
+    <description><![CDATA[<p>​</p>
+<h1 id="django-span-stylecolor-4f8ae8abstractbaseuserspan-vs-span-stylecolor-f2b141abstractuserspan">Django <span style="color: #4f8ae8">AbstractBaseUser</span> VS <span style="color: #f2b141;">AbstractUser</span></h1>
+<blockquote>
+<p>Django로 프로젝트를 진행하면서 계정관련 내용을 등록하는 것을 가장 많이 했음에도, 아직 명확하게 차이를 알지 못하고 사용했던 것이 있었습니다.</p>
+<p>바로! User custom에 관한 부분이었는데요. 크게 <span style="color: #4f8ae8">AbstractBaseUser</span>와 <span style="color: #f2b141;">AbstractUser</span>를 사용하는 방법이 있는데 이 둘의 차이를 꼼꼼히 알아보기 위해 해당 포스팅이 작성되었습니다.</p>]]></description>
+</item>
+</channel>
 </rss>

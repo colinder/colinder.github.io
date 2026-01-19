@@ -4,31 +4,32 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Block_Chain setting &amp; basic - </title><meta name="Description" content="Hello New World"><meta property="og:title" content="Block_Chain setting &amp; basic" />
-<meta property="og:description" content="​
+        <title>Block_Chain setting &amp; basic - colinder&#39;s blog</title><meta name="Description" content="Hello New World"><meta property="og:url" content="https://colinder.github.io/block_chain/">
+  <meta property="og:site_name" content="colinder&#39;s blog">
+  <meta property="og:title" content="Block_Chain setting & basic">
+  <meta property="og:description" content="​
 🎈가상환경에서 블록체인 채굴 및 기본 시스템 정리 ​
-1. geth(Go-ethereum) 설치  블록체인 기술은 중앙집중화된 데이터베이스에 반기를 들고 나온 개념이기 때문에 중앙 서버 이런게 없다. 즉 누구라도 해당 블록체인 네트워크에 참여하고 싶다면 언제라도 블록체인 데이터베이스를 싱크해주는 로컬 프로그램을 다운 받아 실행하면 데이터를 받을 수 있다.
-그렇다면 블록체인 네트워크에 참여하고 싶다면 어떻게 해야 할까? 앞서 말한 로컬 프로그램을 다운 받으면 참여가 가능하다.
-이 프로그램들 중 하나인 GO 로 짜여진 Go Ethereum(줄여서, geth)을 설치해본다." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://colinder.github.io/block_chain/" /><meta property="og:image" content="https://colinder.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-09-03T22:06:15+09:00" />
-<meta property="article:modified_time" content="2020-09-03T22:06:15+09:00" />
+1. geth(Go-ethereum) 설치 블록체인 기술은 중앙집중화된 데이터베이스에 반기를 들고 나온 개념이기 때문에 중앙 서버 이런게 없다. 즉 누구라도 해당 블록체인 네트워크에 참여하고 싶다면 언제라도 블록체인 데이터베이스를 싱크해주는 로컬 프로그램을 다운 받아 실행하면 데이터를 받을 수 있다.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-09-03T22:06:15+09:00">
+    <meta property="article:modified_time" content="2020-09-03T22:06:15+09:00">
+    <meta property="article:tag" content="Block_chain">
+    <meta property="og:image" content="https://colinder.github.io/logo.png">
 
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://colinder.github.io/logo.png"/>
-
-<meta name="twitter:title" content="Block_Chain setting &amp; basic"/>
-<meta name="twitter:description" content="​
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://colinder.github.io/logo.png">
+  <meta name="twitter:title" content="Block_Chain setting & basic">
+  <meta name="twitter:description" content="​
 🎈가상환경에서 블록체인 채굴 및 기본 시스템 정리 ​
-1. geth(Go-ethereum) 설치  블록체인 기술은 중앙집중화된 데이터베이스에 반기를 들고 나온 개념이기 때문에 중앙 서버 이런게 없다. 즉 누구라도 해당 블록체인 네트워크에 참여하고 싶다면 언제라도 블록체인 데이터베이스를 싱크해주는 로컬 프로그램을 다운 받아 실행하면 데이터를 받을 수 있다.
-그렇다면 블록체인 네트워크에 참여하고 싶다면 어떻게 해야 할까? 앞서 말한 로컬 프로그램을 다운 받으면 참여가 가능하다.
-이 프로그램들 중 하나인 GO 로 짜여진 Go Ethereum(줄여서, geth)을 설치해본다."/>
+1. geth(Go-ethereum) 설치 블록체인 기술은 중앙집중화된 데이터베이스에 반기를 들고 나온 개념이기 때문에 중앙 서버 이런게 없다. 즉 누구라도 해당 블록체인 네트워크에 참여하고 싶다면 언제라도 블록체인 데이터베이스를 싱크해주는 로컬 프로그램을 다운 받아 실행하면 데이터를 받을 수 있다.">
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/block_chain/" /><link rel="prev" href="https://colinder.github.io/07_vue_vuex-concept/" /><link rel="next" href="https://colinder.github.io/sw_20.09.04/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/block_chain/" /><link rel="prev" href="https://colinder.github.io/07_vue_vuex-concept/" /><link rel="next" href="https://colinder.github.io/sw_20.09.04/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -37,8 +38,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/block_chain\/"
-        },"genre": "posts","keywords": "block_chain","wordcount":  1670 ,
-        "url": "https:\/\/colinder.github.io\/block_chain\/","datePublished": "2020-09-03T22:06:15+09:00","dateModified": "2020-09-03T22:06:15+09:00","publisher": {
+        },"genre": "posts","keywords": "block_chain","wordcount":  4672 ,
+        "url": "https:\/\/colinder.github.io\/block_chain\/","datePublished": "2020-09-03T22:06:15+09:00","dateModified": "2020-09-03T22:06:15+09:00","license": "colinder","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -46,36 +47,35 @@
             },"description": ""
     }
     </script></head>
-    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body data-header-desktop="auto" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="">Hello New World</a>
+            <a href="/" title="colinder&#39;s blog">Hello New World</a>
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
-                            <i class="fas fa-search fa-fw"></i>
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
                         </a>
                         <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
-                            <i class="fas fa-times-circle fa-fw"></i>
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-desktop">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
                         </span>
                     </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
-                    <i class="fas fa-adjust fa-fw"></i>
-                </a>
-            </div>
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
         </div>
     </div>
 </header><header class="mobile" id="header-mobile">
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="">Hello New World</a>
+                <a href="/" title="colinder&#39;s blog">Hello New World</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
@@ -85,41 +85,39 @@
                     <div class="search mobile" id="search-mobile">
                         <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
-                            <i class="fas fa-search fa-fw"></i>
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
                         </a>
                         <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
-                            <i class="fas fa-times-circle fa-fw"></i>
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-mobile">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
                         </span>
                     </div>
                     <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
                         Cancel
                     </a>
                 </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
-                <i class="fas fa-adjust fa-fw"></i>
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
             </a></div>
     </div>
-</header>
-<div class="search-dropdown desktop">
-    <div id="search-dropdown-desktop"></div>
-</div>
-<div class="search-dropdown mobile">
-    <div id="search-dropdown-mobile"></div>
-</div>
-<main class="main">
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Block_Chain setting &amp; basic</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/block_chain/"><i class="far fa-folder fa-fw"></i>block_chain</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-09-03">2020-09-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1670 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;8 minutes&nbsp;</div>
-        </div><div class="details toc" id="toc-static"  kept="true">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Block_Chain setting & basic</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/block_chain/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Block_chain</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2020-09-03">2020-09-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;4672 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;10 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="true">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
-                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
@@ -162,8 +160,7 @@
 <blockquote>
 <p>블록체인 기술은 중앙집중화된 데이터베이스에 반기를 들고 나온 개념이기 때문에 중앙 서버 이런게 없다. 즉 누구라도 해당 블록체인 네트워크에 참여하고 싶다면 언제라도 블록체인 데이터베이스를 싱크해주는 로컬 프로그램을 다운 받아 실행하면 데이터를 받을 수 있다.</p>
 <p>그렇다면 블록체인 네트워크에 참여하고 싶다면 어떻게 해야 할까? 앞서 말한 로컬 프로그램을 다운 받으면 참여가 가능하다.</p>
-<p>이 프로그램들 중 하나인 GO 로 짜여진 Go Ethereum(줄여서, geth)을 <a href="https://geth.ethereum.org/downloads/" target="_blank" rel="noopener noreffer">설치</a>해본다.</p>
-</blockquote>
+<p>이 프로그램들 중 하나인 GO 로 짜여진 Go Ethereum(줄여서, geth)을 <a href="https://geth.ethereum.org/downloads/" target="_blank" rel="noopener noreffer ">설치</a>해본다.</p></blockquote>
 <image src="/images/image-20200831143159580.png">
 <p>작성당시 가장 최신 버전인 1.9.20 for windows로 다운을 받는다.</p>
 <ol>
@@ -188,8 +185,7 @@
 <h2 id="2-web3-설치">2. Web3 설치</h2>
 <blockquote>
 <p>모든 자료와 정보가 분산화, 분권화된 차세대 네트워크 구조로서, 서버가 없는 혁신적인 인터넷 분산형 웹.</p>
-<p>web3.js는 JavaScript 기반으로 <a href="http://wiki.hash.kr/index.php/Dapp" target="_blank" rel="noopener noreffer">Dapp</a> 이나 서비스를 구현할 때 매우 유용. (출처: 위키)</p>
-</blockquote>
+<p>web3.js는 JavaScript 기반으로 <a href="http://wiki.hash.kr/index.php/Dapp" target="_blank" rel="noopener noreffer ">Dapp</a> 이나 서비스를 구현할 때 매우 유용. (출처: 위키)</p></blockquote>
 <p>​</p>
 <p>이미 Vue_CLI 프로젝트를 구성해 놓은 것이 있어서</p>
 <ol>
@@ -197,13 +193,12 @@
 </ol>
 <image src="/images/image-20200831154822148.png" width="800px" caption="package.json 에서 web3가 설치된 것을 볼 수 있다. ">
 <p>​</p>
-<h2 id="3-virtualboxhttpswwwvirtualboxorgwikivirtualbox-설치">3. <a href="https://www.virtualbox.org/wiki/VirtualBox" target="_blank" rel="noopener noreffer">VirtualBox</a> 설치</h2>
+<h2 id="3-virtualboxhttpswwwvirtualboxorgwikivirtualbox-설치">3. <a href="https://www.virtualbox.org/wiki/VirtualBox" target="_blank" rel="noopener noreffer ">VirtualBox</a> 설치</h2>
 <blockquote>
-<p>VirtualBox: 하드웨어를 소프트웨어적으로 구현해서 그 위에서 운영체제가 작동하도록하는 기술</p>
-</blockquote>
+<p>VirtualBox: 하드웨어를 소프트웨어적으로 구현해서 그 위에서 운영체제가 작동하도록하는 기술</p></blockquote>
 <ul>
 <li>
-<p><a href="https://download.virtualbox.org/virtualbox/6.1.12/VirtualBox-6.1.12-139181-Win.exe" target="_blank" rel="noopener noreffer">Windows hosts</a> 와 <a href="https://download.virtualbox.org/virtualbox/6.1.12/Oracle_VM_VirtualBox_Extension_Pack-6.1.12.vbox-extpack" target="_blank" rel="noopener noreffer">All supported platforms</a> 두개를 다운 받는다.</p>
+<p><a href="https://download.virtualbox.org/virtualbox/6.1.12/VirtualBox-6.1.12-139181-Win.exe" target="_blank" rel="noopener noreffer ">Windows hosts</a> 와 <a href="https://download.virtualbox.org/virtualbox/6.1.12/Oracle_VM_VirtualBox_Extension_Pack-6.1.12.vbox-extpack" target="_blank" rel="noopener noreffer ">All supported platforms</a> 두개를 다운 받는다.</p>
 <ol>
 <li>
 <p>Windows hosts: 그냥 next연타하여 설치</p>
@@ -215,18 +210,16 @@
 </li>
 </ul>
 <hr>
-<p><strong>👍전체 설치는 <a href="https://webnautes.tistory.com/448" target="_blank" rel="noopener noreffer">이 블로그</a>의 설치 동영상을 참고하여 설치를 진행</strong></p>
+<p><strong>👍전체 설치는 <a href="https://webnautes.tistory.com/448" target="_blank" rel="noopener noreffer ">이 블로그</a>의 설치 동영상을 참고하여 설치를 진행</strong></p>
 <p>​</p>
 <h2 id="4-vagrant-설치">4. Vagrant 설치</h2>
 <blockquote>
-<p>Vagrant는 가상머신을 편리하게 사용할 수 있도록 도와주는 프로그램입니다. 이미 누군가가 Vagrant로 설정해 놓은 <strong>가상머신 Box</strong>를 간단한 명령어로 손쉽게 설치 할 수 있으며 <strong>가상 머신</strong>과 <strong>호스트 머신</strong>과의 환경설정도 쉽게 할 수 있습니다. 다운로드는 <a href="https://www.vagrantup.com/downloads.html" target="_blank" rel="noopener noreffer">여기</a>서 진행.</p>
-</blockquote>
+<p>Vagrant는 가상머신을 편리하게 사용할 수 있도록 도와주는 프로그램입니다. 이미 누군가가 Vagrant로 설정해 놓은 <strong>가상머신 Box</strong>를 간단한 명령어로 손쉽게 설치 할 수 있으며 <strong>가상 머신</strong>과 <strong>호스트 머신</strong>과의 환경설정도 쉽게 할 수 있습니다. 다운로드는 <a href="https://www.vagrantup.com/downloads.html" target="_blank" rel="noopener noreffer ">여기</a>서 진행.</p></blockquote>
 <p>​</p>
 <h2 id="5-remix-ide-설정">5. Remix IDE 설정</h2>
 <blockquote>
-<p>이더리움 <code>스마트 컨트랙트</code> 프레임워크</p>
-</blockquote>
-<p><a href="https://remix.ethereum.org/#optimize=false&amp;evmVersion=null&amp;version=soljson-v0.6.6&#43;commit.6c089d02.js" target="_blank" rel="noopener noreffer">여기</a>서 진행!</p>
+<p>이더리움 <code>스마트 컨트랙트</code> 프레임워크</p></blockquote>
+<p><a href="https://remix.ethereum.org/#optimize=false&amp;evmVersion=null&amp;version=soljson-v0.6.6&#43;commit.6c089d02.js" target="_blank" rel="noopener noreffer ">여기</a>서 진행!</p>
 <p>​</p>
 <h1 id="본격적인-블록체인-관련-가상환경-세팅-및-채굴-진행">🎈본격적인 블록체인 관련 가상환경 세팅 및 채굴 진행</h1>
 <h1 id="200901-한-일">20.09.01 한 일..</h1>
@@ -252,16 +245,16 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">&gt; vagrant version      <span class="c1">#설치 여부 및 버전 확인 =&gt; 버전 넘버가 보이면 ok</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">&gt; vagrant version      <span class="c1">#설치 여부 및 버전 확인 =&gt; 버전 넘버가 보이면 ok</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">&gt; vagrant plugin install vagrant-scp		<span class="c1"># 호스트 &amp; 가상머신 간 연동 프로그램 설치</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">&gt; vagrant plugin install vagrant-scp		<span class="c1"># 호스트 &amp; 가상머신 간 연동 프로그램 설치</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -269,9 +262,9 @@
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">&gt; vagrant init		<span class="c1"># 블록체인 채굴을 위한 기초 세팅 시작</span>
-<span class="c1"># 해당 명령어를 입력하면 작업하는 디렉토리에 Vagrantfile이 생긴다.</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">&gt; vagrant init		<span class="c1"># 블록체인 채굴을 위한 기초 세팅 시작</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 해당 명령어를 입력하면 작업하는 디렉토리에 Vagrantfile이 생긴다.</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>vagrant init 후 생기는 Vagrantfile을 수정해 최초의 블록(<strong>genesis.json</strong>)을 생성해야 한다.</li>
@@ -315,58 +308,58 @@
 </span><span class="lnt">35
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Vagrantfile	=&gt;  내용을 수정한다. </span>
-
-<span class="c1"># -*- mode: ruby -*-</span>
-<span class="c1"># vi: set ft=ruby :</span>
-
-<span class="c1"># All Vagrant configuration is done below. The &#34;2&#34; in Vagrant.configure</span>
-<span class="c1"># configures the configuration version (we support older styles for</span>
-<span class="c1"># backwards compatibility). Please don&#39;t change it unless you know what</span>
-<span class="c1"># you&#39;re doing.</span>
-
-
-<span class="nv">VAGRANT_API_VERSION</span> <span class="o">=</span> <span class="s2">&#34;2&#34;</span>
-
-<span class="nv">vms</span> <span class="o">=</span> <span class="o">{</span>
-  <span class="s1">&#39;eth0&#39;</span> <span class="o">=</span>&gt; <span class="s2">&#34;10&#34;</span>,
-  <span class="s1">&#39;eth1&#39;</span> <span class="o">=</span>&gt; <span class="s2">&#34;11&#34;</span>
-<span class="o">}</span>
-
-Vagrant.configure<span class="o">(</span>VAGRANT_API_VERSION<span class="o">)</span> <span class="k">do</span> <span class="p">|</span>config<span class="p">|</span>
-  config.vm.box <span class="o">=</span> <span class="s2">&#34;ubuntu/bionic64&#34;</span>
-  vms.each <span class="k">do</span> <span class="p">|</span>key, value<span class="p">|</span>
-    config.vm.define <span class="s2">&#34;#{key}&#34;</span> <span class="k">do</span> <span class="p">|</span>node<span class="p">|</span>
-      node.vm.network <span class="s2">&#34;private_network&#34;</span>, ip: <span class="s2">&#34;192.168.50.#{value}&#34;</span>
-      <span class="k">if</span> <span class="s2">&#34;#{key}&#34;</span> <span class="o">==</span> <span class="s2">&#34;eth0&#34;</span>
-        node.vm.network <span class="s2">&#34;forwarded_port&#34;</span>, guest: 8545, host: <span class="m">8545</span>
-      end
-      node.vm.hostname <span class="o">=</span> <span class="s2">&#34;#{key}&#34;</span>
-      node.vm.provider <span class="s2">&#34;virtualbox&#34;</span> <span class="k">do</span> <span class="p">|</span>nodev<span class="p">|</span>
-        nodev.memory <span class="o">=</span> <span class="m">2048</span>
-      end
-    end
-  end
-end
-
-<span class="c1"># 내가 이해?한 바로는 eth0과 eth1이라는 2개의 노드(광구)를 설정했다. 정도</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Vagrantfile	=&gt;  내용을 수정한다. </span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># -*- mode: ruby -*-</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># vi: set ft=ruby :</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># All Vagrant configuration is done below. The &#34;2&#34; in Vagrant.configure</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># configures the configuration version (we support older styles for</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># backwards compatibility). Please don&#39;t change it unless you know what</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># you&#39;re doing.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">VAGRANT_API_VERSION</span> <span class="o">=</span> <span class="s2">&#34;2&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">vms</span> <span class="o">=</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;eth0&#39;</span> <span class="o">=</span>&gt; <span class="s2">&#34;10&#34;</span>,
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;eth1&#39;</span> <span class="o">=</span>&gt; <span class="s2">&#34;11&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Vagrant.configure<span class="o">(</span>VAGRANT_API_VERSION<span class="o">)</span> <span class="k">do</span> <span class="p">|</span>config<span class="p">|</span>
+</span></span><span class="line"><span class="cl">  config.vm.box <span class="o">=</span> <span class="s2">&#34;ubuntu/bionic64&#34;</span>
+</span></span><span class="line"><span class="cl">  vms.each <span class="k">do</span> <span class="p">|</span>key, value<span class="p">|</span>
+</span></span><span class="line"><span class="cl">    config.vm.define <span class="s2">&#34;#{key}&#34;</span> <span class="k">do</span> <span class="p">|</span>node<span class="p">|</span>
+</span></span><span class="line"><span class="cl">      node.vm.network <span class="s2">&#34;private_network&#34;</span>, ip: <span class="s2">&#34;192.168.50.#{value}&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="s2">&#34;#{key}&#34;</span> <span class="o">==</span> <span class="s2">&#34;eth0&#34;</span>
+</span></span><span class="line"><span class="cl">        node.vm.network <span class="s2">&#34;forwarded_port&#34;</span>, guest: 8545, host: <span class="m">8545</span>
+</span></span><span class="line"><span class="cl">      end
+</span></span><span class="line"><span class="cl">      node.vm.hostname <span class="o">=</span> <span class="s2">&#34;#{key}&#34;</span>
+</span></span><span class="line"><span class="cl">      node.vm.provider <span class="s2">&#34;virtualbox&#34;</span> <span class="k">do</span> <span class="p">|</span>nodev<span class="p">|</span>
+</span></span><span class="line"><span class="cl">        nodev.memory <span class="o">=</span> <span class="m">2048</span>
+</span></span><span class="line"><span class="cl">      end
+</span></span><span class="line"><span class="cl">    end
+</span></span><span class="line"><span class="cl">  end
+</span></span><span class="line"><span class="cl">end
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 내가 이해?한 바로는 eth0과 eth1이라는 2개의 노드(광구)를 설정했다. 정도</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">&gt; vagrant up		<span class="c1"># 방금 설정한 eth0과 eth1 노드(광구)를 오픈(실행)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">&gt; vagrant up		<span class="c1"># 방금 설정한 eth0과 eth1 노드(광구)를 오픈(실행)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">&gt; vagrant status		<span class="c1"># 설정되어 있는 두 노드(광구)의 상태를 확인 runing이면 오픈한 상태</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">&gt; vagrant status		<span class="c1"># 설정되어 있는 두 노드(광구)의 상태를 확인 runing이면 오픈한 상태</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>​</p>
 </li>
@@ -380,46 +373,46 @@ end
 <p>지금까지 진행한 폴더에서 Terminal을 열고 <strong>vagrant</strong> 명령어로 노드(광구)를 설정해준다.</p>
 <p><em><strong>기본적은 vagrant 명령어</strong></em></p>
 <table>
-<thead>
-<tr>
-<th style="text-align:left">명령어</th>
-<th style="text-align:left">설명</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">vagrant up 상태확인할가상머신이름</td>
-<td style="text-align:left">가상머신 기동</td>
-</tr>
-<tr>
-<td style="text-align:left">vagrant status 상태확인할가상머신이름</td>
-<td style="text-align:left">가상머신 상태 확인</td>
-</tr>
-<tr>
-<td style="text-align:left">vagrant ssh 접속할가상머신이름</td>
-<td style="text-align:left">가상머신에 접속</td>
-</tr>
-<tr>
-<td style="text-align:left">vagrant halt 멈출가상머신이름</td>
-<td style="text-align:left">가상머신 정지</td>
-</tr>
-<tr>
-<td style="text-align:left">vagrant suspend</td>
-<td style="text-align:left">가상머신 휴면</td>
-</tr>
-<tr>
-<td style="text-align:left">vagrant resume</td>
-<td style="text-align:left">가상머신 휴면에서 복원</td>
-</tr>
-<tr>
-<td style="text-align:left">vagrant reload</td>
-<td style="text-align:left">가상머신 재시동</td>
-</tr>
-<tr>
-<td style="text-align:left">vagrant destroy</td>
-<td style="text-align:left">가상머신 제거</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">명령어</th>
+          <th style="text-align: left">설명</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">vagrant up 상태확인할가상머신이름</td>
+          <td style="text-align: left">가상머신 기동</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">vagrant status 상태확인할가상머신이름</td>
+          <td style="text-align: left">가상머신 상태 확인</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">vagrant ssh 접속할가상머신이름</td>
+          <td style="text-align: left">가상머신에 접속</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">vagrant halt 멈출가상머신이름</td>
+          <td style="text-align: left">가상머신 정지</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">vagrant suspend</td>
+          <td style="text-align: left">가상머신 휴면</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">vagrant resume</td>
+          <td style="text-align: left">가상머신 휴면에서 복원</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">vagrant reload</td>
+          <td style="text-align: left">가상머신 재시동</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">vagrant destroy</td>
+          <td style="text-align: left">가상머신 제거</td>
+      </tr>
+  </tbody>
 </table>
 <p>*모든 명령어가  <em>vagrant up 상태확인할가상머신이름</em> 과 같이 사용 가능하다.</p>
 <p>​</p>
@@ -451,22 +444,22 @@ end
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># vagrant@eth0:~$ 가상머신에서 수행</span>
-
-&gt; sudo apt-get update
-&gt; sudo apt-get install software-properties-common
-&gt; sudo add-apt-repository -y ppa:ethereum/ethereum
-&gt; sudo apt-get install ethereum
-<span class="c1">#여기까지 순서대로 설치하면 geth설치는 완료.</span>
-
-<span class="c1"># 프라이빗 이더리움를 관리할 폴더 생성</span>
-&gt; mkdir -p dev/eth_localdata		<span class="c1">#-p는 mkdir 옵션사항 =&gt; 중간경로도 다 만들어라</span>
-&gt; mkdir database		
-&gt; <span class="nb">cd</span> database
-
-<span class="c1"># 프라이빗 이더리움을 위한 genesis.json블록파일(블록들을 연결하기 위한 최초의 블럭) 생성</span>
-&gt; vi genesis.json		<span class="c1"># genesis.json를 만들겠다.</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># vagrant@eth0:~$ 가상머신에서 수행</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&gt; sudo apt-get update
+</span></span><span class="line"><span class="cl">&gt; sudo apt-get install software-properties-common
+</span></span><span class="line"><span class="cl">&gt; sudo add-apt-repository -y ppa:ethereum/ethereum
+</span></span><span class="line"><span class="cl">&gt; sudo apt-get install ethereum
+</span></span><span class="line"><span class="cl"><span class="c1">#여기까지 순서대로 설치하면 geth설치는 완료.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 프라이빗 이더리움를 관리할 폴더 생성</span>
+</span></span><span class="line"><span class="cl">&gt; mkdir -p dev/eth_localdata		<span class="c1">#-p는 mkdir 옵션사항 =&gt; 중간경로도 다 만들어라</span>
+</span></span><span class="line"><span class="cl">&gt; mkdir database		
+</span></span><span class="line"><span class="cl">&gt; <span class="nb">cd</span> database
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 프라이빗 이더리움을 위한 genesis.json블록파일(블록들을 연결하기 위한 최초의 블럭) 생성</span>
+</span></span><span class="line"><span class="cl">&gt; vi genesis.json		<span class="c1"># genesis.json를 만들겠다.</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -492,27 +485,27 @@ end
 </span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># genesis.json의 내용 등록 (예시)</span>
-i → 입력 활성화 → 아래 내용입력 후 → esc → ZZ<span class="o">(</span>저장하고 종료<span class="o">)</span>
-
-<span class="o">{</span>
-  <span class="s2">&#34;config&#34;</span>: <span class="o">{</span>
-    <span class="s2">&#34;chainId&#34;</span>: 5245,
-    <span class="s2">&#34;homesteadBlock&#34;</span>: 0,
-    <span class="s2">&#34;eip150Block&#34;</span>: 0,
-    <span class="s2">&#34;eip155Block&#34;</span>: 0,
-    <span class="s2">&#34;eip158Block&#34;</span>: <span class="m">0</span>
-    <span class="o">}</span>,
-  <span class="s2">&#34;nonce&#34;</span>: <span class="s2">&#34;0xdeadbeefdeadbeef&#34;</span>,
-  <span class="s2">&#34;difficulty&#34;</span>: <span class="s2">&#34;0x40&#34;</span>,
-  <span class="s2">&#34;gasLimit&#34;</span>: <span class="s2">&#34;9999999&#34;</span>,
-  <span class="s2">&#34;alloc&#34;</span>: <span class="o">{}</span>,
-  <span class="s2">&#34;extraData&#34;</span>: <span class="s2">&#34;&#34;</span>,
-  <span class="s2">&#34;mixhash&#34;</span>: <span class="s2">&#34;0x0000000000000000000000000000000000000000000000000000000000000000&#34;</span>,
-  <span class="s2">&#34;parentHash&#34;</span>: <span class="s2">&#34;0x0000000000000000000000000000000000000000000000000000000000000000&#34;</span>,
-  <span class="s2">&#34;timestamp&#34;</span>: <span class="s2">&#34;0x00&#34;</span>
-<span class="o">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># genesis.json의 내용 등록 (예시)</span>
+</span></span><span class="line"><span class="cl">i → 입력 활성화 → 아래 내용입력 후 → esc → ZZ<span class="o">(</span>저장하고 종료<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;config&#34;</span>: <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;chainId&#34;</span>: 5245,
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;homesteadBlock&#34;</span>: 0,
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;eip150Block&#34;</span>: 0,
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;eip155Block&#34;</span>: 0,
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;eip158Block&#34;</span>: <span class="m">0</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>,
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;nonce&#34;</span>: <span class="s2">&#34;0xdeadbeefdeadbeef&#34;</span>,
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;difficulty&#34;</span>: <span class="s2">&#34;0x40&#34;</span>,
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;gasLimit&#34;</span>: <span class="s2">&#34;9999999&#34;</span>,
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;alloc&#34;</span>: <span class="o">{}</span>,
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;extraData&#34;</span>: <span class="s2">&#34;&#34;</span>,
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;mixhash&#34;</span>: <span class="s2">&#34;0x0000000000000000000000000000000000000000000000000000000000000000&#34;</span>,
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;parentHash&#34;</span>: <span class="s2">&#34;0x0000000000000000000000000000000000000000000000000000000000000000&#34;</span>,
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;timestamp&#34;</span>: <span class="s2">&#34;0x00&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -521,10 +514,10 @@ i → 입력 활성화 → 아래 내용입력 후 → esc → ZZ<span class="o"
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># genesis.json 저장 후 </span>
-&gt; <span class="nb">cd</span> ..
-다시 root폴더로 이동한다.
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># genesis.json 저장 후 </span>
+</span></span><span class="line"><span class="cl">&gt; <span class="nb">cd</span> ..
+</span></span><span class="line"><span class="cl">다시 root폴더로 이동한다.
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>​</p>
 </li>
@@ -535,8 +528,8 @@ i → 입력 활성화 → 아래 내용입력 후 → esc → ZZ<span class="o"
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">&gt; geth init		<span class="c1">#이 명령어로 등록(초기화)을 할 수 있는데...</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">&gt; geth init		<span class="c1">#이 명령어로 등록(초기화)을 할 수 있는데...</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><image src="/images/image-20200903104621097.png" width="100%" caption="--datadir관련 공식문서 설명">
 <div class="highlight"><div class="chroma">
@@ -547,11 +540,11 @@ i → 입력 활성화 → 아래 내용입력 후 → esc → ZZ<span class="o"
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 위의 --datadir을 참고하여</span>
-
-&gt; geth --datadir ~/dev/eth_localdata init ~/database/genesis.json
-<span class="c1"># ~/database 위치에 있는 genesis.json을 등록(초기화)하고 등록 후 생기는 관련 자료는 ~/dev/eth_localdata에 모아놓겠다는 뜻</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 위의 --datadir을 참고하여</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&gt; geth --datadir ~/dev/eth_localdata init ~/database/genesis.json
+</span></span><span class="line"><span class="cl"><span class="c1"># ~/database 위치에 있는 genesis.json을 등록(초기화)하고 등록 후 생기는 관련 자료는 ~/dev/eth_localdata에 모아놓겠다는 뜻</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><image src="/images/image-20200917134852473.png" width="800px">
 <p>​</p>
@@ -564,9 +557,9 @@ i → 입력 활성화 → 아래 내용입력 후 → esc → ZZ<span class="o"
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">&gt; geth account new
-<span class="c1"># 이 명령어를 입력하면 아이디는 자동으로 생성되고 비밀번호만 설정할 수 있게 진행된다.</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">&gt; geth account new
+</span></span><span class="line"><span class="cl"><span class="c1"># 이 명령어를 입력하면 아이디는 자동으로 생성되고 비밀번호만 설정할 수 있게 진행된다.</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -574,9 +567,9 @@ i → 입력 활성화 → 아래 내용입력 후 → esc → ZZ<span class="o"
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 계정이 잘 만들어 진 것인지 확인하기 위해서는 </span>
-&gt; geth account list
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 계정이 잘 만들어 진 것인지 확인하기 위해서는 </span>
+</span></span><span class="line"><span class="cl">&gt; geth account list
+</span></span></code></pre></td></tr></table>
 </div>
 </div><image src="/images/image-20200917100306437.png" width="800px">
 <p>​</p>
@@ -584,7 +577,7 @@ i → 입력 활성화 → 아래 내용입력 후 → esc → ZZ<span class="o"
 <li>
 <p>이제 노드(광구)에 어떤 사람들이 들어올 수 있는지와 입장하는 명령어들을 살펴보자.</p>
 <ul>
-<li><em>어떤식으로 입력(설정)하는 지는 <a href="https://github.com/ethereum/go-ethereum/wiki/Command-Line-Options" target="_blank" rel="noopener noreffer">여기</a>를 참고하여 진행하였다.</em></li>
+<li><em>어떤식으로 입력(설정)하는 지는 <a href="https://github.com/ethereum/go-ethereum/wiki/Command-Line-Options" target="_blank" rel="noopener noreffer ">여기</a>를 참고하여 진행하였다.</em></li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -600,17 +593,17 @@ i → 입력 활성화 → 아래 내용입력 후 → esc → ZZ<span class="o"
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># eth0의 노드(광구) 입장 명령어</span>
-&gt; geth console
-
-<span class="c1"># 다만 보통의 경우 아래와 같이 노드(eth0)에 다양한 주소 및 설정을 붙이고 진행한다. </span>
-&gt; geth --networkid <span class="m">5245</span> --port <span class="m">30303</span> --maxpeers <span class="m">2</span> --datadir ~/dev/eth_localdata --rpcaddr 0.0.0.0 --nodiscover --nousb console &gt;&gt; ~/eth0.log
-
-<span class="c1"># 일단 이걸로 채굴 성공</span>
-geth --datadir ~/dev/eth_localdata --nodiscover --nousb --networkid <span class="m">5245</span> console
-
-<span class="c1"># 맨 마지막에 2&gt;&gt; ~/eth0.log를 붙이면, 진행기록을 root주소에 eth0.log를 만들어 저장한다.란 뜻.</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># eth0의 노드(광구) 입장 명령어</span>
+</span></span><span class="line"><span class="cl">&gt; geth console
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 다만 보통의 경우 아래와 같이 노드(eth0)에 다양한 주소 및 설정을 붙이고 진행한다. </span>
+</span></span><span class="line"><span class="cl">&gt; geth --networkid <span class="m">5245</span> --port <span class="m">30303</span> --maxpeers <span class="m">2</span> --datadir ~/dev/eth_localdata --rpcaddr 0.0.0.0 --nodiscover --nousb console &gt;&gt; ~/eth0.log
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 일단 이걸로 채굴 성공</span>
+</span></span><span class="line"><span class="cl">geth --datadir ~/dev/eth_localdata --nodiscover --nousb --networkid <span class="m">5245</span> console
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 맨 마지막에 2&gt;&gt; ~/eth0.log를 붙이면, 진행기록을 root주소에 eth0.log를 만들어 저장한다.란 뜻.</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -623,14 +616,14 @@ geth --datadir ~/dev/eth_localdata --nodiscover --nousb --networkid <span class=
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 진행 도중 ERROR 모음</span>
-
-Failed to enumerate USB <span class="nv">devices</span>  <span class="o">=</span>&gt; --nousb 추가해주면 사라짐.
-<span class="c1">#if you want USB wallet support disabled. By default it&#39;s enabled.</span>
-
-Looking <span class="k">for</span> <span class="nv">peers</span>  <span class="o">=</span>&gt; --nodiscover 추가해주면 사라짐
-<span class="c1"># --nodiscover 옵션은 같은 제네시스 블록과 네트워크ID에 있는 노드들이 연결하는 것을 방지</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 진행 도중 ERROR 모음</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Failed to enumerate USB <span class="nv">devices</span>  <span class="o">=</span>&gt; --nousb 추가해주면 사라짐.
+</span></span><span class="line"><span class="cl"><span class="c1">#if you want USB wallet support disabled. By default it&#39;s enabled.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Looking <span class="k">for</span> <span class="nv">peers</span>  <span class="o">=</span>&gt; --nodiscover 추가해주면 사라짐
+</span></span><span class="line"><span class="cl"><span class="c1"># --nodiscover 옵션은 같은 제네시스 블록과 네트워크ID에 있는 노드들이 연결하는 것을 방지</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>​</p>
 </li>
@@ -639,16 +632,14 @@ Looking <span class="k">for</span> <span class="nv">peers</span>  <span class="o
 <h1 id="200902-한-일">20.09.02 한 일..</h1>
 <blockquote>
 <p>어제까지 진행한 내용 보강 &amp; geth 진입(광구) 후 명령어 정리</p>
-<p>광구에 진입했으니까. 일할 사람👷‍♂️을 등록해주고, 채굴한 광물(coin)을 저장할 곳🛒(coinbase) 등 추가 등록이 필요하다.</p>
-</blockquote>
+<p>광구에 진입했으니까. 일할 사람👷‍♂️을 등록해주고, 채굴한 광물(coin)을 저장할 곳🛒(coinbase) 등 추가 등록이 필요하다.</p></blockquote>
 <ol>
 <li>
 <p><strong>먼저 일할 사람👷‍♂️(EOS 계정)을 등록해주자.</strong></p>
 <p><em>✋ 여기서 잠깐.!</em></p>
 <blockquote>
 <p>EOS란?</p>
-<p><strong>이오스</strong>(EOS)는 <a href="http://wiki.hash.kr/index.php/%ec%9c%84%ec%9e%84%ec%a7%80%eb%b6%84%ec%a6%9d%eb%aa%85" target="_blank" rel="noopener noreffer">위임지분증명</a>(DPoS) 방식을 사용하는 제3세대 암호화폐. 이오스는 <a href="http://wiki.hash.kr/index.php/%ec%9d%b4%eb%8d%94%eb%a6%ac%ec%9b%80" target="_blank" rel="noopener noreffer">이더리움</a>의 느린 처리 속도와 높은 수수료 문제를 해결하기 위한 대안으로 등장하였다. 이오스는 분산 애플리케이션인 <a href="http://wiki.hash.kr/index.php/%eb%94%94%ec%95%b1" target="_blank" rel="noopener noreffer">디앱</a>(DApp)을 구동할 수 있는 플랫폼을 제공함으로써 범용적인 블록체인 운영체제(OS)를 만드는 것을 목표로 하는 프로젝트.</p>
-</blockquote>
+<p><strong>이오스</strong>(EOS)는 <a href="http://wiki.hash.kr/index.php/%ec%9c%84%ec%9e%84%ec%a7%80%eb%b6%84%ec%a6%9d%eb%aa%85" target="_blank" rel="noopener noreffer ">위임지분증명</a>(DPoS) 방식을 사용하는 제3세대 암호화폐. 이오스는 <a href="http://wiki.hash.kr/index.php/%ec%9d%b4%eb%8d%94%eb%a6%ac%ec%9b%80" target="_blank" rel="noopener noreffer ">이더리움</a>의 느린 처리 속도와 높은 수수료 문제를 해결하기 위한 대안으로 등장하였다. 이오스는 분산 애플리케이션인 <a href="http://wiki.hash.kr/index.php/%eb%94%94%ec%95%b1" target="_blank" rel="noopener noreffer ">디앱</a>(DApp)을 구동할 수 있는 플랫폼을 제공함으로써 범용적인 블록체인 운영체제(OS)를 만드는 것을 목표로 하는 프로젝트.</p></blockquote>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -656,28 +647,28 @@ Looking <span class="k">for</span> <span class="nv">peers</span>  <span class="o
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">personal.newAccount<span class="o">(</span><span class="s2">&#34;eth&#34;</span><span class="o">)</span>
-<span class="c1">#처음 등록된 일할 사람👷‍♂️은 자동으로 저장할 곳🛒(coinbase) 으로 지정된다.</span>
-<span class="c1">#나는 계정을 2개 만들어서 진행한다.</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">personal.newAccount<span class="o">(</span><span class="s2">&#34;eth&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#처음 등록된 일할 사람👷‍♂️은 자동으로 저장할 곳🛒(coinbase) 으로 지정된다.</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#나는 계정을 2개 만들어서 진행한다.</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><table>
-<thead>
-<tr>
-<th style="text-align:left">personal명령어</th>
-<th>의미</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">personal.newAccount(&ldquo;eth&rdquo;)</td>
-<td>eth를 비밀번호로 하는 계정 생성 (keystore 추가)</td>
-</tr>
-<tr>
-<td style="text-align:left">personal.listAccounts</td>
-<td>등록된 계정 리스트 확인</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">personal명령어</th>
+          <th>의미</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">personal.newAccount(&ldquo;eth&rdquo;)</td>
+          <td>eth를 비밀번호로 하는 계정 생성 (keystore 추가)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">personal.listAccounts</td>
+          <td>등록된 계정 리스트 확인</td>
+      </tr>
+  </tbody>
 </table>
 <p>​</p>
 </li>
@@ -688,80 +679,80 @@ Looking <span class="k">for</span> <span class="nv">peers</span>  <span class="o
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">miner.start<span class="o">(</span>1<span class="o">)</span>		<span class="o">=</span>&gt; <span class="c1">#코인 1개 채굴할때까지 진행</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">miner.start<span class="o">(</span>1<span class="o">)</span>		<span class="o">=</span>&gt; <span class="c1">#코인 1개 채굴할때까지 진행</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><table>
-<thead>
-<tr>
-<th>miner(채굴관련) 명령어</th>
-<th>의미</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>miner.start()</td>
-<td>()안에 숫자 만큼 채굴. 비워두면 계속 채굴.</td>
-</tr>
-<tr>
-<td>miner.stop()</td>
-<td>채굴 중단</td>
-</tr>
-<tr>
-<td>miner.setEtherbase()</td>
-<td>채굴 보상을 줄 계정을 등록</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>miner(채굴관련) 명령어</th>
+          <th>의미</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>miner.start()</td>
+          <td>()안에 숫자 만큼 채굴. 비워두면 계속 채굴.</td>
+      </tr>
+      <tr>
+          <td>miner.stop()</td>
+          <td>채굴 중단</td>
+      </tr>
+      <tr>
+          <td>miner.setEtherbase()</td>
+          <td>채굴 보상을 줄 계정을 등록</td>
+      </tr>
+  </tbody>
 </table>
 <image src="/images/image-20200903171250312.png" width="800px">
 <p><em>정상적으로 채굴이 되면 Successfully sealed new block 까지 확인할 수 있다.</em></p>
 <p>​</p>
 <p>이외에 eth안에서 사용하는 여러 명령어를 정리한다.</p>
 <table>
-<thead>
-<tr>
-<th>eth명령어</th>
-<th style="text-align:left">의미</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>eth.accounts (personal.listAccounts와 동일)</td>
-<td style="text-align:left">현재 생성된 총 계정 확인</td>
-</tr>
-<tr>
-<td>eth.blockNumber</td>
-<td style="text-align:left">현재 채굴된 블록의 번호</td>
-</tr>
-<tr>
-<td>eth.hashrate</td>
-<td style="text-align:left">해시레이트(진행속도?를 알 수 있음)</td>
-</tr>
-<tr>
-<td>eth.coinbase</td>
-<td style="text-align:left">채굴이 진행되면 보상을 받을 계정.</td>
-</tr>
-<tr>
-<td>eth.mining</td>
-<td style="text-align:left">현재 채굴중인지 여부</td>
-</tr>
-<tr>
-<td>eth.getBalance(account[0])</td>
-<td style="text-align:left">계좌 잔고 조회</td>
-</tr>
-<tr>
-<td>eth.getTranaction()</td>
-<td style="text-align:left">()안에 숫자번호의 트랜잭션의 정보</td>
-</tr>
-<tr>
-<td>eth.sendTransaction({from:account, to:account, value:wei})</td>
-<td style="text-align:left">트랜잭션 보내기</td>
-</tr>
-<tr>
-<td>eth.pendingTransactions</td>
-<td style="text-align:left">처리 대기 중인 트랜잭션</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>eth명령어</th>
+          <th style="text-align: left">의미</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>eth.accounts (personal.listAccounts와 동일)</td>
+          <td style="text-align: left">현재 생성된 총 계정 확인</td>
+      </tr>
+      <tr>
+          <td>eth.blockNumber</td>
+          <td style="text-align: left">현재 채굴된 블록의 번호</td>
+      </tr>
+      <tr>
+          <td>eth.hashrate</td>
+          <td style="text-align: left">해시레이트(진행속도?를 알 수 있음)</td>
+      </tr>
+      <tr>
+          <td>eth.coinbase</td>
+          <td style="text-align: left">채굴이 진행되면 보상을 받을 계정.</td>
+      </tr>
+      <tr>
+          <td>eth.mining</td>
+          <td style="text-align: left">현재 채굴중인지 여부</td>
+      </tr>
+      <tr>
+          <td>eth.getBalance(account[0])</td>
+          <td style="text-align: left">계좌 잔고 조회</td>
+      </tr>
+      <tr>
+          <td>eth.getTranaction()</td>
+          <td style="text-align: left">()안에 숫자번호의 트랜잭션의 정보</td>
+      </tr>
+      <tr>
+          <td>eth.sendTransaction({from:account, to:account, value:wei})</td>
+          <td style="text-align: left">트랜잭션 보내기</td>
+      </tr>
+      <tr>
+          <td>eth.pendingTransactions</td>
+          <td style="text-align: left">처리 대기 중인 트랜잭션</td>
+      </tr>
+  </tbody>
 </table>
 <p><em>*이것 말고도 명령어가 더 있을 수 있으니 필요한 것은 찾아보자.</em></p>
 <p>​</p>
@@ -770,16 +761,14 @@ Looking <span class="k">for</span> <span class="nv">peers</span>  <span class="o
 <hr>
 <h1 id="200903-한-일">20.09.03 한 일..</h1>
 <blockquote>
-<p>어제까지 진행한 내용 보강 &amp; 실습 진행</p>
-</blockquote>
+<p>어제까지 진행한 내용 보강 &amp; 실습 진행</p></blockquote>
 <p>​</p>
 <h4 id="public-blockchain과-private-blockchain의-차이">✨public blockchain과 private blockchain의 차이</h4>
 <blockquote>
 <ul>
 <li>public blockchain은 전세계 사람 어느 누구든 blockchain에 접근하여 data를 읽을 수도 있고 transaction을 날릴 수도 있다. 또한 채굴(consensus process)에 참여할 수도 있다.</li>
 <li>private blockchain은 개인 또는 하나의 조직이 blockchain에 대한 접근을 관리하는 것을 말한다. 이로 인해 private network에 참여하기 위해서는 해당 관리자의 허락이 필요하다.</li>
-</ul>
-</blockquote>
+</ul></blockquote>
 <p>​</p>
 <p>채굴이 잘 되었는지 확인해보자.</p>
 <div class="highlight"><div class="chroma">
@@ -790,11 +779,11 @@ Looking <span class="k">for</span> <span class="nv">peers</span>  <span class="o
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">eth.getBalance<span class="o">(</span>eth.accounts<span class="o">[</span>0<span class="o">])</span>
-eth.getBalance<span class="o">(</span>eth.accounts<span class="o">[</span>1<span class="o">])</span>
-
-<span class="c1"># 이와 같은 방법으로 EOS계정별로 확인</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">eth.getBalance<span class="o">(</span>eth.accounts<span class="o">[</span>0<span class="o">])</span>
+</span></span><span class="line"><span class="cl">eth.getBalance<span class="o">(</span>eth.accounts<span class="o">[</span>1<span class="o">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 이와 같은 방법으로 EOS계정별로 확인</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><image src="/images/image-20200903173959675.png" width="1000px">
 <p>​</p>
@@ -805,9 +794,9 @@ eth.getBalance<span class="o">(</span>eth.accounts<span class="o">[</span>1<span
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">web3.fromWei<span class="o">(</span>eth.getBalance<span class="o">(</span>eth.accounts<span class="o">[</span>0<span class="o">])</span>, <span class="s2">&#34;ether&#34;</span><span class="o">)</span>
-web3.fromWei<span class="o">(</span>eth.getBalance<span class="o">(</span>eth.accounts<span class="o">[</span>1<span class="o">])</span>, <span class="s2">&#34;ether&#34;</span><span class="o">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">web3.fromWei<span class="o">(</span>eth.getBalance<span class="o">(</span>eth.accounts<span class="o">[</span>0<span class="o">])</span>, <span class="s2">&#34;ether&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">web3.fromWei<span class="o">(</span>eth.getBalance<span class="o">(</span>eth.accounts<span class="o">[</span>1<span class="o">])</span>, <span class="s2">&#34;ether&#34;</span><span class="o">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><image src="/images/image-20200903173949119.png" width="1000px">
 <p>​</p>
@@ -836,17 +825,17 @@ web3.fromWei<span class="o">(</span>eth.getBalance<span class="o">(</span>eth.ac
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 잠금해제 command 로 해제가 가능하다. (이더를 보내는 EOS계정만 잠금을 풀어주면 된다.)</span>
-
-personal.unlockAccount<span class="o">(</span>eth.accounts<span class="o">[</span>0<span class="o">])</span>
-<span class="c1">#기본적인 세팅, 입력 후 비밀번호 입력 계정 잠금 해제(잠금 해제 유효시간 기본 - 300초)</span>
-
-personal.unlockAccount<span class="o">(</span>eth.accounts<span class="o">[</span>0<span class="o">]</span>, <span class="s2">&#34;inputpassword&#34;</span><span class="o">)</span>
-<span class="c1">#비밀번호가 입력되어 계정 잠금 해제(비밀번호 입력 필요X)</span>
-
-personal.unlockAccount<span class="o">(</span>eth.accounts<span class="o">[</span>0<span class="o">]</span>, <span class="s2">&#34;inputpassword&#34;</span>, 0<span class="o">)</span>
-<span class="c1">#계정 잠금 해제(0 - Geth 프로세스 종료되기 전까지 해제)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 잠금해제 command 로 해제가 가능하다. (이더를 보내는 EOS계정만 잠금을 풀어주면 된다.)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">personal.unlockAccount<span class="o">(</span>eth.accounts<span class="o">[</span>0<span class="o">])</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#기본적인 세팅, 입력 후 비밀번호 입력 계정 잠금 해제(잠금 해제 유효시간 기본 - 300초)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">personal.unlockAccount<span class="o">(</span>eth.accounts<span class="o">[</span>0<span class="o">]</span>, <span class="s2">&#34;inputpassword&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#비밀번호가 입력되어 계정 잠금 해제(비밀번호 입력 필요X)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">personal.unlockAccount<span class="o">(</span>eth.accounts<span class="o">[</span>0<span class="o">]</span>, <span class="s2">&#34;inputpassword&#34;</span>, 0<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#계정 잠금 해제(0 - Geth 프로세스 종료되기 전까지 해제)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>​</p>
 <p>이제 트랜잭션이 있는지 확인해보자. (eth.pendingTransactions =&gt; 트랜잭션 확인)</p>
@@ -861,10 +850,10 @@ personal.unlockAccount<span class="o">(</span>eth.accounts<span class="o">[</spa
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">eth.sendTransaction<span class="o">({</span>from: eth.accounts<span class="o">[</span>0<span class="o">]</span>, to: eth.accounts<span class="o">[</span>1<span class="o">]</span>, value: web3.toWei<span class="o">(</span>10, <span class="s2">&#34;ether&#34;</span><span class="o">)})</span>
-
-<span class="c1"># eth.accounts[0]에서 eth.accounts[1]로 web3단위로 10이더를 보내겠다.는 뜻.</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">eth.sendTransaction<span class="o">({</span>from: eth.accounts<span class="o">[</span>0<span class="o">]</span>, to: eth.accounts<span class="o">[</span>1<span class="o">]</span>, value: web3.toWei<span class="o">(</span>10, <span class="s2">&#34;ether&#34;</span><span class="o">)})</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># eth.accounts[0]에서 eth.accounts[1]로 web3단위로 10이더를 보내겠다.는 뜻.</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><image src="/images/image-20200903174351993.png" width="1000px">
 <p><em>색이 이쁘니 성공적으로 명령을 처리 한 것 같다.</em></p>
@@ -885,10 +874,10 @@ personal.unlockAccount<span class="o">(</span>eth.accounts<span class="o">[</spa
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">&gt; miner.start<span class="o">(</span>1<span class="o">)</span>				<span class="c1"># 이걸로 잠시 채굴을 켰다가.</span>
-&gt; miner.stop<span class="o">()</span>					<span class="c1"># 으로 채굴을 꺼주고</span>
-&gt; eth.pendingTransactions		<span class="c1"># 으로 트랜잭션 내용을 다시 확인해주면 비어있는 것을 볼 수 있다.</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">&gt; miner.start<span class="o">(</span>1<span class="o">)</span>				<span class="c1"># 이걸로 잠시 채굴을 켰다가.</span>
+</span></span><span class="line"><span class="cl">&gt; miner.stop<span class="o">()</span>					<span class="c1"># 으로 채굴을 꺼주고</span>
+</span></span><span class="line"><span class="cl">&gt; eth.pendingTransactions		<span class="c1"># 으로 트랜잭션 내용을 다시 확인해주면 비어있는 것을 볼 수 있다.</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><image src="/images/image-20200903174935650.png" width="1000px">
 <image src="/images/image-20200903175110061.png" width="1000px">
@@ -903,28 +892,26 @@ personal.unlockAccount<span class="o">(</span>eth.accounts<span class="o">[</spa
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># EOS계정(accounts[1])의 잔액을 확인해보면</span>
-
-&gt; eth.getBalance<span class="o">(</span>eth.accounts<span class="o">[</span>1<span class="o">])</span>
-&gt; web3.fromWei<span class="o">(</span>eth.getBalance<span class="o">(</span>eth.accounts<span class="o">[</span>1<span class="o">])</span>, <span class="s2">&#34;ether&#34;</span><span class="o">)</span>
-<span class="c1">#둘다 확인 가능하며 송금이 잘 진행된 것을 볼 수 있다. </span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># EOS계정(accounts[1])의 잔액을 확인해보면</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&gt; eth.getBalance<span class="o">(</span>eth.accounts<span class="o">[</span>1<span class="o">])</span>
+</span></span><span class="line"><span class="cl">&gt; web3.fromWei<span class="o">(</span>eth.getBalance<span class="o">(</span>eth.accounts<span class="o">[</span>1<span class="o">])</span>, <span class="s2">&#34;ether&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#둘다 확인 가능하며 송금이 잘 진행된 것을 볼 수 있다. </span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><image src="/images/image-20200903175325622.png" width="1000px">
 <image src="/images/image-20200903175350537.png" width="1000px">
 <hr>
 <p>여기까지 진행하면서, 두 블로그를 매우 많이 참고했고, 도움이 되었어서 소개한다.</p>
-<p><a href="https://www.mrlatte.net/research/2018/02/27/ethereum-geth.html" target="_blank" rel="noopener noreffer">Mr.Latte</a> - [Go Ethereum 사용 법]</p>
-<p><a href="https://allg.tistory.com/44" target="_blank" rel="noopener noreffer">Allg</a> - [Geth 설치 및 테스트 네트워크에서 송금하기]</p>
+<p><a href="https://www.mrlatte.net/research/2018/02/27/ethereum-geth.html" target="_blank" rel="noopener noreffer ">Mr.Latte</a> - [Go Ethereum 사용 법]</p>
+<p><a href="https://allg.tistory.com/44" target="_blank" rel="noopener noreffer ">Allg</a> - [Geth 설치 및 테스트 네트워크에서 송금하기]</p>
 <hr>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
                 <span>Updated on 2020-09-03</span>
-            </div>
-            <div class="post-info-license"></div>
-        </div>
+            </div></div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
                             <a class="link-to-markdown" href="/block_chain/index.md" target="_blank">Read Markdown</a>
@@ -936,28 +923,28 @@ personal.unlockAccount<span class="o">(</span>eth.accounts<span class="o">[</spa
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/block_chain/">block_chain</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/block_chain/">Block_chain</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/07_vue_vuex-concept/" class="prev" rel="prev" title="07_Vue_Vuex Concept"><i class="fas fa-angle-left fa-fw"></i>07_Vue_Vuex Concept</a>
-            <a href="/sw_20.09.04/" class="next" rel="next" title="SW Expert Academy_D3 10505, 10200, 3376, 5642">SW Expert Academy_D3 10505, 10200, 3376, 5642<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/07_vue_vuex-concept/" class="prev" rel="prev" title="07_Vue_Vuex Concept"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>07_Vue_Vuex Concept</a>
+            <a href="/sw_20.09.04/" class="next" rel="next" title="SW Expert Academy_D3 10505, 10200, 3376, 5642">SW Expert Academy_D3 10505, 10200, 3376, 5642<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 <div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.143.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 
         <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
-                <i class="fas fa-arrow-up fa-fw"></i>
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
             </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
-                <i class="fas fa-comment fa-fw"></i>
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://colinder-github-io.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":-1},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><link rel="stylesheet" href="/css/_custom.scss"><script type="text/javascript" src="https://colinder-github-io.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":200},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>
