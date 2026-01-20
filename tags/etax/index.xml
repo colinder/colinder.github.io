@@ -18,7 +18,7 @@
     <pubDate>Mon, 19 Jan 2026 11:10:00 &#43;0900</pubDate>
     <author>colinder</author>
     <guid>https://colinder.github.io/etax_process_01/</guid>
-    <description><![CDATA[전자(세금)계산서를 개발하기 위한 과정과 소스코드에 대하여 정리합니다.]]></description>
+    <description><![CDATA[전자(세금)계산서 발급 api를 국세청과 연동하기 위한 과정과 소스코드에 대하여 정리합니다.]]></description>
 </item>
 </channel>
 </rss>
