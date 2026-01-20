@@ -1,4 +1,4 @@
-# Data labeling Image & Video DOC
+<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script># Data labeling Image & Video DOC
 
 
 ​		

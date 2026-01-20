@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>1D_convolution - colinder&#39;s blog</title><meta name="Description" content="Hello New World"><meta property="og:url" content="http://localhost:1313/1d_convolution/">
+  <meta property="og:site_name" content="colinder&#39;s blog">
+  <meta property="og:title" content="1D_convolution">
+  <meta property="og:description" content="​
+1D convolution 합성곱*의 개념을 도입해 시계열의 특성을 가지는 데이터의 특성을 추출하는 딥러닝 모델.
+1차원 CNN은 이미지가 아닌 시계열 분석 (time-series analysis)나 텍스트 분석을 하는데 주로 많이 사용된다. 여기에서 1차원이라는 것은 합성곱을 위한 커널과 적용하는 데이터의 sequence가 1차원의 모양을 가진다는 것을 의미.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-10-24T12:58:10+09:00">
+    <meta property="article:modified_time" content="2022-10-24T12:58:10+09:00">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="1D_convolution">
+    <meta property="og:image" content="http://localhost:1313/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/logo.png">
+  <meta name="twitter:title" content="1D_convolution">
+  <meta name="twitter:description" content="​
+1D convolution 합성곱*의 개념을 도입해 시계열의 특성을 가지는 데이터의 특성을 추출하는 딥러닝 모델.
+1차원 CNN은 이미지가 아닌 시계열 분석 (time-series analysis)나 텍스트 분석을 하는데 주로 많이 사용된다. 여기에서 1차원이라는 것은 합성곱을 위한 커널과 적용하는 데이터의 sequence가 1차원의 모양을 가진다는 것을 의미.">
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/1d_convolution/" /><link rel="prev" href="http://localhost:1313/machine_learning_classification/" /><link rel="next" href="http://localhost:1313/what_is_sequence_data/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "1D_convolution",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/1d_convolution\/"
+        },"genre": "posts","keywords": "AI, 1D_convolution","wordcount":  1065 ,
+        "url": "http:\/\/localhost:1313\/1d_convolution\/","datePublished": "2022-10-24T12:58:10+09:00","dateModified": "2022-10-24T12:58:10+09:00","license": "colinder","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "colinder"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="auto" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="colinder&#39;s blog">Hello New World</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="colinder&#39;s blog">Hello New World</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">1D_convolution</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/ai/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>AI</a>&nbsp;<a href="/categories/1d_convolution/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>1D_convolution</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-10-24">2022-10-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1065 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#합성곱이란">합성곱이란?</a>
+          <ul>
+            <li><a href="#pytorch를-활용한-1d-conv-예제">pytorch를 활용한 1D conv 예제</a></li>
+            <li><a href="#parameters"><strong>Parameters</strong></a></li>
+            <li><a href="#input"><strong>Input</strong></a></li>
+            <li><a href="#operation"><strong>Operation</strong></a></li>
+            <li><a href="#output"><strong>Output</strong></a></li>
+          </ul>
+        </li>
+        <li><a href="#참고-사이트">참고 사이트</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>​</p>
+<h1 id="1d-convolution">1D convolution</h1>
+<blockquote>
+<p>합성곱*의 개념을 도입해 시계열의 특성을 가지는 데이터의 특성을 추출하는 딥러닝 모델.</p>
+<p>1차원 CNN은 이미지가 아닌 시계열 분석 (time-series analysis)나 텍스트 분석을 하는데 주로 많이 사용된다. 여기에서 1차원이라는 것은 합성곱을 위한 커널과 적용하는 데이터의 sequence가 1차원의 모양을 가진다는 것을 의미.</p></blockquote>
+<p>​</p>
+<p>​</p>
+<h3 id="합성곱이란">합성곱이란?</h3>
+<ul>
+<li>
+<p><code>이론적으로</code>, 하나의 함수와 또 다른 함수를 반전 이동한 값을 곱한 다음, 구간에 대해 적분하여 새로운 함수를 구하는 수학 연산자.</p>
+</li>
+<li>
+<p><code>AI에서는 주로</code>, 합성곱 연산이란 커널(kernel) 또는 필터(filter) 라는 n × m 크기의 행렬로 높이(height) × 너비(width) 크기의 이미지(혹은 시계열성 데이터)를 처음부터 끝까지 겹치며 훑으면서 n × m 크기의 겹쳐지는 부분의 각 이미지와 커널의 원소의 값을 곱해서 모두 더한 값을 출력으로 하는 것을 의미. 이때, 왼쪽 위부터 가장 오른쪽 아래까지 순차적으로 훑습니다.</p>
+</li>
+</ul>
+<p>​</p>
+<p>​</p>
+<h4 id="pytorch를-활용한-1d-conv-예제">pytorch를 활용한 1D conv 예제</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="nn">nn</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">conv1</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Conv1d</span><span class="p">(</span><span class="n">in_channels</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">out_channels</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                  <span class="n">stride</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">dilation</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                  <span class="n">groups</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">padding_mode</span><span class="o">=</span><span class="s1">&#39;zeros&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># default setting</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># you have to set in_channels, output_channels and kernel_size</span>
+</span></span><span class="line"><span class="cl"><span class="n">conv2</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Conv1d</span><span class="p">(</span><span class="n">in_channels</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">out_channels</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<h4 id="parameters"><strong>Parameters</strong></h4>
+<ul>
+<li>in_channels: input의 feature dimension</li>
+<li>out_channels: 내가 output으로 내고싶은 dimension</li>
+<li>kernel_size: time step을 얼마만큼 볼 것인가(=frame size = filter size)</li>
+<li>stride: kernel을 얼마만큼씩 이동하면서 적용할 것인가 (Default: 1) -&gt; 아래 추가 설명</li>
+<li>dilation: kernel 내부에서 얼마만큼 띄어서 kernel을 적용할 것인가 (Default: 1) -&gt; 아래 추가 설명</li>
+<li>padding: 한 쪽 방향으로 얼마만큼 padding할 것인가 (그 만큼 양방향으로 적용) (Default: 0)</li>
+<li>groups: kernel의 height를 조절 (Default: 1) -&gt; 아래 추가 설명</li>
+<li>bias: bias term을 둘 것인가 안둘 것인가 (Default: True)</li>
+<li>padding_mode: &lsquo;zeros&rsquo;, &lsquo;reflect&rsquo;, &lsquo;reflect&rsquo;, &lsquo;replicate&rsquo;, &lsquo;circular&rsquo; (Default: &lsquo;zeros&rsquo;)</li>
+</ul>
+<p>​</p>
+<p>​</p>
+<h4 id="input"><strong>Input</strong></h4>
+<p>input은 (Batch, <code>Feature dimension</code>, <code>Time_step</code>)순이다. 즉 <code>Time step(K)</code> 마다 <code>Feature dimension(N)</code>이 존재하는 2차원 배열이 input의 형태. <span style="color: grey; font-size:0.8em">(batch size(B)까지 고려하면 3차원이지만 알아서 계산해주므로 아래 그림에선 생략)</span></p>
+<image src="../images/1D_convolution.assets/img.png" style="display: block; margin: 10px auto;">
+<p>​</p>
+<h4 id="operation"><strong>Operation</strong></h4>
+<p>1차원 시계열 데이터의 경우 (<code>Feature dimension</code>, <code>Time_step</code>) 이렇게 2개의 차원이 존재하므로 두 번째 차원인 <code>Feature dimension</code>이 채널(channel)이 된다. 그래서 in_channels은 위의 예시에서 N이 된다. 여기에 기본적인 1D convolution을 적용해보자.</p>
+<ul>
+<li>
+<p>1D convolution은 width가 kernel size가 되고 length는 input channel과 같아진다. 그리고 <code>kernel이 out channel만큼 생성된다.</code> 아래의 예시를 보면, <code>out channel=3</code>일 때 3개의 커널을 이용해<span style="color: grey; font-size: .8em">(각각 주황, 초록, 파랑색으로 커널을 구분)</span>을 이용해 convolution 연산을 진행하고 3개의 결과를 각각 도출한다.</p>
+<image src="../images/1D_convolution.assets/img-16661664654091.png" style="display: block; margin: 10px auto;">
+</li>
+</ul>
+<p>​</p>
+<p>​</p>
+<h4 id="output"><strong>Output</strong></h4>
+<p>output은 (Batch, feature dimension, kernel로 변경된 time_step) 순이다. output은 아래의 그림으로 표현할 수 있다.</p>
+<image src="../images/1D_convolution.assets/img-16661664654092.png" style="display: block; margin: 10px auto;">
+<h3 id="참고-사이트">참고 사이트</h3>
+<ul>
+<li>
+<p><a href="https://sanghyu.tistory.com/24" target="_blank" rel="noopener noreffer ">https://sanghyu.tistory.com/24</a></p>
+</li>
+<li>
+<p><a href="http://www.jussihuotari.com/2017/12/20/spell-out-convolution-1d-in-cnns/" target="_blank" rel="noopener noreffer ">http://www.jussihuotari.com/2017/12/20/spell-out-convolution-1d-in-cnns/</a></p>
+</li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-10-24</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/1d_convolution/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/ai/">AI</a>,&nbsp;<a href="/tags/1d_convolution/">1D_convolution</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/machine_learning_classification/" class="prev" rel="prev" title="Machine_learning type"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Machine_learning type</a>
+            <a href="/what_is_sequence_data/" class="next" rel="next" title="What is Sequence_data &amp; apply AI">What is Sequence_data & apply AI<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.143.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><link rel="stylesheet" href="/css/_custom.scss"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":200},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

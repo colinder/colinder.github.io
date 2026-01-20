@@ -1,26 +1,27 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>annotation - Category - </title>
-        <link>https://colinder.github.io/categories/annotation/</link>
-        <description>annotation - Category - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 09 Sep 2021 17:24:56 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/annotation/" rel="self" type="application/rss+xml" /><item>
+        <title>Annotation - Category - colinder&#39;s blog</title>
+        <link>http://localhost:1313/categories/annotation/</link>
+        <description>Annotation - Category - colinder&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Thu, 09 Sep 2021 17:24:56 &#43;0900</lastBuildDate><atom:link href="http://localhost:1313/categories/annotation/" rel="self" type="application/rss+xml" /><item>
     <title>Data labeling Image &amp; Video DOC</title>
-    <link>https://colinder.github.io/data_labeling_doc/</link>
+    <link>http://localhost:1313/data_labeling_doc/</link>
     <pubDate>Thu, 09 Sep 2021 17:24:56 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://colinder.github.io/data_labeling_doc/</guid>
-    <description><![CDATA[​
-이미지/영상 데이터 Annotation Tool  기초 라벨링 툴 제작에 필요한 사항들을 정리합니다.
- ​
-저작도구?  저작(여러 형태의 데이터를 편집)에 사용되는 소프트웨어
- ​
-라벨링 가이드라인?  라벨링 작업 방식과 기준이 기재된 문서. (프로젝트 별로 내용이 상이함)
- ​
-용어 정리   객체(Object)
- 라벨링 대상
-   카테고리(Category)
- 분류/탐지하고자 하는 대상을 카테고리화 한 것으로 분류체계를 의미
-   태스크(Task)
- 작업을 태스크라고 하며, 대기/작업완료/반려/완료 등의 상태 속성을 가짐]]></description>
-</item></channel>
+    <author>colinder</author>
+    <guid>http://localhost:1313/data_labeling_doc/</guid>
+    <description><![CDATA[<p>​</p>
+<h1 id="이미지영상-데이터-annotation-tool">이미지/영상 데이터 Annotation Tool</h1>
+<blockquote>
+<p>기초 라벨링 툴 제작에 필요한 사항들을 정리합니다.</p></blockquote>
+<p>​</p>
+<h2 id="저작도구">저작도구?</h2>
+<blockquote>
+<p>저작(여러 형태의 데이터를 편집)에 사용되는 소프트웨어</p></blockquote>
+<p>​</p>
+<h2 id="라벨링-가이드라인">라벨링 가이드라인?</h2>
+<blockquote>
+<p>라벨링 작업 방식과 기준이 기재된 문서. (프로젝트 별로 내용이 상이함)</p>]]></description>
+</item>
+</channel>
 </rss>
