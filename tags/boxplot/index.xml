@@ -10,10 +10,7 @@
     <pubDate>Thu, 23 Dec 2021 13:53:00 &#43;0900</pubDate>
     <author>colinder</author>
     <guid>https://colinder.github.io/boxplot/</guid>
-    <description><![CDATA[<p>​</p>
-<h1 id="what-is-boxplot">What is Boxplot?</h1>
-<blockquote>
-<p>데이터 분석을 진행하면서 다른 분들의 분석 레퍼런스를 보며 공부하다보니 많은 분들이 boxplot을 사용하는 것을 보았습니다. 다만, 저는 그 박스가 어떤 경우에 사용하는 것인지? 어떤 의미로 그려지는 것인지? 어떻게 해석하면 좋은지? 개념이 약했기 때문에 내용을 정리해보겠습니다.</p>]]></description>
+    <description><![CDATA[boxplot 해석 방법에 대하여 정리합니다.]]></description>
 </item>
 </channel>
 </rss>

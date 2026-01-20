@@ -10,13 +10,7 @@
     <pubDate>Mon, 31 May 2021 15:23:45 &#43;0900</pubDate>
     <author>colinder</author>
     <guid>https://colinder.github.io/naver_hyperclova/</guid>
-    <description><![CDATA[<h1 id="naver-hyperclova의-한국어-모델">&lsquo;NAVER&rsquo; HyperCLOVA의 한국어 모델</h1>
-<blockquote>
-<p>2021.05.25 NAVER AI NOW reference 내용 중
-HyperCLOVA의 자연어 전처리 과정의 <strong>토근화</strong> 방법에 대하여 정리</p></blockquote>
-<p>​</p>
-<h2 id="데이터-토큰화">데이터 토큰화</h2>
-<p>자연어 처리를 위한 문장 데이터 토큰화에 대한 NAVER의 처리 방법을 정리해보겠습니다.</p>]]></description>
+    <description><![CDATA[2021.05.25 NAVER AI NOW reference 내용 중 HyperCLOVA의 자연어 전처리 과정의 토근화 방법에 대하여 정리 합니다.]]></description>
 </item>
 </channel>
 </rss>

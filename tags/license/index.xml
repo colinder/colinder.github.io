@@ -10,10 +10,7 @@
     <pubDate>Thu, 02 Sep 2021 16:37:00 &#43;0900</pubDate>
     <author>colinder</author>
     <guid>https://colinder.github.io/01_dutis_and_scope_at_deployment/</guid>
-    <description><![CDATA[<p>​</p>
-<h1 id="license-배포-시-span-stylecolor-ff9ca7소스코드-제공-의무와-범위span">License 배포 시 <span style="color: #ff9ca7">소스코드 제공 의무와 범위</span></h1>
-<blockquote>
-<p>License에 대하여 알아보다보니, 배포 시 준수해야 하는 내용이 별도로 존재하고 있어 <strong>오픈소스 SW라이선스 종합정보시스템</strong>에서 발최한 내용을 추가로 정리합니다.</p>]]></description>
+    <description><![CDATA[License 배포 시 소스코드 제공 의무와 범위에 대하여 정리합니다.]]></description>
 </item>
 <item>
     <title>Software License</title>
@@ -21,12 +18,7 @@
     <pubDate>Thu, 02 Sep 2021 09:54:00 &#43;0900</pubDate>
     <author>colinder</author>
     <guid>https://colinder.github.io/00_license/</guid>
-    <description><![CDATA[<p>​</p>
-<h1 id="license">License</h1>
-<blockquote>
-<p>실무를 담당하고 있다면, 새로운 프로젝트에 앞서 어떤 기술을 사용할 것인지 조사하는 것도 업무중의 하나입니다.</p>
-<p>근데 항상 고민이 되는 부분. <strong>비용</strong>과 <strong>권한</strong></p>
-<p>그리고 비용과 권한 정리되어 있는 것이 <strong>License</strong></p>]]></description>
+    <description><![CDATA[license란 무엇이며, 어떻게 확인하고 봐야 하는지 정리합니다.]]></description>
 </item>
 </channel>
 </rss>

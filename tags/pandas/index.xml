@@ -10,32 +10,7 @@
     <pubDate>Tue, 22 Feb 2022 10:37:15 &#43;0900</pubDate>
     <author>colinder</author>
     <guid>https://colinder.github.io/filelistimport/</guid>
-    <description><![CDATA[<p>​</p>
-<h1 id="폴더-안에-있는-특정-파일-리스트-정리">폴더 안에 있는 특정 파일 리스트 정리</h1>
-<blockquote>
-<p>어떤 폴더 안에 있는 특정 확장자명의 파일들의 리스트를 정리하고 싶을 때 사용합니다.</p></blockquote>
-<p>​</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">## 폴더안에 있는 .csv파일 리스트 가져오기</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">os</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;/경로/&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">file_lists</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">file_list_result</span> <span class="o">=</span> <span class="p">[</span><span class="n">file</span> <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">file_lists</span> <span class="k">if</span> <span class="n">file</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.csv&#39;</span><span class="p">)]</span> <span class="c1">## 파일명 끝이 .csv인 경우</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>​</p>]]></description>
+    <description><![CDATA[폴더안에 있는 특정 파일 리스트 가져오는 방법에 대하여 정리합니다.]]></description>
 </item>
 <item>
     <title>Numpy &amp; Pandas</title>
