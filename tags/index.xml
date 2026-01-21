@@ -4,7 +4,23 @@
         <link>https://colinder.github.io/tags/</link>
         <description>Tags - Tag - colinder&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Mon, 19 Jan 2026 22:22:32 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Wed, 21 Jan 2026 14:26:13 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>Lint</title>
+    <link>https://colinder.github.io/tags/lint/</link>
+    <pubDate>Wed, 21 Jan 2026 14:26:13 &#43;0900</pubDate>
+    <author>colinder</author>
+    <guid>https://colinder.github.io/tags/lint/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Vscode</title>
+    <link>https://colinder.github.io/tags/vscode/</link>
+    <pubDate>Wed, 21 Jan 2026 14:26:13 &#43;0900</pubDate>
+    <author>colinder</author>
+    <guid>https://colinder.github.io/tags/vscode/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>Etax</title>
     <link>https://colinder.github.io/tags/etax/</link>
     <pubDate>Mon, 19 Jan 2026 22:22:32 &#43;0900</pubDate>
@@ -66,22 +82,6 @@
     <pubDate>Wed, 03 Jan 2024 14:26:13 &#43;0900</pubDate>
     <author>colinder</author>
     <guid>https://colinder.github.io/tags/static-type/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>JavaScript</title>
-    <link>https://colinder.github.io/tags/javascript/</link>
-    <pubDate>Wed, 03 Jan 2024 14:23:13 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/tags/javascript/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Typescript</title>
-    <link>https://colinder.github.io/tags/typescript/</link>
-    <pubDate>Wed, 03 Jan 2024 14:23:13 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/tags/typescript/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>

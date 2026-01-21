@@ -102,6 +102,40 @@
         alt="/images/jg_02.jpg"
         title="/images/jg_02.jpg" /></a></div><div class="home-subtitle"><div id="id-1" class="typeit"></div></div><div class="links"><a href="https://github.com/colinder" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a><a href="mailto:kjonggwan@gmail.com" title="Email" rel="me"><i class="far fa-envelope fa-fw" aria-hidden="true"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/form/">form 태그</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-06-10">2021-06-10</time></span>&nbsp;<span class="post-category">included in <a href="/categories/web/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Web</a></span></div><div class="content"><p>​</p>
+<h1 id="form-태그의-고찰">form 태그의 고찰</h1>
+<ol>
+<li>
+<p>form tag의 inline 요소 중 **&lsquo;action&rsquo;**과 <strong>&lsquo;onsubmit&rsquo;</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;/oh my god&#34;</span> <span class="na">onsubmit</span><span class="o">=</span><span class="s">&#34;return test()&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;hahaha&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="kd">function</span> <span class="nx">test</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;HHHI&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p>submit 형태의 input을 클릭하게 되면, submit이 동작하면서 form의 &lsquo;onsubmit&rsquo;이 실행</p></div><div class="post-footer">
+        <a href="/form/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/html/">Html</a>,&nbsp;<a href="/tags/web/">Web</a>,&nbsp;<a href="/tags/form/">Form</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/naver_hyperclova/">'NAVER AI NOW' HyperCLOVA_NLP</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-05-31">2021-05-31</time></span>&nbsp;<span class="post-category">included in <a href="/categories/nlp/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>NLP</a></span></div><div class="content">2021.05.25 NAVER AI NOW reference 내용 중 HyperCLOVA의 자연어 전처리 과정의 토근화 방법에 대하여 정리 합니다.</div><div class="post-footer">
         <a href="/naver_hyperclova/">Read More</a><div class="post-tags">
@@ -138,18 +172,6 @@
 <blockquote>
 <p><strong>CRUD</strong>는 대부분의 컴퓨터 소프트웨어가 가지는 기본적인 데이터 처리 기능인 Create(생성), Read(읽기), Update(갱신), Delete(삭제)를 묶어서 일컫는 말입니다. 사용자 인터페이스가 갖추어야 할 기능(정보의 참조/검색/갱신 등) 중 가장 기본이라고 생각되는 기술들입니다.</p></div><div class="post-footer">
         <a href="/django_02_addapp/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/django/">Django</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/django_01_startproject/">Django_01_startproject</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-04-22">2021-04-22</time></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Django</a></span></div><div class="content"><h1 id="django-개발환경준비">Django 개발환경준비</h1>
-<ul>
-<li>
-<p>편리함을 추구하기 위해 AWS Cloud9을 사용하여 진행</p>
-</li>
-<li>
-<p><a href="https://ide.cs50.io/" target="_blank" rel="noopener noreffer ">https://ide.cs50.io/</a> 주소로 접속하면 진행이 가능하며, 진행을 위해선 Git 아이디가 있어야 한다.</p>
-<p><code>Git</code>? : <strong>버전 관리 시스템</strong>이며 Git은 소프트웨어를 개발하는 기업의 핵심 자산인 소스코드를 효과적으로 관리할 수 있게 해주는 <strong>무료</strong>, <strong>공개소프트웨어</strong>. git에 대한 내용은 따로 정리해보도록 한다.</p></div><div class="post-footer">
-        <a href="/django_01_startproject/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/django/">Django</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
