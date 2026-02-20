@@ -1,4 +1,4 @@
-# 내가 쓰는 vscode list 설정
+# 내가 쓰는 vscode lint 설정
 
 
 ​	
