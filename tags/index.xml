@@ -4,7 +4,23 @@
         <link>https://colinder.github.io/tags/</link>
         <description>Tags - Tag - colinder&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Wed, 21 Jan 2026 14:26:13 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Fri, 20 Feb 2026 20:30:49 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>Langchain</title>
+    <link>https://colinder.github.io/tags/langchain/</link>
+    <pubDate>Fri, 20 Feb 2026 20:30:49 &#43;0900</pubDate>
+    <author>colinder</author>
+    <guid>https://colinder.github.io/tags/langchain/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Langgraph</title>
+    <link>https://colinder.github.io/tags/langgraph/</link>
+    <pubDate>Fri, 20 Feb 2026 20:30:49 &#43;0900</pubDate>
+    <author>colinder</author>
+    <guid>https://colinder.github.io/tags/langgraph/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>Lint</title>
     <link>https://colinder.github.io/tags/lint/</link>
     <pubDate>Wed, 21 Jan 2026 14:26:13 &#43;0900</pubDate>
@@ -66,22 +82,6 @@
     <pubDate>Sun, 14 Jan 2024 09:14:13 &#43;0900</pubDate>
     <author>colinder</author>
     <guid>https://colinder.github.io/tags/nest/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Dynamic Type</title>
-    <link>https://colinder.github.io/tags/dynamic-type/</link>
-    <pubDate>Wed, 03 Jan 2024 14:26:13 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/tags/dynamic-type/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Static Type</title>
-    <link>https://colinder.github.io/tags/static-type/</link>
-    <pubDate>Wed, 03 Jan 2024 14:26:13 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/tags/static-type/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>
