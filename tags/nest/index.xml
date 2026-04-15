@@ -1,32 +1,36 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Nest - Tag - colinder&#39;s blog</title>
-        <link>https://colinder.github.io/tags/nest/</link>
-        <description>Nest - Tag - colinder&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Sun, 14 Jan 2024 09:14:13 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/nest/" rel="self" type="application/rss+xml" /><item>
-    <title>Nest Official_03_(Guards, Interceptors, Custom_decorators)</title>
-    <link>https://colinder.github.io/nest-official_03_guards-interceptors-custom_decorators/</link>
-    <pubDate>Sun, 14 Jan 2024 09:14:13 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/nest-official_03_guards-interceptors-custom_decorators/</guid>
-    <description><![CDATA[NEST의 공식 문서의 내용을 한글로 번역하며 이해하기 쉽게 정리합니다._(Guards, Interceptors, Custom_decorators)]]></description>
-</item>
-<item>
-    <title>Nest Official_02_(Modules, Middleware, Exception_filters, Pipes)</title>
-    <link>https://colinder.github.io/nest-official_02_modules-middleware-exception_filters-pipes/</link>
-    <pubDate>Sun, 14 Jan 2024 09:14:10 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/nest-official_02_modules-middleware-exception_filters-pipes/</guid>
-    <description><![CDATA[NEST의 공식 문서의 내용을 한글로 번역하며 이해하기 쉽게 정리합니다._(Modules, Middleware, Exception_filters, Pipes)]]></description>
-</item>
-<item>
-    <title>Nest Official_01_(Introduction, First steps, Controllers, Providers)</title>
-    <link>https://colinder.github.io/nest-official_01_introduction-first-steps-controllers-providers/</link>
-    <pubDate>Wed, 03 Jan 2024 13:36:17 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/nest-official_01_introduction-first-steps-controllers-providers/</guid>
-    <description><![CDATA[NEST의 공식 문서의 내용을 한글로 번역하며 이해하기 쉽게 정리합니다._(Introduction, First steps, Controllers, Providers)]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nest on colinder&#39;s blog</title>
+    <link>https://colinder.github.io/tags/nest/</link>
+    <description>Recent content in Nest on colinder&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+    <webMaster>kjonggwan@gmail.com (colinder)</webMaster>
+    <copyright>colinder</copyright>
+    <lastBuildDate>Sun, 14 Jan 2024 09:14:13 +0900</lastBuildDate>
+    <atom:link href="https://colinder.github.io/tags/nest/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nest Official_03_(Guards, Interceptors, Custom_decorators)</title>
+      <link>https://colinder.github.io/nest-official_03_guards-interceptors-custom_decorators/</link>
+      <pubDate>Sun, 14 Jan 2024 09:14:13 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/nest-official_03_guards-interceptors-custom_decorators/</guid>
+      <description>NEST의 공식 문서의 내용을 한글로 번역하며 이해하기 쉽게 정리합니다._(Guards, Interceptors, Custom_decorators)</description>
+    </item>
+    <item>
+      <title>Nest Official_02_(Modules, Middleware, Exception_filters, Pipes)</title>
+      <link>https://colinder.github.io/nest-official_02_modules-middleware-exception_filters-pipes/</link>
+      <pubDate>Sun, 14 Jan 2024 09:14:10 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/nest-official_02_modules-middleware-exception_filters-pipes/</guid>
+      <description>NEST의 공식 문서의 내용을 한글로 번역하며 이해하기 쉽게 정리합니다._(Modules, Middleware, Exception_filters, Pipes)</description>
+    </item>
+    <item>
+      <title>Nest Official_01_(Introduction, First steps, Controllers, Providers)</title>
+      <link>https://colinder.github.io/nest-official_01_introduction-first-steps-controllers-providers/</link>
+      <pubDate>Wed, 03 Jan 2024 13:36:17 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/nest-official_01_introduction-first-steps-controllers-providers/</guid>
+      <description>NEST의 공식 문서의 내용을 한글로 번역하며 이해하기 쉽게 정리합니다._(Introduction, First steps, Controllers, Providers)</description>
+    </item>
+  </channel>
 </rss>

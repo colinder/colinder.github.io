@@ -1,32 +1,36 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>MariaDB - Category - colinder&#39;s blog</title>
-        <link>https://colinder.github.io/categories/mariadb/</link>
-        <description>MariaDB - Category - colinder&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Fri, 11 Nov 2022 13:20:53 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/mariadb/" rel="self" type="application/rss+xml" /><item>
-    <title>Understand_of_MariaDB</title>
-    <link>https://colinder.github.io/understand_of_mariadb/</link>
-    <pubDate>Fri, 11 Nov 2022 13:20:53 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/understand_of_mariadb/</guid>
-    <description><![CDATA[MariaDB에 대하여 이해해 보겠습니다.]]></description>
-</item>
-<item>
-    <title>MariaDB 외부접속 허용</title>
-    <link>https://colinder.github.io/mariadb_share/</link>
-    <pubDate>Wed, 03 Nov 2021 11:19:43 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/mariadb_share/</guid>
-    <description><![CDATA[MariaDB 외부접속 허용 방법을 정리합니다.]]></description>
-</item>
-<item>
-    <title>MariaDB 설치 방법</title>
-    <link>https://colinder.github.io/mariadb_setting/</link>
-    <pubDate>Wed, 15 Sep 2021 10:44:21 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/mariadb_setting/</guid>
-    <description><![CDATA[MariaDB 설치 방법을 정리합니다.]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MariaDB on colinder&#39;s blog</title>
+    <link>https://colinder.github.io/categories/mariadb/</link>
+    <description>Recent content in MariaDB on colinder&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+    <webMaster>kjonggwan@gmail.com (colinder)</webMaster>
+    <copyright>colinder</copyright>
+    <lastBuildDate>Fri, 11 Nov 2022 13:20:53 +0900</lastBuildDate>
+    <atom:link href="https://colinder.github.io/categories/mariadb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Understand_of_MariaDB</title>
+      <link>https://colinder.github.io/understand_of_mariadb/</link>
+      <pubDate>Fri, 11 Nov 2022 13:20:53 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/understand_of_mariadb/</guid>
+      <description>MariaDB에 대하여 이해해 보겠습니다.</description>
+    </item>
+    <item>
+      <title>MariaDB 외부접속 허용</title>
+      <link>https://colinder.github.io/mariadb_share/</link>
+      <pubDate>Wed, 03 Nov 2021 11:19:43 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/mariadb_share/</guid>
+      <description>MariaDB 외부접속 허용 방법을 정리합니다.</description>
+    </item>
+    <item>
+      <title>MariaDB 설치 방법</title>
+      <link>https://colinder.github.io/mariadb_setting/</link>
+      <pubDate>Wed, 15 Sep 2021 10:44:21 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/mariadb_setting/</guid>
+      <description>MariaDB 설치 방법을 정리합니다.</description>
+    </item>
+  </channel>
 </rss>

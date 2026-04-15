@@ -1,16 +1,22 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Api - Tag - colinder&#39;s blog</title>
-        <link>https://colinder.github.io/tags/api/</link>
-        <description>Api - Tag - colinder&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Wed, 31 Jan 2024 09:48:40 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/api/" rel="self" type="application/rss+xml" /><item>
-    <title>what is REST api?</title>
-    <link>https://colinder.github.io/restapi/</link>
-    <pubDate>Wed, 31 Jan 2024 09:48:40 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/restapi/</guid>
-    <description><![CDATA[RESTful API는 Representational State Transfer(표현 상태 전이)를 기반으로 하는 웹 서비스의 설계 원칙을 따르는 API입니다. REST는 분산 시스템에서 리소스 간 상태 전이를 위한 아키텍처]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Api on colinder&#39;s blog</title>
+    <link>https://colinder.github.io/tags/api/</link>
+    <description>Recent content in Api on colinder&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+    <webMaster>kjonggwan@gmail.com (colinder)</webMaster>
+    <copyright>colinder</copyright>
+    <lastBuildDate>Wed, 31 Jan 2024 09:48:40 +0900</lastBuildDate>
+    <atom:link href="https://colinder.github.io/tags/api/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>what is REST api?</title>
+      <link>https://colinder.github.io/restapi/</link>
+      <pubDate>Wed, 31 Jan 2024 09:48:40 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/restapi/</guid>
+      <description>RESTful API는 Representational State Transfer(표현 상태 전이)를 기반으로 하는 웹 서비스의 설계 원칙을 따르는 API입니다. REST는 분산 시스템에서 리소스 간 상태 전이를 위한 아키텍처</description>
+    </item>
+  </channel>
 </rss>

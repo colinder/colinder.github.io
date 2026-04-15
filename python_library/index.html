@@ -123,7 +123,7 @@ Python Library 😀 Idea 1 2 3 4 5 6 7 8 9 10 11 12 13 # 모두 &#39;거짓&#39;
     <li>
       <ul>
         <li><a href="#idea">Idea</a></li>
-        <li><a href="#raise-예외에러메시지"><strong>raise</strong> <strong>예외(&lsquo;에러메시지&rsquo;)</strong></a></li>
+        <li><a href="#raise-예외"><strong>raise</strong> <strong>예외(‘에러메시지’)</strong></a></li>
         <li><a href="#filter-vs-find">filter() VS find()</a></li>
         <li><a href="#index-vs-find">index() VS find()</a></li>
         <li><a href="#deque">deque</a></li>
@@ -131,14 +131,14 @@ Python Library 😀 Idea 1 2 3 4 5 6 7 8 9 10 11 12 13 # 모두 &#39;거짓&#39;
         <li><a href="#isalpha-isdigit">isalpha(), isdigit()</a></li>
         <li><a href="#syssetrecursionlimit최대-재귀-깊이-설정">sys.setrecursionlimit(최대 재귀 깊이 설정)</a></li>
         <li><a href="#sorted">sorted()</a></li>
-        <li><a href="#span-stylecolor-7500abfromspan-collections-span-stylecolor7500abimportspan-counter"><span style="color: #7500ab">from</span> collections <span style="color:#7500ab">import</span> Counter</a></li>
-        <li><a href="#span-stylecolor-7500abimportspan-sys"><span style="color: #7500ab">import</span> sys</a></li>
+        <li><a href="#from-collections-import-counter"><span>from</span> collections <span>import</span> Counter</a></li>
+        <li><a href="#import-sys"><span>import</span> sys</a></li>
         <li><a href="#정규표현식">정규표현식</a></li>
-        <li><a href="#find찾을문자-찾기시작할위치---span-stylecolorred찾는-값의-인덱스를-반환span">find(찾을문자, 찾기시작할위치) - <span style="color:red">찾는 값의 인덱스를 반환</span></a></li>
+        <li><a href="#find찾을문자-찾기시작할위치---찾는-값의-인덱스를-반환">find(찾을문자, 찾기시작할위치) - <span>찾는 값의 인덱스를 반환</span></a></li>
         <li><a href="#startswith찾을문자-찾기시작위치-찾기종료위치">startsWith(찾을문자, 찾기시작위치, 찾기종료위치)</a></li>
       </ul>
     </li>
-    <li><a href="#span-stylecolor7500abimportspan-itertools-효율적인-반복을-위한-함수"><span style="color:#7500ab">import</span> itertools (효율적인 반복을 위한 함수)</a>
+    <li><a href="#import-itertools-효율적인-반복을-위한-함수"><span>import</span> itertools (효율적인 반복을 위한 함수)</a>
       <ul>
         <li><a href="#permutations자료-만들순열길이">permutations(자료, 만들순열길이)</a></li>
         <li><a href="#combinations조합">combinations(조합)</a></li>
@@ -186,7 +186,7 @@ Python Library 😀 Idea 1 2 3 4 5 6 7 8 9 10 11 12 13 # 모두 &#39;거짓&#39;
 </div><p>​</p>
 </li>
 <li>
-<h3 id="raise-예외에러메시지"><strong>raise</strong> <strong>예외(&lsquo;에러메시지&rsquo;)</strong></h3>
+<h3 id="raise-예외"><strong>raise</strong> <strong>예외(&lsquo;에러메시지&rsquo;)</strong></h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -510,7 +510,7 @@ Python Library 😀 Idea 1 2 3 4 5 6 7 8 9 10 11 12 13 # 모두 &#39;거짓&#39;
 </div><p>​</p>
 </li>
 <li>
-<h3 id="span-stylecolor-7500abfromspan-collections-span-stylecolor7500abimportspan-counter"><span style="color: #7500ab">from</span> collections <span style="color:#7500ab">import</span> Counter</h3>
+<h3 id="from-collections-import-counter"><span style="color: #7500ab">from</span> collections <span style="color:#7500ab">import</span> Counter</h3>
 <p>주어지는 컨테이너<span style="font-size:.8em">(ex 리스트 자료형, string)</span>에 동일한 값의 갯수를 파악</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -533,7 +533,7 @@ Python Library 😀 Idea 1 2 3 4 5 6 7 8 9 10 11 12 13 # 모두 &#39;거짓&#39;
 </div><p>​</p>
 </li>
 <li>
-<h3 id="span-stylecolor-7500abimportspan-sys"><span style="color: #7500ab">import</span> sys</h3>
+<h3 id="import-sys"><span style="color: #7500ab">import</span> sys</h3>
 <p>빠른 속도로 입력받기 위한 라이브러리</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -573,24 +573,31 @@ Python Library 😀 Idea 1 2 3 4 5 6 7 8 9 10 11 12 13 # 모두 &#39;거짓&#39;
 </ul>
 <blockquote>
 <p>정규표현식 안에서, 바로 다음 절에서 설명하는 메타문자를 제외한 모든 문자 하나는 일반 문자열 하나와 매칭된다. 예를 들어, <code>a</code>는 a와 매칭되고, <code>가</code>는 ‘가’와 매칭되는 식이다.
-당연히 <code>a</code>가 ‘b’ 또는 ‘가’와 매칭되지는 않는다.</p></blockquote>
+당연히 <code>a</code>가 ‘b’ 또는 ‘가’와 매칭되지는 않는다.</p>
+</blockquote>
 <blockquote>
 <p>어떤 프로그래밍 언어의 정규표현식이든 메타문자(특수한 기능을 하는 문자)라는 것이 존재한다.</p>
 <p>파이썬 re 모듈의 메타문자는 총 12개로 다음과 같은 것들이 있다.</p>
-<p>$()*+.?[^{|</p></blockquote>
+<p>$()*+.?[^{|</p>
+</blockquote>
 <blockquote>
 <p>이들 메타문자는 각각의 문자 하나에 매칭되지 않는다.
 예를 들어 일반 문자인 <code>a</code>는 문자 <code>‘a’</code>에 매칭하지만,
-여는 소괄호 <code>(</code>는 문자 <code>‘(‘</code>와 매칭하지 않는다.</p></blockquote>
+여는 소괄호 <code>(</code>는 문자 <code>‘(‘</code>와 매칭하지 않는다.</p>
+</blockquote>
 <blockquote>
-<p>그럼 찾고자 하는 문자열에 소괄호가 있으면 어떻게 할까?</p></blockquote>
+<p>그럼 찾고자 하는 문자열에 소괄호가 있으면 어떻게 할까?</p>
+</blockquote>
 <blockquote>
-<p>위의 문자들의 앞에 백슬래시 <code>\</code>를 붙여 주면 일반 문자처럼 한 글자에 매칭된다.</p></blockquote>
+<p>위의 문자들의 앞에 백슬래시 <code>\</code>를 붙여 주면 일반 문자처럼 한 글자에 매칭된다.</p>
+</blockquote>
 <blockquote>
-<p>예를 들어 <code>\(</code>는 문자 <code>‘(‘</code>와 매칭된다.</p></blockquote></blockquote>
+<p>예를 들어 <code>\(</code>는 문자 <code>‘(‘</code>와 매칭된다.</p>
+</blockquote>
+</blockquote>
 </li>
 <li>
-<h3 id="find찾을문자-찾기시작할위치---span-stylecolorred찾는-값의-인덱스를-반환span">find(찾을문자, 찾기시작할위치) - <span style="color:red">찾는 값의 인덱스를 반환</span></h3>
+<h3 id="find찾을문자-찾기시작할위치---찾는-값의-인덱스를-반환">find(찾을문자, 찾기시작할위치) - <span style="color:red">찾는 값의 인덱스를 반환</span></h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -650,7 +657,7 @@ Python Library 😀 Idea 1 2 3 4 5 6 7 8 9 10 11 12 13 # 모두 &#39;거짓&#39;
 </div><p>​</p>
 </li>
 <li>
-<h2 id="span-stylecolor7500abimportspan-itertools-효율적인-반복을-위한-함수"><span style="color:#7500ab">import</span> itertools (효율적인 반복을 위한 함수)</h2>
+<h2 id="import-itertools-효율적인-반복을-위한-함수"><span style="color:#7500ab">import</span> itertools (효율적인 반복을 위한 함수)</h2>
 <ul>
 <li>
 <h3 id="permutations자료-만들순열길이">permutations(자료, 만들순열길이)</h3>
@@ -762,7 +769,7 @@ Python Library 😀 Idea 1 2 3 4 5 6 7 8 9 10 11 12 13 # 모두 &#39;거짓&#39;
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.143.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.160.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

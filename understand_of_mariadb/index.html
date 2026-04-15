@@ -136,12 +136,14 @@
 <h1 id="mariadb">MariaDB</h1>
 <blockquote>
 <p>mysql, mariaDB를 계속해서 사용하고 있지만, 계정과 데이터베이스 연결 관계 등 정확한 개념과 이해는 하지 않은 채 시간이 흘러가고 있어, 이번에 정리하고 기록합니다.</p>
-<p><span style="font-size: .8em">전체적인 용어와 개념이 틀렸을 수도 있습니다. 제가 이해하기 쉬운 언어와 그림으로 정리하였습니다. 잘못된 부분이 있다면 꼭. 피드백을 부탁드립니다.</span></p></blockquote>
+<p><span style="font-size: .8em">전체적인 용어와 개념이 틀렸을 수도 있습니다. 제가 이해하기 쉬운 언어와 그림으로 정리하였습니다. 잘못된 부분이 있다면 꼭. 피드백을 부탁드립니다.</span></p>
+</blockquote>
 <p>​</p>
 <p>​</p>
 <h2 id="진행과정">진행과정</h2>
 <blockquote>
-<p>&ldquo;계정생성&rdquo; &gt; &ldquo;database생성&rdquo;&gt; &ldquo;권한부여&rdquo; &gt; &ldquo;하이디에서 확인&rdquo;</p></blockquote>
+<p>&ldquo;계정생성&rdquo; &gt; &ldquo;database생성&rdquo;&gt; &ldquo;권한부여&rdquo; &gt; &ldquo;하이디에서 확인&rdquo;</p>
+</blockquote>
 <p>과정을 진행해보며 mariaDB의 구조와 흐름을 이해.</p>
 <p>​</p>
 <p>​</p>
@@ -211,10 +213,10 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="cm">/* mysql의 user라는 곳에서 user와 host를 선택한다.*/</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="k">user</span><span class="p">,</span><span class="w"> </span><span class="k">host</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">mysql</span><span class="p">.</span><span class="k">user</span><span class="p">;</span><span class="w">         
+</span></span></span><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="k">user</span><span class="p">,</span><span class="w"> </span><span class="k">host</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">mysql</span><span class="p">.</span><span class="k">user</span><span class="p">;</span><span class="w">         
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cm">/* 만약 mysql이라는 작업공간으로 접속해 명령어를 입력한다면, */</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="k">user</span><span class="p">,</span><span class="w"> </span><span class="k">host</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="k">user</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="cm">/* 만약 mysql이라는 작업공간으로 접속해 명령어를 입력한다면, */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="k">user</span><span class="p">,</span><span class="w"> </span><span class="k">host</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="k">user</span><span class="p">;</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><image src="/images/understand_of_MariaDB.assets\image-20221110165054886.png" width="1000px" style="display: block;">
@@ -264,7 +266,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">create</span><span class="w"> </span><span class="k">user</span><span class="w"> </span><span class="s1">&#39;none_database_user&#39;</span><span class="o">@</span><span class="s1">&#39;%&#39;</span><span class="w"> </span><span class="n">identified</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="s1">&#39;1234&#39;</span><span class="p">;</span><span class="w">  
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cm">/* 어디서든 접속할수있는(%) none_database_user라는 계정을 만들고 비밀번호는 1234 */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="cm">/* 어디서든 접속할수있는(%) none_database_user라는 계정을 만들고 비밀번호는 1234 */</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><image src="/images/understand_of_MariaDB.assets\image-20221111093143864.png" width="1000px" style="display: block;">
@@ -281,8 +283,8 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">delete</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">mysql</span><span class="p">.</span><span class="k">user</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="k">user</span><span class="o">=</span><span class="s1">&#39;삭제할계정이름&#39;</span><span class="p">;</span><span class="w">	</span><span class="cm">/* user테이블에서 삭제 */</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">delete</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">mysql</span><span class="p">.</span><span class="n">db</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="k">user</span><span class="o">=</span><span class="s1">&#39;삭제할계정이름&#39;</span><span class="p">;</span><span class="w">		</span><span class="cm">/* 계정DB에 반영 */</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">flush</span><span class="w"> </span><span class="k">privileges</span><span class="p">;</span><span class="w">	</span><span class="cm">/* 시스템 반영 */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">delete</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">mysql</span><span class="p">.</span><span class="n">db</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="k">user</span><span class="o">=</span><span class="s1">&#39;삭제할계정이름&#39;</span><span class="p">;</span><span class="w">		</span><span class="cm">/* 계정DB에 반영 */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">flush</span><span class="w"> </span><span class="k">privileges</span><span class="p">;</span><span class="w">	</span><span class="cm">/* 시스템 반영 */</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><image src="/images/understand_of_MariaDB.assets\image-20221111094238203.png" width="1000px" style="display: block;">
@@ -290,7 +292,8 @@
 <blockquote>
 <p>delete from <span style="color:red">user</span> where user=&lsquo;none_database_user&rsquo;;<br>
 delete from <span style="color:red">mysql.user</span> where user=&lsquo;none_database_user&rsquo;;</p>
-<p><em>이 둘의 차이를 알아여하며, 내가 작업하고 있는 공간이 어디인지를 계속 생각해야 한다.</em></p></blockquote>
+<p><em>이 둘의 차이를 알아여하며, 내가 작업하고 있는 공간이 어디인지를 계속 생각해야 한다.</em></p>
+</blockquote>
 <p>​</p>
 <p>​</p>
 <p>​</p>
@@ -298,7 +301,8 @@ delete from <span style="color:red">mysql.user</span> where user=&lsquo;none_dat
 <blockquote>
 <p>계정을 생성하면 기본적으로 information_schema 테이블이 생긴다.</p>
 <p><strong>INFORMATION_SCHEMA란</strong> MySQL 서버 내에 존재하는 DB의 메타 정보(테이블, 칼럼, 인덱스 등의 스키마 정보)를 모아둔 DB다. INFORMATION_SCHEMA 데이터베이스 내의 모든 테이블은 읽기 전용이며, 단순히 조회만 가능하다. 즉, 읽기전용(Read-only)으로 사용자가 직접 수정하거나 관여할 수는 없다.</p>
-<p>진행해야 할 것은 <b>내가 사용할 데이터 베이스를 만들고 특정 계정에 그 데이터 베이스를 관리하라는 권한을 주어야 한다.</b></p></blockquote>
+<p>진행해야 할 것은 <b>내가 사용할 데이터 베이스를 만들고 특정 계정에 그 데이터 베이스를 관리하라는 권한을 주어야 한다.</b></p>
+</blockquote>
 <p>​</p>
 <p><b>계정은 &ldquo;human&rdquo;</b>으로 만들고, <b>데이터베이스는 &ldquo;box&rdquo;</b>로 만들어보겠다.</p>
 <div class="highlight"><div class="chroma">
@@ -311,10 +315,10 @@ delete from <span style="color:red">mysql.user</span> where user=&lsquo;none_dat
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="cm">/* 계정 생성 */</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">create</span><span class="w"> </span><span class="k">user</span><span class="w"> </span><span class="s1">&#39;human&#39;</span><span class="o">@</span><span class="s1">&#39;%&#39;</span><span class="w"> </span><span class="n">identified</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="s1">&#39;1234&#39;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">create</span><span class="w"> </span><span class="k">user</span><span class="w"> </span><span class="s1">&#39;human&#39;</span><span class="o">@</span><span class="s1">&#39;%&#39;</span><span class="w"> </span><span class="n">identified</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="s1">&#39;1234&#39;</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cm">/* 데이터베이스 생성 */</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">create</span><span class="w"> </span><span class="k">database</span><span class="w"> </span><span class="n">box</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="cm">/* 데이터베이스 생성 */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">create</span><span class="w"> </span><span class="k">database</span><span class="w"> </span><span class="n">box</span><span class="p">;</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><image src="/images/understand_of_MariaDB.assets\image-20221111105536810.png" width="1000px" style="display: block;">
@@ -367,7 +371,7 @@ delete from <span style="color:red">mysql.user</span> where user=&lsquo;none_dat
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">grant</span><span class="w"> </span><span class="k">all</span><span class="w"> </span><span class="k">privileges</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">box</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="s1">&#39;human&#39;</span><span class="o">@</span><span class="s1">&#39;%&#39;</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cm">/* 모든(all) 권한을 box데이터베이스하위 모든 곳(box.*)에 human계정에게 부여한다. */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="cm">/* 모든(all) 권한을 box데이터베이스하위 모든 곳(box.*)에 human계정에게 부여한다. */</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><image src="/images/understand_of_MariaDB.assets\image-20221111111937918.png" width="1000px" style="display: block;">
@@ -380,7 +384,8 @@ delete from <span style="color:red">mysql.user</span> where user=&lsquo;none_dat
 <ol>
 <li>USAGE ON <em>*.</em>* 의 의미는 모든 데이터베이스에 대하여 <b>접근</b>할 수 있다. 정도인 것 같습니다.</li>
 <li>box에 모든 권한을 받은 것을 확인</li>
-</ol></blockquote>
+</ol>
+</blockquote>
 <p>​</p>
 <p>​</p>
 <p>여기까지 진행한 사항을 DB에 반영하기 위해서는</p>
@@ -400,7 +405,8 @@ delete from <span style="color:red">mysql.user</span> where user=&lsquo;none_dat
 <p>​</p>
 <h2 id="하이디mariadb-gui-시스템으로-확인">하이디(MariaDB GUI 시스템)으로 확인</h2>
 <blockquote>
-<p>하이디에서는 <b>계정</b> 별로 할당된 데이터베이스를 보는 시스템임을 알아 두어야 합니다.</p></blockquote>
+<p>하이디에서는 <b>계정</b> 별로 할당된 데이터베이스를 보는 시스템임을 알아 두어야 합니다.</p>
+</blockquote>
 <p>​</p>
 <p>프로그램 시작 후 초기 모습</p>
 <image src="/images/understand_of_MariaDB.assets\image-20221111122837120.png" width="1000px" style="display: block;">
@@ -410,7 +416,8 @@ delete from <span style="color:red">mysql.user</span> where user=&lsquo;none_dat
 <p>​</p>
 <p><strong><span style="font-size: 1.6em">우선 root 계정에 대하여 확인해보겠습니다.</span></strong></p>
 <blockquote>
-<p>신규 &gt; 세션이름 변경(root) &gt; 사용자/암호 입력 &gt; 열기</p></blockquote>
+<p>신규 &gt; 세션이름 변경(root) &gt; 사용자/암호 입력 &gt; 열기</p>
+</blockquote>
 <image src="/images/understand_of_MariaDB.assets\image-20221111123054722.png" width="1000px" style="display: block;">
 <p><span style="color:grey; font-size:.8em; display:flex; float:right">*세션 이름은 아무렇게나 설정해도 됩니다.</span></p>
 <p>​</p>
@@ -425,7 +432,8 @@ delete from <span style="color:red">mysql.user</span> where user=&lsquo;none_dat
 <p>​</p>
 <p><strong><span style="font-size: 1.6em">human 계정으로 접근한다면?</span></strong></p>
 <blockquote>
-<p>신규 &gt; 세션이름 변경(human) &gt; 사용자/암호 입력 &gt; 열기</p></blockquote>
+<p>신규 &gt; 세션이름 변경(human) &gt; 사용자/암호 입력 &gt; 열기</p>
+</blockquote>
 <image src="/images/understand_of_MariaDB.assets\image-20221111123347245.png" width="1000px" style="display: block;">
 <p><span style="color:grey; font-size:.8em; display:flex; float:right">*세션 이름은 아무렇게나 설정해도 됩니다.</span></p>
 <p>​</p>
@@ -502,7 +510,7 @@ delete from <span style="color:red">mysql.user</span> where user=&lsquo;none_dat
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.143.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.160.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

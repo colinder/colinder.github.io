@@ -1,24 +1,29 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Computer Science - Category - colinder&#39;s blog</title>
-        <link>https://colinder.github.io/categories/computer-science/</link>
-        <description>Computer Science - Category - colinder&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Tue, 17 Oct 2023 12:24:58 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/computer-science/" rel="self" type="application/rss+xml" /><item>
-    <title>Time Complexity 시간복잡도</title>
-    <link>https://colinder.github.io/time_complexity/</link>
-    <pubDate>Tue, 17 Oct 2023 12:24:58 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/time_complexity/</guid>
-    <description><![CDATA[Time Complexity에 대하여 빅오 표기법과 함꼐 정리합니다.]]></description>
-</item>
-<item>
-    <title>Process VS Thread</title>
-    <link>https://colinder.github.io/processvsthread/</link>
-    <pubDate>Tue, 01 Dec 2020 13:40:25 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/processvsthread/</guid>
-    <description><![CDATA[Process VS Thread에 대하여 정리합니다.]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Computer Science on colinder&#39;s blog</title>
+    <link>https://colinder.github.io/categories/computer-science/</link>
+    <description>Recent content in Computer Science on colinder&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+    <webMaster>kjonggwan@gmail.com (colinder)</webMaster>
+    <copyright>colinder</copyright>
+    <lastBuildDate>Tue, 17 Oct 2023 12:24:58 +0900</lastBuildDate>
+    <atom:link href="https://colinder.github.io/categories/computer-science/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Time Complexity 시간복잡도</title>
+      <link>https://colinder.github.io/time_complexity/</link>
+      <pubDate>Tue, 17 Oct 2023 12:24:58 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/time_complexity/</guid>
+      <description>Time Complexity에 대하여 빅오 표기법과 함꼐 정리합니다.</description>
+    </item>
+    <item>
+      <title>Process VS Thread</title>
+      <link>https://colinder.github.io/processvsthread/</link>
+      <pubDate>Tue, 01 Dec 2020 13:40:25 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/processvsthread/</guid>
+      <description>Process VS Thread에 대하여 정리합니다.</description>
+    </item>
+  </channel>
 </rss>

@@ -1,88 +1,92 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Vue - Category - colinder&#39;s blog</title>
-        <link>https://colinder.github.io/categories/vue/</link>
-        <description>Vue - Category - colinder&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Tue, 29 Nov 2022 13:01:01 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/vue/" rel="self" type="application/rss+xml" /><item>
-    <title>08_Vue_Vuex Concept...</title>
-    <link>https://colinder.github.io/08_vue_vuex-concept/</link>
-    <pubDate>Tue, 29 Nov 2022 13:01:01 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/08_vue_vuex-concept/</guid>
-    <description><![CDATA[Vue에 대한 내용을 정리합니다.]]></description>
-</item>
-<item>
-    <title>typescript Refs_error</title>
-    <link>https://colinder.github.io/refs_error/</link>
-    <pubDate>Wed, 16 Feb 2022 14:35:56 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/refs_error/</guid>
-    <description><![CDATA[typescript Refs_error에 대한 내용을 기록합니다.]]></description>
-</item>
-<item>
-    <title>Vue_DevInfo</title>
-    <link>https://colinder.github.io/vue_devinfo/</link>
-    <pubDate>Sun, 08 Aug 2021 14:09:22 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/vue_devinfo/</guid>
-    <description><![CDATA[Vue 개발을 하면서 알게 된(깨닫게 된) 내용을 정리해 기록합니다.]]></description>
-</item>
-<item>
-    <title>09_Vue3. global variable</title>
-    <link>https://colinder.github.io/09_vue3._global_variable/</link>
-    <pubDate>Wed, 23 Jun 2021 17:30:33 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/09_vue3._global_variable/</guid>
-    <description><![CDATA[Vue에 대한 내용을 정리합니다.]]></description>
-</item>
-<item>
-    <title>06_Vue_LifeCycle</title>
-    <link>https://colinder.github.io/06_vue_lifecycle/</link>
-    <pubDate>Thu, 15 Oct 2020 21:04:53 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/06_vue_lifecycle/</guid>
-    <description><![CDATA[Vue에 대한 내용을 정리합니다.]]></description>
-</item>
-<item>
-    <title>07_Vue_Vuex Concept</title>
-    <link>https://colinder.github.io/07_vue_vuex-concept/</link>
-    <pubDate>Sun, 16 Aug 2020 19:39:10 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/07_vue_vuex-concept/</guid>
-    <description><![CDATA[Vue에 대한 내용을 정리합니다.]]></description>
-</item>
-<item>
-    <title>05_Vue_What is Vuex?</title>
-    <link>https://colinder.github.io/05_vue_what-is-vuex/</link>
-    <pubDate>Sun, 02 Aug 2020 22:22:58 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/05_vue_what-is-vuex/</guid>
-    <description><![CDATA[Vue에 대한 내용을 정리합니다.]]></description>
-</item>
-<item>
-    <title>03_Vue_cli &amp; router &amp; histoyMode</title>
-    <link>https://colinder.github.io/03_vue_cli/</link>
-    <pubDate>Fri, 17 Jul 2020 22:03:11 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/03_vue_cli/</guid>
-    <description><![CDATA[Vue에 대한 내용을 정리합니다.]]></description>
-</item>
-<item>
-    <title>02_Vue_basic (Vue 문법2)</title>
-    <link>https://colinder.github.io/02_vue_basic/</link>
-    <pubDate>Fri, 17 Jul 2020 22:03:09 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/02_vue_basic/</guid>
-    <description><![CDATA[Vue에 대한 내용을 정리합니다.]]></description>
-</item>
-<item>
-    <title>01_Vue_basic (Vue란? &amp; Vue 문법1)</title>
-    <link>https://colinder.github.io/01_vue_basic/</link>
-    <pubDate>Fri, 17 Jul 2020 22:03:05 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/01_vue_basic/</guid>
-    <description><![CDATA[Vue에 대한 내용을 정리합니다.]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vue on colinder&#39;s blog</title>
+    <link>https://colinder.github.io/categories/vue/</link>
+    <description>Recent content in Vue on colinder&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+    <webMaster>kjonggwan@gmail.com (colinder)</webMaster>
+    <copyright>colinder</copyright>
+    <lastBuildDate>Tue, 29 Nov 2022 13:01:01 +0900</lastBuildDate>
+    <atom:link href="https://colinder.github.io/categories/vue/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>08_Vue_Vuex Concept...</title>
+      <link>https://colinder.github.io/08_vue_vuex-concept/</link>
+      <pubDate>Tue, 29 Nov 2022 13:01:01 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/08_vue_vuex-concept/</guid>
+      <description>Vue에 대한 내용을 정리합니다.</description>
+    </item>
+    <item>
+      <title>typescript Refs_error</title>
+      <link>https://colinder.github.io/refs_error/</link>
+      <pubDate>Wed, 16 Feb 2022 14:35:56 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/refs_error/</guid>
+      <description>typescript Refs_error에 대한 내용을 기록합니다.</description>
+    </item>
+    <item>
+      <title>Vue_DevInfo</title>
+      <link>https://colinder.github.io/vue_devinfo/</link>
+      <pubDate>Sun, 08 Aug 2021 14:09:22 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/vue_devinfo/</guid>
+      <description>Vue 개발을 하면서 알게 된(깨닫게 된) 내용을 정리해 기록합니다.</description>
+    </item>
+    <item>
+      <title>09_Vue3. global variable</title>
+      <link>https://colinder.github.io/09_vue3._global_variable/</link>
+      <pubDate>Wed, 23 Jun 2021 17:30:33 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/09_vue3._global_variable/</guid>
+      <description>Vue에 대한 내용을 정리합니다.</description>
+    </item>
+    <item>
+      <title>06_Vue_LifeCycle</title>
+      <link>https://colinder.github.io/06_vue_lifecycle/</link>
+      <pubDate>Thu, 15 Oct 2020 21:04:53 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/06_vue_lifecycle/</guid>
+      <description>Vue에 대한 내용을 정리합니다.</description>
+    </item>
+    <item>
+      <title>07_Vue_Vuex Concept</title>
+      <link>https://colinder.github.io/07_vue_vuex-concept/</link>
+      <pubDate>Sun, 16 Aug 2020 19:39:10 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/07_vue_vuex-concept/</guid>
+      <description>Vue에 대한 내용을 정리합니다.</description>
+    </item>
+    <item>
+      <title>05_Vue_What is Vuex?</title>
+      <link>https://colinder.github.io/05_vue_what-is-vuex/</link>
+      <pubDate>Sun, 02 Aug 2020 22:22:58 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/05_vue_what-is-vuex/</guid>
+      <description>Vue에 대한 내용을 정리합니다.</description>
+    </item>
+    <item>
+      <title>03_Vue_cli &amp; router &amp; histoyMode</title>
+      <link>https://colinder.github.io/03_vue_cli/</link>
+      <pubDate>Fri, 17 Jul 2020 22:03:11 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/03_vue_cli/</guid>
+      <description>Vue에 대한 내용을 정리합니다.</description>
+    </item>
+    <item>
+      <title>02_Vue_basic (Vue 문법2)</title>
+      <link>https://colinder.github.io/02_vue_basic/</link>
+      <pubDate>Fri, 17 Jul 2020 22:03:09 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/02_vue_basic/</guid>
+      <description>Vue에 대한 내용을 정리합니다.</description>
+    </item>
+    <item>
+      <title>01_Vue_basic (Vue란? &amp; Vue 문법1)</title>
+      <link>https://colinder.github.io/01_vue_basic/</link>
+      <pubDate>Fri, 17 Jul 2020 22:03:05 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/01_vue_basic/</guid>
+      <description>Vue에 대한 내용을 정리합니다.</description>
+    </item>
+    <item>
+      <title>00_Vue_setting</title>
+      <link>https://colinder.github.io/00_vue_setting/</link>
+      <pubDate>Fri, 17 Jul 2020 21:56:29 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/00_vue_setting/</guid>
+      <description>Vue에 대한 내용을 정리합니다.</description>
+    </item>
+  </channel>
 </rss>

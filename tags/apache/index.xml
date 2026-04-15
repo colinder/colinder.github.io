@@ -1,16 +1,22 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Apache - Tag - colinder&#39;s blog</title>
-        <link>https://colinder.github.io/tags/apache/</link>
-        <description>Apache - Tag - colinder&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Wed, 19 Jul 2023 11:05:45 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/apache/" rel="self" type="application/rss+xml" /><item>
-    <title>How To Deploy Django on Windows server Using Apache</title>
-    <link>https://colinder.github.io/how-to-deploy-django-on-windows-server-using-apache/</link>
-    <pubDate>Wed, 19 Jul 2023 11:05:45 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/how-to-deploy-django-on-windows-server-using-apache/</guid>
-    <description><![CDATA[Django를 Apache를 써서 배포하는 방법에 대하여 정리합니다.]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Apache on colinder&#39;s blog</title>
+    <link>https://colinder.github.io/tags/apache/</link>
+    <description>Recent content in Apache on colinder&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+    <webMaster>kjonggwan@gmail.com (colinder)</webMaster>
+    <copyright>colinder</copyright>
+    <lastBuildDate>Wed, 19 Jul 2023 11:05:45 +0900</lastBuildDate>
+    <atom:link href="https://colinder.github.io/tags/apache/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How To Deploy Django on Windows server Using Apache</title>
+      <link>https://colinder.github.io/how-to-deploy-django-on-windows-server-using-apache/</link>
+      <pubDate>Wed, 19 Jul 2023 11:05:45 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/how-to-deploy-django-on-windows-server-using-apache/</guid>
+      <description>Django를 Apache를 써서 배포하는 방법에 대하여 정리합니다.</description>
+    </item>
+  </channel>
 </rss>

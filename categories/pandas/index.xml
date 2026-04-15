@@ -1,29 +1,29 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Pandas - Category - colinder&#39;s blog</title>
-        <link>https://colinder.github.io/categories/pandas/</link>
-        <description>Pandas - Category - colinder&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Tue, 22 Feb 2022 10:37:15 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/pandas/" rel="self" type="application/rss+xml" /><item>
-    <title>폴더안에 있는 특정 파일 리스트 가져오기</title>
-    <link>https://colinder.github.io/filelistimport/</link>
-    <pubDate>Tue, 22 Feb 2022 10:37:15 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/filelistimport/</guid>
-    <description><![CDATA[폴더안에 있는 특정 파일 리스트 가져오는 방법에 대하여 정리합니다.]]></description>
-</item>
-<item>
-    <title>Numpy &amp; Pandas</title>
-    <link>https://colinder.github.io/numpypandas/</link>
-    <pubDate>Wed, 15 Dec 2021 14:29:31 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/numpypandas/</guid>
-    <description><![CDATA[<p>​</p>
-<h1 id="numpy">Numpy</h1>
-<blockquote>
-<p>ML, AI 등 개발을 진행하다보면 무지성으로 import하는 library가 있다.</p>
-<p><strong>import numpy as np</strong></p>
-<p>python만 할 줄 안다면 어렵지 않게 사용이 가능하지만, 그래도 numpy의 개념을 알고 진행하고 싶은 마음에 내용을 정리해보자</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pandas on colinder&#39;s blog</title>
+    <link>https://colinder.github.io/categories/pandas/</link>
+    <description>Recent content in Pandas on colinder&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+    <webMaster>kjonggwan@gmail.com (colinder)</webMaster>
+    <copyright>colinder</copyright>
+    <lastBuildDate>Tue, 22 Feb 2022 10:37:15 +0900</lastBuildDate>
+    <atom:link href="https://colinder.github.io/categories/pandas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>폴더안에 있는 특정 파일 리스트 가져오기</title>
+      <link>https://colinder.github.io/filelistimport/</link>
+      <pubDate>Tue, 22 Feb 2022 10:37:15 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/filelistimport/</guid>
+      <description>폴더안에 있는 특정 파일 리스트 가져오는 방법에 대하여 정리합니다.</description>
+    </item>
+    <item>
+      <title>Numpy &amp; Pandas</title>
+      <link>https://colinder.github.io/numpypandas/</link>
+      <pubDate>Wed, 15 Dec 2021 14:29:31 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/numpypandas/</guid>
+      <description>&lt;p&gt;​&lt;/p&gt;&#xA;&lt;h1 id=&#34;numpy&#34;&gt;Numpy&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;ML, AI 등 개발을 진행하다보면 무지성으로 import하는 library가 있다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;import numpy as np&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;python만 할 줄 안다면 어렵지 않게 사용이 가능하지만, 그래도 numpy의 개념을 알고 진행하고 싶은 마음에 내용을 정리해보자&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

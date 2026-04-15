@@ -1,16 +1,22 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Scope - Tag - colinder&#39;s blog</title>
-        <link>https://colinder.github.io/tags/scope/</link>
-        <description>Scope - Tag - colinder&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Thu, 10 Dec 2020 17:03:25 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/scope/" rel="self" type="application/rss+xml" /><item>
-    <title>JavaScript Scope</title>
-    <link>https://colinder.github.io/js_scope/</link>
-    <pubDate>Thu, 10 Dec 2020 17:03:25 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/js_scope/</guid>
-    <description><![CDATA[JavaScript Scope에 대하여 정리합니다.]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scope on colinder&#39;s blog</title>
+    <link>https://colinder.github.io/tags/scope/</link>
+    <description>Recent content in Scope on colinder&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+    <webMaster>kjonggwan@gmail.com (colinder)</webMaster>
+    <copyright>colinder</copyright>
+    <lastBuildDate>Thu, 10 Dec 2020 17:03:25 +0900</lastBuildDate>
+    <atom:link href="https://colinder.github.io/tags/scope/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JavaScript Scope</title>
+      <link>https://colinder.github.io/js_scope/</link>
+      <pubDate>Thu, 10 Dec 2020 17:03:25 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/js_scope/</guid>
+      <description>JavaScript Scope에 대하여 정리합니다.</description>
+    </item>
+  </channel>
 </rss>

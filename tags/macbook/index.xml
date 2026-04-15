@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Macbook on colinder&#39;s blog</title>
+    <link>https://colinder.github.io/tags/macbook/</link>
+    <description>Recent content in Macbook on colinder&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+    <webMaster>kjonggwan@gmail.com (colinder)</webMaster>
+    <copyright>colinder</copyright>
+    <lastBuildDate>Wed, 15 Apr 2026 09:00:00 +0900</lastBuildDate>
+    <atom:link href="https://colinder.github.io/tags/macbook/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>맥북 기본 터미널 커스텀하기</title>
+      <link>https://colinder.github.io/custom_zsh/</link>
+      <pubDate>Wed, 15 Apr 2026 09:00:00 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/custom_zsh/</guid>
+      <description>git bash 형태로 zsh 프롬프트를 꾸며봅시다.</description>
+    </item>
+  </channel>
+</rss>

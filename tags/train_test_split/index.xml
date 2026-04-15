@@ -1,20 +1,22 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Train_test_split - Tag - colinder&#39;s blog</title>
-        <link>https://colinder.github.io/tags/train_test_split/</link>
-        <description>Train_test_split - Tag - colinder&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Thu, 30 Jun 2022 13:30:53 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/train_test_split/" rel="self" type="application/rss+xml" /><item>
-    <title>What is train_test_split()?</title>
-    <link>https://colinder.github.io/what_is_train_test_split/</link>
-    <pubDate>Thu, 30 Jun 2022 13:30:53 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/what_is_train_test_split/</guid>
-    <description><![CDATA[<p>​</p>
-<h1 id="what-is-train_test_split">What is &rsquo;train_test_split()'?</h1>
-<blockquote>
-<p>AI 모델링을 위해 X_train, X_test, y_train, y_test로 나누는 작업은 필수적입니다.
-저는 train과 test를 나누는 코드를 직접 짜서 사용했었는데 scikit learn에서 제공되는 함수가 있었습니다. <b>&ldquo;train_test_split()&quot;</b>이를 알아보겠습니다.</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Train_test_split on colinder&#39;s blog</title>
+    <link>https://colinder.github.io/tags/train_test_split/</link>
+    <description>Recent content in Train_test_split on colinder&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+    <webMaster>kjonggwan@gmail.com (colinder)</webMaster>
+    <copyright>colinder</copyright>
+    <lastBuildDate>Thu, 30 Jun 2022 13:30:53 +0900</lastBuildDate>
+    <atom:link href="https://colinder.github.io/tags/train_test_split/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What is train_test_split()?</title>
+      <link>https://colinder.github.io/what_is_train_test_split/</link>
+      <pubDate>Thu, 30 Jun 2022 13:30:53 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/what_is_train_test_split/</guid>
+      <description>&lt;p&gt;​&lt;/p&gt;&#xA;&lt;h1 id=&#34;what-is-train_test_split&#34;&gt;What is &amp;rsquo;train_test_split()&#39;?&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;AI 모델링을 위해 X_train, X_test, y_train, y_test로 나누는 작업은 필수적입니다.&#xA;저는 train과 test를 나누는 코드를 직접 짜서 사용했었는데 scikit learn에서 제공되는 함수가 있었습니다. &lt;b&gt;&amp;ldquo;train_test_split()&amp;quot;&lt;/b&gt;이를 알아보겠습니다.&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

@@ -1,24 +1,22 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Nan - Tag - colinder&#39;s blog</title>
-        <link>https://colinder.github.io/tags/nan/</link>
-        <description>Nan - Tag - colinder&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Thu, 17 Mar 2022 17:12:00 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/nan/" rel="self" type="application/rss+xml" /><item>
-    <title>모델 학습 시 loss가 Nan으로 나올 때 해결법</title>
-    <link>https://colinder.github.io/loss_nan_solution/</link>
-    <pubDate>Thu, 17 Mar 2022 17:12:00 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/loss_nan_solution/</guid>
-    <description><![CDATA[<p>​</p>
-<h2 id="모델-학습-시-loss-값이-nan으로-나올-때-해결-방법">모델 학습 시 loss 값이 Nan으로 나올 때 해결 방법</h2>
-<ul>
-<li>
-<p>if df == pandas.DataFrame()
-df.isnull().any()로 데이터셋에 NaN이나 inf 값이 들어있는지 확인한다.</p>
-</li>
-<li>
-<p>다른 optimizer들을 사용해본다. <em>(ex. sgd, adam, nadam)</em></p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nan on colinder&#39;s blog</title>
+    <link>https://colinder.github.io/tags/nan/</link>
+    <description>Recent content in Nan on colinder&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+    <webMaster>kjonggwan@gmail.com (colinder)</webMaster>
+    <copyright>colinder</copyright>
+    <lastBuildDate>Thu, 17 Mar 2022 17:12:00 +0900</lastBuildDate>
+    <atom:link href="https://colinder.github.io/tags/nan/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>모델 학습 시 loss가 Nan으로 나올 때 해결법</title>
+      <link>https://colinder.github.io/loss_nan_solution/</link>
+      <pubDate>Thu, 17 Mar 2022 17:12:00 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/loss_nan_solution/</guid>
+      <description>&lt;p&gt;​&lt;/p&gt;&#xA;&lt;h2 id=&#34;모델-학습-시-loss-값이-nan으로-나올-때-해결-방법&#34;&gt;모델 학습 시 loss 값이 Nan으로 나올 때 해결 방법&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;if df == pandas.DataFrame()&#xA;df.isnull().any()로 데이터셋에 NaN이나 inf 값이 들어있는지 확인한다.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;다른 optimizer들을 사용해본다. &lt;em&gt;(ex. sgd, adam, nadam)&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

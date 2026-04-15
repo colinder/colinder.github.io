@@ -148,7 +148,8 @@ axios 설치 및 전역변수 설정 방법 front와 back간의 통신에 자주
 <li>node.js에서의 사용이 가능하다.</li>
 <li>request aborting(요청 취소)가 가능하다.</li>
 <li>catch에 걸렸을 때, .then을 실행하지 않고, console창에 해당 에러 로그를 보여준다.</li>
-</ul></blockquote>
+</ul>
+</blockquote>
 <p>설치부터 진행해보겠습니다. 테스트는 Vue를 활용하여 진행하였습니다.</p>
 <p>​</p>
 <h3 id="1-axios-설치">1. axios 설치</h3>
@@ -188,18 +189,18 @@ axios 설치 및 전역변수 설정 방법 front와 back간의 통신에 자주
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="c1">// main.js or main.ts
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">Vue</span> <span class="nx">from</span> <span class="s1">&#39;vue&#39;</span>
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">App</span> <span class="nx">from</span> <span class="s1">&#39;./App.vue&#39;</span>
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">router</span> <span class="nx">from</span> <span class="s1">&#39;./router&#39;</span>
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">store</span> <span class="nx">from</span> <span class="s1">&#39;./store&#39;</span>
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">vuetify</span> <span class="nx">from</span> <span class="s1">&#39;./plugins/vuetify&#39;</span>
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">Axios</span> <span class="nx">from</span> <span class="s1">&#39;axios&#39;</span>  <span class="c1">// 👈추가
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nx">Vue</span><span class="p">.</span><span class="nx">config</span><span class="p">.</span><span class="nx">productionTip</span> <span class="o">=</span> <span class="kc">false</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nx">Vue</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">axios</span> <span class="o">=</span> <span class="nx">Axios</span>  <span class="c1">// 👈추가
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">router</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">store</span><span class="p">,</span>
@@ -336,9 +337,9 @@ axios 설치 및 전역변수 설정 방법 front와 back간의 통신에 자주
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="c1">// 새로 프로젝트를 만들고 npm install axios 설치하고, main.js에서 전역설정해준 뒤 진행.
 </span></span></span><span class="line"><span class="cl"><span class="c1">// test해볼 conponents인 HelloWorld.vue의 내용을 수정해서 진행.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// HelloWorld.vue
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span><span class="nx">axios</span> <span class="nx">테스트</span><span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>										<span class="err">👈</span> 
@@ -410,17 +411,17 @@ axios 설치 및 전역변수 설정 방법 front와 back간의 통신에 자주
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="c1">// HelloWorld.vue
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span><span class="nx">axios</span> <span class="nx">테스트</span><span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">button</span> <span class="nt">@click</span><span class="s">=&#34;axiosTest()&#34;</span><span class="p">&gt;</span><span class="na">axios</span> <span class="na">테스트</span><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span> <span class="nt">v-for</span><span class="s">=&#34;(post, i) in posts&#34; </span><span class="nt">:key</span><span class="s">=&#34;i&#34;</span><span class="p">&gt;{{</span><span class="na">post</span><span class="p">}}&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>			<span class="err">👈</span> <span class="na">수정</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span> <span class="nt">v-for</span><span class="o">=</span><span class="s">&#34;(post, i) in posts&#34; :key=&#34;i&#34;</span><span class="p">&gt;{{</span><span class="na">post</span><span class="p">}}&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>			<span class="err">👈</span> <span class="na">수정</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span> <span class="c1">// 변화 없음
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">export</span> <span class="k">default</span> <span class="kr">class</span> <span class="nx">HelloWorld</span> <span class="kr">extends</span> <span class="nx">Vue</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="kr">class</span> <span class="nx">HelloWorld</span> <span class="kr">extends</span> <span class="nx">Vue</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">posts</span><span class="o">:</span> <span class="s1">&#39;&#39;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="nx">axiosTest</span><span class="p">()</span> <span class="p">{</span>
@@ -473,7 +474,7 @@ axios 설치 및 전역변수 설정 방법 front와 back간의 통신에 자주
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.143.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.160.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

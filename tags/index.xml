@@ -1,88 +1,946 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Tags - Tag - colinder&#39;s blog</title>
-        <link>https://colinder.github.io/tags/</link>
-        <description>Tags - Tag - colinder&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Fri, 20 Feb 2026 20:30:49 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/" rel="self" type="application/rss+xml" /><item>
-    <title>Langchain</title>
-    <link>https://colinder.github.io/tags/langchain/</link>
-    <pubDate>Fri, 20 Feb 2026 20:30:49 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/tags/langchain/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Langgraph</title>
-    <link>https://colinder.github.io/tags/langgraph/</link>
-    <pubDate>Fri, 20 Feb 2026 20:30:49 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/tags/langgraph/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Lint</title>
-    <link>https://colinder.github.io/tags/lint/</link>
-    <pubDate>Wed, 21 Jan 2026 14:26:13 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/tags/lint/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Vscode</title>
-    <link>https://colinder.github.io/tags/vscode/</link>
-    <pubDate>Wed, 21 Jan 2026 14:26:13 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/tags/vscode/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Etax</title>
-    <link>https://colinder.github.io/tags/etax/</link>
-    <pubDate>Mon, 19 Jan 2026 22:22:32 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/tags/etax/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Hometax</title>
-    <link>https://colinder.github.io/tags/hometax/</link>
-    <pubDate>Mon, 19 Jan 2026 22:22:32 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/tags/hometax/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Api</title>
-    <link>https://colinder.github.io/tags/api/</link>
-    <pubDate>Wed, 31 Jan 2024 09:48:40 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/tags/api/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>REST</title>
-    <link>https://colinder.github.io/tags/rest/</link>
-    <pubDate>Wed, 31 Jan 2024 09:48:40 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/tags/rest/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Decorator</title>
-    <link>https://colinder.github.io/tags/decorator/</link>
-    <pubDate>Wed, 31 Jan 2024 09:48:31 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/tags/decorator/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Nest</title>
-    <link>https://colinder.github.io/tags/nest/</link>
-    <pubDate>Sun, 14 Jan 2024 09:14:13 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/tags/nest/</guid>
-    <description><![CDATA[]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on colinder&#39;s blog</title>
+    <link>https://colinder.github.io/tags/</link>
+    <description>Recent content in Tags on colinder&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+    <webMaster>kjonggwan@gmail.com (colinder)</webMaster>
+    <copyright>colinder</copyright>
+    <lastBuildDate>Wed, 15 Apr 2026 09:00:00 +0900</lastBuildDate>
+    <atom:link href="https://colinder.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Macbook</title>
+      <link>https://colinder.github.io/tags/macbook/</link>
+      <pubDate>Wed, 15 Apr 2026 09:00:00 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/macbook/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Langchain</title>
+      <link>https://colinder.github.io/tags/langchain/</link>
+      <pubDate>Fri, 20 Feb 2026 20:30:49 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/langchain/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Langgraph</title>
+      <link>https://colinder.github.io/tags/langgraph/</link>
+      <pubDate>Fri, 20 Feb 2026 20:30:49 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/langgraph/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lint</title>
+      <link>https://colinder.github.io/tags/lint/</link>
+      <pubDate>Wed, 21 Jan 2026 14:26:13 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/lint/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vscode</title>
+      <link>https://colinder.github.io/tags/vscode/</link>
+      <pubDate>Wed, 21 Jan 2026 14:26:13 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/vscode/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Etax</title>
+      <link>https://colinder.github.io/tags/etax/</link>
+      <pubDate>Mon, 19 Jan 2026 22:22:32 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/etax/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hometax</title>
+      <link>https://colinder.github.io/tags/hometax/</link>
+      <pubDate>Mon, 19 Jan 2026 22:22:32 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/hometax/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Api</title>
+      <link>https://colinder.github.io/tags/api/</link>
+      <pubDate>Wed, 31 Jan 2024 09:48:40 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/api/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>REST</title>
+      <link>https://colinder.github.io/tags/rest/</link>
+      <pubDate>Wed, 31 Jan 2024 09:48:40 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/rest/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Decorator</title>
+      <link>https://colinder.github.io/tags/decorator/</link>
+      <pubDate>Wed, 31 Jan 2024 09:48:31 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/decorator/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nest</title>
+      <link>https://colinder.github.io/tags/nest/</link>
+      <pubDate>Sun, 14 Jan 2024 09:14:13 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/nest/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dynamic Type</title>
+      <link>https://colinder.github.io/tags/dynamic-type/</link>
+      <pubDate>Wed, 03 Jan 2024 14:26:13 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/dynamic-type/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Static Type</title>
+      <link>https://colinder.github.io/tags/static-type/</link>
+      <pubDate>Wed, 03 Jan 2024 14:26:13 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/static-type/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Javascript</title>
+      <link>https://colinder.github.io/tags/javascript/</link>
+      <pubDate>Wed, 03 Jan 2024 14:23:13 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/javascript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Typescript</title>
+      <link>https://colinder.github.io/tags/typescript/</link>
+      <pubDate>Wed, 03 Jan 2024 14:23:13 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/typescript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Abstraction</title>
+      <link>https://colinder.github.io/tags/abstraction/</link>
+      <pubDate>Wed, 03 Jan 2024 13:32:55 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/abstraction/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>면접대비</title>
+      <link>https://colinder.github.io/tags/%EB%A9%B4%EC%A0%91%EB%8C%80%EB%B9%84/</link>
+      <pubDate>Wed, 03 Jan 2024 13:32:55 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/%EB%A9%B4%EC%A0%91%EB%8C%80%EB%B9%84/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Computer Science</title>
+      <link>https://colinder.github.io/tags/computer-science/</link>
+      <pubDate>Tue, 17 Oct 2023 12:24:58 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/computer-science/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CS</title>
+      <link>https://colinder.github.io/tags/cs/</link>
+      <pubDate>Tue, 17 Oct 2023 12:24:58 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/cs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>시간복잡도</title>
+      <link>https://colinder.github.io/tags/%EC%8B%9C%EA%B0%84%EB%B3%B5%EC%9E%A1%EB%8F%84/</link>
+      <pubDate>Tue, 17 Oct 2023 12:24:58 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/%EC%8B%9C%EA%B0%84%EB%B3%B5%EC%9E%A1%EB%8F%84/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>React-Native</title>
+      <link>https://colinder.github.io/tags/react-native/</link>
+      <pubDate>Thu, 20 Jul 2023 21:24:52 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/react-native/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web</title>
+      <link>https://colinder.github.io/tags/web/</link>
+      <pubDate>Thu, 20 Jul 2023 21:24:52 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/web/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Apache</title>
+      <link>https://colinder.github.io/tags/apache/</link>
+      <pubDate>Wed, 19 Jul 2023 11:05:45 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/apache/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Deploy</title>
+      <link>https://colinder.github.io/tags/deploy/</link>
+      <pubDate>Wed, 19 Jul 2023 11:05:45 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/deploy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Django</title>
+      <link>https://colinder.github.io/tags/django/</link>
+      <pubDate>Wed, 19 Jul 2023 11:05:45 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/django/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ip</title>
+      <link>https://colinder.github.io/tags/ip/</link>
+      <pubDate>Tue, 18 Jul 2023 16:51:22 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/ip/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>React</title>
+      <link>https://colinder.github.io/tags/react/</link>
+      <pubDate>Thu, 04 May 2023 15:36:57 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/react/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Npm</title>
+      <link>https://colinder.github.io/tags/npm/</link>
+      <pubDate>Thu, 20 Apr 2023 15:10:58 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/npm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Npx</title>
+      <link>https://colinder.github.io/tags/npx/</link>
+      <pubDate>Thu, 20 Apr 2023 15:10:58 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/npx/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Command</title>
+      <link>https://colinder.github.io/tags/command/</link>
+      <pubDate>Mon, 27 Mar 2023 13:49:32 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/command/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Docker</title>
+      <link>https://colinder.github.io/tags/docker/</link>
+      <pubDate>Mon, 27 Mar 2023 13:49:32 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AES</title>
+      <link>https://colinder.github.io/tags/aes/</link>
+      <pubDate>Tue, 28 Feb 2023 14:09:18 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/aes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Security</title>
+      <link>https://colinder.github.io/tags/security/</link>
+      <pubDate>Tue, 28 Feb 2023 14:09:18 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ai</title>
+      <link>https://colinder.github.io/tags/ai/</link>
+      <pubDate>Wed, 28 Dec 2022 16:44:00 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Overfitting</title>
+      <link>https://colinder.github.io/tags/overfitting/</link>
+      <pubDate>Wed, 28 Dec 2022 16:44:00 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/overfitting/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AJAX</title>
+      <link>https://colinder.github.io/tags/ajax/</link>
+      <pubDate>Wed, 14 Dec 2022 16:45:55 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/ajax/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Axios</title>
+      <link>https://colinder.github.io/tags/axios/</link>
+      <pubDate>Wed, 14 Dec 2022 16:45:55 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/axios/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vue</title>
+      <link>https://colinder.github.io/tags/vue/</link>
+      <pubDate>Wed, 14 Dec 2022 16:45:55 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/vue/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MariaDB</title>
+      <link>https://colinder.github.io/tags/mariadb/</link>
+      <pubDate>Fri, 11 Nov 2022 13:20:53 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/mariadb/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sequence</title>
+      <link>https://colinder.github.io/tags/sequence/</link>
+      <pubDate>Tue, 25 Oct 2022 12:38:54 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/sequence/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Machine_learning </title>
+      <link>https://colinder.github.io/tags/machine_learning-/</link>
+      <pubDate>Wed, 10 Aug 2022 14:07:57 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/machine_learning-/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ML</title>
+      <link>https://colinder.github.io/tags/ml/</link>
+      <pubDate>Wed, 10 Aug 2022 14:07:57 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/ml/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fit()</title>
+      <link>https://colinder.github.io/tags/fit/</link>
+      <pubDate>Fri, 08 Jul 2022 14:50:36 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/fit/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Transform()</title>
+      <link>https://colinder.github.io/tags/transform/</link>
+      <pubDate>Fri, 08 Jul 2022 14:50:36 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/transform/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Scaling</title>
+      <link>https://colinder.github.io/tags/scaling/</link>
+      <pubDate>Thu, 07 Jul 2022 17:19:29 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/scaling/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tenserflow</title>
+      <link>https://colinder.github.io/tags/tenserflow/</link>
+      <pubDate>Thu, 30 Jun 2022 13:30:53 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/tenserflow/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Train_test_split</title>
+      <link>https://colinder.github.io/tags/train_test_split/</link>
+      <pubDate>Thu, 30 Jun 2022 13:30:53 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/train_test_split/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Icon</title>
+      <link>https://colinder.github.io/tags/icon/</link>
+      <pubDate>Thu, 23 Jun 2022 14:01:21 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/icon/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Splash</title>
+      <link>https://colinder.github.io/tags/splash/</link>
+      <pubDate>Thu, 23 Jun 2022 14:01:21 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/splash/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Crawling</title>
+      <link>https://colinder.github.io/tags/crawling/</link>
+      <pubDate>Tue, 17 May 2022 15:50:42 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/crawling/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Selenium</title>
+      <link>https://colinder.github.io/tags/selenium/</link>
+      <pubDate>Tue, 17 May 2022 15:50:42 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/selenium/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Optimizer</title>
+      <link>https://colinder.github.io/tags/optimizer/</link>
+      <pubDate>Fri, 18 Mar 2022 14:13:56 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/optimizer/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linter</title>
+      <link>https://colinder.github.io/tags/linter/</link>
+      <pubDate>Fri, 18 Mar 2022 13:28:48 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/linter/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Loss</title>
+      <link>https://colinder.github.io/tags/loss/</link>
+      <pubDate>Thu, 17 Mar 2022 17:12:00 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/loss/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nan</title>
+      <link>https://colinder.github.io/tags/nan/</link>
+      <pubDate>Thu, 17 Mar 2022 17:12:00 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/nan/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Babel</title>
+      <link>https://colinder.github.io/tags/babel/</link>
+      <pubDate>Tue, 15 Mar 2022 13:23:41 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/babel/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bias</title>
+      <link>https://colinder.github.io/tags/bias/</link>
+      <pubDate>Mon, 14 Mar 2022 16:34:16 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/bias/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Variance</title>
+      <link>https://colinder.github.io/tags/variance/</link>
+      <pubDate>Mon, 14 Mar 2022 16:34:16 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/variance/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Webpack</title>
+      <link>https://colinder.github.io/tags/webpack/</link>
+      <pubDate>Tue, 01 Mar 2022 09:17:44 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/webpack/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ECMAScript</title>
+      <link>https://colinder.github.io/tags/ecmascript/</link>
+      <pubDate>Mon, 28 Feb 2022 09:23:51 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/ecmascript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web Socket</title>
+      <link>https://colinder.github.io/tags/web-socket/</link>
+      <pubDate>Fri, 25 Feb 2022 12:20:35 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/web-socket/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Local</title>
+      <link>https://colinder.github.io/tags/local/</link>
+      <pubDate>Wed, 23 Feb 2022 14:32:36 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/local/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Session</title>
+      <link>https://colinder.github.io/tags/session/</link>
+      <pubDate>Wed, 23 Feb 2022 14:32:36 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/session/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Storage</title>
+      <link>https://colinder.github.io/tags/storage/</link>
+      <pubDate>Wed, 23 Feb 2022 14:32:36 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/storage/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>File List Import</title>
+      <link>https://colinder.github.io/tags/file-list-import/</link>
+      <pubDate>Tue, 22 Feb 2022 10:37:15 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/file-list-import/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pandas</title>
+      <link>https://colinder.github.io/tags/pandas/</link>
+      <pubDate>Tue, 22 Feb 2022 10:37:15 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/pandas/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Deep</title>
+      <link>https://colinder.github.io/tags/deep/</link>
+      <pubDate>Tue, 22 Feb 2022 09:43:00 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/deep/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Learning</title>
+      <link>https://colinder.github.io/tags/learning/</link>
+      <pubDate>Tue, 22 Feb 2022 09:43:00 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Machine</title>
+      <link>https://colinder.github.io/tags/machine/</link>
+      <pubDate>Tue, 22 Feb 2022 09:43:00 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/machine/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Activation Function</title>
+      <link>https://colinder.github.io/tags/activation-function/</link>
+      <pubDate>Mon, 21 Feb 2022 14:35:39 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/activation-function/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LSTM</title>
+      <link>https://colinder.github.io/tags/lstm/</link>
+      <pubDate>Mon, 21 Feb 2022 14:35:39 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/lstm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RNN</title>
+      <link>https://colinder.github.io/tags/rnn/</link>
+      <pubDate>Mon, 21 Feb 2022 14:35:39 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/rnn/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Analysis</title>
+      <link>https://colinder.github.io/tags/analysis/</link>
+      <pubDate>Thu, 23 Dec 2021 13:53:00 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/analysis/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Boxplot</title>
+      <link>https://colinder.github.io/tags/boxplot/</link>
+      <pubDate>Thu, 23 Dec 2021 13:53:00 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/boxplot/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>JWT</title>
+      <link>https://colinder.github.io/tags/jwt/</link>
+      <pubDate>Wed, 22 Dec 2021 12:16:29 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/jwt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Numpy</title>
+      <link>https://colinder.github.io/tags/numpy/</link>
+      <pubDate>Wed, 15 Dec 2021 14:29:31 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/numpy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AbstractUser</title>
+      <link>https://colinder.github.io/tags/abstractuser/</link>
+      <pubDate>Fri, 08 Oct 2021 10:17:53 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/abstractuser/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AbstractBaseUser</title>
+      <link>https://colinder.github.io/tags/abstractbaseuser/</link>
+      <pubDate>Fri, 08 Oct 2021 10:17:50 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/abstractbaseuser/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>1:N</title>
+      <link>https://colinder.github.io/tags/1n/</link>
+      <pubDate>Tue, 14 Sep 2021 17:25:44 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/1n/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Oracle</title>
+      <link>https://colinder.github.io/tags/oracle/</link>
+      <pubDate>Mon, 06 Sep 2021 11:41:44 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/oracle/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Link</title>
+      <link>https://colinder.github.io/tags/link/</link>
+      <pubDate>Mon, 06 Sep 2021 10:10:24 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/link/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>License</title>
+      <link>https://colinder.github.io/tags/license/</link>
+      <pubDate>Thu, 02 Sep 2021 16:37:00 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/license/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Network</title>
+      <link>https://colinder.github.io/tags/network/</link>
+      <pubDate>Tue, 06 Jul 2021 14:17:20 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/network/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Auto-Encode</title>
+      <link>https://colinder.github.io/tags/auto-encode/</link>
+      <pubDate>Wed, 16 Jun 2021 15:02:22 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/auto-encode/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Collaborative Filtering</title>
+      <link>https://colinder.github.io/tags/collaborative-filtering/</link>
+      <pubDate>Wed, 16 Jun 2021 15:02:22 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/collaborative-filtering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Form</title>
+      <link>https://colinder.github.io/tags/form/</link>
+      <pubDate>Thu, 10 Jun 2021 09:06:44 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/form/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Html</title>
+      <link>https://colinder.github.io/tags/html/</link>
+      <pubDate>Thu, 10 Jun 2021 09:06:44 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/html/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Naver</title>
+      <link>https://colinder.github.io/tags/naver/</link>
+      <pubDate>Mon, 31 May 2021 15:23:45 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/naver/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NLP</title>
+      <link>https://colinder.github.io/tags/nlp/</link>
+      <pubDate>Mon, 31 May 2021 15:23:45 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/nlp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Programmers</title>
+      <link>https://colinder.github.io/tags/programmers/</link>
+      <pubDate>Wed, 21 Apr 2021 23:42:17 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/programmers/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Algorithm</title>
+      <link>https://colinder.github.io/tags/algorithm/</link>
+      <pubDate>Sun, 04 Apr 2021 14:56:09 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/algorithm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SQLD</title>
+      <link>https://colinder.github.io/tags/sqld/</link>
+      <pubDate>Fri, 02 Apr 2021 21:30:34 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/sqld/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Git</title>
+      <link>https://colinder.github.io/tags/git/</link>
+      <pubDate>Thu, 25 Mar 2021 22:28:20 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/git/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LFS</title>
+      <link>https://colinder.github.io/tags/lfs/</link>
+      <pubDate>Thu, 25 Mar 2021 22:28:20 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/lfs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>https://colinder.github.io/tags/python/</link>
+      <pubDate>Mon, 08 Mar 2021 22:39:31 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>분할 정복</title>
+      <link>https://colinder.github.io/tags/%EB%B6%84%ED%95%A0-%EC%A0%95%EB%B3%B5/</link>
+      <pubDate>Tue, 02 Mar 2021 21:03:23 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/%EB%B6%84%ED%95%A0-%EC%A0%95%EB%B3%B5/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Heap</title>
+      <link>https://colinder.github.io/tags/heap/</link>
+      <pubDate>Thu, 25 Feb 2021 20:42:26 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/heap/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>트리</title>
+      <link>https://colinder.github.io/tags/%ED%8A%B8%EB%A6%AC/</link>
+      <pubDate>Thu, 25 Feb 2021 20:42:26 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/%ED%8A%B8%EB%A6%AC/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>힙</title>
+      <link>https://colinder.github.io/tags/%ED%9E%99/</link>
+      <pubDate>Thu, 25 Feb 2021 20:42:26 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/%ED%9E%99/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>되추적</title>
+      <link>https://colinder.github.io/tags/%EB%90%98%EC%B6%94%EC%A0%81/</link>
+      <pubDate>Tue, 09 Feb 2021 17:59:18 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/%EB%90%98%EC%B6%94%EC%A0%81/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>백트래킹</title>
+      <link>https://colinder.github.io/tags/%EB%B0%B1%ED%8A%B8%EB%9E%98%ED%82%B9/</link>
+      <pubDate>Tue, 09 Feb 2021 17:59:18 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/%EB%B0%B1%ED%8A%B8%EB%9E%98%ED%82%B9/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>큐 &amp; 덱</title>
+      <link>https://colinder.github.io/tags/%ED%81%90--%EB%8D%B1/</link>
+      <pubDate>Sun, 31 Jan 2021 20:41:31 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/%ED%81%90--%EB%8D%B1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>스택</title>
+      <link>https://colinder.github.io/tags/%EC%8A%A4%ED%83%9D/</link>
+      <pubDate>Wed, 27 Jan 2021 22:41:03 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/%EC%8A%A4%ED%83%9D/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>정수론 및 조합론</title>
+      <link>https://colinder.github.io/tags/%EC%A0%95%EC%88%98%EB%A1%A0-%EB%B0%8F-%EC%A1%B0%ED%95%A9%EB%A1%A0/</link>
+      <pubDate>Tue, 26 Jan 2021 18:11:31 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/%EC%A0%95%EC%88%98%EB%A1%A0-%EB%B0%8F-%EC%A1%B0%ED%95%A9%EB%A1%A0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>그리디 알고리즘</title>
+      <link>https://colinder.github.io/tags/%EA%B7%B8%EB%A6%AC%EB%94%94-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</link>
+      <pubDate>Mon, 25 Jan 2021 22:33:33 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/%EA%B7%B8%EB%A6%AC%EB%94%94-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>동적계획법1</title>
+      <link>https://colinder.github.io/tags/%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%951/</link>
+      <pubDate>Fri, 15 Jan 2021 17:11:07 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%951/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>BFS</title>
+      <link>https://colinder.github.io/tags/bfs/</link>
+      <pubDate>Tue, 29 Dec 2020 22:48:54 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/bfs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DFS</title>
+      <link>https://colinder.github.io/tags/dfs/</link>
+      <pubDate>Mon, 28 Dec 2020 23:01:27 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/dfs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>정렬</title>
+      <link>https://colinder.github.io/tags/%EC%A0%95%EB%A0%AC/</link>
+      <pubDate>Mon, 21 Dec 2020 21:44:59 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/%EC%A0%95%EB%A0%AC/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>단순무식법</title>
+      <link>https://colinder.github.io/tags/%EB%8B%A8%EC%88%9C%EB%AC%B4%EC%8B%9D%EB%B2%95/</link>
+      <pubDate>Sat, 19 Dec 2020 21:20:00 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/%EB%8B%A8%EC%88%9C%EB%AC%B4%EC%8B%9D%EB%B2%95/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>브루트 포스</title>
+      <link>https://colinder.github.io/tags/%EB%B8%8C%EB%A3%A8%ED%8A%B8-%ED%8F%AC%EC%8A%A4/</link>
+      <pubDate>Sat, 19 Dec 2020 21:20:00 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/%EB%B8%8C%EB%A3%A8%ED%8A%B8-%ED%8F%AC%EC%8A%A4/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>재귀</title>
+      <link>https://colinder.github.io/tags/%EC%9E%AC%EA%B7%80/</link>
+      <pubDate>Fri, 18 Dec 2020 21:16:23 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/%EC%9E%AC%EA%B7%80/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>기본 수학 2</title>
+      <link>https://colinder.github.io/tags/%EA%B8%B0%EB%B3%B8-%EC%88%98%ED%95%99-2/</link>
+      <pubDate>Thu, 17 Dec 2020 21:48:55 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/%EA%B8%B0%EB%B3%B8-%EC%88%98%ED%95%99-2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>기본 수학 1</title>
+      <link>https://colinder.github.io/tags/%EA%B8%B0%EB%B3%B8-%EC%88%98%ED%95%99-1/</link>
+      <pubDate>Wed, 16 Dec 2020 23:45:42 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/%EA%B8%B0%EB%B3%B8-%EC%88%98%ED%95%99-1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>문자열</title>
+      <link>https://colinder.github.io/tags/%EB%AC%B8%EC%9E%90%EC%97%B4/</link>
+      <pubDate>Tue, 15 Dec 2020 21:01:50 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/%EB%AC%B8%EC%9E%90%EC%97%B4/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hoisting</title>
+      <link>https://colinder.github.io/tags/hoisting/</link>
+      <pubDate>Fri, 11 Dec 2020 11:16:09 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/hoisting/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Scope</title>
+      <link>https://colinder.github.io/tags/scope/</link>
+      <pubDate>Thu, 10 Dec 2020 17:03:25 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/scope/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Operators</title>
+      <link>https://colinder.github.io/tags/operators/</link>
+      <pubDate>Wed, 09 Dec 2020 22:04:20 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/operators/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tpye</title>
+      <link>https://colinder.github.io/tags/tpye/</link>
+      <pubDate>Wed, 09 Dec 2020 10:23:18 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/tpye/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Process</title>
+      <link>https://colinder.github.io/tags/process/</link>
+      <pubDate>Tue, 01 Dec 2020 13:40:25 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/process/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Thread</title>
+      <link>https://colinder.github.io/tags/thread/</link>
+      <pubDate>Tue, 01 Dec 2020 13:40:25 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/thread/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Http</title>
+      <link>https://colinder.github.io/tags/http/</link>
+      <pubDate>Tue, 24 Nov 2020 11:28:42 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/http/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Https</title>
+      <link>https://colinder.github.io/tags/https/</link>
+      <pubDate>Tue, 24 Nov 2020 11:28:42 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/https/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Domain</title>
+      <link>https://colinder.github.io/tags/domain/</link>
+      <pubDate>Mon, 23 Nov 2020 12:47:53 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/domain/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Async</title>
+      <link>https://colinder.github.io/tags/async/</link>
+      <pubDate>Fri, 20 Nov 2020 13:59:06 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/async/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sync</title>
+      <link>https://colinder.github.io/tags/sync/</link>
+      <pubDate>Fri, 20 Nov 2020 13:59:06 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/sync/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cookie</title>
+      <link>https://colinder.github.io/tags/cookie/</link>
+      <pubDate>Mon, 19 Oct 2020 14:59:01 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/cookie/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DOM</title>
+      <link>https://colinder.github.io/tags/dom/</link>
+      <pubDate>Tue, 13 Oct 2020 14:26:29 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/dom/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Clone</title>
+      <link>https://colinder.github.io/tags/clone/</link>
+      <pubDate>Sun, 11 Oct 2020 21:26:25 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/clone/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fork</title>
+      <link>https://colinder.github.io/tags/fork/</link>
+      <pubDate>Sun, 11 Oct 2020 21:26:25 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/fork/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mirroring</title>
+      <link>https://colinder.github.io/tags/mirroring/</link>
+      <pubDate>Thu, 08 Oct 2020 22:08:37 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/mirroring/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Block_chain</title>
+      <link>https://colinder.github.io/tags/block_chain/</link>
+      <pubDate>Thu, 17 Sep 2020 15:04:00 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/block_chain/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hugo</title>
+      <link>https://colinder.github.io/tags/hugo/</link>
+      <pubDate>Mon, 29 Jun 2020 15:49:37 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+  </channel>
 </rss>

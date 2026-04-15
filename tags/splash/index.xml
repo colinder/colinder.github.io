@@ -1,16 +1,22 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Splash - Tag - colinder&#39;s blog</title>
-        <link>https://colinder.github.io/tags/splash/</link>
-        <description>Splash - Tag - colinder&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Thu, 23 Jun 2022 14:01:21 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/splash/" rel="self" type="application/rss+xml" /><item>
-    <title>React-Native_icon_and_splash</title>
-    <link>https://colinder.github.io/react-native_icon_and_splash/</link>
-    <pubDate>Thu, 23 Jun 2022 14:01:21 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/react-native_icon_and_splash/</guid>
-    <description><![CDATA[React-Native 개발에 대한 정리를 합니다.]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Splash on colinder&#39;s blog</title>
+    <link>https://colinder.github.io/tags/splash/</link>
+    <description>Recent content in Splash on colinder&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+    <webMaster>kjonggwan@gmail.com (colinder)</webMaster>
+    <copyright>colinder</copyright>
+    <lastBuildDate>Thu, 23 Jun 2022 14:01:21 +0900</lastBuildDate>
+    <atom:link href="https://colinder.github.io/tags/splash/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>React-Native_icon_and_splash</title>
+      <link>https://colinder.github.io/react-native_icon_and_splash/</link>
+      <pubDate>Thu, 23 Jun 2022 14:01:21 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/react-native_icon_and_splash/</guid>
+      <description>React-Native 개발에 대한 정리를 합니다.</description>
+    </item>
+  </channel>
 </rss>

@@ -1,19 +1,22 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Variance - Tag - colinder&#39;s blog</title>
-        <link>https://colinder.github.io/tags/variance/</link>
-        <description>Variance - Tag - colinder&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Mon, 14 Mar 2022 16:34:16 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/variance/" rel="self" type="application/rss+xml" /><item>
-    <title>편향(Bias) &amp; 분산(Variance)</title>
-    <link>https://colinder.github.io/biasvariance/</link>
-    <pubDate>Mon, 14 Mar 2022 16:34:16 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/biasvariance/</guid>
-    <description><![CDATA[<p>​</p>
-<h1 id="편향bias과-분산variance">편향(Bias)과 분산(Variance)</h1>
-<blockquote>
-<p>인공지능 모델링을 하면 정답을 맞추기 위해 컴퓨터는 여러 번의 예측값을 내놓는데, <br><strong>컴퓨터가 내놓은 예측값의 동태를 묘사하는 표현</strong>이 &lsquo;편향&rsquo;과 &lsquo;분산&rsquo;입니다.</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Variance on colinder&#39;s blog</title>
+    <link>https://colinder.github.io/tags/variance/</link>
+    <description>Recent content in Variance on colinder&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+    <webMaster>kjonggwan@gmail.com (colinder)</webMaster>
+    <copyright>colinder</copyright>
+    <lastBuildDate>Mon, 14 Mar 2022 16:34:16 +0900</lastBuildDate>
+    <atom:link href="https://colinder.github.io/tags/variance/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>편향(Bias) &amp; 분산(Variance)</title>
+      <link>https://colinder.github.io/biasvariance/</link>
+      <pubDate>Mon, 14 Mar 2022 16:34:16 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/biasvariance/</guid>
+      <description>&lt;p&gt;​&lt;/p&gt;&#xA;&lt;h1 id=&#34;편향bias과-분산variance&#34;&gt;편향(Bias)과 분산(Variance)&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;인공지능 모델링을 하면 정답을 맞추기 위해 컴퓨터는 여러 번의 예측값을 내놓는데, &lt;br&gt;&lt;strong&gt;컴퓨터가 내놓은 예측값의 동태를 묘사하는 표현&lt;/strong&gt;이 &amp;lsquo;편향&amp;rsquo;과 &amp;lsquo;분산&amp;rsquo;입니다.&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

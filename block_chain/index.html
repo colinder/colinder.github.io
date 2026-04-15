@@ -123,7 +123,7 @@
   <ul>
     <li><a href="#1-gethgo-ethereum-설치">1. geth(Go-ethereum) 설치</a></li>
     <li><a href="#2-web3-설치">2. Web3 설치</a></li>
-    <li><a href="#3-virtualboxhttpswwwvirtualboxorgwikivirtualbox-설치">3. <a href="https://www.virtualbox.org/wiki/VirtualBox">VirtualBox</a> 설치</a></li>
+    <li><a href="#3-virtualbox-설치">3. VirtualBox 설치</a></li>
     <li><a href="#4-vagrant-설치">4. Vagrant 설치</a></li>
     <li><a href="#5-remix-ide-설정">5. Remix IDE 설정</a></li>
   </ul>
@@ -160,7 +160,8 @@
 <blockquote>
 <p>블록체인 기술은 중앙집중화된 데이터베이스에 반기를 들고 나온 개념이기 때문에 중앙 서버 이런게 없다. 즉 누구라도 해당 블록체인 네트워크에 참여하고 싶다면 언제라도 블록체인 데이터베이스를 싱크해주는 로컬 프로그램을 다운 받아 실행하면 데이터를 받을 수 있다.</p>
 <p>그렇다면 블록체인 네트워크에 참여하고 싶다면 어떻게 해야 할까? 앞서 말한 로컬 프로그램을 다운 받으면 참여가 가능하다.</p>
-<p>이 프로그램들 중 하나인 GO 로 짜여진 Go Ethereum(줄여서, geth)을 <a href="https://geth.ethereum.org/downloads/" target="_blank" rel="noopener noreffer ">설치</a>해본다.</p></blockquote>
+<p>이 프로그램들 중 하나인 GO 로 짜여진 Go Ethereum(줄여서, geth)을 <a href="https://geth.ethereum.org/downloads/" target="_blank" rel="noopener noreffer ">설치</a>해본다.</p>
+</blockquote>
 <image src="/images/image-20200831143159580.png">
 <p>작성당시 가장 최신 버전인 1.9.20 for windows로 다운을 받는다.</p>
 <ol>
@@ -185,7 +186,8 @@
 <h2 id="2-web3-설치">2. Web3 설치</h2>
 <blockquote>
 <p>모든 자료와 정보가 분산화, 분권화된 차세대 네트워크 구조로서, 서버가 없는 혁신적인 인터넷 분산형 웹.</p>
-<p>web3.js는 JavaScript 기반으로 <a href="http://wiki.hash.kr/index.php/Dapp" target="_blank" rel="noopener noreffer ">Dapp</a> 이나 서비스를 구현할 때 매우 유용. (출처: 위키)</p></blockquote>
+<p>web3.js는 JavaScript 기반으로 <a href="http://wiki.hash.kr/index.php/Dapp" target="_blank" rel="noopener noreffer ">Dapp</a> 이나 서비스를 구현할 때 매우 유용. (출처: 위키)</p>
+</blockquote>
 <p>​</p>
 <p>이미 Vue_CLI 프로젝트를 구성해 놓은 것이 있어서</p>
 <ol>
@@ -193,9 +195,10 @@
 </ol>
 <image src="/images/image-20200831154822148.png" width="800px" caption="package.json 에서 web3가 설치된 것을 볼 수 있다. ">
 <p>​</p>
-<h2 id="3-virtualboxhttpswwwvirtualboxorgwikivirtualbox-설치">3. <a href="https://www.virtualbox.org/wiki/VirtualBox" target="_blank" rel="noopener noreffer ">VirtualBox</a> 설치</h2>
+<h2 id="3-virtualbox-설치">3. <a href="https://www.virtualbox.org/wiki/VirtualBox" target="_blank" rel="noopener noreffer ">VirtualBox</a> 설치</h2>
 <blockquote>
-<p>VirtualBox: 하드웨어를 소프트웨어적으로 구현해서 그 위에서 운영체제가 작동하도록하는 기술</p></blockquote>
+<p>VirtualBox: 하드웨어를 소프트웨어적으로 구현해서 그 위에서 운영체제가 작동하도록하는 기술</p>
+</blockquote>
 <ul>
 <li>
 <p><a href="https://download.virtualbox.org/virtualbox/6.1.12/VirtualBox-6.1.12-139181-Win.exe" target="_blank" rel="noopener noreffer ">Windows hosts</a> 와 <a href="https://download.virtualbox.org/virtualbox/6.1.12/Oracle_VM_VirtualBox_Extension_Pack-6.1.12.vbox-extpack" target="_blank" rel="noopener noreffer ">All supported platforms</a> 두개를 다운 받는다.</p>
@@ -214,11 +217,13 @@
 <p>​</p>
 <h2 id="4-vagrant-설치">4. Vagrant 설치</h2>
 <blockquote>
-<p>Vagrant는 가상머신을 편리하게 사용할 수 있도록 도와주는 프로그램입니다. 이미 누군가가 Vagrant로 설정해 놓은 <strong>가상머신 Box</strong>를 간단한 명령어로 손쉽게 설치 할 수 있으며 <strong>가상 머신</strong>과 <strong>호스트 머신</strong>과의 환경설정도 쉽게 할 수 있습니다. 다운로드는 <a href="https://www.vagrantup.com/downloads.html" target="_blank" rel="noopener noreffer ">여기</a>서 진행.</p></blockquote>
+<p>Vagrant는 가상머신을 편리하게 사용할 수 있도록 도와주는 프로그램입니다. 이미 누군가가 Vagrant로 설정해 놓은 <strong>가상머신 Box</strong>를 간단한 명령어로 손쉽게 설치 할 수 있으며 <strong>가상 머신</strong>과 <strong>호스트 머신</strong>과의 환경설정도 쉽게 할 수 있습니다. 다운로드는 <a href="https://www.vagrantup.com/downloads.html" target="_blank" rel="noopener noreffer ">여기</a>서 진행.</p>
+</blockquote>
 <p>​</p>
 <h2 id="5-remix-ide-설정">5. Remix IDE 설정</h2>
 <blockquote>
-<p>이더리움 <code>스마트 컨트랙트</code> 프레임워크</p></blockquote>
+<p>이더리움 <code>스마트 컨트랙트</code> 프레임워크</p>
+</blockquote>
 <p><a href="https://remix.ethereum.org/#optimize=false&amp;evmVersion=null&amp;version=soljson-v0.6.6&#43;commit.6c089d02.js" target="_blank" rel="noopener noreffer ">여기</a>서 진행!</p>
 <p>​</p>
 <h1 id="본격적인-블록체인-관련-가상환경-세팅-및-채굴-진행">🎈본격적인 블록체인 관련 가상환경 세팅 및 채굴 진행</h1>
@@ -632,14 +637,16 @@
 <h1 id="200902-한-일">20.09.02 한 일..</h1>
 <blockquote>
 <p>어제까지 진행한 내용 보강 &amp; geth 진입(광구) 후 명령어 정리</p>
-<p>광구에 진입했으니까. 일할 사람👷‍♂️을 등록해주고, 채굴한 광물(coin)을 저장할 곳🛒(coinbase) 등 추가 등록이 필요하다.</p></blockquote>
+<p>광구에 진입했으니까. 일할 사람👷‍♂️을 등록해주고, 채굴한 광물(coin)을 저장할 곳🛒(coinbase) 등 추가 등록이 필요하다.</p>
+</blockquote>
 <ol>
 <li>
 <p><strong>먼저 일할 사람👷‍♂️(EOS 계정)을 등록해주자.</strong></p>
 <p><em>✋ 여기서 잠깐.!</em></p>
 <blockquote>
 <p>EOS란?</p>
-<p><strong>이오스</strong>(EOS)는 <a href="http://wiki.hash.kr/index.php/%ec%9c%84%ec%9e%84%ec%a7%80%eb%b6%84%ec%a6%9d%eb%aa%85" target="_blank" rel="noopener noreffer ">위임지분증명</a>(DPoS) 방식을 사용하는 제3세대 암호화폐. 이오스는 <a href="http://wiki.hash.kr/index.php/%ec%9d%b4%eb%8d%94%eb%a6%ac%ec%9b%80" target="_blank" rel="noopener noreffer ">이더리움</a>의 느린 처리 속도와 높은 수수료 문제를 해결하기 위한 대안으로 등장하였다. 이오스는 분산 애플리케이션인 <a href="http://wiki.hash.kr/index.php/%eb%94%94%ec%95%b1" target="_blank" rel="noopener noreffer ">디앱</a>(DApp)을 구동할 수 있는 플랫폼을 제공함으로써 범용적인 블록체인 운영체제(OS)를 만드는 것을 목표로 하는 프로젝트.</p></blockquote>
+<p><strong>이오스</strong>(EOS)는 <a href="http://wiki.hash.kr/index.php/%ec%9c%84%ec%9e%84%ec%a7%80%eb%b6%84%ec%a6%9d%eb%aa%85" target="_blank" rel="noopener noreffer ">위임지분증명</a>(DPoS) 방식을 사용하는 제3세대 암호화폐. 이오스는 <a href="http://wiki.hash.kr/index.php/%ec%9d%b4%eb%8d%94%eb%a6%ac%ec%9b%80" target="_blank" rel="noopener noreffer ">이더리움</a>의 느린 처리 속도와 높은 수수료 문제를 해결하기 위한 대안으로 등장하였다. 이오스는 분산 애플리케이션인 <a href="http://wiki.hash.kr/index.php/%eb%94%94%ec%95%b1" target="_blank" rel="noopener noreffer ">디앱</a>(DApp)을 구동할 수 있는 플랫폼을 제공함으로써 범용적인 블록체인 운영체제(OS)를 만드는 것을 목표로 하는 프로젝트.</p>
+</blockquote>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -761,14 +768,16 @@
 <hr>
 <h1 id="200903-한-일">20.09.03 한 일..</h1>
 <blockquote>
-<p>어제까지 진행한 내용 보강 &amp; 실습 진행</p></blockquote>
+<p>어제까지 진행한 내용 보강 &amp; 실습 진행</p>
+</blockquote>
 <p>​</p>
 <h4 id="public-blockchain과-private-blockchain의-차이">✨public blockchain과 private blockchain의 차이</h4>
 <blockquote>
 <ul>
 <li>public blockchain은 전세계 사람 어느 누구든 blockchain에 접근하여 data를 읽을 수도 있고 transaction을 날릴 수도 있다. 또한 채굴(consensus process)에 참여할 수도 있다.</li>
 <li>private blockchain은 개인 또는 하나의 조직이 blockchain에 대한 접근을 관리하는 것을 말한다. 이로 인해 private network에 참여하기 위해서는 해당 관리자의 허락이 필요하다.</li>
-</ul></blockquote>
+</ul>
+</blockquote>
 <p>​</p>
 <p>채굴이 잘 되었는지 확인해보자.</p>
 <div class="highlight"><div class="chroma">
@@ -936,7 +945,7 @@
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.143.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.160.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

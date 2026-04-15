@@ -1,16 +1,22 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Network - Tag - colinder&#39;s blog</title>
-        <link>https://colinder.github.io/tags/network/</link>
-        <description>Network - Tag - colinder&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Tue, 06 Jul 2021 14:17:20 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/network/" rel="self" type="application/rss+xml" /><item>
-    <title>Oracle 18C_network_connect</title>
-    <link>https://colinder.github.io/oracle_network_connect/</link>
-    <pubDate>Tue, 06 Jul 2021 14:17:20 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/oracle_network_connect/</guid>
-    <description><![CDATA[오라클 18 버전의 외부 DB 접근(네트워크 연동) 방법에 대하여 정리합니다.]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Network on colinder&#39;s blog</title>
+    <link>https://colinder.github.io/tags/network/</link>
+    <description>Recent content in Network on colinder&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+    <webMaster>kjonggwan@gmail.com (colinder)</webMaster>
+    <copyright>colinder</copyright>
+    <lastBuildDate>Tue, 06 Jul 2021 14:17:20 +0900</lastBuildDate>
+    <atom:link href="https://colinder.github.io/tags/network/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Oracle 18C_network_connect</title>
+      <link>https://colinder.github.io/oracle_network_connect/</link>
+      <pubDate>Tue, 06 Jul 2021 14:17:20 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/oracle_network_connect/</guid>
+      <description>오라클 18 버전의 외부 DB 접근(네트워크 연동) 방법에 대하여 정리합니다.</description>
+    </item>
+  </channel>
 </rss>

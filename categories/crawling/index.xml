@@ -1,16 +1,22 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Crawling - Category - colinder&#39;s blog</title>
-        <link>https://colinder.github.io/categories/crawling/</link>
-        <description>Crawling - Category - colinder&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Tue, 17 May 2022 15:50:42 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/crawling/" rel="self" type="application/rss+xml" /><item>
-    <title>Selenium 동작 대기 방법</title>
-    <link>https://colinder.github.io/selenium_%EB%8F%99%EC%9E%91%EB%8C%80%EA%B8%B0/</link>
-    <pubDate>Tue, 17 May 2022 15:50:42 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/selenium_%EB%8F%99%EC%9E%91%EB%8C%80%EA%B8%B0/</guid>
-    <description><![CDATA[Selenium 동작대기하는 방법에 대하여 정리합니다.]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Crawling on colinder&#39;s blog</title>
+    <link>https://colinder.github.io/categories/crawling/</link>
+    <description>Recent content in Crawling on colinder&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+    <webMaster>kjonggwan@gmail.com (colinder)</webMaster>
+    <copyright>colinder</copyright>
+    <lastBuildDate>Tue, 17 May 2022 15:50:42 +0900</lastBuildDate>
+    <atom:link href="https://colinder.github.io/categories/crawling/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Selenium 동작 대기 방법</title>
+      <link>https://colinder.github.io/selenium_%EB%8F%99%EC%9E%91%EB%8C%80%EA%B8%B0/</link>
+      <pubDate>Tue, 17 May 2022 15:50:42 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/selenium_%EB%8F%99%EC%9E%91%EB%8C%80%EA%B8%B0/</guid>
+      <description>Selenium 동작대기하는 방법에 대하여 정리합니다.</description>
+    </item>
+  </channel>
 </rss>

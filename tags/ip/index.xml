@@ -1,24 +1,29 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Ip - Tag - colinder&#39;s blog</title>
-        <link>https://colinder.github.io/tags/ip/</link>
-        <description>Ip - Tag - colinder&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Tue, 18 Jul 2023 16:51:22 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/ip/" rel="self" type="application/rss+xml" /><item>
-    <title>외부 &amp; 내부 IP</title>
-    <link>https://colinder.github.io/what_is_ip/</link>
-    <pubDate>Tue, 18 Jul 2023 16:51:22 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/what_is_ip/</guid>
-    <description><![CDATA[IP에 대하여 정리합니다.]]></description>
-</item>
-<item>
-    <title>what is Domain</title>
-    <link>https://colinder.github.io/what_is_domain/</link>
-    <pubDate>Mon, 23 Nov 2020 12:47:53 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/what_is_domain/</guid>
-    <description><![CDATA[Domain이 무엇인지 정리합니다.]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ip on colinder&#39;s blog</title>
+    <link>https://colinder.github.io/tags/ip/</link>
+    <description>Recent content in Ip on colinder&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+    <webMaster>kjonggwan@gmail.com (colinder)</webMaster>
+    <copyright>colinder</copyright>
+    <lastBuildDate>Tue, 18 Jul 2023 16:51:22 +0900</lastBuildDate>
+    <atom:link href="https://colinder.github.io/tags/ip/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>외부 &amp; 내부 IP</title>
+      <link>https://colinder.github.io/what_is_ip/</link>
+      <pubDate>Tue, 18 Jul 2023 16:51:22 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/what_is_ip/</guid>
+      <description>IP에 대하여 정리합니다.</description>
+    </item>
+    <item>
+      <title>what is Domain</title>
+      <link>https://colinder.github.io/what_is_domain/</link>
+      <pubDate>Mon, 23 Nov 2020 12:47:53 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/what_is_domain/</guid>
+      <description>Domain이 무엇인지 정리합니다.</description>
+    </item>
+  </channel>
 </rss>

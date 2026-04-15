@@ -124,7 +124,7 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><p>​</p>
-<h1 id="vue-typescript_span-stylecolor-56c4ffrefsspan-error">vue typescript_<span style="color: #56C4FF">$refs</span> error</h1>
+<h1 id="vue-typescript_refs-error">vue typescript_<span style="color: #56C4FF">$refs</span> error</h1>
 <blockquote>
 <ol>
 <li>
@@ -134,7 +134,8 @@
 <p>Property &lsquo;value&rsquo; does not exist on type &lsquo;Vue | Element | (Vue | Element)[]&rsquo;.    <br>
 Property &lsquo;value&rsquo; does not exist on type &lsquo;Vue&rsquo;</p>
 </li>
-</ol></blockquote>
+</ol>
+</blockquote>
 <p><strong>typescript를 적용한 vue에서 $refs 값을 가져와 사용하는데 위와 같은 문제가 발생했습니다.</strong></p>
 <p>​</p>
 <h2 id="에러가-나오는-이유">에러가 나오는 이유</h2>
@@ -146,7 +147,7 @@ Property &lsquo;value&rsquo; does not exist on type &lsquo;Vue&rsquo;</p>
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">refs</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">$refs</span><span class="p">.</span><span class="nx">image</span>		<span class="c1">//👈 여기서 에러 발생
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">refs</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">name</span>
+</span></span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">refs</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">name</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>​</p>
@@ -159,8 +160,8 @@ Property &lsquo;value&rsquo; does not exist on type &lsquo;Vue&rsquo;</p>
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="c1">// eslint-disable-next-line
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">refs</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">$refs</span><span class="p">.</span><span class="nx">image</span> <span class="kr">as</span> <span class="kt">any</span>	<span class="c1">//👈
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">refs</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">name</span>
+</span></span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">refs</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">$refs</span><span class="p">.</span><span class="nx">image</span> <span class="kr">as</span> <span class="kt">any</span>	<span class="c1">//👈
+</span></span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">refs</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">name</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>any 타입으로 지정해주며 깔끔히 무시해버리기.</p>
@@ -201,7 +202,7 @@ Property &lsquo;value&rsquo; does not exist on type &lsquo;Vue&rsquo;</p>
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.143.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.160.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

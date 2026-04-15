@@ -122,9 +122,9 @@
   <ul>
     <li><a href="#뜬금없이-url란-무엇인지-우선-알아봅시다">뜬금없이 URL란 무엇인지 우선 알아봅시다.</a></li>
     <li><a href="#http-hypertext-transfer-protocol">HTTP (HyperText Transfer Protocol)</a></li>
-    <li><a href="#httpspan-stylecolor-redsspan-hypertext-transfer-protocol--span-stylecolor-redsecure-socketspan">HTTP<span style="color: red">S</span> (HyperText Transfer Protocol + <span style="color: red">Secure Socket</span>)</a>
+    <li><a href="#https-hypertext-transfer-protocol--secure-socket">HTTP<span>S</span> (HyperText Transfer Protocol + <span>Secure Socket</span>)</a>
       <ul>
-        <li><a href="#span-stylecolor-redsecure-socketspan은-무엇일까요">🤔<span style="color: red">Secure Socket</span>은 무엇일까요?</a></li>
+        <li><a href="#secure-socket은-무엇일까요">🤔<span>Secure Socket</span>은 무엇일까요?</a></li>
         <li><a href="#-좋은-점은-보안뿐일까요">🙄 좋은 점은 보안뿐일까요?</a></li>
       </ul>
     </li>
@@ -137,7 +137,8 @@
             </div><div class="content" id="content"><p>​</p>
 <h1 id="http-vs-https">HTTP vs HTTPS</h1>
 <blockquote>
-<p>웹개발 프로젝트를 하면서 인터넷 주소창(URL)을 자주 보게 되었습니다. 그러던 중 HTTP와 HTTPS의 차이를 발견하였고 단순히 HTTPS가 보안이 더 뛰어나서 적용하면 좋다. 정도의 개념만을 가지고 있다, &lsquo;한 번 차이를 깔끔히 정리하면 좋겠다.&rsquo; 싶어 정리해보겠습니다.</p></blockquote>
+<p>웹개발 프로젝트를 하면서 인터넷 주소창(URL)을 자주 보게 되었습니다. 그러던 중 HTTP와 HTTPS의 차이를 발견하였고 단순히 HTTPS가 보안이 더 뛰어나서 적용하면 좋다. 정도의 개념만을 가지고 있다, &lsquo;한 번 차이를 깔끔히 정리하면 좋겠다.&rsquo; 싶어 정리해보겠습니다.</p>
+</blockquote>
 <p>​</p>
 <h2 id="뜬금없이-url란-무엇인지-우선-알아봅시다">뜬금없이 URL란 무엇인지 우선 알아봅시다.</h2>
 <p>우리가 &lsquo;인터넷 주소창&rsquo;이라고 흔히 말하는 URL은 Uniform Resource Locator, 자원 위치 규약? 정도로 이해하면 좋을 것 같습니다.</p>
@@ -163,12 +164,13 @@
 <p>​</p>
 <p>​</p>
 <p>그럼 HTTPS는 무엇일까요?</p>
-<h2 id="httpspan-stylecolor-redsspan-hypertext-transfer-protocol--span-stylecolor-redsecure-socketspan">HTTP<span style="color: red">S</span> (HyperText Transfer Protocol + <span style="color: red">Secure Socket</span>)</h2>
+<h2 id="https-hypertext-transfer-protocol--secure-socket">HTTP<span style="color: red">S</span> (HyperText Transfer Protocol + <span style="color: red">Secure Socket</span>)</h2>
 <p>HTTP + S(Secure Socket) 즉, HTTP에서 <span style="color: red">Secure Socket</span>이 추가된 것이 HTTPS입니다. 간단히 HTTPS을 사용하면 <strong>암호화된 Protocol을 사용한다는 뜻입니다.</strong></p>
 <p>​</p>
-<h3 id="span-stylecolor-redsecure-socketspan은-무엇일까요">🤔<span style="color: red">Secure Socket</span>은 무엇일까요?</h3>
+<h3 id="secure-socket은-무엇일까요">🤔<span style="color: red">Secure Socket</span>은 무엇일까요?</h3>
 <blockquote>
-<p>Secure Socket은 <strong>SSL(Secure Socket Layer) 프로토콜</strong>을 의미하는데, <strong>컴퓨터 네트워크에 통신 보안을 제공하기 위해 설계된 암호 규약</strong>입니다. SSL는 과거의 명칭이고, SSL이 표준화되면서 <b>TLS(Transport Layer Security)</b>로 바뀌어 사용되고 있습니다.</p></blockquote>
+<p>Secure Socket은 <strong>SSL(Secure Socket Layer) 프로토콜</strong>을 의미하는데, <strong>컴퓨터 네트워크에 통신 보안을 제공하기 위해 설계된 암호 규약</strong>입니다. SSL는 과거의 명칭이고, SSL이 표준화되면서 <b>TLS(Transport Layer Security)</b>로 바뀌어 사용되고 있습니다.</p>
+</blockquote>
 <p>보안이 어떻게 진행되는지 알아보겠습니다.</p>
 <image src="/images//httpVShttps_00.png" width="1000px" style="display: block; margin: 10px auto;">
 <p>공개키와 대칭키로 암호문을 주고 받는 과정을 보며, 보안의 강점이 있는 것을 알았습니다.</p>
@@ -184,7 +186,8 @@
 <blockquote>
 <p>http와 https의 가장 큰 차이는 보안기술이 적용되었는지 아닌지가 맞았습니다. 다만,</p>
 <p>보안이 우수한 사이트가 노출에 이점이 있다는 점.</p>
-<p>어떤 보안 기술이 적용되고 있는지와 어떤식으로 보안 기술이 작동하는지 알 수 있었습니다.</p></blockquote>
+<p>어떤 보안 기술이 적용되고 있는지와 어떤식으로 보안 기술이 작동하는지 알 수 있었습니다.</p>
+</blockquote>
 <p>추가로 직접 정리한 SSL 진행 절차가 보기 어려울 수 있어서 단계별로 정리해보겠습니다.</p>
 <ol>
 <li>사이트 안전성 인증 받기</li>
@@ -238,7 +241,7 @@
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.143.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.160.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

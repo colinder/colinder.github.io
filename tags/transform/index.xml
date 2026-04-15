@@ -1,19 +1,22 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Transform() - Tag - colinder&#39;s blog</title>
-        <link>https://colinder.github.io/tags/transform/</link>
-        <description>Transform() - Tag - colinder&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Fri, 08 Jul 2022 14:50:36 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/transform/" rel="self" type="application/rss+xml" /><item>
-    <title>AI학습 때 왜 .fit() 한 뒤에 train, test data를 .transform()할까?</title>
-    <link>https://colinder.github.io/why_transform_after_fit/</link>
-    <pubDate>Fri, 08 Jul 2022 14:50:36 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/why_transform_after_fit/</guid>
-    <description><![CDATA[<p>​</p>
-<h2 id="-왜-fit-한-뒤에-train-test-data를-transform할까">🤔 왜 .fit() 한 뒤에 train, test data를 .transform()할까?</h2>
-<blockquote>
-<p>결론은 <b>.fit()을 통해 학습데이터(train)의 경향을 파악 및 저장하고 이 경향을 train, test data를 적용해 조정해주기 위함입니다.</b></p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Transform() on colinder&#39;s blog</title>
+    <link>https://colinder.github.io/tags/transform/</link>
+    <description>Recent content in Transform() on colinder&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+    <webMaster>kjonggwan@gmail.com (colinder)</webMaster>
+    <copyright>colinder</copyright>
+    <lastBuildDate>Fri, 08 Jul 2022 14:50:36 +0900</lastBuildDate>
+    <atom:link href="https://colinder.github.io/tags/transform/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI학습 때 왜 .fit() 한 뒤에 train, test data를 .transform()할까?</title>
+      <link>https://colinder.github.io/why_transform_after_fit/</link>
+      <pubDate>Fri, 08 Jul 2022 14:50:36 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/why_transform_after_fit/</guid>
+      <description>&lt;p&gt;​&lt;/p&gt;&#xA;&lt;h2 id=&#34;-왜-fit-한-뒤에-train-test-data를-transform할까&#34;&gt;🤔 왜 .fit() 한 뒤에 train, test data를 .transform()할까?&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;결론은 &lt;b&gt;.fit()을 통해 학습데이터(train)의 경향을 파악 및 저장하고 이 경향을 train, test data를 적용해 조정해주기 위함입니다.&lt;/b&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

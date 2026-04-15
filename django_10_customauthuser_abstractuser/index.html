@@ -120,12 +120,12 @@ Django AbstractUser 이전에 AbstractBaseUser를 사용한 커스텀 사용자 
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#span-stylecolor-f2b141babstractuserbspan을-상속받아-커스텀을-진행"><span style="color: #f2b141"><b>AbstractUser</b></span>을 상속받아 커스텀을 진행</a>
+    <li><a href="#abstractuser을-상속받아-커스텀을-진행"><span><b>AbstractUser</b></span>을 상속받아 커스텀을 진행</a>
       <ul>
         <li>
           <ul>
             <li><a href="#-소스-코드를-작성해보려는데-궁금증이-생겼습니다">🤔 소스 코드를 작성해보려는데 궁금증이 생겼습니다.</a></li>
-            <li><a href="#span-stylecolor-4f8ae8babstractbaseuserbspan와-span-stylecolor-f2b141babstractuserbspan의-차이를-알아보았고-코드와-db의-모습까지-살펴보았습니다-이-둘의-차이와-장단점을-이해하는데-많은-도움이-되었으면-합니다"><span style="color: #4f8ae8;"><b>AbstractBaseUser</b></span>와 <span style="color: #f2b141"><b>AbstractUser</b></span>의 차이를 알아보았고 코드와 DB의 모습까지 살펴보았습니다. 이 둘의 차이와 장,단점을 이해하는데 많은 도움이 되었으면 합니다.</a></li>
+            <li><a href="#abstractbaseuser와-abstractuser의-차이를-알아보았고-코드와-db의-모습까지-살펴보았습니다-이-둘의-차이와-장단점을-이해하는데-많은-도움이-되었으면-합니다"><span><b>AbstractBaseUser</b></span>와 <span><b>AbstractUser</b></span>의 차이를 알아보았고 코드와 DB의 모습까지 살펴보았습니다. 이 둘의 차이와 장,단점을 이해하는데 많은 도움이 되었으면 합니다.</a></li>
           </ul>
         </li>
       </ul>
@@ -133,15 +133,17 @@ Django AbstractUser 이전에 AbstractBaseUser를 사용한 커스텀 사용자 
   </ul>
 </nav></div>
             </div><div class="content" id="content"><p>​</p>
-<h1 id="django-span-stylecolor-f2b141babstractuserbspan">Django <span style="color: #f2b141"><b>AbstractUser</b></span></h1>
+<h1 id="django-abstractuser">Django <span style="color: #f2b141"><b>AbstractUser</b></span></h1>
 <blockquote>
-<p>이전에 <span style="color: #4f8ae8">AbstractBaseUser</span>를 사용한 커스텀 사용자 인증 테이블을 구성해보았습니다. 해당 내용에 이어서 <span style="color: #f2b141"><b>AbstractUser</b></span>로 커스텀 사용자 인증 테이블을 구성해보고 createsuperuser 명령어 입력시, 관리자 계정이 커스텀한 테이블에 생성되게 해보겠습니다.</p></blockquote>
+<p>이전에 <span style="color: #4f8ae8">AbstractBaseUser</span>를 사용한 커스텀 사용자 인증 테이블을 구성해보았습니다. 해당 내용에 이어서 <span style="color: #f2b141"><b>AbstractUser</b></span>로 커스텀 사용자 인증 테이블을 구성해보고 createsuperuser 명령어 입력시, 관리자 계정이 커스텀한 테이블에 생성되게 해보겠습니다.</p>
+</blockquote>
 <p>​</p>
-<h2 id="span-stylecolor-f2b141babstractuserbspan을-상속받아-커스텀을-진행"><span style="color: #f2b141"><b>AbstractUser</b></span>을 상속받아 커스텀을 진행</h2>
+<h2 id="abstractuser을-상속받아-커스텀을-진행"><span style="color: #f2b141"><b>AbstractUser</b></span>을 상속받아 커스텀을 진행</h2>
 <blockquote>
 <p>우선 <span style="color: #f2b141"><b>AbstractUser</b></span>는 Django에서 기본으로 제공해주는 사용자 인증 테이블의 요소를 그대로 가져와 사용하기 때문에 그 요소들은 어떤 것들이 있는지 알아보자.</p>
 <p><b>id, password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined</b> 총 11개의 column이 존재하며 이외에 column을 추가 하고 싶을 때 코드를 추가로 작성합니다.</p>
-<p>전 이전에 <span style="color: #4f8ae8;"><b>AbstractBaseUser</b></span>의 경우와 같이, 추가로 <strong>nickname</strong>을 필수로 등록받는 것으로 시작하여 createsuperuser했을 때, myabuser 테이블에 nickname을 필수로 입력받는 관리자 계정이 생기도록 진행해보겠습니다.</p></blockquote>
+<p>전 이전에 <span style="color: #4f8ae8;"><b>AbstractBaseUser</b></span>의 경우와 같이, 추가로 <strong>nickname</strong>을 필수로 등록받는 것으로 시작하여 createsuperuser했을 때, myabuser 테이블에 nickname을 필수로 입력받는 관리자 계정이 생기도록 진행해보겠습니다.</p>
+</blockquote>
 <p>​</p>
 <p><em>아래 정리는 <a href="https://colinder.github.io/django_08_abstractbaseuservsabstractuser/" target="_blank" rel="noopener noreffer ">이전에</a> <span style="color: #f2b141"><b>AbstractUser</b></span>관련 테스트를 진행한 후에 내용입니다. 즉, <b>프로젝트를 만들고, accounts라는 앱을 만들고, settings.py에 AUTH_USER_MODEL=&lsquo;accounts/myabuser&rsquo;</b>를 등록한 후 진행합니다.</em></p>
 <p>​</p>
@@ -385,7 +387,7 @@ Django AbstractUser 이전에 AbstractBaseUser를 사용한 커스텀 사용자 
 <p>​</p>
 <p>이렇게 <span style="color: #f2b141"><b>AbstractUser</b></span>의 기본적인 사용법을 알아보았습니다.</p>
 <p>​</p>
-<h4 id="span-stylecolor-4f8ae8babstractbaseuserbspan와-span-stylecolor-f2b141babstractuserbspan의-차이를-알아보았고-코드와-db의-모습까지-살펴보았습니다-이-둘의-차이와-장단점을-이해하는데-많은-도움이-되었으면-합니다"><span style="color: #4f8ae8;"><b>AbstractBaseUser</b></span>와 <span style="color: #f2b141"><b>AbstractUser</b></span>의 차이를 알아보았고 코드와 DB의 모습까지 살펴보았습니다. 이 둘의 차이와 장,단점을 이해하는데 많은 도움이 되었으면 합니다.</h4>
+<h4 id="abstractbaseuser와-abstractuser의-차이를-알아보았고-코드와-db의-모습까지-살펴보았습니다-이-둘의-차이와-장단점을-이해하는데-많은-도움이-되었으면-합니다"><span style="color: #4f8ae8;"><b>AbstractBaseUser</b></span>와 <span style="color: #f2b141"><b>AbstractUser</b></span>의 차이를 알아보았고 코드와 DB의 모습까지 살펴보았습니다. 이 둘의 차이와 장,단점을 이해하는데 많은 도움이 되었으면 합니다.</h4>
 <p>​</p>
 <p>​</p>
 <p>​</p>
@@ -422,7 +424,7 @@ Django AbstractUser 이전에 AbstractBaseUser를 사용한 커스텀 사용자 
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.143.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.160.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

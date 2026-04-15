@@ -141,7 +141,8 @@
 <ol>
 <li>상태를 변이시키는 대신 액션으로 변이에 대한 커밋을 합니다.</li>
 <li>작업에는 임의의 비동기 작업이 포함될 수 있습니다.</li>
-</ol></blockquote>
+</ol>
+</blockquote>
 <hr>
 <p><strong>Q.</strong> <em>상태를 변이시키는 대신 액션으로 변이에 대한 커밋을 합니다.</em></p>
 <p><strong>A.</strong> mutations의 역할은 State를 관리하는 것이다. 그런데 만약 비동기적 요청을 마구잡이로 보내게 된다면, State가 변질될 가능성이 높아진다. 결국 비동기 요청의 경우에도 mutations에 정의한 메소드의 형태로 보내어 상태가 변화하는 것을 추적한다.</p>
@@ -194,7 +195,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="c1">// store.js
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">Vue</span> <span class="nx">from</span> <span class="s2">&#34;vue&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">Vuex</span> <span class="nx">from</span> <span class="s2">&#34;vuex&#34;</span>
 </span></span><span class="line"><span class="cl">
@@ -222,7 +223,7 @@
 </span></span><span class="line"><span class="cl">  <span class="p">},</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">actions</span><span class="o">:</span> <span class="p">{</span>                                     <span class="err">👈</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">//비동기 요청인 setTimeout을 실습             👈
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">delayFewMinutes</span><span class="p">(</span><span class="nx">context</span><span class="p">)</span> <span class="p">{</span>                   <span class="err">👈</span> <span class="nx">context는</span> <span class="nx">그냥</span> <span class="nx">선언적인</span> <span class="nx">겁니다</span><span class="p">.</span>
+</span></span></span><span class="line"><span class="cl">    <span class="nx">delayFewMinutes</span><span class="p">(</span><span class="nx">context</span><span class="p">)</span> <span class="p">{</span>                   <span class="err">👈</span> <span class="nx">context는</span> <span class="nx">그냥</span> <span class="nx">선언적인</span> <span class="nx">겁니다</span><span class="p">.</span>
 </span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>                  <span class="err">👈</span> 
 </span></span><span class="line"><span class="cl">        <span class="nx">context</span><span class="p">.</span><span class="nx">commit</span><span class="p">(</span><span class="s1">&#39;addOneMutations&#39;</span><span class="p">);</span>       <span class="err">👈</span> <span class="nx">actions도</span> <span class="nx">결국</span> <span class="nx">commit</span> <span class="nx">으로</span> 
 </span></span><span class="line"><span class="cl">      <span class="p">},</span> <span class="mi">1000</span><span class="p">)</span>                                   <span class="err">👈</span> <span class="nx">mutations를</span> <span class="nx">불러오는</span> <span class="nx">겁니다</span><span class="p">.</span>
@@ -282,7 +283,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="c1">//사용하는 component에서 
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span><span class="nx">state그냥</span> <span class="nx">불러온</span> <span class="nx">값</span><span class="o">:</span> <span class="p">{{</span><span class="nx">change1</span><span class="p">}}&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
@@ -311,11 +312,11 @@
 </span></span><span class="line"><span class="cl">  <span class="p">},</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">//mutations을 이용할 떄는 commit을 사용
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">useMutations</span><span class="p">()</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">    <span class="nx">useMutations</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">commit</span><span class="p">(</span><span class="s2">&#34;addOneMutations&#34;</span><span class="p">,</span> <span class="p">{</span><span class="nx">N</span><span class="o">:</span> <span class="mi">2</span><span class="p">})</span>
 </span></span><span class="line"><span class="cl">    <span class="p">},</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">//actions를 이용할 떄는 dispatch를 사용                 👈
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">useActions</span><span class="p">()</span> <span class="p">{</span>                                         <span class="err">👈</span>
+</span></span></span><span class="line"><span class="cl">    <span class="nx">useActions</span><span class="p">()</span> <span class="p">{</span>                                         <span class="err">👈</span>
 </span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">(</span><span class="s2">&#34;delayFewMinutes&#34;</span><span class="p">)</span>       <span class="err">👈</span> <span class="nx">actions은</span> <span class="nx">store에서</span> 
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>                                                      <span class="err">👈</span> <span class="s1">&#39;dispatch&#39;</span><span class="nx">로</span> <span class="nx">불러옵니다</span><span class="p">.</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
@@ -373,11 +374,11 @@
 </span></span><span class="line"><span class="cl">  <span class="p">},</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">//mutations을 이용할 떄는 commit을 사용
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">useMutations</span><span class="p">()</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">    <span class="nx">useMutations</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">commit</span><span class="p">(</span><span class="s2">&#34;addOneMutations&#34;</span><span class="p">,</span> <span class="p">{</span><span class="nx">N</span><span class="o">:</span> <span class="mi">2</span><span class="p">})</span>
 </span></span><span class="line"><span class="cl">    <span class="p">},</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">//actions를 이용할 떄는 dispatch를 사용
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">useActions</span><span class="p">()</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">    <span class="nx">useActions</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">(</span><span class="s2">&#34;delayFewMinutes&#34;</span><span class="p">,</span> <span class="p">{</span><span class="nx">by</span><span class="o">:</span> <span class="mi">50</span><span class="p">,</span> <span class="nx">time</span><span class="o">:</span> <span class="mi">2000</span><span class="p">})</span>   <span class="err">👈</span> <span class="nx">요기요기</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
@@ -428,7 +429,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="c1">// store.js
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">Vue</span> <span class="nx">from</span> <span class="s2">&#34;vue&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">Vuex</span> <span class="nx">from</span> <span class="s2">&#34;vuex&#34;</span>
 </span></span><span class="line"><span class="cl">
@@ -456,7 +457,7 @@
 </span></span><span class="line"><span class="cl">  <span class="p">},</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">actions</span><span class="o">:</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">//비동기 요청인 setTimeout을 실습
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">delayFewMinutes</span><span class="p">(</span><span class="nx">context</span><span class="p">,</span> <span class="nx">payload</span><span class="p">)</span> <span class="p">{</span>                  <span class="err">👈</span>
+</span></span></span><span class="line"><span class="cl">    <span class="nx">delayFewMinutes</span><span class="p">(</span><span class="nx">context</span><span class="p">,</span> <span class="nx">payload</span><span class="p">)</span> <span class="p">{</span>                  <span class="err">👈</span>
 </span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>                          <span class="err">👈</span>
 </span></span><span class="line"><span class="cl">        <span class="nx">context</span><span class="p">.</span><span class="nx">commit</span><span class="p">(</span><span class="s1">&#39;addOneMutations&#39;</span><span class="p">,</span> <span class="nx">payload</span><span class="p">.</span><span class="nx">by</span><span class="p">)</span>    <span class="err">👈</span> <span class="nx">이런식으로</span> <span class="nx">인자로</span> <span class="nx">작동시간</span>
 </span></span><span class="line"><span class="cl">      <span class="p">},</span> <span class="nx">payload</span><span class="p">.</span><span class="nx">time</span><span class="p">)</span>                                   <span class="err">👈</span> <span class="nx">설정도</span> <span class="nx">가능하고</span><span class="p">,</span> <span class="nx">mutations에</span>
@@ -471,7 +472,8 @@
 <p>​</p>
 <h2 id="4-modules">4. Modules</h2>
 <blockquote>
-<p>모듈은 간단하게 store에 여러개의 저장소(모듈s)를 만들어 관리한다는 것이다. <a href="https://vuex.vuejs.org/kr/guide/modules.html" target="_blank" rel="noopener noreffer ">공식문서</a>에 따르면 <em>Vuex는 저장소를 <strong>모듈</strong> 로 나눌 수 있습니다.</em> 고 설명하고 있다.</p></blockquote>
+<p>모듈은 간단하게 store에 여러개의 저장소(모듈s)를 만들어 관리한다는 것이다. <a href="https://vuex.vuejs.org/kr/guide/modules.html" target="_blank" rel="noopener noreffer ">공식문서</a>에 따르면 <em>Vuex는 저장소를 <strong>모듈</strong> 로 나눌 수 있습니다.</em> 고 설명하고 있다.</p>
+</blockquote>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -498,7 +500,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="c1">//예를 들자면 이런 모습으로.(출처: 공식문서)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">moduleA</span> <span class="o">=</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">state</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">({</span> <span class="p">...</span> <span class="p">}),</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">mutations</span><span class="o">:</span> <span class="p">{</span> <span class="p">...</span> <span class="p">},</span>
@@ -568,7 +570,7 @@
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.143.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.160.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

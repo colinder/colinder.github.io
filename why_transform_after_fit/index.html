@@ -134,7 +134,8 @@
             </div><div class="content" id="content"><p>​</p>
 <h2 id="-왜-fit-한-뒤에-train-test-data를-transform할까">🤔 왜 .fit() 한 뒤에 train, test data를 .transform()할까?</h2>
 <blockquote>
-<p>결론은 <b>.fit()을 통해 학습데이터(train)의 경향을 파악 및 저장하고 이 경향을 train, test data를 적용해 조정해주기 위함입니다.</b></p></blockquote>
+<p>결론은 <b>.fit()을 통해 학습데이터(train)의 경향을 파악 및 저장하고 이 경향을 train, test data를 적용해 조정해주기 위함입니다.</b></p>
+</blockquote>
 <ul>
 <li>minmaxScaler를 대표로 .fit()한 결과를 출력해보면</li>
 </ul>
@@ -143,7 +144,8 @@
 <p><a href="https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html#sklearn.preprocessing.MinMaxScaler" target="_blank" rel="noopener noreffer ">공식문서</a>를 살펴보면</p>
 <blockquote>
 <p>fit(<em>X</em>, <em>y=None</em>)</p>
-<p>Compute the minimum and maximum to be used for later scaling.</p></blockquote>
+<p>Compute the minimum and maximum to be used for later scaling.</p>
+</blockquote>
 <p><span style="color: grey; font-size:.8em; float:right">* StandardScale()의 경우 Compute the mean and std to be used for later scaling. 평균과 분산을 저장</p>
 <p>​</p>
 <p>나중에 스케일링할 때 사용할 최대 최소의 값을 계산한다고 합니다.</p>
@@ -217,7 +219,7 @@
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.143.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.160.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

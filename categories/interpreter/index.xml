@@ -1,16 +1,22 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Interpreter - Category - colinder&#39;s blog</title>
-        <link>https://colinder.github.io/categories/interpreter/</link>
-        <description>Interpreter - Category - colinder&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Wed, 18 Nov 2020 11:54:20 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/interpreter/" rel="self" type="application/rss+xml" /><item>
-    <title>Interpreter VS Compiler_Language</title>
-    <link>https://colinder.github.io/interpretervscompiler_language/</link>
-    <pubDate>Wed, 18 Nov 2020 11:54:20 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/interpretervscompiler_language/</guid>
-    <description><![CDATA[Interpreter VS Compiler_Language에 대하여 정리합니다.]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Interpreter on colinder&#39;s blog</title>
+    <link>https://colinder.github.io/categories/interpreter/</link>
+    <description>Recent content in Interpreter on colinder&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+    <webMaster>kjonggwan@gmail.com (colinder)</webMaster>
+    <copyright>colinder</copyright>
+    <lastBuildDate>Wed, 18 Nov 2020 11:54:20 +0900</lastBuildDate>
+    <atom:link href="https://colinder.github.io/categories/interpreter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Interpreter VS Compiler_Language</title>
+      <link>https://colinder.github.io/interpretervscompiler_language/</link>
+      <pubDate>Wed, 18 Nov 2020 11:54:20 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/interpretervscompiler_language/</guid>
+      <description>Interpreter VS Compiler_Language에 대하여 정리합니다.</description>
+    </item>
+  </channel>
 </rss>

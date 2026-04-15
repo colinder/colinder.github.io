@@ -13,7 +13,7 @@
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2020-12-11T11:16:09+09:00">
     <meta property="article:modified_time" content="2020-12-11T11:16:09+09:00">
-    <meta property="article:tag" content="JavaScript">
+    <meta property="article:tag" content="Javascript">
     <meta property="article:tag" content="Hoisting">
     <meta property="og:image" content="https://colinder.github.io/logo.png">
 
@@ -108,7 +108,7 @@
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">JavaScript Hoisting</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/javascript/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>JavaScript</a></span></div>
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/javascript/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Javascript</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2020-12-11">2020-12-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1068 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="true">
@@ -135,7 +135,8 @@
 <h1 id="javascript-hoisting">JavaScript Hoisting</h1>
 <blockquote>
 <p>web 개발을 하면서 여러 레퍼런스들을 확인하고 공부하게 되는데, 문득 똑같아 보이나 왜 이건 되고? 왜 이건 안되지?하는 부분이 있었습니다.</p>
-<p>그 차이는 Hoisting에 대한 내용이었는데요. 알아두면 쓸모있기에 정리해봅시다.</p></blockquote>
+<p>그 차이는 Hoisting에 대한 내용이었는데요. 알아두면 쓸모있기에 정리해봅시다.</p>
+</blockquote>
 <p>​</p>
 <h2 id="호이스팅hoisting이란">호이스팅(Hoisting)이란?</h2>
 <p>호이스팅을 한 줄로 설명하자면, <strong>선언문을 <span style="color: red">유효 범위</span>의 최상단으로 끌어올리는 행위</strong>라고 할 수 있습니다.</p>
@@ -177,11 +178,11 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// 예시 0
 </span></span></span><span class="line"><span class="cl"><span class="c1">// 아래 코드를 전체 복사 후 붙여넣으면 결과 확인 가능
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>		<span class="c1">// undefined
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span>		<span class="c1">// VM85:2 Uncaught ReferenceError: b is not defined
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="s2">&#34;Im a&#34;</span><span class="p">;</span> 	<span class="c1">// var 변수 선언 &amp; 초기화
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">let</span> <span class="nx">b</span> <span class="o">=</span> <span class="s2">&#34;Im b&#34;</span><span class="p">;</span> 	<span class="c1">// let 변수 선언 &amp; 초기화
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>		<span class="c1">// undefined
+</span></span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span>		<span class="c1">// VM85:2 Uncaught ReferenceError: b is not defined
+</span></span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="s2">&#34;Im a&#34;</span><span class="p">;</span> 	<span class="c1">// var 변수 선언 &amp; 초기화
+</span></span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">b</span> <span class="o">=</span> <span class="s2">&#34;Im b&#34;</span><span class="p">;</span> 	<span class="c1">// let 변수 선언 &amp; 초기화
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// var 변수 a는 호이스팅되어 오류가 아닌 undefined를 출력하고
 </span></span></span><span class="line"><span class="cl"><span class="c1">// let 변수 b는 호이스팅되지 않아 error를 출력합니다.
 </span></span></span></code></pre></td></tr></table>
@@ -205,18 +206,18 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// 예시 1
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;x:&#34;</span><span class="p">,</span> <span class="nx">x</span><span class="p">)</span>	     <span class="c1">// x: undefined
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> 				 	 <span class="c1">// x 선언 &amp; 초기화
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span> <span class="o">+</span> <span class="s2">&#34;/&#34;</span> <span class="o">+</span> <span class="nx">y</span><span class="p">);</span>	 <span class="c1">// &#39;1/undefined&#39;
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>				 	 <span class="c1">// y 선언 &amp; 초기화
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;x:&#34;</span><span class="p">,</span> <span class="nx">x</span><span class="p">)</span>	     <span class="c1">// x: undefined
+</span></span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> 				 	 <span class="c1">// x 선언 &amp; 초기화
+</span></span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span> <span class="o">+</span> <span class="s2">&#34;/&#34;</span> <span class="o">+</span> <span class="nx">y</span><span class="p">);</span>	 <span class="c1">// &#39;1/undefined&#39;
+</span></span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>				 	 <span class="c1">// y 선언 &amp; 초기화
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// 아래 코드는 &#39;예시 1&#39;이 동작하는 순서를 정리한 것입니다.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">x</span><span class="p">;</span> 						<span class="c1">// x 선언  =&gt;  x: undefined
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">y</span><span class="p">;</span> 						<span class="c1">// y 선언  =&gt;  y: undefined
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;x:&#34;</span><span class="p">,</span> <span class="nx">x</span><span class="p">)</span>		<span class="c1">// x: undefined 출력
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> 				 	<span class="c1">// x 초기화  =&gt; x: 1
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span> <span class="o">+</span> <span class="s2">&#34;/&#34;</span> <span class="o">+</span> <span class="nx">y</span><span class="p">);</span>	<span class="c1">// &#39;1/undefined&#39; 출력
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> 					<span class="c1">// y 초기화  =&gt;  y: 1
+</span></span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">x</span><span class="p">;</span> 						<span class="c1">// x 선언  =&gt;  x: undefined
+</span></span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">y</span><span class="p">;</span> 						<span class="c1">// y 선언  =&gt;  y: undefined
+</span></span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;x:&#34;</span><span class="p">,</span> <span class="nx">x</span><span class="p">)</span>		<span class="c1">// x: undefined 출력
+</span></span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> 				 	<span class="c1">// x 초기화  =&gt; x: 1
+</span></span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span> <span class="o">+</span> <span class="s2">&#34;/&#34;</span> <span class="o">+</span> <span class="nx">y</span><span class="p">);</span>	<span class="c1">// &#39;1/undefined&#39; 출력
+</span></span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> 					<span class="c1">// y 초기화  =&gt;  y: 1
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p style='text-align:right; font-style:italic; color:grey; font-size:.9rem'><b>* [ let / const ] 변수 선언</b>과 <b>함수표현식(Function Expressions)</b>에서는 호이스팅이 발생하지 않습니다.</p>
@@ -240,14 +241,14 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// 함수 선언식(function declaration) 예시
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">함수명</span><span class="p">()</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">함수명</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">함수</span> <span class="nx">로직</span> <span class="nx">부분</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="nx">함수명</span><span class="p">();</span> <span class="c1">// 함수 사용
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// 함수 표현식(function expression) 예시
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">함수명</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">함수명</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="s1">&#39;A function expression&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="nx">함수명</span><span class="p">();</span> <span class="c1">// 함수 사용
@@ -274,7 +275,7 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/javascript/">JavaScript</a>,&nbsp;<a href="/tags/hoisting/">Hoisting</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/javascript/">Javascript</a>,&nbsp;<a href="/tags/hoisting/">Hoisting</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
@@ -287,7 +288,7 @@
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.143.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.160.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

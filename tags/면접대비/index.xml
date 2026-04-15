@@ -1,64 +1,64 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>면접대비 - Tag - colinder&#39;s blog</title>
-        <link>https://colinder.github.io/tags/%EB%A9%B4%EC%A0%91%EB%8C%80%EB%B9%84/</link>
-        <description>면접대비 - Tag - colinder&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Wed, 03 Jan 2024 13:32:55 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/%EB%A9%B4%EC%A0%91%EB%8C%80%EB%B9%84/" rel="self" type="application/rss+xml" /><item>
-    <title>what is Abstraction(추상화)?</title>
-    <link>https://colinder.github.io/abstraction/</link>
-    <pubDate>Wed, 03 Jan 2024 13:32:55 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/abstraction/</guid>
-    <description><![CDATA[추상화의 정확한 정의와 의미를 알기 위해 정리합니다.]]></description>
-</item>
-<item>
-    <title>Time Complexity 시간복잡도</title>
-    <link>https://colinder.github.io/time_complexity/</link>
-    <pubDate>Tue, 17 Oct 2023 12:24:58 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/time_complexity/</guid>
-    <description><![CDATA[Time Complexity에 대하여 빅오 표기법과 함꼐 정리합니다.]]></description>
-</item>
-<item>
-    <title>localStorage vs sessionStorage</title>
-    <link>https://colinder.github.io/localvssession_storage/</link>
-    <pubDate>Wed, 23 Feb 2022 14:32:36 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/localvssession_storage/</guid>
-    <description><![CDATA[localStorage vs sessionStorage에 대하여 정리합니다.]]></description>
-</item>
-<item>
-    <title>Process VS Thread</title>
-    <link>https://colinder.github.io/processvsthread/</link>
-    <pubDate>Tue, 01 Dec 2020 13:40:25 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/processvsthread/</guid>
-    <description><![CDATA[Process VS Thread에 대하여 정리합니다.]]></description>
-</item>
-<item>
-    <title>HTTP VS HTTPS</title>
-    <link>https://colinder.github.io/httpvshttps/</link>
-    <pubDate>Tue, 24 Nov 2020 11:28:42 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/httpvshttps/</guid>
-    <description><![CDATA[HTTP와 HTTPS에 대하여 정리합니다.]]></description>
-</item>
-<item>
-    <title>동기 &amp; 비동기 &amp; CallBack함수</title>
-    <link>https://colinder.github.io/sync_async_callback/</link>
-    <pubDate>Sun, 11 Oct 2020 21:47:43 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/sync_async_callback/</guid>
-    <description><![CDATA[동기 &amp; 비동기 &amp; CallBack함수에 대하여 정리합니다.]]></description>
-</item>
-<item>
-    <title>what is AJAX(axios)?</title>
-    <link>https://colinder.github.io/what_is_ajaxaxios_00/</link>
-    <pubDate>Sun, 11 Oct 2020 21:25:51 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/what_is_ajaxaxios_00/</guid>
-    <description><![CDATA[AJAX(axios)가 무엇인지 정리합니다.]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>면접대비 on colinder&#39;s blog</title>
+    <link>https://colinder.github.io/tags/%EB%A9%B4%EC%A0%91%EB%8C%80%EB%B9%84/</link>
+    <description>Recent content in 면접대비 on colinder&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+    <webMaster>kjonggwan@gmail.com (colinder)</webMaster>
+    <copyright>colinder</copyright>
+    <lastBuildDate>Wed, 03 Jan 2024 13:32:55 +0900</lastBuildDate>
+    <atom:link href="https://colinder.github.io/tags/%EB%A9%B4%EC%A0%91%EB%8C%80%EB%B9%84/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>what is Abstraction(추상화)?</title>
+      <link>https://colinder.github.io/abstraction/</link>
+      <pubDate>Wed, 03 Jan 2024 13:32:55 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/abstraction/</guid>
+      <description>추상화의 정확한 정의와 의미를 알기 위해 정리합니다.</description>
+    </item>
+    <item>
+      <title>Time Complexity 시간복잡도</title>
+      <link>https://colinder.github.io/time_complexity/</link>
+      <pubDate>Tue, 17 Oct 2023 12:24:58 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/time_complexity/</guid>
+      <description>Time Complexity에 대하여 빅오 표기법과 함꼐 정리합니다.</description>
+    </item>
+    <item>
+      <title>localStorage vs sessionStorage</title>
+      <link>https://colinder.github.io/localvssession_storage/</link>
+      <pubDate>Wed, 23 Feb 2022 14:32:36 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/localvssession_storage/</guid>
+      <description>localStorage vs sessionStorage에 대하여 정리합니다.</description>
+    </item>
+    <item>
+      <title>Process VS Thread</title>
+      <link>https://colinder.github.io/processvsthread/</link>
+      <pubDate>Tue, 01 Dec 2020 13:40:25 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/processvsthread/</guid>
+      <description>Process VS Thread에 대하여 정리합니다.</description>
+    </item>
+    <item>
+      <title>HTTP VS HTTPS</title>
+      <link>https://colinder.github.io/httpvshttps/</link>
+      <pubDate>Tue, 24 Nov 2020 11:28:42 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/httpvshttps/</guid>
+      <description>HTTP와 HTTPS에 대하여 정리합니다.</description>
+    </item>
+    <item>
+      <title>동기 &amp; 비동기 &amp; CallBack함수</title>
+      <link>https://colinder.github.io/sync_async_callback/</link>
+      <pubDate>Sun, 11 Oct 2020 21:47:43 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/sync_async_callback/</guid>
+      <description>동기 &amp;amp; 비동기 &amp;amp; CallBack함수에 대하여 정리합니다.</description>
+    </item>
+    <item>
+      <title>what is AJAX(axios)?</title>
+      <link>https://colinder.github.io/what_is_ajaxaxios_00/</link>
+      <pubDate>Sun, 11 Oct 2020 21:25:51 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/what_is_ajaxaxios_00/</guid>
+      <description>AJAX(axios)가 무엇인지 정리합니다.</description>
+    </item>
+  </channel>
 </rss>

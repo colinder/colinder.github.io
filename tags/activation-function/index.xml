@@ -1,32 +1,29 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Activation Function - Tag - colinder&#39;s blog</title>
-        <link>https://colinder.github.io/tags/activation-function/</link>
-        <description>Activation Function - Tag - colinder&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Mon, 21 Feb 2022 14:35:39 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/activation-function/" rel="self" type="application/rss+xml" /><item>
-    <title>RNN &amp; LSTM</title>
-    <link>https://colinder.github.io/rnnlstm/</link>
-    <pubDate>Mon, 21 Feb 2022 14:35:39 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/rnnlstm/</guid>
-    <description><![CDATA[<p>​</p>
-<h1 id="span-stylecolor01df3arnnspan--span-stylecolore3a437lstmspan"><span style="color:#01DF3A">RNN</span> &amp; <span style="color:#E3A437">LSTM</span></h1>
-<blockquote>
-<p>감정분석을 위한 프로젝트를 기획하면서 RNN과 LSTM이라는 신경망 분석에 대하여 알게 되었습니다. 신경망 분석은 기계학습과 인지과학에서 영감을 얻어 설계된 통계학적 학습 알고리즘인데요. 이 둘의 개념를 알아보겠습니다.</p>]]></description>
-</item>
-<item>
-    <title>Activation_Function</title>
-    <link>https://colinder.github.io/activation_function/</link>
-    <pubDate>Thu, 24 Jun 2021 15:04:29 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/activation_function/</guid>
-    <description><![CDATA[<p>​</p>
-<h1 id="activation-function활성화-함수">Activation Function(활성화 함수)</h1>
-<blockquote>
-<p>입력 신호의 총합을 출력신호로 변환하는 함수를 일반적으로 Activation Function이라고 합니다.</p></blockquote>
-<p>​</p>
-<p>아직 잘 모르겠습니다. 하여 인공신경망에 빗대어 이해해보겠습니다.</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Activation Function on colinder&#39;s blog</title>
+    <link>https://colinder.github.io/tags/activation-function/</link>
+    <description>Recent content in Activation Function on colinder&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+    <webMaster>kjonggwan@gmail.com (colinder)</webMaster>
+    <copyright>colinder</copyright>
+    <lastBuildDate>Mon, 21 Feb 2022 14:35:39 +0900</lastBuildDate>
+    <atom:link href="https://colinder.github.io/tags/activation-function/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RNN &amp; LSTM</title>
+      <link>https://colinder.github.io/rnnlstm/</link>
+      <pubDate>Mon, 21 Feb 2022 14:35:39 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/rnnlstm/</guid>
+      <description>&lt;p&gt;​&lt;/p&gt;&#xA;&lt;h1 id=&#34;rnn--lstm&#34;&gt;&lt;span style=&#34;color:#01DF3A&#34;&gt;RNN&lt;/span&gt; &amp;amp; &lt;span style=&#34;color:#E3A437&#34;&gt;LSTM&lt;/span&gt;&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;감정분석을 위한 프로젝트를 기획하면서 RNN과 LSTM이라는 신경망 분석에 대하여 알게 되었습니다. 신경망 분석은 기계학습과 인지과학에서 영감을 얻어 설계된 통계학적 학습 알고리즘인데요. 이 둘의 개념를 알아보겠습니다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Activation_Function</title>
+      <link>https://colinder.github.io/activation_function/</link>
+      <pubDate>Thu, 24 Jun 2021 15:04:29 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/activation_function/</guid>
+      <description>&lt;p&gt;​&lt;/p&gt;&#xA;&lt;h1 id=&#34;activation-function활성화-함수&#34;&gt;Activation Function(활성화 함수)&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;입력 신호의 총합을 출력신호로 변환하는 함수를 일반적으로 Activation Function이라고 합니다.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;​&lt;/p&gt;&#xA;&lt;p&gt;아직 잘 모르겠습니다. 하여 인공신경망에 빗대어 이해해보겠습니다.&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

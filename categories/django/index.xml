@@ -1,239 +1,106 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Django - Category - colinder&#39;s blog</title>
-        <link>https://colinder.github.io/categories/django/</link>
-        <description>Django - Category - colinder&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Wed, 19 Jul 2023 11:05:45 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/django/" rel="self" type="application/rss+xml" /><item>
-    <title>How To Deploy Django on Windows server Using Apache</title>
-    <link>https://colinder.github.io/how-to-deploy-django-on-windows-server-using-apache/</link>
-    <pubDate>Wed, 19 Jul 2023 11:05:45 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/how-to-deploy-django-on-windows-server-using-apache/</guid>
-    <description><![CDATA[Django를 Apache를 써서 배포하는 방법에 대하여 정리합니다.]]></description>
-</item>
-<item>
-    <title>Django_11_simple_JWT</title>
-    <link>https://colinder.github.io/django_11_simple_jwt/</link>
-    <pubDate>Wed, 22 Dec 2021 12:16:29 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/django_11_simple_jwt/</guid>
-    <description><![CDATA[<p>​</p>
-<h1 id="django-jwtjson-web-token">Django JWT(Json Web Token)</h1>
-<blockquote>
-<p>Django의 대표적인 jwt 패키지는 <a href="https://jpadilla.github.io/django-rest-framework-jwt/" target="_blank" rel="noopener noreffer ">djangorestframework-jwt</a>, <a href="https://django-rest-framework-simplejwt.readthedocs.io/en/latest/" target="_blank" rel="noopener noreffer ">djangorestframework-simplejwt</a>가 있지만 전자는 업데이트가 더이상 진행되지 않아서 후자를 사용하는 것을 추천합니다.</p>]]></description>
-</item>
-<item>
-    <title>Django_10_CustomAuthUser_AbstractUser</title>
-    <link>https://colinder.github.io/django_10_customauthuser_abstractuser/</link>
-    <pubDate>Fri, 08 Oct 2021 10:17:53 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/django_10_customauthuser_abstractuser/</guid>
-    <description><![CDATA[<p>​</p>
-<h1 id="django-span-stylecolor-f2b141babstractuserbspan">Django <span style="color: #f2b141"><b>AbstractUser</b></span></h1>
-<blockquote>
-<p>이전에 <span style="color: #4f8ae8">AbstractBaseUser</span>를 사용한 커스텀 사용자 인증 테이블을 구성해보았습니다. 해당 내용에 이어서 <span style="color: #f2b141"><b>AbstractUser</b></span>로 커스텀 사용자 인증 테이블을 구성해보고 createsuperuser 명령어 입력시, 관리자 계정이 커스텀한 테이블에 생성되게 해보겠습니다.</p>]]></description>
-</item>
-<item>
-    <title>Django_09_CustomAuthUser_AbstractBaseUser</title>
-    <link>https://colinder.github.io/django_09_customauthuser_abstractbaseuser/</link>
-    <pubDate>Fri, 08 Oct 2021 10:17:50 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/django_09_customauthuser_abstractbaseuser/</guid>
-    <description><![CDATA[<p>​</p>
-<h1 id="django-span-stylecolor-4f8ae8abstractbaseuserspan">Django <span style="color: #4f8ae8">AbstractBaseUser</span></h1>
-<blockquote>
-<p>django는 기본적으로 username 과 password를 가지고 로그인합니다. 하지만 요즘에는 대부분의 웹사이트들이 email 과 password로 로그인(사용자를 인식 및 인증)을 합니다.</p>]]></description>
-</item>
-<item>
-    <title>Django_08_AbstractBaseUser VS AbstractUser</title>
-    <link>https://colinder.github.io/django_08_abstractbaseuservsabstractuser/</link>
-    <pubDate>Thu, 07 Oct 2021 10:17:20 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/django_08_abstractbaseuservsabstractuser/</guid>
-    <description><![CDATA[<p>​</p>
-<h1 id="django-span-stylecolor-4f8ae8abstractbaseuserspan-vs-span-stylecolor-f2b141abstractuserspan">Django <span style="color: #4f8ae8">AbstractBaseUser</span> VS <span style="color: #f2b141;">AbstractUser</span></h1>
-<blockquote>
-<p>Django로 프로젝트를 진행하면서 계정관련 내용을 등록하는 것을 가장 많이 했음에도, 아직 명확하게 차이를 알지 못하고 사용했던 것이 있었습니다.</p>
-<p>바로! User custom에 관한 부분이었는데요. 크게 <span style="color: #4f8ae8">AbstractBaseUser</span>와 <span style="color: #f2b141;">AbstractUser</span>를 사용하는 방법이 있는데 이 둘의 차이를 꼼꼼히 알아보기 위해 해당 포스팅이 작성되었습니다.</p>]]></description>
-</item>
-<item>
-    <title>Django_07_1:N 불러오기</title>
-    <link>https://colinder.github.io/django_07_1vsn_%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0/</link>
-    <pubDate>Tue, 14 Sep 2021 17:25:44 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/django_07_1vsn_%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0/</guid>
-    <description><![CDATA[<p>​</p>
-<h1 id="django-1n-불러오기">Django 1:N 불러오기</h1>
-<blockquote>
-<p><strong>prefetch_related()</strong> or <strong>annotate()</strong></p></blockquote>
-<p>​</p>
-<p>models.py 구성</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Question</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="n">question_text</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">pub_date</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">(</span><span class="s1">&#39;date published&#39;</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Choice</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="n">question</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Question</span><span class="p">,</span> <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;choices&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">choice_text</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">votes</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">IntegerField</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>​</p>
-<p>​</p>
-<h3 id="prefetch_related">prefetch_related()</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># views.py</span>
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">get_context_data</span><span class="p">():</span>
-</span></span><span class="line"><span class="cl">    <span class="n">context</span><span class="p">[</span><span class="s2">&#34;questions&#34;</span><span class="p">]</span>  <span class="o">=</span> <span class="n">Question</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">prefetch_related</span><span class="p">(</span><span class="s1">&#39;choices&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">context</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># templates/.html</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span><span class="o">%</span> <span class="k">for</span> <span class="n">question</span> <span class="ow">in</span> <span class="n">questions</span> <span class="o">%</span><span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="n">b</span><span class="o">&gt;</span><span class="p">{{</span> <span class="n">question</span><span class="o">.</span><span class="n">question_text</span> <span class="p">}}</span><span class="o">&lt;/</span><span class="n">b</span><span class="o">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="n">ul</span><span class="o">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">{</span><span class="o">%</span> <span class="k">for</span> <span class="n">choice</span> <span class="ow">in</span> <span class="n">question</span><span class="o">.</span><span class="n">choices</span><span class="o">.</span><span class="n">all</span> <span class="o">%</span><span class="p">}</span>
-</span></span><span class="line"><span class="cl">            <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;</span><span class="p">{{</span> <span class="n">choice</span><span class="o">.</span><span class="n">choice_text</span> <span class="p">}}</span><span class="o">&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">{</span><span class="o">%</span> <span class="n">endfor</span> <span class="o">%</span><span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="o">&lt;/</span><span class="n">ul</span><span class="o">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span><span class="o">%</span> <span class="n">endfor</span> <span class="o">%</span><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Choice 모델에서 related_name을 지정하지 않았을 경우에는 템플릿 쪽에서 question.choice_set.all 을 사용하면 된다.</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>​</p>]]></description>
-</item>
-<item>
-    <title>Django_06_Django &amp; Oracle18 error LOG</title>
-    <link>https://colinder.github.io/django_06_djangooracle18_error_log/</link>
-    <pubDate>Mon, 06 Sep 2021 11:41:44 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/django_06_djangooracle18_error_log/</guid>
-    <description><![CDATA[<p>​</p>
-<h1 id="django--oracle-18-오류-일지">Django &amp; Oracle 18 오류 일지</h1>
-<blockquote>
-<p>각종 스트레스의 원인에 대하여 해결방법을 정리합니다.</p></blockquote>
-<p>​</p>
-<ol>
-<li>
-<p>ORA-00955: name is already used by an existing object</p>
-<blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 해결법</span>
-</span></span><span class="line"><span class="cl"><span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">makemigrations</span>
-</span></span><span class="line"><span class="cl"><span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">migrate</span> <span class="o">--</span><span class="n">fake</span><span class="o">-</span><span class="n">initial</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div></blockquote>
-<p>이미 migrate 한 내용을 수정하니 반영되지 않아 오류가 발생하였는데 위의 명령어는 migratie를 초기화해서 재설정 하는 것 같습니다.</p>]]></description>
-</item>
-<item>
-    <title>Django_05_Check DB connection</title>
-    <link>https://colinder.github.io/django_05_check-db-connection/</link>
-    <pubDate>Mon, 06 Sep 2021 11:29:11 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/django_05_check-db-connection/</guid>
-    <description><![CDATA[<p>​</p>
-<h1 id="django-db-연결-확인">Django DB 연결 확인</h1>
-<p>​</p>
-<p>python manage.py createsuperuser 후.. default로 생기는 DB를 기준으로 실행</p>
-<p>​</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">## setting.py</span>
-</span></span><span class="line"><span class="cl"><span class="nv">AUTH_USER_MODEL</span> <span class="o">=</span> <span class="s1">&#39;auth.User&#39;</span>   <span class="c1"># default 설정.</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>​</p>
-<p>이후 terminal에서</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ python manage.py shell_plus	<span class="c1"># 모델에 접근하기 위해 shell_plus 실행</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">&gt; <span class="nv">Post</span> <span class="o">=</span> get_user_model<span class="o">()</span>		<span class="c1"># 생성된 모델의 user table 불러오기</span>
-</span></span><span class="line"><span class="cl">&gt; <span class="nv">post</span> <span class="o">=</span> Post.objects.all<span class="o">()</span>		<span class="c1"># user table의 모든 값 가져오기</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">&gt; <span class="k">for</span> i in post:				<span class="c1"># for문으로 user table값 순환</span>
-</span></span><span class="line"><span class="cl">&gt;     print<span class="o">(</span>i<span class="o">)</span>					<span class="c1"># user table 값 출력</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>하면 연결된 모델의 값을 확인할 수 있다.</p>]]></description>
-</item>
-<item>
-    <title>Django_03_overriding templates</title>
-    <link>https://colinder.github.io/django_03_overridingtemplates/</link>
-    <pubDate>Tue, 27 Apr 2021 20:27:30 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/django_03_overridingtemplates/</guid>
-    <description><![CDATA[<p>​</p>
-<h1 id="django-overriding-templates">Django Overriding Templates</h1>
-<blockquote>
-<p>웹개발을 하다보면 재활용되어야 하는 부분. 즉, <span style="color:red">변경되지 않아야 하는 부분</span>과, <span style="color:blue">변해야 하는 부분</span>이 있습니다. <span style="font-size:0.8em">(대표적으로 navbar)</span>  그리고 이런 개발의 편의성을 위해 Django는 Overriding 이라는 기술을 제공합니다.</p>]]></description>
-</item>
-<item>
-    <title>Django_04_form</title>
-    <link>https://colinder.github.io/django_04_form/</link>
-    <pubDate>Fri, 23 Apr 2021 20:04:47 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/django_04_form/</guid>
-    <description><![CDATA[<p>​</p>
-<h1 id="django_form">Django_form</h1>
-<blockquote>
-<p>이제 여러 html파일을 만들어 여러 화면을 돌아다닐 수 있게 되었습니다. 그렇다면 <strong>A화면</strong>에서 입력한 정보를 <strong>B화면</strong>으로 가져가고 싶다면 어떻게 해야 할까요?   <b>form</b>테그를 사용하면 됩니다.</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Django on colinder&#39;s blog</title>
+    <link>https://colinder.github.io/categories/django/</link>
+    <description>Recent content in Django on colinder&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+    <webMaster>kjonggwan@gmail.com (colinder)</webMaster>
+    <copyright>colinder</copyright>
+    <lastBuildDate>Wed, 19 Jul 2023 11:05:45 +0900</lastBuildDate>
+    <atom:link href="https://colinder.github.io/categories/django/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How To Deploy Django on Windows server Using Apache</title>
+      <link>https://colinder.github.io/how-to-deploy-django-on-windows-server-using-apache/</link>
+      <pubDate>Wed, 19 Jul 2023 11:05:45 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/how-to-deploy-django-on-windows-server-using-apache/</guid>
+      <description>Django를 Apache를 써서 배포하는 방법에 대하여 정리합니다.</description>
+    </item>
+    <item>
+      <title>Django_11_simple_JWT</title>
+      <link>https://colinder.github.io/django_11_simple_jwt/</link>
+      <pubDate>Wed, 22 Dec 2021 12:16:29 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/django_11_simple_jwt/</guid>
+      <description>&lt;p&gt;​&lt;/p&gt;&#xA;&lt;h1 id=&#34;django-jwtjson-web-token&#34;&gt;Django JWT(Json Web Token)&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Django의 대표적인 jwt 패키지는 &lt;a href=&#34;https://jpadilla.github.io/django-rest-framework-jwt/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;djangorestframework-jwt&lt;/a&gt;, &lt;a href=&#34;https://django-rest-framework-simplejwt.readthedocs.io/en/latest/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;djangorestframework-simplejwt&lt;/a&gt;가 있지만 전자는 업데이트가 더이상 진행되지 않아서 후자를 사용하는 것을 추천합니다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Django_10_CustomAuthUser_AbstractUser</title>
+      <link>https://colinder.github.io/django_10_customauthuser_abstractuser/</link>
+      <pubDate>Fri, 08 Oct 2021 10:17:53 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/django_10_customauthuser_abstractuser/</guid>
+      <description>&lt;p&gt;​&lt;/p&gt;&#xA;&lt;h1 id=&#34;django-abstractuser&#34;&gt;Django &lt;span style=&#34;color: #f2b141&#34;&gt;&lt;b&gt;AbstractUser&lt;/b&gt;&lt;/span&gt;&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;이전에 &lt;span style=&#34;color: #4f8ae8&#34;&gt;AbstractBaseUser&lt;/span&gt;를 사용한 커스텀 사용자 인증 테이블을 구성해보았습니다. 해당 내용에 이어서 &lt;span style=&#34;color: #f2b141&#34;&gt;&lt;b&gt;AbstractUser&lt;/b&gt;&lt;/span&gt;로 커스텀 사용자 인증 테이블을 구성해보고 createsuperuser 명령어 입력시, 관리자 계정이 커스텀한 테이블에 생성되게 해보겠습니다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Django_09_CustomAuthUser_AbstractBaseUser</title>
+      <link>https://colinder.github.io/django_09_customauthuser_abstractbaseuser/</link>
+      <pubDate>Fri, 08 Oct 2021 10:17:50 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/django_09_customauthuser_abstractbaseuser/</guid>
+      <description>&lt;p&gt;​&lt;/p&gt;&#xA;&lt;h1 id=&#34;django-abstractbaseuser&#34;&gt;Django &lt;span style=&#34;color: #4f8ae8&#34;&gt;AbstractBaseUser&lt;/span&gt;&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;django는 기본적으로 username 과 password를 가지고 로그인합니다. 하지만 요즘에는 대부분의 웹사이트들이 email 과 password로 로그인(사용자를 인식 및 인증)을 합니다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Django_08_AbstractBaseUser VS AbstractUser</title>
+      <link>https://colinder.github.io/django_08_abstractbaseuservsabstractuser/</link>
+      <pubDate>Thu, 07 Oct 2021 10:17:20 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/django_08_abstractbaseuservsabstractuser/</guid>
+      <description>&lt;p&gt;​&lt;/p&gt;&#xA;&lt;h1 id=&#34;django-abstractbaseuser-vs-abstractuser&#34;&gt;Django &lt;span style=&#34;color: #4f8ae8&#34;&gt;AbstractBaseUser&lt;/span&gt; VS &lt;span style=&#34;color: #f2b141;&#34;&gt;AbstractUser&lt;/span&gt;&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Django로 프로젝트를 진행하면서 계정관련 내용을 등록하는 것을 가장 많이 했음에도, 아직 명확하게 차이를 알지 못하고 사용했던 것이 있었습니다.&lt;/p&gt;&#xA;&lt;p&gt;바로! User custom에 관한 부분이었는데요. 크게 &lt;span style=&#34;color: #4f8ae8&#34;&gt;AbstractBaseUser&lt;/span&gt;와 &lt;span style=&#34;color: #f2b141;&#34;&gt;AbstractUser&lt;/span&gt;를 사용하는 방법이 있는데 이 둘의 차이를 꼼꼼히 알아보기 위해 해당 포스팅이 작성되었습니다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Django_07_1:N 불러오기</title>
+      <link>https://colinder.github.io/django_07_1vsn_%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0/</link>
+      <pubDate>Tue, 14 Sep 2021 17:25:44 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/django_07_1vsn_%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0/</guid>
+      <description>&lt;p&gt;​&lt;/p&gt;&#xA;&lt;h1 id=&#34;django-1n-불러오기&#34;&gt;Django 1:N 불러오기&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;prefetch_related()&lt;/strong&gt; or &lt;strong&gt;annotate()&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;​&lt;/p&gt;&#xA;&lt;p&gt;models.py 구성&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Question&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;models&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Model&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;question_text&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;models&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;CharField&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;max_length&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;200&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;pub_date&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;models&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DateTimeField&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;date published&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Choice&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;models&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Model&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;question&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;models&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ForeignKey&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Question&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;on_delete&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;models&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;CASCADE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;related_name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;choices&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;choice_text&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;models&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;CharField&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;max_length&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;200&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;votes&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;models&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;IntegerField&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;default&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;p&gt;​&lt;/p&gt;&#xA;&lt;p&gt;​&lt;/p&gt;&#xA;&lt;h3 id=&#34;prefetch_related&#34;&gt;prefetch_related()&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# views.py&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;get_context_data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;():&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;context&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;questions&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Question&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;objects&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;prefetch_related&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;choices&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;context&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# templates/.html&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;question&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;questions&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;question&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;question_text&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ul&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;choice&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;question&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;choices&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;all&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;choice&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;choice_text&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;endfor&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ul&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;endfor&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Choice 모델에서 related_name을 지정하지 않았을 경우에는 템플릿 쪽에서 question.choice_set.all 을 사용하면 된다.&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;p&gt;​&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Django_06_Django &amp; Oracle18 error LOG</title>
+      <link>https://colinder.github.io/django_06_djangooracle18_error_log/</link>
+      <pubDate>Mon, 06 Sep 2021 11:41:44 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/django_06_djangooracle18_error_log/</guid>
+      <description>&lt;p&gt;​&lt;/p&gt;&#xA;&lt;h1 id=&#34;django--oracle-18-오류-일지&#34;&gt;Django &amp;amp; Oracle 18 오류 일지&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;각종 스트레스의 원인에 대하여 해결방법을 정리합니다.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;​&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;ORA-00955: name is already used by an existing object&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 해결법&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;python&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;manage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;makemigrations&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;python&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;manage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;migrate&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fake&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;initial&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;이미 migrate 한 내용을 수정하니 반영되지 않아 오류가 발생하였는데 위의 명령어는 migratie를 초기화해서 재설정 하는 것 같습니다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Django_05_Check DB connection</title>
+      <link>https://colinder.github.io/django_05_check-db-connection/</link>
+      <pubDate>Mon, 06 Sep 2021 11:29:11 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/django_05_check-db-connection/</guid>
+      <description>&lt;p&gt;​&lt;/p&gt;&#xA;&lt;h1 id=&#34;django-db-연결-확인&#34;&gt;Django DB 연결 확인&lt;/h1&gt;&#xA;&lt;p&gt;​&lt;/p&gt;&#xA;&lt;p&gt;python manage.py createsuperuser 후.. default로 생기는 DB를 기준으로 실행&lt;/p&gt;&#xA;&lt;p&gt;​&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## setting.py&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;AUTH_USER_MODEL&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;auth.User&amp;#39;&lt;/span&gt;   &lt;span class=&#34;c1&#34;&gt;# default 설정.&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;p&gt;​&lt;/p&gt;&#xA;&lt;p&gt;이후 terminal에서&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ python manage.py shell_plus&#x9;&lt;span class=&#34;c1&#34;&gt;# 모델에 접근하기 위해 shell_plus 실행&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; &lt;span class=&#34;nv&#34;&gt;Post&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; get_user_model&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;&#x9;&#x9;&lt;span class=&#34;c1&#34;&gt;# 생성된 모델의 user table 불러오기&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; &lt;span class=&#34;nv&#34;&gt;post&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; Post.objects.all&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;&#x9;&#x9;&lt;span class=&#34;c1&#34;&gt;# user table의 모든 값 가져오기&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; i in post:&#x9;&#x9;&#x9;&#x9;&lt;span class=&#34;c1&#34;&gt;# for문으로 user table값 순환&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt;     print&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;i&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;span class=&#34;c1&#34;&gt;# user table 값 출력&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;p&gt;하면 연결된 모델의 값을 확인할 수 있다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Django_03_overriding templates</title>
+      <link>https://colinder.github.io/django_03_overridingtemplates/</link>
+      <pubDate>Tue, 27 Apr 2021 20:27:30 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/django_03_overridingtemplates/</guid>
+      <description>&lt;p&gt;​&lt;/p&gt;&#xA;&lt;h1 id=&#34;django-overriding-templates&#34;&gt;Django Overriding Templates&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;웹개발을 하다보면 재활용되어야 하는 부분. 즉, &lt;span style=&#34;color:red&#34;&gt;변경되지 않아야 하는 부분&lt;/span&gt;과, &lt;span style=&#34;color:blue&#34;&gt;변해야 하는 부분&lt;/span&gt;이 있습니다. &lt;span style=&#34;font-size:0.8em&#34;&gt;(대표적으로 navbar)&lt;/span&gt;  그리고 이런 개발의 편의성을 위해 Django는 Overriding 이라는 기술을 제공합니다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Django_04_form</title>
+      <link>https://colinder.github.io/django_04_form/</link>
+      <pubDate>Fri, 23 Apr 2021 20:04:47 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/django_04_form/</guid>
+      <description>&lt;p&gt;​&lt;/p&gt;&#xA;&lt;h1 id=&#34;django_form&#34;&gt;Django_form&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;이제 여러 html파일을 만들어 여러 화면을 돌아다닐 수 있게 되었습니다. 그렇다면 &lt;strong&gt;A화면&lt;/strong&gt;에서 입력한 정보를 &lt;strong&gt;B화면&lt;/strong&gt;으로 가져가고 싶다면 어떻게 해야 할까요?   &lt;b&gt;form&lt;/b&gt;테그를 사용하면 됩니다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Django_02_addapp</title>
+      <link>https://colinder.github.io/django_02_addapp/</link>
+      <pubDate>Thu, 22 Apr 2021 23:17:41 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/django_02_addapp/</guid>
+      <description>&lt;p&gt;​&lt;/p&gt;&#xA;&lt;h1 id=&#34;django_app&#34;&gt;Django_app&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;이번에는 생성된 프로젝트에서 1. app을 추가해 등록해보고 2. 서버 접속시 첫 메인 페이지를 제작해봅시다.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;​&lt;/p&gt;&#xA;&lt;h2 id=&#34;뜬금없이-crud를-알아보고-갑시다&#34;&gt;뜬금없이 CRUD를 알아보고 갑시다.&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;CRUD&lt;/strong&gt;는 대부분의 컴퓨터 소프트웨어가 가지는 기본적인 데이터 처리 기능인 Create(생성), Read(읽기), Update(갱신), Delete(삭제)를 묶어서 일컫는 말입니다. 사용자 인터페이스가 갖추어야 할 기능(정보의 참조/검색/갱신 등) 중 가장 기본이라고 생각되는 기술들입니다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Django_01_startproject</title>
+      <link>https://colinder.github.io/django_01_startproject/</link>
+      <pubDate>Thu, 22 Apr 2021 23:13:25 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/django_01_startproject/</guid>
+      <description>&lt;h1 id=&#34;django-개발환경준비&#34;&gt;Django 개발환경준비&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;편리함을 추구하기 위해 AWS Cloud9을 사용하여 진행&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://ide.cs50.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;https://ide.cs50.io/&lt;/a&gt; 주소로 접속하면 진행이 가능하며, 진행을 위해선 Git 아이디가 있어야 한다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;Git&lt;/code&gt;? : &lt;strong&gt;버전 관리 시스템&lt;/strong&gt;이며 Git은 소프트웨어를 개발하는 기업의 핵심 자산인 소스코드를 효과적으로 관리할 수 있게 해주는 &lt;strong&gt;무료&lt;/strong&gt;, &lt;strong&gt;공개소프트웨어&lt;/strong&gt;. git에 대한 내용은 따로 정리해보도록 한다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Django_00_basic</title>
+      <link>https://colinder.github.io/django_00_whatisdjango/</link>
+      <pubDate>Thu, 22 Apr 2021 23:10:27 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/django_00_whatisdjango/</guid>
+      <description>&lt;p&gt;​&lt;/p&gt;&#xA;&lt;h1 id=&#34;web-&#34;&gt;Web ?&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;월드 와이드 웹(World Wide Web)이란 인터넷에 연결된 사용자들이 서로의 정보를 공유할 수 있는 공간을 의미하며, 줄여서 WWW나 W3라고도 부르며, 간단히 &lt;code&gt;웹(Web)&lt;/code&gt;이라고 가장 많이 불린다.&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

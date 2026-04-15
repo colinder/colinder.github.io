@@ -1,16 +1,22 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Linter - Category - colinder&#39;s blog</title>
-        <link>https://colinder.github.io/categories/linter/</link>
-        <description>Linter - Category - colinder&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Fri, 18 Mar 2022 13:28:48 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/linter/" rel="self" type="application/rss+xml" /><item>
-    <title>what is Linter?</title>
-    <link>https://colinder.github.io/what_is_linter/</link>
-    <pubDate>Fri, 18 Mar 2022 13:28:48 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/what_is_linter/</guid>
-    <description><![CDATA[Linter가 무엇인지 정리합니다.]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linter on colinder&#39;s blog</title>
+    <link>https://colinder.github.io/categories/linter/</link>
+    <description>Recent content in Linter on colinder&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+    <webMaster>kjonggwan@gmail.com (colinder)</webMaster>
+    <copyright>colinder</copyright>
+    <lastBuildDate>Fri, 18 Mar 2022 13:28:48 +0900</lastBuildDate>
+    <atom:link href="https://colinder.github.io/categories/linter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>what is Linter?</title>
+      <link>https://colinder.github.io/what_is_linter/</link>
+      <pubDate>Fri, 18 Mar 2022 13:28:48 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/what_is_linter/</guid>
+      <description>Linter가 무엇인지 정리합니다.</description>
+    </item>
+  </channel>
 </rss>

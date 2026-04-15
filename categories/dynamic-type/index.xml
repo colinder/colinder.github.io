@@ -1,16 +1,22 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Dynamic Type - Category - colinder&#39;s blog</title>
-        <link>https://colinder.github.io/categories/dynamic-type/</link>
-        <description>Dynamic Type - Category - colinder&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Wed, 03 Jan 2024 14:26:13 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/dynamic-type/" rel="self" type="application/rss+xml" /><item>
-    <title>what is 정적(static) &amp; 동적(dynamic) Type</title>
-    <link>https://colinder.github.io/staticdynamictype/</link>
-    <pubDate>Wed, 03 Jan 2024 14:26:13 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/staticdynamictype/</guid>
-    <description><![CDATA[프로그래밍 언어에서 변수나 값의 타입에 대한 접근 방식을 나타내는 두 가지 주요 패러다임인 정적, 동적 타입에 대하여 정리합니다.]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dynamic Type on colinder&#39;s blog</title>
+    <link>https://colinder.github.io/categories/dynamic-type/</link>
+    <description>Recent content in Dynamic Type on colinder&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+    <webMaster>kjonggwan@gmail.com (colinder)</webMaster>
+    <copyright>colinder</copyright>
+    <lastBuildDate>Wed, 03 Jan 2024 14:26:13 +0900</lastBuildDate>
+    <atom:link href="https://colinder.github.io/categories/dynamic-type/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>what is 정적(static) &amp; 동적(dynamic) Type</title>
+      <link>https://colinder.github.io/staticdynamictype/</link>
+      <pubDate>Wed, 03 Jan 2024 14:26:13 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/staticdynamictype/</guid>
+      <description>프로그래밍 언어에서 변수나 값의 타입에 대한 접근 방식을 나타내는 두 가지 주요 패러다임인 정적, 동적 타입에 대하여 정리합니다.</description>
+    </item>
+  </channel>
 </rss>

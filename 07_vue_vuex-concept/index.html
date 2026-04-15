@@ -130,7 +130,8 @@
 <hr>
 <h2 id="1-getters">1. Getters</h2>
 <blockquote>
-<p>만약? A.vue와 B.vue에서 각각 store의 state에 등록된 second의 2를 <code>3</code>으로 변형해 사용하고 싶다면 어떻게 해야 할까? <a href="https://vuex.vuejs.org/kr/guide/getters.html" target="_blank" rel="noopener noreffer ">저장소에 등록되어 있는 상태(state)를 변경하고 싶다면?</a></p></blockquote>
+<p>만약? A.vue와 B.vue에서 각각 store의 state에 등록된 second의 2를 <code>3</code>으로 변형해 사용하고 싶다면 어떻게 해야 할까? <a href="https://vuex.vuejs.org/kr/guide/getters.html" target="_blank" rel="noopener noreffer ">저장소에 등록되어 있는 상태(state)를 변경하고 싶다면?</a></p>
+</blockquote>
 <image src="/images/vuexGetters.png" caption="이런 모습으로" width="700px">
 <p>아마 귀찮겠지만, 각각의 파일에서</p>
 <div class="highlight"><div class="chroma">
@@ -145,7 +146,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="c1">// A.vue
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nx">computed</span><span class="o">:</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">change</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">second</span> <span class="o">+</span> <span class="mi">1</span>
@@ -165,7 +166,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="c1">// B.vue
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nx">computed</span><span class="o">:</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">change</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">second</span> <span class="o">+</span> <span class="mi">1</span>
@@ -209,7 +210,7 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="c1">//지난시간에 등록한 내용을 활용해서
 </span></span></span><span class="line"><span class="cl"><span class="c1">//store.js
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">Vue</span> <span class="nx">from</span> <span class="s2">&#34;vue&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">Vuex</span> <span class="nx">from</span> <span class="s2">&#34;vuex&#34;</span>
 </span></span><span class="line"><span class="cl">
@@ -266,7 +267,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="c1">// A.vue, B.vue 동일하게
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span><span class="nx">state그냥</span> <span class="nx">불러온</span> <span class="nx">값</span><span class="o">:</span> <span class="p">{{</span><span class="nx">change1</span><span class="p">}}&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>       
@@ -298,7 +299,8 @@
 <p>​</p>
 <h2 id="2-mutations">2. Mutations</h2>
 <blockquote>
-<p>공식문서에 <a href="https://vuex.vuejs.org/kr/guide/mutations.html" target="_blank" rel="noopener noreffer ">Mutations</a>는 &ldquo;Vuex 저장소에서 실제로 상태를 변경하는 유일한 방법은 변이하는 것&quot;이라는 설명이 있다. 하지만 나는 Mutations는  <strong>store.state 값을 변경하는 로직들을 의미</strong>한다고 정리하고 싶다.</p></blockquote>
+<p>공식문서에 <a href="https://vuex.vuejs.org/kr/guide/mutations.html" target="_blank" rel="noopener noreffer ">Mutations</a>는 &ldquo;Vuex 저장소에서 실제로 상태를 변경하는 유일한 방법은 변이하는 것&quot;이라는 설명이 있다. 하지만 나는 Mutations는  <strong>store.state 값을 변경하는 로직들을 의미</strong>한다고 정리하고 싶다.</p>
+</blockquote>
 <p>Getters 와 차이점을 알아두면 좋은데,</p>
 <ol>
 <li>
@@ -353,7 +355,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="c1">// store.js
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">Vue</span> <span class="nx">from</span> <span class="s2">&#34;vue&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">Vuex</span> <span class="nx">from</span> <span class="s2">&#34;vuex&#34;</span>
 </span></span><span class="line"><span class="cl">
@@ -506,7 +508,7 @@
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.143.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.160.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

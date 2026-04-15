@@ -1,16 +1,22 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Mirroring - Tag - colinder&#39;s blog</title>
-        <link>https://colinder.github.io/tags/mirroring/</link>
-        <description>Mirroring - Tag - colinder&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Thu, 08 Oct 2020 22:08:37 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/mirroring/" rel="self" type="application/rss+xml" /><item>
-    <title>Git_Mirroring</title>
-    <link>https://colinder.github.io/git_mirroring/</link>
-    <pubDate>Thu, 08 Oct 2020 22:08:37 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/git_mirroring/</guid>
-    <description><![CDATA[Git_Mirroring에 대하여 정리합니다.]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mirroring on colinder&#39;s blog</title>
+    <link>https://colinder.github.io/tags/mirroring/</link>
+    <description>Recent content in Mirroring on colinder&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+    <webMaster>kjonggwan@gmail.com (colinder)</webMaster>
+    <copyright>colinder</copyright>
+    <lastBuildDate>Thu, 08 Oct 2020 22:08:37 +0900</lastBuildDate>
+    <atom:link href="https://colinder.github.io/tags/mirroring/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git_Mirroring</title>
+      <link>https://colinder.github.io/git_mirroring/</link>
+      <pubDate>Thu, 08 Oct 2020 22:08:37 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/git_mirroring/</guid>
+      <description>Git_Mirroring에 대하여 정리합니다.</description>
+    </item>
+  </channel>
 </rss>

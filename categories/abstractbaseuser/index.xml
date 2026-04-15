@@ -1,31 +1,29 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>AbstractBaseUser - Category - colinder&#39;s blog</title>
-        <link>https://colinder.github.io/categories/abstractbaseuser/</link>
-        <description>AbstractBaseUser - Category - colinder&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Fri, 08 Oct 2021 10:17:50 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/abstractbaseuser/" rel="self" type="application/rss+xml" /><item>
-    <title>Django_09_CustomAuthUser_AbstractBaseUser</title>
-    <link>https://colinder.github.io/django_09_customauthuser_abstractbaseuser/</link>
-    <pubDate>Fri, 08 Oct 2021 10:17:50 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/django_09_customauthuser_abstractbaseuser/</guid>
-    <description><![CDATA[<p>​</p>
-<h1 id="django-span-stylecolor-4f8ae8abstractbaseuserspan">Django <span style="color: #4f8ae8">AbstractBaseUser</span></h1>
-<blockquote>
-<p>django는 기본적으로 username 과 password를 가지고 로그인합니다. 하지만 요즘에는 대부분의 웹사이트들이 email 과 password로 로그인(사용자를 인식 및 인증)을 합니다.</p>]]></description>
-</item>
-<item>
-    <title>Django_08_AbstractBaseUser VS AbstractUser</title>
-    <link>https://colinder.github.io/django_08_abstractbaseuservsabstractuser/</link>
-    <pubDate>Thu, 07 Oct 2021 10:17:20 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/django_08_abstractbaseuservsabstractuser/</guid>
-    <description><![CDATA[<p>​</p>
-<h1 id="django-span-stylecolor-4f8ae8abstractbaseuserspan-vs-span-stylecolor-f2b141abstractuserspan">Django <span style="color: #4f8ae8">AbstractBaseUser</span> VS <span style="color: #f2b141;">AbstractUser</span></h1>
-<blockquote>
-<p>Django로 프로젝트를 진행하면서 계정관련 내용을 등록하는 것을 가장 많이 했음에도, 아직 명확하게 차이를 알지 못하고 사용했던 것이 있었습니다.</p>
-<p>바로! User custom에 관한 부분이었는데요. 크게 <span style="color: #4f8ae8">AbstractBaseUser</span>와 <span style="color: #f2b141;">AbstractUser</span>를 사용하는 방법이 있는데 이 둘의 차이를 꼼꼼히 알아보기 위해 해당 포스팅이 작성되었습니다.</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AbstractBaseUser on colinder&#39;s blog</title>
+    <link>https://colinder.github.io/categories/abstractbaseuser/</link>
+    <description>Recent content in AbstractBaseUser on colinder&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+    <webMaster>kjonggwan@gmail.com (colinder)</webMaster>
+    <copyright>colinder</copyright>
+    <lastBuildDate>Fri, 08 Oct 2021 10:17:50 +0900</lastBuildDate>
+    <atom:link href="https://colinder.github.io/categories/abstractbaseuser/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Django_09_CustomAuthUser_AbstractBaseUser</title>
+      <link>https://colinder.github.io/django_09_customauthuser_abstractbaseuser/</link>
+      <pubDate>Fri, 08 Oct 2021 10:17:50 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/django_09_customauthuser_abstractbaseuser/</guid>
+      <description>&lt;p&gt;​&lt;/p&gt;&#xA;&lt;h1 id=&#34;django-abstractbaseuser&#34;&gt;Django &lt;span style=&#34;color: #4f8ae8&#34;&gt;AbstractBaseUser&lt;/span&gt;&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;django는 기본적으로 username 과 password를 가지고 로그인합니다. 하지만 요즘에는 대부분의 웹사이트들이 email 과 password로 로그인(사용자를 인식 및 인증)을 합니다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Django_08_AbstractBaseUser VS AbstractUser</title>
+      <link>https://colinder.github.io/django_08_abstractbaseuservsabstractuser/</link>
+      <pubDate>Thu, 07 Oct 2021 10:17:20 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/django_08_abstractbaseuservsabstractuser/</guid>
+      <description>&lt;p&gt;​&lt;/p&gt;&#xA;&lt;h1 id=&#34;django-abstractbaseuser-vs-abstractuser&#34;&gt;Django &lt;span style=&#34;color: #4f8ae8&#34;&gt;AbstractBaseUser&lt;/span&gt; VS &lt;span style=&#34;color: #f2b141;&#34;&gt;AbstractUser&lt;/span&gt;&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Django로 프로젝트를 진행하면서 계정관련 내용을 등록하는 것을 가장 많이 했음에도, 아직 명확하게 차이를 알지 못하고 사용했던 것이 있었습니다.&lt;/p&gt;&#xA;&lt;p&gt;바로! User custom에 관한 부분이었는데요. 크게 &lt;span style=&#34;color: #4f8ae8&#34;&gt;AbstractBaseUser&lt;/span&gt;와 &lt;span style=&#34;color: #f2b141;&#34;&gt;AbstractUser&lt;/span&gt;를 사용하는 방법이 있는데 이 둘의 차이를 꼼꼼히 알아보기 위해 해당 포스팅이 작성되었습니다.&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

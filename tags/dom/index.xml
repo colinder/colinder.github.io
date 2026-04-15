@@ -1,16 +1,22 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>DOM - Tag - colinder&#39;s blog</title>
-        <link>https://colinder.github.io/tags/dom/</link>
-        <description>DOM - Tag - colinder&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Tue, 13 Oct 2020 14:26:29 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/dom/" rel="self" type="application/rss+xml" /><item>
-    <title>what is DOM?</title>
-    <link>https://colinder.github.io/what_is_dom/</link>
-    <pubDate>Tue, 13 Oct 2020 14:26:29 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/what_is_dom/</guid>
-    <description><![CDATA[DOM이 무엇인지 정리합니다.]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DOM on colinder&#39;s blog</title>
+    <link>https://colinder.github.io/tags/dom/</link>
+    <description>Recent content in DOM on colinder&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+    <webMaster>kjonggwan@gmail.com (colinder)</webMaster>
+    <copyright>colinder</copyright>
+    <lastBuildDate>Tue, 13 Oct 2020 14:26:29 +0900</lastBuildDate>
+    <atom:link href="https://colinder.github.io/tags/dom/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>what is DOM?</title>
+      <link>https://colinder.github.io/what_is_dom/</link>
+      <pubDate>Tue, 13 Oct 2020 14:26:29 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/what_is_dom/</guid>
+      <description>DOM이 무엇인지 정리합니다.</description>
+    </item>
+  </channel>
 </rss>

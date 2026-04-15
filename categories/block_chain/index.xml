@@ -1,35 +1,29 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Block_chain - Category - colinder&#39;s blog</title>
-        <link>https://colinder.github.io/categories/block_chain/</link>
-        <description>Block_chain - Category - colinder&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Thu, 17 Sep 2020 15:04:00 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/block_chain/" rel="self" type="application/rss+xml" /><item>
-    <title>block_chain private Vs public / blockchain Vs network</title>
-    <link>https://colinder.github.io/private-vs-public-blockchain-vs-network/</link>
-    <pubDate>Thu, 17 Sep 2020 15:04:00 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/private-vs-public-blockchain-vs-network/</guid>
-    <description><![CDATA[<p>​</p>
-<h1 id="프라이빗-span-stylecolor-blue블록체인span-vs-퍼블릭-span-stylecolor-blue블록체인span-vs">🧔프라이빗 <span style="color: blue">블록체인</span> VS 👨🏻‍🤝‍👨🏻퍼블릭 <span style="color: blue">블록체인</span> VS</h1>
-<h1 id="프라이빗-span-stylecolor-brown네트워크span-vs-퍼블릭-span-stylecolor-brown네트워크span">🔒프라이빗 <span style="color: brown">네트워크</span> VS 🔐퍼블릭 <span style="color: brown">네트워크</span></h1>
-<blockquote>
-<blockquote>
-<p>Why 이런 질문을?</p></blockquote>
-<p>블록체인 관련 정보를 구글링하다보면, 프라이빗 네트워크, 퍼블릭 네트워크, 프라이빗 블록체인, 퍼블릭 블록체인. 이 4가지의 말을 혼용해서 사용하고 있는 것을 쉽게 볼 수 있다. 여기서</p>]]></description>
-</item>
-<item>
-    <title>Block_Chain setting &amp; basic</title>
-    <link>https://colinder.github.io/block_chain/</link>
-    <pubDate>Thu, 03 Sep 2020 22:06:15 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/block_chain/</guid>
-    <description><![CDATA[<p>​</p>
-<h1 id="가상환경에서-블록체인-채굴-및-기본-시스템-정리">🎈가상환경에서 블록체인 채굴 및 기본 시스템 정리</h1>
-<p>​</p>
-<h2 id="1-gethgo-ethereum-설치">1. geth(Go-ethereum) 설치</h2>
-<blockquote>
-<p>블록체인 기술은 중앙집중화된 데이터베이스에 반기를 들고 나온 개념이기 때문에 중앙 서버 이런게 없다. 즉 누구라도 해당 블록체인 네트워크에 참여하고 싶다면 언제라도 블록체인 데이터베이스를 싱크해주는 로컬 프로그램을 다운 받아 실행하면 데이터를 받을 수 있다.</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Block_chain on colinder&#39;s blog</title>
+    <link>https://colinder.github.io/categories/block_chain/</link>
+    <description>Recent content in Block_chain on colinder&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+    <webMaster>kjonggwan@gmail.com (colinder)</webMaster>
+    <copyright>colinder</copyright>
+    <lastBuildDate>Thu, 17 Sep 2020 15:04:00 +0900</lastBuildDate>
+    <atom:link href="https://colinder.github.io/categories/block_chain/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>block_chain private Vs public / blockchain Vs network</title>
+      <link>https://colinder.github.io/private-vs-public-blockchain-vs-network/</link>
+      <pubDate>Thu, 17 Sep 2020 15:04:00 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/private-vs-public-blockchain-vs-network/</guid>
+      <description>&lt;p&gt;​&lt;/p&gt;&#xA;&lt;h1 id=&#34;프라이빗-블록체인-vs-퍼블릭-블록체인-vs&#34;&gt;🧔프라이빗 &lt;span style=&#34;color: blue&#34;&gt;블록체인&lt;/span&gt; VS 👨🏻‍🤝‍👨🏻퍼블릭 &lt;span style=&#34;color: blue&#34;&gt;블록체인&lt;/span&gt; VS&lt;/h1&gt;&#xA;&lt;h1 id=&#34;프라이빗-네트워크-vs-퍼블릭-네트워크&#34;&gt;🔒프라이빗 &lt;span style=&#34;color: brown&#34;&gt;네트워크&lt;/span&gt; VS 🔐퍼블릭 &lt;span style=&#34;color: brown&#34;&gt;네트워크&lt;/span&gt;&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Why 이런 질문을?&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;블록체인 관련 정보를 구글링하다보면, 프라이빗 네트워크, 퍼블릭 네트워크, 프라이빗 블록체인, 퍼블릭 블록체인. 이 4가지의 말을 혼용해서 사용하고 있는 것을 쉽게 볼 수 있다. 여기서&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Block_Chain setting &amp; basic</title>
+      <link>https://colinder.github.io/block_chain/</link>
+      <pubDate>Thu, 03 Sep 2020 22:06:15 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/block_chain/</guid>
+      <description>&lt;p&gt;​&lt;/p&gt;&#xA;&lt;h1 id=&#34;가상환경에서-블록체인-채굴-및-기본-시스템-정리&#34;&gt;🎈가상환경에서 블록체인 채굴 및 기본 시스템 정리&lt;/h1&gt;&#xA;&lt;p&gt;​&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-gethgo-ethereum-설치&#34;&gt;1. geth(Go-ethereum) 설치&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;블록체인 기술은 중앙집중화된 데이터베이스에 반기를 들고 나온 개념이기 때문에 중앙 서버 이런게 없다. 즉 누구라도 해당 블록체인 네트워크에 참여하고 싶다면 언제라도 블록체인 데이터베이스를 싱크해주는 로컬 프로그램을 다운 받아 실행하면 데이터를 받을 수 있다.&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

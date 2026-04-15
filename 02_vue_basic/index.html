@@ -197,7 +197,7 @@
 </span></span><span class="line"><span class="cl">          <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;WARNING&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="p">},</span>
 </span></span><span class="line"><span class="cl">        <span class="nx">alertWarning</span> <span class="p">()</span> <span class="p">{</span>   <span class="c1">// Syntactic Sugar : 위와 완전히 동일
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>          <span class="nx">alert</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">message</span><span class="p">)</span>
+</span></span></span><span class="line"><span class="cl">          <span class="nx">alert</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">message</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="p">},</span>
 </span></span><span class="line"><span class="cl">        <span class="nx">changeMessage</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">          <span class="k">this</span><span class="p">.</span><span class="nx">message</span> <span class="o">=</span> <span class="s1">&#39;CHANGED MESSAGE&#39;</span>
@@ -305,17 +305,17 @@
 </span></span><span class="line"><span class="cl">          <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;WARNING&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="p">},</span>
 </span></span><span class="line"><span class="cl">        <span class="nx">alertMessage</span> <span class="p">()</span> <span class="p">{</span>   <span class="c1">// Syntactic Sugar : 위와 완전히 동일
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>          <span class="nx">alert</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">message</span><span class="p">)</span>
+</span></span></span><span class="line"><span class="cl">          <span class="nx">alert</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">message</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="p">},</span>
 </span></span><span class="line"><span class="cl">        <span class="nx">changeMessage</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">          <span class="k">this</span><span class="p">.</span><span class="nx">message</span> <span class="o">=</span> <span class="s1">&#39;CHANGED MESSAGE&#39;</span>
 </span></span><span class="line"><span class="cl">        <span class="p">},</span>
 </span></span><span class="line"><span class="cl">        <span class="nx">onInputChange</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">          <span class="c1">// console.log(&#34;!!&#34;)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>          <span class="c1">// if (event.key === &#39;Enter&#39;) {
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">this</span><span class="p">.</span><span class="nx">message</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span>
+</span></span></span><span class="line"><span class="cl">          <span class="c1">// if (event.key === &#39;Enter&#39;) {
+</span></span></span><span class="line"><span class="cl">            <span class="k">this</span><span class="p">.</span><span class="nx">message</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span>
 </span></span><span class="line"><span class="cl">          <span class="c1">// }
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">},</span>
+</span></span></span><span class="line"><span class="cl">        <span class="p">},</span>
 </span></span><span class="line"><span class="cl">      <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">})</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
@@ -389,10 +389,10 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;app&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;{{</span> <span class="nx">message</span> <span class="p">}}&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span><span class="nx">단반향</span> <span class="nx">binding</span> <span class="p">(</span><span class="nx">input</span> <span class="p">=&gt;</span> <span class="nx">data</span><span class="p">)&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="mi">1</span><span class="nx">way</span> <span class="p">&lt;</span><span class="nt">input</span> <span class="nt">@keyup.enter</span><span class="s">=&#34;onInputChange&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">1</span><span class="nx">way</span> <span class="p">&lt;</span><span class="nt">input</span> <span class="nt">@keyup.enter</span><span class="s">=&#34;onInputChange&#34;</span><span class="p"> </span><span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">hr</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span><span class="nx">양방향</span> <span class="nx">binding</span><span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="mi">2</span><span class="nx">way</span> <span class="p">&lt;</span><span class="nt">input</span> <span class="nt">@keyup.enter</span><span class="s">=&#34;onInputChange&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="nt">:value</span><span class="o">=</span><span class="s">&#34;message&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">2</span><span class="nx">way</span> <span class="p">&lt;</span><span class="nt">input</span> <span class="nt">@keyup.enter</span><span class="s">=&#34;onInputChange&#34;</span><span class="p"> </span><span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="nt">:value</span><span class="o">=</span><span class="s">&#34;message&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">hr</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="c">&lt;!--</span> <span class="nx">단뱡향과</span> <span class="nx">양방향을</span> <span class="nx">구분하기</span> <span class="nx">귀찮아서</span> <span class="nx">model을</span> <span class="nx">개발</span> <span class="o">--&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span><span class="nx">v</span><span class="o">-</span><span class="nx">model</span> <span class="nx">양방향</span> <span class="nx">binding</span><span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
@@ -582,7 +582,7 @@
 </span></span><span class="line"><span class="cl">        <span class="nx">bankrrupedPeople</span><span class="o">:</span> <span class="p">[]</span>
 </span></span><span class="line"><span class="cl">      <span class="p">},</span>
 </span></span><span class="line"><span class="cl">      <span class="c1">// 함수인데, data를 create, Update, Delete 하지 않고, Read(return)하고 싶을 때.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">computed</span><span class="o">:</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">      <span class="nx">computed</span><span class="o">:</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="nx">getBankrrupedPeople</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">          <span class="kr">const</span> <span class="nx">newArr</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">accounts</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">account</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="nx">account</span><span class="p">.</span><span class="nx">isBankrruped</span>
@@ -673,8 +673,8 @@
 </span></span><span class="line"><span class="cl">        <span class="nx">getLuckySix</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">          <span class="k">this</span><span class="p">.</span><span class="nx">myNumbers</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="nx">sampleSize</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">allNumbers</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">          <span class="c1">// vue는 str로 자료를 보는데 이를 정수로 바꾸기 위한 코드는 아래와 같다.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>          <span class="c1">// vue에서 str과 str을 빼는 건 int로 값이 나오기 때문에
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>          <span class="k">this</span><span class="p">.</span><span class="nx">myNumbers</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">a</span> <span class="o">-</span> <span class="nx">b</span><span class="p">)</span>
+</span></span></span><span class="line"><span class="cl">          <span class="c1">// vue에서 str과 str을 빼는 건 int로 값이 나오기 때문에
+</span></span></span><span class="line"><span class="cl">          <span class="k">this</span><span class="p">.</span><span class="nx">myNumbers</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">a</span> <span class="o">-</span> <span class="nx">b</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">      <span class="p">},</span>
 </span></span><span class="line"><span class="cl">    <span class="p">})</span>
@@ -714,7 +714,7 @@
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.143.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.160.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

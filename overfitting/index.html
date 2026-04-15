@@ -15,7 +15,7 @@
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2022-12-28T16:44:00+09:00">
     <meta property="article:modified_time" content="2022-12-28T16:44:00+09:00">
-    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="Ai">
     <meta property="article:tag" content="Overfitting">
     <meta property="og:image" content="https://colinder.github.io/logo.png">
 
@@ -112,7 +112,7 @@
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Overfitting</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/ai/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>AI</a>&nbsp;<a href="/categories/overfitting/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Overfitting</a></span></div>
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/ai/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Ai</a>&nbsp;<a href="/categories/overfitting/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Overfitting</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-12-28">2022-12-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2633 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;6 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="true">
@@ -138,7 +138,8 @@
 <h1 id="과적합overfitting">과적합(Overfitting)</h1>
 <blockquote>
 <p><a href="https://velog.io/@yookyungkho/%EB%94%A5%EB%9F%AC%EB%8B%9D%EC%9D%98-%EA%B3%A0%EC%A7%88%EB%B3%91-Overfitting%EA%B3%BC%EC%A0%81%ED%95%A9-%ED%95%B4%EA%B2%B0-%ED%8C%81" target="_blank" rel="noopener noreffer ">잘 정리된 내용</a>을 발견하였고 거기에 개인적인 경험을 추가하기 위해 정리하였습니다. (대부분 필사입니다.)</p>
-<p>인공지능 모델링을 하다보면 항상 만나게 되는 과적합을 어떻게 해결해야하는지, 방법에 대하여 정리</p></blockquote>
+<p>인공지능 모델링을 하다보면 항상 만나게 되는 과적합을 어떻게 해결해야하는지, 방법에 대하여 정리</p>
+</blockquote>
 <p>인공지능에게 흔히 말하는 <b>깊이있는 공부</b>를 시키려면 모델의 layer을 늘리고, 노드(unit)을 늘리는 방법을 떠올린다. 그리고 그러다 보면 train data에 만 너무 적합하게, 처음 보는 test data를 집어넣었을 땐 형편없는 결과를 도출하는 모델이 된다. (이를 과적합이라 한다.)</p>
 <p>일반적으로 과적합은 모델 학습과정에서 <strong>valid loss가 지속적으로 감소하다가 증가하는 지점부터 발생</strong>한다고 정의된다. 하지만 처음부터 valid loss가 증가하는 모델도 많이 보았다.</p>
 <p>​</p>
@@ -150,7 +151,8 @@
 <p>​</p>
 <h3 id="1-dropout-드롭아웃">1. Dropout (드롭아웃)</h3>
 <blockquote>
-<p>중간 노드의 학습을 임의로 중지하는 것. 학습하는 layer의 노드 중 일부를 랜덤으로 꺼버려 역전파시 파라미터 업데이트를 막는다. 이는 모형의 <b>불확실성을 증가</b>시켜 과적합 해결에 기여한다.</p></blockquote>
+<p>중간 노드의 학습을 임의로 중지하는 것. 학습하는 layer의 노드 중 일부를 랜덤으로 꺼버려 역전파시 파라미터 업데이트를 막는다. 이는 모형의 <b>불확실성을 증가</b>시켜 과적합 해결에 기여한다.</p>
+</blockquote>
 <p>드롭아웃 비율을 얼마로 해야 하는가에 정답은 없다. 개인적으로 <strong>과적합이 심하지 않다면 0.1<del>0.5를,  심하다 싶으면 0.7</del>0.8로 설정</strong>한다.</p>
 <p>다만, 드롭아웃의 의미를 알고 <b>얼마나 꺼볼까?</b> 하는 개념을 가지고 진행하는 것을 추천한다.</p>
 <p>또 여러 layer 마다 드롭아웃을 다르게 줄텐데 <b>불확실성을 높인다.</b>는 논리하에서</p>
@@ -186,7 +188,8 @@
 <p>구글링: 두 기법은 상호보완 관계, 보통 둘 다 쓰는게 성능이 더 높은데 하나만 쓸지 둘 다 쓸지는 경험적으로 판단할 문제다. 즉, 케바케! 데바데!</p>
 <p>실제 실험을 해보았을 때에는 구글링 답변처럼 모델마다 결과가 달랐다. 어떤 모델은 두 기법 모두 쓰는게 효과가 좋았고 또 어떤 모델은 하나씩만 쓰는게 더 좋았다. 개인적으로 구글링 입장에 동의하고, 일반적으로 둘 다 쓰는게 성능이 더 높다고는 하니 둘 다 실험해보는 것을 추천한다.</p>
 </li>
-</ul></blockquote>
+</ul>
+</blockquote>
 <p>​</p>
 <p>​</p>
 <h3 id="3-출력층-직전-은닉층의-노드-수를-줄여라">3. 출력층 직전 은닉층의 노드 수를 줄여라.</h3>
@@ -236,7 +239,7 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/ai/">AI</a>,&nbsp;<a href="/tags/overfitting/">Overfitting</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/ai/">Ai</a>,&nbsp;<a href="/tags/overfitting/">Overfitting</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
@@ -249,7 +252,7 @@
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.143.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.160.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

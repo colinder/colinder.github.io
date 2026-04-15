@@ -119,33 +119,33 @@
   <ul>
     <li><a href="#guards">Guards</a>
       <ul>
-        <li><a href="#authorization-guardhttpsdocsnestjscomguardsauthorization-guard">Authorization guard<a href="https://docs.nestjs.com/guards#authorization-guard">#</a></a></li>
-        <li><a href="#execution-contexthttpsdocsnestjscomguardsexecution-context">Execution context<a href="https://docs.nestjs.com/guards#execution-context">#</a></a></li>
-        <li><a href="#role-based-authenticationhttpsdocsnestjscomguardsrole-based-authentication">Role-based authentication<a href="https://docs.nestjs.com/guards#role-based-authentication">#</a></a></li>
-        <li><a href="#binding-guardshttpsdocsnestjscomguardsbinding-guards">Binding guards<a href="https://docs.nestjs.com/guards#binding-guards">#</a></a></li>
-        <li><a href="#setting-roles-per-handlerhttpsdocsnestjscomguardssetting-roles-per-handler">Setting roles per handler<a href="https://docs.nestjs.com/guards#setting-roles-per-handler">#</a></a></li>
-        <li><a href="#putting-it-all-togetherhttpsdocsnestjscomguardsputting-it-all-together">Putting it all together<a href="https://docs.nestjs.com/guards#putting-it-all-together">#</a></a></li>
+        <li><a href="#authorization-guard">Authorization guard#</a></li>
+        <li><a href="#execution-context">Execution context#</a></li>
+        <li><a href="#role-based-authentication">Role-based authentication#</a></li>
+        <li><a href="#binding-guards">Binding guards#</a></li>
+        <li><a href="#setting-roles-per-handler">Setting roles per handler#</a></li>
+        <li><a href="#putting-it-all-together">Putting it all together#</a></li>
       </ul>
     </li>
     <li><a href="#interceptors">Interceptors</a>
       <ul>
-        <li><a href="#basicshttpsdocsnestjscominterceptorsbasics">Basics<a href="https://docs.nestjs.com/interceptors#basics">#</a></a></li>
-        <li><a href="#execution-contexthttpsdocsnestjscominterceptorsexecution-context">Execution context<a href="https://docs.nestjs.com/interceptors#execution-context">#</a></a></li>
-        <li><a href="#call-handlerhttpsdocsnestjscominterceptorscall-handler">Call handler<a href="https://docs.nestjs.com/interceptors#call-handler">#</a></a></li>
-        <li><a href="#aspect-interceptionhttpsdocsnestjscominterceptorsaspect-interception">Aspect interception<a href="https://docs.nestjs.com/interceptors#aspect-interception">#</a></a></li>
-        <li><a href="#binding-interceptorshttpsdocsnestjscominterceptorsbinding-interceptors">Binding interceptors<a href="https://docs.nestjs.com/interceptors#binding-interceptors">#</a></a></li>
-        <li><a href="#response-mappinghttpsdocsnestjscominterceptorsresponse-mapping">Response mapping<a href="https://docs.nestjs.com/interceptors#response-mapping">#</a></a></li>
-        <li><a href="#exception-mappinghttpsdocsnestjscominterceptorsexception-mapping">Exception mapping<a href="https://docs.nestjs.com/interceptors#exception-mapping">#</a></a></li>
-        <li><a href="#stream-overridinghttpsdocsnestjscominterceptorsstream-overriding">Stream overriding<a href="https://docs.nestjs.com/interceptors#stream-overriding">#</a></a></li>
-        <li><a href="#more-operatorshttpsdocsnestjscominterceptorsmore-operators">More operators<a href="https://docs.nestjs.com/interceptors#more-operators">#</a></a></li>
+        <li><a href="#basics">Basics#</a></li>
+        <li><a href="#execution-context-1">Execution context#</a></li>
+        <li><a href="#call-handler">Call handler#</a></li>
+        <li><a href="#aspect-interception">Aspect interception#</a></li>
+        <li><a href="#binding-interceptors">Binding interceptors#</a></li>
+        <li><a href="#response-mapping">Response mapping#</a></li>
+        <li><a href="#exception-mapping">Exception mapping#</a></li>
+        <li><a href="#stream-overriding">Stream overriding#</a></li>
+        <li><a href="#more-operators">More operators#</a></li>
       </ul>
     </li>
     <li><a href="#custom-route-decorators">Custom route decorators</a>
       <ul>
-        <li><a href="#param-decoratorshttpsdocsnestjscomcustom-decoratorsparam-decorators">Param decorators<a href="https://docs.nestjs.com/custom-decorators#param-decorators">#</a></a></li>
-        <li><a href="#passing-datahttpsdocsnestjscomcustom-decoratorspassing-data">Passing data<a href="https://docs.nestjs.com/custom-decorators#passing-data">#</a></a></li>
-        <li><a href="#working-with-pipeshttpsdocsnestjscomcustom-decoratorsworking-with-pipes">Working with pipes<a href="https://docs.nestjs.com/custom-decorators#working-with-pipes">#</a></a></li>
-        <li><a href="#decorator-compositionhttpsdocsnestjscomcustom-decoratorsdecorator-composition">Decorator composition<a href="https://docs.nestjs.com/custom-decorators#decorator-composition">#</a></a></li>
+        <li><a href="#param-decorators">Param decorators#</a></li>
+        <li><a href="#passing-data">Passing data#</a></li>
+        <li><a href="#working-with-pipes">Working with pipes#</a></li>
+        <li><a href="#decorator-composition">Decorator composition#</a></li>
       </ul>
     </li>
   </ul>
@@ -154,15 +154,17 @@
 <h2 id="guards">Guards</h2>
 <blockquote>
 <p>가드(Guard)는 라우트 핸들러 메서드의 실행 여부를 결정하는 역할을 합니다. 특히, 가드는 특정 조건이 충족되지 않으면 요청을 처리하기 전에 실행을 막습니다. 이는 권한 검사, 인증, 혹은 다양한 비즈니스 규칙을 적용할 때 유용합니다.</p>
-<p>간단한 예로, 사용자의 권한을 확인하는 가드를 상상해볼 수 있습니다. 특정 엔드포인트에 접근하려는 사용자의 역할이나 권한이 충족되지 않으면 가드가 요청을 차단할 수 있습니다. 이를 통해 요청이 핸들러 메서드에 도달하기 전에 필요한 조건을 검사하고 처리할 수 있습니다.</p></blockquote>
+<p>간단한 예로, 사용자의 권한을 확인하는 가드를 상상해볼 수 있습니다. 특정 엔드포인트에 접근하려는 사용자의 역할이나 권한이 충족되지 않으면 가드가 요청을 차단할 수 있습니다. 이를 통해 요청이 핸들러 메서드에 도달하기 전에 필요한 조건을 검사하고 처리할 수 있습니다.</p>
+</blockquote>
 <p>가드는 <code>@Injectable()</code> 데코레이터로 주석이 달린 클래스로, <code>CanActivate</code> 인터페이스를 구현합니다.</p>
 <p>가드(Guards)는 <strong>단일 책임</strong>을 가지고 있습니다. <u>특정 조건(권한, 역할, ACL(access control list; 접근 제어 목록) 등)이 실행 시점에 존재하는지 여부에 따라 주어진 요청이 라우트 핸들러에 의해 처리될지 여부를 결정합니다.</u> 이는 일반적으로 <b>인가(authorization)</b>로 언급되며 종종 <b>인증(authentication)</b>과 함께 작동합니다. 전통적인 Express 애플리케이션에서는 <a href="https://docs.nestjs.com/middleware" target="_blank" rel="noopener noreffer ">middleware</a>를 통해 일반적으로 이러한 작업이 처리되었습니다. 미들웨어는 토큰 유효성 검사 및 <code>request</code> 객체에 속성을 추가하는 것과 같은 작업이 특정 라우트 컨텍스트(및 해당 메타데이터)와 강하게 연결되어 있지 않기 때문에 인증에 대한 좋은 선택입니다.</p>
 <p>그러나 미들웨어는 본질적으로 무지합니다. <code>next()</code> 함수를 호출한 후에 어떤 핸들러가 실행될지를 알지 못합니다. 반면에 <strong>가드</strong>는 <code>ExecutionContext</code> 인스턴스에 액세스할 수 있으며 따라서 정확히 다음에 실행될 것을 알고 있습니다. 이들은 예외 필터, 파이프, 인터셉터와 마찬가지로 요청/응답 주기에서 처리 로직을 정확한 지점에 삽입하고 선언적으로 수행할 수 있도록 설계되었습니다. 이는 코드를 DRY(Don&rsquo;t Repeat Yourself)하고 선언적으로 유지하는 데 도움이 됩니다.</p>
 <blockquote>
 <p><strong>HINT</strong></p>
-<p>Guards are executed <strong>after</strong> all middleware, but <strong>before</strong> any interceptor or pipe.</p></blockquote>
+<p>Guards are executed <strong>after</strong> all middleware, but <strong>before</strong> any interceptor or pipe.</p>
+</blockquote>
 <p>​</p>
-<h3 id="authorization-guardhttpsdocsnestjscomguardsauthorization-guard">Authorization guard<a href="https://docs.nestjs.com/guards#authorization-guard" target="_blank" rel="noopener noreffer ">#</a></h3>
+<h3 id="authorization-guard">Authorization guard<a href="https://docs.nestjs.com/guards#authorization-guard" target="_blank" rel="noopener noreffer ">#</a></h3>
 <p>언급한 대로 <strong>권한</strong> 부여는 가드의 좋은 사용 사례입니다. 특정 라우트는 호출자(일반적으로 특정 인증된 사용자)가 충분한 권한을 가질 때만 사용 가능해야 합니다. 이제 구축할 <code>AuthGuard</code>는 인증된 사용자를 가정하고 (따라서 토큰이 요청 헤더에 첨부되어 있다고 가정합니다) 토큰을 추출하고 유효성을 검사한 다음 추출된 정보를 사용하여 요청이 계속 진행할 수 있는지 여부를 결정합니다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -183,7 +185,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="c1">//auth.guard.ts
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Injectable</span><span class="p">,</span> <span class="nx">CanActivate</span><span class="p">,</span> <span class="nx">ExecutionContext</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/common&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Observable</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;rxjs&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
@@ -200,7 +202,8 @@
 </div>
 </div><blockquote>
 <p><strong>HINT</strong></p>
-<p>만약 애플리케이션에 인증 메커니즘을 구현하는 실제 예제를 찾고 있다면, <a href="https://docs.nestjs.com/security/authentication" target="_blank" rel="noopener noreffer ">이 장</a>을 참조하세요. 마찬가지로 더 정교한(sophisticated ) 권한 부여 예제를 원한다면 <a href="https://docs.nestjs.com/security/authorization" target="_blank" rel="noopener noreffer ">이 페이지</a>를 확인하세요.</p></blockquote>
+<p>만약 애플리케이션에 인증 메커니즘을 구현하는 실제 예제를 찾고 있다면, <a href="https://docs.nestjs.com/security/authentication" target="_blank" rel="noopener noreffer ">이 장</a>을 참조하세요. 마찬가지로 더 정교한(sophisticated ) 권한 부여 예제를 원한다면 <a href="https://docs.nestjs.com/security/authorization" target="_blank" rel="noopener noreffer ">이 페이지</a>를 확인하세요.</p>
+</blockquote>
 <p><code>validateRequest()</code> 함수 내부의 로직은 필요에 따라 간단하거나 복잡할 수 있습니다. 이 예제의 주요 포인트는 가드가 요청/응답 주기에 어떻게 맞아 떨어지는지를 보여주는 것입니다.</p>
 <p>모든 가드는 <code>canActivate()</code> 함수를 구현해야 합니다. 이 함수는 현재 요청이 허용되는지 여부를 나타내는 boolean 값을 반환해야 합니다. 이 함수는 동기적으로 또는 비동기적으로 (Promise나 Observable을 통해) 응답을 반환할 수 있습니다. Nest는 반환된 값을 사용하여 다음 동작을 제어합니다:</p>
 <ul>
@@ -208,11 +211,11 @@
 <li>false를 반환하면 Nest는 요청을 거부합니다.</li>
 </ul>
 <p>​</p>
-<h3 id="execution-contexthttpsdocsnestjscomguardsexecution-context">Execution context<a href="https://docs.nestjs.com/guards#execution-context" target="_blank" rel="noopener noreffer ">#</a></h3>
+<h3 id="execution-context">Execution context<a href="https://docs.nestjs.com/guards#execution-context" target="_blank" rel="noopener noreffer ">#</a></h3>
 <p><code>canActivate()</code> 함수는 단일 인수인 <code>ExecutionContext</code> 인스턴스를 받습니다. <code>ExecutionContext</code>는 <code>ArgumentsHost</code>에서 상속됩니다. 이전에 예외 필터 챕터에서 <code>ArgumentsHost</code>를 보았습니다. 위의 예제에서는 이전에 사용한 것과 동일한 <code>ArgumentsHost</code>에서 정의된 도우미 메서드를 사용하여 <code>Request</code> 객체에 대한 참조를 가져 오고 있습니다. 이 주제에 대한 자세한 내용은 <a href="https://docs.nestjs.com/exception-filters#arguments-host" target="_blank" rel="noopener noreffer ">exception filters</a> 챕터의 <strong>Arguments host</strong> 섹션을 참조할 수 있습니다.</p>
 <p><code>ExecutionContext</code>는 <code>ArgumentsHost</code>를 확장함으로써 현재 실행 프로세스에 대한 추가적인 세부 정보를 제공하는 여러 개의 새로운 도우미 메서드를 추가합니다. 이러한 세부 정보는 더 일반적인 가드를 작성할 때 도움이 될 수 있으며 이 가드는 다양한 컨트롤러, 메서드 및 실행 컨텍스트 집합에서 작동할 수 있습니다. <code>ExecutionContext</code>에 대한 자세한 내용은 <a href="https://docs.nestjs.com/fundamentals/execution-context" target="_blank" rel="noopener noreffer ">여기</a>에서 확인할 수 있습니다.</p>
 <p>​</p>
-<h3 id="role-based-authenticationhttpsdocsnestjscomguardsrole-based-authentication">Role-based authentication<a href="https://docs.nestjs.com/guards#role-based-authentication" target="_blank" rel="noopener noreffer ">#</a></h3>
+<h3 id="role-based-authentication">Role-based authentication<a href="https://docs.nestjs.com/guards#role-based-authentication" target="_blank" rel="noopener noreffer ">#</a></h3>
 <p>특정 역할을 가진 사용자만 액세스를 허용하는 더 기능적인 가드를 만들어보겠습니다. 기본 가드 템플릿에서 시작하고 이후 섹션에서 이를 확장해 나갈 것입니다. 현재는 모든 요청을 허용하는 기본적인 구조입니다:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -232,7 +235,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="c1">//roles.guard.ts
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Injectable</span><span class="p">,</span> <span class="nx">CanActivate</span><span class="p">,</span> <span class="nx">ExecutionContext</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/common&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Observable</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;rxjs&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
@@ -247,7 +250,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>​</p>
-<h3 id="binding-guardshttpsdocsnestjscomguardsbinding-guards">Binding guards<a href="https://docs.nestjs.com/guards#binding-guards" target="_blank" rel="noopener noreffer ">#</a></h3>
+<h3 id="binding-guards">Binding guards<a href="https://docs.nestjs.com/guards#binding-guards" target="_blank" rel="noopener noreffer ">#</a></h3>
 <p>파이프와 예외 필터와 마찬가지로 가드는 <strong>컨트롤러 범위(controller-scoped)</strong>, 메서드 범위, 또는 전역 범위로 설정할 수 있습니다. 아래에서는 <code>@UseGuards()</code> 데코레이터를 사용하여 컨트롤러 범위의 가드를 설정합니다. 이 데코레이터는 단일 인수나 쉼표로 구분된 인수 목록을 받을 수 있습니다. 이를 통해 하나의 선언으로 적절한 가드 집합을 쉽게 적용할 수 있습니다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -263,7 +266,8 @@
 </div>
 </div><blockquote>
 <p><strong>HINT</strong></p>
-<p>The <code>@UseGuards()</code> decorator is imported from the <code>@nestjs/common</code> package.</p></blockquote>
+<p>The <code>@UseGuards()</code> decorator is imported from the <code>@nestjs/common</code> package.</p>
+</blockquote>
 <p>위에서는 인스턴스 대신 <code>RolesGuard</code> 클래스를 전달하여 인스턴스화 책임을 프레임워크에게 맡기고 의존성 주입을 활성화했습니다. 파이프와 예외 필터와 마찬가지로 인스턴스를 직접 전달할 수도 있습니다:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -288,14 +292,15 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="c1">//main.ts
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">NestFactory</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">AppModule</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="nx">app</span><span class="p">.</span><span class="nx">useGlobalGuards</span><span class="p">(</span><span class="k">new</span> <span class="nx">RolesGuard</span><span class="p">());</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><blockquote>
 <p><strong>NOTICE</strong></p>
-<p>하이브리드 앱의 경우 <code>useGlobalGuards()</code> 메서드는 기본적으로 게이트웨이 및 마이크로 서비스에 가드를 설정하지 않습니다. (이 동작을 변경하는 방법에 대한 정보는 <a href="https://docs.nestjs.com/faq/hybrid-application" target="_blank" rel="noopener noreffer ">Hybrid application</a>을 참조하세요.) &ldquo;표준&rdquo; (비-하이브리드) 마이크로서비스 앱의 경우 <code>useGlobalGuards()</code>는 가드를 전역으로 마운트합니다.</p></blockquote>
+<p>하이브리드 앱의 경우 <code>useGlobalGuards()</code> 메서드는 기본적으로 게이트웨이 및 마이크로 서비스에 가드를 설정하지 않습니다. (이 동작을 변경하는 방법에 대한 정보는 <a href="https://docs.nestjs.com/faq/hybrid-application" target="_blank" rel="noopener noreffer ">Hybrid application</a>을 참조하세요.) &ldquo;표준&rdquo; (비-하이브리드) 마이크로서비스 앱의 경우 <code>useGlobalGuards()</code>는 가드를 전역으로 마운트합니다.</p>
+</blockquote>
 <p>전역 가드는 전체 애플리케이션, 모든 컨트롤러 및 모든 라우트 핸들러에 걸쳐 사용됩니다. 의존성 주입 측면에서 모듈 외부에서 등록된 전역 가드 (<code>useGlobalGuards()</code>를 사용한 예제와 같이)는 어떤 모듈의 컨텍스트 외부에서 수행되므로 종속성을 주입할 수 없습니다. 이 문제를 해결하려면 다음 구성을 사용하여 모듈에서 직접 가드를 설정할 수 있습니다:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -316,7 +321,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="c1">//app.module.ts
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Module</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/common&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">APP_GUARD</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/core&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
@@ -333,9 +338,10 @@
 </div>
 </div><blockquote>
 <p><strong>HINT</strong></p>
-<p>이 방법을 사용하여 가드에 대한 종속성 주입을 수행할 때 어떤 모듈에서 이 구성을 사용하든지 간에 이 가드는 사실상 전역입니다. 어디에서 이 작업을 수행해야 할까요? 가드 (<code>RolesGuard</code>는 위의 예제에서와 같이)가 정의된 모듈을 선택하세요. 또한, <code>useClass</code>는 사용자 정의 공급자 등록을 다루는 유일한 방법이 아닙니다. <a href="https://docs.nestjs.com/fundamentals/custom-providers" target="_blank" rel="noopener noreffer ">여기</a>에서 자세히 알아보세요.</p></blockquote>
+<p>이 방법을 사용하여 가드에 대한 종속성 주입을 수행할 때 어떤 모듈에서 이 구성을 사용하든지 간에 이 가드는 사실상 전역입니다. 어디에서 이 작업을 수행해야 할까요? 가드 (<code>RolesGuard</code>는 위의 예제에서와 같이)가 정의된 모듈을 선택하세요. 또한, <code>useClass</code>는 사용자 정의 공급자 등록을 다루는 유일한 방법이 아닙니다. <a href="https://docs.nestjs.com/fundamentals/custom-providers" target="_blank" rel="noopener noreffer ">여기</a>에서 자세히 알아보세요.</p>
+</blockquote>
 <p>​</p>
-<h3 id="setting-roles-per-handlerhttpsdocsnestjscomguardssetting-roles-per-handler">Setting roles per handler<a href="https://docs.nestjs.com/guards#setting-roles-per-handler" target="_blank" rel="noopener noreffer ">#</a></h3>
+<h3 id="setting-roles-per-handler">Setting roles per handler<a href="https://docs.nestjs.com/guards#setting-roles-per-handler" target="_blank" rel="noopener noreffer ">#</a></h3>
 <p><code>RolesGuard</code>가 작동하지만 아직 충분히 스마트하지 않습니다. 가장 중요한 가드 기능 중 하나인 <a href="https://docs.nestjs.com/fundamentals/execution-context" target="_blank" rel="noopener noreffer ">실행 컨텍스트</a>를 아직 활용하고 있지 않습니다. 아직 역할이나 각 핸들러에 대한 허용된 역할에 대한 정보를 알지 못합니다. 예를 들어 <code>CatsController</code>는 다른 라우트에 대해 다른 권한 체계를 가질 수 있습니다. 어떤 라우트는 관리자 사용자만 사용할 수 있고 다른 라우트는 모두에게 열려 있을 수 있습니다. 어떻게 역할을 유연하고 재사용 가능한 방식으로 라우트에 매핑할 수 있을까요?</p>
 <p>여기서 <strong>사용자 정의 메타데이터</strong>가 등장합니다 (<a href="https://docs.nestjs.com/fundamentals/execution-context#reflection-and-metadata" target="_blank" rel="noopener noreffer ">여기</a>에서 더 알아보세요). Nest는 <code>Reflector#createDecorator</code> 정적 메서드를 통해 생성된 데코레이터 또는 내장된 <code>@SetMetadata()</code> 데코레이터를 통해 라우트 핸들러에 사용자 정의 <strong>메타데이터</strong>를 첨부할 수 있는 기능을 제공합니다.</p>
 <p>예를 들어 <code>Reflector#createDecorator</code> 메서드를 사용하여 핸들러에 메타데이터를 첨부할 <code>@Roles()</code> 데코레이터를 만들어봅시다. <code>Reflector</code>는 프레임워크에서 기본적으로 제공되며 <code>@nestjs/core</code> 패키지에서 노출됩니다.</p>
@@ -349,7 +355,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="c1">//roles.decorator.ts
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Reflector</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/core&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">Roles</span> <span class="o">=</span> <span class="nx">Reflector</span><span class="p">.</span><span class="nx">createDecorator</span><span class="p">&lt;</span><span class="nt">string</span><span class="err">[]</span><span class="p">&gt;();</span>
@@ -369,7 +375,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="c1">//cats.controller.ts
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kd">@Post</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="kd">@Roles</span><span class="p">([</span><span class="s1">&#39;admin&#39;</span><span class="p">])</span>
 </span></span><span class="line"><span class="cl"><span class="kr">async</span> <span class="nx">create</span><span class="p">(</span><span class="kd">@Body</span><span class="p">()</span> <span class="nx">createCatDto</span>: <span class="kt">CreateCatDto</span><span class="p">)</span> <span class="p">{</span>
@@ -380,7 +386,7 @@
 </div><p>여기서는 <code>create()</code> 메서드에 <code>Roles</code> 데코레이터 메타데이터를 첨부했습니다. 이는 해당 라우트에는 <code>admin</code> 역할을 가진 사용자만 액세스할 수 있어야 함을 나타냅니다.</p>
 <p>대신에 <code>Reflector#createDecorator</code> 메서드 대신 내장된 <code>@SetMetadata()</code> 데코레이터를 사용할 수도 있습니다. <a href="https://docs.nestjs.com/fundamentals/execution-context#low-level-approach" target="_blank" rel="noopener noreffer ">여기</a>에서 더 자세히 알아보세요.</p>
 <p>​</p>
-<h3 id="putting-it-all-togetherhttpsdocsnestjscomguardsputting-it-all-together">Putting it all together<a href="https://docs.nestjs.com/guards#putting-it-all-together" target="_blank" rel="noopener noreffer ">#</a></h3>
+<h3 id="putting-it-all-together">Putting it all together<a href="https://docs.nestjs.com/guards#putting-it-all-together" target="_blank" rel="noopener noreffer ">#</a></h3>
 <p>이제 <code>RolesGuard</code>와 함께 이를 연결해 보겠습니다. 현재 <code>RolesGuard</code>는 모든 경우에 <code>true</code>를 반환하여 모든 요청을 진행시킵니다. 우리는 현재 사용자에게 할당된 <strong>역할을 현재 처리 중인 라우트에서 필요로 하는 실제 역할과 비교하여</strong> 반환 값을 조건부로 만들고 싶습니다. 라우트의 역할(사용자 정의 메타데이터)에 액세스하려면 다시 <code>Reflector</code> 도우미 클래스를 사용하겠습니다. 아래와 같이:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -407,7 +413,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="c1">//roles.guard.ts
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Injectable</span><span class="p">,</span> <span class="nx">CanActivate</span><span class="p">,</span> <span class="nx">ExecutionContext</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/common&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Reflector</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/core&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Roles</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;./roles.decorator&#39;</span><span class="p">;</span>
@@ -430,7 +436,8 @@
 </div>
 </div><blockquote>
 <p><strong>HINT</strong></p>
-<p>Node.js 세계에서는 흔히 권한이 부여된 사용자를 <code>request</code> 객체에 첨부하는 것이 일반적입니다. 따라서 위의 샘플 코드에서는 <code>request.user</code>가 사용자 인스턴스와 허용된 역할을 포함하고 있다고 가정하고 있습니다. 여러분의 앱에서는 이러한 연관성을 사용자 정의 <strong>인증 가드</strong>나 미들웨어에서 설정할 것으로 예상됩니다. 이 주제에 대한 자세한 정보는 <a href="https://docs.nestjs.com/security/authentication" target="_blank" rel="noopener noreffer ">이 장</a>을 참조하세요.</p></blockquote>
+<p>Node.js 세계에서는 흔히 권한이 부여된 사용자를 <code>request</code> 객체에 첨부하는 것이 일반적입니다. 따라서 위의 샘플 코드에서는 <code>request.user</code>가 사용자 인스턴스와 허용된 역할을 포함하고 있다고 가정하고 있습니다. 여러분의 앱에서는 이러한 연관성을 사용자 정의 <strong>인증 가드</strong>나 미들웨어에서 설정할 것으로 예상됩니다. 이 주제에 대한 자세한 정보는 <a href="https://docs.nestjs.com/security/authentication" target="_blank" rel="noopener noreffer ">이 장</a>을 참조하세요.</p>
+</blockquote>
 <div class="details admonition warning open">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-exclamation-triangle fa-fw" aria-hidden="true"></i>WARNING<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
@@ -469,7 +476,8 @@
 </div><p>가드에서 throw된 예외는 <a href="https://docs.nestjs.com/exception-filters" target="_blank" rel="noopener noreffer ">예외 레이어</a> 에서 처리됩니다.(전역 예외 필터 및 현재 컨텍스트에 적용된 모든 예외 필터)</p>
 <blockquote>
 <p><strong>HINT</strong>
-If you are looking for a real-world example on how to implement authorization, check <a href="https://docs.nestjs.com/security/authorization" target="_blank" rel="noopener noreffer ">this chapter</a>.</p></blockquote>
+If you are looking for a real-world example on how to implement authorization, check <a href="https://docs.nestjs.com/security/authorization" target="_blank" rel="noopener noreffer ">this chapter</a>.</p>
+</blockquote>
 <p>​</p>
 <p>​</p>
 <h2 id="interceptors">Interceptors</h2>
@@ -483,7 +491,8 @@ If you are looking for a real-world example on how to implement authorization, c
 <li><strong>트랜스포메이션</strong>: 요청이나 응답을 필요에 따라 변환하거나 가공할 수 있습니다.</li>
 <li><strong>권한 검사</strong>: 특정한 권한을 가진 사용자만이 특정한 요청에 접근할 수 있도록 제어할 수 있습니다.</li>
 </ol>
-<p>인터셉터는 모듈, 컨트롤러, 메서드 수준에서 적용될 수 있으며, 각각의 인터셉터는 특정한 용도에 맞게 설계될 수 있습니다.</p></blockquote>
+<p>인터셉터는 모듈, 컨트롤러, 메서드 수준에서 적용될 수 있으며, 각각의 인터셉터는 특정한 용도에 맞게 설계될 수 있습니다.</p>
+</blockquote>
 <p>인터셉터는 <code>@Injectable()</code> 데코레이터로 주석이 달린 클래스이며 <code>NestInterceptor</code> 인터페이스를 구현하는 클래스입니다.</p>
 <p>인터셉터는 <a href="https://en.wikipedia.org/wiki/Aspect-oriented_programming" target="_blank" rel="noopener noreffer ">Aspect Oriented Programming</a> (AOP) 기법에서 영감을 받은 유용한 기능을 제공합니다. 이를 통해 다음과 같은 작업이 가능해집니다:</p>
 <ul>
@@ -494,18 +503,18 @@ If you are looking for a real-world example on how to implement authorization, c
 <li>특정 조건에 따라 함수 완전히 재정의 (예: 캐싱 목적)</li>
 </ul>
 <p>​</p>
-<h3 id="basicshttpsdocsnestjscominterceptorsbasics">Basics<a href="https://docs.nestjs.com/interceptors#basics" target="_blank" rel="noopener noreffer ">#</a></h3>
+<h3 id="basics">Basics<a href="https://docs.nestjs.com/interceptors#basics" target="_blank" rel="noopener noreffer ">#</a></h3>
 <p>각 인터셉터는 두 개의 인자를 받는 <code>intercept()</code> 메소드를 구현합니다. 첫 번째 인자는 <code>ExecutionContext</code> 인스턴스로 <a href="https://docs.nestjs.com/guards" target="_blank" rel="noopener noreffer ">가드</a>에서 사용되는 것과 동일한 객체입니다. <code>ExecutionContext</code>는 <code>ArgumentsHost</code>에서 상속됩니다. 우리는 이전에 예외 필터 챕터에서 <code>ArgumentsHost</code>를 보았습니다. 거기에서 원래 핸들러에 전달된 인자를 래핑하고 응용 프로그램의 유형에 따라 다른 인자 배열을 포함한다는 것을 알았습니다. 이 주제에 대한 자세한 내용은 <a href="https://docs.nestjs.com/exception-filters#arguments-host" target="_blank" rel="noopener noreffer ">예외 필터</a>를 참조할 수 있습니다.</p>
 <p>​</p>
-<h3 id="execution-contexthttpsdocsnestjscominterceptorsexecution-context">Execution context<a href="https://docs.nestjs.com/interceptors#execution-context" target="_blank" rel="noopener noreffer ">#</a></h3>
+<h3 id="execution-context-1">Execution context<a href="https://docs.nestjs.com/interceptors#execution-context" target="_blank" rel="noopener noreffer ">#</a></h3>
 <p><code>ExecutionContext</code>는 <code>ArgumentsHost</code>를 확장함으로써 현재 실행 프로세스에 대한 추가적인 세부 정보를 제공하는 여러 개의 헬퍼 메서드를 추가합니다. 이러한 세부 정보는 더 일반적인 인터셉터를 작성할 때 도움이 될 수 있으며, 이 인터셉터는 다양한 컨트롤러, 메서드 및 실행 컨텍스트에서 작동할 수 있습니다. <code>ExecutionContext</code>에 대한 더 자세한 내용은 <a href="https://docs.nestjs.com/fundamentals/execution-context" target="_blank" rel="noopener noreffer ">여기</a>에서 확인할 수 있습니다.</p>
 <p>​</p>
-<h3 id="call-handlerhttpsdocsnestjscominterceptorscall-handler">Call handler<a href="https://docs.nestjs.com/interceptors#call-handler" target="_blank" rel="noopener noreffer ">#</a></h3>
+<h3 id="call-handler">Call handler<a href="https://docs.nestjs.com/interceptors#call-handler" target="_blank" rel="noopener noreffer ">#</a></h3>
 <p>두 번째 인수는 <code>CallHandler</code>입니다. <code>CallHandler</code> 인터페이스는 <code>interceptor</code>에서 라우트 핸들러 메서드를 어느 시점에서든 호출할 수 있도록 <code>handle()</code> 메서드를 구현합니다. <code>intercept()</code> 메서드에서 <code>handle()</code> 메서드를 호출하지 않으면 라우트 핸들러 메서드가 전혀 실행되지 않습니다.</p>
 <p>이 접근 방식은 <code>intercept()</code> 메서드가 요청/응답 스트림을 효과적으로 <strong>랩</strong>한다는 것을 의미합니다. 그리고 최종 라우트 핸들러 실행 <strong>전후</strong>에 사용자 정의 로직을 사용하고 싶을 수도 있습니다. <code>intercept()</code> 메서드에서 <code>handle()</code>을 호출하기 <strong>전에</strong> 코드를 작성하는 것은 명확하지만, 이후에 어떻게 영향을 미칠 수 있을까요? <code>handle()</code> 메서드는 <code>Observable</code>을 반환하므로 <a href="https://github.com/ReactiveX/rxjs" target="_blank" rel="noopener noreffer ">RxJS</a> 연산자를 사용하여 응답을 추가로 조작할 수 있습니다. <strong>Aspect Oriented Programming</strong> 용어를 사용하면 라우트 핸들러를 호출하는 것(즉, <code>handle()</code>을 호출하는 것)은 <a href="https://en.wikipedia.org/wiki/Pointcut" target="_blank" rel="noopener noreffer ">Pointcut</a>이라고 하며, 여기에 추가로직이 삽입되는 지점을 나타냅니다.</p>
 <p>예를 들어, 들어오는 <code>POST /cats</code> 요청이 있습니다. 이 요청은 <code>CatsController</code> 내에 정의된 <code>create()</code> 핸들러를 대상으로 합니다. <code>handle()</code> 메서드를 호출하지 않는 인터셉터가 코드 중간 어디에서든(along the way) 사용되면 <code>create()</code> 메서드가 실행되지 않습니다. <code>handle()</code>이 호출되면 (그리고 그 <code>Observable</code>이 반환된 후에), <code>create()</code> 핸들러가 트리거됩니다. 그리고 <code>Observable</code>을 통해 수신한 응답 스트림을 사용하여 추가 작업을 수행하고 최종 결과를 호출자에게 반환할 수 있습니다.</p>
 <p>​</p>
-<h3 id="aspect-interceptionhttpsdocsnestjscominterceptorsaspect-interception">Aspect interception<a href="https://docs.nestjs.com/interceptors#aspect-interception" target="_blank" rel="noopener noreffer ">#</a></h3>
+<h3 id="aspect-interception">Aspect interception<a href="https://docs.nestjs.com/interceptors#aspect-interception" target="_blank" rel="noopener noreffer ">#</a></h3>
 <p>첫 번째 사용 사례는 인터셉터를 사용하여 사용자 상호 작용을 기록하는 것입니다. 예를 들어 사용자 호출을 저장하거나 이벤트를 비동기적으로 디스패치하거나 타임스탬프를 계산하는 등의 상호 작용을 기록하는 간단한 <code>LoggingInterceptor</code>를 아래에 표시합니다:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -531,7 +540,7 @@ If you are looking for a real-world example on how to implement authorization, c
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="c1">//logging.interceptor.ts
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Injectable</span><span class="p">,</span> <span class="nx">NestInterceptor</span><span class="p">,</span> <span class="nx">ExecutionContext</span><span class="p">,</span> <span class="nx">CallHandler</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/common&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Observable</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;rxjs&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">tap</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;rxjs/operators&#39;</span><span class="p">;</span>
@@ -553,13 +562,15 @@ If you are looking for a real-world example on how to implement authorization, c
 </div>
 </div><blockquote>
 <p><strong>HINT</strong></p>
-<p>The <code>NestInterceptor&lt;T, R&gt;</code> is a generic interface in which <code>T</code> indicates the type of an <code>Observable&lt;T&gt;</code> (supporting the response stream), and <code>R</code> is the type of the value wrapped by <code>Observable&lt;R&gt;</code>.</p></blockquote>
+<p>The <code>NestInterceptor&lt;T, R&gt;</code> is a generic interface in which <code>T</code> indicates the type of an <code>Observable&lt;T&gt;</code> (supporting the response stream), and <code>R</code> is the type of the value wrapped by <code>Observable&lt;R&gt;</code>.</p>
+</blockquote>
 <blockquote>
 <p><strong>NOTICE</strong></p>
-<p>인터셉터는 컨트롤러, 프로바이더, 가드 등과 마찬가지로 <code>constructor</code>를 통해 <strong>의존성을 주입</strong>할 수 있습니다.</p></blockquote>
+<p>인터셉터는 컨트롤러, 프로바이더, 가드 등과 마찬가지로 <code>constructor</code>를 통해 <strong>의존성을 주입</strong>할 수 있습니다.</p>
+</blockquote>
 <p><code>handle()</code>가 RxJS <code>Observable</code>을 반환하기 때문에 우리는 스트림을 조작하기 위해 다양한 오퍼레이터를 선택할 수 있습니다. 위의 예제에서는 <code>tap()</code> 오퍼레이터를 사용했는데, 이는 우리의 익명 로깅 함수를 옵저버블 스트림이 정상적이거나 예외적으로 종료될 때 호출하지만 그 외에는 응답 주기에 간섭하지 않습니다.</p>
 <p>​</p>
-<h3 id="binding-interceptorshttpsdocsnestjscominterceptorsbinding-interceptors">Binding interceptors<a href="https://docs.nestjs.com/interceptors#binding-interceptors" target="_blank" rel="noopener noreffer ">#</a></h3>
+<h3 id="binding-interceptors">Binding interceptors<a href="https://docs.nestjs.com/interceptors#binding-interceptors" target="_blank" rel="noopener noreffer ">#</a></h3>
 <p>인터셉터를 설정하기 위해서는 <code>@nestjs/common</code> 패키지에서 가져온 <code>@UseInterceptors()</code> 데코레이터를 사용합니다. <a href="https://docs.nestjs.com/pipes" target="_blank" rel="noopener noreffer ">파이프</a>와 <a href="https://docs.nestjs.com/guards" target="_blank" rel="noopener noreffer ">가드</a>와 마찬가지로 인터셉터는 컨트롤러 범위, 메서드 범위 또는 글로벌 범위로 설정할 수 있습니다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -570,14 +581,15 @@ If you are looking for a real-world example on how to implement authorization, c
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="c1">//cats.controller.ts
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kd">@UseInterceptors</span><span class="p">(</span><span class="nx">LoggingInterceptor</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">class</span> <span class="nx">CatsController</span> <span class="p">{}</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><blockquote>
 <p><strong>HINT</strong></p>
-<p>The <code>@UseInterceptors()</code> decorator is imported from the <code>@nestjs/common</code> package.</p></blockquote>
+<p>The <code>@UseInterceptors()</code> decorator is imported from the <code>@nestjs/common</code> package.</p>
+</blockquote>
 <p>위의 구조를 사용하면 <code>CatsController</code>에 정의된 각 라우트 핸들러는 <code>LoggingInterceptor</code>를 사용합니다. 누군가 <code>GET /cats</code> 엔드포인트를 호출하면 표준 출력에서 다음과 같은 출력을 볼 수 있습니다:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -599,7 +611,7 @@ If you are looking for a real-world example on how to implement authorization, c
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="c1">//cats.controller.ts
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kd">@UseInterceptors</span><span class="p">(</span><span class="k">new</span> <span class="nx">LoggingInterceptor</span><span class="p">())</span>
 </span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">class</span> <span class="nx">CatsController</span> <span class="p">{}</span>
 </span></span></code></pre></td></tr></table>
@@ -615,7 +627,7 @@ If you are looking for a real-world example on how to implement authorization, c
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="c1">//main.ts
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">NestFactory</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">AppModule</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="nx">app</span><span class="p">.</span><span class="nx">useGlobalInterceptors</span><span class="p">(</span><span class="k">new</span> <span class="nx">LoggingInterceptor</span><span class="p">());</span>
 </span></span></code></pre></td></tr></table>
@@ -640,7 +652,7 @@ If you are looking for a real-world example on how to implement authorization, c
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="c1">//app.module.ts
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Module</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/common&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">APP_INTERCEPTOR</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/core&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
@@ -657,9 +669,10 @@ If you are looking for a real-world example on how to implement authorization, c
 </div>
 </div><blockquote>
 <p><strong>HINT</strong></p>
-<p>이 접근 방식을 사용하여 인터셉터에 대한 의존성 주입을 수행할 때, 이 구성이 적용된 모듈과 관계없이 해당 인터셉터는 사실상 전역적입니다. 어디에서 이 작업을 수행해야 할까요? 위의 예제에서 나온대로 인터셉터가 정의된 모듈을 선택하세요. 또한, <code>useClass</code>는 사용자 정의 제공자 등록을 다루는 유일한 방법이 아닙니다. 더 자세한 내용은 <a href="https://docs.nestjs.com/fundamentals/custom-providers" target="_blank" rel="noopener noreffer ">여기</a>에서 알아보세요.</p></blockquote>
+<p>이 접근 방식을 사용하여 인터셉터에 대한 의존성 주입을 수행할 때, 이 구성이 적용된 모듈과 관계없이 해당 인터셉터는 사실상 전역적입니다. 어디에서 이 작업을 수행해야 할까요? 위의 예제에서 나온대로 인터셉터가 정의된 모듈을 선택하세요. 또한, <code>useClass</code>는 사용자 정의 제공자 등록을 다루는 유일한 방법이 아닙니다. 더 자세한 내용은 <a href="https://docs.nestjs.com/fundamentals/custom-providers" target="_blank" rel="noopener noreffer ">여기</a>에서 알아보세요.</p>
+</blockquote>
 <p>​</p>
-<h3 id="response-mappinghttpsdocsnestjscominterceptorsresponse-mapping">Response mapping<a href="https://docs.nestjs.com/interceptors#response-mapping" target="_blank" rel="noopener noreffer ">#</a></h3>
+<h3 id="response-mapping">Response mapping<a href="https://docs.nestjs.com/interceptors#response-mapping" target="_blank" rel="noopener noreffer ">#</a></h3>
 <p>우리는 이미 <code>handle()</code>이 Observable을 반환한다는 것을 알고 있습니다. 이 스트림에는 route handler에서 반환된 값이 포함되어 있으므로 RxJS의 <code>map()</code> 연산자를 사용하여 쉽게 변형할 수 있습니다.</p>
 <div class="details admonition warning open">
         <div class="details-summary admonition-title">
@@ -691,7 +704,7 @@ If you are looking for a real-world example on how to implement authorization, c
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="c1">//transform.interceptor.ts
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Injectable</span><span class="p">,</span> <span class="nx">NestInterceptor</span><span class="p">,</span> <span class="nx">ExecutionContext</span><span class="p">,</span> <span class="nx">CallHandler</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/common&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Observable</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;rxjs&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">map</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;rxjs/operators&#39;</span><span class="p">;</span>
@@ -710,7 +723,8 @@ If you are looking for a real-world example on how to implement authorization, c
 </div>
 </div><blockquote>
 <p><strong>HINT</strong></p>
-<p>Nest 인터셉터는 동기 및 비동기 <code>intercept()</code> 메서드와 함께 작동합니다. 필요한 경우 메서드를 <code>async</code>로 전환할 수 있습니다.</p></blockquote>
+<p>Nest 인터셉터는 동기 및 비동기 <code>intercept()</code> 메서드와 함께 작동합니다. 필요한 경우 메서드를 <code>async</code>로 전환할 수 있습니다.</p>
+</blockquote>
 <p>위의 구성으로 누군가 <code>GET /cats</code> 엔드포인트를 호출하면, 응답은 다음과 같을 것입니다 (루트 핸들러가 빈 배열 <code>[]</code>을 반환하는 경우를 가정합니다):</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -756,7 +770,7 @@ If you are looking for a real-world example on how to implement authorization, c
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>​</p>
-<h3 id="exception-mappinghttpsdocsnestjscominterceptorsexception-mapping">Exception mapping<a href="https://docs.nestjs.com/interceptors#exception-mapping" target="_blank" rel="noopener noreffer ">#</a></h3>
+<h3 id="exception-mapping">Exception mapping<a href="https://docs.nestjs.com/interceptors#exception-mapping" target="_blank" rel="noopener noreffer ">#</a></h3>
 <p>또 다른 흥미로운 사용 사례는 RxJS의 <code>catchError()</code> 연산자를 활용하여 던져진 예외를 재정의하는 것입니다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -785,7 +799,7 @@ If you are looking for a real-world example on how to implement authorization, c
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="c1">//errors.interceptor.ts
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">Injectable</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">NestInterceptor</span><span class="p">,</span>
@@ -809,7 +823,7 @@ If you are looking for a real-world example on how to implement authorization, c
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>​</p>
-<h3 id="stream-overridinghttpsdocsnestjscominterceptorsstream-overriding">Stream overriding<a href="https://docs.nestjs.com/interceptors#stream-overriding" target="_blank" rel="noopener noreffer ">#</a></h3>
+<h3 id="stream-overriding">Stream overriding<a href="https://docs.nestjs.com/interceptors#stream-overriding" target="_blank" rel="noopener noreffer ">#</a></h3>
 <p>핸들러 호출을 완전히 방지하고 대신에 다른 값을 반환하는 이유가 몇 가지 있습니다. 명백한 예로 응답 시간을 개선하기 위해 캐시를 구현하는 것이 있습니다. 캐시에서 응답을 반환하는 간단한 <strong>캐시 인터셉터</strong>를 살펴보겠습니다. 현실적인 예제에서는 TTL, 캐시 무효화, 캐시 크기 등과 같은 다른 요소도 고려해야 합니다. 하지만 이것은 이 토론의 범위를 벗어납니다. 여기서는 주요 컨셉을 보여주는 기본적인 예제를 제공하겠습니다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -831,7 +845,7 @@ If you are looking for a real-world example on how to implement authorization, c
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="c1">//cache.interceptor.ts
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Injectable</span><span class="p">,</span> <span class="nx">NestInterceptor</span><span class="p">,</span> <span class="nx">ExecutionContext</span><span class="p">,</span> <span class="nx">CallHandler</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/common&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Observable</span><span class="p">,</span> <span class="k">of</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;rxjs&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
@@ -849,7 +863,7 @@ If you are looking for a real-world example on how to implement authorization, c
 </div>
 </div><p>우리의 <code>CacheInterceptor</code>에는 하드코딩된 <code>isCached</code> 변수와 하드코딩된 응답 <code>[]</code>이 있습니다. 주목해야 할 중요한 점은 RxJS의 <code>of()</code> 연산자에 의해 여기서 생성된 새로운 스트림을 반환하므로 라우트 핸들러는 <strong>전혀 호출되지 않을 것</strong>입니다. <code>CacheInterceptor</code>를 사용하는 엔드포인트를 호출하면 응답(하드코딩된 빈 배열)이 즉시 반환됩니다. 일반적인 솔루션을 만들려면 <code>Reflector</code>를 활용하여 사용자 정의 데코레이터를 만들 수 있습니다. <code>Reflector</code>는 <a href="https://docs.nestjs.com/guards" target="_blank" rel="noopener noreffer ">guards</a> 챕터에서 잘 설명되어 있습니다.</p>
 <p>​</p>
-<h3 id="more-operatorshttpsdocsnestjscominterceptorsmore-operators">More operators<a href="https://docs.nestjs.com/interceptors#more-operators" target="_blank" rel="noopener noreffer ">#</a></h3>
+<h3 id="more-operators">More operators<a href="https://docs.nestjs.com/interceptors#more-operators" target="_blank" rel="noopener noreffer ">#</a></h3>
 <p>RxJS 연산자를 사용하여 스트림을 조작할 수 있는 가능성은 많은 기능을 제공합니다. 또 다른 일반적인 사용 사례를 살펴보겠습니다. 엔드포인트가 일정 시간이 지나서 아무것도 반환하지 않는 경우에, 에러를 반환 하고 싶을 것입니다. 다음 구성은 이를 가능하게 합니다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -876,7 +890,7 @@ If you are looking for a real-world example on how to implement authorization, c
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="c1">//timeout.interceptor.ts
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Injectable</span><span class="p">,</span> <span class="nx">NestInterceptor</span><span class="p">,</span> <span class="nx">ExecutionContext</span><span class="p">,</span> <span class="nx">CallHandler</span><span class="p">,</span> <span class="nx">RequestTimeoutException</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/common&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Observable</span><span class="p">,</span> <span class="nx">throwError</span><span class="p">,</span> <span class="nx">TimeoutError</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;rxjs&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">catchError</span><span class="p">,</span> <span class="nx">timeout</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;rxjs/operators&#39;</span><span class="p">;</span>
@@ -903,9 +917,10 @@ If you are looking for a real-world example on how to implement authorization, c
 <h2 id="custom-route-decorators">Custom route decorators</h2>
 <p>Nest는 <strong>데코레이터</strong>라는 언어 기능을 중심으로 구축되었습니다. 데코레이터는 많은 일반적으로 사용되는 프로그래밍 언어에서 잘 알려진 개념이지만 JavaScript 세계에서는 여전히 비교적 새로운 개념입니다. 데코레이터 작동 방식을 더 잘 이해하기 위해 <a href="https://medium.com/google-developers/exploring-es7-decorators-76ecb65fb841" target="_blank" rel="noopener noreffer ">이 기사</a>를 읽는 것이 좋습니다. 여기에 간단한 정의가 있습니다:</p>
 <blockquote>
-<p>ES2016(ES7) 데코레이터는 함수를 반환하는 표현식으로, 대상(target), 이름(name), 및 속성 기술자(property descriptor)를 인수로 받을 수 있습니다. 데코레이터를 적용하려면 데코레이터를 <code>@</code> 문자로 접두사로 붙이고 이를 꾸며주려는 대상의 맨 위에 배치하면 됩니다. 데코레이터는 클래스, 메서드 또는 속성에 대해 정의할 수 있습니다.</p></blockquote>
+<p>ES2016(ES7) 데코레이터는 함수를 반환하는 표현식으로, 대상(target), 이름(name), 및 속성 기술자(property descriptor)를 인수로 받을 수 있습니다. 데코레이터를 적용하려면 데코레이터를 <code>@</code> 문자로 접두사로 붙이고 이를 꾸며주려는 대상의 맨 위에 배치하면 됩니다. 데코레이터는 클래스, 메서드 또는 속성에 대해 정의할 수 있습니다.</p>
+</blockquote>
 <p>​</p>
-<h3 id="param-decoratorshttpsdocsnestjscomcustom-decoratorsparam-decorators">Param decorators<a href="https://docs.nestjs.com/custom-decorators#param-decorators" target="_blank" rel="noopener noreffer ">#</a></h3>
+<h3 id="param-decorators">Param decorators<a href="https://docs.nestjs.com/custom-decorators#param-decorators" target="_blank" rel="noopener noreffer ">#</a></h3>
 <p>Nest는 HTTP 라우트 핸들러와 함께 사용할 수 있는 유용한 <strong>파라미터 데코레이터</strong> 세트를 제공합니다. 아래는 제공되는 데코레이터와 해당하는 일반적인 Express (또는 Fastify) 객체의 목록입니다.</p>
 <table>
   <thead>
@@ -983,7 +998,7 @@ If you are looking for a real-world example on how to implement authorization, c
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="c1">//user.decorator.ts
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">createParamDecorator</span><span class="p">,</span> <span class="nx">ExecutionContext</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/common&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">User</span> <span class="o">=</span> <span class="nx">createParamDecorator</span><span class="p">(</span>
@@ -1010,7 +1025,7 @@ If you are looking for a real-world example on how to implement authorization, c
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>​</p>
-<h3 id="passing-datahttpsdocsnestjscomcustom-decoratorspassing-data">Passing data<a href="https://docs.nestjs.com/custom-decorators#passing-data" target="_blank" rel="noopener noreffer ">#</a></h3>
+<h3 id="passing-data">Passing data<a href="https://docs.nestjs.com/custom-decorators#passing-data" target="_blank" rel="noopener noreffer ">#</a></h3>
 <p>데코레이터의 동작이 어떤 조건에 따라 달라질 때 <code>data</code> 매개변수를 사용하여 데코레이터 팩토리 함수에 인수를 전달할 수 있습니다. 이러한 경우 중 하나는 요청 객체에서 키별로 속성을 추출하는 사용자 정의 데코레이터입니다. 예를 들어 <a href="https://docs.nestjs.com/techniques/authentication#implementing-passport-strategies" target="_blank" rel="noopener noreffer ">인증 레이어</a>가 요청을 유효성 검사하고 사용자 엔터티를 요청 객체에 첨부하는 경우, 인증된 요청에 대한 사용자 엔터티는 다음과 같을 수 있습니다:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1050,7 +1065,7 @@ If you are looking for a real-world example on how to implement authorization, c
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="c1">//user.decorator.ts
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">createParamDecorator</span><span class="p">,</span> <span class="nx">ExecutionContext</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/common&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">User</span> <span class="o">=</span> <span class="nx">createParamDecorator</span><span class="p">(</span>
@@ -1081,9 +1096,10 @@ If you are looking for a real-world example on how to implement authorization, c
 </div><p>같은 데코레이터를 다른 키와 함께 사용하여 다양한 속성에 액세스할 수 있습니다. <code>user</code> 객체가 깊거나 복잡한 경우, 이렇게 함으로써 더 쉽고 가독성 있는 요청 핸들러를 구현할 수 있습니다.</p>
 <blockquote>
 <p><strong>HINT</strong></p>
-<p>TypeScript 사용자들을 위해 <code>createParamDecorator&lt;T&gt;()</code>가 제네릭임을 주목하세요. 이는 명시적으로 타입 안전성을 강제할 수 있음을 의미합니다. 예를 들어 <code>createParamDecorator&lt;string&gt;((data, ctx) =&gt; ...)</code>와 같이 사용할 수 있습니다. 또는 팩토리 함수에서 매개변수 타입을 지정할 수도 있습니다. 예를 들어 <code>createParamDecorator((data: string, ctx) =&gt; ...)</code>와 같이 사용할 수 있습니다. 둘 다 생략하는 경우 <code>data</code>의 타입은 <code>any</code>가 됩니다.</p></blockquote>
+<p>TypeScript 사용자들을 위해 <code>createParamDecorator&lt;T&gt;()</code>가 제네릭임을 주목하세요. 이는 명시적으로 타입 안전성을 강제할 수 있음을 의미합니다. 예를 들어 <code>createParamDecorator&lt;string&gt;((data, ctx) =&gt; ...)</code>와 같이 사용할 수 있습니다. 또는 팩토리 함수에서 매개변수 타입을 지정할 수도 있습니다. 예를 들어 <code>createParamDecorator((data: string, ctx) =&gt; ...)</code>와 같이 사용할 수 있습니다. 둘 다 생략하는 경우 <code>data</code>의 타입은 <code>any</code>가 됩니다.</p>
+</blockquote>
 <p>​</p>
-<h3 id="working-with-pipeshttpsdocsnestjscomcustom-decoratorsworking-with-pipes">Working with pipes<a href="https://docs.nestjs.com/custom-decorators#working-with-pipes" target="_blank" rel="noopener noreffer ">#</a></h3>
+<h3 id="working-with-pipes">Working with pipes<a href="https://docs.nestjs.com/custom-decorators#working-with-pipes" target="_blank" rel="noopener noreffer ">#</a></h3>
 <p>Nest는 사용자 정의된 매개 변수 데코레이터를 내장된 것들 (<code>@Body()</code>, <code>@Param()</code> 및 <code>@Query()</code>)과 동일한 방식으로 처리합니다. 이는 사용자 정의 주석이 달린 매개 변수에 대해서도 파이프가 실행된다는 것을 의미합니다 (우리의 예제에서는 <code>user</code> 인자). 더 나아가 직접 사용자 정의 데코레이터에 파이프를 적용할 수도 있습니다:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1107,9 +1123,10 @@ If you are looking for a real-world example on how to implement authorization, c
 </div>
 </div><blockquote>
 <p><strong>HINT</strong></p>
-<p>주의: <code>validateCustomDecorators</code> 옵션을 true로 설정해야 합니다. <code>ValidationPipe</code>은 기본적으로 사용자 정의 데코레이터로 주석이 달린 인수를 유효성 검사하지 않습니다.</p></blockquote>
+<p>주의: <code>validateCustomDecorators</code> 옵션을 true로 설정해야 합니다. <code>ValidationPipe</code>은 기본적으로 사용자 정의 데코레이터로 주석이 달린 인수를 유효성 검사하지 않습니다.</p>
+</blockquote>
 <p>​</p>
-<h3 id="decorator-compositionhttpsdocsnestjscomcustom-decoratorsdecorator-composition">Decorator composition<a href="https://docs.nestjs.com/custom-decorators#decorator-composition" target="_blank" rel="noopener noreffer ">#</a></h3>
+<h3 id="decorator-composition">Decorator composition<a href="https://docs.nestjs.com/custom-decorators#decorator-composition" target="_blank" rel="noopener noreffer ">#</a></h3>
 <p>Nest는 여러 데코레이터를 결합하는 데 사용할 수 있는 도우미 메서드를 제공합니다. 예를 들어 인증과 관련된 모든 데코레이터를 하나의 데코레이터로 결합하려면 다음 구조를 사용할 수 있습니다:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1128,7 +1145,7 @@ If you are looking for a real-world example on how to implement authorization, c
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="c1">//auth.decorator.ts
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">applyDecorators</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/common&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kd">function</span> <span class="nx">Auth</span><span class="p">(...</span><span class="nx">roles</span>: <span class="kt">Role</span><span class="p">[])</span> <span class="p">{</span>
@@ -1157,7 +1174,8 @@ If you are looking for a real-world example on how to implement authorization, c
 </div><p>이렇게 하면 한 번의 선언으로 네 개의 데코레이터가 모두 적용됩니다.</p>
 <blockquote>
 <p><strong>WARNING</strong></p>
-<p><code>@nestjs/swagger</code> 패키지의 <code>@ApiHideProperty()</code> 데코레이터는 합성 가능하지 않으며 <code>applyDecorators</code> 함수와 제대로 작동하지 않을 것입니다.</p></blockquote>
+<p><code>@nestjs/swagger</code> 패키지의 <code>@ApiHideProperty()</code> 데코레이터는 합성 가능하지 않으며 <code>applyDecorators</code> 함수와 제대로 작동하지 않을 것입니다.</p>
+</blockquote>
 <p>​</p>
 <p>​</p>
 <p>​</p>
@@ -1193,7 +1211,7 @@ If you are looking for a real-world example on how to implement authorization, c
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.143.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.160.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

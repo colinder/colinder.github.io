@@ -1,16 +1,22 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Vscode - Tag - colinder&#39;s blog</title>
-        <link>https://colinder.github.io/tags/vscode/</link>
-        <description>Vscode - Tag - colinder&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Wed, 21 Jan 2026 14:26:13 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/vscode/" rel="self" type="application/rss+xml" /><item>
-    <title>내가 쓰는 vscode lint 설정</title>
-    <link>https://colinder.github.io/vscode_lint/</link>
-    <pubDate>Wed, 21 Jan 2026 14:26:13 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/vscode_lint/</guid>
-    <description><![CDATA[내가 좋아하는 vscode lint 설정 방법을 기록합니다.]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vscode on colinder&#39;s blog</title>
+    <link>https://colinder.github.io/tags/vscode/</link>
+    <description>Recent content in Vscode on colinder&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+    <webMaster>kjonggwan@gmail.com (colinder)</webMaster>
+    <copyright>colinder</copyright>
+    <lastBuildDate>Wed, 21 Jan 2026 14:26:13 +0900</lastBuildDate>
+    <atom:link href="https://colinder.github.io/tags/vscode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>내가 쓰는 vscode lint 설정</title>
+      <link>https://colinder.github.io/vscode_lint/</link>
+      <pubDate>Wed, 21 Jan 2026 14:26:13 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/vscode_lint/</guid>
+      <description>내가 좋아하는 vscode lint 설정 방법을 기록합니다.</description>
+    </item>
+  </channel>
 </rss>

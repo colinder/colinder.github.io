@@ -147,13 +147,15 @@
             </div><div class="content" id="content"><p>​</p>
 <h1 id="데이터-스케일링data-scaling-이란">데이터 스케일링(Data Scaling) 이란?</h1>
 <blockquote>
-<p><strong>데이터</strong>의 값의 범위를 조정하는 것</p></blockquote>
+<p><strong>데이터</strong>의 값의 범위를 조정하는 것</p>
+</blockquote>
 <p>​</p>
 <p>​</p>
 <p>​</p>
 <h2 id="-왜-데이터-스케일링을-하는가">🤔 왜 데이터 스케일링을 하는가?</h2>
 <blockquote>
-<p>데이터의 경향, feature의 영향, 상관관계 등 데이터를 분석하는데 활용할 수 있으며, 인공지능 개발 중 학습단계에서 여러 feature의 영향도를 비슷한 수준으로 맞추기 위해 범위를 조정.</p></blockquote>
+<p>데이터의 경향, feature의 영향, 상관관계 등 데이터를 분석하는데 활용할 수 있으며, 인공지능 개발 중 학습단계에서 여러 feature의 영향도를 비슷한 수준으로 맞추기 위해 범위를 조정.</p>
+</blockquote>
 <p>​</p>
 <p>아래 그림을 보면서 이해해보겠습니다.</p>
 <image src="/images/Data_Scaling.assets/image-20220406172937054.png" width="100%" style="display: block; margin: 20px auto">
@@ -182,7 +184,8 @@
 <h3 id="결론">결론</h3>
 <blockquote>
 <p>feature별 데이터의 규모(scale)이 다르다면, 논리적인 인공지능 학습이 이루어지지 않을 수 있습니다.</p>
-<p><b>따라서, 데이터 스케일링 작업을 통해, 모든 feature의 범위(또는 분포)를 유사하게 만들어 주는 것이 모델 학습에 좋은 영향을 주게 됩니다.</b></p></blockquote>
+<p><b>따라서, 데이터 스케일링 작업을 통해, 모든 feature의 범위(또는 분포)를 유사하게 만들어 주는 것이 모델 학습에 좋은 영향을 주게 됩니다.</b></p>
+</blockquote>
 <p>​</p>
 <p>​</p>
 <p>​</p>
@@ -190,7 +193,8 @@
 <p>​</p>
 <h2 id="-스케일링-방법은-어떤-것들이-있는지">🧐 스케일링 방법은 어떤 것들이 있는지?</h2>
 <blockquote>
-<p>데이터 스케일링은 <code>데이터 값의 규모</code>를 <code>비슷한 수준으로 맞추어 주는 것</code>입니다. 그리고 <code>비슷한 수준으로 맞추어 주는 방법</code>은 주로 통계적인 기법을 사용해 진행합니다.</p></blockquote>
+<p>데이터 스케일링은 <code>데이터 값의 규모</code>를 <code>비슷한 수준으로 맞추어 주는 것</code>입니다. 그리고 <code>비슷한 수준으로 맞추어 주는 방법</code>은 주로 통계적인 기법을 사용해 진행합니다.</p>
+</blockquote>
 <p><span style="color: grey; font-size:.8em; float:right">* scikit-learn에서 제공되는 라이브러리 기준으로 정리</span></p>
 <p>​</p>
 <p>​</p>
@@ -205,7 +209,8 @@
 <p>​</p>
 <h3 id="minmaxscaler-normalization">MinMaxScaler (Normalization)</h3>
 <blockquote>
-<p>최대 최소값을 기준으로 스케일링</p></blockquote>
+<p>최대 최소값을 기준으로 스케일링</p>
+</blockquote>
 <ul>
 <li>
 <image src="/images/Data_Scaling.assets/image-20220411093738903.png" width="300px" style="display: block; margin: 20px auto">
@@ -265,7 +270,8 @@
 <p>​</p>
 <h3 id="maxabsscaler">MaxAbsScaler</h3>
 <blockquote>
-<p>value 절대값 기준, 최대 절대값을 100%로 두고 스케일링 (음수 표현 가능)</p></blockquote>
+<p>value 절대값 기준, 최대 절대값을 100%로 두고 스케일링 (음수 표현 가능)</p>
+</blockquote>
 <ul>
 <li>데이터가 -1 ~ 1 사이에 위치하도록 스케일링.</li>
 <li>절대값의 최소값 = 0, 절대값의 최대값 = 1이 되도록 스케일링 합니다.</li>
@@ -311,7 +317,8 @@
 <p>​</p>
 <h3 id="standardscale-standardization">StandardScale (Standardization)</h3>
 <blockquote>
-<p>정규분포를 따르게 스케일링</p></blockquote>
+<p>정규분포를 따르게 스케일링</p>
+</blockquote>
 <ul>
 <li>
 <image src="/images/Data_Scaling.assets/image-20220411093753724.png" width="200px" style="display: block; margin: 20px auto">
@@ -459,7 +466,7 @@
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.143.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.160.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

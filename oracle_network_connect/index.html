@@ -132,7 +132,8 @@
 둘째, <b>DB에 연결할 guest</b>가 있을 것이다.</p>
 <p>그렇다면, host가 guest의 IP를 등록해놓으면 guest가 접근하면 DB가 연결되는 걸까?<br>
 guest가 host의 IP를 입력해 DB를 연결하는 걸까?</p>
-<p><b>아래 내용은 위의 두 가지를 다 진행하여 연결하였습니다. </b></p></blockquote>
+<p><b>아래 내용은 위의 두 가지를 다 진행하여 연결하였습니다. </b></p>
+</blockquote>
 <p>​</p>
 <p><em><strong>👀주의</strong></em></p>
 <p>각 단계 단계들이 필수적인 사항인지는 파악되지 않았습니다. <br>
@@ -306,7 +307,8 @@ guest가 host의 IP를 입력해 DB를 연결하는 걸까?</p>
 <p>tnsnames.ora가 있는 폴더 안에 있는 <b>listener.ora</b>파일과 관련있는 <b>Listener를 재시작</b>한다.</p>
 <blockquote>
 <p>오라클 리스너는 네트워크를 이용하여 클라이언트에서 오라클 서버로 연결하기 위한 오라클 네트워크 관리자 입니다. 네트워크를 통한 연결은 모두 리스너가 담당하며 리스너와 연결되기 위해서는 클라이언트에 오라클 NET8(오라클 클라이언트)이 설치되어 있고 이를 통해 오라클 서비스명이라는 것을 만들어 접속을 해야 합니다.</p>
-<p>오라클 서버에서 리스너를 시작시켜줘야 클라이언트들이 접속을 할 수 있습니다. <span style="font-size:0.8em; color:grey">(한 번 켜주니 재실행할 필요 없이 계속 접속 가능했음.)</span></p></blockquote>
+<p>오라클 서버에서 리스너를 시작시켜줘야 클라이언트들이 접속을 할 수 있습니다. <span style="font-size:0.8em; color:grey">(한 번 켜주니 재실행할 필요 없이 계속 접속 가능했음.)</span></p>
+</blockquote>
 <ol>
 <li>
 <p><b>cmd(명령 프롬프트)를 <code>관리자 권한</code>으로 실행</b>한다.</p>
@@ -391,7 +393,8 @@ guest가 host의 IP를 입력해 DB를 연결하는 걸까?</p>
 <blockquote>
 <p>Service Name : 서버관련, 클라이언트에서 사용하고자 하는 DB
 SID : 오라클 DB가 설치되어있는 곳에서 생성한 DB명</p>
-<p>네트워크를 연결하는 경우 host가 생성한 DB의 고유한 값과 guest가 불러온 DB의 구분을 위해 존재하는 것 같습니다.</p></blockquote>
+<p>네트워크를 연결하는 경우 host가 생성한 DB의 고유한 값과 guest가 불러온 DB의 구분을 위해 존재하는 것 같습니다.</p>
+</blockquote>
 </li>
 </ol>
 </li>
@@ -405,7 +408,8 @@ SID : 오라클 DB가 설치되어있는 곳에서 생성한 DB명</p>
 <p>​</p>
 <h2 id="이상-연결이-완료되고-host가-생성한-db를-guest-pc에서-확인할-수-있었습니다">👍이상 연결이 완료되고 host가 생성한 DB를 guest PC에서 확인할 수 있었습니다.</h2>
 <blockquote>
-<p>찾아보면 더 간편한 방법이 있을 수 있습니다. 정리한 방법은 다양한 정답 중 하나 정도로만 생각하고 참고하시면 좋을 것 같습니다.</p></blockquote>
+<p>찾아보면 더 간편한 방법이 있을 수 있습니다. 정리한 방법은 다양한 정답 중 하나 정도로만 생각하고 참고하시면 좋을 것 같습니다.</p>
+</blockquote>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -436,7 +440,7 @@ SID : 오라클 DB가 설치되어있는 곳에서 생성한 DB명</p>
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.143.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.160.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

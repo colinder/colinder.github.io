@@ -1,25 +1,22 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Scaling - Category - colinder&#39;s blog</title>
-        <link>https://colinder.github.io/categories/scaling/</link>
-        <description>Scaling - Category - colinder&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Thu, 07 Jul 2022 17:19:29 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/scaling/" rel="self" type="application/rss+xml" /><item>
-    <title>What is Data_Scaling</title>
-    <link>https://colinder.github.io/what_is_data_scaling/</link>
-    <pubDate>Thu, 07 Jul 2022 17:19:29 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/what_is_data_scaling/</guid>
-    <description><![CDATA[<p>​</p>
-<h1 id="데이터-스케일링data-scaling-이란">데이터 스케일링(Data Scaling) 이란?</h1>
-<blockquote>
-<p><strong>데이터</strong>의 값의 범위를 조정하는 것</p></blockquote>
-<p>​</p>
-<p>​</p>
-<p>​</p>
-<h2 id="-왜-데이터-스케일링을-하는가">🤔 왜 데이터 스케일링을 하는가?</h2>
-<blockquote>
-<p>데이터의 경향, feature의 영향, 상관관계 등 데이터를 분석하는데 활용할 수 있으며, 인공지능 개발 중 학습단계에서 여러 feature의 영향도를 비슷한 수준으로 맞추기 위해 범위를 조정.</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scaling on colinder&#39;s blog</title>
+    <link>https://colinder.github.io/categories/scaling/</link>
+    <description>Recent content in Scaling on colinder&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+    <webMaster>kjonggwan@gmail.com (colinder)</webMaster>
+    <copyright>colinder</copyright>
+    <lastBuildDate>Thu, 07 Jul 2022 17:19:29 +0900</lastBuildDate>
+    <atom:link href="https://colinder.github.io/categories/scaling/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What is Data_Scaling</title>
+      <link>https://colinder.github.io/what_is_data_scaling/</link>
+      <pubDate>Thu, 07 Jul 2022 17:19:29 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/what_is_data_scaling/</guid>
+      <description>&lt;p&gt;​&lt;/p&gt;&#xA;&lt;h1 id=&#34;데이터-스케일링data-scaling-이란&#34;&gt;데이터 스케일링(Data Scaling) 이란?&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;데이터&lt;/strong&gt;의 값의 범위를 조정하는 것&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;​&lt;/p&gt;&#xA;&lt;p&gt;​&lt;/p&gt;&#xA;&lt;p&gt;​&lt;/p&gt;&#xA;&lt;h2 id=&#34;-왜-데이터-스케일링을-하는가&#34;&gt;🤔 왜 데이터 스케일링을 하는가?&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;데이터의 경향, feature의 영향, 상관관계 등 데이터를 분석하는데 활용할 수 있으며, 인공지능 개발 중 학습단계에서 여러 feature의 영향도를 비슷한 수준으로 맞추기 위해 범위를 조정.&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

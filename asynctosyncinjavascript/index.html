@@ -15,7 +15,7 @@
     <meta property="article:modified_time" content="2020-11-20T13:59:06+09:00">
     <meta property="article:tag" content="Async">
     <meta property="article:tag" content="Sync">
-    <meta property="article:tag" content="JavaScript">
+    <meta property="article:tag" content="Javascript">
     <meta property="og:image" content="https://colinder.github.io/logo.png">
 
   <meta name="twitter:card" content="summary_large_image">
@@ -109,7 +109,7 @@
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Async To Sync in Javascript</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/javascript/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>JavaScript</a></span></div>
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/javascript/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Javascript</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2020-11-20">2020-11-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;3895 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;8 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="true">
@@ -132,7 +132,8 @@
             </div><div class="content" id="content"><p>​</p>
 <h1 id="async-to-sync-in-javascript">Async to Sync in JavaScript</h1>
 <blockquote>
-<p>누구나 웹개발을 하다보면 HTTP 통신을 통해 데이터를 가져오고 가공하고 사용하게됩니다. 그리고 동기, 비동기 처리 때문에 골치가 아파집니다. (만약 골치가 아프지 않다면.. 부럽습니다..) 더 이상 골치아프기 싫어서 정리해봅시다.👍</p></blockquote>
+<p>누구나 웹개발을 하다보면 HTTP 통신을 통해 데이터를 가져오고 가공하고 사용하게됩니다. 그리고 동기, 비동기 처리 때문에 골치가 아파집니다. (만약 골치가 아프지 않다면.. 부럽습니다..) 더 이상 골치아프기 싫어서 정리해봅시다.👍</p>
+</blockquote>
 <p><em>*동기, 비동기 설명은 <a href="https://colinder.github.io/sync_async_callback/" target="_blank" rel="noopener noreffer ">이전 포스팅</a>으로 갈음합니다.</em></p>
 <p>​</p>
 <h2 id="async비동기-to-sync동기-방법">Async(비동기) to Sync(동기) 방법</h2>
@@ -151,7 +152,8 @@
 <p>​</p>
 <h2 id="1-callback">1. Callback</h2>
 <blockquote>
-<p>개발자들 마다 정의가 조금씩 다르겠지만, 저는 <strong>어떤 이벤트가 발생한 후, 수행될 함수</strong>로 정의해보겠습니다.</p></blockquote>
+<p>개발자들 마다 정의가 조금씩 다르겠지만, 저는 <strong>어떤 이벤트가 발생한 후, 수행될 함수</strong>로 정의해보겠습니다.</p>
+</blockquote>
 <ul>
 <li>
 <p>예제를 보며 이해해 봅시다.</p>
@@ -180,23 +182,23 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Callback 사용 예제
 </span></span></span><span class="line"><span class="cl"><span class="c1">// a와 b라는 함수를 선언
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">a</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>       <span class="c1">// 함수 a는 callback이라는 함수를 받는다.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="s1">&#39;i am data&#39;</span>   <span class="c1">// i am data라는 값을 담은 변수 data를 생성
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">callback</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>             <span class="c1">// callback이라는 함수에 data라는 변수를 넘겨줌.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="s1">&#39;i am data&#39;</span>   <span class="c1">// i am data라는 값을 담은 변수 data를 생성
+</span></span></span><span class="line"><span class="cl">  <span class="nx">callback</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>             <span class="c1">// callback이라는 함수에 data라는 변수를 넘겨줌.
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">b</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>			  <span class="c1">// 함수 b는 입력받은 값 value를 콘솔에 출력하는 함수.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;넘겨받은 값&#39;</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span>
+</span></span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;넘겨받은 값&#39;</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// 사용해 봅시다.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">a</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>                   <span class="c1">// 함수 a에 function을 받는데 값으로 value를 받는다. 
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;넘겨받은 값&#39;</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span>     <span class="c1">// 함수 a가 실행되면 자동으로 const data를 만드는데 data에는 &#39;i am data&#39;라는 값이 할당. 되고 value가 된다.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">})</span>
+</span></span></span><span class="line"><span class="cl"><span class="nx">a</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>                   <span class="c1">// 함수 a에 function을 받는데 값으로 value를 받는다. 
+</span></span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;넘겨받은 값&#39;</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span>     <span class="c1">// 함수 a가 실행되면 자동으로 const data를 만드는데 data에는 &#39;i am data&#39;라는 값이 할당. 되고 value가 된다.
+</span></span></span><span class="line"><span class="cl"><span class="p">})</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// 위를 간소화한 코드.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">a</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span>
+</span></span></span><span class="line"><span class="cl"><span class="nx">a</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>​</p>
@@ -226,22 +228,22 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Callback 비동기적 코딩
 </span></span></span><span class="line"><span class="cl"><span class="c1">// a가 동작하고 b가 동작하길 원하며 코딩
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// a와 b라는 함수를 선언
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">a</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>       <span class="c1">// 함수 a는 2초 후에 동작
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">a</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>       <span class="c1">// 함수 a는 2초 후에 동작
+</span></span></span><span class="line"><span class="cl">  <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;running a....&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">  <span class="p">},</span> <span class="mi">2000</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">b</span><span class="p">()</span> <span class="p">{</span>       <span class="c1">// 함수 b는 1초 후에 동작
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">  <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;running b....&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">  <span class="p">},</span> <span class="mi">1000</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// 실행해봅시다.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">a</span><span class="p">()</span>
+</span></span></span><span class="line"><span class="cl"><span class="nx">a</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="nx">b</span><span class="p">()</span>
 </span></span></code></pre></td></tr></table>
 </div>
@@ -275,23 +277,23 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Callback 동기적 코딩
 </span></span></span><span class="line"><span class="cl"><span class="c1">// a가 동작하고 b가 동작하길 원하며 코딩
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// a와 b라는 함수를 선언
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">a</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>       <span class="c1">// 함수 a는 2초 후에 동작
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">a</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>       <span class="c1">// 함수 a는 2초 후에 동작
+</span></span></span><span class="line"><span class="cl">  <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;running a....&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">      <span class="nx">callback</span><span class="p">()</span>			 <span class="c1">// 👈 callback함수를 추가
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">},</span> <span class="mi">2000</span><span class="p">)</span>
+</span></span></span><span class="line"><span class="cl">  <span class="p">},</span> <span class="mi">2000</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">b</span><span class="p">()</span> <span class="p">{</span>       <span class="c1">// 함수 b는 1초 후에 동작
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">  <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;running b....&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">  <span class="p">},</span> <span class="mi">1000</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// 실행해봅시다.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">a</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span>
+</span></span></span><span class="line"><span class="cl"><span class="nx">a</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><image src="/images/Async_to_Sync_in_Javascript_01.png" width="1000px">
@@ -304,7 +306,8 @@
 </ul>
 <h2 id="2-promise">2. Promise</h2>
 <blockquote>
-<p><strong><code>Promise</code></strong> 객체는 비동기 작업이 맞이할 미래의 완료 또는 실패와 그 결과 값을 나타냅니다. 간단히 비동기 작업에 사용되는 객체입니다.</p></blockquote>
+<p><strong><code>Promise</code></strong> 객체는 비동기 작업이 맞이할 미래의 완료 또는 실패와 그 결과 값을 나타냅니다. 간단히 비동기 작업에 사용되는 객체입니다.</p>
+</blockquote>
 <ul>
 <li>
 <p>Promise는 <span style='background-color: black; font-weight: bold; border-radius: 10px; padding-bottom: .2rem'> <span style="color: grey">ex)</span> <span style= 'color: #569cd6'>new</span> <span style="color: #1cb50b;">Promise <span style="color: white">(</span></span><span style= 'color: #569cd6'> function <span style="color: white">(</span> <span style="color: #dcdcaa;">resolve, reject</span> <span style="color: white">)</span></span><span style="color: white;">)</span> </span>의 형태로 사용됩니다.</p>
@@ -346,28 +349,28 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Promise 사용 예제
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">test</span><span class="p">()</span> <span class="p">{</span>                                  <span class="c1">// test라는 동작(함수)을 만드는데
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span>   <span class="c1">// Promise로 만들고 Promise는 인자로 resolve, reject를 받는다.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="k">try</span> <span class="p">{</span>                                        <span class="c1">// 정상처리되면(조건은 다양하게 구성)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>          <span class="nx">resolve</span><span class="p">(</span>                                 <span class="c1">// resolve를 동작하는데
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>              <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Promise resolve&#39;</span><span class="p">)</span>       <span class="c1">// Promise resolve를 출력하고
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>          <span class="p">)</span>
+</span></span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span>   <span class="c1">// Promise로 만들고 Promise는 인자로 resolve, reject를 받는다.
+</span></span></span><span class="line"><span class="cl">      <span class="k">try</span> <span class="p">{</span>                                        <span class="c1">// 정상처리되면(조건은 다양하게 구성)
+</span></span></span><span class="line"><span class="cl">          <span class="nx">resolve</span><span class="p">(</span>                                 <span class="c1">// resolve를 동작하는데
+</span></span></span><span class="line"><span class="cl">              <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Promise resolve&#39;</span><span class="p">)</span>       <span class="c1">// Promise resolve를 출력하고
+</span></span></span><span class="line"><span class="cl">          <span class="p">)</span>
 </span></span><span class="line"><span class="cl">      <span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>                                    <span class="c1">// error가 발생하면
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>          <span class="nx">reject</span><span class="p">(</span>                                  <span class="c1">// reject를 동작하는데
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>              <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Promise reject&#39;</span><span class="p">)</span>        <span class="c1">// Promise reject를 출력한다.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>          <span class="p">)</span>
+</span></span></span><span class="line"><span class="cl">          <span class="nx">reject</span><span class="p">(</span>                                  <span class="c1">// reject를 동작하는데
+</span></span></span><span class="line"><span class="cl">              <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Promise reject&#39;</span><span class="p">)</span>        <span class="c1">// Promise reject를 출력한다.
+</span></span></span><span class="line"><span class="cl">          <span class="p">)</span>
 </span></span><span class="line"><span class="cl">      <span class="p">}</span>
 </span></span><span class="line"><span class="cl">  <span class="p">})</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nx">test</span><span class="p">()</span>                            <span class="c1">// test를 동작(함수실행)하는데
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span>                    <span class="c1">// 에러가 없다면
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;정상 처리 완료&#39;</span><span class="p">)</span>    <span class="c1">// &#39;정상 처리 완료&#39;를 출력하고
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">)</span>
+</span></span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span>                    <span class="c1">// 에러가 없다면
+</span></span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;정상 처리 완료&#39;</span><span class="p">)</span>    <span class="c1">// &#39;정상 처리 완료&#39;를 출력하고
+</span></span></span><span class="line"><span class="cl"><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="p">=&gt;</span>                   <span class="c1">// 에러가 발생했다면
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;에러 발생&#39;</span><span class="p">)</span>        <span class="c1">// &#39;에러 발생&#39;을 출력한다.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">)</span>
+</span></span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;에러 발생&#39;</span><span class="p">)</span>        <span class="c1">// &#39;에러 발생&#39;을 출력한다.
+</span></span></span><span class="line"><span class="cl"><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>​</p>
@@ -416,15 +419,15 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Promise 동기적 코딩
 </span></span></span><span class="line"><span class="cl"><span class="c1">// 1,2,3 순서대로 출력되길 원하며 코딩
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">test</span><span class="p">()</span> <span class="p">{</span>                                    <span class="c1">// test라는 동작(함수)을 만드는데
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span>   <span class="c1">// Promise로 만들고 Promise는 인자로 reselve, reject를 받는다.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="k">try</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span>   <span class="c1">// Promise로 만들고 Promise는 인자로 reselve, reject를 받는다.
+</span></span></span><span class="line"><span class="cl">      <span class="k">try</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">          <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>					<span class="c1">// AJAX등의 처리를 기다리는 &#39;지연 시간&#39;을 setTimeout으로 설정
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>              <span class="nx">resolve</span><span class="p">(</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">)</span> <span class="p">)</span>			<span class="c1">// resolve처리를 하는데 3초의 딜레이를 주고
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>          <span class="p">},</span><span class="mi">3000</span><span class="p">)</span>
+</span></span></span><span class="line"><span class="cl">              <span class="nx">resolve</span><span class="p">(</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">)</span> <span class="p">)</span>			<span class="c1">// resolve처리를 하는데 3초의 딜레이를 주고
+</span></span></span><span class="line"><span class="cl">          <span class="p">},</span><span class="mi">3000</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">          <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">)</span>                    	<span class="c1">// resolve 
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">      <span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">          <span class="nx">reject</span><span class="p">(</span>
 </span></span><span class="line"><span class="cl">              <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;reject running&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">          <span class="p">)</span>
@@ -438,10 +441,10 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// 실행해봅시다.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">test</span><span class="p">()</span>
+</span></span></span><span class="line"><span class="cl"><span class="nx">test</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="c1">// .then(function() {b()})
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">//////////////////////////////////////////////////////////////////////////////////////
 </span></span></span><span class="line"><span class="cl"><span class="c1">// .then(b) === .then(function() {b()}) === .then(() =&gt; {b()}) !== .then(b())
 </span></span></span><span class="line"><span class="cl"><span class="c1">// .then(b) / .then(function() {b()}) / .then(() =&gt; {b()})는 
@@ -465,7 +468,8 @@
 </ul>
 <h2 id="3-async--await">3. Async / Await</h2>
 <blockquote>
-<p>Async(비동기) / Await(기다려!)는 비동기 처리를 하는 방법 중 하나입니다. Promise 나 Callback 보다 가독성이 좋은 코드를 짤 수 있다고 생각합니다.</p></blockquote>
+<p>Async(비동기) / Await(기다려!)는 비동기 처리를 하는 방법 중 하나입니다. Promise 나 Callback 보다 가독성이 좋은 코드를 짤 수 있다고 생각합니다.</p>
+</blockquote>
 <ul>
 <li>
 <p>위에 Promise를 살펴본 이유가 있습니다. Async/await의 기반이 Promise이기 때문입니다. 우리가 쓰는 모든 async 함수는 Promise를 리턴하고, 모든 await 함수는 일반적으로 Promise가 됩니다.</p>
@@ -509,7 +513,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Async/Await 사용 예제
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">promise</span><span class="p">()</span> <span class="p">{</span>		
 </span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">      <span class="nx">resolve</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -521,7 +525,7 @@
 </span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="c1">// 돌려봅시다!
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">foo</span><span class="p">()</span>		<span class="c1">// 10
+</span></span></span><span class="line"><span class="cl"><span class="nx">foo</span><span class="p">()</span>		<span class="c1">// 10
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>​</p>
@@ -549,7 +553,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Async/Await 동기적 코딩
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">promise</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;AsyncAwait running...&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span>
@@ -565,7 +569,7 @@
 </span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;num:&#39;</span><span class="p">,</span> <span class="nx">num</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="c1">// 돌려봅시다!
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">foo</span><span class="p">()</span>
+</span></span></span><span class="line"><span class="cl"><span class="nx">foo</span><span class="p">()</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><image src="/images/Async_to_Sync_in_Javascript_03.png" width="1000px">
@@ -577,7 +581,8 @@
 </ul>
 <h1 id="요약">👀요약</h1>
 <blockquote>
-<p>공부한 3가지 방법 모두 유용하고 강력한 기능이라는 생각입니다. 모두를 익히면 좋고 선택적으로 익혀야 한다면 본인에게 잘 맞는 방법으로 익혀 사용하면 좋을 것 같습니다.</p></blockquote>
+<p>공부한 3가지 방법 모두 유용하고 강력한 기능이라는 생각입니다. 모두를 익히면 좋고 선택적으로 익혀야 한다면 본인에게 잘 맞는 방법으로 익혀 사용하면 좋을 것 같습니다.</p>
+</blockquote>
 <p>​</p>
 <p>​</p>
 <h1 id="삽질">🤷‍♂️삽질</h1>
@@ -620,7 +625,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// 여러 test 중 하나. 
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">promise</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;AsyncAwait running...&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span>
@@ -636,7 +641,7 @@
 </span></span><span class="line"><span class="cl">      <span class="nx">setTimeout</span><span class="p">(()=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">          <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;test2Promise running...&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">          						<span class="c1">// 👈 Promise의 resolve가 없습니다.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="p">},</span><span class="mi">3000</span><span class="p">)</span>
+</span></span></span><span class="line"><span class="cl">      <span class="p">},</span><span class="mi">3000</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">  <span class="p">})</span> 
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
@@ -644,18 +649,19 @@
 </span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;foo running...&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">num</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">promise</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">// await test1()
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kr">await</span> <span class="nx">test2Promise</span><span class="p">()</span>
+</span></span></span><span class="line"><span class="cl">  <span class="kr">await</span> <span class="nx">test2Promise</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;num:&#39;</span><span class="p">,</span> <span class="nx">num</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="c1">// 돌려봅시다!
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">foo</span><span class="p">()</span>
+</span></span></span><span class="line"><span class="cl"><span class="nx">foo</span><span class="p">()</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><image src="/images/Async_to_Sync_in_Javascript_04.png" width="1000px">
 <p>test2Promise의 resolve를 등록하지 않으면 이전 Promise()인 promise()도 resolve가 정상적으로 진행되 않는 것을 볼 수 있습니다.</p>
 <p>위에서 설명한</p>
 <blockquote>
-<p>만약 인자를 받지 않거나 함수 이외의 값을 전달하면, Uncaught TypeError가 발생하고, 인자로 전달된 resolve 와 reject 중 하나라도 호출하지 않는다면, 영원히 pending 상태로 대기하게 됩니다.</p></blockquote>
+<p>만약 인자를 받지 않거나 함수 이외의 값을 전달하면, Uncaught TypeError가 발생하고, 인자로 전달된 resolve 와 reject 중 하나라도 호출하지 않는다면, 영원히 pending 상태로 대기하게 됩니다.</p>
+</blockquote>
 <p>가 발생한 것입니다.</p>
 <p>​</p>
 </li>
@@ -663,7 +669,8 @@
 <p>공부를 하던 중 <code>.then()</code>에 대한 흥미로운 내용을 확인했습니다.</p>
 <blockquote>
 <p><code>.then()</code>은 요청의 결과가 성공했을 때 사용하는 것으로만 생각했는데 인자를 2개 받는 다는 것을 알았습니다. 확인해보니 <code>.then()</code> 에 넘겨지는 인자는 선택적(optional)이었습니다. 그리고</p>
-<p><code>catch(failureCallback)</code> 는 <code>then(null, failureCallback)</code> 의 축약었습니다.</p></blockquote>
+<p><code>catch(failureCallback)</code> 는 <code>then(null, failureCallback)</code> 의 축약었습니다.</p>
+</blockquote>
 <p>​</p>
 <p>​</p>
 </li>
@@ -718,7 +725,7 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/async/">Async</a>,&nbsp;<a href="/tags/sync/">Sync</a>,&nbsp;<a href="/tags/javascript/">JavaScript</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/async/">Async</a>,&nbsp;<a href="/tags/sync/">Sync</a>,&nbsp;<a href="/tags/javascript/">Javascript</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
@@ -731,7 +738,7 @@
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.143.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.160.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
@@ -741,5 +748,5 @@
             </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
                 <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><link rel="stylesheet" href="/css/_custom.scss"><script type="text/javascript" src="https://colinder-github-io.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript" src="/lib/mermaid/mermaid.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":200},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"id-1":"\r\n  graph LR;\r\n      A[pending 대기상태] --\u003e|성공| B[fulfilled 성공상태]\r\n      A[pending 대기상태] --\u003e|실패| C[rejected 실패상태]\r\n  ","id-2":"\r\n  graph LR;\r\n      A[pending 대기상태] --\u003e|성공| B[fulfilled 성공상태] --\u003e |`이 흐름을 사용`   | D[.then]\r\n      A[pending 대기상태] --\u003e|실패| C[rejected 실패상태] --\u003e |`이 흐름을 사용`   | E[.catch]\r\n  "},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><link rel="stylesheet" href="/css/_custom.scss"><script type="text/javascript" src="https://colinder-github-io.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript" src="/lib/mermaid/mermaid.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":200},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"id-1":"  graph LR;\n      A[pending 대기상태] --\u003e|성공| B[fulfilled 성공상태]\n      A[pending 대기상태] --\u003e|실패| C[rejected 실패상태]\n  ","id-2":"  graph LR;\n      A[pending 대기상태] --\u003e|성공| B[fulfilled 성공상태] --\u003e |`이 흐름을 사용`   | D[.then]\n      A[pending 대기상태] --\u003e|실패| C[rejected 실패상태] --\u003e |`이 흐름을 사용`   | E[.catch]\n  "},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

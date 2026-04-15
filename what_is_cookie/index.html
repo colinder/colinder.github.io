@@ -193,7 +193,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// 쿠키는 &#34;이름=값&#34; 페어로 시작됩니다.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">Set</span><span class="o">-</span><span class="nx">Cookie</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">name</span><span class="o">&gt;=&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">value</span><span class="o">&gt;</span> 
+</span></span></span><span class="line"><span class="cl"><span class="nx">Set</span><span class="o">-</span><span class="nx">Cookie</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">name</span><span class="o">&gt;=&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">value</span><span class="o">&gt;</span> 
 </span></span><span class="line"><span class="cl"><span class="nx">Set</span><span class="o">-</span><span class="nx">Cookie</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">name</span><span class="o">&gt;=&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">value</span><span class="o">&gt;</span><span class="p">;</span> <span class="nx">Expires</span><span class="o">=&lt;</span><span class="nx">date</span><span class="o">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="nx">Set</span><span class="o">-</span><span class="nx">Cookie</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">name</span><span class="o">&gt;=&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">value</span><span class="o">&gt;</span><span class="p">;</span> <span class="nx">Max</span><span class="o">-</span><span class="nx">Age</span><span class="o">=&lt;</span><span class="nx">non</span><span class="o">-</span><span class="nx">zero</span><span class="o">-</span><span class="nx">digit</span><span class="o">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="nx">Set</span><span class="o">-</span><span class="nx">Cookie</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">name</span><span class="o">&gt;=&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">value</span><span class="o">&gt;</span><span class="p">;</span> <span class="nx">Domain</span><span class="o">=&lt;</span><span class="nx">domain</span><span class="o">-</span><span class="nx">value</span><span class="o">&gt;</span>
@@ -205,7 +205,7 @@
 </span></span><span class="line"><span class="cl"><span class="nx">Set</span><span class="o">-</span><span class="nx">Cookie</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">name</span><span class="o">&gt;=&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">value</span><span class="o">&gt;</span><span class="p">;</span> <span class="nx">SameSite</span><span class="o">=</span><span class="nx">Lax</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// Multiple directives are also possible, for example:
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">Set</span><span class="o">-</span><span class="nx">Cookie</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">name</span><span class="o">&gt;=&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">value</span><span class="o">&gt;</span><span class="p">;</span> <span class="nx">Domain</span><span class="o">=&lt;</span><span class="nx">domain</span><span class="o">-</span><span class="nx">value</span><span class="o">&gt;</span><span class="p">;</span> <span class="nx">Secure</span><span class="p">;</span> <span class="nx">HttpOnly</span>
+</span></span></span><span class="line"><span class="cl"><span class="nx">Set</span><span class="o">-</span><span class="nx">Cookie</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">name</span><span class="o">&gt;=&lt;</span><span class="nx">cookie</span><span class="o">-</span><span class="nx">value</span><span class="o">&gt;</span><span class="p">;</span> <span class="nx">Domain</span><span class="o">=&lt;</span><span class="nx">domain</span><span class="o">-</span><span class="nx">value</span><span class="o">&gt;</span><span class="p">;</span> <span class="nx">Secure</span><span class="p">;</span> <span class="nx">HttpOnly</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>​</p>
@@ -220,8 +220,8 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// ex) 
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">alert</span><span class="p">(</span> <span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="p">);</span> <span class="c1">// cookie1=value1; cookie2=value2;...	 // 모든 쿠키를 알림창으로 확인하겠다.는 명령어
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl"><span class="nx">alert</span><span class="p">(</span> <span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="p">);</span> <span class="c1">// cookie1=value1; cookie2=value2;...	 // 모든 쿠키를 알림창으로 확인하겠다.는 명령어
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// 어디든 사이트에 들어가서 개발자 도구창을 열고 console.log(document.cookie) 를 입력해 보세요!
 </span></span></span></code></pre></td></tr></table>
 </div>
@@ -255,10 +255,10 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// ex) site.com에서 user가 colinder라는 쿠키를 설정함
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="o">=</span> <span class="s2">&#34;user=colinder&#34;</span>
+</span></span></span><span class="line"><span class="cl"><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="o">=</span> <span class="s2">&#34;user=colinder&#34;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// site.com의 서브도메인인 forum.site.com에서 쿠키에 접근하려 함
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">alert</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="p">);</span> <span class="c1">// 찾을 수 없음
+</span></span></span><span class="line"><span class="cl"><span class="nx">alert</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="p">);</span> <span class="c1">// 찾을 수 없음
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>이런 제약사항은 안정성을 높이기 위해 만들어졌습니다. 민감한 데이터가 저장된 쿠키는 관련 페이지에서만 볼 수 있도록 하기 위함입니다.</p>
@@ -277,11 +277,11 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// site.com에서
 </span></span></span><span class="line"><span class="cl"><span class="c1">// 서브 도메인(*.site.com) 어디서든 쿠키에 접속하게 설정할 수 있습니다.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="o">=</span> <span class="s2">&#34;user=colinder; domain=site.com&#34;</span>
+</span></span></span><span class="line"><span class="cl"><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="o">=</span> <span class="s2">&#34;user=colinder; domain=site.com&#34;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// 이렇게 설정하면
 </span></span></span><span class="line"><span class="cl"><span class="c1">// forum.site.com와 같은 서브도메인에서도 쿠키 정보를 얻을 수 있습니다.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nx">alert</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="p">);</span> <span class="c1">// user=colinder 쿠키를 확인할 수 있습니다.
 </span></span></span></code></pre></td></tr></table>
 </div>
@@ -341,7 +341,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"> <span class="c1">// 지금으로부터 하루 후
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span> <span class="kd">let</span> <span class="nx">date</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">()</span> <span class="o">+</span> <span class="mf">86400e3</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl"> <span class="kd">let</span> <span class="nx">date</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">()</span> <span class="o">+</span> <span class="mf">86400e3</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"> <span class="nx">date</span> <span class="o">=</span> <span class="nx">date</span><span class="p">.</span><span class="nx">toUTCString</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl"> <span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="o">=</span> <span class="s2">&#34;user=colinder; expires=&#34;</span> <span class="o">+</span> <span class="nx">date</span><span class="p">;</span>
 </span></span></code></pre></td></tr></table>
@@ -361,10 +361,10 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// 1시간 뒤에 쿠키가 삭제됩니다.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="o">=</span> <span class="s2">&#34;user=colinder; max-age=3600&#34;</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="o">=</span> <span class="s2">&#34;user=colinder; max-age=3600&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// 만료 기간을 0으로 지정하여 쿠키를 바로 삭제함
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="o">=</span> <span class="s2">&#34;user=colinder; max-age=0&#34;</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="o">=</span> <span class="s2">&#34;user=colinder; max-age=0&#34;</span><span class="p">;</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><em>다른 브라우저들은 둘 다(<code>Expires</code> 와 <code>Max-Age)</code> 지정되었을 때 <code>Max-Age</code> 값을 더 우선시합니다.</em></p>
@@ -392,7 +392,7 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// (https:// 로 통신하고 있다고 가정 중)
 </span></span></span><span class="line"><span class="cl"><span class="c1">// 설정한 쿠키는 HTTPS 통신시에만 접근할 수 있음
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="o">=</span> <span class="s2">&#34;user=John; secure&#34;</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="o">=</span> <span class="s2">&#34;user=John; secure&#34;</span><span class="p">;</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div></li>
@@ -458,7 +458,8 @@
 <h1 id="요약">👀요약</h1>
 <blockquote>
 <p>쿠기 종류에 따라 인증 방식의 차이는 없으나 <strong>데이터 저장 방식의 차이</strong>라고 할 수 있습니다. <strong>Persistent Cookie = 클라이언트 ,Session Cookie = 서버</strong></p>
-<p>세션 쿠키의 값은 보안상 꽤나 안전한 브라우저(ex. 구글 크롬)의 메모리에 저장되기 때문에 보안에 유리하지만 파일로 저장되는 지속 쿠키의 경우 비교적으로 보안에 취약합니다.</p></blockquote>
+<p>세션 쿠키의 값은 보안상 꽤나 안전한 브라우저(ex. 구글 크롬)의 메모리에 저장되기 때문에 보안에 유리하지만 파일로 저장되는 지속 쿠키의 경우 비교적으로 보안에 취약합니다.</p>
+</blockquote>
 <p>​</p>
 <p>​</p>
 <h2 id="참고-했던-글">참고 했던 글</h2>
@@ -503,7 +504,7 @@
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.143.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.160.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

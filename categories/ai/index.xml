@@ -1,119 +1,71 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>AI - Category - colinder&#39;s blog</title>
-        <link>https://colinder.github.io/categories/ai/</link>
-        <description>AI - Category - colinder&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Wed, 28 Dec 2022 16:44:00 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/ai/" rel="self" type="application/rss+xml" /><item>
-    <title>Overfitting</title>
-    <link>https://colinder.github.io/overfitting/</link>
-    <pubDate>Wed, 28 Dec 2022 16:44:00 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/overfitting/</guid>
-    <description><![CDATA[<p>​</p>
-<h1 id="과적합overfitting">과적합(Overfitting)</h1>
-<blockquote>
-<p><a href="https://velog.io/@yookyungkho/%EB%94%A5%EB%9F%AC%EB%8B%9D%EC%9D%98-%EA%B3%A0%EC%A7%88%EB%B3%91-Overfitting%EA%B3%BC%EC%A0%81%ED%95%A9-%ED%95%B4%EA%B2%B0-%ED%8C%81" target="_blank" rel="noopener noreffer ">잘 정리된 내용</a>을 발견하였고 거기에 개인적인 경험을 추가하기 위해 정리하였습니다. (대부분 필사입니다.)</p>
-<p>인공지능 모델링을 하다보면 항상 만나게 되는 과적합을 어떻게 해결해야하는지, 방법에 대하여 정리</p>]]></description>
-</item>
-<item>
-    <title>What is Sequence_data &amp; apply AI</title>
-    <link>https://colinder.github.io/what_is_sequence_data/</link>
-    <pubDate>Tue, 25 Oct 2022 12:38:54 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/what_is_sequence_data/</guid>
-    <description><![CDATA[<p>​</p>
-<h1 id="sequence-data">Sequence data</h1>
-<p>자연에는 사건이 발생하는데, 이는 대부분 시간에 따른 원인에 의한 결과로써 발생하게 된다. 예를들어</p>
-<ol>
-<li>
-<p>오전에는 맑았는데 오후에는 흐리다.</p>
-</li>
-<li>
-<p>상반기에는 잘 팔렸는데, 하반기에는 잘 안팔린다.</p>]]></description>
-</item>
-<item>
-    <title>What is train_test_split()?</title>
-    <link>https://colinder.github.io/what_is_train_test_split/</link>
-    <pubDate>Thu, 30 Jun 2022 13:30:53 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/what_is_train_test_split/</guid>
-    <description><![CDATA[<p>​</p>
-<h1 id="what-is-train_test_split">What is &rsquo;train_test_split()'?</h1>
-<blockquote>
-<p>AI 모델링을 위해 X_train, X_test, y_train, y_test로 나누는 작업은 필수적입니다.
-저는 train과 test를 나누는 코드를 직접 짜서 사용했었는데 scikit learn에서 제공되는 함수가 있었습니다. <b>&ldquo;train_test_split()&quot;</b>이를 알아보겠습니다.</p>]]></description>
-</item>
-<item>
-    <title>what is optimizer</title>
-    <link>https://colinder.github.io/what_is_optimizer/</link>
-    <pubDate>Fri, 18 Mar 2022 14:13:56 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/what_is_optimizer/</guid>
-    <description><![CDATA[<p>​</p>
-<image src="/images/what_is_optimizer.assets/img.png" width="1000px" style="display: block; margin: 20px auto">
-<p>​</p>
-<p>​</p>
-<h2 id="옵티마이저의-목적">옵티마이저의 목적</h2>
-<blockquote>
-<p>옵티마이저는 학습 데이터(Train data)셋을 이용하여 모델을 학습 할 때 <b>데이터의 실제 결과</b>와 <b>모델이 예측한 결과</b>를 기반으로 <b>오차를 잘 줄일 수 있게</b> 만들어주는 역할입니다.</p>]]></description>
-</item>
-<item>
-    <title>모델 학습 시 loss가 Nan으로 나올 때 해결법</title>
-    <link>https://colinder.github.io/loss_nan_solution/</link>
-    <pubDate>Thu, 17 Mar 2022 17:12:00 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/loss_nan_solution/</guid>
-    <description><![CDATA[<p>​</p>
-<h2 id="모델-학습-시-loss-값이-nan으로-나올-때-해결-방법">모델 학습 시 loss 값이 Nan으로 나올 때 해결 방법</h2>
-<ul>
-<li>
-<p>if df == pandas.DataFrame()
-df.isnull().any()로 데이터셋에 NaN이나 inf 값이 들어있는지 확인한다.</p>
-</li>
-<li>
-<p>다른 optimizer들을 사용해본다. <em>(ex. sgd, adam, nadam)</em></p>]]></description>
-</item>
-<item>
-    <title>편향(Bias) &amp; 분산(Variance)</title>
-    <link>https://colinder.github.io/biasvariance/</link>
-    <pubDate>Mon, 14 Mar 2022 16:34:16 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/biasvariance/</guid>
-    <description><![CDATA[<p>​</p>
-<h1 id="편향bias과-분산variance">편향(Bias)과 분산(Variance)</h1>
-<blockquote>
-<p>인공지능 모델링을 하면 정답을 맞추기 위해 컴퓨터는 여러 번의 예측값을 내놓는데, <br><strong>컴퓨터가 내놓은 예측값의 동태를 묘사하는 표현</strong>이 &lsquo;편향&rsquo;과 &lsquo;분산&rsquo;입니다.</p>]]></description>
-</item>
-<item>
-    <title>Activation_Function</title>
-    <link>https://colinder.github.io/activation_function/</link>
-    <pubDate>Thu, 24 Jun 2021 15:04:29 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/activation_function/</guid>
-    <description><![CDATA[<p>​</p>
-<h1 id="activation-function활성화-함수">Activation Function(활성화 함수)</h1>
-<blockquote>
-<p>입력 신호의 총합을 출력신호로 변환하는 함수를 일반적으로 Activation Function이라고 합니다.</p></blockquote>
-<p>​</p>
-<p>아직 잘 모르겠습니다. 하여 인공신경망에 빗대어 이해해보겠습니다.</p>]]></description>
-</item>
-<item>
-    <title>Collaborative filtering by auto Encoder</title>
-    <link>https://colinder.github.io/collaborative_filtering_by_autoencoder/</link>
-    <pubDate>Wed, 16 Jun 2021 15:02:22 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/collaborative_filtering_by_autoencoder/</guid>
-    <description><![CDATA[<p>​</p>
-<h1 id="collaborative-filtering-by-auto-encoder">Collaborative filtering by auto Encoder</h1>
-<blockquote>
-<p>협업필터링을 딥러닝 방식의 하나인 오토 인코더로 구현하는데 알아두어야 할 배경지식에 대하여 정리</p></blockquote>
-<p>​</p>
-<h2 id="machine-learning">Machine learning</h2>
-<ul>
-<li>
-<p><strong>기계가 명시적으로 코딩되지 않은 동작을 스스로 학습해 수행하게 하는 연구 분야</strong>. 인공지능(AI)의 한 분야로 간주된다.
-기계 학습의 핵심은 표현(representation)과 일반화(generalization)에 있다. 표현이란 데이터의 평가이며, 일반화란 아직 알 수 없는 데이터에 대한 처리이다.</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ai on colinder&#39;s blog</title>
+    <link>https://colinder.github.io/categories/ai/</link>
+    <description>Recent content in Ai on colinder&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+    <webMaster>kjonggwan@gmail.com (colinder)</webMaster>
+    <copyright>colinder</copyright>
+    <lastBuildDate>Wed, 28 Dec 2022 16:44:00 +0900</lastBuildDate>
+    <atom:link href="https://colinder.github.io/categories/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Overfitting</title>
+      <link>https://colinder.github.io/overfitting/</link>
+      <pubDate>Wed, 28 Dec 2022 16:44:00 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/overfitting/</guid>
+      <description>&lt;p&gt;​&lt;/p&gt;&#xA;&lt;h1 id=&#34;과적합overfitting&#34;&gt;과적합(Overfitting)&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://velog.io/@yookyungkho/%EB%94%A5%EB%9F%AC%EB%8B%9D%EC%9D%98-%EA%B3%A0%EC%A7%88%EB%B3%91-Overfitting%EA%B3%BC%EC%A0%81%ED%95%A9-%ED%95%B4%EA%B2%B0-%ED%8C%81&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;잘 정리된 내용&lt;/a&gt;을 발견하였고 거기에 개인적인 경험을 추가하기 위해 정리하였습니다. (대부분 필사입니다.)&lt;/p&gt;&#xA;&lt;p&gt;인공지능 모델링을 하다보면 항상 만나게 되는 과적합을 어떻게 해결해야하는지, 방법에 대하여 정리&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>What is Sequence_data &amp; apply AI</title>
+      <link>https://colinder.github.io/what_is_sequence_data/</link>
+      <pubDate>Tue, 25 Oct 2022 12:38:54 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/what_is_sequence_data/</guid>
+      <description>&lt;p&gt;​&lt;/p&gt;&#xA;&lt;h1 id=&#34;sequence-data&#34;&gt;Sequence data&lt;/h1&gt;&#xA;&lt;p&gt;자연에는 사건이 발생하는데, 이는 대부분 시간에 따른 원인에 의한 결과로써 발생하게 된다. 예를들어&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;오전에는 맑았는데 오후에는 흐리다.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;상반기에는 잘 팔렸는데, 하반기에는 잘 안팔린다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>What is train_test_split()?</title>
+      <link>https://colinder.github.io/what_is_train_test_split/</link>
+      <pubDate>Thu, 30 Jun 2022 13:30:53 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/what_is_train_test_split/</guid>
+      <description>&lt;p&gt;​&lt;/p&gt;&#xA;&lt;h1 id=&#34;what-is-train_test_split&#34;&gt;What is &amp;rsquo;train_test_split()&#39;?&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;AI 모델링을 위해 X_train, X_test, y_train, y_test로 나누는 작업은 필수적입니다.&#xA;저는 train과 test를 나누는 코드를 직접 짜서 사용했었는데 scikit learn에서 제공되는 함수가 있었습니다. &lt;b&gt;&amp;ldquo;train_test_split()&amp;quot;&lt;/b&gt;이를 알아보겠습니다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>what is optimizer</title>
+      <link>https://colinder.github.io/what_is_optimizer/</link>
+      <pubDate>Fri, 18 Mar 2022 14:13:56 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/what_is_optimizer/</guid>
+      <description>&lt;p&gt;​&lt;/p&gt;&#xA;&lt;image src=&#34;https://colinder.github.io/images/what_is_optimizer.assets/img.png&#34; width=&#34;1000px&#34; style=&#34;display: block; margin: 20px auto&#34;&gt;&#xA;&lt;p&gt;​&lt;/p&gt;&#xA;&lt;p&gt;​&lt;/p&gt;&#xA;&lt;h2 id=&#34;옵티마이저의-목적&#34;&gt;옵티마이저의 목적&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;옵티마이저는 학습 데이터(Train data)셋을 이용하여 모델을 학습 할 때 &lt;b&gt;데이터의 실제 결과&lt;/b&gt;와 &lt;b&gt;모델이 예측한 결과&lt;/b&gt;를 기반으로 &lt;b&gt;오차를 잘 줄일 수 있게&lt;/b&gt; 만들어주는 역할입니다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>모델 학습 시 loss가 Nan으로 나올 때 해결법</title>
+      <link>https://colinder.github.io/loss_nan_solution/</link>
+      <pubDate>Thu, 17 Mar 2022 17:12:00 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/loss_nan_solution/</guid>
+      <description>&lt;p&gt;​&lt;/p&gt;&#xA;&lt;h2 id=&#34;모델-학습-시-loss-값이-nan으로-나올-때-해결-방법&#34;&gt;모델 학습 시 loss 값이 Nan으로 나올 때 해결 방법&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;if df == pandas.DataFrame()&#xA;df.isnull().any()로 데이터셋에 NaN이나 inf 값이 들어있는지 확인한다.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;다른 optimizer들을 사용해본다. &lt;em&gt;(ex. sgd, adam, nadam)&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>편향(Bias) &amp; 분산(Variance)</title>
+      <link>https://colinder.github.io/biasvariance/</link>
+      <pubDate>Mon, 14 Mar 2022 16:34:16 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/biasvariance/</guid>
+      <description>&lt;p&gt;​&lt;/p&gt;&#xA;&lt;h1 id=&#34;편향bias과-분산variance&#34;&gt;편향(Bias)과 분산(Variance)&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;인공지능 모델링을 하면 정답을 맞추기 위해 컴퓨터는 여러 번의 예측값을 내놓는데, &lt;br&gt;&lt;strong&gt;컴퓨터가 내놓은 예측값의 동태를 묘사하는 표현&lt;/strong&gt;이 &amp;lsquo;편향&amp;rsquo;과 &amp;lsquo;분산&amp;rsquo;입니다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Activation_Function</title>
+      <link>https://colinder.github.io/activation_function/</link>
+      <pubDate>Thu, 24 Jun 2021 15:04:29 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/activation_function/</guid>
+      <description>&lt;p&gt;​&lt;/p&gt;&#xA;&lt;h1 id=&#34;activation-function활성화-함수&#34;&gt;Activation Function(활성화 함수)&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;입력 신호의 총합을 출력신호로 변환하는 함수를 일반적으로 Activation Function이라고 합니다.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;​&lt;/p&gt;&#xA;&lt;p&gt;아직 잘 모르겠습니다. 하여 인공신경망에 빗대어 이해해보겠습니다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Collaborative filtering by auto Encoder</title>
+      <link>https://colinder.github.io/collaborative_filtering_by_autoencoder/</link>
+      <pubDate>Wed, 16 Jun 2021 15:02:22 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/collaborative_filtering_by_autoencoder/</guid>
+      <description>&lt;p&gt;​&lt;/p&gt;&#xA;&lt;h1 id=&#34;collaborative-filtering-by-auto-encoder&#34;&gt;Collaborative filtering by auto Encoder&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;협업필터링을 딥러닝 방식의 하나인 오토 인코더로 구현하는데 알아두어야 할 배경지식에 대하여 정리&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;​&lt;/p&gt;&#xA;&lt;h2 id=&#34;machine-learning&#34;&gt;Machine learning&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;기계가 명시적으로 코딩되지 않은 동작을 스스로 학습해 수행하게 하는 연구 분야&lt;/strong&gt;. 인공지능(AI)의 한 분야로 간주된다.&#xA;기계 학습의 핵심은 표현(representation)과 일반화(generalization)에 있다. 표현이란 데이터의 평가이며, 일반화란 아직 알 수 없는 데이터에 대한 처리이다.&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

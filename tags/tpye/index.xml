@@ -1,16 +1,22 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Tpye - Tag - colinder&#39;s blog</title>
-        <link>https://colinder.github.io/tags/tpye/</link>
-        <description>Tpye - Tag - colinder&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Wed, 09 Dec 2020 10:23:18 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/tags/tpye/" rel="self" type="application/rss+xml" /><item>
-    <title>JavaScript Type</title>
-    <link>https://colinder.github.io/js_type/</link>
-    <pubDate>Wed, 09 Dec 2020 10:23:18 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/js_type/</guid>
-    <description><![CDATA[JavaScript Type에 대하여 정리합니다.]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tpye on colinder&#39;s blog</title>
+    <link>https://colinder.github.io/tags/tpye/</link>
+    <description>Recent content in Tpye on colinder&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+    <webMaster>kjonggwan@gmail.com (colinder)</webMaster>
+    <copyright>colinder</copyright>
+    <lastBuildDate>Wed, 09 Dec 2020 10:23:18 +0900</lastBuildDate>
+    <atom:link href="https://colinder.github.io/tags/tpye/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JavaScript Type</title>
+      <link>https://colinder.github.io/js_type/</link>
+      <pubDate>Wed, 09 Dec 2020 10:23:18 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/js_type/</guid>
+      <description>JavaScript Type에 대하여 정리합니다.</description>
+    </item>
+  </channel>
 </rss>

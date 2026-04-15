@@ -1,16 +1,22 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Link - Category - colinder&#39;s blog</title>
-        <link>https://colinder.github.io/categories/link/</link>
-        <description>Link - Category - colinder&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Mon, 06 Sep 2021 10:10:24 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/link/" rel="self" type="application/rss+xml" /><item>
-    <title>정적(Static) 링크 Vs 동적(Dynamic) 링크</title>
-    <link>https://colinder.github.io/staticvsdynamic_link/</link>
-    <pubDate>Mon, 06 Sep 2021 10:10:24 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/staticvsdynamic_link/</guid>
-    <description><![CDATA[정적(Static)링크와 동적(Dynamic)링크에 대하여 정리합니다.]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Link on colinder&#39;s blog</title>
+    <link>https://colinder.github.io/categories/link/</link>
+    <description>Recent content in Link on colinder&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+    <webMaster>kjonggwan@gmail.com (colinder)</webMaster>
+    <copyright>colinder</copyright>
+    <lastBuildDate>Mon, 06 Sep 2021 10:10:24 +0900</lastBuildDate>
+    <atom:link href="https://colinder.github.io/categories/link/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>정적(Static) 링크 Vs 동적(Dynamic) 링크</title>
+      <link>https://colinder.github.io/staticvsdynamic_link/</link>
+      <pubDate>Mon, 06 Sep 2021 10:10:24 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/staticvsdynamic_link/</guid>
+      <description>정적(Static)링크와 동적(Dynamic)링크에 대하여 정리합니다.</description>
+    </item>
+  </channel>
 </rss>

@@ -133,9 +133,10 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><p>​</p>
-<h1 id="span-stylecolor-358691processspan-vs-span-stylecolor-dabc9athreadspan"><span style="color: #358691">Process</span> VS <span style="color: #dabc9a">Thread</span></h1>
+<h1 id="process-vs-thread"><span style="color: #358691">Process</span> VS <span style="color: #dabc9a">Thread</span></h1>
 <blockquote>
-<p>면접 질문에서 가장 많이 들어본 이야기라고 친구들이 이야기 해줬습니다. 근데 전 아직 자신있게 설명할 정도로 알지 못하기에 알아봅시다!</p></blockquote>
+<p>면접 질문에서 가장 많이 들어본 이야기라고 친구들이 이야기 해줬습니다. 근데 전 아직 자신있게 설명할 정도로 알지 못하기에 알아봅시다!</p>
+</blockquote>
 <p>​</p>
 <p>​</p>
 <h2 id="프로그램program란-무엇인지-우선-알아봅시다">프로그램(Program)란 무엇인지 우선 알아봅시다.</h2>
@@ -143,7 +144,7 @@
 <p>예들 들어, Excel.exe, kakaotalk.exe 등과 같이 어떤 작업을 위해 실행할 수 있는 (설치 등)파일을 생각해 볼 수 있습니다.</p>
 <p>​</p>
 <p>​</p>
-<h1 id="span-stylecolor-358691processspan"><span style="color: #358691">Process</span></h1>
+<h1 id="process"><span style="color: #358691">Process</span></h1>
 <p>Process는 <code>운영체제로부터 자원을 할당받는 작업의 단위</code> 조금 간단하게는 &ldquo;실행된 프로그램을 의미&quot;합니다.</p>
 <p>앞서 운영체제로부터 할당을 받는다고 설명했는데 <b>CPU의 시간</b>  /  <strong>운영되기 위해 필요한 주소 공간</strong>  /  <strong>Code, Data, Stack, Heap의 구조로 되어 있는 독립된 메모리 영역</strong>등이 대상입니다.</p>
 <image src="../images/ProcessVSThread_00.png" width="700px" style="display: block; margin-left: auto; margin-right: auto; margin-top: 20px">
@@ -170,7 +171,7 @@
 <p>​</p>
 </li>
 </ol>
-<h1 id="span-stylecolor-dabc9athreadspan"><span style="color: #dabc9a">Thread</span></h1>
+<h1 id="thread"><span style="color: #dabc9a">Thread</span></h1>
 <p><code>프로세스(Process) 내에서 실행되는 흐름의 단위</code>으로
 프로세스 하나에 자원을 공유하면서 일련의 과정, 여러 개를 동시에 실행시킬 수 있는 것을 말합니다.</p>
 <p>기본적으로 하나의 프로세스가 생성되면 하나의 Thread가 같이 생성됩니다. 이를 <code>Main Thread</code>라고 부르며, thread를 추가로 생성하지 않는 한, 모든 프로그램 코드는 Main Thread에서 실행됩니다.</p>
@@ -195,12 +196,14 @@
 <p>LIFO(Last In First Out) / 후입 선출이라는 스택의 특성과도 연관이 있습니다.
 왜냐하면?  Code와 Data, Heap 영역을 공유하는 것에는 큰 문제가 없지만,
 스택 영역은 스택이 쌓이면 위에서부터 프로세스가 섞인 채로 순서대로 나오게 되므로
-더 복잡해지기 때문에 원활한 실행 흐름을 위해 스택은 따로 독립적으로 존재하게 됩니다.</p></blockquote>
+더 복잡해지기 때문에 원활한 실행 흐름을 위해 스택은 따로 독립적으로 존재하게 됩니다.</p>
+</blockquote>
 <p>​</p>
 <p>​</p>
-<h1 id="multi-span-stylecolor-358691processspan">Multi <span style="color: #358691">Process</span></h1>
+<h1 id="multi-process">Multi <span style="color: #358691">Process</span></h1>
 <blockquote>
-<p>하나의 응용프로그램을 여러 개의 프로세스로 구성하여 각 프로세스가 하나의 작업(태스크)을 처리하도록 하는 것.</p></blockquote>
+<p>하나의 응용프로그램을 여러 개의 프로세스로 구성하여 각 프로세스가 하나의 작업(태스크)을 처리하도록 하는 것.</p>
+</blockquote>
 <image src="../images/ProcessVSThread_04.png" caption="하나의 운영프로그램을 여러개의 Process가 처리" width="550px" style="display: block; margin-left: auto; margin-right: auto; margin-top: 20px">
 <p>😆 장점</p>
 <ul>
@@ -225,9 +228,10 @@
 <p>​</p>
 <p>​</p>
 <p><strong>이런 단점들을 보완하기 위해 Multi <span style="color: #dabc9a">Thread</span>가 등장하였습니다.</strong></p>
-<h1 id="multi-span-stylecolor-dabc9athreadspan">Multi <span style="color: #dabc9a">Thread</span></h1>
+<h1 id="multi-thread">Multi <span style="color: #dabc9a">Thread</span></h1>
 <blockquote>
-<p>하나의 프로세스 내에서 여러 개의 thread가 동작하는 것을 말합니다.</p></blockquote>
+<p>하나의 프로세스 내에서 여러 개의 thread가 동작하는 것을 말합니다.</p>
+</blockquote>
 <image src="../images/ProcessVSThread_05.png" caption="하나의 운영프로그램을 여러개의 Process가 처리" width="550px" style="display: block; margin-left: auto; margin-right: auto; margin-top: 20px">
 <p>😆 장점</p>
 <ul>
@@ -271,7 +275,8 @@
 </ul>
 <h2 id="thread-safety">Thread-Safety</h2>
 <blockquote>
-<p>스레드 안전(thread 安全, 영어: thread safety)은 멀티 스레드 프로그래밍에서 일반적으로 어떤 함수나 변수, 혹은 객체가 여러 스레드로부터 동시에 접근이 이루어져도 프로그램의 실행에 문제가 없음을 뜻한다. 보다 엄밀하게는 하나의 함수가 한 스레드로부터 호출되어 실행 중일 때, 다른 스레드가 그 함수를 호출하여 동시에 함께 실행되더라도 각 스레드에서의 함수의 수행 결과가 올바로 나오는 것으로 정의한다.</p></blockquote>
+<p>스레드 안전(thread 安全, 영어: thread safety)은 멀티 스레드 프로그래밍에서 일반적으로 어떤 함수나 변수, 혹은 객체가 여러 스레드로부터 동시에 접근이 이루어져도 프로그램의 실행에 문제가 없음을 뜻한다. 보다 엄밀하게는 하나의 함수가 한 스레드로부터 호출되어 실행 중일 때, 다른 스레드가 그 함수를 호출하여 동시에 함께 실행되더라도 각 스레드에서의 함수의 수행 결과가 올바로 나오는 것으로 정의한다.</p>
+</blockquote>
 <ol>
 <li>
 <p><strong>Re-entrancy(재진입성)</strong></p>
@@ -317,7 +322,8 @@
 <p>​</p>
 <h1 id="요약">👀요약</h1>
 <blockquote>
-<p>운영체제는 Process 단위로 <strong>메모리를 할당</strong>해주고, 같은 프로세스 소속의 <strong>Thread는 메모리를 공유</strong>합니다. <span style="color: grey; font-size: .9rem">(스레드도 각자의 스택영역을 보유하므로 완전히 공유한다고 보기는 어렵습니다.)</span></p></blockquote>
+<p>운영체제는 Process 단위로 <strong>메모리를 할당</strong>해주고, 같은 프로세스 소속의 <strong>Thread는 메모리를 공유</strong>합니다. <span style="color: grey; font-size: .9rem">(스레드도 각자의 스택영역을 보유하므로 완전히 공유한다고 보기는 어렵습니다.)</span></p>
+</blockquote>
 <p>​</p>
 <p>​</p>
 </div><div class="post-footer" id="post-footer">
@@ -350,7 +356,7 @@
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.143.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.160.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

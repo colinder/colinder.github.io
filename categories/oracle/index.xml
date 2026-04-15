@@ -1,46 +1,29 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Oracle - Category - colinder&#39;s blog</title>
-        <link>https://colinder.github.io/categories/oracle/</link>
-        <description>Oracle - Category - colinder&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Mon, 06 Sep 2021 11:41:44 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/oracle/" rel="self" type="application/rss+xml" /><item>
-    <title>Django_06_Django &amp; Oracle18 error LOG</title>
-    <link>https://colinder.github.io/django_06_djangooracle18_error_log/</link>
-    <pubDate>Mon, 06 Sep 2021 11:41:44 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/django_06_djangooracle18_error_log/</guid>
-    <description><![CDATA[<p>​</p>
-<h1 id="django--oracle-18-오류-일지">Django &amp; Oracle 18 오류 일지</h1>
-<blockquote>
-<p>각종 스트레스의 원인에 대하여 해결방법을 정리합니다.</p></blockquote>
-<p>​</p>
-<ol>
-<li>
-<p>ORA-00955: name is already used by an existing object</p>
-<blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 해결법</span>
-</span></span><span class="line"><span class="cl"><span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">makemigrations</span>
-</span></span><span class="line"><span class="cl"><span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">migrate</span> <span class="o">--</span><span class="n">fake</span><span class="o">-</span><span class="n">initial</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div></blockquote>
-<p>이미 migrate 한 내용을 수정하니 반영되지 않아 오류가 발생하였는데 위의 명령어는 migratie를 초기화해서 재설정 하는 것 같습니다.</p>]]></description>
-</item>
-<item>
-    <title>Oracle 18C_network_connect</title>
-    <link>https://colinder.github.io/oracle_network_connect/</link>
-    <pubDate>Tue, 06 Jul 2021 14:17:20 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/oracle_network_connect/</guid>
-    <description><![CDATA[오라클 18 버전의 외부 DB 접근(네트워크 연동) 방법에 대하여 정리합니다.]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Oracle on colinder&#39;s blog</title>
+    <link>https://colinder.github.io/categories/oracle/</link>
+    <description>Recent content in Oracle on colinder&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+    <webMaster>kjonggwan@gmail.com (colinder)</webMaster>
+    <copyright>colinder</copyright>
+    <lastBuildDate>Mon, 06 Sep 2021 11:41:44 +0900</lastBuildDate>
+    <atom:link href="https://colinder.github.io/categories/oracle/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Django_06_Django &amp; Oracle18 error LOG</title>
+      <link>https://colinder.github.io/django_06_djangooracle18_error_log/</link>
+      <pubDate>Mon, 06 Sep 2021 11:41:44 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/django_06_djangooracle18_error_log/</guid>
+      <description>&lt;p&gt;​&lt;/p&gt;&#xA;&lt;h1 id=&#34;django--oracle-18-오류-일지&#34;&gt;Django &amp;amp; Oracle 18 오류 일지&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;각종 스트레스의 원인에 대하여 해결방법을 정리합니다.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;​&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;ORA-00955: name is already used by an existing object&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 해결법&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;python&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;manage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;makemigrations&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;python&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;manage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;migrate&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fake&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;initial&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;이미 migrate 한 내용을 수정하니 반영되지 않아 오류가 발생하였는데 위의 명령어는 migratie를 초기화해서 재설정 하는 것 같습니다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Oracle 18C_network_connect</title>
+      <link>https://colinder.github.io/oracle_network_connect/</link>
+      <pubDate>Tue, 06 Jul 2021 14:17:20 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/oracle_network_connect/</guid>
+      <description>오라클 18 버전의 외부 DB 접근(네트워크 연동) 방법에 대하여 정리합니다.</description>
+    </item>
+  </channel>
 </rss>

@@ -1,16 +1,22 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>File List Import - Category - colinder&#39;s blog</title>
-        <link>https://colinder.github.io/categories/file-list-import/</link>
-        <description>File List Import - Category - colinder&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Tue, 22 Feb 2022 10:37:15 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/file-list-import/" rel="self" type="application/rss+xml" /><item>
-    <title>폴더안에 있는 특정 파일 리스트 가져오기</title>
-    <link>https://colinder.github.io/filelistimport/</link>
-    <pubDate>Tue, 22 Feb 2022 10:37:15 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/filelistimport/</guid>
-    <description><![CDATA[폴더안에 있는 특정 파일 리스트 가져오는 방법에 대하여 정리합니다.]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>File List Import on colinder&#39;s blog</title>
+    <link>https://colinder.github.io/categories/file-list-import/</link>
+    <description>Recent content in File List Import on colinder&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+    <webMaster>kjonggwan@gmail.com (colinder)</webMaster>
+    <copyright>colinder</copyright>
+    <lastBuildDate>Tue, 22 Feb 2022 10:37:15 +0900</lastBuildDate>
+    <atom:link href="https://colinder.github.io/categories/file-list-import/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>폴더안에 있는 특정 파일 리스트 가져오기</title>
+      <link>https://colinder.github.io/filelistimport/</link>
+      <pubDate>Tue, 22 Feb 2022 10:37:15 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/filelistimport/</guid>
+      <description>폴더안에 있는 특정 파일 리스트 가져오는 방법에 대하여 정리합니다.</description>
+    </item>
+  </channel>
 </rss>

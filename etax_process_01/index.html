@@ -137,7 +137,8 @@
 <blockquote>
 <p>국세청의 전자세금계산서 발급 기능을 혼자 개발하면서 확인한 프로세스, 문서 및 개인적인 노하우 등을 정리한다.
 사실 국가에서 제공하는 여타 api처럼 매우 간단할 것으로 예상했었다. (하지만 복잡하다..)</p>
-<p>또한 이 기능을 개발하는데 <a href="https://github.com/ruseel/kr-etax-sample" target="_blank" rel="noopener noreffer ">https://github.com/ruseel/kr-etax-sample</a> 안내가 도움이 되었다.</p></blockquote>
+<p>또한 이 기능을 개발하는데 <a href="https://github.com/ruseel/kr-etax-sample" target="_blank" rel="noopener noreffer ">https://github.com/ruseel/kr-etax-sample</a> 안내가 도움이 되었다.</p>
+</blockquote>
 <p>​</p>
 <h2 id="전체-프로세스">전체 프로세스</h2>
 <ol>
@@ -169,13 +170,15 @@
 <p>​</p>
 <h3 id="1-국세청에-부서사용자-신청하기">1. 국세청에 부서사용자 신청하기</h3>
 <blockquote>
-<p>국세청 전자세금계산서 발급기능을 개발하겠다고 국세청에게 신고하는 단계</p></blockquote>
+<p>국세청 전자세금계산서 발급기능을 개발하겠다고 국세청에게 신고하는 단계</p>
+</blockquote>
 <p>(신청에 따른 행정 절차는 생략한다.) 이때 참고해야 하는 문서는 <strong>표준전자세금계산서개발지침(17년8월).pdf</strong>이다. 작성된지 매우 오래된 문서이고 간간히 잘못기재된 내용, 잘못된 내용이 섞여있어, 참과 거짓을 분석하며 봐야 한다. 국세청에서도 현재 기준(25년 12월) 관리되고 있지 않아, 의문점을 문의해도 해답을 받을 수 없었다.</p>
 <p>하지만 전자세금계산서를 발급하기 위한 유일한 가이드 문서라 이를 무시할 수도 없다. 달달 외울 정도로 봐야 한다.</p>
 <p>​</p>
 <h3 id="2-부서사용자에서-지원하는-표준인증검증-통과하기">2. 부서사용자에서 지원하는 표준인증검증 통과하기</h3>
 <blockquote>
-<p>국세청 전자세금계산서 발급기능의 개발 및 연동을 위해서 <strong>단위 기능 테스트</strong>하는 단계</p></blockquote>
+<p>국세청 전자세금계산서 발급기능의 개발 및 연동을 위해서 <strong>단위 기능 테스트</strong>하는 단계</p>
+</blockquote>
 <p>필자는 python이 주 언어라, fastapi를 써서 개발했으며, xml 파일을 다루어야 하는데 이는 java의 라이브러리들을 활용했다. python 라이브러리에도 &ldquo;signxml&rdquo; 등을 써봤으나 여러 문제들이 발생했고, 오랬동안 문제없이 사용되었던 java 라이브러리들을 사용해 개발하는게 믿을 수 있고 속도감있게 개발이 가능했다. (&ldquo;signxml&quot;을 쓰면 안된다 라기보다, 필자가 깊이있게 써보지 않아서 이게 되는지 안되는지 모르겠다.) 하지만, java 라이브러리를 python에 호환해서 사용하려면 배포시 docker 파일이 복잡해지는 등 어려움이 있지만, 이를 감수하고 그냥 사용했다.</p>
 <p><strong>여기서부터 헬이었다.</strong> 혼자 해당 기능을 개발해야 하는 상황이어서, 국세청 담당자랑도 통화를 많이하고, 혼자 표준지침 문서를 달달 외울 정로도 봤다.</p>
 <p>​</p>
@@ -192,7 +195,8 @@
 <p>​</p>
 <h4 id="2-1-xml-전자세금계산서-제작">2-1 XML 전자세금계산서 제작</h4>
 <blockquote>
-<p><strong>XML</strong>(e<strong>X</strong>tensible <strong>M</strong>arkup <strong>L</strong>anguage(확장 가능한 마크업 언어)) 매우 낯선 언어였다. 필자가 이해한 건 그냥 데이터를 주고 받는 과거의 표준?정도의 느낌이다. 현재 테이터 통신을 위한 구조로 JSON이 사실상 표준인 상황에서 xml을 조금 알아두면 표준지침을 이해하는데 도움이 된다.</p></blockquote>
+<p><strong>XML</strong>(e<strong>X</strong>tensible <strong>M</strong>arkup <strong>L</strong>anguage(확장 가능한 마크업 언어)) 매우 낯선 언어였다. 필자가 이해한 건 그냥 데이터를 주고 받는 과거의 표준?정도의 느낌이다. 현재 테이터 통신을 위한 구조로 JSON이 사실상 표준인 상황에서 xml을 조금 알아두면 표준지침을 이해하는데 도움이 된다.</p>
+</blockquote>
 <p>먼저 세금계산서를 제작하기 위해서 python의 lxml 라이브러리를 사용했다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -281,7 +285,8 @@
 </div><p>​</p>
 <h4 id="2-2-xml-전자서명">2-2 XML 전자서명</h4>
 <blockquote>
-<p>여기서부터는 java 라이브러리들을 사용한다.</p></blockquote>
+<p>여기서부터는 java 라이브러리들을 사용한다.</p>
+</blockquote>
 <p>python의 구조를 먼저 보자면,</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -426,38 +431,38 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">package</span><span class="w"> </span><span class="nn">com.barostudio.eTaxInvoice</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.ByteArrayInputStream</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.ByteArrayOutputStream</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.FileInputStream</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.FileOutputStream</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.InputStream</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.OutputStream</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.security.KeyStore</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.security.PrivateKey</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.security.Security</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.security.Signature</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.security.cert.X509Certificate</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Enumeration</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.ByteArrayInputStream</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.ByteArrayOutputStream</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.FileInputStream</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.FileOutputStream</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.InputStream</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.OutputStream</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">java.security.KeyStore</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">java.security.PrivateKey</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">java.security.Security</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">java.security.Signature</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">java.security.cert.X509Certificate</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Enumeration</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">javax.xml.crypto.dsig.DigestMethod</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">javax.xml.parsers.DocumentBuilder</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">javax.xml.parsers.DocumentBuilderFactory</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">javax.xml.crypto.dsig.DigestMethod</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">javax.xml.parsers.DocumentBuilder</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">javax.xml.parsers.DocumentBuilderFactory</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.apache.xml.security.signature.XMLSignature</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.apache.xml.security.transforms.Transforms</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.apache.xml.security.utils.Constants</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.apache.xml.security.utils.XMLUtils</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.apache.xpath.XPathAPI</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">org.apache.xml.security.signature.XMLSignature</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">org.apache.xml.security.transforms.Transforms</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">org.apache.xml.security.utils.Constants</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">org.apache.xml.security.utils.XMLUtils</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">org.apache.xpath.XPathAPI</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.bouncycastle.jce.provider.BouncyCastleProvider</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.w3c.dom.Document</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.w3c.dom.Element</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.w3c.dom.Node</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">org.bouncycastle.jce.provider.BouncyCastleProvider</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">org.w3c.dom.Document</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">org.w3c.dom.Element</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">org.w3c.dom.Node</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.apache.xml.security.c14n.Canonicalizer</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">//</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">org.apache.xml.security.c14n.Canonicalizer</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SignXML</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SignXML</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">byte</span><span class="o">[]</span><span class="w"> </span><span class="nf">sign</span><span class="p">(</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="kt">byte</span><span class="o">[]</span><span class="w"> </span><span class="n">unsignedXmlBytes</span><span class="p">,</span><span class="w"> 
@@ -531,7 +536,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="c1">// XMLUtils.outputDOMc14nWithComments(doc, os);</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>​</p>
@@ -574,7 +579,7 @@
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.143.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.160.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
@@ -584,5 +589,5 @@
             </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
                 <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><link rel="stylesheet" href="/css/_custom.scss"><script type="text/javascript" src="https://colinder-github-io.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript" src="/lib/mermaid/mermaid.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":200},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"id-1":"\r\n  flowchart TB\r\n      subgraph INTERNAL[\"내부 시스템\"]\r\n          U[내부 사용자] --\u003e ERP[경영정보시스템 / ERP]\r\n          ERP --\u003e A(세금계산서 발급)\r\n          A --\u003e ERP\r\n      end\r\n\r\n  %% 스타일 정의\r\n  style A fill:#ffffff,stroke:#ff0000,stroke-width:3px\r\n  ","id-2":"\r\n  flowchart LR\r\n      U[사용자]\r\n      U --\u003e ASP[ASP 서비스 접속]\r\n      subgraph INTERNAL[\"외부 시스템\"]\r\n          ASP --\u003e A(세금계산서 발급)\r\n          A --\u003e ASP\r\n  \t\tend\r\n      %% 스타일 정의\r\n      style A fill:#ffffff,stroke:#ff0000,stroke-width:3px\r\n  ","id-3":"\r\nflowchart TB\r\n    subgraph INTERNAL[\"ASP\"]\r\n        res[응답확인]\r\n        xml[XML 전자세금계산서 제작] --\u003e sign[XML 전자서명]\r\n        sign --\u003e decrp[암호화]\r\n        decrp --\u003e soap[soap 패키징]\r\n        soap --\u003e mime[MIME 패키징]\r\n    end\r\n    subgraph NTS[\"국세청\"]\r\n        mime --\u003e|전송|nts[서버]\r\n    end\r\n    nts --\u003e |응답|res\r"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><link rel="stylesheet" href="/css/_custom.scss"><script type="text/javascript" src="https://colinder-github-io.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":200},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

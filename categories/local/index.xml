@@ -1,16 +1,22 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Local - Category - colinder&#39;s blog</title>
-        <link>https://colinder.github.io/categories/local/</link>
-        <description>Local - Category - colinder&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Wed, 23 Feb 2022 14:32:36 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/categories/local/" rel="self" type="application/rss+xml" /><item>
-    <title>localStorage vs sessionStorage</title>
-    <link>https://colinder.github.io/localvssession_storage/</link>
-    <pubDate>Wed, 23 Feb 2022 14:32:36 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/localvssession_storage/</guid>
-    <description><![CDATA[localStorage vs sessionStorage에 대하여 정리합니다.]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Local on colinder&#39;s blog</title>
+    <link>https://colinder.github.io/categories/local/</link>
+    <description>Recent content in Local on colinder&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
+    <webMaster>kjonggwan@gmail.com (colinder)</webMaster>
+    <copyright>colinder</copyright>
+    <lastBuildDate>Wed, 23 Feb 2022 14:32:36 +0900</lastBuildDate>
+    <atom:link href="https://colinder.github.io/categories/local/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>localStorage vs sessionStorage</title>
+      <link>https://colinder.github.io/localvssession_storage/</link>
+      <pubDate>Wed, 23 Feb 2022 14:32:36 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/localvssession_storage/</guid>
+      <description>localStorage vs sessionStorage에 대하여 정리합니다.</description>
+    </item>
+  </channel>
 </rss>
