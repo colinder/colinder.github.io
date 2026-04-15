@@ -9,8 +9,15 @@
     <managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
     <webMaster>kjonggwan@gmail.com (colinder)</webMaster>
     <copyright>colinder</copyright>
-    <lastBuildDate>Wed, 15 Apr 2026 09:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 15 Apr 2026 12:00:00 +0900</lastBuildDate>
     <atom:link href="https://colinder.github.io/tags/macbook/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>mac에 Miniconda 설치하기</title>
+      <link>https://colinder.github.io/miniconda_by_mac/</link>
+      <pubDate>Wed, 15 Apr 2026 12:00:00 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/miniconda_by_mac/</guid>
+      <description>macbook에 CLI로 miniconda를 깔끔히 설치해봅시다.</description>
+    </item>
     <item>
       <title>맥북 기본 터미널 커스텀하기</title>
       <link>https://colinder.github.io/custom_zsh/</link>

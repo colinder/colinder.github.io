@@ -4,9 +4,17 @@
         <link>https://colinder.github.io/</link>
         <description>Hello New World</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Wed, 15 Apr 2026 09:00:00 &#43;0900</lastBuildDate>
+            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Wed, 15 Apr 2026 12:00:00 &#43;0900</lastBuildDate>
             <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>mac에 Miniconda 설치하기</title>
+    <link>https://colinder.github.io/miniconda_by_mac/</link>
+    <pubDate>Wed, 15 Apr 2026 12:00:00 &#43;0900</pubDate>
+    <author>colinder</author>
+    <guid>https://colinder.github.io/miniconda_by_mac/</guid>
+    <description><![CDATA[macbook에 CLI로 miniconda를 깔끔히 설치해봅시다.]]></description>
+</item>
+<item>
     <title>맥북 기본 터미널 커스텀하기</title>
     <link>https://colinder.github.io/custom_zsh/</link>
     <pubDate>Wed, 15 Apr 2026 09:00:00 &#43;0900</pubDate>
@@ -77,14 +85,6 @@
     <author>colinder</author>
     <guid>https://colinder.github.io/nest-official_02_modules-middleware-exception_filters-pipes/</guid>
     <description><![CDATA[NEST의 공식 문서의 내용을 한글로 번역하며 이해하기 쉽게 정리합니다._(Modules, Middleware, Exception_filters, Pipes)]]></description>
-</item>
-<item>
-    <title>what is 정적(static) &amp; 동적(dynamic) Type</title>
-    <link>https://colinder.github.io/staticdynamictype/</link>
-    <pubDate>Wed, 03 Jan 2024 14:26:13 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/staticdynamictype/</guid>
-    <description><![CDATA[프로그래밍 언어에서 변수나 값의 타입에 대한 접근 방식을 나타내는 두 가지 주요 패러다임인 정적, 동적 타입에 대하여 정리합니다.]]></description>
 </item>
 </channel>
 </rss>
