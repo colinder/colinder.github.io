@@ -1,9 +1,9 @@
-# mac에 Miniconda 설치하기
+# Macbook에 Miniconda 설치하기
 
 
 ​		
 
-## Miniconda 설치하기
+# Miniconda 설치하기
 맥북에 cli로 miniconda를 설치해보겠습니다. 
 다만, 인터넷에서 다운받는 거랑 무슨 차이가 있나 먼저 알아보겠습니다.
 
