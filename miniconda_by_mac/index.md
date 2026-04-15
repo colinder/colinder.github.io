@@ -1,6 +1,7 @@
 # mac에 Miniconda 설치하기
 
 
+​		
 
 ## Miniconda 설치하기
 맥북에 cli로 miniconda를 설치해보겠습니다. 
