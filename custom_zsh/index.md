@@ -1,4 +1,4 @@
-# Macbook 기본 터미널 커스텀하기
+# MacBook 기본 터미널 커스텀하기
 
 
 ​		
@@ -22,47 +22,53 @@
 ​		
 ​		
 ## 설정 방법
-### 1. ~/.zshrc 열기
-터미널을 실행하고 아래 명령어를 입력합니다.
+  1. `~/.zshrc` 열기   
+      터미널을 실행하고 아래 명령어를 입력합니다.
+      ```bash
+      nano ~/.zshrc
+      ```
 
-```bash
-nano ~/.zshrc
-```
+​		
 
+  2. 코드 추가
 
-### 2. 코드 추가
-편집기가 열리면 아래 코드를 빈 공간에 붙여넣습니다.
+      편집기가 열리면 아래 코드를 빈 공간에 붙여넣습니다.
 
-```bash
-setopt PROMPT_SUBST
+      ```bash
+      setopt PROMPT_SUBST
 
-# conda 환경 표시 (기본색)
-conda_prompt() {
-  if [[ -n "$CONDA_DEFAULT_ENV" ]]; then
-    echo "%f($CONDA_DEFAULT_ENV) "
-  fi
-}
+      # conda 환경 표시 (기본색)
+      conda_prompt() {
+        if [[ -n "$CONDA_DEFAULT_ENV" ]]; then
+          echo "%f($CONDA_DEFAULT_ENV) "
+        fi
+      }
 
-# git 브랜치 표시 (하늘색)
-git_prompt() {
-  local branch
-  branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
-  if [[ -n "$branch" ]]; then
-    echo "%F{cyan}($branch)%f "
-  fi
-}
+      # git 브랜치 표시 (하늘색)
+      git_prompt() {
+        local branch
+        branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
+        if [[ -n "$branch" ]]; then
+          echo "%F{cyan}($branch)%f "
+        fi
+      }
 
-PROMPT='$(conda_prompt)%F{magenta}%n%f %F{green}@%m%f %F{yellow}%~%f $(git_prompt)%F{green}$%f '
-```
+      PROMPT='$(conda_prompt)%F{magenta}%n%f %F{green}@%m%f %F{yellow}%~%f $(git_prompt)%F{green}$%f '
+      ```
 
-### 3. 저장 후 종료
-ctrl + O  →  Enter  →  ctrl + X
+​		
 
+  3. 저장 후 종료
+   
+      ctrl + O  →  Enter  →  ctrl + X
 
-### 4. 변경사항 적용
-```bash
-source ~/.zshrc
-```
+​		
+
+  4. 변경사항 적용
+
+      ```bash
+      source ~/.zshrc
+      ```
 
 ​		
 

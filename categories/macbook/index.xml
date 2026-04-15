@@ -9,17 +9,24 @@
     <managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
     <webMaster>kjonggwan@gmail.com (colinder)</webMaster>
     <copyright>colinder</copyright>
-    <lastBuildDate>Wed, 15 Apr 2026 12:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 15 Apr 2026 14:09:04 +0900</lastBuildDate>
     <atom:link href="https://colinder.github.io/categories/macbook/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Macbook에 Miniconda 설치하기</title>
+      <title>MacBookd에 Docker와 chrome 설치하기 by brew</title>
+      <link>https://colinder.github.io/docker_and_chrome_install_by_brew/</link>
+      <pubDate>Wed, 15 Apr 2026 14:09:04 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/docker_and_chrome_install_by_brew/</guid>
+      <description>macbook에 CLI로 docker와 google chrome을 설치해보겠습니다.</description>
+    </item>
+    <item>
+      <title>MacBook에 Miniconda 설치하기</title>
       <link>https://colinder.github.io/miniconda_by_mac/</link>
       <pubDate>Wed, 15 Apr 2026 12:00:00 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
       <guid>https://colinder.github.io/miniconda_by_mac/</guid>
       <description>macbook에 CLI로 miniconda를 깔끔히 설치해봅시다.</description>
     </item>
     <item>
-      <title>Macbook 기본 터미널 커스텀하기</title>
+      <title>MacBook 기본 터미널 커스텀하기</title>
       <link>https://colinder.github.io/custom_zsh/</link>
       <pubDate>Wed, 15 Apr 2026 09:00:00 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
       <guid>https://colinder.github.io/custom_zsh/</guid>

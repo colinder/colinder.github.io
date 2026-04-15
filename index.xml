@@ -4,10 +4,18 @@
         <link>https://colinder.github.io/</link>
         <description>Hello New World</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Wed, 15 Apr 2026 12:00:00 &#43;0900</lastBuildDate>
+            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Wed, 15 Apr 2026 14:09:04 &#43;0900</lastBuildDate>
             <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title>Macbook에 Miniconda 설치하기</title>
+    <title>MacBookd에 Docker와 chrome 설치하기 by brew</title>
+    <link>https://colinder.github.io/docker_and_chrome_install_by_brew/</link>
+    <pubDate>Wed, 15 Apr 2026 14:09:04 &#43;0900</pubDate>
+    <author>colinder</author>
+    <guid>https://colinder.github.io/docker_and_chrome_install_by_brew/</guid>
+    <description><![CDATA[macbook에 CLI로 docker와 google chrome을 설치해보겠습니다.]]></description>
+</item>
+<item>
+    <title>MacBook에 Miniconda 설치하기</title>
     <link>https://colinder.github.io/miniconda_by_mac/</link>
     <pubDate>Wed, 15 Apr 2026 12:00:00 &#43;0900</pubDate>
     <author>colinder</author>
@@ -15,7 +23,7 @@
     <description><![CDATA[macbook에 CLI로 miniconda를 깔끔히 설치해봅시다.]]></description>
 </item>
 <item>
-    <title>Macbook 기본 터미널 커스텀하기</title>
+    <title>MacBook 기본 터미널 커스텀하기</title>
     <link>https://colinder.github.io/custom_zsh/</link>
     <pubDate>Wed, 15 Apr 2026 09:00:00 &#43;0900</pubDate>
     <author>colinder</author>
@@ -77,14 +85,6 @@
     <author>colinder</author>
     <guid>https://colinder.github.io/nest-official_03_guards-interceptors-custom_decorators/</guid>
     <description><![CDATA[NEST의 공식 문서의 내용을 한글로 번역하며 이해하기 쉽게 정리합니다._(Guards, Interceptors, Custom_decorators)]]></description>
-</item>
-<item>
-    <title>Nest Official_02_(Modules, Middleware, Exception_filters, Pipes)</title>
-    <link>https://colinder.github.io/nest-official_02_modules-middleware-exception_filters-pipes/</link>
-    <pubDate>Sun, 14 Jan 2024 09:14:10 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/nest-official_02_modules-middleware-exception_filters-pipes/</guid>
-    <description><![CDATA[NEST의 공식 문서의 내용을 한글로 번역하며 이해하기 쉽게 정리합니다._(Modules, Middleware, Exception_filters, Pipes)]]></description>
 </item>
 </channel>
 </rss>

@@ -1,4 +1,4 @@
-# Macbook에 Miniconda 설치하기
+# MacBook에 Miniconda 설치하기
 
 
 ​		
@@ -11,7 +11,7 @@
 ​		
 ​		
 
-### CLI vs .dmg 설치 비교
+## CLI vs .dmg 설치 비교
 CLI(.sh 스크립트) 설치가 더 깔끔합니다. 이유는:
 - dmg는 macOS 앱처럼 /Applications에 설치되거나 불필요한 GUI 관련 파일을 남길 수 있음
 - .sh 스크립트는 지정한 디렉토리(기본 ~/miniconda3) 한 곳에만 모든 파일이 들어감
@@ -22,7 +22,7 @@ CLI(.sh 스크립트) 설치가 더 깔끔합니다. 이유는:
 ​		
 ​		
 ​		
-### 설치 방법
+## 설치 방법
 1. 설치 스크립트 다운로드
     ```bash
     curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh
