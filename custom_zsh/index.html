@@ -34,7 +34,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/custom_zsh\/"
-        },"genre": "posts","keywords": "macbook","wordcount":  408 ,
+        },"genre": "posts","keywords": "macbook","wordcount":  492 ,
         "url": "https:\/\/colinder.github.io\/custom_zsh\/","datePublished": "2026-04-15T09:00:00+09:00","dateModified": "2026-04-15T09:00:00+09:00","license": "colinder","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -108,7 +108,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">MacBook 기본 터미널 커스텀하기</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/macbook/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Macbook</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-04-15">2026-04-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;408 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-04-15">2026-04-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;492 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="true">
                 <div class="details-summary toc-title">
@@ -213,6 +213,22 @@
 </ol>
 <p>​</p>
 <ol start="4">
+<li>
+<p>기본 conda 설정 보이기 끄기</p>
+<p>이렇게 까지 하면 새롭게 내가 conda 설정을 보이게 한거고 conda 디폴트로 보이게 하는 (base)를 꺼주어야 한다.</p>
+<p>만약 이걸 안끄면 <code>(base) (base) ...</code> 이렇게 두번 보이게 된다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">conda config --set changeps1 <span class="nb">false</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<p>​</p>
+<ol start="5">
 <li>
 <p>변경사항 적용</p>
 <div class="highlight"><div class="chroma">

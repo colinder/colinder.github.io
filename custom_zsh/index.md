@@ -64,7 +64,20 @@
 
 ​		
 
-  4. 변경사항 적용
+  4. 기본 conda 설정 보이기 끄기
+   
+      이렇게 까지 하면 새롭게 내가 conda 설정을 보이게 한거고 conda 디폴트로 보이게 하는 (base)를 꺼주어야 한다.
+
+      만약 이걸 안끄면 `(base) (base) ...` 이렇게 두번 보이게 된다. 
+
+      ```bash
+      conda config --set changeps1 false
+      ```
+
+
+​		
+
+  5. 변경사항 적용
 
       ```bash
       source ~/.zshrc
