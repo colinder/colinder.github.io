@@ -102,6 +102,57 @@
         alt="/images/jg_02.jpg"
         title="/images/jg_02.jpg" /></a></div><div class="home-subtitle"><div id="id-1" class="typeit"></div></div><div class="links"><a href="https://github.com/colinder" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a><a href="mailto:kjonggwan@gmail.com" title="Email" rel="me"><i class="far fa-envelope fa-fw" aria-hidden="true"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/sw_20.09.09/">SW Expert Academy_D3 4698, 1493, 10570, 3032</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-09-08">2020-09-08</time></span>&nbsp;<span class="post-category">included in <a href="/categories/sw-expert-academy/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>SW Expert Academy</a></span></div><div class="content"><p>​</p>
+<h3 id="d3_4698_테네스의-특별한-소수">D3_4698_테네스의 특별한 소수</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">for</span> <span class="n">T</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">D</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">    <span class="n">D</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">D</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">B</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 에라토스테네스의 체를 활용할껀데 어떤 수까지 검증하면 될까?</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 검증해보니 모든 수는 자신의 int(root)까지만 확인하면 배수값인지 확인이 가능했다.</span>
+</span></span><span class="line"><span class="cl">    <span class="n">rootB</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">B</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span>							<span class="c1">#👈 이 아이디어를 얻기까지 오랜시간이 걸렸다.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">rootB</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>					<span class="c1">#👈</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>							<span class="c1">#👈</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="p">,</span> <span class="n">B</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>		<span class="c1">#👈 에라토스테네스의 체 를 활용</span>
+</span></span><span class="line"><span class="cl">                <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>						<span class="c1">#👈</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">D</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;#</span><span class="si">{</span><span class="n">T</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>​</p></div><div class="post-footer">
+        <a href="/sw_20.09.09/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/algorithm/">Algorithm</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/sw_20.09.05/">SW Expert Academy_D3 2817, 1491, 1229, 5515</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-09-05">2020-09-05</time></span>&nbsp;<span class="post-category">included in <a href="/categories/sw-expert-academy/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>SW Expert Academy</a></span></div><div class="content"><p>​</p>
 <h3 id="d3_2817_부분-수열의-합">D3_2817_부분 수열의 합</h3>
@@ -310,109 +361,6 @@
 </div>
 </div><p>​</p></div><div class="post-footer">
         <a href="/bj_20.08.06/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/algorithm/">Algorithm</a>,&nbsp;<a href="/tags/%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%951/">동적계획법1</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/bj_20.08.04/">BEAKJOON 1103, 1904, 2748, 9461</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-08-04">2020-08-04</time></span>&nbsp;<span class="post-category">included in <a href="/categories/beakjoon/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>BEAKJOON</a></span></div><div class="content"><p>​</p>
-<h3 id="1003_피보나치-함수">1003_피보나치 함수</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">Fibonacci</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">N</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">zero</span><span class="p">[</span><span class="n">N</span><span class="p">],</span> <span class="n">one</span><span class="p">[</span><span class="n">N</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">f</span> <span class="o">=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">        <span class="n">s</span> <span class="o">=</span> <span class="mi">2</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="o">-</span><span class="mi">2</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">            <span class="n">zero</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">zero</span><span class="p">[</span><span class="n">f</span><span class="p">]</span> <span class="o">+</span> <span class="n">zero</span><span class="p">[</span><span class="n">s</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">            <span class="n">one</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">one</span><span class="p">[</span><span class="n">f</span><span class="p">]</span> <span class="o">+</span> <span class="n">one</span><span class="p">[</span><span class="n">s</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">            <span class="n">f</span> <span class="o">+=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">            <span class="n">s</span> <span class="o">+=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">zero</span><span class="p">[</span><span class="n">N</span><span class="p">],</span> <span class="n">one</span><span class="p">[</span><span class="n">N</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">T</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())):</span>
-</span></span><span class="line"><span class="cl">    <span class="n">N</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="n">zero</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="n">one</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="n">Fibonacci</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>​</p>
-<h3 id="1904_01타일">1904_01타일</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">Fibonacci</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="n">result</span><span class="p">:</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">    <span class="n">f</span> <span class="o">=</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">    <span class="n">s</span> <span class="o">=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="o">+</span><span class="mi">3</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">result</span> <span class="o">=</span> <span class="n">f</span>
-</span></span><span class="line"><span class="cl">        <span class="k">elif</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">result</span> <span class="o">=</span> <span class="n">s</span>
-</span></span><span class="line"><span class="cl">        <span class="k">else</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">result</span> <span class="o">=</span> <span class="n">f</span><span class="o">+</span><span class="n">s</span>
-</span></span><span class="line"><span class="cl">            <span class="n">f</span> <span class="o">=</span> <span class="n">s</span> <span class="o">%</span> <span class="mi">15746</span>
-</span></span><span class="line"><span class="cl">            <span class="n">s</span> <span class="o">=</span> <span class="n">result</span> <span class="o">%</span> <span class="mi">15746</span>
-</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">result</span> <span class="o">%</span> <span class="mi">15746</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">Fibonacci</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">()))</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 문제를 먼저 손으로 플어보니 결국 피보나치 수열이 답이었는데</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># 15746의 나머지가 답이어서 그런지 &#39;시간 초과&#39;가 발생했다.</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># 때문에 &#39;왜맞틀?&#39;로 고민하다 검색해보니 결과값을 15746의 나머지로 더한다는</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># 방법을 보고 이를 참고했다. (솔직이 아직 이게 왜 더 빠른지 잘 모르겠다.)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>​</p></div><div class="post-footer">
-        <a href="/bj_20.08.04/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/algorithm/">Algorithm</a>,&nbsp;<a href="/tags/%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%951/">동적계획법1</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">

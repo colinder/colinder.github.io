@@ -4,7 +4,15 @@
         <link>https://colinder.github.io/posts/</link>
         <description>All Posts | colinder&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Wed, 15 Apr 2026 14:09:04 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Thu, 16 Apr 2026 14:50:00 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>pip freeze 시 @ 생기는 오류?</title>
+    <link>https://colinder.github.io/pip_error/</link>
+    <pubDate>Thu, 16 Apr 2026 14:50:00 &#43;0900</pubDate>
+    <author>colinder</author>
+    <guid>https://colinder.github.io/pip_error/</guid>
+    <description><![CDATA[pip freeze 시 @ 생기는 오류?인걸 잡아보겠습니다.]]></description>
+</item>
+<item>
     <title>MacBookd에 Docker와 chrome 설치하기 by brew</title>
     <link>https://colinder.github.io/docker_and_chrome_install_by_brew/</link>
     <pubDate>Wed, 15 Apr 2026 14:09:04 &#43;0900</pubDate>
@@ -75,14 +83,6 @@
     <author>colinder</author>
     <guid>https://colinder.github.io/decorator/</guid>
     <description><![CDATA[데코레이터에 대하여 정리합니다.]]></description>
-</item>
-<item>
-    <title>Nest Official_03_(Guards, Interceptors, Custom_decorators)</title>
-    <link>https://colinder.github.io/nest-official_03_guards-interceptors-custom_decorators/</link>
-    <pubDate>Sun, 14 Jan 2024 09:14:13 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/nest-official_03_guards-interceptors-custom_decorators/</guid>
-    <description><![CDATA[NEST의 공식 문서의 내용을 한글로 번역하며 이해하기 쉽게 정리합니다._(Guards, Interceptors, Custom_decorators)]]></description>
 </item>
 </channel>
 </rss>
