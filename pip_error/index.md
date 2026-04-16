@@ -14,6 +14,8 @@
 pip freeze > requirements.txt
 ```
 
+​		
+
 그럼 아래와 같이 해당 환경에 설치된 패키지들의 정보가 `requirements.txt` 파일에 저장됩니다.
 
 ```bash
@@ -42,7 +44,7 @@ defusedxml==0.7.1
 
 ## 문제 원인
 
-`pip` 패키지 19.1버전부터 버전명을 @ ~~로 명명하는 방법이 추가되었다고 한다.
+`pip` 패키지 19.1버전부터 버전명을 @ ~~로 명명하는 방법이 추가되었다고 합니다.
 
 이는 패키지가 아래처럼 특정 깃 레포 등에서 추가될 때 해당 정보를 저장하는데 유용하지만...
 
@@ -61,6 +63,8 @@ defusedxml==0.7.1
 ```bash
 pip list --format=freeze > requirements.txt
 ```
+
+​		
 
 위 명령어로 `requirements.txt`를 만들면 아래와 같이 버전명이 정상적으로 출력됩니다.
 ```bash
