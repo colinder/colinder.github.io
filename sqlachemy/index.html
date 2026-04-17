@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>what is Sqlachemy - colinder&#39;s blog</title><meta name="Description" content="Hello New World"><meta property="og:url" content="https://colinder.github.io/sqlachemy/">
+  <meta property="og:site_name" content="colinder&#39;s blog">
+  <meta property="og:title" content="what is Sqlachemy">
+  <meta property="og:description" content="sqlachemy와 alembic에 대하여 같이 알아보겠습니다.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-04-17T13:35:45+09:00">
+    <meta property="article:modified_time" content="2026-04-17T13:35:45+09:00">
+    <meta property="article:tag" content="Sqlachemy">
+    <meta property="article:tag" content="Alembic">
+    <meta property="og:image" content="https://colinder.github.io/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://colinder.github.io/logo.png">
+  <meta name="twitter:title" content="what is Sqlachemy">
+  <meta name="twitter:description" content="sqlachemy와 alembic에 대하여 같이 알아보겠습니다.">
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://colinder.github.io/sqlachemy/" /><link rel="prev" href="https://colinder.github.io/tree_to_bash/" /><link rel="next" href="https://colinder.github.io/alembic/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "what is Sqlachemy",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/colinder.github.io\/sqlachemy\/"
+        },"genre": "posts","keywords": "sqlachemy, alembic","wordcount":  3260 ,
+        "url": "https:\/\/colinder.github.io\/sqlachemy\/","datePublished": "2026-04-17T13:35:45+09:00","dateModified": "2026-04-17T13:35:45+09:00","license": "colinder","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "colinder"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="auto" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="colinder&#39;s blog">Hello New World</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="colinder&#39;s blog">Hello New World</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">what is Sqlachemy</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/sqlachemy/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Sqlachemy</a>&nbsp;<a href="/categories/alembic/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Alembic</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-04-17">2026-04-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;3260 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;7 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#주의-basemetadatacreate_allengine의-사용을-권장하지-않습니다">주의!! <code>Base.metadata.create_all(engine)</code>의 사용을 권장하지 않습니다.</a></li>
+        <li><a href="#sqlalchemy-엔진">SQLAlchemy 엔진</a></li>
+        <li><a href="#sqlalchemy-메타데이터">SQLAlchemy 메타데이터</a></li>
+        <li><a href="#sqlalchemy-세션">SQLAlchemy 세션</a></li>
+        <li><a href="#요약">요약</a></li>
+        <li><a href="#트랜잭션의-예시">트랜잭션의 예시</a></li>
+        <li><a href="#sqlalchemy에서의-트랜잭션-관리">SQLAlchemy에서의 트랜잭션 관리</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><br>
+<h1 id="what-is-sqlachemy">what is sqlachemy?</h1>
+<p>python에서 관계형 데이터베이스를 효율적으로 다루기 위한 강력한 SQL 툴킷 및 ORM(Object-Relational Mapping) 라이브러리</p>
+<br>
+SQLAlchemy Core와 ORM은 파이썬 객체를 데이터베이스의 테이블과 컬럼처럼 사용할 수 있게 하기 위해서 만들어졌습니다. 이러한 것들을 데이터베이스 메타데이터로 사용할 수 있습니다.
+<blockquote>
+<p>메타데이터는 데이터를 기술하는 데이터를 설명합니다. 여기서 메타데이터는 구성된 테이블, 열, 제약 조건 및 기타 객체 정보 등을 말합니다.</p>
+</blockquote>
+<p><br><br>
+SQLAlchemy 는 ORM 방식으로 저장하는데 우선</p>
+<p>메타 데이터(<code>metadata</code>)를 생성하고 이를 활용하는 것이 기본 개념이자 로직이다.</p>
+<p><strong>기본 클래스(Base) 정의:</strong></p>
+<ul>
+<li><code>declarative_base</code>를 호출하면 기본 클래스를 생성합니다. 이 클래스는 모든 ORM 모델 클래스의 기반(base) 클래스로 사용됩니다.</li>
+<li>이 기본 클래스는 <code>SQLAlchemy</code>의 ORM 시스템에 필요한 메타데이터를 저장하며, 이 메타데이터는 테이블 정의와 매핑 정보가 포함됩니다.</li>
+</ul>
+<p><strong>매핑 정보 저장:</strong></p>
+<ul>
+<li><code>Base</code> 클래스를 통해 정의된 모델 클래스들은 테이블의 메타데이터와 매핑 정보를 <code>Base.metadata</code>에 저장합니다.</li>
+<li>이 메타데이터는 나중에 데이터베이스에 실제 테이블을 생성하거나 업데이트하는 데 사용됩니다.</li>
+</ul>
+<br>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># _base.py</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">Column</span><span class="p">,</span> <span class="n">MetaData</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="kn">import</span> <span class="n">declarative_base</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sqlalchemy.sql</span> <span class="kn">import</span> <span class="n">func</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">metadata</span> <span class="o">=</span> <span class="n">MetaData</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">_Base</span> <span class="o">=</span> <span class="n">declarative_base</span><span class="p">(</span><span class="n">metadata</span><span class="o">=</span><span class="n">metadata</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Base</span><span class="p">(</span><span class="n">_Base</span><span class="p">):</span>  <span class="c1"># type: ignore</span>
+</span></span><span class="line"><span class="cl">    <span class="n">__abstract__</span> <span class="o">=</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">columns</span> <span class="o">=</span> <span class="s2">&#34;, &#34;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="p">[</span>
+</span></span><span class="line"><span class="cl">                <span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">=</span><span class="si">{</span><span class="nb">repr</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">k</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&#34;_&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="sa">f</span><span class="s2">&#34;&lt;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">(</span><span class="si">{</span><span class="n">columns</span><span class="si">}</span><span class="s2">)&gt;&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Column</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">Integer</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">String</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">._base</span> <span class="kn">import</span> <span class="n">Base</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Alias</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s2">&#34;alias&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">autoincrement</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">name</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p><strong>테이블 생성 및 매핑:</strong></p>
+<ul>
+<li>모델 클래스를 정의한 후, <code>Base.metadata.create_all(engine)</code>을 호출하여 실제 데이터베이스에 테이블을 생성할 수 있습니다.</li>
+<li>이 단계에서는 메타데이터를 기반으로 데이터베이스에 테이블이 생성됩니다.</li>
+</ul>
+<h3 id="주의-basemetadatacreate_allengine의-사용을-권장하지-않습니다">주의!! <code>Base.metadata.create_all(engine)</code>의 사용을 권장하지 않습니다.</h3>
+<p>alembic을 사용할 것이기 때문에</p>
+<blockquote>
+<p>sqlahcemy로는 ORM을 이용한 DB 스키마 구성만 하고 alembic으로 실제 DB에 반영하는 작업을 합니다. 수정하는 경우 sqlahcemy로는 ORM로 수정하고 alembic으로 반영하고 로직으로 진행하는 것을 권장</p>
+</blockquote>
+  <br>
+</li>
+<li>
+<p><strong>세션 관리:</strong></p>
+<ul>
+<li><code>Session</code> 객체를 생성하여 데이터베이스와 상호작용합니다. 세션은 데이터베이스에 대한 트랜잭션을 관리하고, 모델 인스턴스를 데이터베이스에 삽입하거나 조회하는 데 사용됩니다.</li>
+</ul>
+</li>
+</ul>
+<br>
+또 엔진이라는 개념이 등장하는데 
+<br><br><br>
+<h3 id="sqlalchemy-엔진">SQLAlchemy 엔진</h3>
+<p><strong>1. 엔진의 역할:</strong></p>
+<ul>
+<li>SQLAlchemy의 <strong>엔진</strong>은 데이터베이스와의 연결을 관리하는 핵심 구성 요소입니다. 엔진은 데이터베이스에 직접 연결하여 SQL 쿼리를 실행하고 결과를 반환합니다.</li>
+<li>엔진은 데이터베이스와의 통신을 위한 낮은 수준의 인터페이스를 제공하며, SQLAlchemy ORM을 사용할 때도 기본적으로 이 엔진을 통해 데이터베이스와 상호작용하게 됩니다.</li>
+</ul>
+<p><strong>2. 엔진 생성:</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="n">DATABASE_URL</span><span class="p">,</span> <span class="n">echo</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><code>create_engine</code> 함수는 데이터베이스 URL을 사용하여 엔진 객체를 생성합니다. <code>DATABASE_URL</code>은 데이터베이스에 대한 모든 연결 정보를 포함하는 문자열입니다.</li>
+<li><code>echo=True</code>는 SQLAlchemy가 실행하는 모든 SQL 쿼리를 콘솔에 출력하여 디버깅에 도움이 됩니다.</li>
+</ul>
+<p><strong>3. 엔진의 구성 요소:</strong></p>
+<ul>
+<li><strong>Connection Pool</strong>: 엔진은 데이터베이스와의 연결을 관리하기 위한 커넥션 풀을 사용합니다. 커넥션 풀은 여러 데이터베이스 연결을 미리 생성하여 필요할 때 재사용함으로써 성능을 향상시킵니다.</li>
+<li><strong>Dialect</strong>: SQLAlchemy는 다양한 데이터베이스 시스템을 지원하는 다양한 &lsquo;방언&rsquo;(dialect)을 사용합니다. 방언은 데이터베이스 시스템의 특정 SQL 문법 및 기능을 이해하고 처리합니다.</li>
+<li><strong>Engine Metadata</strong>: 엔진은 메타데이터를 포함하고 있으며, 이는 데이터베이스의 구조에 대한 정보를 저장하고, SQL 쿼리를 실행하는 데 필요한 정보를 제공합니다.
+<br><br><br></li>
+</ul>
+<h3 id="sqlalchemy-메타데이터">SQLAlchemy 메타데이터</h3>
+<p><strong>1. 메타데이터의 역할:</strong></p>
+<ul>
+<li><strong>메타데이터</strong>는 데이터베이스의 구조를 설명하는 데이터입니다. SQLAlchemy에서 메타데이터는 테이블, 열, 관계 등의 정보를 포함합니다.</li>
+<li>메타데이터는 ORM 모델 클래스가 데이터베이스 테이블에 어떻게 매핑되는지를 정의하는 데 사용됩니다.</li>
+</ul>
+<p><strong>2. 메타데이터와 Base 클래스:</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="kn">import</span> <span class="n">declarative_base</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Base</span> <span class="o">=</span> <span class="n">declarative_base</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><code>declarative_base</code> 함수는 ORM 모델 클래스가 상속받을 기본 클래스를 생성합니다. 이 기본 클래스는 메타데이터를 저장하고, 모든 모델 클래스는 이 클래스를 상속받아 데이터베이스 테이블과의 매핑을 정의합니다.</li>
+<li>모델 클래스에서 정의한 테이블 및 열 정보는 <code>Base.metadata</code>를 통해 메타데이터에 저장됩니다.</li>
+</ul>
+<p><strong>3. 메타데이터 사용:</strong></p>
+<ul>
+<li>
+<p><strong>테이블 생성</strong>: 메타데이터를 사용하여 실제 데이터베이스에 테이블을 생성할 수 있습니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">Base</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">create_all</span><span class="p">(</span><span class="n">engine</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><code>create_all</code> 메서드는 메타데이터에 정의된 모든 테이블을 데이터베이스에 생성합니다.
+<br><br><br></li>
+</ul>
+</li>
+</ul>
+<h3 id="sqlalchemy-세션">SQLAlchemy 세션</h3>
+<p><strong>1. 세션의 역할:</strong></p>
+<ul>
+<li><strong>세션</strong>은 데이터베이스 트랜잭션을 관리하고, ORM 모델과 데이터베이스 간의 상호작용을 수행하는 객체입니다. 세션은 데이터베이스 작업을 추적하고, 커밋 또는 롤백을 통해 트랜잭션을 관리합니다.</li>
+<li>세션은 객체와 데이터베이스 사이의 상호작용을 추상화하여, 객체 지향적으로 데이터베이스 작업을 수행할 수 있게 합니다.</li>
+</ul>
+<p><strong>2. 세션 생성:</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="kn">import</span> <span class="n">sessionmaker</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">SessionLocal</span> <span class="o">=</span> <span class="n">sessionmaker</span><span class="p">(</span><span class="n">autocommit</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">autoflush</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">bind</span><span class="o">=</span><span class="n">engine</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><code>sessionmaker</code>는 세션을 생성하는 팩토리 함수를 반환합니다. 이 팩토리 함수는 세션 객체를 만들기 위한 설정을 제공합니다.</li>
+<li><code>autocommit=False</code>는 세션이 자동으로 커밋되지 않도록 설정합니다. 수동으로 <code>session.commit()</code>을 호출해야 데이터베이스에 변경 사항이 반영됩니다.</li>
+<li><code>autoflush=False</code>는 세션이 자동으로 데이터를 플러시하지 않도록 설정합니다. 명시적으로 <code>session.flush()</code>를 호출해야 데이터베이스에 변경 사항이 반영됩니다.</li>
+<li><code>bind=engine</code>은 세션이 데이터베이스와 연결된 엔진을 사용하도록 설정합니다.</li>
+</ul>
+<p><strong>3. 세션 사용:</strong></p>
+<ul>
+<li>
+<p><strong>세션 객체 생성</strong>: <code>SessionLocal</code>을 호출하여 세션 객체를 생성합니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">session</span> <span class="o">=</span> <span class="n">SessionLocal</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>데이터베이스 작업</strong>: 세션 객체를 사용하여 데이터베이스에 데이터를 추가하거나 조회할 수 있습니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 객체 생성 및 추가</span>
+</span></span><span class="line"><span class="cl"><span class="n">new_user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;John Doe&#39;</span><span class="p">,</span> <span class="n">email</span><span class="o">=</span><span class="s1">&#39;john@example.com&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">new_user</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 객체 조회</span>
+</span></span><span class="line"><span class="cl"><span class="n">user</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">User</span><span class="p">)</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;John Doe&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<p><br><br><br></p>
+<h3 id="요약">요약</h3>
+<ul>
+<li><strong>엔진</strong>은 데이터베이스와의 연결을 관리하고 SQL 명령을 실행하는 기본 구성 요소입니다. 데이터베이스와의 모든 상호작용은 엔진을 통해 이루어집니다.</li>
+<li><strong>메타데이터</strong>는 데이터베이스의 구조에 대한 정보를 저장하고, ORM 모델이 데이터베이스 테이블과 어떻게 매핑되는지를 정의합니다. <code>Base.metadata</code>를 통해 테이블을 생성하거나 업데이트할 수 있습니다.</li>
+<li><strong>세션</strong>은 데이터베이스 트랜잭션을 관리하고, ORM 모델과 데이터베이스 간의 상호작용을 수행합니다. 세션은 데이터베이스 작업을 추적하고 커밋 또는 롤백을 통해 트랜잭션을 제어합니다.</li>
+</ul>
+<p>이러한 구성 요소들은 SQLAlchemy를 통해 데이터베이스와의 효과적인 상호작용을 가능하게 합니다.
+<br><br><br></p>
+<h3 id="트랜잭션의-예시">트랜잭션의 예시</h3>
+<p><strong>은행 송금 예시</strong></p>
+<ul>
+<li>트랜잭션 시작: 계좌 A에서 계좌 B로 송금하는 작업을 시작합니다.</li>
+<li>작업 1: 계좌 A에서 송금할 금액을 차감합니다.</li>
+<li>작업 2: 계좌 B에 송금된 금액을 추가합니다.</li>
+<li>트랜잭션 완료: 두 작업이 모두 성공하면 트랜잭션을 커밋하여 변경 사항을 확정합니다.</li>
+<li>트랜잭션 실패: 만약 중간에 오류가 발생하면 두 작업 모두 롤백하여 송금 작업을 취소합니다.
+<br><br><br></li>
+</ul>
+<h3 id="sqlalchemy에서의-트랜잭션-관리">SQLAlchemy에서의 트랜잭션 관리</h3>
+<p>SQLAlchemy에서는 세션을 사용하여 트랜잭션을 관리합니다. 세션은 트랜잭션을 시작하고, 변경 사항을 추적하며, 트랜잭션이 성공적으로 완료되면 커밋하고, 실패하면 롤백합니다.</p>
+<p><strong>트랜잭션 시작과 커밋</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">session</span> <span class="o">=</span> <span class="n">SessionLocal</span><span class="p">()</span>  <span class="c1"># 세션 생성</span>
+</span></span><span class="line"><span class="cl"><span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 데이터베이스 작업 수행</span>
+</span></span><span class="line"><span class="cl">    <span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;John Doe&#39;</span><span class="p">,</span> <span class="n">email</span><span class="o">=</span><span class="s1">&#39;john@example.com&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 커밋하여 변경 사항을 확정</span>
+</span></span><span class="line"><span class="cl">    <span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 예외 발생 시 롤백</span>
+</span></span><span class="line"><span class="cl">    <span class="n">session</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="k">raise</span> <span class="n">e</span>
+</span></span><span class="line"><span class="cl"><span class="k">finally</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 세션 종료</span>
+</span></span><span class="line"><span class="cl">    <span class="n">session</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><strong>세션 생성</strong>: 세션을 생성하면 새로운 트랜잭션이 시작됩니다.</li>
+<li><strong>작업 수행</strong>: 세션을 통해 데이터베이스 작업을 수행합니다.</li>
+<li><strong>커밋</strong>: <code>session.commit()</code>을 호출하면 트랜잭션이 커밋되어 변경 사항이 데이터베이스에 반영됩니다.</li>
+<li><strong>롤백</strong>: 오류가 발생하면 <code>session.rollback()</code>을 호출하여 트랜잭션을 롤백하고 변경 사항을 취소합니다.</li>
+<li><strong>세션 종료</strong>: 트랜잭션이 완료되면 <code>session.close()</code>로 세션을 종료합니다.</li>
+</ul>
+<p>트랜잭션을 통해 데이터베이스의 신뢰성과 무결성을 보장할 수 있으며, 세션을 사용하여 이를 효과적으로 관리할 수 있습니다.</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2026-04-17</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/sqlachemy/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/sqlachemy/">Sqlachemy</a>,&nbsp;<a href="/tags/alembic/">Alembic</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/tree_to_bash/" class="prev" rel="prev" title="bash에서 &#34;tree&#34;와 같이 폴더 구조 알고 싶을 때"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>bash에서 "tree"와 같이 폴더 구조 알고 싶을 때</a>
+            <a href="/alembic/" class="next" rel="next" title="what is Alembic">what is Alembic<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.160.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><link rel="stylesheet" href="/css/_custom.scss"><script type="text/javascript" src="https://colinder-github-io.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":200},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>what is sqlachemy - colinder&#39;s blog</title><meta name="Description" content="Hello New World"><meta property="og:url" content="http://localhost:1313/sqlachemynalembic_1/">
+  <meta property="og:site_name" content="colinder&#39;s blog">
+  <meta property="og:title" content="what is sqlachemy">
+  <meta property="og:description" content="macbook에 CLI로 docker와 google chrome을 설치해보겠습니다.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-04-17T13:35:45+09:00">
+    <meta property="article:modified_time" content="2026-04-17T13:35:45+09:00">
+    <meta property="article:tag" content="Sqlachemy">
+    <meta property="article:tag" content="Alembic">
+    <meta property="og:image" content="http://localhost:1313/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/logo.png">
+  <meta name="twitter:title" content="what is sqlachemy">
+  <meta name="twitter:description" content="macbook에 CLI로 docker와 google chrome을 설치해보겠습니다.">
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/sqlachemynalembic_1/" /><link rel="prev" href="http://localhost:1313/tree_to_bash/" /><link rel="next" href="http://localhost:1313/sqlachemynalembic_2/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><meta name="google-site-verification" content="colinder" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "what is sqlachemy",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/sqlachemynalembic_1\/"
+        },"genre": "posts","keywords": "sqlachemy, alembic","wordcount":  5509 ,
+        "url": "http:\/\/localhost:1313\/sqlachemynalembic_1\/","datePublished": "2026-04-17T13:35:45+09:00","dateModified": "2026-04-17T13:35:45+09:00","license": "colinder","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "colinder"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="auto" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="colinder&#39;s blog">Hello New World</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/categories/" title="대분류"> Categories </a><a class="menu-item" href="/posts/" title="게시글"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="colinder&#39;s blog">Hello New World</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="검색할 내용을 입력해주세요" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/categories/" title="대분류">Categories</a><a class="menu-item" href="/posts/" title="게시글">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">what is sqlachemy</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/sqlachemy/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Sqlachemy</a>&nbsp;<a href="/categories/alembic/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Alembic</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-04-17">2026-04-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;5509 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;11 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#주의-basemetadatacreate_allengine의-사용을-권장하지-않습니다">주의!! <code>Base.metadata.create_all(engine)</code>의 사용을 권장하지 않습니다.</a></li>
+        <li><a href="#sqlalchemy-엔진">SQLAlchemy 엔진</a></li>
+        <li><a href="#sqlalchemy-메타데이터">SQLAlchemy 메타데이터</a></li>
+        <li><a href="#sqlalchemy-세션">SQLAlchemy 세션</a></li>
+        <li><a href="#요약">요약</a></li>
+        <li><a href="#트랜잭션의-예시">트랜잭션의 예시</a></li>
+        <li><a href="#sqlalchemy에서의-트랜잭션-관리">SQLAlchemy에서의 트랜잭션 관리</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#0-설치">0. 설치</a></li>
+        <li><a href="#1-초기화">1. 초기화</a></li>
+        <li><a href="#2-환경-설정">2. 환경 설정</a></li>
+        <li><a href="#3-설정-사항-반영">3. 설정 사항 반영</a></li>
+      </ul>
+    </li>
+    <li><a href="#이후-orm-구성의-crud-작업시">이후 ORM 구성의 CRUD 작업시</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><br>
+<h1 id="sqlachemy--alembic">sqlachemy / alembic</h1>
+<p>sqlachemy와 alembic의 관계와 기본 설정에 관한 고찰</p>
+<br>
+SQLAlchemy Core와 ORM은 파이썬 객체를 데이터베이스의 테이블과 컬럼처럼 사용할 수 있게 하기 위해서 만들어졌습니다. 이러한 것들을 데이터베이스 메타데이터로 사용할 수 있습니다.
+<blockquote>
+<p>메타데이터는 데이터를 기술하는 데이터를 설명합니다. 여기서 메타데이터는 구성된 테이블, 열, 제약 조건 및 기타 객체 정보 등을 말합니다.</p>
+</blockquote>
+<p><br><br>
+SQLAlchemy 는 ORM 방식으로 저장하는데 우선</p>
+<p>메타 데이터(<code>metadata</code>)를 생성하고 이를 활용하는 것이 기본 개념이자 로직이다.</p>
+<p><strong>기본 클래스(Base) 정의:</strong></p>
+<ul>
+<li><code>declarative_base</code>를 호출하면 기본 클래스를 생성합니다. 이 클래스는 모든 ORM 모델 클래스의 기반(base) 클래스로 사용됩니다.</li>
+<li>이 기본 클래스는 <code>SQLAlchemy</code>의 ORM 시스템에 필요한 메타데이터를 저장하며, 이 메타데이터는 테이블 정의와 매핑 정보가 포함됩니다.
+<br></li>
+</ul>
+<p><strong>매핑 정보 저장:</strong></p>
+<ul>
+<li><code>Base</code> 클래스를 통해 정의된 모델 클래스들은 테이블의 메타데이터와 매핑 정보를 <code>Base.metadata</code>에 저장합니다.</li>
+<li>이 메타데이터는 나중에 데이터베이스에 실제 테이블을 생성하거나 업데이트하는 데 사용됩니다.</li>
+</ul>
+<p><br><br></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># _base.py</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">Column</span><span class="p">,</span> <span class="n">MetaData</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="kn">import</span> <span class="n">declarative_base</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sqlalchemy.sql</span> <span class="kn">import</span> <span class="n">func</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">metadata</span> <span class="o">=</span> <span class="n">MetaData</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">_Base</span> <span class="o">=</span> <span class="n">declarative_base</span><span class="p">(</span><span class="n">metadata</span><span class="o">=</span><span class="n">metadata</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Base</span><span class="p">(</span><span class="n">_Base</span><span class="p">):</span>  <span class="c1"># type: ignore</span>
+</span></span><span class="line"><span class="cl">    <span class="n">__abstract__</span> <span class="o">=</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">columns</span> <span class="o">=</span> <span class="s2">&#34;, &#34;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="p">[</span>
+</span></span><span class="line"><span class="cl">                <span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">=</span><span class="si">{</span><span class="nb">repr</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">k</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&#34;_&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="sa">f</span><span class="s2">&#34;&lt;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">(</span><span class="si">{</span><span class="n">columns</span><span class="si">}</span><span class="s2">)&gt;&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Column</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">Integer</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">String</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">._base</span> <span class="kn">import</span> <span class="n">Base</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Alias</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s2">&#34;alias&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">autoincrement</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">name</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p><strong>테이블 생성 및 매핑:</strong></p>
+<ul>
+<li>모델 클래스를 정의한 후, <code>Base.metadata.create_all(engine)</code>을 호출하여 실제 데이터베이스에 테이블을 생성할 수 있습니다.</li>
+<li>이 단계에서는 메타데이터를 기반으로 데이터베이스에 테이블이 생성됩니다.</li>
+</ul>
+<h3 id="주의-basemetadatacreate_allengine의-사용을-권장하지-않습니다">주의!! <code>Base.metadata.create_all(engine)</code>의 사용을 권장하지 않습니다.</h3>
+<p>alembic을 사용할 것이기 때문에</p>
+<blockquote>
+<p>sqlahcemy로는 ORM을 이용한 DB 스키마 구성만 하고 alembic으로 실제 DB에 반영하는 작업을 합니다. 수정하는 경우 sqlahcemy로는 ORM로 수정하고 alembic으로 반영하고 로직으로 진행하는 것을 권장</p>
+</blockquote>
+  <br>
+</li>
+<li>
+<p><strong>세션 관리:</strong></p>
+<ul>
+<li><code>Session</code> 객체를 생성하여 데이터베이스와 상호작용합니다. 세션은 데이터베이스에 대한 트랜잭션을 관리하고, 모델 인스턴스를 데이터베이스에 삽입하거나 조회하는 데 사용됩니다.</li>
+</ul>
+</li>
+</ul>
+<p>또 엔진이라는 개념이 등장하는데
+<br><br><br></p>
+<h3 id="sqlalchemy-엔진">SQLAlchemy 엔진</h3>
+<p><strong>1. 엔진의 역할:</strong></p>
+<ul>
+<li>SQLAlchemy의 <strong>엔진</strong>은 데이터베이스와의 연결을 관리하는 핵심 구성 요소입니다. 엔진은 데이터베이스에 직접 연결하여 SQL 쿼리를 실행하고 결과를 반환합니다.</li>
+<li>엔진은 데이터베이스와의 통신을 위한 낮은 수준의 인터페이스를 제공하며, SQLAlchemy ORM을 사용할 때도 기본적으로 이 엔진을 통해 데이터베이스와 상호작용하게 됩니다.</li>
+</ul>
+<p><strong>2. 엔진 생성:</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="n">DATABASE_URL</span><span class="p">,</span> <span class="n">echo</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><code>create_engine</code> 함수는 데이터베이스 URL을 사용하여 엔진 객체를 생성합니다. <code>DATABASE_URL</code>은 데이터베이스에 대한 모든 연결 정보를 포함하는 문자열입니다.</li>
+<li><code>echo=True</code>는 SQLAlchemy가 실행하는 모든 SQL 쿼리를 콘솔에 출력하여 디버깅에 도움이 됩니다.</li>
+</ul>
+<p><strong>3. 엔진의 구성 요소:</strong></p>
+<ul>
+<li><strong>Connection Pool</strong>: 엔진은 데이터베이스와의 연결을 관리하기 위한 커넥션 풀을 사용합니다. 커넥션 풀은 여러 데이터베이스 연결을 미리 생성하여 필요할 때 재사용함으로써 성능을 향상시킵니다.</li>
+<li><strong>Dialect</strong>: SQLAlchemy는 다양한 데이터베이스 시스템을 지원하는 다양한 &lsquo;방언&rsquo;(dialect)을 사용합니다. 방언은 데이터베이스 시스템의 특정 SQL 문법 및 기능을 이해하고 처리합니다.</li>
+<li><strong>Engine Metadata</strong>: 엔진은 메타데이터를 포함하고 있으며, 이는 데이터베이스의 구조에 대한 정보를 저장하고, SQL 쿼리를 실행하는 데 필요한 정보를 제공합니다.
+<br><br><br></li>
+</ul>
+<h3 id="sqlalchemy-메타데이터">SQLAlchemy 메타데이터</h3>
+<p><strong>1. 메타데이터의 역할:</strong></p>
+<ul>
+<li><strong>메타데이터</strong>는 데이터베이스의 구조를 설명하는 데이터입니다. SQLAlchemy에서 메타데이터는 테이블, 열, 관계 등의 정보를 포함합니다.</li>
+<li>메타데이터는 ORM 모델 클래스가 데이터베이스 테이블에 어떻게 매핑되는지를 정의하는 데 사용됩니다.</li>
+</ul>
+<p><strong>2. 메타데이터와 Base 클래스:</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="kn">import</span> <span class="n">declarative_base</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Base</span> <span class="o">=</span> <span class="n">declarative_base</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><code>declarative_base</code> 함수는 ORM 모델 클래스가 상속받을 기본 클래스를 생성합니다. 이 기본 클래스는 메타데이터를 저장하고, 모든 모델 클래스는 이 클래스를 상속받아 데이터베이스 테이블과의 매핑을 정의합니다.</li>
+<li>모델 클래스에서 정의한 테이블 및 열 정보는 <code>Base.metadata</code>를 통해 메타데이터에 저장됩니다.</li>
+</ul>
+<p><strong>3. 메타데이터 사용:</strong></p>
+<ul>
+<li>
+<p><strong>테이블 생성</strong>: 메타데이터를 사용하여 실제 데이터베이스에 테이블을 생성할 수 있습니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">Base</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">create_all</span><span class="p">(</span><span class="n">engine</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><code>create_all</code> 메서드는 메타데이터에 정의된 모든 테이블을 데이터베이스에 생성합니다.
+<br><br><br></li>
+</ul>
+</li>
+</ul>
+<h3 id="sqlalchemy-세션">SQLAlchemy 세션</h3>
+<p><strong>1. 세션의 역할:</strong></p>
+<ul>
+<li><strong>세션</strong>은 데이터베이스 트랜잭션을 관리하고, ORM 모델과 데이터베이스 간의 상호작용을 수행하는 객체입니다. 세션은 데이터베이스 작업을 추적하고, 커밋 또는 롤백을 통해 트랜잭션을 관리합니다.</li>
+<li>세션은 객체와 데이터베이스 사이의 상호작용을 추상화하여, 객체 지향적으로 데이터베이스 작업을 수행할 수 있게 합니다.</li>
+</ul>
+<p><strong>2. 세션 생성:</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="kn">import</span> <span class="n">sessionmaker</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">SessionLocal</span> <span class="o">=</span> <span class="n">sessionmaker</span><span class="p">(</span><span class="n">autocommit</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">autoflush</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">bind</span><span class="o">=</span><span class="n">engine</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><code>sessionmaker</code>는 세션을 생성하는 팩토리 함수를 반환합니다. 이 팩토리 함수는 세션 객체를 만들기 위한 설정을 제공합니다.</li>
+<li><code>autocommit=False</code>는 세션이 자동으로 커밋되지 않도록 설정합니다. 수동으로 <code>session.commit()</code>을 호출해야 데이터베이스에 변경 사항이 반영됩니다.</li>
+<li><code>autoflush=False</code>는 세션이 자동으로 데이터를 플러시하지 않도록 설정합니다. 명시적으로 <code>session.flush()</code>를 호출해야 데이터베이스에 변경 사항이 반영됩니다.</li>
+<li><code>bind=engine</code>은 세션이 데이터베이스와 연결된 엔진을 사용하도록 설정합니다.</li>
+</ul>
+<p><strong>3. 세션 사용:</strong></p>
+<ul>
+<li>
+<p><strong>세션 객체 생성</strong>: <code>SessionLocal</code>을 호출하여 세션 객체를 생성합니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">session</span> <span class="o">=</span> <span class="n">SessionLocal</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>데이터베이스 작업</strong>: 세션 객체를 사용하여 데이터베이스에 데이터를 추가하거나 조회할 수 있습니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 객체 생성 및 추가</span>
+</span></span><span class="line"><span class="cl"><span class="n">new_user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;John Doe&#39;</span><span class="p">,</span> <span class="n">email</span><span class="o">=</span><span class="s1">&#39;john@example.com&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">new_user</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 객체 조회</span>
+</span></span><span class="line"><span class="cl"><span class="n">user</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">User</span><span class="p">)</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;John Doe&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<p><br><br><br></p>
+<h3 id="요약">요약</h3>
+<ul>
+<li><strong>엔진</strong>은 데이터베이스와의 연결을 관리하고 SQL 명령을 실행하는 기본 구성 요소입니다. 데이터베이스와의 모든 상호작용은 엔진을 통해 이루어집니다.</li>
+<li><strong>메타데이터</strong>는 데이터베이스의 구조에 대한 정보를 저장하고, ORM 모델이 데이터베이스 테이블과 어떻게 매핑되는지를 정의합니다. <code>Base.metadata</code>를 통해 테이블을 생성하거나 업데이트할 수 있습니다.</li>
+<li><strong>세션</strong>은 데이터베이스 트랜잭션을 관리하고, ORM 모델과 데이터베이스 간의 상호작용을 수행합니다. 세션은 데이터베이스 작업을 추적하고 커밋 또는 롤백을 통해 트랜잭션을 제어합니다.</li>
+</ul>
+<p>이러한 구성 요소들은 SQLAlchemy를 통해 데이터베이스와의 효과적인 상호작용을 가능하게 합니다.
+<br><br><br></p>
+<h3 id="트랜잭션의-예시">트랜잭션의 예시</h3>
+<p><strong>은행 송금 예시</strong></p>
+<ul>
+<li>트랜잭션 시작: 계좌 A에서 계좌 B로 송금하는 작업을 시작합니다.</li>
+<li>작업 1: 계좌 A에서 송금할 금액을 차감합니다.</li>
+<li>작업 2: 계좌 B에 송금된 금액을 추가합니다.</li>
+<li>트랜잭션 완료: 두 작업이 모두 성공하면 트랜잭션을 커밋하여 변경 사항을 확정합니다.</li>
+<li>트랜잭션 실패: 만약 중간에 오류가 발생하면 두 작업 모두 롤백하여 송금 작업을 취소합니다.
+<br><br><br></li>
+</ul>
+<h3 id="sqlalchemy에서의-트랜잭션-관리">SQLAlchemy에서의 트랜잭션 관리</h3>
+<p>SQLAlchemy에서는 세션을 사용하여 트랜잭션을 관리합니다. 세션은 트랜잭션을 시작하고, 변경 사항을 추적하며, 트랜잭션이 성공적으로 완료되면 커밋하고, 실패하면 롤백합니다.</p>
+<p><strong>트랜잭션 시작과 커밋</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">session</span> <span class="o">=</span> <span class="n">SessionLocal</span><span class="p">()</span>  <span class="c1"># 세션 생성</span>
+</span></span><span class="line"><span class="cl"><span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 데이터베이스 작업 수행</span>
+</span></span><span class="line"><span class="cl">    <span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;John Doe&#39;</span><span class="p">,</span> <span class="n">email</span><span class="o">=</span><span class="s1">&#39;john@example.com&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 커밋하여 변경 사항을 확정</span>
+</span></span><span class="line"><span class="cl">    <span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 예외 발생 시 롤백</span>
+</span></span><span class="line"><span class="cl">    <span class="n">session</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="k">raise</span> <span class="n">e</span>
+</span></span><span class="line"><span class="cl"><span class="k">finally</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 세션 종료</span>
+</span></span><span class="line"><span class="cl">    <span class="n">session</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><strong>세션 생성</strong>: 세션을 생성하면 새로운 트랜잭션이 시작됩니다.</li>
+<li><strong>작업 수행</strong>: 세션을 통해 데이터베이스 작업을 수행합니다.</li>
+<li><strong>커밋</strong>: <code>session.commit()</code>을 호출하면 트랜잭션이 커밋되어 변경 사항이 데이터베이스에 반영됩니다.</li>
+<li><strong>롤백</strong>: 오류가 발생하면 <code>session.rollback()</code>을 호출하여 트랜잭션을 롤백하고 변경 사항을 취소합니다.</li>
+<li><strong>세션 종료</strong>: 트랜잭션이 완료되면 <code>session.close()</code>로 세션을 종료합니다.</li>
+</ul>
+<p>트랜잭션을 통해 데이터베이스의 신뢰성과 무결성을 보장할 수 있으며, 세션을 사용하여 이를 효과적으로 관리할 수 있습니다.</p>
+<h1 id="alembic">Alembic</h1>
+<blockquote>
+<p>Python 으로 <code>SQLAlchemy</code> 를 사용하고 있을 때 데이터베이스를 관리해주는 마이그레이션 도구</p>
+</blockquote>
+<p>설명을 이해해보자 <code>SQLAlchemy</code> 로 기반을 만들고 <code>Alembic</code> 으로 변경사항을 실제 DB에 반영한다. 는 로직으로 개발하면 된다.</p>
+<h3 id="0-설치">0. 설치</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pip install alembic
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="1-초기화">1. 초기화</h3>
+<p>alembic을 사용하기 위해서는 dependency 추가가 선행되어야 한다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$&gt; alembic init 폴더명
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>위 명령어를 수행하면 작성한 폴더명으로 alembic 정보가 담길 폴더가 생성된다.</p>
+<p>폴더명을 &lsquo;alembic&rsquo;으로 입력하면 <strong>&lsquo;alembic&rsquo;이라는 이름의 폴더</strong>와 <strong>&lsquo;alembic.ini&rsquo;라는 파일</strong>이 생성된다.</p>
+<p><strong>그런데 이중에는 데이터베이스 연결을 위한 설정을 해야 하는데 이는 .env 관리하는 것이 좋을 것같아서 조금 복잡하게 설명하겠다.</strong></p>
+<h3 id="2-환경-설정">2. 환경 설정</h3>
+<p>보통의 경우 사용자가 관리해주어야 하는 파일은 총 2개</p>
+<ol>
+<li>alembic 폴더 안에 <strong>env.py</strong>
+<ul>
+<li>스키마의 변경사항을 감지할 수 있게 Base.metadata를 지정해주는 파일</li>
+</ul>
+</li>
+<li><strong>alembic.ini</strong>
+<ul>
+<li>데이터 베이스 연결을 위한 설정을 하는 파일</li>
+</ul>
+</li>
+</ol>
+<p>초기 설정시 권장하는 구조는 아래과 같다.</p>
+<ul>
+<li>
+<p><strong>env.py (에서 총 2가지)</strong></p>
+<ol>
+<li><code>SQLAlchemy</code> 에 생성한 Base의 metadata를 target_metadata로 등록해준다.</li>
+<li>DB 연결할 url 설정 (?이건 alembic.ini 에서 한다고 했는데?. 일단 보자.)
+<ul>
+<li>
+<p>db 연결 주소를 .env로 관리하는데 이를 config.py에서 가져올 수 있게 하자.</p>
+<ul>
+<li>조금 길다… 펼쳐보자.
+<ul>
+<li>
+<p>일단 아래와 같이 구조를 만들었고,</p>
+</li>
+<li>
+<p>.env</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># .env.py</span>
+</span></span><span class="line"><span class="cl"><span class="nv">MYSQL_HOSTNAME</span><span class="o">=</span>192.168.30.23
+</span></span><span class="line"><span class="cl"><span class="nv">MYSQL_PORT</span><span class="o">=</span><span class="m">3306</span>
+</span></span><span class="line"><span class="cl"><span class="nv">MYSQL_DB_NAME</span><span class="o">=</span>mydatabase
+</span></span><span class="line"><span class="cl"><span class="nv">MYSQL_USERNAME</span><span class="o">=</span>imuser
+</span></span><span class="line"><span class="cl"><span class="nv">MYSQL_PASSWORD</span><span class="o">=</span>imuser_password
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>우선 DB 연결을 위한 주소를 가져올 config.py 파일을 생성했다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">from os import path
+</span></span><span class="line"><span class="cl">from pydantic import ValidationError
+</span></span><span class="line"><span class="cl">from pydantic_settings import BaseSettings, SettingsConfigDict
+</span></span><span class="line"><span class="cl">from pydantic.networks import MySQLDsn, MultiHostUrl
+</span></span><span class="line"><span class="cl">from dotenv import load_dotenv
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">load_dotenv<span class="o">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">API_PREFIX</span> <span class="o">=</span> <span class="s2">&#34;/api&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">class ProjectConfig<span class="o">(</span>BaseSettings<span class="o">)</span>:
+</span></span><span class="line"><span class="cl">    <span class="nv">model_config</span> <span class="o">=</span> SettingsConfigDict<span class="o">(</span><span class="nv">case_sensitive</span><span class="o">=</span>False<span class="o">)</span>
+</span></span><span class="line"><span class="cl">    debug: <span class="nv">bool</span> <span class="o">=</span> False
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    project_name: <span class="nv">str</span> <span class="o">=</span> <span class="s2">&#34;cnia-backend&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">class DatabaseConfig<span class="o">(</span>BaseSettings<span class="o">)</span>:
+</span></span><span class="line"><span class="cl">    <span class="nv">model_config</span> <span class="o">=</span> SettingsConfigDict<span class="o">(</span><span class="nv">case_sensitive</span><span class="o">=</span>False<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    mysql_hostname: str
+</span></span><span class="line"><span class="cl">    mysql_port: int
+</span></span><span class="line"><span class="cl">    mysql_db_name: str
+</span></span><span class="line"><span class="cl">    mysql_username: str
+</span></span><span class="line"><span class="cl">    mysql_password: str
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    @property
+</span></span><span class="line"><span class="cl">    def database_uri<span class="o">(</span>self<span class="o">)</span> -&gt; str:
+</span></span><span class="line"><span class="cl">        dsn: <span class="nv">MySQLDsn</span> <span class="o">=</span> MultiHostUrl.build<span class="o">(</span>
+</span></span><span class="line"><span class="cl">            <span class="nv">scheme</span><span class="o">=</span><span class="s2">&#34;mysql+pymysql&#34;</span>,
+</span></span><span class="line"><span class="cl">            <span class="nv">host</span><span class="o">=</span>self.mysql_hostname,
+</span></span><span class="line"><span class="cl">            <span class="nv">port</span><span class="o">=</span>self.mysql_port,
+</span></span><span class="line"><span class="cl">            <span class="nv">username</span><span class="o">=</span>self.mysql_username,
+</span></span><span class="line"><span class="cl">            <span class="nv">password</span><span class="o">=</span>self.mysql_password,
+</span></span><span class="line"><span class="cl">            <span class="nv">path</span><span class="o">=</span>f<span class="s1">&#39;{self.mysql_db_name}&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> dsn.unicode_string<span class="o">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">try:
+</span></span><span class="line"><span class="cl">    <span class="nv">project_config</span> <span class="o">=</span> ProjectConfig<span class="o">()</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">db_config</span> <span class="o">=</span> DatabaseConfig<span class="o">()</span>    
+</span></span><span class="line"><span class="cl">except ValidationError as ex:
+</span></span><span class="line"><span class="cl">    error<span class="o">(</span><span class="s2">&#34;REQUIRED ENV SETTING (DB_HOSTNAME, DB_PORT, DB_USERNAME, DB_PASSWORD, DB_NAME)&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">    raise ex
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>이제 config.py에 정리한 내용을 가져와서 <strong>env.py에 적용하자</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">from logging.config import fileConfig
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">from sqlalchemy import engine_from_config, pool
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">from alembic import context
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">from db.orm import Base  <span class="c1"># SQLAlchemy에서 만든 스키마 구조 base가져오고</span>
+</span></span><span class="line"><span class="cl">from config import db_config  <span class="c1"># db 접속 정보 가져와서</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># this is the Alembic Config object, which provides</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># access to the values within the .ini file in use.</span>
+</span></span><span class="line"><span class="cl"><span class="nv">config</span> <span class="o">=</span> context.config
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Interpret the config file for Python logging.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># This line sets up loggers basically.</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> config.config_file_name is not None:
+</span></span><span class="line"><span class="cl">    fileConfig<span class="o">(</span>config.config_file_name<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># add your model&#39;s MetaData object here</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># for &#39;autogenerate&#39; support</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># from myapp import mymodel</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># target_metadata = mymodel.Base.metadata</span>
+</span></span><span class="line"><span class="cl"><span class="c1">### target_metadata = None</span>
+</span></span><span class="line"><span class="cl"><span class="nv">target_metadata</span> <span class="o">=</span> Base.metadata  <span class="c1"># SQLAlchemy base의 메타데이터 등록하고</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># other values from the config, defined by the needs of env.py,</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># can be acquired:</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># my_important_option = config.get_main_option(&#34;my_important_option&#34;)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># ... etc.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## 함수를 만들어서 접속 정보 가져오자.</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## 여기서 mysql+pymysql 이 부분은 기본적으로 알렘빅은 동기식 관리 라이브러리이기 때문에 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">## 동기식 구성으로 적어야 한다. (dialect+driver 구문) 즉 여기는 알렘빅과 동기식으로 통신할 구조를 명시</span>
+</span></span><span class="line"><span class="cl">def get_sqlalchemy_url<span class="o">()</span> -&gt; str:
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">(</span>
+</span></span><span class="line"><span class="cl">        f<span class="s2">&#34;mysql+pymysql://{db_config.mysql_username}:{db_config.mysql_password}@&#34;</span>
+</span></span><span class="line"><span class="cl">        f<span class="s2">&#34;{db_config.mysql_hostname}:{db_config.mysql_port}/{db_config.mysql_db_name}&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">def run_migrations_offline<span class="o">()</span> -&gt; None:
+</span></span><span class="line"><span class="cl">    <span class="c1"># url = config.get_main_option(&#34;sqlalchemy.url&#34;)  # 디폴트 값 주석처리</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">url</span> <span class="o">=</span> get_sqlalchemy_url<span class="o">()</span>  <span class="c1"># 이렇게 활용하고</span>
+</span></span><span class="line"><span class="cl">    context.configure<span class="o">(</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">url</span><span class="o">=</span>url,
+</span></span><span class="line"><span class="cl">        <span class="nv">target_metadata</span><span class="o">=</span>target_metadata,
+</span></span><span class="line"><span class="cl">        <span class="nv">literal_binds</span><span class="o">=</span>True,
+</span></span><span class="line"><span class="cl">        <span class="nv">dialect_opts</span><span class="o">={</span><span class="s2">&#34;paramstyle&#34;</span>: <span class="s2">&#34;named&#34;</span><span class="o">}</span>,
+</span></span><span class="line"><span class="cl">    <span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    with context.begin_transaction<span class="o">()</span>:
+</span></span><span class="line"><span class="cl">        context.run_migrations<span class="o">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">def run_migrations_online<span class="o">()</span> -&gt; None:
+</span></span><span class="line"><span class="cl">		<span class="c1"># 아래와 같이 등록해주자. sqlalchemy.url 값을 지정해주는 코드이다.</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">configuration</span> <span class="o">=</span> config.get_section<span class="o">(</span>config.config_ini_section<span class="o">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="s2">&#34;sqlalchemy.url&#34;</span> not in configuration:
+</span></span><span class="line"><span class="cl">        configuration<span class="o">[</span><span class="s2">&#34;sqlalchemy.url&#34;</span><span class="o">]</span> <span class="o">=</span> get_sqlalchemy_url<span class="o">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nv">connectable</span> <span class="o">=</span> engine_from_config<span class="o">(</span>
+</span></span><span class="line"><span class="cl">        configuration,  <span class="c1"># 여기 주의해서 변경해주자</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">prefix</span><span class="o">=</span><span class="s2">&#34;sqlalchemy.&#34;</span>,
+</span></span><span class="line"><span class="cl">        <span class="nv">poolclass</span><span class="o">=</span>pool.NullPool,
+</span></span><span class="line"><span class="cl">    <span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    with connectable.connect<span class="o">()</span> as connection:
+</span></span><span class="line"><span class="cl">        context.configure<span class="o">(</span>
+</span></span><span class="line"><span class="cl">            <span class="nv">connection</span><span class="o">=</span>connection, <span class="nv">target_metadata</span><span class="o">=</span>target_metadata
+</span></span><span class="line"><span class="cl">        <span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        with context.begin_transaction<span class="o">()</span>:
+</span></span><span class="line"><span class="cl">            context.run_migrations<span class="o">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> context.is_offline_mode<span class="o">()</span>:
+</span></span><span class="line"><span class="cl">    run_migrations_offline<span class="o">()</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>:
+</span></span><span class="line"><span class="cl">    run_migrations_online<span class="o">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>alembic.ini</strong></p>
+<blockquote>
+<p>데이터베이스의 접속 정보를 관리하는 파일</p>
+</blockquote>
+<p>보통의 경우</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sqlalchemy.url <span class="o">=</span> driver://user:pass@localhost/dbname
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>이 값이 DB를 연결하는 주소를 등록하는 부분이다. 그런데 위에서 sqlalchemy.url 값을 모두 지정할 수 있게 설정하였음으로, 그냥 주석처리 해주면 된다.</p>
+</li>
+</ul>
+<p>지금까지 설정한 사항들을 실제로 DB에 반영해보자.</p>
+<h3 id="3-설정-사항-반영">3. 설정 사항 반영</h3>
+<p>alembic은 <strong>revision</strong>이라는 것으로 버전을 관리하고 이를 반영한다.</p>
+<p>revision은 변경사항을 저장할 건데 index를 지정하는 것과 비슷하다.</p>
+<blockquote>
+<p>내가 새롭게 변경한 사항의 리비전을 만들겠다. &gt; 새롭게 변경한 사항을 묶어서 하나의 index로 설정하겠다. 는 의미.</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 새로운 revision 추가
+</span></span><span class="line"><span class="cl">$ alembic revision                # (권장X)
+</span></span><span class="line"><span class="cl">$ alembic revision -m &#34;message&#34;   # 메세지를 추가하여 등록 (권장X)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 읭? 둘다 권장하지 않는다고?
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>해당 명령어를 입력하면 version 폴더 안에 새로운 파일이 생기는데, 리비전의 변경사항이 기록된 파일이 생긴 것이다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Script 예시</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;{commit 메세지}
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">Revision ID: e19af14ddb13
+</span></span></span><span class="line"><span class="cl"><span class="s2">Revises:
+</span></span></span><span class="line"><span class="cl"><span class="s2">Create Date: 2023-01-10 22:10:21.507160
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">alembic</span> <span class="kn">import</span> <span class="n">op</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sqlalchemy</span> <span class="k">as</span> <span class="nn">sa</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># revision identifiers, used by Alembic.</span>
+</span></span><span class="line"><span class="cl"><span class="n">revision</span> <span class="o">=</span> <span class="s1">&#39;e19af14ddb13&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">down_revision</span> <span class="o">=</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl"><span class="n">branch_labels</span> <span class="o">=</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl"><span class="n">depends_on</span> <span class="o">=</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">upgrade</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="k">pass</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">downgrade</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="k">pass</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>보통 이런 형태인데 다음 명령어를 입력한 뒤 차이를 보면서 이해하자.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># alembic에서 변화를 자동적으로 감지해 revision을 작성해줌</span>
+</span></span><span class="line"><span class="cl">$ alembic revision --autogenerate                <span class="c1"># (권장X) </span>
+</span></span><span class="line"><span class="cl">$ alembic revision --autogenerate -m <span class="s2">&#34;message&#34;</span>   <span class="c1"># 메세지를 추가하여 등록 (권장)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p>autogenerate 옵션을 사용하지 않고 revision을 진행하면 직접 변화를 작성해주어야한다.</p>
+<p>문장이 이해하기 어려울 수 있으니 아까 version 폴더 안에 새로생긴 파일을 보자.</p>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;first migrations
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">Revision ID: b14910929b0e
+</span></span></span><span class="line"><span class="cl"><span class="s2">Revises: 9a54d99dec89
+</span></span></span><span class="line"><span class="cl"><span class="s2">Create Date: 2024-08-26 14:11:31.573926
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">from typing import Sequence, Union
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">from alembic import op
+</span></span><span class="line"><span class="cl">import sqlalchemy as sa
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># revision identifiers, used by Alembic.</span>
+</span></span><span class="line"><span class="cl">revision: <span class="nv">str</span> <span class="o">=</span> <span class="s1">&#39;b14910929b0e&#39;</span>
+</span></span><span class="line"><span class="cl">down_revision: Union<span class="o">[</span>str, None<span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;9a54d99dec89&#39;</span>
+</span></span><span class="line"><span class="cl">branch_labels: Union<span class="o">[</span>str, Sequence<span class="o">[</span>str<span class="o">]</span>, None<span class="o">]</span> <span class="o">=</span> None
+</span></span><span class="line"><span class="cl">depends_on: Union<span class="o">[</span>str, Sequence<span class="o">[</span>str<span class="o">]</span>, None<span class="o">]</span> <span class="o">=</span> None
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">def upgrade<span class="o">()</span> -&gt; None:
+</span></span><span class="line"><span class="cl">    <span class="c1"># ### commands auto generated by Alembic - please adjust! ###</span>
+</span></span><span class="line"><span class="cl">    op.create_table<span class="o">(</span><span class="s1">&#39;alias&#39;</span>,
+</span></span><span class="line"><span class="cl">    sa.Column<span class="o">(</span><span class="s1">&#39;id&#39;</span>, sa.Integer<span class="o">()</span>, <span class="nv">autoincrement</span><span class="o">=</span>True, <span class="nv">nullable</span><span class="o">=</span>False<span class="o">)</span>,
+</span></span><span class="line"><span class="cl">    sa.Column<span class="o">(</span><span class="s1">&#39;name&#39;</span>, sa.String<span class="o">(</span><span class="nv">length</span><span class="o">=</span>50<span class="o">)</span>, <span class="nv">nullable</span><span class="o">=</span>True<span class="o">)</span>,
+</span></span><span class="line"><span class="cl">    sa.PrimaryKeyConstraint<span class="o">(</span><span class="s1">&#39;id&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">    <span class="o">)</span>
+</span></span><span class="line"><span class="cl">    op.create_table<span class="o">(</span><span class="s1">&#39;battlefield&#39;</span>,
+</span></span><span class="line"><span class="cl">    sa.Column<span class="o">(</span><span class="s1">&#39;id&#39;</span>, sa.Integer<span class="o">()</span>, <span class="nv">autoincrement</span><span class="o">=</span>True, <span class="nv">nullable</span><span class="o">=</span>False<span class="o">)</span>,
+</span></span><span class="line"><span class="cl">    sa.Column<span class="o">(</span><span class="s1">&#39;drone_id&#39;</span>, sa.String<span class="o">(</span><span class="nv">length</span><span class="o">=</span>50<span class="o">)</span>, <span class="nv">nullable</span><span class="o">=</span>False<span class="o">)</span>,
+</span></span><span class="line"><span class="cl">    sa.Column<span class="o">(</span><span class="s1">&#39;alias_id&#39;</span>, sa.Integer<span class="o">()</span>, <span class="nv">nullable</span><span class="o">=</span>False<span class="o">)</span>,
+</span></span><span class="line"><span class="cl">    sa.Column<span class="o">(</span><span class="s1">&#39;threat&#39;</span>, sa.Float<span class="o">()</span>, <span class="nv">nullable</span><span class="o">=</span>True<span class="o">)</span>,
+</span></span><span class="line"><span class="cl">    sa.PrimaryKeyConstraint<span class="o">(</span><span class="s1">&#39;id&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">    <span class="o">)</span>
+</span></span><span class="line"><span class="cl">    op.create_table<span class="o">(</span><span class="s1">&#39;battlefield_locations&#39;</span>,
+</span></span><span class="line"><span class="cl">    sa.Column<span class="o">(</span><span class="s1">&#39;id&#39;</span>, sa.Integer<span class="o">()</span>, <span class="nv">autoincrement</span><span class="o">=</span>True, <span class="nv">nullable</span><span class="o">=</span>False<span class="o">)</span>,
+</span></span><span class="line"><span class="cl">    sa.Column<span class="o">(</span><span class="s1">&#39;battlefield_id&#39;</span>, sa.Integer<span class="o">()</span>, <span class="nv">nullable</span><span class="o">=</span>False<span class="o">)</span>,
+</span></span><span class="line"><span class="cl">    sa.Column<span class="o">(</span><span class="s1">&#39;latitude&#39;</span>, sa.String<span class="o">(</span><span class="nv">length</span><span class="o">=</span>50<span class="o">)</span>, <span class="nv">nullable</span><span class="o">=</span>True<span class="o">)</span>,
+</span></span><span class="line"><span class="cl">    sa.Column<span class="o">(</span><span class="s1">&#39;longitude&#39;</span>, sa.String<span class="o">(</span><span class="nv">length</span><span class="o">=</span>50<span class="o">)</span>, <span class="nv">nullable</span><span class="o">=</span>True<span class="o">)</span>,
+</span></span><span class="line"><span class="cl">    sa.Column<span class="o">(</span><span class="s1">&#39;altitude&#39;</span>, sa.Float<span class="o">()</span>, <span class="nv">nullable</span><span class="o">=</span>True<span class="o">)</span>,
+</span></span><span class="line"><span class="cl">    sa.Column<span class="o">(</span><span class="s1">&#39;created_at&#39;</span>, sa.DateTime<span class="o">()</span>, <span class="nv">nullable</span><span class="o">=</span>False<span class="o">)</span>,
+</span></span><span class="line"><span class="cl">    sa.PrimaryKeyConstraint<span class="o">(</span><span class="s1">&#39;id&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">    <span class="o">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># ### end Alembic commands ###</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">def downgrade<span class="o">()</span> -&gt; None:
+</span></span><span class="line"><span class="cl">    <span class="c1"># ### commands auto generated by Alembic - please adjust! ###</span>
+</span></span><span class="line"><span class="cl">    op.drop_table<span class="o">(</span><span class="s1">&#39;battlefield_locations&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">    op.drop_table<span class="o">(</span><span class="s1">&#39;battlefield&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">    op.drop_table<span class="o">(</span><span class="s1">&#39;alias&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># ### end Alembic commands ###</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>이 기록도 중간에 살짝 꼬인 것이라 이해가 조금 어려울 수 있으나, 큰변화를 이해하면 된다.</p>
+<p>아까. <a href="https://www.notion.so/c6fde6b7d75f4582aceaab973a7cd470?pvs=21" target="_blank" rel="noopener noreffer ">autogenerate 옵션을 사용하지 않고 revision을 진행하면 직접 변화를 작성해주어야한다.</a>고 했는데 autogenerate를 사용하지 않으면 변경된 부분을 수기로 작성해야 한다. (난 하기 싫다.)</p>
+<p>하여 이렇게 명령어로 작성하고 난 후 간단히 변경사항을 검토하자 문법적으로 크게 어렵지는 않다.</p>
+<p>이제 이 모든 변경사항을 실제 DB에 반영하자</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">alembic upgrade head
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>DB를 보면 사항들이 반영되어 있어야 한다. 만약 에러가 발생한다면,</p>
+<p>천천히 오류를 잡아보자.</p>
+<h2 id="이후-orm-구성의-crud-작업시">이후 ORM 구성의 CRUD 작업시</h2>
+<ol>
+<li>orm 변경하고</li>
+<li>alembic revision &ndash;autogenerate -m &ldquo;message&rdquo;  로 커밋하고</li>
+<li>alembic upgrade head 로 최신화 하면 된다.</li>
+</ol>
+<p><a href="https://www.notion.so/SQLalchemy-1d18df5faccb80cf9620c15ac8aeb7cf?pvs=21" target="_blank" rel="noopener noreffer ">SQLalchemy</a></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2026-04-17</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/sqlachemynalembic_1/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/sqlachemy/">Sqlachemy</a>,&nbsp;<a href="/tags/alembic/">Alembic</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/tree_to_bash/" class="prev" rel="prev" title="bash에서 &#34;tree&#34;와 같이 폴더 구조 알고 싶을 때"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>bash에서 "tree"와 같이 폴더 구조 알고 싶을 때</a>
+            <a href="/sqlachemynalembic_2/" class="next" rel="next" title="what is alembic">what is alembic<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.160.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">colinder</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><link rel="stylesheet" href="/css/_custom.scss"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":200},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

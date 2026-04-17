@@ -4,7 +4,23 @@
         <link>https://colinder.github.io/posts/</link>
         <description>All Posts | colinder&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Fri, 17 Apr 2026 13:26:47 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Fri, 17 Apr 2026 13:35:45 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>what is Alembic</title>
+    <link>https://colinder.github.io/alembic/</link>
+    <pubDate>Fri, 17 Apr 2026 13:35:45 &#43;0900</pubDate>
+    <author>colinder</author>
+    <guid>https://colinder.github.io/alembic/</guid>
+    <description><![CDATA[sqlachemy와 alembic에 대하여 같이 알아보겠습니다.]]></description>
+</item>
+<item>
+    <title>what is Sqlachemy</title>
+    <link>https://colinder.github.io/sqlachemy/</link>
+    <pubDate>Fri, 17 Apr 2026 13:35:45 &#43;0900</pubDate>
+    <author>colinder</author>
+    <guid>https://colinder.github.io/sqlachemy/</guid>
+    <description><![CDATA[sqlachemy와 alembic에 대하여 같이 알아보겠습니다.]]></description>
+</item>
+<item>
     <title>bash에서 &#34;tree&#34;와 같이 폴더 구조 알고 싶을 때</title>
     <link>https://colinder.github.io/tree_to_bash/</link>
     <pubDate>Fri, 17 Apr 2026 13:26:47 &#43;0900</pubDate>
@@ -67,22 +83,6 @@
     <author>colinder</author>
     <guid>https://colinder.github.io/etax_process_02/</guid>
     <description><![CDATA[전자(세금)계산서 발급 api를 국세청과 연동하기 위한 과정과 소스코드에 대하여 정리합니다.]]></description>
-</item>
-<item>
-    <title>전자(세금)계산서 발급 api 개발기 part.1</title>
-    <link>https://colinder.github.io/etax_process_01/</link>
-    <pubDate>Mon, 19 Jan 2026 11:10:00 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/etax_process_01/</guid>
-    <description><![CDATA[전자(세금)계산서 발급 api를 국세청과 연동하기 위한 과정과 소스코드에 대하여 정리합니다.]]></description>
-</item>
-<item>
-    <title>what is REST api?</title>
-    <link>https://colinder.github.io/restapi/</link>
-    <pubDate>Wed, 31 Jan 2024 09:48:40 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/restapi/</guid>
-    <description><![CDATA[RESTful API는 Representational State Transfer(표현 상태 전이)를 기반으로 하는 웹 서비스의 설계 원칙을 따르는 API입니다. REST는 분산 시스템에서 리소스 간 상태 전이를 위한 아키텍처]]></description>
 </item>
 </channel>
 </rss>
