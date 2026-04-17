@@ -4,7 +4,15 @@
         <link>https://colinder.github.io/posts/</link>
         <description>All Posts | colinder&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Thu, 16 Apr 2026 14:50:00 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Fri, 17 Apr 2026 13:26:47 &#43;0900</lastBuildDate><atom:link href="https://colinder.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>bash에서 &#34;tree&#34;와 같이 폴더 구조 알고 싶을 때</title>
+    <link>https://colinder.github.io/tree_to_bash/</link>
+    <pubDate>Fri, 17 Apr 2026 13:26:47 &#43;0900</pubDate>
+    <author>colinder</author>
+    <guid>https://colinder.github.io/tree_to_bash/</guid>
+    <description><![CDATA[bash에서 간단히 폴더 구조를 보고 싶을때 어떻게 할까요.]]></description>
+</item>
+<item>
     <title>pip freeze 시 @ 생기는 오류?</title>
     <link>https://colinder.github.io/pip_error/</link>
     <pubDate>Thu, 16 Apr 2026 14:50:00 &#43;0900</pubDate>
@@ -75,14 +83,6 @@
     <author>colinder</author>
     <guid>https://colinder.github.io/restapi/</guid>
     <description><![CDATA[RESTful API는 Representational State Transfer(표현 상태 전이)를 기반으로 하는 웹 서비스의 설계 원칙을 따르는 API입니다. REST는 분산 시스템에서 리소스 간 상태 전이를 위한 아키텍처]]></description>
-</item>
-<item>
-    <title>why use a decorator? And what&#39;s the benefit?</title>
-    <link>https://colinder.github.io/decorator/</link>
-    <pubDate>Wed, 31 Jan 2024 09:48:31 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/decorator/</guid>
-    <description><![CDATA[데코레이터에 대하여 정리합니다.]]></description>
 </item>
 </channel>
 </rss>

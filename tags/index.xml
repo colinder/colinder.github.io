@@ -9,8 +9,22 @@
     <managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
     <webMaster>kjonggwan@gmail.com (colinder)</webMaster>
     <copyright>colinder</copyright>
-    <lastBuildDate>Thu, 16 Apr 2026 14:50:00 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 17 Apr 2026 13:26:47 +0900</lastBuildDate>
     <atom:link href="https://colinder.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bash</title>
+      <link>https://colinder.github.io/tags/bash/</link>
+      <pubDate>Fri, 17 Apr 2026 13:26:47 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/bash/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tree</title>
+      <link>https://colinder.github.io/tags/tree/</link>
+      <pubDate>Fri, 17 Apr 2026 13:26:47 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
+      <guid>https://colinder.github.io/tags/tree/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Pip</title>
       <link>https://colinder.github.io/tags/pip/</link>
@@ -110,7 +124,7 @@
       <description></description>
     </item>
     <item>
-      <title>JavaScript</title>
+      <title>Javascript</title>
       <link>https://colinder.github.io/tags/javascript/</link>
       <pubDate>Wed, 03 Jan 2024 14:23:13 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
       <guid>https://colinder.github.io/tags/javascript/</guid>
@@ -250,7 +264,7 @@
       <description></description>
     </item>
     <item>
-      <title>AI</title>
+      <title>Ai</title>
       <link>https://colinder.github.io/tags/ai/</link>
       <pubDate>Wed, 28 Dec 2022 16:44:00 +0900</pubDate><author>kjonggwan@gmail.com (colinder)</author>
       <guid>https://colinder.github.io/tags/ai/</guid>
