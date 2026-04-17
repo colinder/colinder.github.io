@@ -4,9 +4,17 @@
         <link>https://colinder.github.io/</link>
         <description>Hello New World</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kjonggwan@gmail.com (colinder)</managingEditor>
-            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Fri, 17 Apr 2026 13:35:45 &#43;0900</lastBuildDate>
+            <webMaster>kjonggwan@gmail.com (colinder)</webMaster><copyright>colinder</copyright><lastBuildDate>Fri, 17 Apr 2026 14:02:45 &#43;0900</lastBuildDate>
             <atom:link href="https://colinder.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>docker compose option 모음</title>
+    <link>https://colinder.github.io/docker_compose/</link>
+    <pubDate>Fri, 17 Apr 2026 14:02:45 &#43;0900</pubDate>
+    <author>colinder</author>
+    <guid>https://colinder.github.io/docker_compose/</guid>
+    <description><![CDATA[내가 자주 쓰는 docker compose option 모음을 정리합니다.]]></description>
+</item>
+<item>
     <title>what is Alembic</title>
     <link>https://colinder.github.io/alembic/</link>
     <pubDate>Fri, 17 Apr 2026 13:35:45 &#43;0900</pubDate>
@@ -77,14 +85,6 @@
     <author>colinder</author>
     <guid>https://colinder.github.io/vscode_lint/</guid>
     <description><![CDATA[내가 좋아하는 vscode lint 설정 방법을 기록합니다.]]></description>
-</item>
-<item>
-    <title>전자(세금)계산서 발급 api 개발기 part.2</title>
-    <link>https://colinder.github.io/etax_process_02/</link>
-    <pubDate>Mon, 19 Jan 2026 22:22:32 &#43;0900</pubDate>
-    <author>colinder</author>
-    <guid>https://colinder.github.io/etax_process_02/</guid>
-    <description><![CDATA[전자(세금)계산서 발급 api를 국세청과 연동하기 위한 과정과 소스코드에 대하여 정리합니다.]]></description>
 </item>
 </channel>
 </rss>

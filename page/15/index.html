@@ -102,6 +102,14 @@
         alt="/images/jg_02.jpg"
         title="/images/jg_02.jpg" /></a></div><div class="home-subtitle"><div id="id-1" class="typeit"></div></div><div class="links"><a href="https://github.com/colinder" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a><a href="mailto:kjonggwan@gmail.com" title="Email" rel="me"><i class="far fa-envelope fa-fw" aria-hidden="true"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/django_03_overridingtemplates/">Django_03_overriding templates</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-04-27">2021-04-27</time></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Django</a></span></div><div class="content"><p>​</p>
+<h1 id="django-overriding-templates">Django Overriding Templates</h1>
+<blockquote>
+<p>웹개발을 하다보면 재활용되어야 하는 부분. 즉, <span style="color:red">변경되지 않아야 하는 부분</span>과, <span style="color:blue">변해야 하는 부분</span>이 있습니다. <span style="font-size:0.8em">(대표적으로 navbar)</span>  그리고 이런 개발의 편의성을 위해 Django는 Overriding 이라는 기술을 제공합니다.</p></div><div class="post-footer">
+        <a href="/django_03_overridingtemplates/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/django/">Django</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/django_04_form/">Django_04_form</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-04-23">2021-04-23</time></span>&nbsp;<span class="post-category">included in <a href="/categories/django/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Django</a></span></div><div class="content"><p>​</p>
 <h1 id="django_form">Django_form</h1>
@@ -215,73 +223,6 @@
 </div><p>​</p></div><div class="post-footer">
         <a href="/pg_21.04.21/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/programmers/">Programmers</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/sw_21.04.04/">SW Expert Academy_D4 11316</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>colinder</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-04-04">2021-04-04</time></span>&nbsp;<span class="post-category">included in <a href="/categories/sw-expert-academy/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>SW Expert Academy</a></span></div><div class="content"><p>​</p>
-<h3 id="d4_11316_주기-찾기">D4_11316_주기 찾기</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">for</span> <span class="n">T</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())):</span>
-</span></span><span class="line"><span class="cl">    <span class="n">s</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span> <span class="n">m</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
-</span></span><span class="line"><span class="cl">    <span class="n">V</span> <span class="o">=</span> <span class="n">s</span>
-</span></span><span class="line"><span class="cl">    <span class="n">visited</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">m</span>
-</span></span><span class="line"><span class="cl">    <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">V</span> <span class="o">=</span> <span class="p">(</span><span class="n">p</span><span class="o">*</span><span class="n">V</span> <span class="o">+</span> <span class="n">q</span><span class="p">)</span> <span class="o">%</span> <span class="n">m</span>
-</span></span><span class="line"><span class="cl">        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">visited</span><span class="p">[</span><span class="n">V</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">result</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="n">visited</span><span class="p">[</span><span class="n">V</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">            <span class="k">break</span>
-</span></span><span class="line"><span class="cl">        <span class="n">visited</span><span class="p">[</span><span class="n">V</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;#</span><span class="si">{</span><span class="n">T</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 한 번 나왔던 숫자의 &#39;위치 정보(i)&#39;를 </span>
-</span></span><span class="line"><span class="cl"><span class="c1"># visited에 저장해 두었다가</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># 한 번이라도 방문했던 숫자가 나왔을 때</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># 저장해주었던 &#39;위치 정보&#39;의 차리를 계산해 준다.</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 코딩중. </span>
-</span></span><span class="line"><span class="cl"><span class="c1"># 만약 [6,8,6,4,3,5,4,3,5,4,3,5...] 경우가 있을 수 있나? 는 고민으로 </span>
-</span></span><span class="line"><span class="cl"><span class="c1"># 시간을 썼으나. </span>
-</span></span><span class="line"><span class="cl"><span class="c1"># 문제 조건 중</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># 슈도랜덤 제너레이터의 주기란,</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># 어떤 정수 n0 이상인 &#39;모든 n에 대해&#39; An+p = An을 만족하는 가장 작은 자연수 p</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># 라는 내용을 보고, 반복되는 수의 등장은 동일 배열 순환의 시작이라고 파악해야 했다.</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>​</p></div><div class="post-footer">
-        <a href="/sw_21.04.04/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/algorithm/">Algorithm</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -312,7 +253,7 @@
                     <span class="page-link" aria-hidden="true">&hellip;</span>
                 </li><li class="page-item ">
                     <span class="page-link">
-                        <a href="/page/28/">28</a>
+                        <a href="/page/29/">29</a>
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">
