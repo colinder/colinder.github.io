@@ -2,32 +2,32 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://colinder.github.io/categories/</loc><lastmod>2026-04-17T14:02:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/</loc><lastmod>2026-04-17T14:02:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/categories/docker-compose/</loc><lastmod>2026-04-17T14:02:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/tags/docker-compose/</loc><lastmod>2026-04-17T14:02:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/docker_compose/</loc><lastmod>2026-04-17T14:02:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/posts/</loc><lastmod>2026-04-17T14:02:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/tags/</loc><lastmod>2026-04-17T14:02:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/categories/alembic/</loc><lastmod>2026-04-17T13:35:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/tags/alembic/</loc><lastmod>2026-04-17T13:35:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/categories/sqlachemy/</loc><lastmod>2026-04-17T13:35:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/tags/sqlachemy/</loc><lastmod>2026-04-17T13:35:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/alembic/</loc><lastmod>2026-04-17T13:35:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/sqlachemy/</loc><lastmod>2026-04-17T13:35:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/categories/bash/</loc><lastmod>2026-04-17T13:26:47&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/tags/bash/</loc><lastmod>2026-04-17T13:26:47&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/tree_to_bash/</loc><lastmod>2026-04-17T13:26:47&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/categories/tree/</loc><lastmod>2026-04-17T13:26:47&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/tags/tree/</loc><lastmod>2026-04-17T13:26:47&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/categories/pip/</loc><lastmod>2026-04-16T14:50:00&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/tags/pip/</loc><lastmod>2026-04-16T14:50:00&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/pip_error/</loc><lastmod>2026-04-16T14:50:00&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/categories/macbook/</loc><lastmod>2026-04-15T14:09:04&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/tags/macbook/</loc><lastmod>2026-04-15T14:09:04&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/docker_and_chrome_install_by_brew/</loc><lastmod>2026-04-15T14:09:04&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/miniconda_by_mac/</loc><lastmod>2026-04-15T12:00:00&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://colinder.github.io/custom_zsh/</loc><lastmod>2026-04-15T09:00:00&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://colinder.github.io/categories/</loc><lastmod>2026-04-17T14:02:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://colinder.github.io/</loc><lastmod>2026-04-17T14:02:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://colinder.github.io/categories/docker-compose/</loc><lastmod>2026-04-17T14:02:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://colinder.github.io/tags/docker-compose/</loc><lastmod>2026-04-17T14:02:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://colinder.github.io/docker_compose/</loc><lastmod>2026-04-17T14:02:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://colinder.github.io/posts/</loc><lastmod>2026-04-17T14:02:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://colinder.github.io/tags/</loc><lastmod>2026-04-17T14:02:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://colinder.github.io/categories/alembic/</loc><lastmod>2026-04-17T13:35:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://colinder.github.io/tags/alembic/</loc><lastmod>2026-04-17T13:35:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://colinder.github.io/categories/sqlachemy/</loc><lastmod>2026-04-17T13:35:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://colinder.github.io/tags/sqlachemy/</loc><lastmod>2026-04-17T13:35:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://colinder.github.io/alembic/</loc><lastmod>2026-04-17T13:35:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://colinder.github.io/sqlachemy/</loc><lastmod>2026-04-17T13:35:45&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://colinder.github.io/categories/bash/</loc><lastmod>2026-04-17T13:26:47&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://colinder.github.io/tags/bash/</loc><lastmod>2026-04-17T13:26:47&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://colinder.github.io/tree_to_bash/</loc><lastmod>2026-04-17T13:26:47&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://colinder.github.io/categories/tree/</loc><lastmod>2026-04-17T13:26:47&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://colinder.github.io/tags/tree/</loc><lastmod>2026-04-17T13:26:47&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://colinder.github.io/categories/pip/</loc><lastmod>2026-04-16T14:50:00&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://colinder.github.io/tags/pip/</loc><lastmod>2026-04-16T14:50:00&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://colinder.github.io/pip_error/</loc><lastmod>2026-04-16T14:50:00&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://colinder.github.io/categories/macbook/</loc><lastmod>2026-04-15T14:09:04&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://colinder.github.io/tags/macbook/</loc><lastmod>2026-04-15T14:09:04&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://colinder.github.io/docker_and_chrome_install_by_brew/</loc><lastmod>2026-04-15T14:09:04&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://colinder.github.io/miniconda_by_mac/</loc><lastmod>2026-04-15T12:00:00&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://colinder.github.io/custom_zsh/</loc><lastmod>2026-04-15T09:00:00&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
             <loc>https://colinder.github.io/categories/langchain/</loc><lastmod>2026-02-20T20:30:49&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/tags/langchain/</loc><lastmod>2026-02-20T20:30:49&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://colinder.github.io/langchainnlanggraph/</loc><lastmod>2026-02-20T20:30:49&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>

@@ -35,7 +35,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/colinder.github.io\/vscode_lint\/"
-        },"genre": "posts","keywords": "vscode, lint","wordcount":  67 ,
+        },"genre": "posts","keywords": "vscode, lint","wordcount":  170 ,
         "url": "https:\/\/colinder.github.io\/vscode_lint\/","datePublished": "2026-01-21T14:26:13+09:00","dateModified": "2026-01-21T14:26:13+09:00","license": "colinder","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">내가 쓰는 vscode lint 설정</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>colinder</a></span>&nbsp;<span class="post-category">included in <a href="/categories/vscode/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Vscode</a>&nbsp;<a href="/categories/lint/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Lint</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-01-21">2026-01-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;67 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-01-21">2026-01-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;170 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="true">
                 <div class="details-summary toc-title">
@@ -125,7 +125,7 @@
 <h2 id="방법-정리">방법 정리</h2>
 <ol>
 <li>
-<p>vscode에서 확장프로그램 ruff를 설치</p>
+<p>vscode에서 확장프로그램 ruff, ESLint, Prettier - Code formatter, Stylelint, DotENT 설치</p>
 </li>
 <li>
 <p>user setting으로 가서</p>
@@ -134,22 +134,86 @@
 <p>아래 내용 입력</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="s2">&#34;[python]&#34;</span><span class="p">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;editor.formatOnSave&#34;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;editor.codeActionsOnSave&#34;</span><span class="p">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;source.organizeImports&#34;</span><span class="p">:</span> <span class="s2">&#34;explicit&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">},</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;editor.defaultFormatter&#34;</span><span class="p">:</span> <span class="s2">&#34;charliermarsh.ruff&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="p">},</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;editor.formatOnSave&#34;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;editor.codeActionsOnSave&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="s2">&#34;source.organizeImports&#34;</span><span class="p">:</span> <span class="s2">&#34;explicit&#34;</span>
+</span></span><span class="line"><span class="cl">     <span class="p">},</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;editor.defaultFormatter&#34;</span><span class="p">:</span> <span class="s2">&#34;charliermarsh.ruff&#34;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">},</span>
+</span></span><span class="line"><span class="cl"> <span class="s2">&#34;[javascript]&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;editor.formatOnSave&#34;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;editor.defaultFormatter&#34;</span><span class="p">:</span> <span class="s2">&#34;esbenp.prettier-vscode&#34;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">},</span>    
+</span></span><span class="line"><span class="cl"> <span class="s2">&#34;[javascriptreact]&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;editor.formatOnSave&#34;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;editor.defaultFormatter&#34;</span><span class="p">:</span> <span class="s2">&#34;esbenp.prettier-vscode&#34;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">},</span>
+</span></span><span class="line"><span class="cl"> <span class="s2">&#34;[css]&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;editor.formatOnSave&#34;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;editor.defaultFormatter&#34;</span><span class="p">:</span> <span class="s2">&#34;esbenp.prettier-vscode&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;editor.codeActionsOnSave&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="s2">&#34;source.fixAll.stylelint&#34;</span><span class="p">:</span> <span class="s2">&#34;explicit&#34;</span>
+</span></span><span class="line"><span class="cl">     <span class="p">}</span>
+</span></span><span class="line"><span class="cl"> <span class="p">},</span>
+</span></span><span class="line"><span class="cl"> <span class="s2">&#34;files.exclude&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;**/.git&#34;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;**/.svn&#34;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;**/.hg&#34;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;**/.DS_Store&#34;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;**/Thumbs.db&#34;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;**/__pycache__&#34;</span> <span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;.vscdoe&#34;</span><span class="p">:</span> <span class="n">true</span>
+</span></span><span class="line"><span class="cl"> <span class="p">},</span>
+</span></span><span class="line"><span class="cl"> <span class="s2">&#34;editor.fontSize&#34;</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="s2">&#34;editor.fontFamily&#34;</span><span class="p">:</span> <span class="s2">&#34;Cascadia Code, Menlo, Monaco, &#39;Courier New&#39;, monospace&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="s2">&#34;editor.mouseWheelZoom&#34;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="s2">&#34;python.createEnvironment.trigger&#34;</span><span class="p">:</span> <span class="s2">&#34;off&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="s2">&#34;workbench.colorTheme&#34;</span><span class="p">:</span> <span class="s2">&#34;Dark Modern&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="s2">&#34;terminal.integrated.fontFamily&#34;</span><span class="p">:</span> <span class="s2">&#34;Cascadia Code&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="s2">&#34;terminal.integrated.fontSize&#34;</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="s2">&#34;security.workspace.trust.untrustedFiles&#34;</span><span class="p">:</span> <span class="s2">&#34;open&#34;</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div></li>
